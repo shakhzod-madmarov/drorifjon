@@ -1,0 +1,45 @@
+# Robots.txt for drorifjon.uz — Dr. Mansurov Orifjon Alimbekovich (Andijon)
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dist-ssr/
+
+# Google Search & Google AI
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Yandex Search & Yandex Neuro
+User-agent: Yandex
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# OpenAI / ChatGPT Search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+# Sitemaps & AI Knowledge Base
+Host: https://drorifjon.uz
+Sitemap: https://drorifjon.uz/sitemap.xml
+# AI Model Knowledge Manifests:
+# https://drorifjon.uz/llms.txt
+# https://drorifjon.uz/llms-full.txt

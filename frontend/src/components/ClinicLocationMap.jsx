@@ -1,0 +1,193 @@
+import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { DOCTOR_INFO } from "../constants/doctor";
+import { PRIMARY_CLINIC } from "../constants/clinics";
+import { useClinicHours } from "../lib/medinsonBooking";
+import {
+  IconLocationPin,
+  IconClock,
+  IconPhone,
+  IconTelegram,
+  IconInstagram,
+  IconShieldCheck,
+} from "./MedicalIcons";
+
+const ClinicLocationMap = ({ compact = false }) => {
+  const { lang } = useLanguage();
+  const c = PRIMARY_CLINIC;
+  const hours = useClinicHours(lang);
+
+  return (
+    <section className={compact ? "py-4" : "py-10 sm:py-14"}>
+      {!compact && (
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium tracking-wide bg-primary/5 text-primary border border-primary/20 shadow-2xs">
+            <IconLocationPin className="w-3.5 h-3.5 text-primary" />
+            <span>{c.badge[lang]}</span>
+          </span>
+          <h2 className="font-serif-classic text-3xl sm:text-4xl font-bold text-slate-900">
+            {lang === "uz"
+              ? "Dr. Mansurov O.A. — Stomatologiya Qabuli"
+              : lang === "ru"
+              ? "Д-р Мансуров О.А. — Приём Стоматолога"
+              : "Dr. Mansurov O.A. — Dental Practice"}
+          </h2>
+          <p className="text-sm text-slate-600">
+            {lang === "uz"
+              ? "Klinikamizga kelishdan oldin navbatsiz qabul uchun onlayn yoki telefon orqali yozilishni tavsiya etamiz."
+              : lang === "ru"
+              ? "Для визита без ожидания рекомендуем предварительно записаться онлайн или по телефону."
+              : "Book online or via phone to ensure your preferred time slot with zero waiting."}
+          </p>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch bg-white rounded-3xl p-5 sm:p-7 border border-amber-200 shadow-luxury">
+        {/* Left Info Column (5 cols) */}
+        <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#1A202C] text-white space-y-6">
+          <div className="space-y-5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white/95 border border-white/15 text-[11px] font-medium tracking-wide shadow-xs">
+              <IconLocationPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>{c.badge[lang]}</span>
+            </div>
+
+            <div className="space-y-1.5">
+              <h3 className="font-serif-classic text-2xl sm:text-3xl font-bold">
+                {c.name[lang]}
+              </h3>
+              <p className="text-xs text-amber-300 font-semibold">
+                {c.dentistOffice[lang]}
+              </p>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                📍 {c.address[lang]}
+              </p>
+              <p className="text-[11px] text-slate-400">
+                Mo'ljal: {c.landmark[lang]}
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-3 border-t border-white/10 text-xs sm:text-sm">
+              <div className="flex items-start gap-3">
+                <IconClock className="w-4 h-4 text-brandOrange shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-white">{hours.full}</p>
+                  <p className="text-xs text-slate-400 mt-0.5">{hours.sunday}</p>
+                </div>
+              </div>
+
+              {/* Doctor direct phone */}
+              <div className="flex items-center gap-3">
+                <IconPhone className="w-4 h-4 text-primary shrink-0" />
+                <div>
+                  <span className="text-[11px] text-slate-400 block">{lang === "uz" ? "Shifokor telefoni:" : "Телефон врача:"}</span>
+                  <a
+                    href={DOCTOR_INFO.phoneHref}
+                    className="font-bold text-base text-white hover:text-brandOrange transition-colors"
+                  >
+                    {DOCTOR_INFO.phoneDisplay}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Connect Shortcuts */}
+          <div className="pt-4 border-t border-white/10 space-y-2.5">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              {lang === "uz" ? "Tezkor aloqa kanallari:" : lang === "ru" ? "Прямая связь с врачом:" : "Direct channels:"}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <a
+                href={DOCTOR_INFO.telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-colors"
+              >
+                <IconTelegram className="w-4 h-4 text-white" />
+                <span>Telegram</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white font-bold text-xs transition-colors"
+              >
+                <IconInstagram className="w-4 h-4 text-white" />
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Map Embed & Direct Navigation Column (7 cols) */}
+        <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl overflow-hidden bg-amber-50/50 border border-amber-200 p-4 sm:p-6 space-y-4">
+          <div className="space-y-2">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 text-[11px] font-medium tracking-wide shadow-2xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>{lang === "uz" ? "Qabul vaqti: Dushanba – Shanba" : lang === "ru" ? "Время приёма: Пн – Сб" : "Hours: Monday – Saturday"}</span>
+              </span>
+              <span className="text-xs font-medium text-slate-500">
+                {c.shortAddress[lang]}
+              </span>
+            </div>
+
+            <h4 className="text-base sm:text-lg font-bold text-slate-900 font-serif-classic">
+              {lang === "uz"
+                ? "Xarita orqali oson topib kelish"
+                : lang === "ru"
+                ? "Удобная навигация и проезд к клинике"
+                : "Easy Navigation & Map Directions"}
+            </h4>
+          </div>
+
+          {/* Interactive Map Iframe */}
+          <div className="w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-amber-200/80 shadow-xs relative bg-slate-100">
+            <iframe
+              src="https://yandex.uz/map-widget/v1/?ll=72.344247%2C40.782064&z=14"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen={true}
+              loading="lazy"
+              title="Dr. Mansurov O.A. Joylashuvi"
+              className="w-full h-full"
+            />
+          </div>
+
+          {/* Direct Map Action Buttons (Google + Yandex + Route) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+            <a
+              href={c.maps.googleFull}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all"
+            >
+              <span>Google Maps ↗</span>
+            </a>
+
+            <a
+              href={c.maps.yandex}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all"
+            >
+              <span>Yandex Xarita ↗</span>
+            </a>
+
+            <a
+              href={`https://yandex.uz/maps/?rtext=~${c.coordinates.lat},${c.coordinates.lng}&rtt=auto`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold shadow-xs hover:shadow-md transition-all"
+            >
+              <span>{lang === "uz" ? "Marshrut Olish" : lang === "ru" ? "Маршрут" : "Directions"} ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ClinicLocationMap;
