@@ -7,6 +7,7 @@ import confetti from "canvas-confetti";
 import {
   IconPhone,
   IconTelegram,
+  IconSparkleStar,
 } from "./MedicalIcons";
 import { DOCTOR_INFO } from "../constants/doctor";
 import {
@@ -27,7 +28,7 @@ import {
   checkRateLimit,
   isBotSubmission,
 } from "../utils/security";
-import { CLASSIC_SERVICES } from "../constants/bookingServices";
+import { CLASSIC_SERVICES, resolveCanonicalServiceId } from "../constants/bookingServices";
 
 const pad2 = (n) => String(n).padStart(2, "0");
 
@@ -224,7 +225,7 @@ const InlineBookingSection = ({ initialService = null }) => {
     const available = initDays.find((d) => d.times.length > 0) || initDays[0];
     return available?.times?.[0] || "";
   });
-  const [service, setService] = useState(initialService || CLASSIC_SERVICES[0].id);
+  const [service, setService] = useState(() => resolveCanonicalServiceId(initialService || "implantatsiya"));
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("+998 ");
   const [dob, setDob] = useState("");
@@ -241,16 +242,7 @@ const InlineBookingSection = ({ initialService = null }) => {
       searchParams.get("serviceId");
 
     if (targetService) {
-      const match = CLASSIC_SERVICES.find(
-        (s) =>
-          s.id === targetService ||
-          s.id.toLowerCase() === String(targetService).toLowerCase() ||
-          s.id.includes(targetService) ||
-          String(targetService).includes(s.id),
-      );
-      if (match) {
-        setService(match.id);
-      }
+      setService(resolveCanonicalServiceId(targetService));
     }
     if (bookingRequest?.name) {
       setName(bookingRequest.name);
@@ -544,16 +536,20 @@ const InlineBookingSection = ({ initialService = null }) => {
 
         {/* Fallback polite banner if online booking paused on relay */}
         {!isRelayEnabled && (
-          <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-            <div className="flex items-center gap-2">
-              <span className="text-base">📞</span>
-              <span>{t.pausedNotice}</span>
+          <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-50 via-white to-amber-50 border border-amber-300/80 text-xs text-amber-950 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
+            <div className="flex items-center gap-2.5 text-left">
+              <span className="w-8 h-8 rounded-xl bg-amber-100 text-primary flex items-center justify-center text-sm font-black shrink-0">📞</span>
+              <div>
+                <p className="font-extrabold text-slate-900">{lang === "uz" ? "Tezkor Telefon Orqali Yozilish:" : lang === "ru" ? "Быстрая запись по телефону:" : "Direct Phone Reservation:"}</p>
+                <p className="text-slate-600 text-[11.5px]">{t.pausedNotice}</p>
+              </div>
             </div>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="px-3.5 py-1.5 rounded-xl bg-primary text-white font-bold text-xs hover:bg-primary-hover transition-colors whitespace-nowrap"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-primary to-orange-500 text-white font-black text-xs hover:brightness-110 shadow-xs transition-all whitespace-nowrap flex items-center gap-1.5"
             >
-              {DOCTOR_INFO.phoneDisplay}
+              <IconPhone className="w-3.5 h-3.5 text-white animate-bounce" />
+              <span>{DOCTOR_INFO.phoneDisplay}</span>
             </a>
           </div>
         )}
@@ -577,28 +573,108 @@ const InlineBookingSection = ({ initialService = null }) => {
             />
           </div>
 
-          {/* Service Selector */}
-          <div className="space-y-3">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-              {t.serviceLabel}
-            </label>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
-              {CLASSIC_SERVICES.map((s) => (
-                <button
-                  type="button"
-                  key={s.id}
-                  onClick={() => setService(s.id)}
-                  className={`p-3 rounded-xl text-left text-xs font-bold border transition-all cursor-pointer flex items-center justify-between ${
-                    service === s.id
-                      ? "bg-primary text-white border-primary shadow-xs"
-                      : "bg-[#FFFDF9] text-slate-800 border-amber-200/80 hover:bg-amber-50/60"
-                  }`}
-                >
-                  <span className="truncate">{s[lang] || s.uz}</span>
-                  {service === s.id && <span>✓</span>}
-                </button>
-              ))}
+          {/* 5 Core Clinical Specialties 3D Cards */}
+          <div className="space-y-3.5">
+            <div className="flex items-center justify-between">
+              <label className="block text-xs font-black uppercase tracking-wider text-slate-800 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span>{t.serviceLabel}</span>
+              </label>
+              <span className="text-[11px] font-bold text-primary bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/60">
+                {lang === "uz" ? "5 Ta Asosiy Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}
+              </span>
             </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+              {CLASSIC_SERVICES.map((s) => {
+                const isSelected = service === s.id;
+                return (
+                  <button
+                    type="button"
+                    key={s.id}
+                    onClick={() => setService(s.id)}
+                    className={`p-4 rounded-2xl text-left transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-3 border relative overflow-hidden group select-none ${
+                      isSelected
+                        ? "bg-gradient-to-br from-primary via-orange-500 to-primary text-white border-primary shadow-[0_8px_25px_rgba(255,157,80,0.35)] scale-[1.02] ring-2 ring-primary/30"
+                        : "bg-white/95 hover:bg-amber-50/80 text-slate-800 border-amber-200/90 shadow-2xs hover:border-primary/50 hover:scale-[1.02]"
+                    }`}
+                  >
+                    {/* Top Kicker & Selection Indicator */}
+                    <div className="flex items-center justify-between gap-1 w-full">
+                      <span
+                        className={`text-[9.5px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                          isSelected
+                            ? "bg-white/20 text-white"
+                            : "bg-amber-100/70 text-primary"
+                        }`}
+                      >
+                        {s.kicker?.[lang] || "✦ PREMIUS"}
+                      </span>
+                      <span
+                        className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-black transition-all ${
+                          isSelected
+                            ? "bg-white text-primary shadow-xs scale-110"
+                            : "border border-slate-300 text-transparent"
+                        }`}
+                      >
+                        ✓
+                      </span>
+                    </div>
+
+                    {/* Title with 3D Icon */}
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xl">{s.icon}</span>
+                        <h4 className={`text-xs sm:text-[13px] font-black leading-snug ${isSelected ? "text-white" : "text-slate-900"}`}>
+                          {s[lang] || s.uz}
+                        </h4>
+                      </div>
+                      <p className={`text-[10.5px] leading-tight line-clamp-2 ${isSelected ? "text-white/85" : "text-slate-500"}`}>
+                        {s.desc?.[lang]}
+                      </p>
+                    </div>
+
+                    {/* Material Tag Pill */}
+                    <div className="pt-1">
+                      <span
+                        className={`inline-block text-[9.5px] font-extrabold px-2 py-0.5 rounded-lg truncate max-w-full ${
+                          isSelected
+                            ? "bg-black/20 text-white"
+                            : "bg-slate-100 text-slate-700 border border-slate-200/80"
+                        }`}
+                      >
+                        {s.materials}
+                      </span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Sub-Procedure Specific Chips (Dynamic based on selected specialty) */}
+            {serviceObj?.subOptions && (
+              <div className="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200/70 flex flex-wrap items-center gap-2 text-left animate-in fade-in duration-200">
+                <span className="text-[11px] font-bold text-slate-600 flex items-center gap-1.5 shrink-0">
+                  <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+                  <span>{lang === "uz" ? "Aniqroq xizmat turi (ixtiyoriy):" : lang === "ru" ? "Уточните услугу (по желанию):" : "Specific treatment (optional):"}</span>
+                </span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {serviceObj.subOptions.map((opt) => (
+                    <button
+                      type="button"
+                      key={opt.id}
+                      onClick={() => {
+                        const optText = opt[lang] || opt.uz;
+                        setNote((cur) => (cur.includes(optText) ? cur : cur ? `${cur}, ${optText}` : optText));
+                      }}
+                      className="px-3 py-1 rounded-xl bg-white hover:bg-amber-100/70 border border-amber-300/80 text-slate-800 text-xs font-semibold shadow-2xs hover:scale-105 transition-all cursor-pointer"
+                    >
+                      + {opt[lang] || opt.uz}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Step 1: Select Day */}
@@ -628,10 +704,10 @@ const InlineBookingSection = ({ initialService = null }) => {
                     }}
                     className={`px-4 py-3 rounded-2xl text-xs font-bold shrink-0 border transition-all cursor-pointer text-left ${
                       isSelected
-                        ? "bg-primary text-white border-primary shadow-luxury scale-105"
+                        ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white border-primary shadow-[0_6px_20px_rgba(255,157,80,0.35)] scale-105 ring-2 ring-primary/30"
                         : isFull
                         ? "bg-slate-50/90 text-slate-400 border-slate-200/90 hover:bg-slate-100"
-                        : "bg-[#FFFDF9] text-slate-700 border-amber-200/80 hover:bg-amber-50"
+                        : "bg-white/95 text-slate-700 border-amber-200/80 hover:bg-amber-50/80 shadow-2xs hover:scale-102"
                     }`}
                   >
                     <div className="flex items-center gap-1.5">
@@ -684,8 +760,8 @@ const InlineBookingSection = ({ initialService = null }) => {
                     onClick={() => setSelectedTime(slot)}
                     className={`py-2.5 px-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                       selectedTime === slot
-                        ? "bg-primary text-white border-primary shadow-xs scale-102"
-                        : "bg-[#FFFDF9] text-slate-800 border-amber-200/80 hover:bg-amber-50"
+                        ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white border-primary shadow-xs scale-105 ring-2 ring-primary/30"
+                        : "bg-white text-slate-800 border-amber-200/80 hover:bg-amber-50 hover:scale-102 shadow-2xs"
                     }`}
                   >
                     {slot}

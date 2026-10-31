@@ -1,75 +1,141 @@
-export const CLASSIC_SERVICES = [
+export const CANONICAL_SPECIALTIES = [
   {
     id: "terapiya",
-    uz: "1. Terapiya (Tishlarni og'riqsiz davolash va restavratsiya)",
-    ru: "1. Терапия (Безболезненное лечение и реставрация зубов)",
-    en: "1. Therapy (Painless tooth treatment and aesthetic restoration)",
+    icon: "🦷",
+    kicker: {
+      uz: "✦ 100% OG'RIQSIZ",
+      ru: "✦ 100% БЕЗ БОЛИ",
+      en: "✦ 100% PAIN-FREE",
+    },
+    materials: "🇩🇪 Charisma & 🇰🇷 DenFil",
+    uz: "Terapiya va Badiiy Restavratsiya",
+    ru: "Терапия и Художественная Реставрация",
+    en: "Therapy & Aesthetic Restoration",
+    desc: {
+      uz: "Karies, pulpit, nerv shamollashi va kompozit restavratsiya",
+      ru: "Лечение кариеса, каналов и художественная реставрация",
+      en: "Cavities, pulpitis, root canals & artistic restoration",
+    },
+    subOptions: [
+      { id: "plomba", uz: "Charisma / DenFil Plomba", ru: "Пломба Charisma / DenFil", en: "Charisma / DenFil Filling" },
+      { id: "kanal", uz: "Kanal Davolash (Endodontiya)", ru: "Лечение Каналов", en: "Root Canal Therapy" },
+      { id: "restavratsiya", uz: "Badiiy Restavratsiya", ru: "Художественная Реставрация", en: "Aesthetic Restoration" },
+    ],
   },
   {
     id: "ortopediya",
-    uz: "2. Ortopediya (Yuqori sifatli tish qo'yish, protezlash)",
-    ru: "2. Ортопедия (Высококачественное протезирование и установка зубов)",
-    en: "2. Orthopedics (High-quality tooth placement and prosthetics)",
+    icon: "👑",
+    kicker: {
+      uz: "✦ CAD/CAM SIRKONIY",
+      ru: "✦ CAD/CAM ЦИРКОНИЙ",
+      en: "✦ CAD/CAM ZIRCONIA",
+    },
+    materials: "💎 Monolit Sirkon & Vinir",
+    uz: "Ortopediya va Sirkon Protezlash",
+    ru: "Ортопедия и Циркониевое Протезирование",
+    en: "Orthopedics & Zirconia Prosthetics",
+    desc: {
+      uz: "Monolit sirkoniy, IPS E.max vinirlar va zamonaviy protezlar",
+      ru: "Монолитный цирконий, виниры E.max и удобные протезы",
+      en: "Monolithic zirconia, E.max veneers & precision dentures",
+    },
+    subOptions: [
+      { id: "sirkon", uz: "Monolit Sirkon Karonka", ru: "Циркониевая Коронка", en: "Monolithic Zirconia Crown" },
+      { id: "vinir", uz: "IPS E.max Keramik Vinir", ru: "Керамический Винир E.max", en: "IPS E.max Ceramic Veneer" },
+      { id: "protez", uz: "Zamonaviy Tish Protezi", ru: "Съемный / Бюгельный Протез", en: "Modern Dental Prosthetic" },
+    ],
   },
   {
     id: "implantatsiya",
-    uz: "3. Implantatsiya (Germaniya va Koreya mahsulotlari)",
-    ru: "3. Имплантация (Премиальные импланты из Германии и Кореи)",
-    en: "3. Implantation (German and Korean premium implant systems)",
+    icon: "🔩",
+    kicker: {
+      uz: "✦ GERMANIYA & KOREYA",
+      ru: "✦ ГЕРМАНИЯ И КОРЕЯ",
+      en: "✦ GERMANY & KOREA",
+    },
+    materials: "🔩 Mega'Gen, AnyRidge & DXL",
+    uz: "Germaniya va Koreya Implantatsiyasi",
+    ru: "Дентальная Имплантация из Германии и Кореи",
+    en: "German & South Korean Dental Implants",
+    desc: {
+      uz: "Qo'shni tishlarni asrab, 15-20 daqiqada og'riqsiz o'rnatish",
+      ru: "Установка титановых имплантов за 15–20 минут без боли",
+      en: "Gentle 15-20 min titanium implant placement with zero pain",
+    },
+    subOptions: [
+      { id: "megagen", uz: "Mega'Gen (Janubiy Koreya)", ru: "Mega'Gen (Южная Корея)", en: "Mega'Gen (South Korea)" },
+      { id: "anyridge", uz: "AnyRidge (AnyRidch Germaniya)", ru: "AnyRidge (Германия)", en: "AnyRidge (Germany)" },
+      { id: "dxl", uz: "DXL Biotitan (Germaniya)", ru: "DXL Биотитан (Германия)", en: "DXL Bio-Titanium (Germany)" },
+    ],
   },
   {
     id: "xirurgiya",
-    uz: "4. Xirurgiya (Og'riqsiz va asoratsiz tish olish)",
-    ru: "4. Хирургия (Безболезненное и атравматичное удаление зубов без осложнений)",
-    en: "4. Surgery (Painless and complication-free tooth extraction)",
+    icon: "🛡️",
+    kicker: {
+      uz: "✦ ATRAVMATIK XIRURGIYA",
+      ru: "✦ АТРАВМАТИЧНАЯ ХИРУРГИЯ",
+      en: "✦ ATRAUMATIC SURGERY",
+    },
+    materials: "💉 Orablok & Supercain",
+    uz: "Atravmatik Jarrohlik va Tish Olish",
+    ru: "Атравматичная Хирургия и Удаление Зубов",
+    en: "Atraumatic Oral Surgery & Extraction",
+    desc: {
+      uz: "Murakkab aql tishlari va ildizlarni 100% og'riqsiz sug'urish",
+      ru: "Бережное удаление зубов и ретинированных восьмерок",
+      en: "Socket-preserving gentle removal of damaged or wisdom teeth",
+    },
+    subOptions: [
+      { id: "oddiy-olish", uz: "Atravmatik Oddiy Tish Olish", ru: "Простое Атравматичное Удаление", en: "Gentle Simple Extraction" },
+      { id: "aql-tishi", uz: "Murakkab Aql Tishi (8-tish)", ru: "Сложный Зуб Мудрости (8-ка)", en: "Impacted Wisdom Tooth" },
+    ],
   },
   {
     id: "ortodontiya",
-    uz: "5. Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
-    ru: "5. Ортодонтия (Выравнивание неровных зубных рядов и исправление прикуса брекетами)",
-    en: "5. Orthodontics (Alignment of crooked and uneven teeth using braces)",
-  },
-  /* Specific procedure aliases for deep booking options */
-  {
-    id: "dental-implant",
-    uz: "Dental implantatsiya (Germaniya & Koreya biotitan)",
-    ru: "Дентальная имплантация (Германия и Корея)",
-    en: "Dental Implants (German & Korean Systems)",
-  },
-  {
-    id: "breketlar",
-    uz: "Ortodontik breketlar (Metall / Keramika / Sapfir)",
-    ru: "Ортодонтические брекеты (Металл / Керамика / Сапфир)",
-    en: "Orthodontic Brackets (Braces)",
-  },
-  {
-    id: "sirkon-keramika-karonkalar",
-    uz: "Sirkon va keramika karonkalar (CAD/CAM)",
-    ru: "Циркониевые и керамические коронки",
-    en: "Zirconia & Ceramic Crowns",
-  },
-  {
-    id: "vinirlar",
-    uz: "Keramik estetik vinirlar (Gollivud tabassumi)",
-    ru: "Эстетические керамические виниры",
-    en: "Ceramic Aesthetic Veneers",
-  },
-  {
-    id: "pratezlar",
-    uz: "Tish protezlari (Olinadigan va olinmaydigan)",
-    ru: "Зубное протезирование (Съемные/Несъемные)",
-    en: "Dental Prosthetics (Dentures)",
-  },
-  {
-    id: "ogriqsiz-tish-davolash",
-    uz: "Og'riqsiz tish davolash & Plomba (Karies/Kanal)",
-    ru: "Безболезненное лечение кариеса и каналов",
-    en: "Painless Cavity & Root Canal Therapy",
-  },
-  {
-    id: "ogriqsiz-tish-olish",
-    uz: "Og'riqsiz va asoratsiz tish olish & Jarrohlik",
-    ru: "Безболезненное и атравматичное удаление зубов",
-    en: "Gentle Tooth Extraction & Surgery",
+    icon: "✨",
+    kicker: {
+      uz: "✦ MUKAMMAL TABASSUM",
+      ru: "✦ ИДЕАЛЬНЫЙ ПРИКУС",
+      en: "✦ PERFECT BITE",
+    },
+    materials: "✨ Metall, Keramika & Sapfir",
+    uz: "Ortodontiya va Breket Tizimlari",
+    ru: "Ортодонтия и Современные Брекеты",
+    en: "Orthodontics & Modern Braces",
+    desc: {
+      uz: "Qiyshiq tishlarni tekislash va prikus nuqsonlarini davolash",
+      ru: "Исправление прикуса и кривизны зубов брекетами и элайнерами",
+      en: "Smile alignment and bite correction with modern braces & aligners",
+    },
+    subOptions: [
+      { id: "metall-breket", uz: "Klassik Metall Breket", ru: "Металлические Брекеты", en: "Classic Metal Braces" },
+      { id: "keramika-breket", uz: "Estetik Keramika / Sapfir", ru: "Керамические / Сапфировые", en: "Ceramic / Sapphire Braces" },
+      { id: "elayner", uz: "Ko'rinmas Shaffof Elaynerlar", ru: "Прозрачные Элайнеры (Капы)", en: "Clear Invisible Aligners" },
+    ],
   },
 ];
+
+/* Alias resolver for deep links or query parameters */
+export const resolveCanonicalServiceId = (serviceId) => {
+  if (!serviceId) return "implantatsiya";
+  const sid = String(serviceId).toLowerCase().trim();
+  if (sid.includes("implant")) return "implantatsiya";
+  if (sid.includes("breket") || sid.includes("elayner") || sid.includes("ortodont")) return "ortodontiya";
+  if (sid.includes("sirkon") || sid.includes("vinir") || sid.includes("karonk") || sid.includes("protez") || sid.includes("ortoped")) return "ortopediya";
+  if (sid.includes("olish") || sid.includes("xirurg") || sid.includes("jarroh") || sid.includes("extraction")) return "xirurgiya";
+  if (sid.includes("terapiy") || sid.includes("davolash") || sid.includes("plomba") || sid.includes("karies") || sid.includes("oqartirish")) return "terapiya";
+  return CANONICAL_SPECIALTIES.some((s) => s.id === sid) ? sid : "implantatsiya";
+};
+
+/* Backwards-compatibility CLASSIC_SERVICES export */
+export const CLASSIC_SERVICES = CANONICAL_SPECIALTIES.map((s) => ({
+  id: s.id,
+  uz: s.uz,
+  ru: s.ru,
+  en: s.en,
+  icon: s.icon,
+  kicker: s.kicker,
+  materials: s.materials,
+  desc: s.desc,
+  subOptions: s.subOptions,
+}));
