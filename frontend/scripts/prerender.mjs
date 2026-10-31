@@ -126,6 +126,7 @@ for (const route of routes) {
 
   let page = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
   page = setTitle(page, seo?.title);
+  page = setMetaName(page, "title", seo?.title);
   page = setMetaName(page, "description", seo?.description);
   page = setMetaName(page, "keywords", seo?.keywords);
   page = setCanonical(page, canonical);
@@ -137,7 +138,13 @@ for (const route of routes) {
   page = setMetaName(page, "twitter:description", seo?.description);
   page = setMetaName(page, "twitter:image", seo?.ogImage);
   if (seo?.noindex) page = setNoindex(page);
-  page = setHtmlLang(page, seo?.lang || DEFAULT_LANG);
+  const routeLang =
+    route.startsWith("/ru/") || route === "/ru"
+      ? "ru"
+      : route.startsWith("/en/") || route === "/en"
+      ? "en"
+      : "uz";
+  page = setHtmlLang(page, seo?.lang || routeLang || DEFAULT_LANG);
   page = injectAlternates(page, seo?.alternates);
   page = injectSchema(page, seo?.schemaJson);
 

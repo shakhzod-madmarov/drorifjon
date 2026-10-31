@@ -477,9 +477,9 @@ const InlineBookingSection = ({ initialService = null }) => {
         {bookingResult.telegramUrl && (
           <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 via-sky-50 to-amber-50/50 border border-emerald-200/80 space-y-4 text-left shadow-xs">
             <div className="space-y-1 text-center sm:text-left">
-              <h4 className="text-base sm:text-lg font-bold text-slate-900 flex items-center justify-center sm:justify-start gap-2">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center justify-center sm:justify-start gap-2">
                 <span>{t.telegramCardTitle}</span>
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                 {t.telegramCardDesc}
               </p>
@@ -718,12 +718,14 @@ const InlineBookingSection = ({ initialService = null }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-amber-100">
             {/* Full Name */}
             <div className="space-y-1.5">
-              <label className="block text-xs font-bold text-slate-700">
+              <label htmlFor="patient_full_name" className="block text-xs font-bold text-slate-700">
                 {t.nameLabel}
               </label>
               <input
+                id="patient_full_name"
                 type="text"
                 required
+                aria-required="true"
                 maxLength={70}
                 autoComplete="name"
                 spellCheck={false}
@@ -736,12 +738,14 @@ const InlineBookingSection = ({ initialService = null }) => {
 
             {/* Phone */}
             <div className="space-y-1.5">
-              <label className="block text-xs font-bold text-slate-700">
+              <label htmlFor="patient_phone" className="block text-xs font-bold text-slate-700">
                 {t.phoneLabel}
               </label>
               <input
+                id="patient_phone"
                 type="tel"
                 required
+                aria-required="true"
                 maxLength={22}
                 autoComplete="tel"
                 value={phone}
@@ -754,12 +758,13 @@ const InlineBookingSection = ({ initialService = null }) => {
             {/* Date of Birth (dob) */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">
-                <label className="block text-xs font-bold text-slate-700">
+                <label htmlFor="patient_dob" className="block text-xs font-bold text-slate-700">
                   {t.dobLabel}
                 </label>
                 <span className="text-[10px] text-slate-400 font-medium">{t.dobFormat}</span>
               </div>
               <input
+                id="patient_dob"
                 type="date"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
@@ -775,10 +780,11 @@ const InlineBookingSection = ({ initialService = null }) => {
 
             {/* Note / Complaint */}
             <div className="space-y-1.5">
-              <label className="block text-xs font-bold text-slate-700">
+              <label htmlFor="patient_note" className="block text-xs font-bold text-slate-700">
                 {t.noteLabel}
               </label>
               <input
+                id="patient_note"
                 type="text"
                 maxLength={300}
                 value={note}

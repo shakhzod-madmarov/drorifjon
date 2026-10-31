@@ -305,7 +305,9 @@ const CertificatesShowcase = () => {
               </div>
               <button
                 onClick={closeCert}
-                className="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-lg cursor-pointer transition-colors"
+                aria-label={lang === "uz" ? "Sertifikat oynasini yopish" : lang === "ru" ? "Закрыть просмотр сертификата" : "Close certificate preview"}
+                title={lang === "uz" ? "Yopish" : lang === "ru" ? "Закрыть" : "Close"}
+                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-lg cursor-pointer transition-colors touch-manipulation focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 ✕
               </button>

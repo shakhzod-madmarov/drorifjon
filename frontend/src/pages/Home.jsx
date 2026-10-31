@@ -228,7 +228,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [perspective:1200px]">
         {SERVICES_CATALOG.map((s) => (
-          <div
+          <article
             key={s.id}
             className={`group bg-white rounded-3xl border border-amber-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2.5 hover:border-primary/50 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d] ${s.badgeTheme?.accentGlow || ""}`}
           >
@@ -324,7 +324,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                 {lang === "uz" ? "Yozilish" : lang === "ru" ? "Запись" : "Book"}
               </button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

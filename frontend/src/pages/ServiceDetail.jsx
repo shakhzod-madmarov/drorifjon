@@ -416,15 +416,15 @@ const ServiceDetail = () => {
       )}
 
       {/* Bottom Urgent CTA Box */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center sm:text-left">
-          <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-serif-classic">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz"
               ? "Savollaringiz bormi yoki tishingiz bezovta qilyaptimi?"
               : lang === "ru"
               ? "Беспокоит зубная боль или остались вопросы?"
               : "Experiencing a toothache or need advice?"}
-          </h3>
+          </h2>
           <p className="text-xs sm:text-sm text-slate-600">
             {lang === "uz"
               ? `Dr. Mansurov O.A. qabuliga yoziling yoki to'g'ridan-to'g'ri qo'ng'iroq qiling: ${DOCTOR_INFO.phoneDisplay}`
@@ -448,7 +448,7 @@ const ServiceDetail = () => {
             <span>{DOCTOR_INFO.phoneDisplay}</span>
           </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

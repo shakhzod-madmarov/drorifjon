@@ -122,9 +122,9 @@ const Doctor3DCard = ({
           }}
         >
           <div className="min-w-0">
-            <h2 className="font-serif-classic text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
+            <p className="font-serif-classic text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
               {DOCTOR_INFO.name}
-            </h2>
+            </p>
             <p className="text-[11px] font-bold uppercase tracking-wider text-primary truncate">
               {specialtyText}
             </p>

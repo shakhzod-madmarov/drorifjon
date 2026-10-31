@@ -103,12 +103,16 @@ const Services = ({ onOpenBooking }) => {
       </div>
 
       {/* Services Grid with 3D Perspective Elevation */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 [perspective:1200px]">
-        {filteredServices.map((service) => (
-          <div
-            key={service.id}
-            className={`bg-white rounded-3xl border border-amber-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 flex flex-col justify-between overflow-hidden group [transform-style:preserve-3d] ${service.badgeTheme?.accentGlow || ""}`}
-          >
+      <section aria-labelledby="services-catalog-heading">
+        <h2 id="services-catalog-heading" className="sr-only">
+          {lang === "uz" ? "Barcha Stomatologik Xizmatlar Ro'yxati" : lang === "ru" ? "Список Всех Стоматологических Услуг" : "All Dental Services Catalog"}
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 [perspective:1200px]">
+          {filteredServices.map((service) => (
+            <article
+              key={service.id}
+              className={`bg-white rounded-3xl border border-amber-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 flex flex-col justify-between overflow-hidden group [transform-style:preserve-3d] ${service.badgeTheme?.accentGlow || ""}`}
+            >
             <div>
               {/* Photo Banner with Zoom Depth & Authentic Clinical Stickers */}
               <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-950 [transform-style:preserve-3d]">
@@ -200,9 +204,10 @@ const Services = ({ onOpenBooking }) => {
                 {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book"}
               </button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
+    </section>
 
       {/* Interactive Cost Calculator */}
       <Interactive3DCostCalculator />

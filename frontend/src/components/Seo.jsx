@@ -61,6 +61,12 @@ const Seo = ({
 
     if (resolvedTitle) {
       document.title = resolvedTitle;
+      const titleMeta = document.querySelector('meta[name="title"]');
+      if (titleMeta) titleMeta.setAttribute("content", resolvedTitle);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", resolvedTitle);
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute("content", resolvedTitle);
     }
 
     if (resolvedDescription) {
@@ -142,6 +148,7 @@ const Seo = ({
 
   if (isPrerender) {
     const payload = {
+      lang,
       title: resolvedTitle,
       description: resolvedDescription,
       keywords: resolvedKeywords,

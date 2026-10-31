@@ -79,7 +79,11 @@ const Contact = () => {
       </div>
 
       {/* 5 Contact & Location Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
+      <section aria-labelledby="contact-channels-heading" className="space-y-4">
+        <h2 id="contact-channels-heading" className="sr-only">
+          {lang === "uz" ? "Bog'lanish Kanallari va Manzil" : lang === "ru" ? "Способы Связи и Адрес" : "Contact Methods & Address"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
         {/* Phone */}
         <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
@@ -220,7 +224,8 @@ const Contact = () => {
             </a>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
 
       {/* Map Section */}
       <ClinicLocationMap />

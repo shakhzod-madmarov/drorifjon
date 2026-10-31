@@ -239,9 +239,9 @@ const SmileAssessmentWizard = () => {
                     </div>
                   </div>
 
-                  <h4 className="text-sm font-bold text-slate-900 leading-snug">
+                  <h3 className="text-sm font-bold text-slate-900 leading-snug">
                     {item.title[lang]}
-                  </h4>
+                  </h3>
                 </div>
 
                 <div className="flex items-center justify-between pt-3 mt-3 border-t border-amber-100/70">
