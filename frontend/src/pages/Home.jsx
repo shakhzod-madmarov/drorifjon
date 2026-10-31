@@ -52,64 +52,94 @@ const HeroSection = ({ onOpenBooking }) => {
 
   const T = {
     uz: {
-      badge: "Stomatolog Orifjon · 20+ Yillik Tajriba",
-      doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",
-      headline: "Tabiiy va Sog'lom Tabassum Uchun 100% Og'riqsiz Zamonaviy Stomatologiya",
+      badgeLive: "Qabul Ochiq · Andijon sh.",
+      badgeEducation: "Andijon Tibbiyot Kolleji (2001–2004) & O'shDU (2017–2022)",
+      kicker: "✦ PRESIZIYA STOMATOLOGIYASI · GERMANIYA & KOREYA MATERIAL STANDARTLARI",
+      headlinePart1: "Tabiiy Tabassum va ",
+      headlineHighlight: "100% Og'riqsiz",
+      headlinePart2: " Zamonaviy Stomatologiya",
       subtitle:
-        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji (2001–2004) hamda O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Terapiya (davolash va restavratsiya), ortopediya (tish qo'yish, protezlash), Germaniya va Koreya implantatsiyasi, xirurgiya va ortodontiya yo'nalishlarida 100% og'riqsiz davolash.",
+        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — 20 yildan ortiq tibbiyot tajribasi, Germaniya (Charisma, AnyRidge, DXL) hamda Koreya (Mega'Gen, DenFil) original materiallari va Yevropa anesteziyasi (Orablok, Supercain) bilan tabassumingizni mutlaq og'riqsiz va yuqori estetikada davolaydi.",
       ctaBook: "Qabulga Yozilish",
-      ctaServices: "Barcha Xizmatlar",
+      ctaSlot: "Bugun 2 ta joy qoldi",
+      ctaServices: "Xizmatlar Katalogi",
+      specialties: [
+        { label: "Terapiya", desc: "Charisma & DenFil", icon: "🦷", path: "/services/terapiya" },
+        { label: "Ortopediya", desc: "Sirkon & Vinirlar", icon: "👑", path: "/services/ortopediya" },
+        { label: "Implantatsiya", desc: "Mega'Gen & AnyRidge", icon: "🔩", path: "/services/implantatsiya" },
+        { label: "Xirurgiya", desc: "Og'riqsiz tish olish", icon: "🛡️", path: "/services/xirurgiya" },
+        { label: "Ortodontiya", desc: "Breketlar", icon: "✨", path: "/services/ortodontiya" },
+      ],
       stat1Num: "20+ Yil",
       stat1Label: "Tibbiyot Tajribasi",
-      stat2Num: "1,500+",
+      stat2Num: "5,000+",
       stat2Label: "Mamnun Bemorlar",
       stat3Num: "100%",
       stat3Label: "Steril va Og'riqsiz",
-      stat4Num: "O'shDU",
-      stat4Label: "Stomatologiya Diplomi",
+      stat4Num: "🇩🇪 & 🇰🇷",
+      stat4Label: "Original Materiallar",
     },
     ru: {
-      badge: "Стоматолог Орифжон · 20+ Лет в Медицине",
-      doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Терапия · Ортопедия · Имплантация · Хирургия · Ортодонтия",
-      headline: "Современная Стоматология Без Боли для Вашей Безупречной Улыбки",
+      badgeLive: "Приём Открыт · Андижан",
+      badgeEducation: "Андижанский мед. колледж (2001–2004) & ОшГУ (2017–2022)",
+      kicker: "✦ ПРЕЦИЗИОННАЯ СТОМАТОЛОГИЯ · СТАНДАРТЫ ГЕРМАНИИ И КОРЕИ",
+      headlinePart1: "Безупречная Улыбка и ",
+      headlineHighlight: "100% Без Боли",
+      headlinePart2: " Современная Стоматология",
       subtitle:
-        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022). Терапия (лечение и реставрация), ортопедия (протезирование), немецкая и корейская имплантация, хирургия и ортодонтия без боли.",
+        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — более 20 лет практики в медицине, оригинальные немецкие (Charisma, AnyRidge, DXL) и корейские (Mega'Gen, DenFil) материалы, а также европейская анестезия (Orablok, Supercain) для лечения зубов без боли и страха.",
       ctaBook: "Записаться на Приём",
-      ctaServices: "Все Услуги",
+      ctaSlot: "Сегодня свободно 2 места",
+      ctaServices: "Каталог Услуг",
+      specialties: [
+        { label: "Терапия", desc: "Charisma & DenFil", icon: "🦷", path: "/services/terapiya" },
+        { label: "Ортопедия", desc: "Цирконий и виниры", icon: "👑", path: "/services/ortopediya" },
+        { label: "Имплантация", desc: "Mega'Gen & AnyRidge", icon: "🔩", path: "/services/implantatsiya" },
+        { label: "Хирургия", desc: "Удаление без боли", icon: "🛡️", path: "/services/xirurgiya" },
+        { label: "Ортодонтия", desc: "Брекеты", icon: "✨", path: "/services/ortodontiya" },
+      ],
       stat1Num: "20+ Лет",
       stat1Label: "Опыта в Медицине",
-      stat2Num: "1,500+",
+      stat2Num: "5,000+",
       stat2Label: "Довольных Пациентов",
       stat3Num: "100%",
       stat3Label: "Без Боли и Чисто",
-      stat4Num: "ОшГУ",
-      stat4Label: "Диплом Стоматолога",
+      stat4Num: "🇩🇪 & 🇰🇷",
+      stat4Label: "Стандарты Качества",
     },
     en: {
-      badge: "Dentist Orifjon · 20+ Years Practice",
-      doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Therapy · Orthopedics · Implantation · Surgery · Orthodontics",
-      headline: "Gentle & 100% Painless Modern Dental Care for Your Natural Smile",
+      badgeLive: "Accepting Patients · Andijan",
+      badgeEducation: "Andijan Medical College (2001–2004) & Osh State (2017–2022)",
+      kicker: "✦ PRECISION DENTISTRY · GERMAN & SOUTH KOREAN STANDARDS",
+      headlinePart1: "Natural Radiance & ",
+      headlineHighlight: "100% Pain-Free",
+      headlinePart2: " Modern Dentistry",
       subtitle:
-        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Comprehensive therapy, orthopedics, German & Korean dental implants, gentle surgery, and braces orthodontics.",
+        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Over 20+ years of healthcare practice, using genuine German (Charisma, AnyRidge, DXL) & South Korean (Mega'Gen, DenFil) certified materials and European anesthesia (Orablok, Supercain) for gentle, 100% painless dental care.",
       ctaBook: "Book Appointment",
+      ctaSlot: "2 slots available today",
       ctaServices: "Explore Services",
+      specialties: [
+        { label: "Therapy", desc: "Charisma & DenFil", icon: "🦷", path: "/services/terapiya" },
+        { label: "Orthopedics", desc: "Crowns & Veneers", icon: "👑", path: "/services/ortopediya" },
+        { label: "Implantation", desc: "Mega'Gen & AnyRidge", icon: "🔩", path: "/services/implantatsiya" },
+        { label: "Surgery", desc: "Painless extractions", icon: "🛡️", path: "/services/xirurgiya" },
+        { label: "Orthodontics", desc: "Braces systems", icon: "✨", path: "/services/ortodontiya" },
+      ],
       stat1Num: "20+ Yrs",
       stat1Label: "Healthcare Practice",
-      stat2Num: "1,500+",
+      stat2Num: "5,000+",
       stat2Label: "Treated Patients",
       stat3Num: "100%",
       stat3Label: "Painless & Sterile",
-      stat4Num: "Osh State",
-      stat4Label: "Dental Graduate",
+      stat4Num: "🇩🇪 & 🇰🇷",
+      stat4Label: "Certified Materials",
     },
   };
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#FFFDF8] via-[#FFF9D8]/50 to-[#E3FBFC]/30 border-2 border-amber-300/80 shadow-2xl mt-2 p-5 sm:p-10 lg:p-12 [transform-style:preserve-3d]">
+    <section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white via-[#FFFDF8] to-[#FFF9D8]/40 border border-amber-200/80 shadow-[0_20px_70px_-15px_rgba(255,157,80,0.14)] mt-3 sm:mt-5 p-5 sm:p-10 lg:p-12 [transform-style:preserve-3d]">
       {/* Ambient Floating 3D Shapes & Lighting */}
       <Floating3DShapes />
 
@@ -119,50 +149,63 @@ const HeroSection = ({ onOpenBooking }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-6 text-left">
-          {/* Status & Bespoke 3D Stickers Row */}
-          <div className="flex flex-wrap items-center gap-2.5">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-white/95 border border-amber-300 text-slate-800 text-xs font-bold shadow-xs">
+          {/* Refined Elite Credentials Banner */}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-300 text-emerald-900 text-xs font-bold shadow-2xs">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
               </span>
-              <span>{t.badge}</span>
+              <span>{t.badgeLive}</span>
             </span>
 
-            <HoloGoldStamp
-              text="20+ Yillik Tajriba"
-              subtext={
-                lang === "ru"
-                  ? "Андижанский мед. колледж & ОшГУ"
-                  : lang === "en"
-                  ? "Andijan Med. & Osh State"
-                  : "Andijon Tib. Kolleji & O'shDU"
-              }
-            />
-
-            <ZeroPainShield
-              label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Pain-Free" : "100% Og'riqsiz"}
-              sublabel="Orablok & Supercain"
-            />
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-amber-300/80 text-slate-800 text-xs font-semibold shadow-2xs">
+              <span>🎓</span>
+              <span>{t.badgeEducation}</span>
+            </span>
           </div>
 
-          {/* Dynamic Headline with Multi-Color 3D Gradient */}
-          <div className="space-y-2">
-            <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-primary flex items-center gap-1.5">
+          {/* Dynamic Editorial Headline */}
+          <div className="space-y-2.5">
+            <p className="text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.16em] text-primary flex items-center gap-1.5">
               <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
-              <span>{t.specialtyTitle}</span>
+              <span>{t.kicker}</span>
             </p>
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.14] break-words">
-              {lang === "uz" ? "Tabiiy va Sog'lom Tabassum Uchun " : lang === "ru" ? "Для Вашей Безупречной Улыбки " : "For Your Naturally Radiant Smile "}
-              <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
-                {lang === "uz" ? "100% Og'riqsiz Zamonaviy Stomatologiya" : lang === "ru" ? "Стоматология 100% Без Боли" : "100% Gentle Modern Dentistry"}
+            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] break-words">
+              {t.headlinePart1}
+              <span className="bg-gradient-to-r from-primary via-[#1DCED8] to-[#55E07E] bg-clip-text text-transparent font-serif italic">
+                {t.headlineHighlight}
               </span>
+              <br className="hidden sm:inline" />
+              {t.headlinePart2}
             </h1>
           </div>
 
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl font-normal">
             {t.subtitle}
           </p>
+
+          {/* 5 Core Specialties Horizontal Interactive Ribbon */}
+          <div className="pt-1">
+            <p className="text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400 mb-2">
+              {lang === "uz" ? "Asosiy 5 Yo'nalish:" : lang === "ru" ? "5 Основных Направлений:" : "5 Core Specialties:"}
+            </p>
+            <div className="flex flex-wrap items-center gap-1.5">
+              {t.specialties.map((spec, i) => (
+                <Link
+                  key={i}
+                  to={to(spec.path)}
+                  className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/90 hover:bg-white border border-amber-200/80 hover:border-primary text-slate-800 hover:text-primary transition-all duration-200 shadow-2xs hover:shadow-xs hover:-translate-y-0.5 text-xs font-bold"
+                >
+                  <span className="text-sm">{spec.icon}</span>
+                  <span>{spec.label}</span>
+                  <span className="text-[10px] font-medium text-slate-400 group-hover:text-primary">
+                    ({spec.desc})
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Certified Clinical Materials Badges Row */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
@@ -180,13 +223,16 @@ const HeroSection = ({ onOpenBooking }) => {
             >
               <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
               <IconClock className="w-4 h-4 text-white relative z-10" />
-              <span className="relative z-10">{t.ctaBook}</span>
+              <div className="flex flex-col items-start text-left relative z-10 leading-tight">
+                <span>{t.ctaBook}</span>
+                <span className="text-[9px] text-white/80 lowercase font-medium">({t.ctaSlot})</span>
+              </div>
               <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
             </button>
 
             <Link
               to={to("/services")}
-              className="inline-flex justify-center items-center gap-2 px-6 py-4 rounded-2xl bg-white/95 hover:bg-white border-2 border-amber-300/80 hover:border-primary text-slate-800 font-bold text-xs sm:text-sm shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex justify-center items-center gap-2 px-5 py-4 rounded-2xl bg-white/95 hover:bg-white border border-amber-300/80 hover:border-primary text-slate-800 font-bold text-xs sm:text-sm shadow-2xs hover:shadow-xs hover:-translate-y-1 transition-all duration-300"
             >
               <span>{t.ctaServices}</span>
               <span>→</span>
@@ -194,10 +240,20 @@ const HeroSection = ({ onOpenBooking }) => {
 
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300/80 text-emerald-900 font-bold text-xs sm:text-sm transition-all hover:scale-105 duration-200 shadow-2xs"
+              className="inline-flex justify-center items-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-950 font-bold text-xs sm:text-sm transition-all hover:scale-105 duration-200 shadow-2xs"
             >
               <IconPhone className="w-4 h-4 text-emerald-600 animate-bounce" />
               <span>{DOCTOR_INFO.phoneDisplay}</span>
+            </a>
+
+            <a
+              href={DOCTOR_INFO.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center gap-1.5 px-3.5 py-3.5 rounded-2xl bg-sky-50 hover:bg-sky-100 border border-sky-300 text-sky-950 font-bold text-xs transition-all hover:scale-105 duration-200 shadow-2xs"
+            >
+              <span className="text-sky-500 font-black">✈</span>
+              <span>Telegram: {DOCTOR_INFO.telegramHandle}</span>
             </a>
           </div>
 
@@ -224,7 +280,7 @@ const HeroSection = ({ onOpenBooking }) => {
 
         {/* Right Visual (5 cols): Interactive 3D Perspective Doctor Card */}
         <div className="lg:col-span-5 relative flex justify-center">
-          <Doctor3DCard lang={lang} />
+          <Doctor3DCard lang={lang} onOpenBooking={onOpenBooking} />
         </div>
       </div>
     </section>

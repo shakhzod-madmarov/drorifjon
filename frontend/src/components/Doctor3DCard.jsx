@@ -1,10 +1,10 @@
 import React, { useRef, useState, useCallback } from "react";
 import { DOCTOR_INFO } from "../constants/doctor";
-import { IconTelegram, IconInstagram, IconShieldCheck, IconSparkleStar } from "./MedicalIcons";
+import { IconTelegram, IconInstagram, IconPhone, IconShieldCheck, IconSparkleStar } from "./MedicalIcons";
 import { HoloGoldStamp, ZeroPainShield } from "./Bespoke3DStickers";
 
 /**
- * Doctor3DCard — Ultra-Luxury Interactive 3D Perspective Card
+ * Doctor3DCard — Ultra-Luxury Interactive 3D Perspective Showcase
  * Features:
  *  - Hardware-accelerated CSS 3D perspective tilt tracking cursor coordinates
  *  - Dynamic specular light glare reflection layer following the light source
@@ -16,6 +16,7 @@ const Doctor3DCard = ({
   imageWebp = "/dr_orifjon_portrait_pro.webp",
   imageJpg = "/dr_orifjon_portrait_pro.jpg",
   className = "",
+  onOpenBooking,
 }) => {
   const cardRef = useRef(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -28,9 +29,9 @@ const Doctor3DCard = ({
     const x = (e.clientX - rect.left) / rect.width; // 0 to 1
     const y = (e.clientY - rect.top) / rect.height; // 0 to 1
 
-    // Maximum tilt angles (+-14 degrees)
-    const rotateY = (x - 0.5) * 24;
-    const rotateX = (0.5 - y) * 24;
+    // Maximum tilt angles (+-12 degrees)
+    const rotateY = (x - 0.5) * 22;
+    const rotateX = (0.5 - y) * 22;
 
     setRotate({ x: rotateX, y: rotateY });
     setGlare({
@@ -52,7 +53,7 @@ const Doctor3DCard = ({
 
   const specialtyText =
     lang === "ru"
-      ? "Врач-Стоматолог · 20+ лет в медицине"
+      ? "Врач-Стоматолог · 20+ лет практики"
       : lang === "en"
       ? "Dental Surgeon · 20+ Yrs Practice"
       : "Vrach Stomatolog · 20+ Yillik Tajriba";
@@ -68,18 +69,18 @@ const Doctor3DCard = ({
 
       {/* Floating 3D Orbital Badge 1 (Top-Right) */}
       <div
-        className="absolute -top-4 -right-4 sm:-right-6 z-40 hidden xs:block pointer-events-none animate-float-3d"
+        className="absolute -top-4 -right-3 sm:-right-6 z-40 hidden xs:block pointer-events-none animate-float-3d"
         style={{ animationDuration: "6s" }}
       >
         <HoloGoldStamp
           text={lang === "ru" ? "20+ Лет Опыта" : lang === "en" ? "20+ Yrs Practice" : "20+ Yillik Tajriba"}
-          subtext="O'shDU & MegaGen"
+          subtext="Andijon & O'shDU"
         />
       </div>
 
       {/* Floating 3D Orbital Badge 2 (Bottom-Left) */}
       <div
-        className="absolute -bottom-4 -left-4 sm:-left-6 z-40 hidden xs:block pointer-events-none animate-float-reverse"
+        className="absolute -bottom-4 -left-3 sm:-left-6 z-40 hidden xs:block pointer-events-none animate-float-reverse"
         style={{ animationDuration: "7s" }}
       >
         <ZeroPainShield
@@ -103,7 +104,7 @@ const Doctor3DCard = ({
             : "transform 0.65s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.65s ease",
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-[21rem] xs:max-w-sm sm:max-w-md rounded-3xl xs:rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-white via-[#FFFDF8] to-[#FFF9D8]/80 border-2 border-amber-300/80 shadow-luxury-lg hover:shadow-2xl hover:border-primary/60 cursor-pointer select-none group"
+        className="relative w-full max-w-[21.5rem] xs:max-w-sm sm:max-w-md rounded-3xl xs:rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-white via-[#FFFDF8] to-[#FFF9D8]/70 border border-amber-200/90 shadow-[0_18px_50px_rgba(20,30,40,0.12)] hover:shadow-[0_24px_65px_rgba(255,157,80,0.22)] hover:border-primary/60 cursor-pointer select-none group"
       >
         {/* Dynamic Specular Reflection / Glare Holographic Layer */}
         <div
@@ -116,7 +117,7 @@ const Doctor3DCard = ({
 
         {/* 3D Depth Layer 1: High-Definition Doctor Presentation */}
         <div
-          className="relative w-full aspect-[4/4.5] overflow-hidden bg-gradient-to-b from-slate-100/40 via-amber-50/20 to-amber-100/30"
+          className="relative w-full aspect-[4/4.5] overflow-hidden bg-gradient-to-b from-slate-50/50 via-amber-50/30 to-amber-100/40"
           style={{
             transform: isHovered ? "translateZ(20px)" : "translateZ(0px)",
             transition: "transform 0.4s ease-out",
@@ -131,18 +132,28 @@ const Doctor3DCard = ({
               height={675}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-[center_top] filter transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              className="w-full h-full object-cover object-[center_top] filter transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
           </picture>
 
-          {/* Top In-Image Holographic Chip */}
+          {/* Top In-Image Holographic Status Strip */}
           <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-20 pointer-events-none">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[10px] font-bold tracking-wide text-white border border-white/25 shadow-md">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-[10px] font-bold tracking-wide text-white border border-white/20 shadow-md">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
               <span>{lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}</span>
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-slate-950 text-[10px] font-black tracking-wide shadow-md">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/95 backdrop-blur-md text-slate-950 text-[10px] font-black tracking-wide shadow-md">
               <span>🇩🇪 & 🇰🇷 Standart</span>
+            </span>
+          </div>
+
+          {/* Bottom Floating Interactive Educational Chips */}
+          <div className="absolute bottom-3 inset-x-3 flex flex-wrap items-center justify-center gap-1.5 z-20 pointer-events-none">
+            <span className="px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 border border-amber-200/60 shadow-xs">
+              🎓 Andijon Tib. Kolleji (2001–2004)
+            </span>
+            <span className="px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 border border-amber-200/60 shadow-xs">
+              🎓 O'shDU (2017–2022)
             </span>
           </div>
         </div>
@@ -156,10 +167,14 @@ const Doctor3DCard = ({
           }}
         >
           <div className="min-w-0">
-            <p className="font-serif-classic text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
-              {DOCTOR_INFO.name}
+            <p className="font-serif-classic text-base sm:text-lg font-black text-slate-900 tracking-tight truncate flex items-center gap-1">
+              <span>Stomatolog</span>
+              <span className="text-primary">Orifjon</span>
             </p>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-primary truncate">
+            <p className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-slate-500 truncate mt-0.5">
+              Mansurov Orifjon Alimbekovich
+            </p>
+            <p className="text-[10px] font-bold text-emerald-600 truncate">
               {specialtyText}
             </p>
           </div>
@@ -191,6 +206,14 @@ const Doctor3DCard = ({
               title="Instagram: @dr_orifjon"
             >
               <IconInstagram className="w-4 h-4 text-pink-500" />
+            </a>
+            <a
+              href={DOCTOR_INFO.phoneHref}
+              aria-label="Phone"
+              className="w-9 h-9 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/60 flex items-center justify-center transition-all duration-300 hover:scale-115 hover:-translate-y-0.5 active:scale-95 shadow-xs"
+              title={`Tel: ${DOCTOR_INFO.phoneDisplay}`}
+            >
+              <IconPhone className="w-4 h-4 text-emerald-600" />
             </a>
           </div>
         </div>
