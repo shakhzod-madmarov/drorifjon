@@ -31,11 +31,11 @@ const Footer = () => {
   ];
 
   const specialtyLinks = [
-    { path: "/services/terapiya", label: { uz: "1. Terapiya (Og'riqsiz Davolash & Restavratsiya)", ru: "1. Терапия (Лечение и Реставрация)", en: "1. Therapy (Painless Care & Restoration)" } },
-    { path: "/services/ortopediya", label: { uz: "2. Ortopediya (Yuqori Sifatli Tish Qo'yish, Protezlash)", ru: "2. Ортопедия (Протезирование и Коронки)", en: "2. Orthopedics (Precision Prosthetics)" } },
-    { path: "/services/implantatsiya", label: { uz: "3. Implantatsiya (Germaniya & Koreya)", ru: "3. Имплантация (Германия и Корея)", en: "3. Implantation (German & Korean Systems)" } },
-    { path: "/services/xirurgiya", label: { uz: "4. Xirurgiya (Og'riqsiz & Asoratsiz Tish Olish)", ru: "4. Хирургия (Удаление Зубов Без Боли)", en: "4. Surgery (Gentle Extraction)" } },
-    { path: "/services/ortodontiya", label: { uz: "5. Ortodontiya (Breketlar Bilan To'g'rilash)", ru: "5. Ортодонтия (Исправление Прикуса Брекетами)", en: "5. Orthodontics (Braces Alignment)" } },
+    { path: "/services/terapiya", label: { uz: "Terapiya va Badiiy Restavratsiya", ru: "Терапия и Реставрация", en: "Therapy & Aesthetic Restoration" } },
+    { path: "/services/ortopediya", label: { uz: "Ortopediya va Sirkon Protezlash", ru: "Ортопедия и Циркониевые Коронки", en: "Orthopedics & Zirconia Crowns" } },
+    { path: "/services/implantatsiya", label: { uz: "Dental Implantologiya", ru: "Дентальная Имплантация", en: "Dental Implantation" } },
+    { path: "/services/xirurgiya", label: { uz: "Atravmatik Jarrohlik", ru: "Атравматичная Хирургия", en: "Atraumatic Oral Surgery" } },
+    { path: "/services/ortodontiya", label: { uz: "Ortodontiya va Breket Tizimlari", ru: "Ортодонтия и Брекеты", en: "Orthodontics & Modern Braces" } },
   ];
 
   return (

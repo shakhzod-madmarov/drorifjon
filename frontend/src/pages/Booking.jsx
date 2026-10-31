@@ -66,11 +66,12 @@ const Booking = () => {
             />
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 font-serif-classic leading-snug">
-            {lang === "uz" ? "Stomatolog Orifjon Qabuliga " : lang === "ru" ? "Онлайн Запись на Приём к " : "Online Appointment Booking with "}
-            <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
-              {lang === "uz" ? "Onlayn Yozilish" : lang === "ru" ? "Стоматологу Орифжону" : "Dentist Orifjon"}
-            </span>
+          <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic leading-snug">
+            {lang === "uz"
+              ? "Stomatolog Orifjon Qabuliga Onlayn Yozilish"
+              : lang === "ru"
+              ? "Онлайн Запись на Приём к Стоматологу Орифжону"
+              : "Online Appointment with Dentist Orifjon"}
           </h1>
 
           <p className="text-xs sm:text-sm text-slate-700 max-w-2xl leading-relaxed">

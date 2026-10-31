@@ -53,19 +53,14 @@ const Contact = () => {
         </span>
       </nav>
 
-      {/* Header */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-4">
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <ZeroPainShield
-            label={lang === "ru" ? "Прямая Связь" : lang === "en" ? "Direct Line" : "Bevosita Aloqa"}
-            sublabel="24/7 Telegram & Tel"
-          />
+      {/* Header: Classic Medical Presentation */}
+      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-3">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-slate-800 text-xs font-bold shadow-2xs">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>{lang === "uz" ? "Bevosita Aloqa · Andijon" : lang === "ru" ? "Прямая Связь · Андижан" : "Direct Clinic Contact"}</span>
         </div>
-        <h1 className="font-serif-classic text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
-          {lang === "uz" ? "Aloqa va " : lang === "ru" ? "Контакты и " : "Contact & "}
-          <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
-            {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Запись на Приём" : "Appointment Booking"}
-          </span>
+        <h1 className="font-serif-classic text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+          {lang === "uz" ? "Aloqa va Qabulga Yozilish" : lang === "ru" ? "Контакты и Запись на Приём" : "Contact & Appointment"}
         </h1>
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
           {lang === "uz"

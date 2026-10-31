@@ -76,32 +76,27 @@ const Services = ({ onOpenBooking }) => {
         </span>
       </nav>
 
-      {/* Header Stage with 3D Holographic Badges */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto space-y-4">
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/25 shadow-2xs">
-            <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
-            <span>{getServicesTag(lang)}</span>
-          </span>
-          <ZeroPainShield
-            label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Pain-Free" : "100% Og'riqsiz"}
-            sublabel="Orablok & Supercain"
-          />
+      {/* Header Stage: Simple Classic Luxury */}
+      <div className="relative z-10 text-center max-w-3xl mx-auto space-y-3">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-50 border border-amber-200 text-slate-800 shadow-2xs">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>{lang === "uz" ? "Stomatolog Orifjon · 20+ Yillik Tajriba" : lang === "ru" ? "Стоматолог Орифжон · 20+ Лет Опыта" : "Dentist Orifjon · 20+ Yrs Practice"}</span>
         </div>
 
-        <h1 className="font-serif-classic text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-          {lang === "uz" ? "Stomatologik Xizmatlar " : lang === "ru" ? "Каталог Стоматологических " : "Dental Services & "}
-          <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
-            {lang === "uz" ? "Katalogi & Yo'nalishlari" : lang === "ru" ? "Услуг и Направлений" : "Specialties Catalog"}
-          </span>
+        <h1 className="font-serif-classic text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15]">
+          {lang === "uz"
+            ? "Stomatologik Xizmatlar Katalogi"
+            : lang === "ru"
+            ? "Каталог Стоматологических Услуг"
+            : "Dental Services & Specialties"}
         </h1>
 
-        <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
           {lang === "uz"
-            ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) tomonidan 20+ yillik tajriba va Germaniya hamda Koreyaning original sertifikatlangan materiallari asosida 100% og'riqsiz muolajalar."
+            ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) tomonidan 20+ yillik tibbiyot tajribasi, Germaniya va Janubiy Koreyaning original sertifikatlangan materiallari asosida 100% og'riqsiz muolajalar."
             : lang === "ru"
-            ? "Все виды современного безболезненного лечения, протезирования, ортодонтии и имплантации у Стоматолога Орифжона с официальной гарантией."
-            : "All dental procedures performed by Dentist Orifjon (Mansurov Orifjon Alimbekovich) using genuine German & South Korean certified materials."}
+            ? "Все виды современного безболезненного лечения, протезирования, ортодонтии и имплантации у Стоматолога Орифжона с официальной клинической гарантией."
+            : "All dental procedures performed by Dentist Orifjon (Mansurov Orifjon Alimbekovich) using genuine German & South Korean certified materials with official warranty."}
         </p>
 
         {/* Certified Materials Quick Pills */}
@@ -109,7 +104,7 @@ const Services = ({ onOpenBooking }) => {
           <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
           <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
           <OriginPill flag="💉" material="Orablok" country="Yevropa" />
-          <OriginPill flag="🔩" material="Mega'Gen & AnyRidge & DXL" country="Germaniya/Koreya" />
+          <OriginPill flag="🔩" material="Mega'Gen & AnyRidge" country="Germaniya/Koreya" />
         </div>
       </div>
 
@@ -164,50 +159,16 @@ const Services = ({ onOpenBooking }) => {
                   {/* Visual Depth Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
 
-                  {/* Top Bespoke Frosted Glass Stickers */}
+                  {/* Top Bespoke Frosted Glass Badges */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-black tracking-wide text-slate-900 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-bold text-slate-900 border border-white/80 shadow-md">
                       <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                       <span>{service.badge?.[lang] || service.category[lang]}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md text-[10.5px] font-bold border border-emerald-300/40">
                       <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
                       <span>{service.warranty[lang]}</span>
                     </span>
-                  </div>
-
-                  {/* Dynamic Category Sticker Overlay */}
-                  <div className="absolute bottom-3 left-4 z-10 pointer-events-none">
-                    {service.id === "implantatsiya" && (
-                      <BioTitaniumBadge
-                        system="Mega'Gen & AnyRidge & DXL"
-                        origin={lang === "ru" ? "Германия & Корея" : lang === "en" ? "Germany & Korea" : "Germaniya & Koreya"}
-                      />
-                    )}
-                    {service.id === "terapiya" && (
-                      <div className="flex items-center gap-1.5">
-                        <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
-                        <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
-                      </div>
-                    )}
-                    {service.id === "xirurgiya" && (
-                      <ZeroPainShield
-                        label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "Gentle Care" : "100% Og'riqsiz"}
-                        sublabel="Orablok / Supercain"
-                      />
-                    )}
-                    {service.id === "ortopediya" && (
-                      <DigitalCyanTag
-                        tag="CAD/CAM Sirkoniy"
-                        subtag={lang === "ru" ? "Премиум Эстетика" : lang === "en" ? "Premium Aesthetics" : "Yuqori Aniqlik"}
-                      />
-                    )}
-                    {service.id === "ortodontiya" && (
-                      <HoloGoldStamp
-                        text={lang === "ru" ? "Ровные Зубы" : lang === "en" ? "Aligned Teeth" : "Tekis Tishlar"}
-                        subtext={lang === "ru" ? "Брекеты" : lang === "en" ? "Braces" : "Breketlar"}
-                      />
-                    )}
                   </div>
                 </div>
 

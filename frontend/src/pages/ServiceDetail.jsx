@@ -155,102 +155,56 @@ const ServiceDetail = () => {
         </span>
       </nav>
 
-      {/* Hero Service Showcase — Editorial Split with 3D Depth and Bespoke Badges */}
-      <div className="relative z-10 rounded-3xl overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 lg:p-10 text-white shadow-luxury border border-amber-400/30 [transform-style:preserve-3d]">
+      {/* Hero Service Showcase — Simple Classic Luxury */}
+      <div className="relative z-10 rounded-3xl overflow-hidden bg-white p-6 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left: Clinical Information & CTA */}
           <div className="lg:col-span-7 space-y-5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 text-amber-300 text-[11px] font-bold uppercase tracking-wider border border-amber-400/30 shadow-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-slate-800 text-[11px] font-bold uppercase tracking-wider border border-amber-200 shadow-2xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 <span>{service.badge?.[lang] || service.category[lang]}</span>
               </span>
-              <span className="px-3 py-1 rounded-full bg-white/10 text-slate-200 text-[11px] font-medium uppercase tracking-wider border border-white/15">
+              <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-medium uppercase tracking-wider border border-slate-200">
                 {service.category[lang]}
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 text-[11px] font-semibold tracking-wide border border-emerald-400/30">
-                <IconShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold tracking-wide border border-emerald-200">
+                <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>{service.warranty[lang]}</span>
               </span>
             </div>
 
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-[1.18]">
               {service.title[lang]}
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
               {service.shortDesc[lang]}
             </p>
 
-            {/* Bespoke Sticker for Service Category */}
-            <div className="pt-1">
-              {service.id === "implantatsiya" && (
-                <BioTitaniumBadge
-                  system="Mega'Gen & AnyRidge & DXL"
-                  origin={lang === "ru" ? "Германия & Корея" : lang === "en" ? "Germany & Korea" : "Germaniya & Koreya"}
-                />
-              )}
-              {service.id === "terapiya" && (
-                <div className="flex flex-wrap items-center gap-2">
-                  <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
-                  <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
-                  <ZeroPainShield
-                    label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Gentle" : "100% Og'riqsiz"}
-                    sublabel="Orablok / Artikain"
-                  />
-                </div>
-              )}
-              {service.id === "xirurgiya" && (
-                <div className="flex flex-wrap items-center gap-2">
-                  <ZeroPainShield
-                    label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Painless" : "100% Og'riqsiz"}
-                    sublabel="Orablok & Supercain"
-                  />
-                  <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
-                </div>
-              )}
-              {service.id === "ortopediya" && (
-                <div className="flex flex-wrap items-center gap-2">
-                  <DigitalCyanTag
-                    tag="CAD/CAM Tsirkoniy"
-                    subtag={lang === "ru" ? "Премиум Эстетика" : lang === "en" ? "Premium Aesthetics" : "Germaniya & Koreya"}
-                  />
-                  <OriginPill flag="👑" material="Zirconia & E.max" country="15 Yil Kafolat" />
-                </div>
-              )}
-              {service.id === "ortodontiya" && (
-                <div className="flex flex-wrap items-center gap-2">
-                  <HoloGoldStamp
-                    text={lang === "ru" ? "Ровные Зубы" : lang === "en" ? "Perfect Smile" : "Tekis Tishlar"}
-                    subtext={lang === "ru" ? "Брекет-Системы" : lang === "en" ? "Braces Systems" : "Breket Tizimlari"}
-                  />
-                </div>
-              )}
-            </div>
-
-            {/* Quick Metrics Badges with 3D Depth */}
+            {/* Quick Metrics Badges */}
             <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-400/40 text-center transition-colors">
+              <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Tizim" : lang === "ru" ? "Система" : "System"}
                 </span>
-                <span className="text-xs sm:text-sm font-bold text-amber-300 block mt-0.5 truncate">
+                <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 truncate">
                   {service.techTag?.[lang] || "Klinik"}
                 </span>
               </div>
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-400/40 text-center transition-colors">
+              <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Время" : "Duration"}
                 </span>
-                <span className="text-xs sm:text-sm font-bold text-white block mt-0.5 truncate">
+                <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 truncate">
                   {service.duration[lang]}
                 </span>
               </div>
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-400/40 text-center transition-colors">
+              <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}
                 </span>
-                <span className="text-xs sm:text-sm font-bold text-emerald-400 block mt-0.5 truncate">
+                <span className="text-xs sm:text-sm font-bold text-emerald-700 block mt-0.5 truncate">
                   {service.warranty[lang]}
                 </span>
               </div>
@@ -259,16 +213,13 @@ const ServiceDetail = () => {
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <button
                 onClick={() => openBooking(service.id)}
-                className="relative overflow-hidden px-7 py-3.5 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer group/cta select-none"
+                className="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-md hover:shadow-orange hover:-translate-y-0.5 transition-all cursor-pointer select-none"
               >
-                <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover/cta:animate-shimmer-sweep pointer-events-none" />
-                <span className="relative z-10">
-                  {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Procedure"}
-                </span>
+                <span>{lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Procedure"}</span>
               </button>
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-xs border border-white/15 hover:-translate-y-0.5 transition-all"
+                className="px-5 py-3.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-amber-200 transition-colors"
               >
                 <IconPhone className="w-4 h-4 text-primary" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -276,9 +227,9 @@ const ServiceDetail = () => {
             </div>
           </div>
 
-          {/* Right: Dedicated High-Res Clinical Photography Showcase */}
+          {/* Right: High-Res Clinical Photography Showcase */}
           <div className="lg:col-span-5">
-            <div className="group relative rounded-3xl overflow-hidden bg-slate-900 border-2 border-amber-300/40 shadow-2xl [transform-style:preserve-3d]">
+            <div className="group relative rounded-3xl overflow-hidden bg-slate-100 border border-amber-200/80 shadow-md">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={service.image}
@@ -287,17 +238,17 @@ const ServiceDetail = () => {
                   height={600}
                   fetchPriority="high"
                   decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
 
                 {/* Clean Top Frosted Glass Badges */}
                 <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-black tracking-wide text-slate-900 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-bold text-slate-900 border border-white/80 shadow-md">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <span>{service.badge?.[lang] || service.category[lang]}</span>
                   </span>
-                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
+                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md text-[10.5px] font-bold border border-emerald-300/40">
                     <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
                     <span>{service.warranty[lang]}</span>
                   </span>
