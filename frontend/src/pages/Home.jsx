@@ -364,20 +364,56 @@ const BeforeAfterSection = () => {
         <BeforeAfterSlider
           beforeImg={assets.treatment_implant}
           afterImg={assets.hero_smile}
-          title={lang === "uz" ? "Dental Implantatsiya & Tsirkoniy" : "Имплантация и Цирконий"}
-          subtitle={lang === "uz" ? "MegaGen implant va CAD/CAM karonka" : "MegaGen и коронка CAD/CAM"}
+          title={
+            lang === "uz"
+              ? "Dental Implantatsiya & Tsirkoniy"
+              : lang === "ru"
+              ? "Имплантация и Цирконий"
+              : "Dental Implants & Zirconia"
+          }
+          subtitle={
+            lang === "uz"
+              ? "MegaGen implant va CAD/CAM karonka"
+              : lang === "ru"
+              ? "MegaGen и коронка CAD/CAM"
+              : "MegaGen implant & CAD/CAM crown"
+          }
         />
         <BeforeAfterSlider
           beforeImg={assets.treatment_crowns}
           afterImg={assets.treatment_veneers}
-          title={lang === "uz" ? "E-max Estetik Vinirlar" : "Виниры E-max"}
-          subtitle={lang === "uz" ? "Gollivud tabassumi dizayni" : "Дизайн Голливудской улыбки"}
+          title={
+            lang === "uz"
+              ? "E-max Estetik Vinirlar"
+              : lang === "ru"
+              ? "Виниры E-max"
+              : "E-max Aesthetic Veneers"
+          }
+          subtitle={
+            lang === "uz"
+              ? "Gollivud tabassumi dizayni"
+              : lang === "ru"
+              ? "Дизайн Голливудской улыбки"
+              : "Hollywood smile makeover"
+          }
         />
         <BeforeAfterSlider
           beforeImg={assets.treatment_therapy}
           afterImg={assets.treatment_whitening}
-          title={lang === "uz" ? "Tish Oqartirish & Restavratsiya" : "Отбеливание и Реставрация"}
-          subtitle={lang === "uz" ? "AirFlow va fotopolimer restavratsiya" : "AirFlow и нано-композиты"}
+          title={
+            lang === "uz"
+              ? "Tish Oqartirish & Restavratsiya"
+              : lang === "ru"
+              ? "Отбеливание и Реставрация"
+              : "Teeth Whitening & Restoration"
+          }
+          subtitle={
+            lang === "uz"
+              ? "AirFlow va fotopolimer restavratsiya"
+              : lang === "ru"
+              ? "AirFlow и нано-композиты"
+              : "AirFlow & composite restoration"
+          }
         />
       </div>
     </section>

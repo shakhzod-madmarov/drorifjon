@@ -296,7 +296,7 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
     "mainEntity": {
       "@type": ["Dentist", "MedicalBusiness"],
       "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": `${DOCTOR_INFO.name} — Smiles Dental Group`,
+      "name": `${DOCTOR_INFO.name} — Vrach Stomatolog`,
       "telephone": DOCTOR_INFO.phoneRaw,
       "email": DOCTOR_INFO.email,
       "address": {
@@ -595,7 +595,12 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
       },
       "result": {
         "@type": "Reservation",
-        "name": "Stomatologik qabulga yozilish",
+        "name":
+          lang === "ru"
+            ? "Запись на приём к стоматологу"
+            : lang === "en"
+            ? "Dental appointment booking"
+            : "Stomatologik qabulga yozilish",
       },
     },
   };

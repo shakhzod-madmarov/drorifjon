@@ -345,7 +345,13 @@ const InlineBookingSection = ({ initialService = null }) => {
 
     // 2. Velocity check: human patient takes at least 1.2s to fill the form
     if (Date.now() - formMountTime < 1200) {
-      toast.warn(lang === "uz" ? "Iltimos, ma'lumotlarni tekshirib qayta bosing." : "Пожалуйста, проверьте данные.");
+      toast.warn(
+        lang === "uz"
+          ? "Iltimos, ma'lumotlarni tekshirib qayta bosing."
+          : lang === "ru"
+          ? "Пожалуйста, проверьте введённые данные."
+          : "Please review your information before submitting."
+      );
       return;
     }
 
@@ -409,7 +415,7 @@ const InlineBookingSection = ({ initialService = null }) => {
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ["#DF301C", "#FF9100", "#00B7CD"],
+        colors: ["#FF9D50", "#1DCED8", "#55E07E", "#FFF9D8"],
       });
     } catch (err) {
       if (err?.status === 409) {
