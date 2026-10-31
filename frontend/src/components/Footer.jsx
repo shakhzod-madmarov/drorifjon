@@ -31,15 +31,11 @@ const Footer = () => {
   ];
 
   const specialtyLinks = [
-    { path: "/services/dental-implant", label: { uz: "Dental Implantatsiya", ru: "Имплантация Зубов", en: "Dental Implants" } },
-    { path: "/services/breketlar", label: { uz: "Ortodontik Breketlar", ru: "Брекет-Системы", en: "Orthodontic Brackets" } },
-    { path: "/services/sirkon-keramika-karonkalar", label: { uz: "Sirkon va Keramika Karonkalar", ru: "Циркониевые Коронки", en: "Zirconia & Ceramic Crowns" } },
-    { path: "/services/vinirlar", label: { uz: "Estetik Vinirlar", ru: "Виниры", en: "Aesthetic Veneers" } },
-    { path: "/services/pratezlar", label: { uz: "Zamonaviy Tish Protezlari", ru: "Протезирование Зубов", en: "Dental Prosthetics" } },
-    { path: "/services/elaynerlar", label: { uz: "Ko'rinmas Shaffof Elaynerlar", ru: "Прозрачные Элайнеры", en: "Clear Aligners" } },
-    { path: "/services/tish-oqartirish", label: { uz: "Professional Tish Oqartirish", ru: "Отбеливание Зубов", en: "Teeth Whitening" } },
-    { path: "/services/ogriqsiz-tish-davolash", label: { uz: "Og'riqsiz Tish Davolash & Plomba", ru: "Лечение Зубов Без Боли", en: "Painless Dental Care" } },
-    { path: "/services/ogriqsiz-tish-olish", label: { uz: "Og'riqsiz Tish Olish & Xirurgiya", ru: "Удаление Зубов Без Боли", en: "Gentle Tooth Extraction" } },
+    { path: "/services/terapiya", label: { uz: "1. Terapiya (Og'riqsiz Davolash & Restavratsiya)", ru: "1. Терапия (Лечение и Реставрация)", en: "1. Therapy (Painless Care & Restoration)" } },
+    { path: "/services/ortopediya", label: { uz: "2. Ortopediya (Yuqori Sifatli Tish Qo'yish, Protezlash)", ru: "2. Ортопедия (Протезирование и Коронки)", en: "2. Orthopedics (Precision Prosthetics)" } },
+    { path: "/services/implantatsiya", label: { uz: "3. Implantatsiya (Germaniya & Koreya)", ru: "3. Имплантация (Германия и Корея)", en: "3. Implantation (German & Korean Systems)" } },
+    { path: "/services/xirurgiya", label: { uz: "4. Xirurgiya (Og'riqsiz & Asoratsiz Tish Olish)", ru: "4. Хирургия (Удаление Зубов Без Боли)", en: "4. Surgery (Gentle Extraction)" } },
+    { path: "/services/ortodontiya", label: { uz: "5. Ortodontiya (Breketlar Bilan To'g'rilash)", ru: "5. Ортодонтия (Исправление Прикуса Брекетами)", en: "5. Orthodontics (Braces Alignment)" } },
   ];
 
   return (

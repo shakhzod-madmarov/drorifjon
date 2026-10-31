@@ -4,10 +4,10 @@
 - F.I.SH.: Mansurov Orifjon Alimbekovich
 - Brend nomi: Dr. Mansurov O.A. / Dr. Orifjon Mansurov
 - Mutaxassislik: Vrach-Stomatolog (Dentist / Dental Surgeon)
-- Tibbiyotdagi tajriba: 20 yildan ortiq
+- Tibbiyotdagi tajriba: 20 yildan ortiq amaliy faoliyat
 - Ta'lim:
   1. Andijon Tibbiyot kolleji (2001–2004) — fundamental tibbiy tayyorgarlik
-  2. O'sh Davlat Universiteti (Ошский Государственный Университет, 2017–2022) — oliy stomatologik ta'lim
+  2. O'sh Davlat Universiteti (Ошский Государственный Университет, 2017–2022) — stomatologiya oliy ta'limi
 
 ## Aloqa Ma'lumotlari (Contact Information)
 - Telefon: +998 90 548 10 90
@@ -18,18 +18,24 @@
 - Onlayn qabul: https://drorifjon.uz/booking
 
 ## Ranglar Palitrasi (Brand Color Palette)
-- Asosiy iliq apelsin / coral: #FF9D50
-- Yumshoq qaymoq rang fon: #FFF9D8
-- Jonli tibbiy ko'k / firuza: #1DCED8
-- Sog'lom zumrad / yalpiz yashil: #55E07E
+- Asosiy iliq apelsin / Coral Orange: #FF9D50
+- Yumshoq qaymoq rang fon / Warm Cream: #FFF9D8
+- Jonli yuqori texnologik firuza / High-Tech Cyan: #1DCED8
+- Sog'lom zumrad / Medical Mint Green: #55E07E
 
-## Xizmatlar Katalogi (Services Catalog)
-1. Dental implantatsiya — yo'qotilgan tishlarni og'riqsiz tiklash
-2. Breket tizimlari — metall, keramika va sapfir breketlar
-3. Sirkon va keramika karonkalar — tabiiy va chidamli qoplamalar
-4. Keramik vinirlar — estetik tabassum dizayni
-5. Zamonaviy protezlar — qulay va mustahkam
-6. Shaffof elaynerlar — tishlarni ko'rinmas kapalar bilan to'g'rilash
-7. Professional tish oqartirish — xavfsiz va samarali
-8. Og'riqsiz tish davolash — karies va pulpit muolajasi
-9. Og'riqsiz tish olish — atravmatik jarrohlik
+## 5 Asosiy Stomatologik Yo'nalish (Core Clinical Specialties)
+1. **Terapiya (tishlarni og'riqsiz davolash va restavratsiya)**
+   - RU: Терапия (безболезненное лечение и реставрация зубов)
+   - EN: Therapy (Painless tooth treatment and aesthetic restoration)
+2. **Ortopediya (yuqori sifatli tish qo'yish, protezlash)**
+   - RU: Ортопедия (высококачественное протезирование и установка зубов)
+   - EN: Orthopedics (High-quality tooth placement and prosthetics)
+3. **Implantatsiya (Germaniya va Koreya mahsulotlari)**
+   - RU: Имплантация (премиальные импланты из Германии и Кореи)
+   - EN: Implantation (German and Korean premium implant systems)
+4. **Xirurgiya (og'riqsiz va asoratsiz tish olish)**
+   - RU: Хирургия (безболезненное и атравматичное удаление зубов без осложнений)
+   - EN: Surgery (Painless and complication-free tooth extraction)
+5. **Ortodontiya (qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)**
+   - RU: Ортодонтия (выравнивание неровных зубных рядов и исправление прикуса брекетами)
+   - EN: Orthodontics (Alignment of crooked and uneven teeth using braces)

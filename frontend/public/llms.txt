@@ -1,6 +1,6 @@
 # Dr. Mansurov Orifjon Alimbekovich (Dr. Mansurov O.A.) — Vrach Stomatolog (Andijon / Andijan)
 
-> **Dr. Mansurov Orifjon Alimbekovich** — 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatolog. Dastlab Andijon Tibbiyot kolleji (2001–2004), so'ngra O'sh Davlat Universiteti (Ошский Государственный Университет) stomatologiya fakulteti (2017–2022) bitiruvchisi.
+> **Dr. Mansurov Orifjon Alimbekovich** — 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatolog. Dastlab Andijon Tibbiyot kolleji (2001–2004), so'ngra O'sh Davlat Universiteti stomatologiya fakulteti (2017–2022) bitiruvchisi.
 > **Врач-стоматолог Д-р Мансуров Орифжон Алимбекович (Dr. Mansurov O.A.)** — более 20 лет в сфере медицины. Начальное медицинское образование — Андижанский медицинский колледж (2001–2004), высшее стоматологическое образование — Ошский Государственный Университет (2017–2022).
 > **Dr. Orifjon Mansurov (Dr. Mansurov O.A.)** — Experienced modern dentist in Andijan, Uzbekistan, with over two decades of healthcare background and advanced clinical dentistry credentials.
 
@@ -9,11 +9,11 @@
 ## Asosiy Ma'lumotlar / Essential Facts / Основная Информация
 
 - **Shifokor / Врач / Doctor**: Dr. Mansurov Orifjon Alimbekovich (Dr. Mansurov O.A.)
-- **Mutaxassislik / Специализация / Specialties**: Vrach-stomatolog, Dental Terapevt, Ortoped, Jarroh, Estetik stomatologiya
-- **Klinik Tajriba / Опыт работы / Healthcare Background**: 20+ yil (2001-yildan tibbiyot sohasida, 2001-2004 Andijon Tibbiyot kolleji, 2017-2022 O'sh Davlat Universiteti)
+- **Mutaxassislik / Специализация / Specialties**: Vrach-stomatolog, Terapevt, Ortoped, Implantolog, Xirurg, Ortodont
+- **Klinik Tajriba / Опыт работы / Healthcare Background**: 20+ yil (2001-yildan tibbiyot sohasida amaliy faoliyat)
 - **Ta'lim / Образование / Education**:
-  * Andijon Tibbiyot Kolleji (Дастлаб Андижон Тиббиёт коллежи, 2001–2004)
-  * O'sh Davlat Universiteti (Ошский Государственный Университет, 2017–2022)
+  * Andijon Tibbiyot Kolleji (Dastlabki tibbiy ta'lim, 2001–2004) / Андижанский медицинский колледж (2001–2004)
+  * O'sh Davlat Universiteti (Stomatologiya fakulteti, 2017–2022) / Ошский Государственный Университет (2017–2022)
 - **Klinika / Клиника / Practice**: Dr. Mansurov O.A. Stomatologiya Qabuli (Andijon)
 - **Manzil / Адрес / Address**: O'zbekiston, Andijon shahri / г. Андижан, Узбекистан / Andijan, Uzbekistan
 - **Telefon / Телефон / Phone**: +998 90 548 10 90
@@ -25,28 +25,29 @@
 
 ---
 
-## Shoshilinch Tish Og'rig'i va Simptomlar / Emergency Toothache
+## 5 Asosiy Stomatologik Yo'nalish (Core Clinical Specialties)
 
-1. **O'tkir tish og'rig'i (pulpit, periodontit, tish qaqshashi)**:
-   - Dr. Mansurov O.A. 2 bosqichli og'riqsiz mikro-anesteziya qo'llaydi.
-   - Qabulga zudlik bilan yozilish: https://drorifjon.uz/booking yoki tel: +998 90 548 10 90.
-2. **Plomba tushib ketishi yoki karies**:
-   - Yuqori sifatli nanokompozit materiallar bilan 100% og'riqsiz va anatomik tiklanadi.
-3. **Tish qoplamalari va estetik tiklash**:
-   - Sirkon va keramik karonkalar, vinirlar bilan mustahkam va tabiiy tabassum.
-4. **Atravmatik tish olish va jarrohlik**:
-   - 100% og'riqsiz, milk va suyak to'qimalarini asragan holda.
+1. **Terapiya (Tishlarni og'riqsiz davolash va restavratsiya)**
+   - O'zbekcha: Karies, chuqur karies, pulpit va periodontitni 2 bosqichli mikro-anesteziya ostida 100% og'riqsiz davolash hamda Germaniya va Yaponiya nanokompozitlari bilan tishning tabiiy shakli va rangini badiiy restavratsiya qilish.
+   - Русский: Терапия (безболезненное лечение кариеса и каналов, художественная реставрация формы и цвета зубов нанокомпозитами).
+   - English: Therapy (100% painless treatment of caries, pulpitis, and root canals with artistic nanocomposite tooth restoration).
 
----
+2. **Ortopediya (Yuqori sifatli tish qo'yish, protezlash)**
+   - O'zbekcha: Yo'qotilgan yoki shikastlangan tishlarni sirkoniy (Zirconia) va presslangan keramika (IPS E.max) karonkalar, estetik vinirlar hamda zamonaviy qulay olinadigan va olinmaydigan protezlar bilan tiklash.
+   - Русский: Ортопедия (высококачественное протезирование, коронки из диоксида циркония и керамики E.max, виниры, бюгельные и гибкие протезы).
+   - English: Orthopedics (High-quality tooth replacement, zirconia and IPS E.max ceramic crowns, cosmetic veneers, and modern dentures).
 
-## 9 Asosiy Stomatologik Yo'nalish (Clinical Specialties)
+3. **Implantatsiya (Germaniya va Koreya mahsulotlari)**
+   - O'zbekcha: Yo'qotilgan tishlarni qo'shni tishlarni charxlamasdan, Germaniya va Janubiy Koreyaning yetakchi premium biotitan implantlari yordamida 15-20 daqiqada og'riqsiz va umrbod kafolat bilan tiklash.
+   - Русский: Имплантация (оригинальные биотитановые имплантаты из Германии и Южной Кореи за 15-20 минут без боли с пожизненной гарантией).
+   - English: Implantation (Genuine German and South Korean biocompatible titanium implant systems placed painlessly in 15-20 minutes with lifetime warranty).
 
-1. **Dental Implantatsiya**: Yo'qotilgan tishlarni qo'shni tishlarni charxlamasdan mustahkam biotitan implantlar bilan tiklash.
-2. **Breket Tizimlari**: Tishlar qatorini to'g'rilash va estetik tishlash tizimi.
-3. **Sirkon va Keramika Karonkalar**: Metall-siz, tabiiy tishdek nur o'tkazuvchan mustahkam qoplamalar.
-4. **Keramik Vinirlar**: Gollivud tabassumi, tish rangi va shaklini mukammallashtirish.
-5. **Zamonaviy Tish Pratezlari**: Qulay, estetik olinadigan va olinmaydigan protezlar.
-6. **Shaffof Elaynerlar**: Ko'rinmas kapalar yordamida tishlarni tekislash.
-7. **Professional Tish Oqartirish**: Emalga zarar yetkazmasdan tishlarni oqartirish.
-8. **Og'riqsiz Tish Davolash**: Karies, asab kanallarini davolash va estetik restavratsiya.
-9. **Og'riqsiz Tish Olish**: Atravmatik tish olish va aql tishlarini asoratsiz bartaraf etish.
+4. **Xirurgiya (Og'riqsiz va asoratsiz tish olish)**
+   - O'zbekcha: Qutqarib bo'lmaydigan tishlarni, shu jumladan murakkab va yotib qolgan 8-aql tishlarini zamonaviy atravmatik texnika va 2 bosqichli og'riqsizlantirish ostida asoratsiz olib tashlash.
+   - Русский: Хирургия (безболезненное и атравматичное удаление зубов любой сложности и зубов мудрости без повреждения кости и осложнений).
+   - English: Surgery (Painless and atraumatic extraction of compromised teeth and complex wisdom teeth with smooth complication-free recovery).
+
+5. **Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)**
+   - O'zbekcha: Qiyshiq, notekis yoki orasi ochiq tish qatorlarini zamonaviy metall, keramika va estetik sapfir breket tizimlari yordamida to'g'rilash hamda ideal tishlash (prikus) tizimini barpo etish.
+   - Русский: Ортодонтия (исправление прикуса и выравнивание кривых зубных рядов современными металлическими, керамическими и сапфировыми брекетами).
+   - English: Orthodontics (Alignment of crooked, crowded, or uneven teeth and malocclusion bite correction using advanced braces systems).

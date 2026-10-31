@@ -5,7 +5,30 @@ export const DOCTOR_INFO = {
   name: "Dr. Mansurov O.A.",
   fullName: "Mansurov Orifjon Alimbekovich",
   title: "Vrach Stomatolog",
-  specialtiesText: "Dental implant · Breket · Sirkon & Keramika · Vinirlar · Pratezlar · Elaynerlar · Oqartirish · Davolash",
+  specialtiesText: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",
+  specialties: {
+    uz: [
+      "1. Terapiya (tishlarni og'riqsiz davolash va restavratsiya)",
+      "2. Ortopediya (yuqori sifatli tish qo'yish, protezlash)",
+      "3. Implantatsiya (Germaniya va Koreya mahsulotlari)",
+      "4. Xirurgiya (og'riqsiz va asoratsiz tish olish)",
+      "5. Ortodontiya (qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
+    ],
+    ru: [
+      "1. Терапия (безболезненное лечение и реставрация зубов)",
+      "2. Ортопедия (высококачественное протезирование и установка зубов)",
+      "3. Имплантация (премиальные импланты из Германии и Кореи)",
+      "4. Хирургия (безболезненное и атравматичное удаление зубов без осложнений)",
+      "5. Ортодонтия (выравнивание неровных зубных рядов и исправление прикуса брекетами)",
+    ],
+    en: [
+      "1. Therapy (Painless tooth treatment and aesthetic restoration)",
+      "2. Orthopedics (High-quality tooth placement and prosthetics)",
+      "3. Implantation (German and Korean premium implant systems)",
+      "4. Surgery (Painless and complication-free tooth extraction)",
+      "5. Orthodontics (Alignment of crooked and uneven teeth using braces)",
+    ],
+  },
   careerStartYear: 2001, // 20+ years of healthcare experience since medical college
   dentalDegreeYear: 2022,
   education: {

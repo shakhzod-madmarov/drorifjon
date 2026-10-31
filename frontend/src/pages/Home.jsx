@@ -44,10 +44,10 @@ const HeroSection = ({ onOpenBooking }) => {
     uz: {
       badge: "Vrach-Stomatolog · 20+ Yillik Tajriba",
       doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Implantolog · Ortoped · Ortodont · Terapevt",
+      specialtyTitle: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",
       headline: "Tabiiy va Sog'lom Tabassum Uchun 100% Og'riqsiz Zamonaviy Stomatologiya",
       subtitle:
-        "Andijon Tibbiyot kolleji (2001–2004) hamda O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Dental implantlar, breketlar, tsirkoniy karonkalar, E-max vinirlar, ko'rinmas elaynerlar va og'riqsiz davolash.",
+        "Andijon Tibbiyot kolleji (2001–2004) hamda O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Terapiya (davolash va restavratsiya), ortopediya (tish qo'yish, protezlash), Germaniya va Koreya implantatsiyasi, xirurgiya va ortodontiya yo'nalishlarida 100% og'riqsiz davolash.",
       ctaBook: "Qabulga Yozilish",
       ctaServices: "Barcha Xizmatlar",
       stat1Num: "20+ Yil",
@@ -62,10 +62,10 @@ const HeroSection = ({ onOpenBooking }) => {
     ru: {
       badge: "Врач-Стоматолог · 20+ Лет в Медицине",
       doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Имплантолог · Ортопед · Ортодонт · Терапевт",
+      specialtyTitle: "Терапия · Ортопедия · Имплантация · Хирургия · Ортодонтия",
       headline: "Современная Стоматология Без Боли для Вашей Безупречной Улыбки",
       subtitle:
-        "Выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022). Дентальная имплантация, брекеты, циркониевые коронки, виниры E-max, элайнеры и бережное лечение зубов.",
+        "Выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022). Терапия (лечение и реставрация), ортопедия (протезирование), немецкая и корейская имплантация, хирургия и ортодонтия без боли.",
       ctaBook: "Записаться на Приём",
       ctaServices: "Все Услуги",
       stat1Num: "20+ Лет",
@@ -80,10 +80,10 @@ const HeroSection = ({ onOpenBooking }) => {
     en: {
       badge: "Dental Surgeon · 20+ Years Practice",
       doctorName: DOCTOR_INFO.name,
-      specialtyTitle: "Implantologist · Prosthodontist · Orthodontist",
+      specialtyTitle: "Therapy · Orthopedics · Implantation · Surgery · Orthodontics",
       headline: "Gentle & 100% Painless Modern Dental Care for Your Natural Smile",
       subtitle:
-        "Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Dental implants, orthodontic braces, monolithic zirconia crowns, E-max veneers, and gentle tooth therapy.",
+        "Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Comprehensive therapy, orthopedics, German & Korean dental implants, gentle surgery, and braces orthodontics.",
       ctaBook: "Book Appointment",
       ctaServices: "Explore Services",
       stat1Num: "20+ Yrs",
@@ -208,14 +208,14 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
       <div className="text-center max-w-3xl mx-auto space-y-2">
         <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-medium uppercase tracking-wider bg-primary/5 text-primary border border-primary/20 shadow-2xs">
           <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
-          <span>{lang === "uz" ? "9 Ta Asosiy Stomatologik Yo'nalish" : lang === "ru" ? "9 Основных Направлений" : "9 Core Dental Specialties"}</span>
+          <span>{lang === "uz" ? "5 Ta Asosiy Stomatologik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Dental Specialties"}</span>
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
           {lang === "uz"
-            ? "Dr. Mansurov O.A. Stomatologik Xizmatlari"
+            ? "Dr. Mansurov O.A. Stomatologik Yo'nalishlari"
             : lang === "ru"
-            ? "Клинические Услуги Д-ра Мансурова О.А."
-            : "Clinical Specialties & Smile Procedures"}
+            ? "Клинические Направления Д-ра Мансурова О.А."
+            : "Clinical Specialties & Care Directions"}
         </h2>
         <p className="text-sm text-slate-600">
           {lang === "uz"

@@ -24,20 +24,17 @@ const Services = ({ onOpenBooking }) => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const categories = [
-    { id: "all", label: { uz: "Barcha Xizmatlar", ru: "Все Услуги", en: "All Services" } },
-    { id: "implant", label: { uz: "Dental Implant", ru: "Имплантация", en: "Implants" } },
-    { id: "ortho", label: { uz: "Breket & Elayner", ru: "Брекеты и Элайнеры", en: "Orthodontics" } },
-    { id: "prostho", label: { uz: "Karonka & Vinirlar", ru: "Коронки и Виниры", en: "Prosthetics" } },
-    { id: "care", label: { uz: "Davolash & Jarrohlik", ru: "Лечение и Хирургия", en: "Therapy & Surgery" } },
+    { id: "all", label: { uz: "Barcha Yo'nalishlar", ru: "Все Направления", en: "All Specialties" } },
+    { id: "terapiya", label: { uz: "1. Terapiya", ru: "1. Терапия", en: "1. Therapy" } },
+    { id: "ortopediya", label: { uz: "2. Ortopediya", ru: "2. Ортопедия", en: "2. Orthopedics" } },
+    { id: "implantatsiya", label: { uz: "3. Implantatsiya", ru: "3. Имплантация", en: "3. Implantation" } },
+    { id: "xirurgiya", label: { uz: "4. Xirurgiya", ru: "4. Хирургия", en: "4. Surgery" } },
+    { id: "ortodontiya", label: { uz: "5. Ortodontiya", ru: "5. Ортодонтия", en: "5. Orthodontics" } },
   ];
 
   const filteredServices = SERVICES_CATALOG.filter((s) => {
     if (activeCategory === "all") return true;
-    if (activeCategory === "implant") return s.id.includes("implant");
-    if (activeCategory === "ortho") return s.id.includes("breket") || s.id.includes("elayner");
-    if (activeCategory === "prostho") return s.id.includes("karonka") || s.id.includes("vinir") || s.id.includes("pratez");
-    if (activeCategory === "care") return s.id.includes("davolash") || s.id.includes("olish") || s.id.includes("oqartirish");
-    return true;
+    return s.id === activeCategory;
   });
 
   const breadcrumbs = [

@@ -67,10 +67,66 @@ export const ROUTES = [
     changefreq: "weekly",
     priority: "0.8",
   },
+  /* ═════════════════════════════════════════════════════════════════
+     5 CORE CLINICAL SPECIALTIES
+     ═════════════════════════════════════════════════════════════════ */
+  {
+    path: "/services/terapiya",
+    changefreq: "monthly",
+    priority: "0.9",
+    image: {
+      src: "src/assets/treatment_therapy.webp",
+      title: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya) — Dr. Mansurov O.A.",
+      caption: "Karies, chuqur karies, pulpit va nano-kompozit badiiy restavratsiya",
+    },
+  },
+  {
+    path: "/services/ortopediya",
+    changefreq: "monthly",
+    priority: "0.9",
+    image: {
+      src: "src/assets/treatment_crowns.webp",
+      title: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash) — Dr. Mansurov O.A.",
+      caption: "Sirkon va keramika karonkalar, vinirlar hamda zamonaviy protezlar",
+    },
+  },
+  {
+    path: "/services/implantatsiya",
+    changefreq: "monthly",
+    priority: "0.9",
+    image: {
+      src: "src/assets/treatment_implant.webp",
+      title: "Implantatsiya (Germaniya va Koreya mahsulotlari) — Dr. Mansurov O.A.",
+      caption: "Germaniya va Janubiy Koreya biotitan implantlari bilan og'riqsiz tish tiklash",
+    },
+  },
+  {
+    path: "/services/xirurgiya",
+    changefreq: "monthly",
+    priority: "0.85",
+    image: {
+      src: "src/assets/treatment_surgery.webp",
+      title: "Xirurgiya (Og'riqsiz va asoratsiz tish olish) — Dr. Mansurov O.A.",
+      caption: "Atravmatik tish olish va murakkab aql tishlari jarrohligi",
+    },
+  },
+  {
+    path: "/services/ortodontiya",
+    changefreq: "monthly",
+    priority: "0.9",
+    image: {
+      src: "src/assets/treatment_braces.webp",
+      title: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash) — Dr. Mansurov O.A.",
+      caption: "Metall, keramika va sapfir breketlar bilan tishlarni tekislash",
+    },
+  },
+  /* ═════════════════════════════════════════════════════════════════
+     PROCEDURE ALIASES FOR SEAMLESS ACCESS
+     ═════════════════════════════════════════════════════════════════ */
   {
     path: "/services/dental-implant",
     changefreq: "monthly",
-    priority: "0.85",
+    priority: "0.8",
     image: {
       src: "src/assets/treatment_implant.webp",
       title: "Dental Implantatsiya — Dr. Mansurov O.A.",
@@ -80,7 +136,7 @@ export const ROUTES = [
   {
     path: "/services/breketlar",
     changefreq: "monthly",
-    priority: "0.85",
+    priority: "0.8",
     image: {
       src: "src/assets/treatment_braces.webp",
       title: "Breket Tizimlari (Metall, Keramika, Sapfir) — Dr. Mansurov O.A.",

@@ -39,9 +39,9 @@ const About = ({ onOpenBooking }) => {
         en: `Healthcare & Dental Practice (Over ${years}+ Years)`,
       },
       desc: {
-        uz: "Minglab bemorlarning tishlarini og'riqsiz davolash, zamonaviy implantatsiya, sirkon karonka va vinirlar bilan estetik tiklash.",
-        ru: "Многолетняя врачебная практика: бережное лечение зубов, имплантация, циркониевые коронки, виниры и ортодонтия.",
-        en: "Decades of dedicated practice: painless dental therapy, dental implants, monolithic zirconia crowns, and smile aesthetics.",
+        uz: "Minglab bemorlarning tishlarini og'riqsiz davolash (terapiya), tish qo'yish va protezlash (ortopediya), Germaniya va Koreya implantatsiyasi, atravmatik jarrohlik (xirurgiya) hamda breketlar (ortodontiya).",
+        ru: "Многолетняя клиническая практика: терапия и реставрация зубов без боли, высокоточная ортопедия, немецкая и корейская имплантация, бережная хирургия и исправление прикуса брекетами.",
+        en: "Decades of dedicated practice: painless tooth therapy and restoration, high-precision orthopedics, German & Korean implants, gentle surgery, and braces orthodontics.",
       },
     },
     {
@@ -68,7 +68,7 @@ const About = ({ onOpenBooking }) => {
         en: "2001 – 2004",
       },
       title: {
-        uz: "Andijon Tibbiyot Kolleji (Дастлаб Андижон Тиббиёт коллежи)",
+        uz: "Andijon Tibbiyot Kolleji (Dastlabki tibbiy ta'lim)",
         ru: "Андижанский Медицинский Колледж (Базовое образование)",
         en: "Andijan Medical College (Foundational Training)",
       },
@@ -179,10 +179,10 @@ const About = ({ onOpenBooking }) => {
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {lang === "uz"
-              ? "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. U zamonaviy dental implantatsiya, sirkon va keramik karonkalar, vinirlar, breketlar hamda 100% og'riqsiz tish davolash bo'yicha yuqori malakali mutaxassisdir."
+              ? "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. U 5 ta asosiy yo'nalish bo'yicha yuqori malakali mutaxassisdir: Terapiya (tishlarni og'riqsiz davolash va restavratsiya), Ortopediya (yuqori sifatli tish qo'yish, protezlash), Implantatsiya (Germaniya va Koreya mahsulotlari), Xirurgiya (og'riqsiz va asoratsiz tish olish) hamda Ortodontiya (breketlar yordamida tishlarni to'g'rilash)."
               : lang === "ru"
-              ? "Д-р Мансуров Орифжон Алимбекович работает в сфере здравоохранения более 20 лет. Начальное профессиональное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Специализируется на дентальной имплантации, циркониевых коронках, винирах, исправлении прикуса и безболезненном лечении зубов."
-              : "Dr. Mansurov Orifjon Alimbekovich has been serving in healthcare for over 20+ years. He completed his foundational medical training at Andijan Medical College (2001–2004) followed by university dentistry degree at Osh State University (2017–2022). He specializes in dental implants, zirconia crowns, aesthetic veneers, orthodontic alignment, and 100% painless restorative therapy."}
+              ? "Д-р Мансуров Орифжон Алимбекович работает в сфере здравоохранения более 20 лет. Начальное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Практикует 5 ключевых направлений: терапия (лечение и реставрация зубов без боли), ортопедия (высококачественное протезирование), имплантация (немецкие и корейские системы), хирургия (удаление зубов без осложнений) и ортодонтия (выравнивание зубов брекетами)."
+              : "Dr. Mansurov Orifjon Alimbekovich has been practicing healthcare for over 20+ years. He graduated from Andijan Medical College (2001–2004) and completed university dental studies at Osh State University (2017–2022). He provides 5 core clinical specialties: Therapy (painless treatment and restoration), Orthopedics (precision prosthetics), Implantation (German & Korean systems), Surgery (painless extraction without complications), and Orthodontics (bite correction with braces)."}
           </p>
 
           <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3 pt-1">

@@ -22,7 +22,7 @@ Rasmiy veb-platforma: [https://drorifjon.uz](https://drorifjon.uz)
 - **To'liq F.I.SH.**: Mansurov Orifjon Alimbekovich
 - **Brend nomi**: Dr. Mansurov O.A.
 - **Mutaxassisligi**: Vrach-Stomatolog
-- **Tibbiyotdagi faoliyati**: 2001-yildan buyon (20+ yillik tajriba)
+- **Tibbiyotdagi faoliyati**: 2001-yildan buyon (20+ yillik amaliy tajriba)
 - **Ta'limi**:
   - **Andijon Tibbiyot kolleji** (2001–2004) — fundamental tibbiy tayyorgarlik
   - **O'sh Davlat Universiteti** (2017–2022) — stomatologiya fakulteti oliy ta'limi
@@ -33,17 +33,32 @@ Rasmiy veb-platforma: [https://drorifjon.uz](https://drorifjon.uz)
 
 ---
 
-## 🦷 9 Asosiy Stomatologik Yo'nalish
+## 🦷 5 Asosiy Stomatologik Yo'nalish (Core Specialties)
 
-1. **Dental Implantatsiya** — 15–20 daqiqada og'riqsiz biotitan implantlar
-2. **Breket Tizimlari** — metall, keramika va sapfir breketlar
-3. **Sirkon va Keramika Karonkalar** — metall-siz, tabiiy nur o'tkazuvchan
-4. **Keramik Vinirlar** — Gollivud tabassumi va tish shaklini mukammallashtirish
-5. **Zamonaviy Tish Pratezlari** — olinadigan va olinmaydigan protezlar
-6. **Shaffof Elaynerlar** — ko'rinmas kapalar bilan tishlarni tekislash
-7. **Professional Tish Oqartirish** — emalga zarar yetkazmasdan oqartirish
-8. **Og'riqsiz Tish Davolash** — 2 bosqichli og'riqsiz mikro-anesteziya bilan karies va kanal davolash
-9. **Og'riqsiz Tish Olish** — atravmatik tish olish va jarrohlik
+1. **Terapiya (tishlarni og'riqsiz davolash va restavratsiya)**
+   - *RU*: Терапия (безболезненное лечение и реставрация зубов)
+   - *EN*: Therapy (Painless tooth treatment and aesthetic restoration)
+   - Tish kariesi, chuqur karies, pulpit va periodontitni 2 bosqichli mikro-anesteziya ostida 100% og'riqsiz davolash hamda Germaniya va Yaponiya nanokompozitlari bilan tishning tabiiy anatomik shakli va rangini badiiy restavratsiya qilish.
+
+2. **Ortopediya (yuqori sifatli tish qo'yish, protezlash)**
+   - *RU*: Ортопедия (высококачественное протезирование и установка зубов)
+   - *EN*: Orthopedics (High-quality tooth placement and prosthetics)
+   - Sirkoniy (Zirconia) va presslangan keramika (IPS E.max) karonkalar, estetik vinirlar hamda zamonaviy qulay olinadigan va olinmaydigan protezlar bilan tishlarni mustahkam tiklash.
+
+3. **Implantatsiya (Germaniya va Koreya mahsulotlari)**
+   - *RU*: Имплантация (премиальные импланты из Германии и Кореи)
+   - *EN*: Implantation (German and Korean premium implant systems)
+   - Yo'qotilgan tishlarni qo'shni sog'lom tishlarni charxlamasdan, Germaniya va Janubiy Koreyaning yetakchi ishlab chiqaruvchilariga tegishli original premium biotitan implantlari yordamida 15-20 daqiqada og'riqsiz va umrbod kafolat bilan tiklash.
+
+4. **Xirurgiya (og'riqsiz va asoratsiz tish olish)**
+   - *RU*: Хирургия (безболезненное и атравматичное удаление зубов без осложнений)
+   - *EN*: Surgery (Painless and complication-free tooth extraction)
+   - Qutqarib bo'lmaydigan, yiringlagan yoki noto'g'ri o'sgan tishlarni, shu jumladan murakkab aql tishlarini (donolik tishlari) zamonaviy atravmatik texnika va 2 bosqichli og'riqsizlantirish ostida asoratsiz olib tashlash.
+
+5. **Ortodontiya (qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)**
+   - *RU*: Ортодонтия (выравнивание неровных зубных рядов и исправление прикуса брекетами)
+   - *EN*: Orthodontics (Alignment of crooked and uneven teeth using braces)
+   - Qiyshiq, notekis, zich joylashgan yoki orasi ochiq tish qatorlarini zamonaviy metall, keramika va estetik sapfir breket tizimlari yordamida to'g'rilash hamda to'g'ri tishlash (prikus) tizimini barpo etish.
 
 ---
 
@@ -51,7 +66,7 @@ Rasmiy veb-platforma: [https://drorifjon.uz](https://drorifjon.uz)
 
 - **Frontend**: React 19, Vite (Rolldown), React Router v7, Tailwind CSS v3.4
 - **Dizayn**: 3D kartalar, sensorli parvoz animatsiyalari, to'liq moslashuvchanlik (responsive)
-- **Ko'p tillilik**: O'zbekcha (uz), Ruscha (ru), Inglizcha (en)
+- **Ko'p tillilik**: O'zbekcha (uz - lotin yozuvida), Ruscha (ru), Inglizcha (en)
 - **SEO & AI**: SSR statik prerendering, Schema.org (Physician, DentalClinic, MedicalProcedure), sitemap.xml, llms.txt, OpenGraph ijtimoiy tarmoqlar kartalari
 - **Onlayn Qabul**: MedInson relay qabul tizimi va Telegram/telefon orqali tezkor bog'lanish
 

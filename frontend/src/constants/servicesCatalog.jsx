@@ -1,35 +1,150 @@
 import React from "react";
 import {
-  DentalImplantFixture,
-  DentalBracesIcon,
-  DentalVeneerCrown,
   DentalToothMolar,
-  DentalDenturesIcon,
-  DentalAlignersIcon,
-  DentalWhiteningZoom,
+  DentalVeneerCrown,
+  DentalImplantFixture,
   DentalSurgeryExtraction,
+  DentalBracesIcon,
 } from "../components/MedicalIcons";
 import { assets } from "../assets/assets";
 
 export const SERVICES_CATALOG = [
+  /* ═════════════════════════════════════════════════════════════════
+     1. TERAPIYA (TISHLARNI OG'RIQSIZ DAVOLASH VA RESTAVRATSIYA)
+     ═════════════════════════════════════════════════════════════════ */
   {
-    id: "dental-implant",
-    icon: <DentalImplantFixture className="w-7 h-7 text-primary" />,
-    image: assets.treatment_implant,
+    id: "terapiya",
+    icon: <DentalToothMolar className="w-7 h-7 text-primary" />,
+    image: assets.treatment_therapy,
     badge: {
-      uz: "MEGAGEN BIOTITAN",
-      ru: "MEGAGEN BIOTITAN",
-      en: "MEGAGEN BIOTITAN",
+      uz: "100% OG'RIQSIZ DAVOLASH",
+      ru: "100% БЕЗБОЛЕЗНЕННОЕ ЛЕЧЕНИЕ",
+      en: "100% PAINLESS THERAPY",
     },
     techTag: {
-      uz: "Janubiy Koreya",
-      ru: "Южная Корея",
-      en: "South Korea",
+      uz: "Nano-kompozit & Badiiy Restavratsiya",
+      ru: "Нанокомпозиты & Художественная реставрация",
+      en: "Nanocomposites & Artistic Restoration",
     },
     featurePill: {
-      uz: "Suyak Integratsiyasi 99.5%",
-      ru: "Приживаемость 99.5%",
-      en: "99.5% Integration",
+      uz: "Tabiiy Emal Anatomiyasi",
+      ru: "Анатомия естественной эмали",
+      en: "Natural Enamel Anatomy",
+    },
+    badgeTheme: {
+      badgeBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
+      warrantyBg: "bg-teal-950/85 text-teal-300 border-teal-400/50",
+      accentGlow: "hover:shadow-emerald-500/10",
+    },
+    category: {
+      uz: "Terapevtik Stomatologiya",
+      ru: "Терапевтическая Стоматология",
+      en: "Therapeutic Dentistry",
+    },
+    title: {
+      uz: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya)",
+      ru: "Терапия (Безболезненное лечение и реставрация зубов)",
+      en: "Therapy (Painless Tooth Treatment & Aesthetic Restoration)",
+    },
+    shortDesc: {
+      uz: "Tish kariesi, chuqur karies, pulpit va periodontitni 2 bosqichli mikro-anesteziya ostida 100% og'riqsiz davolash hamda yuqori sifatli nano-kompozitlar bilan tishning tabiiy shakli va rangini badiiy restavratsiya qilish.",
+      ru: "Безболезненное лечение кариеса любой сложности, пульпита и периодонтита под двухэтапной микроанестезией, а также высокоточная эстетическая реставрация зубов нанокомпозитами последнего поколения.",
+      en: "100% painless treatment of caries, pulpitis, and periodontitis under two-stage gentle micro-anesthesia, combined with advanced nano-composite artistic restoration of natural tooth anatomy and shade.",
+    },
+    duration: { uz: "30–45 daqiqa", ru: "30–45 минут", en: "30–45 mins" },
+    warranty: { uz: "Rasmiy sifat kafolati", ru: "Официальная гарантия качества", en: "Official quality guarantee" },
+    highlights: {
+      uz: [
+        "2 bosqichli og'riqsiz mikro-anesteziya: muolaja davomida bemor mutlaqo og'riq sezmaydi",
+        "Ildiz kanallarini zamonaviy endodontik usulda mikron aniqlikda tozalash va 3D germetik plombalash",
+        "Germaniya va Yaponiya nano-gibrid kompozitlari bilan tabiiy tish anatomiyasi va fissuralarini tiklash",
+        "Kariesni dastlabki bosqichda aniqlash va sog'lom tish to'qimasini maksimal darajada asrab qolish",
+      ],
+      ru: [
+        "Двухэтапная микроанестезия: полный комфорт и 0% боли на протяжении всего лечения",
+        "Эндодонтическая обработка и трехмерная герметичная обтурация корневых каналов",
+        "Художественная реставрация нанокомпозитами из Германии и Японии с идеальным подбором оттенка",
+        "Максимальное сохранение здоровых тканей зуба и долговечность реставрации",
+      ],
+      en: [
+        "Two-stage gentle micro-anesthesia ensuring absolute comfort with zero pain sensation",
+        "Advanced endodontic root canal disinfection and hermetic 3D obturation",
+        "Artistic aesthetic restoration using premium German and Japanese nanocomposites",
+        "Minimally invasive approach preserving natural enamel and dentin structure",
+      ],
+    },
+    indications: {
+      uz: [
+        "Har qanday darajadagi karies (yuzaki, o'rta va chuqur karies)",
+        "Issiq yoki sovuqqa, shirin taomlarga nisbatan o'tkir og'riq (pulpit alomatlari)",
+        "Tish ildizi sohasidagi surunkali noqulaylik va yallig'lanish (periodontit)",
+        "Tishning sinishi, emal yemirilishi va estetik nuqsonlarni badiiy tiklash",
+        "Eski, rangi qoraygan yoki germetikligini yo'qotgan plombalarni almashtirish",
+      ],
+      ru: [
+        "Кариес различной степени (поверхностный, средний, глубокий)",
+        "Острая или ноющая боль от холодного, горячего или сладкого (признаки пульпита)",
+        "Воспалительные процессы в области верхушки корня (периодонтит)",
+        "Сколы, трещины эмали и дефекты формы зуба, требующие художественного восстановления",
+        "Необходимость замены старых, потемневших или разрушенных пломб",
+      ],
+      en: [
+        "Dental caries at any stage (superficial, moderate, or deep)",
+        "Acute tooth sensitivity to hot, cold, or sweets indicating pulpitis",
+        "Root apex inflammation or discomfort requiring endodontic therapy (periodontitis)",
+        "Chipped, cracked, or worn tooth enamel needing artistic reconstruction",
+        "Replacement of defective, leaking, or discolored old restorations",
+      ],
+    },
+    faq: [
+      {
+        q: {
+          uz: "Tish davolash rostdan ham 100% og'riqsiz bo'ladimi?",
+          ru: "Лечение зубов действительно проходит на 100% без боли?",
+          en: "Is dental treatment truly 100% painless?",
+        },
+        a: {
+          uz: "Ha, mutlaqo og'riqsiz! Biz 2 bosqichli og'riqsizlantirish usulidan foydalanamiz: dastlab milk yuzasi shirin ta'mli maxsus gel bilan muzlatiladi, so'ngra mikro-igna yordamida Yevropa anestetigi kiritiladi. Bemor muolaja davomida hech qanday og'riq sezmaydi.",
+          ru: "Да, абсолютно безболезненно! Мы применяем двухэтапную анестезию: сначала десна обрабатывается обезболивающим гелем, после чего микроиглой вводится европейский анестетик. Вы не почувствуете даже укола.",
+          en: "Yes, completely painless! We apply a two-stage anesthesia protocol: a gentle topical numbing gel is applied first, followed by micro-injection of premium European anesthetic. You will feel zero discomfort.",
+        },
+      },
+      {
+        q: {
+          uz: "Badiiy restavratsiya oddiy plombadan nimasi bilan farq qiladi?",
+          ru: "Чем художественная реставрация отличается от обычной пломбы?",
+          en: "How does artistic restoration differ from a standard filling?",
+        },
+        a: {
+          uz: "Oddiy plomba shunchaki bo'shliqni to'ldiradi. Badiiy restavratsiyada esa Germaniya va Yaponiya nanokompozitlari qatlam-qatlam qo'llanilib, tishning tabiiy do'mbog'lari (fissuralari), yorug'lik o'tkazuvchanligi va anatomik shakli tabiiy tishdan ajralmas qilib tiklanadi.",
+          ru: "Обычная пломба просто закрывает дефект, тогда как художественная реставрация воссоздает природную анатомию зуба, индивидуальные бугорки, фиссуры и прозрачность эмали так, что зуб неотличим от соседних.",
+          en: "A standard filling merely patches a cavity. Artistic restoration rebuilds natural tooth cusps, micro-textures, and optical translucency layer-by-layer so the tooth looks indistinguishable from natural teeth.",
+        },
+      },
+    ],
+  },
+
+  /* ═════════════════════════════════════════════════════════════════
+     2. ORTOPEDIYA (YUQORI SIFATLI TISH QO'YISH, PROTEZLASH)
+     ═════════════════════════════════════════════════════════════════ */
+  {
+    id: "ortopediya",
+    icon: <DentalVeneerCrown className="w-7 h-7 text-primary" />,
+    image: assets.treatment_crowns,
+    badge: {
+      uz: "YUQORI SIFATLI TISH QO'YISH",
+      ru: "ВЫСОКОТОЧНОЕ ПРОТЕЗИРОВАНИЕ",
+      en: "PRECISION PROSTHETICS",
+    },
+    techTag: {
+      uz: "Sirkon & Keramika & Protezlar",
+      ru: "Цирконий & Керамика & Протезы",
+      en: "Zirconia & Ceramic & Dentures",
+    },
+    featurePill: {
+      uz: "100% Chaynash & Estetika",
+      ru: "100% Функция & Эстетика",
+      en: "100% Chewing & Aesthetics",
     },
     badgeTheme: {
       badgeBg: "bg-amber-950/85 text-amber-300 border-amber-400/50",
@@ -37,215 +152,99 @@ export const SERVICES_CATALOG = [
       accentGlow: "hover:shadow-amber-500/10",
     },
     category: {
-      uz: "Dental Implantologiya",
-      ru: "Дентальная Имплантология",
-      en: "Dental Implantology",
+      uz: "Ortopedik Stomatologiya",
+      ru: "Ортопедическая Стоматология",
+      en: "Prosthetic Dentistry",
     },
     title: {
-      uz: "Dental Implantatsiya (MegaGen & Biotitan)",
-      ru: "Дентальная Имплантация Зубов (MegaGen)",
-      en: "Dental Implants (MegaGen & Titanium Systems)",
+      uz: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash)",
+      ru: "Ортопедия (Высококачественное протезирование и установка зубов)",
+      en: "Orthopedics (High-Quality Tooth Placement & Prosthetics)",
     },
     shortDesc: {
-      uz: "Yo'qotilgan tishlarni qo'shni tishlarni charxlamasdan, Janubiy Koreyaning MegaGen premium biotitan implantlari bilan 15-20 daqiqada og'riqsiz tiklash.",
-      ru: "Восстановление утраченных зубов без обточки соседних за 15-20 минут с корейскими имплантатами MegaGen и пожизненной гарантией.",
-      en: "Restore missing teeth gently in 15-20 minutes with world-class MegaGen titanium implants without grinding adjacent healthy teeth.",
+      uz: "Yo'qotilgan yoki shikastlangan tishlarni yuqori aniqlikdagi sirkoniy (Zirconia) va presslangan keramika (IPS E.max) karonkalar, estetik vinirlar hamda zamonaviy qulay olinadigan va olinmaydigan protezlar yordamida tiklash.",
+      ru: "Восстановление разрушенных и отсутствующих зубов с применением сверхточных коронок из диоксида циркония и прессованной керамики E.max, эстетических виниров, а также удобных современных съемных и несъемных протезов.",
+      en: "Restoring broken or missing teeth with high-strength zirconia and IPS E.max pressed ceramic crowns, cosmetic veneers, and comfortable modern removable and fixed dental prosthetics.",
     },
-    duration: { uz: "20 daqiqa (1 qabul)", ru: "20 минут (1 визит)", en: "20 mins (1 visit)" },
-    warranty: { uz: "Umrbod rasmiy kafolat", ru: "Пожизненная гарантия", en: "Lifetime warranty" },
+    duration: { uz: "3–5 kun (2–3 qabul)", ru: "3–5 дней (2–3 визита)", en: "3–5 days (2–3 visits)" },
+    warranty: { uz: "10 yildan 15 yilgacha kafolat", ru: "Гарантия 10–15 лет", en: "10 to 15 years warranty" },
     highlights: {
       uz: [
-        "O'sh Davlat Universiteti oliy ta'limi va xalqaro implantologiya protokollari",
-        "Shining 3D raqamli skaneri va navigatsion jarrohlik shablonlari asosida aniq o'rnatish",
-        "2 bosqichli mikro-anesteziya: muolaja davomida 0% og'riq",
-        "20+ yillik tibbiyot tajribasi va 100% biotitan biomoslashuvchanlik",
+        "Raqamli 3D optik skanerlash: noqulay qolip pastasiz tish o'lchamlarini mikron aniqlikda olish",
+        "Metall-siz monolit sirkoniy va IPS E.max: tabiiy tishdek mustahkam va tabiiy nur o'tkazuvchan",
+        "Zamonaviy byugel, elastik neylon va akril protezlar: jag'ga mustahkam o'rnashadi, tushib ketmaydi",
+        "Tish milkiga 100% moslashuvchanlik, qorayishsiz chiroyli chegara va uzoq yillik xizmat",
       ],
       ru: [
-        "Диплом Ошского Государственного Университета и современные протоколы имплантологии",
-        "Цифровое 3D-планирование на сканере Shining 3D и навигационные шаблоны",
-        "Двухэтапная анестезия: абсолютно без боли и дискомфорта",
-        "Более 20 лет в медицине и приживаемость свыше 99.5%",
+        "Цифровое 3D-сканирование без неприятных слепочных масс с микронной точностью прилегания",
+        "Безметалловые коронки из диоксида циркония и IPS E.max с естественной светопроницаемостью",
+        "Современные бюгельные и нейлоновые съемные протезы с надежной комфортной фиксацией",
+        "Идеальное краевое прилегание к десне без потемнений, гипоаллергенность и долговечность",
       ],
       en: [
-        "Osh State University dental qualification and advanced international implantology protocols",
-        "Shining 3D intraoral digital guided surgery templates ensuring perfect implant positioning",
-        "Two-stage gentle local anesthesia ensuring 100% painless surgery",
-        "Over 20+ years of healthcare experience and premium biocompatible titanium",
+        "Digital 3D intraoral scanning without gooey impression pastes for micrometer precision",
+        "Metal-free monolithic zirconia and IPS E.max ceramics mimicking natural enamel translucency",
+        "Modern precision clasp (buckle) and flexible removable dentures with rock-solid retention",
+        "Biocompatible gum adaptation, zero allergic reactions, and proven multi-year longevity",
       ],
     },
     indications: {
       uz: [
-        "Bir yoki bir nechta tish yo'qolishi va chaynash noqulayligi",
-        "Qo'shni sog'lom tishlarni charxlamasdan tish tiklash istagi",
-        "Noqulay olinadigan protezlar o'rniga mustahkam tish kerakligi",
-        "Tish olingandan keyin jag' suyagi yupqalashishining oldini olish",
+        "Tish toj qismining 50% dan ko'prog'i yemirilgan yoki singan holatlar",
+        "Bir nechta yoki barcha tishlarning yo'qligi sababli ovqat chaynash qiyinligi",
+        "Old tishlarning shakli va rangini tubdan yaxshilash (vinir va karonkalar)",
+        "Eski metall-keramika karonkalarning qorayishi yoki yaroqsiz holga kelishi",
       ],
       ru: [
-        "Отсутствие одного или нескольких зубов, дискомфорт при жевании",
-        "Желание восстановить зуб без обточки соседних здоровых зубов",
-        "Замена неудобных съемных протезов на надежные постоянные зубы",
-        "Предотвращение атрофии и убыли костной ткани челюсти",
+        "Разрушение коронковой части зуба более чем на 50%",
+        "Частичная или полная потеря зубов и нарушение жевательной функции",
+        "Необходимость эстетического преображения передних зубов винирами или коронками",
+        "Сколы, износ или потемнение старых металлокерамических коронок",
       ],
       en: [
-        "Loss of one or more teeth causing chewing difficulty",
-        "Desire to replace a tooth without grinding down adjacent healthy teeth",
-        "Replacing loose or uncomfortable removable dentures with permanent teeth",
-        "Preventing jawbone resorption and facial contour collapse after tooth loss",
+        "More than 50% loss or structural breakdown of natural tooth crown",
+        "Partial or total tooth loss requiring full functional restoration",
+        "Need for aesthetic smile transformation with ceramic veneers or crowns",
+        "Compromised, chipped, or dark-bordered old metal-ceramic crowns",
       ],
     },
     faq: [
       {
         q: {
-          uz: "Dental implant o'rnatish og'riqlimi va qancha vaqt davom etadi?",
-          ru: "Больно ли ставить имплант и сколько времени занимает операция?",
-          en: "Is dental implant placement painful and how long does it take?",
+          uz: "Sirkoniy karonka metall-keramikadan nimasi bilan ustun?",
+          ru: "Чем коронки из диоксида циркония лучше металлокерамики?",
+          en: "Why is a zirconia crown superior to metal-ceramic?",
         },
         a: {
-          uz: "Muolaja mutlaqo og'riqsiz o'tadi! Ikki bosqichli mikro-anesteziya qo'llaniladi (avval milkka mevali muzlatuvchi gel surtiladi, so'ng Yevropa anestetigi yuboriladi). Bitta implantni o'rnatish atigi 15–20 daqiqa vaqt oladi.",
-          ru: "Процедура на 100% безболезненна! Десна предварительно обезболивается гелем, после чего вводится мягкий анестетик. Установка одного имплантата занимает всего 15–20 минут.",
-          en: "The procedure is completely painless! We use two-stage anesthesia: a topical numbing gel is applied first, so you don't even feel the injection. Placing one implant takes just 15–20 minutes.",
-        },
-      },
-      {
-        q: {
-          uz: "MegaGen implantlariga qanday kafolat beriladi va qancha xizmat qiladi?",
-          ru: "Какая гарантия на импланты MegaGen и сколько они служат?",
-          en: "What warranty is provided for MegaGen implants and how long do they last?",
-        },
-        a: {
-          uz: "Janubiy Koreyaning MegaGen AnyRidge va AnyOne biotitan tizimlari 99.5% suyak integratsiyasiga ega va ularga ishlab chiqaruvchi tomonidan rasmiy umrbod kafolat beriladi.",
-          ru: "Южнокорейские премиальные имплантаты MegaGen AnyRidge и AnyOne имеют приживаемость более 99.5% и пожизненную официальную гарантию производителя.",
-          en: "South Korean MegaGen AnyRidge and AnyOne systems have an osseointegration rate exceeding 99.5% and are backed by a lifetime manufacturer warranty.",
+          uz: "Sirkoniy tarkibida qora metall karkas bo'lmaydi, shuning uchun milk cheti qoraymaydi, allergik reaktsiya chaqirmaydi va tabiiy tish kabi nur o'tkazadi. U 3-4 barobar mustahkam va 15 yildan ortiq xizmat qiladi.",
+          ru: "Диоксид циркония не содержит темного металлического каркаса, не вызывает аллергии и не дает темной полосы у десны. Он пропускает свет как живой зуб, при этом в разы прочнее и служит более 15 лет.",
+          en: "Zirconia has no dark metal substructure, preventing gum discoloration and allergic reactions. It is biocompatible, translucent like natural teeth, and significantly stronger for long-lasting durability.",
         },
       },
     ],
   },
+
+  /* ═════════════════════════════════════════════════════════════════
+     3. IMPLANTATSIYA (GERMANIYA VA KOREYA MAHSULOTLARI)
+     ═════════════════════════════════════════════════════════════════ */
   {
-    id: "breketlar",
-    icon: <DentalBracesIcon className="w-7 h-7 text-brandOrange" />,
-    image: assets.treatment_braces,
+    id: "implantatsiya",
+    icon: <DentalImplantFixture className="w-7 h-7 text-primary" />,
+    image: assets.treatment_implant,
     badge: {
-      uz: "METALL & KERAMIKA",
-      ru: "МЕТАЛЛ И КЕРАМИКА",
-      en: "METAL & CERAMIC",
+      uz: "GERMANIYA VA KOREYA MAHSULOTLARI",
+      ru: "СИСТЕМЫ ИЗ ГЕРМАНИИ И КОРЕИ",
+      en: "GERMAN & KOREAN SYSTEMS",
     },
     techTag: {
-      uz: "Damon System",
-      ru: "Система Damon",
-      en: "Damon System",
+      uz: "Premium Biotitan",
+      ru: "Премиальный биотитан",
+      en: "Premium Biocompatible Titanium",
     },
     featurePill: {
-      uz: "To'g'ri Prikus",
-      ru: "Идеальный Прикус",
-      en: "Precise Bite",
-    },
-    badgeTheme: {
-      badgeBg: "bg-orange-950/85 text-orange-300 border-orange-400/50",
-      warrantyBg: "bg-blue-950/85 text-blue-300 border-blue-400/50",
-      accentGlow: "hover:shadow-orange-500/10",
-    },
-    category: {
-      uz: "Ortodontiya",
-      ru: "Ортодонтия",
-      en: "Orthodontics",
-    },
-    title: {
-      uz: "Ortodontik Breketlar (Metall va Keramik)",
-      ru: "Ортодонтические Брекеты (Металл и Керамика)",
-      en: "Orthodontic Brackets (Metal & Ceramic Braces)",
-    },
-    shortDesc: {
-      uz: "Egri tishlar, orasi ochiqliklar va noto'g'ri tishlash (prikus) holatlarini zamonaviy metall va ko'rinmas estetik sapfir/keramik breketlar yordamida to'g'rilash.",
-      ru: "Исправление прикуса и выравнивание зубного ряда металлическими и эстетическими керамическими брекет-системами.",
-      en: "Comprehensive smile straightening and bite alignment using precision metal and discreet ceramic brackets.",
-    },
-    duration: { uz: "Individual davolash rejasi", ru: "Индивидуальный план", en: "Personalized plan" },
-    warranty: { uz: "To'g'ri prikus kafolati", ru: "Гарантия ровного прикуса", en: "Stable bite warranty" },
-    highlights: {
-      uz: [
-        "Klassik metall, o'z-o'zini ligaturlaydigan (Damon) va estetik keramik breketlar",
-        "3D raqamli modellashtirish orqali tish harakatini nazorat qilish",
-        "Bolalar va kattalar uchun tishlash nuqsonlarini to'g'rilash",
-        "Davolash davomida har oylik muntazam professional nazorat",
-      ],
-      ru: [
-        "Металлические, самолигирующие и незаметные керамические брекеты",
-        "Цифровой расчет перемещения каждого зуба с микронной точностью",
-        "Исправление скученности и сложных дефектов прикуса у взрослых и подростков",
-        "Регулярное сопровождение и наблюдение на каждом этапе",
-      ],
-      en: [
-        "Traditional metal, self-ligating and aesthetic ceramic options",
-        "Digital arch analysis and gradual biomechanical alignment",
-        "Treating bite crowding and misalignment across all age groups",
-        "Continuous clinical monitoring throughout the treatment course",
-      ],
-    },
-    indications: {
-      uz: [
-        "Tishlarning egriligi, qiyshiqligi yoki bir-birining ustiga chiqishi",
-        "Tishlar orasidagi tirqishlar (diastema va tremalar)",
-        "Noto'g'ri tishlash (prikus) va ovqat chaynash qiyinligi",
-        "Jag' bo'g'imida chertish yoki noqulaylik sezilishi",
-      ],
-      ru: [
-        "Искривление, скученность или неправильное положение зубов",
-        "Промежутки и щели между зубами (диастемы и тремы)",
-        "Патологии прикуса и затрудненное пережевывание пищи",
-        "Щелчки и напряжение в височно-нижнечелюстном суставе",
-      ],
-      en: [
-        "Crooked, rotated, or overcrowded teeth",
-        "Noticeable gaps between teeth (diastema and spacing)",
-        "Overbite, underbite, crossbite, or chewing difficulties",
-        "Jaw tension or clicking in the temporomandibular joint",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "Kattalar ham breket taqishi mumkinmi?",
-          ru: "Можно ли ставить брекеты взрослым?",
-          en: "Can adults wear orthodontic braces?",
-        },
-        a: {
-          uz: "Albatta! Breket taqish uchun yosh chegarasi yo'q. Bugungi kunda zamonaviy Damon tizimlari va estetik keramik breketlar yordamida 30, 40 va hatto 50 yoshdan keyin ham tishlarni mukammal tekislash mumkin.",
-          ru: "Конечно! Возрастных ограничений нет. Современные самолигирующие системы Damon и эстетическая керамика позволяют эффективно выравнивать зубы в 30, 40 и 50+ лет.",
-          en: "Absolutely! There is no age limit for braces. Modern self-ligating Damon systems and aesthetic ceramic brackets effectively straighten teeth in patients of any age.",
-        },
-      },
-      {
-        q: {
-          uz: "Breket bilan davolanish qancha vaqt davom etadi?",
-          ru: "Сколько длится ортодонтическое лечение брекетами?",
-          en: "How long does orthodontic treatment take?",
-        },
-        a: {
-          uz: "Tishlarning dastlabki holatiga qarab o'rtacha 8 oydan 18 oygacha davom etadi. Dastlabki ko'rinadigan natijalar esa 2–3 oydayoq yaqqol seziladi.",
-          ru: "В зависимости от сложности клинического случая курс занимает от 8 до 18 месяцев. Первые заметные изменения видны уже через 2–3 месяца.",
-          en: "Depending on the complexity of your bite, treatment typically takes between 8 to 18 months, with noticeable improvements within the first 2–3 months.",
-        },
-      },
-    ],
-  },
-  {
-    id: "sirkon-keramika-karonkalar",
-    icon: <DentalVeneerCrown className="w-7 h-7 text-primary" />,
-    image: assets.treatment_crowns,
-    badge: {
-      uz: "CAD/CAM TSIRKONIY",
-      ru: "CAD/CAM ДИОКСИД ЦИРКОНИЯ",
-      en: "CAD/CAM ZIRCONIA",
-    },
-    techTag: {
-      uz: "Germaniya & Yaponiya",
-      ru: "Германия и Япония",
-      en: "Germany & Japan",
-    },
-    featurePill: {
-      uz: "Milk Qoraymaydi",
-      ru: "Без темных ободков",
-      en: "Zero Dark Margins",
+      uz: "Suyak Integratsiyasi 99.5%",
+      ru: "Приживаемость 99.5%",
+      en: "99.5% Integration",
     },
     badgeTheme: {
       badgeBg: "bg-sky-950/85 text-sky-300 border-sky-400/50",
@@ -253,735 +252,297 @@ export const SERVICES_CATALOG = [
       accentGlow: "hover:shadow-sky-500/10",
     },
     category: {
-      uz: "Ortopedik Stomatologiya",
-      ru: "Ортопедия",
-      en: "Prosthodontics",
+      uz: "Dental Implantologiya",
+      ru: "Дентальная Имплантология",
+      en: "Dental Implantology",
     },
     title: {
-      uz: "Sirkon va Keramika Karonkalar (CAD/CAM)",
-      ru: "Циркониевые и Керамические Коронки (CAD/CAM)",
-      en: "Zirconia & Ceramic Crowns (CAD/CAM Precision)",
+      uz: "Implantatsiya (Germaniya va Koreya mahsulotlari)",
+      ru: "Имплантация (Премиальные импланты из Германии и Кореи)",
+      en: "Implantation (German & Korean Premium Systems)",
     },
     shortDesc: {
-      uz: "Sinib ketgan yoki yemirilgan tishlarni metall-siz, milkka mutlaqo zarar bermaydigan monolit tsirkoniy va press-keramika qoplamalar bilan tabiiy tiklash.",
-      ru: "Эстетическое восстановление зубов безметалловыми циркониевыми коронками и керамикой без тёмного ободка у десны.",
-      en: "Restore fractured or damaged teeth with monolithic zirconia and press-ceramic crowns for superior strength and natural luster.",
+      uz: "Yo'qotilgan tishlarni qo'shni sog'lom tishlarni charxlamasdan, Germaniya va Janubiy Koreyaning original premium biotitan implantlari yordamida 15-20 daqiqada og'riqsiz va umrbod kafolat bilan tiklash.",
+      ru: "Восстановление утраченных зубов без обточки соседних за 15-20 минут с использованием оригинальных биосовместимых титановых имплантов из Германии и Южной Кореи с пожизненной гарантией.",
+      en: "Gentle 15-20 minute restoration of missing teeth using original certified biocompatible titanium implants from Germany and South Korea without grinding down healthy adjacent teeth.",
     },
-    duration: { uz: "2 – 3 kun", ru: "2 – 3 дня", en: "2 – 3 days" },
-    warranty: { uz: "10 yilgacha rasmiy kafolat", ru: "Гарантия до 10 лет", en: "Up to 10-year warranty" },
+    duration: { uz: "15–20 daqiqa (1 qabul)", ru: "15–20 минут (1 визит)", en: "15–20 mins (1 visit)" },
+    warranty: { uz: "Umrbod rasmiy kafolat", ru: "Пожизненная гарантия", en: "Lifetime warranty" },
     highlights: {
       uz: [
-        "Shining 3D Intraoral optik skaneri yordamida pastasiz (slepoklarsiz) 2 daqiqada raqamli o'lchov",
-        "100% biomoslashuvchan tsirkoniy: milk qorayishi va metall ta'mi yo'q",
-        "CAD/CAM 3D raqamli frezerlash orqali mikron darajasida mukammal jipslashish",
-        "Old va orqa (chaynash) tishlar uchun 10 yilgacha yuqori mustahkamlik kafolati",
+        "Faqat sertifikatlangan Germaniya va Janubiy Koreya biotitan implant tizimlari",
+        "Qo'shni sog'lom tishlarni charxlash yoki nervini olish mutlaqo talab etilmaydi",
+        "20+ yillik tibbiyot tajribasi va 99.5% dan yuqori suyak integratsiyasi",
+        "2 bosqichli og'riqsiz mikro-anesteziya: muolaja jarayonida 0% og'riq",
       ],
       ru: [
-        "Цифровое сканирование Shining 3D IntraoralScan без неприятных слепков за 2 минуты",
-        "Биосовместимый диоксид циркония: никакого посинения десны",
-        "CAD/CAM 3D моделирование для идеального прилегания с микронной точностью",
-        "Максимальная прочность для жевательных и передних зубов с гарантией до 10 лет",
+        "Только оригинальные сертифицированные титановые системы высшего класса из Германии и Кореи",
+        "Здоровые соседние зубы не требуют обточки или депульпирования",
+        "Более 20 лет практического медицинского опыта и приживаемость свыше 99.5%",
+        "Двухэтапная анестезия: процедура занимает 15–20 минут абсолютно без боли",
       ],
       en: [
-        "Shining 3D Intraoral optical scanning — zero messy impression pastes in 2 minutes",
-        "100% biocompatible monolithic zirconia with zero dark gum lines",
-        "CAD/CAM digital milling for micron-accurate margin fit",
-        "Exceptional chewing load durability and lifelike translucency with 10-year warranty",
+        "Exclusively genuine certified biocompatible titanium systems from Germany and South Korea",
+        "Zero grinding or devitalizing of adjacent healthy teeth",
+        "Over 20+ years of clinical healthcare practice and 99.5%+ osseointegration success",
+        "Two-stage gentle local anesthesia ensuring 100% painless procedure",
       ],
     },
     indications: {
       uz: [
-        "Tish toji 50% dan ortiq yemirilgan, singan yoki plomba ushlamaydigan holatlar",
-        "Asabi (nervi) olingan va vaqt o'tishi bilan qorayib qolgan tishlar",
-        "Eski temir-keramika (metall) qoplamalarni zamonaviy sirkoniyga almashtirish",
-        "Milk qorayishidan xalos bo'lish va tabiiy emal yaltiroqligini tiklash",
+        "Bir yoki bir nechta tish yo'qolishi va chaynashdagi noqulaylik",
+        "Qo'shni sog'lom tishlarni asrab qolgan holda yangi tish o'rnatish istagi",
+        "Noqulay olinadigan protezlar o'rniga mustahkam sun'iy ildiz o'rnatish",
+        "Tish olingandan so'ng jag' suyagi yupqalashishining oldini olish",
       ],
       ru: [
-        "Разрушение коронковой части зуба более чем на 50%, сколы и трещины",
-        "Депульпированные (мертвые) потемневшие зубы",
-        "Замена старых металлокерамических коронок с темной каймой у десны",
-        "Желание получить идеальную белизну и прочность без аллергии на металл",
+        "Отсутствие одного, нескольких или всех зубов",
+        "Желание сохранить соседние здоровые зубы нетронутыми без обточки",
+        "Замена неудобных съемных протезов на долговечные постоянные зубы",
+        "Предотвращение атрофии и убыли костной ткани челюсти",
       ],
       en: [
-        "Tooth structure broken or decayed by more than 50% where fillings cannot hold",
-        "Discolored, weakened teeth following root canal therapy",
-        "Replacing outdated metal-fused crowns that cause dark gum lines",
-        "Restoring full chewing power with biocompatible, metal-free materials",
+        "Loss of one, multiple, or all teeth causing functional chewing deficits",
+        "Desire to replace missing teeth without damaging adjacent healthy teeth",
+        "Upgrading loose or clicking removable dentures to permanently anchored teeth",
+        "Preventing jawbone atrophy and facial collapse following tooth extraction",
       ],
     },
     faq: [
       {
         q: {
-          uz: "Sirkon karonkaning oddiy metall-keramikadan asosiy farqi nima?",
-          ru: "В чем главное отличие оксида циркония от металлокерамики?",
-          en: "What is the key advantage of Zirconia over porcelain-fused-to-metal crowns?",
+          uz: "Dental implant o'rnatish og'riqlimi va qancha vaqt davom etadi?",
+          ru: "Больно ли ставить имплант и сколько времени занимает процедура?",
+          en: "Is dental implant surgery painful and how long does it take?",
         },
         a: {
-          uz: "Sirkoniy tarkibida hech qanday qora metall bo'lmaydi. U milkni aslo qoraytirmaydi, metall ta'mini keltirib chiqarmaydi va yorug'likni tabiiy tish emalidek o'tkazadi.",
-          ru: "В диоксиде циркония полностью отсутствует металл. Он не окисляется, не дает серо-синей каймы на десне и выглядит абсолютно как живой зуб.",
-          en: "Zirconia is 100% metal-free. It never produces a dark line along the gum margin, eliminates metallic taste, and reflects light just like natural tooth enamel.",
-        },
-      },
-      {
-        q: {
-          uz: "Sirkon karonkalar qancha yil xizmat qiladi?",
-          ru: "Какой срок службы у циркониевых коронок?",
-          en: "How long do monolithic zirconia crowns last?",
-        },
-        a: {
-          uz: "To'g'ri gigiyenaga rioya qilinganda sirkoniy qoplamalar 15–20 yildan ortiq mustahkam xizmat qiladi. Klinikamizda 10 yilgacha rasmiy kafolat beriladi.",
-          ru: "При надлежащей гигиене циркониевые коронки служат более 15–20 лет. Мы предоставляем официальную гарантию до 10 лет.",
-          en: "With proper oral hygiene, zirconia crowns last 15 to 20+ years. Our clinic provides an official warranty of up to 10 years.",
+          uz: "Implant o'rnatish tish oldirishdan ham oson va tez o'tadi! Zamonaviy 2 bosqichli anesteziya sababli bemor umuman og'riq sezmaydi. Bitta implant o'rnatish o'rtacha 15–20 daqiqa vaqt oladi.",
+          ru: "Установка импланта проходит даже легче и быстрее, чем простое удаление зуба. Благодаря качественной двухэтапной анестезии вы не почувствуете боли. Сама операция занимает всего 15–20 минут.",
+          en: "Implant placement is faster and gentler than a standard extraction. Modern two-stage anesthesia ensures total comfort, with the fixture placed in just 15-20 minutes.",
         },
       },
     ],
   },
+
+  /* ═════════════════════════════════════════════════════════════════
+     4. XIRURGIYA (OG'RIQSIZ VA ASORATSIZ TISH OLISH)
+     ═════════════════════════════════════════════════════════════════ */
   {
-    id: "vinirlar",
-    icon: <DentalVeneerCrown className="w-7 h-7 text-brandCyan" />,
-    image: assets.treatment_veneers,
-    badge: {
-      uz: "0.3 MM E-MAX GOLLIVUD",
-      ru: "0.3 ММ E-MAX ГОЛЛИВУД",
-      en: "0.3 MM E-MAX HOLLYWOOD",
-    },
-    techTag: {
-      uz: "Ivoclar Vivadent",
-      ru: "Ivoclar Vivadent",
-      en: "Ivoclar Vivadent",
-    },
-    featurePill: {
-      uz: "O'chmas Gollivud Jilosi",
-      ru: "Голливудский Блеск",
-      en: "Hollywood Luster",
-    },
-    badgeTheme: {
-      badgeBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      warrantyBg: "bg-amber-950/85 text-amber-300 border-amber-400/50",
-      accentGlow: "hover:shadow-emerald-500/10",
-    },
-    category: {
-      uz: "Estetik Stomatologiya",
-      ru: "Эстетическая Стоматология",
-      en: "Aesthetic Dentistry",
-    },
-    title: {
-      uz: "E-max Estetik Vinirlar (Gollivud Tabassumi)",
-      ru: "Керамические Виниры E-max (Голливудская Улыбка)",
-      en: "E-max Aesthetic Veneers (Hollywood Smile)",
-    },
-    shortDesc: {
-      uz: "Old tishlarning shakli, rangi va nuqsonlarini minimal yonish orqali ultra-yupqa (0.3 mm) Shveysariya/Germaniya E-max keramik vinirlari bilan mukammallashtirish.",
-      ru: "Идеальная зона улыбки: ультратонкие виниры E-max для коррекции цвета, сколов и диастем с минимальной обработкой эмали.",
-      en: "Transform your smile with ultra-thin E-max ceramic veneers, correcting discolorations, chips, and gaps with minimal prep.",
-    },
-    duration: { uz: "1 – 2 ta tashrif", ru: "1 – 2 визита", en: "1 – 2 visits" },
-    warranty: { uz: "10–15 yil xizmat muddati", ru: "Срок службы 10–15 лет", en: "10–15+ years lifespan" },
-    highlights: {
-      uz: [
-        "Shining 3D optik skaneri yordamida pastasiz individual 3D Digital Smile Design",
-        "Tish emalini maksimal asrab qoluvchi nozik ishlov berish",
-        "Qahva, choy va chekishdan rangini o'zgartirmaydigan doimiy yaltiroqlik",
-        "Tabiiy emalning yorug'lik o'tkazuvchanligi va shaffofligi",
-      ],
-      ru: [
-        "Индивидуальный цифровой дизайн улыбки (Digital Smile Design) на 3D-сканере Shining 3D",
-        "Максимальное сохранение живых тканей зуба",
-        "Устойчивость к красящим напиткам: цвет не тускнеет со временем",
-        "Полная светопроницаемость и глубина живой эмали",
-      ],
-      en: [
-        "Bespoke Digital Smile Design powered by Shining 3D optical intraoral scanning",
-        "Minimally invasive enamel preservation techniques",
-        "Stain-resistant porcelain impervious to coffee and tea",
-        "Natural depth and optical translucency matching authentic teeth",
-      ],
-    },
-    indications: {
-      uz: [
-        "Old tishlarning sarg'ayishi, dog'lar va oqartirishga berilmaydigan pigmentatsiya",
-        "Tishlar orasidagi tirqish (diastema va trema) mavjudligi",
-        "Old tishlarning chetlari sinishi, yorilishi yoki notekis shakli",
-        "Mukammal va jozibador Gollivud tabassumiga ega bo'lish istagi",
-      ],
-      ru: [
-        "Стойкое потемнение эмали, пятна, устойчивые к отбеливанию",
-        "Щель между передними зубами (диастема)",
-        "Сколы, микротрещины и неэстетичная форма передних зубов",
-        "Желание обрести безупречную и сияющую «Голливудскую улыбку»",
-      ],
-      en: [
-        "Deep enamel discoloration resistant to chemical bleaching",
-        "Gap between the front teeth (diastema) and irregular tooth shapes",
-        "Chipped, worn down, or uneven edges in the smile line",
-        "Desire for a flawless, long-lasting Hollywood smile makeover",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "E-max vinirlar uchun tishni ko'p yonish kerakmi?",
-          ru: "Сильно ли обтачиваются зубы под виниры E-max?",
-          en: "Does placing E-max veneers require aggressive tooth shaving?",
-        },
-        a: {
-          uz: "Yo'q! E-max vinirlarining qalinligi atigi 0.3 – 0.5 mm bo'lib, tish emalining faqat yuzaki qatlami mikro-darajada sayqallanadi. 90% dan ortiq tabiiy tish to'qimasi to'liq saqlab qolinadi.",
-          ru: "Нет! Толщина виниров E-max составляет всего 0.3–0.5 мм. Обработка эмали минимальна и щадящая — более 90% живой ткани зуба сохраняется нетронутой.",
-          en: "No! Ultra-thin E-max veneers are only 0.3 to 0.5 mm thick. Enamel preparation is minimal and conservative, preserving over 90% of your natural tooth structure.",
-        },
-      },
-      {
-        q: {
-          uz: "Vinirlar kofe yoki choydan rangini o'zgartiradimi?",
-          ru: "Окрашиваются ли виниры от кофе, чая или сигарет?",
-          en: "Do porcelain veneers stain from coffee, tea, or smoking?",
-        },
-        a: {
-          uz: "Aslo yo'q! E-max shisha-keramikasi g'ovaksiz silliq tuzilishga ega bo'lib, hech qanday oziq-ovqat bo'yoqlarini yoki tamaki tutunini o'ziga singdirmaydi va 15 yil davomida yaltiroqligini saqlaydi.",
-          ru: "Ни в коем случае! Прессованная керамика E-max не имеет пор, поэтому не впитывает красящие пигменты и сохраняет первоначальный цвет и блеск более 15 лет.",
-          en: "Not at all! Non-porous E-max lithium disilicate glass-ceramic resists all food pigments, coffee, and tobacco stains, retaining its pristine shade for 15+ years.",
-        },
-      },
-    ],
-  },
-  {
-    id: "pratezlar",
-    icon: <DentalDenturesIcon className="w-7 h-7 text-primary" />,
-    image: assets.treatment_dentures,
-    badge: {
-      uz: "BYUGEL & ACRY-FREE",
-      ru: "БЮГЕЛЬ И ACRY-FREE",
-      en: "BYUGEL & ACRY-FREE",
-    },
-    techTag: {
-      uz: "Shveytsariya Material",
-      ru: "Швейцария",
-      en: "Swiss Materials",
-    },
-    featurePill: {
-      uz: "100% Qulay Chaynash",
-      ru: "100% Удобное Жевание",
-      en: "100% Easy Chewing",
-    },
-    badgeTheme: {
-      badgeBg: "bg-purple-950/85 text-purple-300 border-purple-400/50",
-      warrantyBg: "bg-indigo-950/85 text-indigo-300 border-indigo-400/50",
-      accentGlow: "hover:shadow-purple-500/10",
-    },
-    category: {
-      uz: "Protezlash",
-      ru: "Протезирование Зубов",
-      en: "Dentures & Prosthetics",
-    },
-    title: {
-      uz: "Zamonaviy Tish Protezlari (Olinadigan & Olinmaydigan)",
-      ru: "Зубные Протезы (Съемные и Несъемные)",
-      en: "Modern Dental Prosthetics (Removable & Fixed Dentures)",
-    },
-    shortDesc: {
-      uz: "Bir nechta yoki barcha tishlar yo'qolganda qulay, yengil va mustahkam byugel, elastik neylon (Acry-Free) hamda to'liq protezlar orqali chaynashni tiklash.",
-      ru: "Легкие и надежные бюгельные, нейлоновые и безакриловые протезы для полного восстановления жевательной функции.",
-      en: "Restore comfortable chewing and speech with lightweight бюгель, flexible nylon, and full precision dentures.",
-    },
-    duration: { uz: "3 – 5 kun", ru: "3 – 5 дней", en: "3 – 5 days" },
-    warranty: { uz: "100% Qulaylik kafolati", ru: "100% Гарантия удобства", en: "Comfort warranty" },
-    highlights: {
-      uz: [
-        "Elastik neylon va byugel protezlar: tanglayni to'liq yopmaydi, nutqni buzmaydi",
-        "Tishlarga mahkam o'rnashuvchi zamonaviy ko'rinmas qulflar (atachmenlar)",
-        "Allergiya chaqirmaydigan zamonaviy termoplastik materiallar",
-        "Bemorning yoshiga va qulayligiga qarab individual moslashuv",
-      ],
-      ru: [
-        "Бюгельные и нейлоновые протезы: комфортны, не нарушают дикцию",
-        "Современные незаметные замковые крепления",
-        "Гипоаллергенные инновационные полимерные материалы",
-        "Индивидуальная подгонка без натирания десен",
-      ],
-      en: [
-        "Flexible nylon and cast-metal partials designed for natural speech",
-        "Precision attachment clasps hidden from sight",
-        "Hypoallergenic biocompatible polymers",
-        "Custom contouring to eliminate pressure points and gum irritation",
-      ],
-    },
-    indications: {
-      uz: [
-        "Ko'p sonli yoki barcha tishlar yo'qolishi (chaynash funksiyasining buzilishi)",
-        "Implant qo'yishga suyak yetishmovchiligi yoki vaqtinchalik qarshi ko'rsatma",
-        "Yuz terisi osilishi va lab atrofida ajinlar paydo bo'lishining oldini olish",
-        "Qulay, yengil va elastik tish protezlariga ehtiyoj",
-      ],
-      ru: [
-        "Потеря большого количества или всех зубов, нарушение жевания",
-        "Невозможность немедленной имплантации или временные ограничения",
-        "Предотвращение западения щек и преждевременного старения лица",
-        "Потребность в легких, гибких и эстетичных съемных конструкциях",
-      ],
-      en: [
-        "Multiple or complete tooth loss resulting in compromised chewing",
-        "Need for cost-effective functional rehabilitation when implants are deferred",
-        "Preventing facial muscle sagging and speech articulation difficulties",
-        "Requirement for lightweight, comfortable, and natural-looking dental prosthetics",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "Moslashuvchan neylon (Valplast) protezlari og'izda tushib ketmaydimi?",
-          ru: "Надежно ли держатся гибкие нейлоновые протезы Valplast во рту?",
-          en: "Do flexible nylon (Valplast) dentures stay securely in place?",
-        },
-        a: {
-          uz: "Neylon va byugel protezlar milkka va tishlarga mikron aniqlikda moslanadi. Ular yumshoq, milkni qismaydi, elastik ushlagichlari tufayli og'izda juda mustahkam o'tiradi va ko'rinmaydi.",
-          ru: "Нейлоновые и бюгельные протезы точно повторяют анатомию десен. Они легкие, не натирают и фиксируются незаметными эластичными кламмерами без металлического блеска.",
-          en: "Custom flexible nylon and byugel dentures fit snugly against your natural gum line. They feature invisible gum-colored clasps that prevent slipping without irritation.",
-        },
-      },
-      {
-        q: {
-          uz: "Protezga qancha vaqtda ko'nikiladi?",
-          ru: "Сколько времени занимает привыкание к протезам?",
-          en: "How long does it take to adapt to new dentures?",
-        },
-        a: {
-          uz: "Zamonaviy yupqa materiallar tufayli bemorlarimiz o'rtacha 3–7 kun ichida to'liq ko'nikishadi va bemalol taomlarni chaynashadi.",
-          ru: "Благодаря тонким и легким полимерам адаптация проходит комфортно и занимает в среднем от 3 до 7 дней.",
-          en: "Thanks to lightweight biocompatible polymers, adaptation is smooth and typically takes only 3 to 7 days.",
-        },
-      },
-    ],
-  },
-  {
-    id: "elaynerlar",
-    icon: <DentalAlignersIcon className="w-7 h-7 text-brandCyan" />,
-    image: assets.treatment_aligners,
-    badge: {
-      uz: "3D SHAFFOF KAPA",
-      ru: "3D НЕВИДИМЫЕ КАПЫ",
-      en: "3D CLEAR ALIGNERS",
-    },
-    techTag: {
-      uz: "Digital Ortho 3D",
-      ru: "Digital Ortho 3D",
-      en: "Digital Ortho 3D",
-    },
-    featurePill: {
-      uz: "100% Ko'rinmas",
-      ru: "100% Невидимо",
-      en: "100% Undetectable",
-    },
-    badgeTheme: {
-      badgeBg: "bg-cyan-950/85 text-cyan-300 border-cyan-400/50",
-      warrantyBg: "bg-teal-950/85 text-teal-300 border-teal-400/50",
-      accentGlow: "hover:shadow-cyan-500/10",
-    },
-    category: {
-      uz: "Shaffof Ortodontiya",
-      ru: "Элайнеры",
-      en: "Clear Aligners",
-    },
-    title: {
-      uz: "Ko'rinmas Shaffof Elaynerlar (Aligners / Kapalar)",
-      ru: "Прозрачные Элайнеры (Невидимые Капы)",
-      en: "Clear Invisible Aligners (Smile Straightening)",
-    },
-    shortDesc: {
-      uz: "Temir simlarsiz va breketsiz, atrofdagilarga mutlaqo ko'rinmaydigan shaffof kapalar yordamida tishlarni tekislash va tabassumni go'zallashtirish.",
-      ru: "Незаметное и комфортное исправление зубного ряда прозрачными капами без металлических замочков и дуг.",
-      en: "Straighten teeth discreetly without metal wires or brackets using custom clear aligners that are virtually undetectable.",
-    },
-    duration: { uz: "Bosqichma-bosqich kapalar", ru: "Серия кап", en: "Sequential trays" },
-    warranty: { uz: "3D reja bo'yicha kafolat", ru: "Результат по 3D плану", en: "Predictable 3D results" },
-    highlights: {
-      uz: [
-        "100% shaffof va ko'rinmas: suhbatdoshlaringiz sezmaydi",
-        "Ovqatlanish va tish yuvishda oson yechib qo'yish imkoniyati",
-        "Og'iz shilliq qavatini tilmaydi va yaralamaydi",
-        "Shining 3D optik skaneri yordamida pastasiz o'lchov va 3D virtual natija",
-      ],
-      ru: [
-        "100% прозрачность: окружающие не заметят процесс лечения",
-        "Легко снимаются во время еды и чистки зубов",
-        "Абсолютно гладкие: не травмируют слизистую полости рта",
-        "3D-сканирование Shining 3D без неприятных слепков и визуализация результата",
-      ],
-      en: [
-        "100% transparent and discreet for everyday confidence",
-        "Removable for effortless eating and oral hygiene",
-        "Smooth medical-grade polymer with zero irritation to cheeks or lips",
-        "Shining 3D intraoral digital impressions without paste and 3D simulation",
-      ],
-    },
-    indications: {
-      uz: [
-        "Tishlarning yengil va o'rta darajadagi egriliklari",
-        "Breket taqishni istamaydigan yoki ommaviy sohada ishlovchi bemorlar",
-        "Tishlar orasidagi tirqishlarni bildirmasdan yopish",
-        "Breket yechilgandan keyin tishlar siljishining oldini olish",
-      ],
-      ru: [
-        "Легкая и средняя степень скученности или неровности зубов",
-        "Желание выровнять зубы незаметно для окружающих без брекетов",
-        "Устранение межзубных щелей и диастем",
-        "Люди публичных профессий, ценящие эстетику и максимальный комфорт",
-      ],
-      en: [
-        "Mild to moderate teeth crowding and misalignment",
-        "Desire for discreet orthodontic correction without visible metal brackets",
-        "Closing aesthetic gaps between anterior teeth",
-        "Professionals and active individuals who prefer removable trays",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "Elaynerlarni kuniga necha soat taqish kerak?",
-          ru: "Сколько часов в сутки нужно носить элайнеры?",
-          en: "How many hours a day should clear aligners be worn?",
-        },
-        a: {
-          uz: "Kutilgan natijaga erishish uchun elaynerlar kuniga 20–22 soat taqiladi. Ularni faqat ovqatlanish va tish tozalash paytida yechiladi.",
-          ru: "Для максимального эффекта капы необходимо носить 20–22 часа в сутки, снимая только во время приема пищи и чистки зубов.",
-          en: "For optimal teeth movement, clear aligners should be worn for 20 to 22 hours daily, removing them only when eating and brushing.",
-        },
-      },
-      {
-        q: {
-          uz: "Elaynerlar og'izda atrofdagilarga seziladimi?",
-          ru: "Заметны ли элайнеры для окружающих во время разговора?",
-          en: "Are clear aligners noticeable to other people when talking?",
-        },
-        a: {
-          uz: "Umuman sezilmaydi! Ular 100% shaffof tibbiy polimerdan tayyorlanadi va hatto yaqin masofadan suhbatlashganda ham ko'rinmaydi.",
-          ru: "Практически незаметны! Капы изготовлены из кристально прозрачного биополимера и остаются невидимыми даже при близком общении.",
-          en: "Virtually invisible! Crafted from crystal-clear medical polymer, they hug teeth closely and are imperceptible even in close conversation.",
-        },
-      },
-    ],
-  },
-  {
-    id: "tish-oqartirish",
-    icon: <DentalWhiteningZoom className="w-7 h-7 text-brandOrange" />,
-    image: assets.treatment_whitening,
-    badge: {
-      uz: "ZOOM! & AIRFLOW",
-      ru: "ZOOM! И AIRFLOW",
-      en: "ZOOM! & AIRFLOW",
-    },
-    techTag: {
-      uz: "Philips Zoom! WhiteSpeed (Zoom 4)",
-      ru: "Philips Zoom! WhiteSpeed (Zoom 4)",
-      en: "Philips Zoom! WhiteSpeed (Zoom 4)",
-    },
-    featurePill: {
-      uz: "Emalga 0% Ziyon",
-      ru: "0% Вреда Эмали",
-      en: "0% Enamel Damage",
-    },
-    badgeTheme: {
-      badgeBg: "bg-amber-950/85 text-amber-200 border-amber-300/40",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-amber-500/10",
-    },
-    category: {
-      uz: "Profilaktika va Estetika",
-      ru: "Отбеливание и Гигиена",
-      en: "Whitening & Hygiene",
-    },
-    title: {
-      uz: "Professional Tish Oqartirish & AirFlow Gigiyena",
-      ru: "Профессиональное Отбеливание Зубов и AirFlow",
-      en: "Professional Teeth Whitening & AirFlow Hygiene",
-    },
-    shortDesc: {
-      uz: "Dunyodagi eng yetakchi Philips Zoom! WhiteSpeed (Zoom 4) sovuq LED tizimi bilan emalga ziyon yetkazmagan holda tishlarni 4–8 tongacha oqartirish hamda ultratovush va AirFlow yordamida tozalash.",
-      ru: "Клиническое отбеливание мировой системой Philips Zoom! WhiteSpeed (Zoom 4) на 4–8 тонов без повреждения эмали и ультразвуковая чистка AirFlow.",
-      en: "Clinical teeth whitening powered by genuine Philips Zoom! WhiteSpeed (Zoom 4) cold LED technology brightening teeth by 4–8 shades without thermal enamel damage, combined with AirFlow hygiene.",
-    },
-    duration: { uz: "40 – 50 daqiqa", ru: "40 – 50 минут", en: "40 – 50 mins" },
-    warranty: { uz: "4–8 ton oqarish kafolati", ru: "Осветление на 4–8 тонов", en: "4–8 shades brighter" },
-    highlights: {
-      uz: [
-        "Original Philips Zoom! WhiteSpeed (Zoom 4) sovuq LED oqartirish stansiyasi",
-        "Relief ACP maxsus himoya geli yordamida sezuvchanlik va og'riqsiz qulaylik",
-        "Qahva, choy va sigareta oqibatidagi qora dog'larni 100% tozalash",
-        "Milklarning qonashini to'xtatuvchi professional ultratovush va AirFlow profilaktikasi",
-      ],
-      ru: [
-        "Оригинальная клиническая система Philips Zoom! WhiteSpeed (Zoom 4) с холодным LED-светом",
-        "Специальный гель Relief ACP против гиперчувствительности зубов во время и после процедуры",
-        "Полное удаление стойкого пигментного налета от кофе, чая и курения",
-        "Снятие зубного камня ультразвуком и профилактика кровоточивости десен с AirFlow",
-      ],
-      en: [
-        "Genuine Philips Zoom! WhiteSpeed (Zoom 4) cold LED clinical whitening station",
-        "Relief ACP protective formula completely eliminating post-procedure sensitivity",
-        "100% eradication of deep coffee, tea, and tobacco enamel discoloration",
-        "Ultrasonic scaling and AirFlow polishing preventing gingivitis and gum bleeding",
-      ],
-    },
-    indications: {
-      uz: [
-        "Qahva, choy, tamaki yoki rangli ichimliklar ta'sirida emal sarg'ayishi",
-        "Yosh o'tishi bilan tishlarning tabiiy yaltiroqligi pasayishi",
-        "To'y, bayram yoki muhim tadbir oldidan tabassumni 4-8 tonga oqartirish",
-        "Emalga zarar yetkazmasdan professional tozalash va jilolash",
-      ],
-      ru: [
-        "Пожелтение эмали от частого употребления чая, кофе или курения",
-        "Возрастное потемнение твердых тканей зуба",
-        "Подготовка к свадьбе, фотосессии или важному событию",
-        "Желание осветлить зубы на 4–8 тонов безопасно для здоровья эмали",
-      ],
-      en: [
-        "Enamel stained by coffee, tea, red wine, or tobacco use",
-        "Age-related loss of natural tooth brightness",
-        "Desire for an instant 4–8 shades brighter smile before weddings or public events",
-        "Safe clinical treatment without damaging tooth surface integrity",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "Professional tish oqartirish emalga zarar yetkazadimi?",
-          ru: "Вредит ли профессиональное отбеливание зубной эмали?",
-          en: "Does professional clinical whitening harm tooth enamel?",
-        },
-        a: {
-          uz: "Zararsiz! Klinikamizda kislotasiz, xavfsiz nemis va yapon preparatlari hamda maxsus nurlantiruvchi chiroq qo'llaniladi. Muolaja so'ngida emalni minerallashtiruvchi gel surtiladi.",
-          ru: "Абсолютно безопасно! Мы используем щадящие сертифицированные гели и холодный свет LED-лампы, а после процедуры проводим фторирование для защиты эмали.",
-          en: "Completely safe! We apply pH-neutral clinical whitening formulas with controlled LED light, followed by deep remineralizing fluoride protection.",
-        },
-      },
-      {
-        q: {
-          uz: "Oqartirish natijasi qancha vaqt saqlanadi?",
-          ru: "Как долго сохраняется результат отбеливания зубов?",
-          en: "How long does teeth whitening results last?",
-        },
-        a: {
-          uz: "To'g'ri gigiyena va «oq parhez»ga (dastlabki kunlarda rangli ichimliklarni kamaytirish) rioya qilinganda oqlik 1.5–2 yilgacha saqlanadi.",
-          ru: "При соблюдении рекомендаций и качественной гигиене результат сохраняется от 1.5 до 2 лет.",
-          en: "With regular brushing and moderate consumption of staining beverages, results remain luminous for 1.5 to 2 years.",
-        },
-      },
-    ],
-  },
-  {
-    id: "ogriqsiz-tish-davolash",
-    icon: <DentalToothMolar className="w-7 h-7 text-primary" />,
-    image: assets.treatment_therapy,
-    badge: {
-      uz: "3M FILTEK & ESTELITE",
-      ru: "3M FILTEK И ESTELITE",
-      en: "3M FILTEK & ESTELITE",
-    },
-    techTag: {
-      uz: "Germaniya & Yaponiya",
-      ru: "Германия и Япония",
-      en: "Germany & Japan",
-    },
-    featurePill: {
-      uz: "Xameleon Rang Uygunligi",
-      ru: "Хамелеон Эффект",
-      en: "Chameleon Blend",
-    },
-    badgeTheme: {
-      badgeBg: "bg-teal-950/85 text-teal-300 border-teal-400/50",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-teal-500/10",
-    },
-    category: {
-      uz: "Terapiya va Endodontiya",
-      ru: "Терапия и Эндодонтия",
-      en: "Restorative Therapy",
-    },
-    title: {
-      uz: "Og'riqsiz Tish Davolash & Fotopolimer Restavratsiya",
-      ru: "Безболезненное Лечение Зубов и Нано-Пломбы",
-      en: "Painless Tooth Care & Nano-Composite Restorations",
-    },
-    shortDesc: {
-      uz: "O'tkir tish og'rig'ini zudlik bilan to'xtatish, karies, pulpit va ildiz kanallarini Germaniya (3M Filtek) va Yaponiya (Estelite) fotopolimer plombalari bilan davolash.",
-      ru: "Снятие острой боли за 1 визит, лечение кариеса и корневых каналов с нанокомпозитами из Германии (3M Filtek) и Японии (Estelite).",
-      en: "Immediate relief from acute toothache and microscopic cavity treatment using authentic German and Japanese nano-composites.",
-    },
-    duration: { uz: "30 – 45 daqiqa", ru: "30 – 45 минут", en: "30 – 45 mins" },
-    warranty: { uz: "5 yilgacha rasmiy kafolat", ru: "Гарантия до 5 лет", en: "Up to 5-year warranty" },
-    highlights: {
-      uz: [
-        "Germaniya (3M Filtek) va Yaponiya (Estelite) xameleon plombalari",
-        "2 bosqichli mikro-anesteziya: avval gel surtiladi, ukol ham sezilmaydi",
-        "Apekslokator va raqamli rentgen nazorati ostida ildiz kanallarini tozalash",
-        "Tishning tabiiy anatomiyasi, rangi va chaynash relyefini 100% tiklash",
-      ],
-      ru: [
-        "Оригинальные фотополимеры 3M Filtek (Германия) и Estelite (Япония)",
-        "Двухэтапная анестезия: предварительное нанесение замораживающего геля",
-        "Эндодонтия под контролем апекслокатора и рентгена",
-        "Точная анатомическая реставрация естественных бугров и цвета",
-      ],
-      en: [
-        "Authentic 3M Filtek (Germany) & Tokuyama Estelite (Japan) composites",
-        "Two-stage anesthesia: topical numbing gel eliminates needle sensation",
-        "Precision root canal cleaning verified by digital apex locators",
-        "Complete restoration of natural enamel translucency and chewing cusp anatomy",
-      ],
-    },
-    indications: {
-      uz: [
-        "Kechasi bezovta qiluvchi, simillovchi yoki o'tkir pulsatsiyalanuvchi tish og'rig'i",
-        "Sovuq, issiq yoki shirin yeguliklardan so'ng paydo bo'ladigan og'riq",
-        "Tishda karies qora dog'lari paydo bo'lishi, plomba tushib ketishi yoki tish sinishi",
-        "Chaynash paytida tish tagiga og'riq berishi va ovqat tiqilib qolishi",
-      ],
-      ru: [
-        "Острая пульсирующая или ноющая зубная боль, усиливающаяся ночью",
-        "Чувствительность и боль от горячего, холодного или сладкого",
-        "Выпадение старой пломбы, скол зуба или темные кариозные полости",
-        "Боль при накусывании, застревание пищи и воспаление зубного нерва (пульпит)",
-      ],
-      en: [
-        "Severe, sharp, throbbing, or continuous toothache that peaks at night",
-        "Sudden pain triggered by hot, cold, or sugary drinks and food",
-        "Lost, cracked, or loose fillings, visible cavities, and dark decay spots",
-        "Pain when chewing or pressing on the tooth caused by pulpitis or infection",
-      ],
-    },
-    faq: [
-      {
-        q: {
-          uz: "Tish qattiq og'riganda og'riqni bitta tashrifda butunlay qoldirsa bo'ladimi?",
-          ru: "Можно ли полностью снять острую зубную боль за один визит?",
-          en: "Can severe acute tooth pain be completely resolved in a single visit?",
-        },
-        a: {
-          uz: "Ha! Dr. Mansurov Orifjon Alimbekovich 2 bosqichli og'riqsiz mikro-anesteziya yordamida birinchi daqiqalardanoq og'riqni to'liq bloklaydi va kanalni tozalab, tishni tinchlantiradi.",
-          ru: "Да! Д-р Мансуров Орифжон Алимбекович с помощью двухэтапной анестезии мгновенно блокирует болевой синдром и проводит бережное лечение канала за один приём.",
-          en: "Yes! Utilizing a two-stage numbing protocol, Dr. Mansurov immediately blocks all pain receptors, treats the inflamed pulp or cavity, and provides instant relief.",
-        },
-      },
-      {
-        q: {
-          uz: "3M Filtek va Estelite plombalari qancha yil xizmat qiladi?",
-          ru: "Сколько служат фотополимерные пломбы 3M Filtek и Estelite?",
-          en: "How durable are 3M Filtek and Estelite nano-composite restorations?",
-        },
-        a: {
-          uz: "Nemis va yapon nanokompozitlari emal bilan mikro-darajada birikib ketadi, rangi o'zgarmaydi va 7–10 yildan ortiq mustahkam turadi. 5 yilgacha rasmiy kafolat beramiz.",
-          ru: "Немецкие и японские нанокомпозиты обладают непревзойденной прочностью, эффектом хамелеона и служат более 7–10 лет с гарантией до 5 лет.",
-          en: "German and Japanese nano-hybrid composites fuse micro-mechanically with tooth enamel, blending seamlessly and lasting 7 to 10+ years.",
-        },
-      },
-    ],
-  },
-  {
-    id: "ogriqsiz-tish-olish",
+    id: "xirurgiya",
     icon: <DentalSurgeryExtraction className="w-7 h-7 text-primary" />,
     image: assets.treatment_surgery,
     badge: {
-      uz: "ATRAVMATIK XIRURGIYA",
-      ru: "АТРАВМАТИЧНАЯ ХИРУРГИЯ",
-      en: "ATRAUMATIC SURGERY",
+      uz: "ATRAVMATIK VA XAVFSIZ",
+      ru: "АТРАВМАТИЧНО И БЕЗОПАСНО",
+      en: "ATRAUMATIC & SAFE",
     },
     techTag: {
-      uz: "Yevropa Anestetiklari",
-      ru: "Европейская Анестезия",
-      en: "European Anesthesia",
+      uz: "Og'riqsiz & Asoratsiz",
+      ru: "Без боли и осложнений",
+      en: "Painless & Complication-Free",
     },
     featurePill: {
-      uz: "0% Og'riq & Tez Bitish",
-      ru: "0% Боли & Быстро",
-      en: "0% Pain & Rapid Healing",
+      uz: "Suyak To'qimasini Saqlash",
+      ru: "Сохранение кости",
+      en: "Bone Preservation",
     },
     badgeTheme: {
       badgeBg: "bg-rose-950/85 text-rose-300 border-rose-400/50",
-      warrantyBg: "bg-red-950/85 text-red-300 border-red-400/50",
+      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
       accentGlow: "hover:shadow-rose-500/10",
     },
     category: {
-      uz: "Atravmatik Jarrohlik",
-      ru: "Бережная Хирургия",
-      en: "Oral Surgery",
+      uz: "Jarrohlik Stomatologiyasi",
+      ru: "Хирургическая Стоматология",
+      en: "Surgical Dentistry",
     },
     title: {
-      uz: "Og'riqsiz Tish Olish & Atravmatik Xirurgiya",
-      ru: "Бережное Безболезненное Удаление Зубов и Хирургия",
-      en: "Gentle Tooth Extraction & Oral Surgery",
+      uz: "Xirurgiya (Og'riqsiz va asoratsiz tish olish)",
+      ru: "Хирургия (Безболезненное и атравматичное удаление зубов без осложнений)",
+      en: "Surgery (Painless & Complication-Free Tooth Extraction)",
     },
     shortDesc: {
-      uz: "Murakkab, sinib qolgan tishlar hamda aql tishlarini (donolik tishlari) suyak va milk to'qimalarini asragan holda mutlaqo og'riqsiz va tez sug'urish.",
-      ru: "Атравматичное удаление зубов мудрости и разрушенных корней без боли с сохранением костной лунки для будущей имплантации.",
-      en: "Atraumatic extraction of wisdom teeth and fractured roots, conserving surrounding bone for swift recovery or future implants.",
+      uz: "Qutqarib bo'lmaydigan, yiringlagan yoki noto'g'ri o'sgan tishlarni, shu jumladan murakkab aql tishlarini (donolik tishlari) zamonaviy atravmatik texnika va 2 bosqichli og'riqsizlantirish ostida asoratsiz olib tashlash.",
+      ru: "Безопасное и безболезненное удаление зубов любой сложности, включая ретинированные и дистопированные зубы мудрости, с максимальным сохранением костной ткани и быстрым заживлением без осложнений.",
+      en: "Safe, gentle, and painless extraction of compromised, impacted, or wisdom teeth using atraumatic micro-surgical techniques that protect jawbone volume and ensure smooth, complication-free healing.",
     },
-    duration: { uz: "10 – 20 daqiqa", ru: "10 – 20 минут", en: "10 – 20 mins" },
-    warranty: { uz: "Asoratsiz tez bitish", ru: "Быстрое заживление", en: "Rapid complication-free healing" },
+    duration: { uz: "10–25 daqiqa", ru: "10–25 минут", en: "10–25 mins" },
+    warranty: { uz: "Tez va xavfsiz bitish nazorati", ru: "Контроль быстрого заживления", en: "Safe healing post-op care" },
     highlights: {
       uz: [
-        "Atravmatik texnika: tish suyak devorini shikastlamasdan ohista olinadi",
-        "Aql tishlarini (donolik tishlari) yotgan yoki qiyshiq bo'lsa ham oson olish",
-        "Yevropaning yuqori samarali xavfsiz anestetiklari",
-        "Tish olingan joyga regeneratsiyani tezlashtiruvchi preparatlar qo'yish",
+        "Atravmatik ajratish texnikasi: jag' suyagi va tish milkini shikastlamasdan tish olish",
+        "Murakkab va yotib qolgan aql tishlarini (8-tishlar) rentgen nazoratida xavfsiz bartaraf etish",
+        "2 bosqichli zamonaviy anesteziya bilan 100% og'riqsiz jarrohlik",
+        "Operatsiyadan keyingi shish va asoratlarning oldini oluvchi maxsus protokollar",
       ],
       ru: [
-        "Атравматичная методика сохранения стенок альвеолярной лунки",
-        "Удаление ретенированных и дистопированных «восьмерок» (зубов мудрости)",
-        "Глубокая надежная анестезия европейскими препаратами",
-        "Антисептическая защита и рекомендации для быстрого заживления",
+        "Атравматичная методика: бережное извлечение зуба с сохранением стенок лунки для будущей имплантации",
+        "Удаление сложных ретинированных зубов мудрости под точным визуальным и рентген-контролем",
+        "Двухэтапная анестезия: процедура проходит абсолютно незаметно и комфортно для пациента",
+        "Проверенные протоколы против отеков и воспалений для легкого и быстрого заживления",
       ],
       en: [
-        "Atraumatic socket-preservation extraction protocol",
-        "Surgical expertise in impacted and misaligned wisdom teeth",
-        "High-grade European local anesthetics guaranteeing zero discomfort",
-        "Biocompatible healing agents placed in the socket for rapid recovery",
+        "Atraumatic technique: gentle extraction preserving bone socket walls for future implants",
+        "Safe surgical removal of complex impacted wisdom teeth under careful clinical protocol",
+        "Two-stage advanced local anesthesia: completely painless from start to finish",
+        "Strict post-operative protocols minimizing swelling and preventing complications",
       ],
     },
     indications: {
       uz: [
-        "Noto'g'ri o'sayotgan, yonoqqa urilayotgan yoki tish qatorini siqayotgan aql tishlari (sakkizliklar)",
-        "Qattiq yiringlagan, ildizi singan va davolab bo'lmaydigan darajada yemirilgan tishlar",
-        "Milk shishishi, periostit (flyus) xavfi va tish ildizi atrofidagi kista",
-        "Ortodontik davolashdan oldin shifokor ko'rsatmasi bo'yicha tish olish",
+        "Terapevtik yoki ortopedik yo'l bilan tiklab bo'lmaydigan qattiq singan yoki zararlangan tishlar",
+        "Noto'g'ri o'sgan, milk ostida qolgan yoki qattiq og'riq berayotgan aql tishlari (8-tishlar)",
+        "Tish ildizi atrofidagi surunkali yiringli o'choqlar yoki kistalar",
+        "Ortodontik davolash (breket taqish) uchun jag'da joy ochish zarurati",
       ],
       ru: [
-        "Ретинированные и дистопированные зубы мудрости («восьмерки»), травмирующие щеку",
-        "Полное разрушение коронки и корня, не подлежащее терапевтическому лечению",
-        "Отек десны, риск флюса, периодонтит и кисты на верхушке корня",
-        "Плановое удаление по направлению ортодонта перед установкой брекетов",
+        "Зубы, разрушенные ниже уровня десны и не подлежащие восстановлению",
+        "Ретинированные, дистопированные или вызывающие воспаление зубы мудрости",
+        "Хронические очаги воспаления, гранулемы и кисты у корней зубов",
+        "Показания ортодонта для освобождения места при установке брекетов",
       ],
       en: [
-        "Impacted, partially erupted, or misaligned wisdom teeth (third molars)",
-        "Severe subgingival root fractures or unrestorable extensive decay",
-        "Recurrent gum swelling, abscess, cysts, or risk of periostitis (flux)",
-        "Strategic extractions required prior to orthodontic braces therapy",
+        "Severely decayed teeth fractured below the gumline beyond restoration",
+        "Impacted, misaligned, or painful wisdom teeth causing crowding or pericoronitis",
+        "Chronic periapical cysts or extensive bone infections around the root apex",
+        "Orthodontic indications requiring selective space creation for braces alignment",
       ],
     },
     faq: [
       {
         q: {
-          uz: "Aql tishini oldirish og'riqlimi?",
-          ru: "Больно ли удалять зуб мудрости?",
-          en: "Is wisdom tooth extraction painful?",
+          uz: "Aql tishini (8-tish) oldirish xavflimi va og'riq bo'ladimi?",
+          ru: "Опасно ли удалять зуб мудрости и будет ли больно?",
+          en: "Is wisdom tooth removal dangerous and does it hurt?",
         },
         a: {
-          uz: "Mutlaqo og'riqsiz! Biz kuchli zamonaviy Yevropa anestetiklaridan foydalanamiz. Atravmatik usul tufayli suyak ziyon ko'rmaydi va muolajadan keyin ham asoratlar bo'lmaydi.",
-          ru: "Совершенно без боли! Применяется мощная европейская анестезия. Атравматичная методика сохраняет костные стенки лунки, обеспечивая быстрое заживление.",
-          en: "Not painful at all! With advanced European local anesthesia and atraumatic luxation techniques, bone structure is preserved and healing is fast and gentle.",
+          uz: "Mutlaqo xavfsiz va og'riqsiz! Biz rentgen orqali tish ildizlarining aniq joylashuvini ko'ramiz va zamonaviy mikro-jarrohlik asboblari yordamida uni atravmatik usulda olamiz. Muolaja davomida og'riq sezilmaydi, so'ngra tez bitishi uchun barcha tavsiyalar beriladi.",
+          ru: "Это совершенно безопасно и не больно! Мы предварительно изучаем анатомию корней по снимку и бережно удаляем зуб микрохирургическими инструментами. Процедура безболезненна, а заживление проходит легко.",
+          en: "Completely safe and painless! We evaluate the exact root anatomy on digital imaging and extract the tooth atraumatically using micro-instruments without damaging surrounding tissue.",
         },
       },
+    ],
+  },
+
+  /* ═════════════════════════════════════════════════════════════════
+     5. ORTODONTIYA (QIYSHIQ VA NOTEKIS TISH QATORLARINI BREKETLAR YORDAMIDA TO'G'RILASH)
+     ═════════════════════════════════════════════════════════════════ */
+  {
+    id: "ortodontiya",
+    icon: <DentalBracesIcon className="w-7 h-7 text-primary" />,
+    image: assets.treatment_braces,
+    badge: {
+      uz: "MUKAMMAL TISHLASH & TABASSUM",
+      ru: "ИДЕАЛЬНЫЙ ПРИКУС И УЛЫБКА",
+      en: "PERFECT BITE & SMILE",
+    },
+    techTag: {
+      uz: "Zamonaviy Breket Tizimlari",
+      ru: "Современные брекет-системы",
+      en: "Modern Braces Systems",
+    },
+    featurePill: {
+      uz: "Metall · Keramika · Sapfir",
+      ru: "Металл · Керамика · Сапфир",
+      en: "Metal · Ceramic · Sapphire",
+    },
+    badgeTheme: {
+      badgeBg: "bg-indigo-950/85 text-indigo-300 border-indigo-400/50",
+      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
+      accentGlow: "hover:shadow-indigo-500/10",
+    },
+    category: {
+      uz: "Ortodontiya",
+      ru: "Ортодонтия",
+      en: "Orthodontics",
+    },
+    title: {
+      uz: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
+      ru: "Ортодонтия (Исправление прикуса и выравнивание кривых зубов брекетами)",
+      en: "Orthodontics (Bite Correction & Alignment of Crooked Teeth with Braces)",
+    },
+    shortDesc: {
+      uz: "Qiyshiq, notekis, zich yoki orasi ochiq tish qatorlarini zamonaviy metall, keramika va estetik sapfir breket tizimlari yordamida to'g'rilash hamda ideal tishlash (prikus) tizimini barpo etish.",
+      ru: "Эффективное исправление неровных, искривленных и скученных зубных рядов с помощью современных металлических, керамических и сапфировых брекетов для формирования правильного прикуса и ровной улыбки.",
+      en: "Comprehensive alignment of crooked, crowded, or uneven dental arches and malocclusion correction using state-of-the-art metal, discreet ceramic, and sapphire braces systems for lifelong straight teeth.",
+    },
+    duration: { uz: "12–18 oy (muntazam nazorat)", ru: "12–18 месяцев (наблюдение)", en: "12–18 months" },
+    warranty: { uz: "Barqaror natija kafolati", ru: "Гарантия стабильного результата", en: "Stable lifetime retention" },
+    highlights: {
+      uz: [
+        "Klassik metall, o'z-o'zini ligaturlaydigan (Damon) hamda ko'rinmas estetik keramik/sapfir breketlar",
+        "Bolalar, o'smirlar va kattalar uchun individual tashxis va davolash rejasi",
+        "Jag' bo'g'imiga tushadigan ortiqcha yuklamani bartaraf etish va yuz simmetriyasini tiklash",
+        "Davolash yakunida tekislangan tishlarning qayta surilmasligi uchun ishonchli reteynerlar",
+      ],
+      ru: [
+        "Классические металлические, самолигирующие Damon и эстетические керамические/сапфировые брекеты",
+        "Эффективное исправление прикуса в любом возрасте (дети, подростки, взрослые)",
+        "Снятие лишней нагрузки с височно-нижнечелюстного сустава и гармонизация овала лица",
+        "Надежная ретенция: фиксация идеального положения зубов после снятия брекетов",
+      ],
+      en: [
+        "Classic metal, low-friction self-ligating Damon, and clear aesthetic ceramic/sapphire brackets",
+        "Highly successful orthodontic treatment for patients of all ages (teens and adults)",
+        "Relieving TMJ joint stress and improving facial symmetry and chewing balance",
+        "Dedicated post-treatment retention protocols keeping teeth permanently straight",
+      ],
+    },
+    indications: {
+      uz: [
+        "Tishlarning qiyshiq, burilgan yoki bir-birining ustiga chiqib qolishi (zichlik)",
+        "Tishlar oralig'idagi sezilarli bo'shliqlar (diastema va tremalar)",
+        "Noto'g'ri tishlash (chuqur, ochiq, distal yoki mezial prikus)",
+        "Notekis tishlar sababli chaynash qiyinligi va emalning notekis yemirilishi",
+      ],
+      ru: [
+        "Скученность, неровность, смещение или поворот зубов вокруг оси",
+        "Широкие межзубные промежутки (диастемы и тремы)",
+        "Патологический прикус любого типа (глубокий, открытый, мезиальный, дистальный)",
+        "Неравномерное стирание зубов и дискомфорт при смыкании челюстей",
+      ],
+      en: [
+        "Crooked, overlapping, tipped, or crowded teeth in either dental arch",
+        "Unwanted gaps or wide spacing between teeth (diastemas and spacing)",
+        "Malocclusion disorders including deep bite, open bite, and crossbite",
+        "Abnormal enamel wear and chewing discomfort stemming from misaligned bite",
+      ],
+    },
+    faq: [
       {
         q: {
-          uz: "Tish olingandan keyin bitish jarayoni qancha vaqt oladi?",
-          ru: "Сколько времени заживает десна после удаления зуба?",
-          en: "How long does healing take after a tooth extraction?",
+          uz: "Katta yoshda ham breket taqib tishlarni to'g'rilash mumkinmi?",
+          ru: "Можно ли ставить брекеты во взрослом возрасте?",
+          en: "Can adults get braces to straighten their teeth?",
         },
         a: {
-          uz: "Dastlabki bitish 2–3 kunda sodir bo'ladi, to'liq shifo topishi esa 7–10 kun davom etadi. Shifokorimiz muolajadan so'ng barcha zarur parvarish tavsiyalarini beradi.",
-          ru: "Первичное затягивание лунки происходит за 2–3 дня, полное восстановление — за 7–10 дней. Мы даем подробные рекомендации по домашнему уходу.",
-          en: "Initial gum closure takes 2 to 3 days, with full tissue recovery within 7 to 10 days. Comprehensive aftercare instructions are provided.",
+          uz: "Albatta! Breket taqish uchun hech qanday yuqori yosh chegarasi yo'q. Zamonaviy breket tizimlari yordamida 25, 35 va hatto 50 yoshdan keyin ham tishlarni to'liq tekislash va sog'lom tabassumga erishish mumkin.",
+          ru: "Конечно! Для ортодонтического лечения нет возрастных ограничений. Современные брекеты позволяют успешно выровнять зубы и исправить прикус в 25, 35 и даже после 50 лет.",
+          en: "Absolutely! There is no upper age limit for orthodontic treatment. Modern braces effectively straighten crooked teeth and correct bites at 25, 35, or even 50+.",
         },
       },
     ],
   },
 ];
+
+/**
+ * Backward compatibility alias mapping for existing and old links.
+ */
+export const SERVICE_ALIASES = {
+  "dental-implant": "implantatsiya",
+  "breketlar": "ortodontiya",
+  "sirkon-keramika-karonkalar": "ortopediya",
+  "vinirlar": "ortopediya",
+  "pratezlar": "ortopediya",
+  "elaynerlar": "ortodontiya",
+  "tish-oqartirish": "terapiya",
+  "ogriqsiz-tish-davolash": "terapiya",
+  "ogriqsiz-tish-olish": "xirurgiya",
+};
+
+export const resolveServiceId = (id) => {
+  if (!id) return SERVICES_CATALOG[0].id;
+  const targetId = SERVICE_ALIASES[id] || id;
+  const match = SERVICES_CATALOG.find((s) => s.id === targetId);
+  return match ? match.id : SERVICES_CATALOG[0].id;
+};

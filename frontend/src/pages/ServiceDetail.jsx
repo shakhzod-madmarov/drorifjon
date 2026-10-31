@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
-import { SERVICES_CATALOG } from "../constants/servicesCatalog";
+import { SERVICES_CATALOG, resolveServiceId } from "../constants/servicesCatalog";
 import { DOCTOR_INFO, getExperienceBadge } from "../constants/doctor";
 import { PAGE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
 import Seo from "../components/Seo";
@@ -25,8 +25,9 @@ const ServiceDetail = () => {
   const to = useLocalizedPath();
   const { openBooking } = useBooking();
 
+  const targetId = resolveServiceId(activeServiceId);
   const service =
-    SERVICES_CATALOG.find((s) => s.id === activeServiceId) || SERVICES_CATALOG[0];
+    SERVICES_CATALOG.find((s) => s.id === targetId) || SERVICES_CATALOG[0];
 
   const steps = {
     uz: [
@@ -43,7 +44,7 @@ const ServiceDetail = () => {
       {
         num: "03",
         title: "Mikroskopik Aniqlikda Asosiy Muolaja",
-        desc: "Janubiy Koreya (MegaGen), Germaniya va Yaponiyaning original sertifikatlangan materiallari yordamida tiklash.",
+        desc: "Germaniya, Janubiy Koreya va Yaponiyaning original sertifikatlangan materiallari yordamida tiklash.",
       },
       {
         num: "04",
@@ -55,7 +56,7 @@ const ServiceDetail = () => {
       {
         num: "01",
         title: "Осмотр и Цифровая Диагностика",
-        desc: "Д-р Озодбек Отахонов проводит детальный осмотр и составляет прозрачный индивидуальный план лечения.",
+        desc: "Д-р Мансуров Орифжон Алимбекович проводит детальный осмотр и составляет прозрачный индивидуальный план лечения.",
       },
       {
         num: "02",
@@ -65,7 +66,7 @@ const ServiceDetail = () => {
       {
         num: "03",
         title: "Основной Этап Лечения / Реставрации",
-        desc: "Работа выполняется с использованием сертифицированных материалов из Южной Кореи (MegaGen), Германии и Японии.",
+        desc: "Работа выполняется с использованием сертифицированных материалов из Германии, Южной Кореи и Японии.",
       },
       {
         num: "04",
@@ -87,7 +88,7 @@ const ServiceDetail = () => {
       {
         num: "03",
         title: "Precision Restorative Procedure",
-        desc: "Treatment is performed using genuine materials from South Korea (MegaGen), Germany, and Japan.",
+        desc: "Treatment is performed using genuine certified materials from Germany, South Korea, and Japan.",
       },
       {
         num: "04",

@@ -11,32 +11,32 @@ export const PAGE_SEO = {
   home: {
     uz: {
       title: "Dr. Mansurov O.A. — Mansurov Orifjon Alimbekovich | Vrach Stomatolog",
-      description: `Mansurov Orifjon Alimbekovich — ${years}+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji (2001-2004) va O'sh Davlat Universiteti (2017-2022) bitiruvchisi. Dental implantatsiya, breketlar, sirkon karonkalar, vinirlar, pratezlar va 100% og'riqsiz davolash. Tel: +998 90 548 10 90.`,
+      description: `Mansurov Orifjon Alimbekovich — ${years}+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji (2001-2004) va O'sh Davlat Universiteti (2017-2022) bitiruvchisi. Terapiya (davolash va restavratsiya), ortopediya (tish qo'yish), Germaniya va Koreya implantatsiyasi, xirurgiya hamda ortodontiya (breketlar). Tel: +998 90 548 10 90.`,
     },
     ru: {
       title: "Д-р Мансуров О.А. — Мансуров Орифжон Алимбекович | Врач-Стоматолог",
-      description: `Врач-стоматолог Д-р Мансуров Орифжон Алимбекович. Более ${years} лет в медицине. Андижанский медицинский колледж (2001-2004), Ошский Государственный Университет (2017-2022). Имплантация, брекеты, коронки, виниры, лечение зубов без боли. +998 90 548 10 90.`,
+      description: `Врач-стоматолог Д-р Мансуров Орифжон Алимбекович. Более ${years} лет в медицине. Андижанский медицинский колледж (2001-2004), Ошский Государственный Университет (2017-2022). Терапия, ортопедия, имплантация (Германия, Корея), хирургия и ортодонтия (брекеты). +998 90 548 10 90.`,
     },
     en: {
       title: "Dr. Mansurov O.A. — Mansurov Orifjon Alimbekovich | Modern Dentist",
-      description: `Dr. Mansurov Orifjon Alimbekovich, restorative dentist with over ${years}+ years healthcare experience. Andijan Medical College and Osh State University graduate. Dental implants, braces, zirconia crowns, veneers, painless dentistry. Tel: +998 90 548 10 90.`,
+      description: `Dr. Mansurov Orifjon Alimbekovich, restorative dentist with over ${years}+ years healthcare experience. Andijan Medical College and Osh State University graduate. Therapy & restoration, orthopedics, German & Korean implants, gentle surgery, and braces. Tel: +998 90 548 10 90.`,
     },
   },
   services: {
     uz: {
       title: "Stomatologik Xizmatlar — Dr. Mansurov O.A. | Vrach Stomatolog",
       description:
-        "Dental implantatsiya, breketlar, sirkon va keramik karonkalar, vinirlar, tish protezlari, shaffof elaynerlar, tish oqartirish, og'riqsiz davolash va tish olish xizmatlari.",
+        "5 ta asosiy yo'nalish: Terapiya (tishlarni og'riqsiz davolash va restavratsiya), Ortopediya (yuqori sifatli tish qo'yish, protezlash), Implantatsiya (Germaniya va Koreya mahsulotlari), Xirurgiya (og'riqsiz va asoratsiz tish olish) hamda Ortodontiya (breketlar).",
     },
     ru: {
       title: "Стоматологические Услуги — Д-р Мансуров О.А.",
       description:
-        "Полный спектр услуг: имплантация зубов, брекеты, циркониевые и керамические коронки, виниры, протезирование, элайнеры, профессиональное отбеливание и удаление зубов без боли.",
+        "5 ключевых направлений: Терапия (безболезненное лечение и реставрация), Ортопедия (протезирование и коронки), Имплантация (Германия и Корея), Хирургия (удаление зубов без осложнений), Ортодонтия (исправление прикуса брекетами).",
     },
     en: {
       title: "Dental Services & Clinical Specialties — Dr. Mansurov O.A.",
       description:
-        "Comprehensive modern dentistry: dental implants, orthodontic braces, zirconia crowns, aesthetic veneers, dentures, clear aligners, whitening, and 100% painless therapy.",
+        "5 core specialties: Therapy (painless tooth treatment and restoration), Orthopedics (precision prosthetics), Implantation (German and Korean implants), Surgery (gentle extraction without complications), and Orthodontics (braces).",
     },
   },
   about: {

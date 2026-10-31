@@ -22,7 +22,7 @@ export const FAQ_ITEMS = [
       en: "What are Dr. Mansurov Orifjon Alimbekovich's medical qualifications and education?",
     },
     a: {
-      uz: "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatologdir. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot ta'limini olgan, so'ngra O'sh Davlat Universitetida (Ошский Государственный Университет, 2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan.",
+      uz: "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatologdir. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot ta'limini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan.",
       ru: "Д-р Мансуров Орифжон Алимбекович имеет более 20 лет практического опыта в сфере здравоохранения. Он получил фундаментальное медицинское образование в Андижанском медицинском колледже (2001–2004) и высшее профильное образование в Ошском Государственном Университете (2017–2022).",
       en: "Dr. Mansurov Orifjon Alimbekovich holds over 20+ years of healthcare experience. He completed his foundational medical training at Andijan Medical College (2001–2004) followed by dental university degree at Osh State University (2017–2022).",
     },
