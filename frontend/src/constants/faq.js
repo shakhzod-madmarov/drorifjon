@@ -99,4 +99,28 @@ export const FAQ_ITEMS = [
       en: "Consultations and treatments are held in a modern sterile clinic in Andijan, Uzbekistan. For directions call +998 90 548 10 90.",
     },
   },
+  {
+    q: {
+      uz: "Plombalash va anesteziya uchun qanday materiallardan foydalanasiz?",
+      ru: "Какие материалы используются для пломбирования и анестезии?",
+      en: "Which materials are used for fillings and local anesthesia?",
+    },
+    a: {
+      uz: "Dr. Mansurov O.A. faqat original xalqaro sertifikatlangan materiallardan foydalanadi: plombalash uchun Germaniyaning Charisma (mikro-shisha xameleon) va Janubiy Koreyaning DenFil (300+ MPa yuqori zichlikdagi mikro-gibrid) kompozitlari; anesteziya uchun esa Yevropaning steril blisterli Orablok, Supercain Forte va Artikain vositalari qo'llaniladi. Bemorlar muolaja davomida mutlaqo og'riq sezmaydi.",
+      ru: "Д-р Мансуров О.А. использует исключительно оригинальные бренды: для реставрации — немецкий микростекольный нанокомпозит Charisma с эффектом хамелеона и корейский сверхпрочный DenFil (более 300 МПа); для обезболивания — итальянский Ораблок в индивидуальных стерильных блистерах, Суперкаин Форте и Артикаин. Лечение проходит на 100% без боли.",
+      en: "Dr. Mansurov exclusively applies certified materials: for dental fillings — genuine German Charisma (microglass chameleon composite) and South Korean DenFil (300+ MPa high-density hybrid); for anesthesia — sterile European Orabloc blistered carpules, Supercain Forte, and pure Articaine, guaranteeing 100% painless care.",
+    },
+  },
+  {
+    q: {
+      uz: "Implantatsiya uchun Mega'Gen, AnyRidge va DXL tizimlarining qanday afzalliklari bor?",
+      ru: "В чем преимущества имплантов Mega'Gen, AnyRidge и DXL?",
+      en: "What are the benefits of Mega'Gen, AnyRidge, and DXL dental implant systems?",
+    },
+    a: {
+      uz: "Janubiy Koreyaning Mega'Gen implantlari Xpeed kaltsiy qoplamasi va KnifeThread rezbasi tufayli suyakka 2 barobar tezroq o'rnashadi. AnyRidge (AnyRidch Germaniya) tizimi esa suyak to'qimasini maksimal asrab, bir kunda yuklama berish imkonini beradi. Nemis muhandisligi durdonasi bo'lgan DXL (Germaniya) toza tibbiy biotitandan (Grade 4/5) tayyorlangan bo'lib, mikron aniqlikdagi konus birikmasi bilan umrbod kafolatlanadi.",
+      ru: "Корейские импланты Mega'Gen с покрытием Xpeed и резьбой KnifeThread обеспечивают быстрое приживление даже в мягкой кости. Система AnyRidge (AnyRidch Германия) максимально сохраняет кость и подходит для немедленной нагрузки. Немецкие импланты DXL изготовлены из чистого медицинского биотитана Grade 4/5 с прецизионным конусным соединением и пожизненной гарантией.",
+      en: "South Korea's Mega'Gen implants feature Xpeed calcium nano-surface and KnifeThread geometry for twice faster osseointegration. AnyRidge (AnyRidch Germany) preserves bone structure with progressive stability for immediate crown loading. German DXL implants are crafted from medical Grade 4/5 pure bio-titanium with precision zero-microgap cone connection and lifetime durability.",
+    },
+  },
 ];

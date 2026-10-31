@@ -77,7 +77,7 @@ export const ROUTES = [
     image: {
       src: "src/assets/treatment_therapy.webp",
       title: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya) — Dr. Mansurov O.A.",
-      caption: "Karies, chuqur karies, pulpit va nano-kompozit badiiy restavratsiya",
+      caption: "Charisma (Germaniya) va DenFil (Koreya) kompozitlari bilan og'riqsiz davolash va restavratsiya",
     },
   },
   {
@@ -97,7 +97,7 @@ export const ROUTES = [
     image: {
       src: "src/assets/treatment_implant.webp",
       title: "Implantatsiya (Germaniya va Koreya mahsulotlari) — Dr. Mansurov O.A.",
-      caption: "Germaniya va Janubiy Koreya biotitan implantlari bilan og'riqsiz tish tiklash",
+      caption: "Mega'Gen (Koreya), AnyRidge va DXL (Germaniya) biotitan implantlari bilan og'riqsiz tish tiklash",
     },
   },
   {
@@ -107,7 +107,7 @@ export const ROUTES = [
     image: {
       src: "src/assets/treatment_surgery.webp",
       title: "Xirurgiya (Og'riqsiz va asoratsiz tish olish) — Dr. Mansurov O.A.",
-      caption: "Atravmatik tish olish va murakkab aql tishlari jarrohligi",
+      caption: "Orablok va Supercain Forte anesteziyasi ostida atravmatik tish olish",
     },
   },
   {

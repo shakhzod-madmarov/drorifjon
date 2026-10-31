@@ -8,6 +8,7 @@ import Seo from "../components/Seo";
 import { buildServicesCatalogSchema } from "../utils/structuredData";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
+import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import PatientCareGuides from "../components/PatientCareGuides";
 import {
   IconCheckCircle,
@@ -214,6 +215,9 @@ const Services = ({ onOpenBooking }) => {
 
       {/* Smile Assessment Wizard */}
       <SmileAssessmentWizard />
+
+      {/* Certified Clinical Materials: Germany & South Korea */}
+      <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
 
       {/* Patient Care Guides */}
       <PatientCareGuides />

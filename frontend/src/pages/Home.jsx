@@ -17,6 +17,7 @@ import { buildHomeSchema } from "../utils/structuredData";
 import { SERVICES_CATALOG } from "../constants/servicesCatalog";
 import CertificatesShowcase from "../components/CertificatesShowcase";
 import ClinicEquipmentShowcase from "../components/ClinicEquipmentShowcase";
+import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
@@ -451,6 +452,9 @@ const Home = ({ onOpenBooking }) => {
 
       {/* 5. Authentic Equipment & Clinical Operatory Tour */}
       <ClinicEquipmentShowcase />
+
+      {/* 6. Certified Clinical Materials: Germany & South Korea */}
+      <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
 
       {/* Before & After (Hidden by user request) */}
       {/* <BeforeAfterSection /> */}

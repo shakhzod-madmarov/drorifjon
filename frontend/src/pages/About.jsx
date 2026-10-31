@@ -9,6 +9,7 @@ import { buildAboutPageSchema } from "../utils/structuredData";
 import ClinicLocationMap from "../components/ClinicLocationMap";
 import CertificatesShowcase from "../components/CertificatesShowcase";
 import ClinicEquipmentShowcase from "../components/ClinicEquipmentShowcase";
+import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import {
   IconAward,
   IconShieldCheck,
@@ -97,27 +98,27 @@ const About = ({ onOpenBooking }) => {
     {
       icon: <IconSparkleStar className="w-6 h-6 text-brandOrange" />,
       title: {
-        uz: "Ikki Bosqichli Og'riqsiz Anesteziya",
-        ru: "Двухэтапная Анестезия Без Боли",
-        en: "Two-Stage Gentle Painless Numbing",
+        uz: "Ikki Bosqichli Og'riqsiz Anesteziya (Orablok & Supercain)",
+        ru: "Двухэтапная Анестезия Без Боли (Ораблок & Суперкаин)",
+        en: "Two-Stage Gentle Anesthesia (Orabloc & Supercain)",
       },
       desc: {
-        uz: "Avval mevali muzlatuvchi gel surtiladi, so'ngra mikro-anesteziya qo'llaniladi — igna sanchilishi ham sezilmaydi.",
-        ru: "Сначала наносится приятный аппликационный гель, затем вводится микро-доза анестетика — укол неощутим.",
-        en: "Pleasant topical numbing gel is applied first, followed by micro-anesthesia so you feel zero discomfort.",
+        uz: "Yevropaning individual steril blisterli Orablok, Supercain Forte va Artikain preparatlari bilan 100% og'riqsiz muolaja.",
+        ru: "Итальянский стерильный Ораблок в блистерах, Суперкаин Форте и Артикаин обеспечивают глубокое обезболивание без боли.",
+        en: "Sterile blistered European Orabloc carpules, Supercain Forte, and pure Articaine guarantee completely painless treatment.",
       },
     },
     {
       icon: <IconAward className="w-6 h-6 text-emerald-600" />,
       title: {
-        uz: "Asl va Sertifikatlangan Materiallar",
-        ru: "Оригинальные Сертифицированные Материалы",
-        en: "Certified High-Grade Dental Materials",
+        uz: "Original Germaniya va Koreya Materiallari",
+        ru: "Оригинальные Материалы из Германии и Кореи",
+        en: "Genuine German & Korean Certified Materials",
       },
       desc: {
-        uz: "Koreya, Germaniya va Yaponiyaning yuqori toifali biotitan implantlari, 3M Filtek va Ivoclar keramikalari.",
-        ru: "Оригинальные биосовместимые импланты, композиты 3M Filtek, Tokuyama Estelite и керамика Ivoclar.",
-        en: "Authentic biocompatible implants, 3M Filtek composites, Tokuyama Estelite, and Ivoclar ceramics.",
+        uz: "Charisma (Germaniya) va DenFil (Koreya) plombalari, Mega'Gen (Koreya), AnyRidge (Germaniya) va DXL (Germaniya) implantlari.",
+        ru: "Пломбы Charisma (Германия) и DenFil (Корея), имплантаты Mega'Gen (Корея), AnyRidge (Германия) и DXL (Германия).",
+        en: "Charisma (Germany) & DenFil (Korea) composites, Mega'Gen (Korea), AnyRidge (Germany) & DXL (Germany) implant systems.",
       },
     },
   ];
@@ -278,6 +279,9 @@ const About = ({ onOpenBooking }) => {
 
       {/* Equipment Showcase */}
       <ClinicEquipmentShowcase />
+
+      {/* Certified Clinical Materials: Germany & South Korea */}
+      <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
 
       {/* Certificates & Qualifications Showcase */}
       <CertificatesShowcase />
