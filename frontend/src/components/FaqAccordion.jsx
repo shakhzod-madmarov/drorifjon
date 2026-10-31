@@ -52,9 +52,11 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
                 className="bg-white rounded-2xl border border-amber-200/90 overflow-hidden shadow-2xs transition-all"
               >
                 <button
+                  id={`faq-btn-${idx}`}
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus:bg-amber-50/50"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
                 >
                   <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                     {item.q[lang] || item.q.uz}
@@ -68,7 +70,12 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-amber-100/70 pt-3">
+                  <div
+                    id={`faq-answer-${idx}`}
+                    role="region"
+                    aria-labelledby={`faq-btn-${idx}`}
+                    className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-amber-100/70 pt-3"
+                  >
                     {item.a[lang] || item.a.uz}
                   </div>
                 )}

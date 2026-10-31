@@ -59,7 +59,7 @@ const Nav = ({ topOffset = 0 }) => {
             : "bg-[#FFFDF9]/95 backdrop-blur-md border-b border-amber-100/60 py-2 sm:py-2.5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2.5 sm:gap-3">
           {/* Brand Logo */}
           <NavLink
             to={to("/")}
@@ -111,7 +111,7 @@ const Nav = ({ topOffset = 0 }) => {
                   key={l}
                   onClick={() => changeLanguage(l)}
                   aria-pressed={lang === l}
-                  className={`px-1.5 py-0.5 rounded text-[11px] font-bold uppercase transition-all duration-150 ${
+                  className={`min-h-[34px] sm:min-h-[26px] px-2 sm:px-1.5 py-1 sm:py-0.5 rounded text-[11px] font-bold uppercase transition-all duration-150 touch-manipulation ${
                     lang === l
                       ? "bg-white text-primary shadow-2xs"
                       : "text-slate-500 hover:text-slate-800"
@@ -159,7 +159,7 @@ const Nav = ({ topOffset = 0 }) => {
               aria-label={a11y.openMenu}
               aria-expanded={showMenu}
               aria-controls="mobile-navigation-drawer"
-              className="lg:hidden p-1.5 rounded-lg text-slate-700 hover:bg-amber-100/50 transition-colors cursor-pointer"
+              className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl text-slate-700 hover:bg-amber-100/50 transition-colors cursor-pointer touch-manipulation"
             >
               <svg
                 className="w-5 h-5"
@@ -192,7 +192,7 @@ const Nav = ({ topOffset = 0 }) => {
             <button
               onClick={closeDrawer}
               aria-label={a11y.closeMenu}
-              className="p-1.5 rounded-lg text-slate-500 hover:bg-amber-100/60 transition-colors cursor-pointer"
+              className="w-11 h-11 flex items-center justify-center rounded-xl text-slate-500 hover:bg-amber-100/60 transition-colors cursor-pointer touch-manipulation"
             >
               <svg
                 className="w-5 h-5"

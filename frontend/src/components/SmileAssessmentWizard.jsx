@@ -200,8 +200,8 @@ const SmileAssessmentWizard = () => {
           </p>
         </div>
 
-        {/* 4 Concern Cards with Visual Thumbnail Images & Luxury Badges */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 [perspective:1000px]">
+        {/* 5 Concern Cards with Visual Thumbnail Images & Luxury Badges */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 [perspective:1000px]">
           {concerns.map((item) => {
             const isSelected = selectedConcern.id === item.id;
             return (
@@ -325,7 +325,7 @@ const SmileAssessmentWizard = () => {
                   {lang === "uz" ? "Klinik Natija" : lang === "ru" ? "Клинический Результат" : "Clinical Result"}
                 </p>
                 <p className="text-xs font-bold text-white truncate">
-                  {selectedConcern.duration[lang]} · 100% Og'riqsiz
+                  {selectedConcern.duration[lang]} · {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle"}
                 </p>
               </div>
             </div>

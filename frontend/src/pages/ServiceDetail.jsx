@@ -175,16 +175,28 @@ const ServiceDetail = () => {
             {/* Quick Metrics Badges */}
             <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-1">
               <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
-                <span className="text-[10px] text-slate-400 font-semibold uppercase block">{lang === "uz" ? "Tizim" : "Система"}</span>
-                <span className="text-xs sm:text-sm font-bold text-amber-300 block mt-0.5 truncate">{service.techTag?.[lang] || "Klinik"}</span>
+                <span className="text-[10px] text-slate-400 font-semibold uppercase block">
+                  {lang === "uz" ? "Tizim" : lang === "ru" ? "Система" : "System"}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-amber-300 block mt-0.5 truncate">
+                  {service.techTag?.[lang] || "Klinik"}
+                </span>
               </div>
               <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
-                <span className="text-[10px] text-slate-400 font-semibold uppercase block">{lang === "uz" ? "Davomiyligi" : "Время"}</span>
-                <span className="text-xs sm:text-sm font-bold text-white block mt-0.5 truncate">{service.duration[lang]}</span>
+                <span className="text-[10px] text-slate-400 font-semibold uppercase block">
+                  {lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Время" : "Duration"}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-white block mt-0.5 truncate">
+                  {service.duration[lang]}
+                </span>
               </div>
               <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
-                <span className="text-[10px] text-slate-400 font-semibold uppercase block">{lang === "uz" ? "Kafolat" : "Гарантия"}</span>
-                <span className="text-xs sm:text-sm font-bold text-emerald-400 block mt-0.5 truncate">{service.warranty[lang]}</span>
+                <span className="text-[10px] text-slate-400 font-semibold uppercase block">
+                  {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-emerald-400 block mt-0.5 truncate">
+                  {service.warranty[lang]}
+                </span>
               </div>
             </div>
 
@@ -259,15 +271,21 @@ const ServiceDetail = () => {
             </h2>
             <div className="space-y-3 pt-1">
               <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
-                <span className="text-xs text-slate-600 font-semibold">{lang === "uz" ? "Davomiyligi:" : "Время приёма:"}</span>
+                <span className="text-xs text-slate-600 font-semibold">
+                  {lang === "uz" ? "Davomiyligi:" : lang === "ru" ? "Время приёма:" : "Estimated time:"}
+                </span>
                 <span className="text-xs sm:text-sm font-bold text-slate-900">{service.duration[lang]}</span>
               </div>
               <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
-                <span className="text-xs text-slate-600 font-semibold">{lang === "uz" ? "Rasmiy Kafolat:" : "Гарантия:"}</span>
+                <span className="text-xs text-slate-600 font-semibold">
+                  {lang === "uz" ? "Rasmiy Kafolat:" : lang === "ru" ? "Гарантия:" : "Clinical warranty:"}
+                </span>
                 <span className="text-xs sm:text-sm font-bold text-emerald-700">{service.warranty[lang]}</span>
               </div>
               <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
-                <span className="text-xs text-slate-600 font-semibold">{lang === "uz" ? "Shifokor:" : "Врач:"}</span>
+                <span className="text-xs text-slate-600 font-semibold">
+                  {lang === "uz" ? "Shifokor:" : lang === "ru" ? "Врач:" : "Dentist:"}
+                </span>
                 <span className="text-xs sm:text-sm font-bold text-primary">{DOCTOR_INFO.name}</span>
               </div>
             </div>
@@ -277,7 +295,11 @@ const ServiceDetail = () => {
             onClick={() => openBooking(service.id)}
             className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white text-xs font-bold uppercase tracking-wider shadow-luxury cursor-pointer"
           >
-            {lang === "uz" ? "Ushbu Xizmatga Navbat Olish" : "Записаться на эту процедуру"}
+            {lang === "uz"
+              ? "Ushbu Xizmatga Navbat Olish"
+              : lang === "ru"
+              ? "Записаться на эту процедуру"
+              : "Book This Dental Service"}
           </button>
         </div>
       </div>

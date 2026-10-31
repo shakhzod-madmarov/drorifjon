@@ -142,22 +142,17 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
     "provider": {
       "@type": ["Dentist", "MedicalBusiness"],
       "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": `${DOCTOR_INFO.name} — Smiles Dental Group`,
+      "name": `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
       "telephone": DOCTOR_INFO.phoneRaw,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1-kichik daha (1-mikrorayon), 8A-bino",
+        "streetAddress": "Andijon shahri",
         "addressLocality": "Andijon",
         "addressRegion": "Andijon viloyati",
         "postalCode": "170100",
         "addressCountry": "UZ",
       },
-      "hasMap": [
-        "https://www.google.com/maps?cid=18369680373809674194",
-        "https://share.google/cG5vFoJOH4GX6Y3qv",
-        "https://yandex.uz/maps/org/smiles_dental_group/10769129756/",
-        "https://yandex.uz/maps/-/CXu-iKzx",
-      ],
+      "url": `${SITE_ORIGIN}/`,
     },
     "performer": {
       "@type": "Physician",
@@ -544,14 +539,9 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
             "Zamonaviy olinadigan va olinmaydigan protezlar",
           ],
     "sameAs": [
-      "https://g.page/r/Can7lHvF_ZNWECE/review",
-      "https://www.google.com/maps?cid=18369680373809674194",
-      "https://share.google/cG5vFoJOH4GX6Y3qv",
-      "https://yandex.uz/maps/org/smiles_dental_group/10769129756/reviews/",
-      "https://yandex.uz/maps/org/smiles_dental_group/10769129756/",
-      "https://yandex.uz/maps/-/CXu-iKzx",
       DOCTOR_INFO.telegramUrl,
       DOCTOR_INFO.instagramUrl,
+      SITE_ORIGIN,
     ],
   };
 

@@ -54,7 +54,11 @@ const Contact = () => {
           {lang === "uz" ? "BEVOSITA ALOQA" : lang === "ru" ? "ПРЯМАЯ СВЯЗЬ" : "DIRECT CONTACT"}
         </p>
         <h1 className="font-serif-classic text-3xl sm:text-5xl font-bold text-slate-900">
-          {lang === "uz" ? "Aloqa va Qabulga Yozilish" : "Контакты и Запись на Приём"}
+          {lang === "uz"
+            ? "Aloqa va Qabulga Yozilish"
+            : lang === "ru"
+            ? "Контакты и Запись на Приём"
+            : "Contact & Appointment Booking"}
         </h1>
         <p className="text-sm text-slate-600">
           {lang === "uz"
@@ -84,7 +88,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-900">
-                {lang === "uz" ? "Shifokor Telefoni" : "Телефон Врача"}
+                {lang === "uz" ? "Shifokor Telefoni" : lang === "ru" ? "Телефон Врача" : "Doctor's Phone"}
               </h3>
               <p className="text-xs text-slate-500 mt-1">
                 {hours.full}
@@ -110,7 +114,11 @@ const Contact = () => {
                 Telegram Chat
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                {lang === "uz" ? "Savollar va konsultatsiya uchun:" : "Для вопросов и консультаций:"}
+                {lang === "uz"
+                  ? "Savollar va konsultatsiya uchun:"
+                  : lang === "ru"
+                  ? "Для вопросов и консультаций:"
+                  : "For inquiries and consultations:"}
               </p>
             </div>
           </div>
@@ -135,7 +143,11 @@ const Contact = () => {
                 Instagram Profil
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                {lang === "uz" ? "Klinik ishlar va natijalar videosi:" : "Фото и видео до/после лечения:"}
+                {lang === "uz"
+                  ? "Klinik ishlar va natijalar videosi:"
+                  : lang === "ru"
+                  ? "Фото и видео до/после лечения:"
+                  : "Clinical cases and videos:"}
               </p>
             </div>
           </div>

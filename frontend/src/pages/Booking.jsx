@@ -55,12 +55,16 @@ const Booking = () => {
               {DOCTOR_INFO.name}
             </span>
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
-              {years} {lang === "uz" ? "Yillik Tajriba" : "Лет Опыта"}
+              {years} {lang === "uz" ? "Yillik Tajriba" : lang === "ru" ? "Лет Опыта" : "Years Experience"}
             </span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
-            {lang === "uz" ? "Dr. Mansurov O.A. Qabuliga Onlayn Yozilish" : "Онлайн Запись на Приём к Д-ру Мансурову О.А."}
+            {lang === "uz"
+              ? "Dr. Mansurov O.A. Qabuliga Onlayn Yozilish"
+              : lang === "ru"
+              ? "Онлайн Запись на Приём к Д-ру Мансурову О.А."
+              : "Online Appointment Booking with Dr. Mansurov O.A."}
           </h1>
 
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -84,7 +88,13 @@ const Booking = () => {
             </span>
             <span className="flex items-center gap-1.5">
               <IconShieldCheck className="w-4 h-4 text-emerald-500" />
-              <span>100% Sterillik & Kafolat</span>
+              <span>
+                {lang === "uz"
+                  ? "100% Sterillik & Kafolat"
+                  : lang === "ru"
+                  ? "100% Стерильность и Гарантия"
+                  : "100% Sterility & Warranty"}
+              </span>
             </span>
           </div>
         </div>

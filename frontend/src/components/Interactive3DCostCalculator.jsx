@@ -343,19 +343,23 @@ const Interactive3DCostCalculator = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <button
+                      type="button"
+                      aria-label={lang === "uz" ? "Kamaytirish" : lang === "ru" ? "Уменьшить" : "Decrease"}
                       onClick={() => setUnits((u) => Math.max(1, u - 1))}
                       disabled={units <= 1}
-                      className="w-8 h-8 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer"
+                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
                     >
                       –
                     </button>
-                    <span className="font-serif-classic text-xl font-bold text-primary min-w-[2.5rem] text-center">
+                    <span className="font-serif-classic text-xl font-bold text-primary min-w-[2.5rem] text-center select-none">
                       {units}
                     </span>
                     <button
+                      type="button"
+                      aria-label={lang === "uz" ? "Oshirish" : lang === "ru" ? "Увеличить" : "Increase"}
                       onClick={() => setUnits((u) => Math.min(activeTreatment.maxUnits, u + 1))}
                       disabled={units >= activeTreatment.maxUnits}
-                      className="w-8 h-8 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer"
+                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
                     >
                       +
                     </button>

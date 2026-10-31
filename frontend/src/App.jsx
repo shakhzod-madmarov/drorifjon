@@ -45,7 +45,7 @@ const AppShell = () => {
   }[lang] || "Asosiy mazmunga o'tish";
 
   return (
-    <div className="flex flex-col min-h-screen w-full bg-[#FFFDF9] text-[#1A202C]">
+    <div className="flex flex-col min-h-screen w-full overflow-x-clip min-w-0 bg-[#FFFDF9] text-[#1A202C]">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-primary focus:text-white focus:rounded-xl focus:shadow-2xl text-sm font-bold"
@@ -64,7 +64,7 @@ const AppShell = () => {
 
       <Nav onOpenBooking={() => openBooking()} />
 
-      <main id="main-content" className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
+      <main id="main-content" className="flex-grow w-full max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 min-w-0">
         <Routes>
           {LANGS.flatMap((code) => {
             const at = (path) =>

@@ -79,7 +79,9 @@ const ClinicLocationMap = ({ compact = false }) => {
               <div className="flex items-center gap-3">
                 <IconPhone className="w-4 h-4 text-primary shrink-0" />
                 <div>
-                  <span className="text-[11px] text-slate-400 block">{lang === "uz" ? "Shifokor telefoni:" : "Телефон врача:"}</span>
+                  <span className="text-[11px] text-slate-400 block">
+                    {lang === "uz" ? "Shifokor telefoni:" : lang === "ru" ? "Телефон врача:" : "Doctor's phone:"}
+                  </span>
                   <a
                     href={DOCTOR_INFO.phoneHref}
                     className="font-bold text-base text-white hover:text-brandOrange transition-colors"
@@ -172,7 +174,7 @@ const ClinicLocationMap = ({ compact = false }) => {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all"
             >
-              <span>Yandex Xarita ↗</span>
+              <span>{lang === "uz" ? "Yandex Xarita" : lang === "ru" ? "Яндекс Карты" : "Yandex Maps"} ↗</span>
             </a>
 
             <a

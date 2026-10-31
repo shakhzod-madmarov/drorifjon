@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import {
@@ -40,12 +40,20 @@ const Seo = ({
   const resolvedKeywords = keywords || PAGE_KEYWORDS[lang];
   const resolvedCanonical = canonical || (effectivePath ? urlFor(effectivePath, lang) : undefined);
 
-  const alternates = effectivePath
-    ? LANGS.map((code) => ({ hreflang: code, href: urlFor(effectivePath, code) }))
-        .concat([{ hreflang: "x-default", href: urlFor(effectivePath, DEFAULT_LANG) }])
-    : null;
+  const alternatesJson = useMemo(
+    () =>
+      effectivePath
+        ? LANGS.map((code) => ({ hreflang: code, href: urlFor(effectivePath, code) })).concat([
+            { hreflang: "x-default", href: urlFor(effectivePath, DEFAULT_LANG) },
+          ])
+        : null,
+    [effectivePath]
+  );
 
-  const schemaKey = schemaJson ? JSON.stringify(schemaJson) : null;
+  const schemaSerialized = useMemo(
+    () => (schemaJson ? JSON.stringify(schemaJson) : null),
+    [schemaJson]
+  );
   const isPrerender = useContext(PrerenderContext);
 
   useEffect(() => {
@@ -76,10 +84,10 @@ const Seo = ({
       if (ogUrl) ogUrl.setAttribute("content", resolvedCanonical);
     }
 
-    if (alternates && alternates.length > 0) {
+    if (alternatesJson && alternatesJson.length > 0) {
       document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
       const canonicalLink = document.querySelector('link[rel="canonical"]');
-      alternates.forEach((a) => {
+      alternatesJson.forEach((a) => {
         const link = document.createElement("link");
         link.rel = "alternate";
         link.hreflang = a.hreflang;
@@ -109,14 +117,14 @@ const Seo = ({
     }
 
     let scriptTag = document.getElementById("seo-schema-json");
-    if (schemaJson) {
+    if (schemaSerialized) {
       if (!scriptTag) {
         scriptTag = document.createElement("script");
         scriptTag.id = "seo-schema-json";
         scriptTag.type = "application/ld+json";
         document.head.appendChild(scriptTag);
       }
-      scriptTag.textContent = JSON.stringify(schemaJson);
+      scriptTag.textContent = schemaSerialized;
     } else if (scriptTag) {
       scriptTag.remove();
     }
@@ -127,7 +135,8 @@ const Seo = ({
     resolvedKeywords,
     resolvedCanonical,
     ogImage,
-    schemaKey,
+    alternatesJson,
+    schemaSerialized,
     noindex,
   ]);
 
@@ -138,7 +147,7 @@ const Seo = ({
       keywords: resolvedKeywords,
       canonical: resolvedCanonical,
       ogImage,
-      alternates,
+      alternates: alternatesJson,
       noindex,
       schemaJson,
     };

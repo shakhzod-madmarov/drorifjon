@@ -40,7 +40,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#141E28] text-slate-300 pt-16 pb-12 border-t border-amber-900/30 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Column 1: Brand & Doctor Credentials (5 cols) */}
@@ -177,7 +177,12 @@ const Footer = () => {
         {/* Bottom Copyright & Disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} {DOCTOR_INFO.name}. Barcha huquqlar himoyalangan.
+            © {new Date().getFullYear()} {DOCTOR_INFO.name}.{" "}
+            {lang === "uz"
+              ? "Barcha huquqlar himoyalangan."
+              : lang === "ru"
+              ? "Все права защищены."
+              : "All rights reserved."}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a

@@ -86,7 +86,7 @@ const TEXT = {
     pausedNotice: "Onlayn qabul vaqtlari yangilanmoqda. To'g'ridan-to'g'ri telefon orqali ham yozilishingiz mumkin:",
     successBadge: "Qabul so'rovi qabul qilindi",
     successTitle: "Qabulingiz muvaffaqiyatli ro'yxatga olindi!",
-    successBody: "So‘rovingiz qabul qilindi. Klinika tez orada siz bilan bog‘lanadi.",
+    successBody: "So'rovingiz qabul qilindi. Klinika tez orada siz bilan bog'lanadi.",
     summaryPatient: "Bemor",
     summaryPhone: "Telefon",
     summaryDob: "Tug'ilgan sana",
@@ -724,7 +724,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={t.namePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
 
@@ -741,7 +741,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={phone}
                 onChange={handlePhoneChange}
                 placeholder={t.phonePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
 
@@ -760,7 +760,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 min="1920-01-01"
                 max={todayStr}
                 placeholder={t.dobPlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
               <p className="text-[11px] text-slate-500 leading-tight">
                 {t.dobHint}
@@ -778,7 +778,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder={t.notePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
           </div>

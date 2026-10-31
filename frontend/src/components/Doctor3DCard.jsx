@@ -80,11 +80,11 @@ const Doctor3DCard = ({
             : "transform 0.65s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.65s ease",
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-sm sm:max-w-md rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#FFFDF8] via-[#FFF8EC] to-[#FFF9D8]/70 border-2 border-amber-200/90 shadow-luxury-lg hover:shadow-2xl hover:border-amber-300 cursor-pointer select-none group"
+        className="relative w-full max-w-[21rem] xs:max-w-sm sm:max-w-md rounded-3xl xs:rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#FFFDF8] via-[#FFF8EC] to-[#FFF9D8]/70 border-2 border-amber-200/90 shadow-luxury-lg hover:shadow-2xl hover:border-amber-300 cursor-pointer select-none group"
       >
         {/* Dynamic Specular Reflection / Glare Holographic Layer */}
         <div
-          className="absolute inset-0 z-30 pointer-events-none rounded-[2.5rem] transition-opacity duration-300"
+          className="absolute inset-0 z-30 pointer-events-none rounded-3xl xs:rounded-[2.5rem] transition-opacity duration-300"
           style={{
             opacity: glare.opacity,
             background: `radial-gradient(circle 380px at ${glare.x}% ${glare.y}%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 80%)`,
@@ -115,7 +115,7 @@ const Doctor3DCard = ({
 
         {/* 3D Depth Layer 2: Elevated Minimalist Frosted Glass Footer */}
         <div
-          className="px-5 py-3.5 bg-white/95 backdrop-blur-md border-t border-amber-200/70 flex items-center justify-between gap-3 relative z-20 shadow-xs"
+          className="px-4 xs:px-5 py-3.5 bg-white/95 backdrop-blur-md border-t border-amber-200/70 flex items-center justify-between gap-2.5 relative z-20 shadow-xs"
           style={{
             transform: isHovered ? "translateZ(38px)" : "translateZ(0px)",
             transition: "transform 0.45s ease-out",
