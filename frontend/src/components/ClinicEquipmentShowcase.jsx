@@ -11,7 +11,7 @@ import {
 /**
  * ClinicEquipmentShowcase:
  * Simple classic medical UI/UX matching the rest of the website.
- * Features Dr. Mansurov Orifjon Alimbekovich's authentic operatory,
+ * Features Stomatolog Orifjon's authentic operatory,
  * Shining 3D Intraoral Scanner, and Philips Zoom! WhiteSpeed system.
  */
 export default function ClinicEquipmentShowcase() {
@@ -23,7 +23,7 @@ export default function ClinicEquipmentShowcase() {
       badge: "ZAMONAVIY TEXNOLOGIYALAR VA KLINIKA",
       title: "Raqamli Stomatologiya va Premium Jihozlar",
       subtitle:
-        "Dr. Mansurov O.A. qabulxonasida qo'llaniladigan yuqori texnologiyali apparatlar — pastasiz 3D skanerlash, dunyo tan olgan Philips Zoom! oqartirishi va mutlaq steril muhit.",
+        "Stomatolog Orifjon qabulxonasida qo'llaniladigan yuqori texnologiyali apparatlar — pastasiz 3D skanerlash, dunyo tan olgan Philips Zoom! oqartirishi va mutlaq steril muhit.",
       viewPhoto: "Suratni ko'rish",
       items: [
         {
@@ -64,7 +64,7 @@ export default function ClinicEquipmentShowcase() {
           warrantyBadge: "Anti-SPID/Gepatit",
           pill: "100% Steril Muhit",
           icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Dr. Mansurov O.A. Shaxsiy Qabulxonasi",
+          title: "Stomatolog Orifjon Shaxsiy Qabulxonasi",
           desc: "Ergonomik qulay bemor kreslosi, toza va salqin Sitronic mikroiqlimi, zamonaviy shifokor stansiyasi hamda ko'z o'ngingizda ochiladigan steril kraft-paketlar.",
           image: assets.clinic_room,
           specs: [
@@ -80,7 +80,7 @@ export default function ClinicEquipmentShowcase() {
       badge: "СОВРЕМЕННЫЕ ТЕХНОЛОГИИ И КЛИНИКА",
       title: "Цифровая Стоматология и Премиальное Оснащение",
       subtitle:
-        "Высокотехнологичное оборудование в кабинете Д-ра Мансурова О.А. — 3D-сканирование без слепков, легендарное отбеливание Philips Zoom! и абсолютная стерильность.",
+        "Высокотехнологичное оборудование в кабинете Стоматолога Орифжона — 3D-сканирование без слепков, легендарное отбеливание Philips Zoom! и абсолютная стерильность.",
       viewPhoto: "Смотреть фото",
       items: [
         {
@@ -121,7 +121,7 @@ export default function ClinicEquipmentShowcase() {
           warrantyBadge: "Анти-СПИД / Гепатит",
           pill: "100% Стерильность",
           icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Персональный Кабинет Д-ра Мансурова О.А.",
+          title: "Персональный Кабинет Стоматолога Орифжона",
           desc: "Современное эргономичное кресло с анатомической поддержкой, климат-контроль Sitronic, цифровое рабочее место и вскрытие индивидуальных крафт-пакетов при вас.",
           image: assets.clinic_room,
           specs: [
@@ -137,7 +137,7 @@ export default function ClinicEquipmentShowcase() {
       badge: "ADVANCED TECHNOLOGY & CLINIC TOUR",
       title: "Digital Dentistry & State-of-the-Art Equipment",
       subtitle:
-        "Cutting-edge clinical hardware in Dr. Mansurov's operatory — impression-free optical 3D scanning, world-renowned Philips Zoom! whitening, and hospital-grade sterility.",
+        "Cutting-edge clinical hardware in Dentist Orifjon's operatory — impression-free optical 3D scanning, world-renowned Philips Zoom! whitening, and hospital-grade sterility.",
       viewPhoto: "Inspect photo",
       items: [
         {
@@ -178,7 +178,7 @@ export default function ClinicEquipmentShowcase() {
           warrantyBadge: "Hospital-Grade",
           pill: "100% Sterile",
           icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Dr. Mansurov's Clinical Operatory",
+          title: "Dentist Orifjon's Clinical Operatory",
           desc: "Ergonomic dental chair with anatomical support, Sitronic microclimate air purification, computerized diagnostics, and sterile kraft pouches unsealed right in front of you.",
           image: assets.clinic_room,
           specs: [

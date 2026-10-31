@@ -98,10 +98,10 @@ const Services = ({ onOpenBooking }) => {
 
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl mx-auto">
           {lang === "uz"
-            ? "Dr. Mansurov Orifjon Alimbekovich tomonidan 20+ yillik tajriba va Germaniya hamda Koreyaning original sertifikatlangan materiallari asosida 100% og'riqsiz muolajalar."
+            ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) tomonidan 20+ yillik tajriba va Germaniya hamda Koreyaning original sertifikatlangan materiallari asosida 100% og'riqsiz muolajalar."
             : lang === "ru"
-            ? "Все виды современного безболезненного лечения, протезирования, ортодонтии и имплантации у Д-ра Мансурова О.А. с официальной гарантией."
-            : "All dental procedures performed by Dr. Mansurov Orifjon Alimbekovich using genuine German & South Korean certified materials."}
+            ? "Все виды современного безболезненного лечения, протезирования, ортодонтии и имплантации у Стоматолога Орифжона с официальной гарантией."
+            : "All dental procedures performed by Dentist Orifjon (Mansurov Orifjon Alimbekovich) using genuine German & South Korean certified materials."}
         </p>
 
         {/* Certified Materials Quick Pills */}

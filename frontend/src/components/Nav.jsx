@@ -68,10 +68,10 @@ const Nav = ({ topOffset = 0 }) => {
             to={to("/")}
             aria-label={
               lang === "ru"
-                ? "Д-р Мансуров О.А. — На главную"
+                ? "Стоматолог Орифжон — На главную"
                 : lang === "en"
-                ? "Dr. Mansurov O.A. — Go to homepage"
-                : "Dr. Mansurov O.A. — Bosh sahifaga o'tish"
+                ? "Dentist Orifjon — Go to homepage"
+                : "Stomatolog Orifjon — Bosh sahifaga o'tish"
             }
             className="flex items-center gap-2 shrink-0 group"
           >

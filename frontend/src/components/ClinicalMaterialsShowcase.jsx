@@ -12,7 +12,7 @@ import {
  * ClinicalMaterialsShowcase:
  * Deep interactive showcase of certified filling materials,
  * pain-free anesthesia protocols, and premium dental implants
- * used by Dr. Mansurov Orifjon Alimbekovich.
+ * used by Stomatolog Orifjon (Mansurov Orifjon Alimbekovich).
  */
 export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
   const { lang } = useLanguage();
@@ -23,7 +23,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
       badge: "KLINIK STANDARTLAR VA MATERIALLAR",
       title: "Sertifikatlangan Xalqaro Materiallar: Germaniya va Janubiy Koreya",
       subtitle:
-        "Dr. Mansurov O.A. har bir bemorga faqat dunyoda tan olingan, 100% original va xavfsiz materiallarni qo'llaydi — nurlanuvchi nano-kompozitlar, steril shaxsiy blisterli anesteziya va umrbod kafolatli biotitan implantlar.",
+        "Stomatolog Orifjon har bir bemorga faqat dunyoda tan olingan, 100% original va xavfsiz materiallarni qo'llaydi — nurlanuvchi nano-kompozitlar, steril shaxsiy blisterli anesteziya va umrbod kafolatli biotitan implantlar.",
       allTab: "Barcha Materiallar",
       tabs: {
         all: "Barchasi",
@@ -44,7 +44,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
       badge: "КЛИНИЧЕСКИЕ СТАНДАРТЫ И МАТЕРИАЛЫ",
       title: "Сертифицированные Материалы: Германия и Южная Корея",
       subtitle:
-        "В практике Д-ра Мансурова О.А. используются только оригинальные мировые бренды — светоотверждаемые нанокомпозиты, индивидуальная стерильная анестезия и биотитановые импланты с пожизненной гарантией.",
+        "В практике Стоматолога Орифжона используются только оригинальные мировые бренды — светоотверждаемые нанокомпозиты, индивидуальная стерильная анестезия и биотитановые импланты с пожизненной гарантией.",
       allTab: "Все Материалы",
       tabs: {
         all: "Все",
@@ -65,7 +65,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
       badge: "CLINICAL STANDARDS & MATERIALS",
       title: "Certified International Materials: Germany & South Korea",
       subtitle:
-        "Dr. Mansurov O.A. exclusively utilizes certified, premium international dental materials — aesthetic light-cured nanocomposites, sterile blistered micro-anesthetics, and biocompatible titanium implants.",
+        "Dentist Orifjon exclusively utilizes certified, premium international dental materials — aesthetic light-cured nanocomposites, sterile blistered micro-anesthetics, and biocompatible titanium implants.",
       allTab: "All Materials",
       tabs: {
         all: "All",

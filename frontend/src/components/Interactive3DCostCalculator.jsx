@@ -449,7 +449,7 @@ const Interactive3DCostCalculator = () => {
                   <div className="absolute bottom-2.5 left-3 right-3 text-left z-10 flex items-center justify-between">
                     <div>
                       <p className="text-[10px] font-bold text-amber-200 uppercase tracking-wider">
-                        {lang === "uz" ? "Dr. Mansurov O.A." : lang === "ru" ? "Д-р Мансуров О.А." : "Dr. Mansurov O.A."}
+                        {lang === "uz" ? "Stomatolog Orifjon" : lang === "ru" ? "Стоматолог Орифжон" : "Dentist Orifjon"}
                       </p>
                       <p className="text-xs font-bold text-white truncate">
                         {units} {activeTreatment.unitLabel[lang]} · {formattedDuration}

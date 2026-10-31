@@ -113,7 +113,7 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
-  <!-- Dr. Mansurov O.A. — Mansurov Orifjon Alimbekovich (https://drorifjon.uz) -->
+  <!-- Stomatolog Orifjon — Mansurov Orifjon Alimbekovich (https://drorifjon.uz) -->
 ${urlBlocks.join("\n\n")}
 </urlset>
 `;

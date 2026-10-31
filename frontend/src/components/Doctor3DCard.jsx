@@ -126,7 +126,7 @@ const Doctor3DCard = ({
             <source srcSet={imageWebp} type="image/webp" />
             <img
               src={imageJpg}
-              alt="Dr. Mansurov O.A. — Mansurov Orifjon Alimbekovich"
+              alt="Stomatolog Orifjon — Mansurov Orifjon Alimbekovich"
               width={600}
               height={675}
               fetchPriority="high"

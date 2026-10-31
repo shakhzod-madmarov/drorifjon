@@ -58,9 +58,9 @@ const formatDmy = (ymd) => {
 
 const TEXT = {
   uz: {
-    kicker: "Onlayn qabul · Dr. Mansurov O.A.",
+    kicker: "Onlayn qabul · Stomatolog Orifjon",
     heading: "Uchrashuv vaqtini tanlang",
-    sub: "Bo'sh kun va soatni tanlab, Dr. Mansurov O.A. qabuliga navbatsiz yoziling.",
+    sub: "Bo'sh kun va soatni tanlab, Stomatolog Orifjon qabuliga navbatsiz yoziling.",
     defaultDaysLabel: "Dushanba - Shanba (08:30 – 18:30)",
     serviceLabel: "Xizmat yo'nalishi",
     dayGroupLabel: "1-qadam: Qabul kunini tanlang",
@@ -107,9 +107,9 @@ const TEXT = {
     nextAvailableDayBtn: "Keyingi bo'sh kunga o'tish →",
   },
   ru: {
-    kicker: "Онлайн приём · Д-р Мансуров О.А.",
+    kicker: "Онлайн приём · Стоматолог Орифжон",
     heading: "Выберите удобное время визита",
-    sub: "Выберите свободный день и время для записи на приём к Д-ру Мансурову О.А. без очереди.",
+    sub: "Выберите свободный день и время для записи на приём к Стоматологу Орифжону без очереди.",
     defaultDaysLabel: "Понедельник - Суббота (08:30 – 18:30)",
     serviceLabel: "Направление лечения",
     dayGroupLabel: "Шаг 1: Выберите день приёма",
@@ -156,9 +156,9 @@ const TEXT = {
     nextAvailableDayBtn: "Перейти к ближайшей свободной дате →",
   },
   en: {
-    kicker: "Online Appointment · Dr. Mansurov O.A.",
+    kicker: "Online Appointment · Dentist Orifjon",
     heading: "Select your visit time",
-    sub: "Choose an available date and time slot to reserve your appointment with Dr. Mansurov O.A.",
+    sub: "Choose an available date and time slot to reserve your appointment with Dentist Orifjon.",
     defaultDaysLabel: "Monday - Saturday (08:30 – 18:30)",
     serviceLabel: "Service Specialty",
     dayGroupLabel: "Step 1: Choose appointment date",

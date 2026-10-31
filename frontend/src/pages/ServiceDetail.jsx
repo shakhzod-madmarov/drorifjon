@@ -41,7 +41,7 @@ const ServiceDetail = () => {
       {
         num: "01",
         title: "Ko'rik va Raqamli Diagnostika",
-        desc: "Dr. Mansurov Orifjon Alimbekovich tish holatini diqqat bilan tekshiradi va aniq individual davolash rejasini tuzadi.",
+        desc: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) tish holatini diqqat bilan tekshiradi va aniq individual davolash rejasini tuzadi.",
       },
       {
         num: "02",
@@ -63,7 +63,7 @@ const ServiceDetail = () => {
       {
         num: "01",
         title: "Осмотр и Цифровая Диагностика",
-        desc: "Д-р Мансуров Орифжон Алимбекович проводит детальный осмотр и составляет прозрачный индивидуальный план лечения.",
+        desc: "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) проводит детальный осмотр и составляет прозрачный индивидуальный план лечения.",
       },
       {
         num: "02",
@@ -85,7 +85,7 @@ const ServiceDetail = () => {
       {
         num: "01",
         title: "Consultation & Digital Diagnostics",
-        desc: "Dr. Mansurov Orifjon Alimbekovich performs a comprehensive clinical exam and formulates a transparent procedure plan.",
+        desc: "Dentist Orifjon (Mansurov Orifjon Alimbekovich) performs a comprehensive clinical exam and formulates a transparent procedure plan.",
       },
       {
         num: "02",
@@ -106,9 +106,9 @@ const ServiceDetail = () => {
   }[lang];
 
   const seoSuffix = {
-    uz: "Dr. Mansurov O.A. | Vrach Stomatolog",
-    ru: "Д-р Мансуров О.А. | Врач-Стоматолог",
-    en: "Dr. Mansurov O.A. | Dental Surgeon",
+    uz: "Stomatolog Orifjon | Vrach Stomatolog",
+    ru: "Стоматолог Орифжон | Врач-Стоматолог",
+    en: "Dentist Orifjon | Dental Surgeon",
   }[lang];
 
   const breadcrumbs = [
@@ -132,7 +132,7 @@ const ServiceDetail = () => {
     <div className="relative py-6 sm:py-10 space-y-12">
       <Seo
         title={`${service.title[lang]} — ${seoSuffix}`}
-        description={`${service.shortDesc[lang]} Dr. Mansurov Orifjon Alimbekovich, 20+ yillik tajriba. Tel: ${DOCTOR_INFO.phoneDisplay}.`}
+        description={`${service.shortDesc[lang]} Stomatolog Orifjon, 20+ yillik tajriba. Tel: ${DOCTOR_INFO.phoneDisplay}.`}
         keywords={serviceKeywords}
         schemaJson={procedureSchema}
       />
@@ -471,10 +471,10 @@ const ServiceDetail = () => {
           }
           subtitle={
             lang === "uz"
-              ? "Dr. Mansurov Orifjon Alimbekovichning klinik tajribasidan kelib chiqqan javoblar va amaliy tavsiyalar."
+              ? "Stomatolog Orifjonning klinik tajribasidan kelib chiqqan javoblar va amaliy tavsiyalar."
               : lang === "ru"
-              ? "Практические ответы и клинические рекомендации врача-стоматолога Д-ра Мансурова О.А."
-              : "Clinical answers and expert guidance directly from Dr. Mansurov Orifjon Alimbekovich."
+              ? "Практические ответы и клинические рекомендации Стоматолога Орифжона."
+              : "Clinical answers and expert guidance directly from Dentist Orifjon."
           }
         />
       )}
@@ -491,10 +491,10 @@ const ServiceDetail = () => {
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
             {lang === "uz"
-              ? `Dr. Mansurov O.A. qabuliga yoziling yoki to'g'ridan-to'g'ri qo'ng'iroq qiling: ${DOCTOR_INFO.phoneDisplay}`
+              ? `Stomatolog Orifjon qabuliga yoziling yoki to'g'ridan-to'g'ri qo'ng'iroq qiling: ${DOCTOR_INFO.phoneDisplay}`
               : lang === "ru"
-              ? `Запишитесь на приём к Д-ру Мансурову О.А. или звоните напрямую: ${DOCTOR_INFO.phoneDisplay}`
-              : `Book an appointment with Dr. Mansurov O.A. or call directly: ${DOCTOR_INFO.phoneDisplay}`}
+              ? `Запишитесь на приём к Стоматологу Орифжону или звоните напрямую: ${DOCTOR_INFO.phoneDisplay}`
+              : `Book an appointment with Dentist Orifjon or call directly: ${DOCTOR_INFO.phoneDisplay}`}
           </p>
         </div>
         <div className="flex items-center gap-3 shrink-0">

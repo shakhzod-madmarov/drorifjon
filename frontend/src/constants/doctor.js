@@ -1,9 +1,26 @@
 /**
- * Single source of truth for Dr. Mansurov Orifjon Alimbekovich's credentials, career, and contact info.
+ * Single source of truth for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)'s credentials, career, and contact info.
  */
 export const DOCTOR_INFO = {
-  name: "Dr. Mansurov O.A.",
+  name: "Stomatolog Orifjon",
+  brandName: "Stomatolog Orifjon",
+  shortName: "Orifjon",
+  names: {
+    uz: "Stomatolog Orifjon",
+    ru: "Стоматолог Орифжон",
+    en: "Dentist Orifjon",
+  },
+  drNames: {
+    uz: "Dr. Orifjon",
+    ru: "Д-р Орифжон",
+    en: "Dr. Orifjon",
+  },
   fullName: "Mansurov Orifjon Alimbekovich",
+  fullNames: {
+    uz: "Mansurov Orifjon Alimbekovich",
+    ru: "Мансуров Орифжон Алимбекович",
+    en: "Mansurov Orifjon Alimbekovich",
+  },
   title: "Vrach Stomatolog",
   specialtiesText: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",
   specialties: {
@@ -304,3 +321,11 @@ export const getServicesTag = (lang = "uz") => {
   if (lang === "en") return `${years}+ YEARS CLINICAL EXCELLENCE · ALL SPECIALTIES`;
   return `${years}+ YILLIK TAJRIBA · BARCHA ZAMONAVIY STOMATOLOGIK XIZMATLAR`;
 };
+
+export const getDoctorBrandName = (lang = "uz") => {
+  if (lang === "ru") return "Стоматолог Орифжон";
+  if (lang === "en") return "Dentist Orifjon";
+  return "Stomatolog Orifjon";
+};
+
+export const getDoctorShortName = () => "Orifjon";

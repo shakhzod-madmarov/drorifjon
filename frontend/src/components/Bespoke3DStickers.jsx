@@ -8,7 +8,7 @@ import {
 
 /**
  * Bespoke 3D Stickers & Clinical Badges System
- * Custom-crafted for Dr. Mansurov Orifjon Alimbekovich
+ * Custom-crafted for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)
  * Colors: #FF9D50 (Coral), #FFF9D8 (Cream), #1DCED8 (Cyan), #55E07E (Emerald Green)
  */
 

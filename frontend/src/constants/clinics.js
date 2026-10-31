@@ -1,20 +1,20 @@
 export const CLINICS = [
   {
-    id: "dr-mansurov-clinic",
+    id: "stomatolog-orifjon-clinic",
     name: {
-      uz: "Dr. Mansurov O.A. Stomatologiya Markazi",
-      ru: "Стоматологический Центр Д-ра Мансурова О.А.",
-      en: "Dr. Mansurov Dental Practice",
+      uz: "Stomatolog Orifjon — Zamonaviy Stomatologiya Markazi",
+      ru: "Стоматологический Центр Стоматолога Орифжона",
+      en: "Dentist Orifjon Dental Practice",
     },
     dentistOffice: {
-      uz: "Mansurov Orifjon Alimbekovich stomatologiya qabuli",
-      ru: "Приём врача-стоматолога Мансурова Орифжона Алимбековича",
-      en: "Dr. Mansurov Orifjon Alimbekovich Practice",
+      uz: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli",
+      ru: "Приём Стоматолога Орифжона (Мансурова Орифжона Алимбековича)",
+      en: "Dentist Orifjon (Mansurov Orifjon Alimbekovich) Practice",
     },
     badge: {
-      uz: "Dr. Mansurov O.A. · Andijon",
-      ru: "Д-р Мансуров О.А. · Андижан",
-      en: "Dr. Mansurov O.A. · Andijan",
+      uz: "Stomatolog Orifjon · Andijon",
+      ru: "Стоматолог Орифжон · Андижан",
+      en: "Dentist Orifjon · Andijan",
     },
     city: {
       uz: "Andijon",

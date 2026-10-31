@@ -11,6 +11,7 @@ export default function ClinicalTickerMarquee() {
 
   const items = {
     uz: [
+      { text: "Stomatolog Orifjon", sub: "Mansurov Orifjon Alimbekovich", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
       { text: "Charisma (Germaniya)", sub: "Mikro-shisha Nano-kompozit", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
       { text: "DenFil (Janubiy Koreya)", sub: "300+ MPa Mustahkam Plomba", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
       { text: "Orablok & Supercain", sub: "100% Og'riqsiz Anesteziya", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },
@@ -21,6 +22,7 @@ export default function ClinicalTickerMarquee() {
       { text: "100% Steril Muhit", sub: "Anti-SPID & Anti-Gepatit", flag: "🛡️", color: "text-teal-900 bg-teal-50 border-teal-200" },
     ],
     ru: [
+      { text: "Стоматолог Орифжон", sub: "Мансуров Орифжон Алимбекович", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
       { text: "Charisma (Германия)", sub: "Микростекольный композит Kulzer", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
       { text: "DenFil (Южная Корея)", sub: "Сверхпрочный наногибрид 300+ МПа", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
       { text: "Ораблок & Суперкаин", sub: "100% Безболезненная анестезия", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },
@@ -31,6 +33,7 @@ export default function ClinicalTickerMarquee() {
       { text: "100% Стерильность", sub: "Протокол Анти-СПИД / Гепатит", flag: "🛡️", color: "text-teal-900 bg-teal-50 border-teal-200" },
     ],
     en: [
+      { text: "Dentist Orifjon", sub: "Mansurov Orifjon Alimbekovich", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
       { text: "Charisma (Germany)", sub: "Microglass Submicron Composite", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
       { text: "DenFil (South Korea)", sub: "300+ MPa High-Strength Resin", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
       { text: "Orabloc & Supercain", sub: "100% Painless Micro-Anesthesia", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },

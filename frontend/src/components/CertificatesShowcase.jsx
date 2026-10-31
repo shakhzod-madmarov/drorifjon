@@ -233,10 +233,10 @@ const CertificatesShowcase = () => {
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             {lang === "uz"
-              ? "Dr. Mansurov Orifjon Alimbekovich — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20 yildan ortiq tibbiyot tajribasiga ega mutaxassis."
+              ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20 yildan ortiq tibbiyot tajribasiga ega mutaxassis."
               : lang === "ru"
-              ? "Д-р Мансуров Орифжон Алимбекович — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета, более 20 лет опыта в сфере здравоохранения."
-              : "Dr. Mansurov Orifjon Alimbekovich — Graduate of Andijan Medical College and Osh State University with over 20+ years of healthcare background."}
+              ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета, более 20 лет опыта в сфере здравоохранения."
+              : "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University with over 20+ years of healthcare background."}
           </p>
         </div>
 

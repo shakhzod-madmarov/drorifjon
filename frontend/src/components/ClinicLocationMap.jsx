@@ -27,10 +27,10 @@ const ClinicLocationMap = ({ compact = false }) => {
           </span>
           <h2 className="font-serif-classic text-3xl sm:text-4xl font-bold text-slate-900">
             {lang === "uz"
-              ? "Dr. Mansurov O.A. — Stomatologiya Qabuli"
+              ? "Stomatolog Orifjon — Stomatologiya Qabuli"
               : lang === "ru"
-              ? "Д-р Мансуров О.А. — Приём Стоматолога"
-              : "Dr. Mansurov O.A. — Dental Practice"}
+              ? "Стоматолог Орифжон — Стоматологический Приём"
+              : "Dentist Orifjon — Dental Practice"}
           </h2>
           <p className="text-sm text-slate-600">
             {lang === "uz"
@@ -152,7 +152,7 @@ const ClinicLocationMap = ({ compact = false }) => {
               frameBorder="0"
               allowFullScreen={true}
               loading="lazy"
-              title="Dr. Mansurov O.A. Joylashuvi"
+              title="Stomatolog Orifjon Joylashuvi"
               className="w-full h-full"
             />
           </div>

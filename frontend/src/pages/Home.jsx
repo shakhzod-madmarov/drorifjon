@@ -44,7 +44,7 @@ import {
 import Doctor3DCard from "../components/Doctor3DCard";
 
 /* ═══════════════════════════════════════════════════════════════════
-   1. EDITORIAL HERO — DR. MANSUROV O.A.
+   1. EDITORIAL HERO — STOMATOLOG ORIFJON
    ═══════════════════════════════════════════════════════════════════ */
 const HeroSection = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
@@ -52,12 +52,12 @@ const HeroSection = ({ onOpenBooking }) => {
 
   const T = {
     uz: {
-      badge: "Vrach-Stomatolog · 20+ Yillik Tajriba",
+      badge: "Stomatolog Orifjon · 20+ Yillik Tajriba",
       doctorName: DOCTOR_INFO.name,
       specialtyTitle: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",
       headline: "Tabiiy va Sog'lom Tabassum Uchun 100% Og'riqsiz Zamonaviy Stomatologiya",
       subtitle:
-        "Andijon Tibbiyot kolleji (2001–2004) hamda O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Terapiya (davolash va restavratsiya), ortopediya (tish qo'yish, protezlash), Germaniya va Koreya implantatsiyasi, xirurgiya va ortodontiya yo'nalishlarida 100% og'riqsiz davolash.",
+        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji (2001–2004) hamda O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Terapiya (davolash va restavratsiya), ortopediya (tish qo'yish, protezlash), Germaniya va Koreya implantatsiyasi, xirurgiya va ortodontiya yo'nalishlarida 100% og'riqsiz davolash.",
       ctaBook: "Qabulga Yozilish",
       ctaServices: "Barcha Xizmatlar",
       stat1Num: "20+ Yil",
@@ -70,12 +70,12 @@ const HeroSection = ({ onOpenBooking }) => {
       stat4Label: "Stomatologiya Diplomi",
     },
     ru: {
-      badge: "Врач-Стоматолог · 20+ Лет в Медицине",
+      badge: "Стоматолог Орифжон · 20+ Лет в Медицине",
       doctorName: DOCTOR_INFO.name,
       specialtyTitle: "Терапия · Ортопедия · Имплантация · Хирургия · Ортодонтия",
       headline: "Современная Стоматология Без Боли для Вашей Безупречной Улыбки",
       subtitle:
-        "Выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022). Терапия (лечение и реставрация), ортопедия (протезирование), немецкая и корейская имплантация, хирургия и ортодонтия без боли.",
+        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022). Терапия (лечение и реставрация), ортопедия (протезирование), немецкая и корейская имплантация, хирургия и ортодонтия без боли.",
       ctaBook: "Записаться на Приём",
       ctaServices: "Все Услуги",
       stat1Num: "20+ Лет",
@@ -88,12 +88,12 @@ const HeroSection = ({ onOpenBooking }) => {
       stat4Label: "Диплом Стоматолога",
     },
     en: {
-      badge: "Dental Surgeon · 20+ Years Practice",
+      badge: "Dentist Orifjon · 20+ Years Practice",
       doctorName: DOCTOR_INFO.name,
       specialtyTitle: "Therapy · Orthopedics · Implantation · Surgery · Orthodontics",
       headline: "Gentle & 100% Painless Modern Dental Care for Your Natural Smile",
       subtitle:
-        "Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Comprehensive therapy, orthopedics, German & Korean dental implants, gentle surgery, and braces orthodontics.",
+        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Comprehensive therapy, orthopedics, German & Korean dental implants, gentle surgery, and braces orthodontics.",
       ctaBook: "Book Appointment",
       ctaServices: "Explore Services",
       stat1Num: "20+ Yrs",
@@ -270,10 +270,10 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-serif-classic tracking-tight">
           {lang === "uz"
-            ? "Dr. Mansurov O.A. Stomatologik Xizmatlari"
+            ? "Stomatolog Orifjon Xizmatlari"
             : lang === "ru"
-            ? "Клинические Услуги Д-ра Мансурова О.А."
-            : "Clinical Specialties & Treatment Directions"}
+            ? "Услуги Стоматолога Орифжона"
+            : "Dental Specialties by Dentist Orifjon"}
         </h2>
         <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
           {lang === "uz"

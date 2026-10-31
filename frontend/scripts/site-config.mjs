@@ -25,9 +25,9 @@ export const ROUTES = [
     priority: "1.0",
     image: {
       src: "public/dr_orifjon_og.jpg",
-      title: "Dr. Mansurov O.A. — Mansurov Orifjon Alimbekovich (Vrach Stomatolog)",
+      title: "Stomatolog Orifjon — Mansurov Orifjon Alimbekovich (Vrach Stomatolog)",
       caption:
-        "Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20+ yillik tibbiyot tajribasiga ega vrach stomatolog Dr. Mansurov O.A.",
+        "Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20+ yillik tibbiyot tajribasiga ega vrach stomatolog Stomatolog Orifjon",
     },
   },
   {
@@ -36,7 +36,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/clinic_room.webp",
-      title: "Stomatologik Xizmatlar — Dr. Mansurov O.A.",
+      title: "Stomatologik Xizmatlar — Stomatolog Orifjon",
       caption:
         "Dental implant, breketlar, sirkon karonkalar, vinirlar, pratezlar, elaynerlar, oqartirish va og'riqsiz davolash",
     },
@@ -47,7 +47,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/hero_smile.webp",
-      title: "Dr. Mansurov Orifjon Alimbekovich Haqida — 20+ Yillik Tibbiyot Tajribasi",
+      title: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) Haqida — 20+ Yillik Tibbiyot Tajribasi",
       caption:
         "Andijon Tibbiyot kolleji (2001-2004) va O'sh Davlat Universiteti (2017-2022) bitiruvchisi",
     },
@@ -76,7 +76,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/treatment_therapy.webp",
-      title: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya) — Dr. Mansurov O.A.",
+      title: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya) — Stomatolog Orifjon",
       caption: "Charisma (Germaniya) va DenFil (Koreya) kompozitlari bilan og'riqsiz davolash va restavratsiya",
     },
   },
@@ -86,7 +86,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/treatment_crowns.webp",
-      title: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash) — Dr. Mansurov O.A.",
+      title: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash) — Stomatolog Orifjon",
       caption: "Sirkon va keramika karonkalar, vinirlar hamda zamonaviy protezlar",
     },
   },
@@ -96,7 +96,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/treatment_implant.webp",
-      title: "Implantatsiya (Germaniya va Koreya mahsulotlari) — Dr. Mansurov O.A.",
+      title: "Implantatsiya (Germaniya va Koreya mahsulotlari) — Stomatolog Orifjon",
       caption: "Mega'Gen (Koreya), AnyRidge va DXL (Germaniya) biotitan implantlari bilan og'riqsiz tish tiklash",
     },
   },
@@ -106,7 +106,7 @@ export const ROUTES = [
     priority: "0.85",
     image: {
       src: "src/assets/treatment_surgery.webp",
-      title: "Xirurgiya (Og'riqsiz va asoratsiz tish olish) — Dr. Mansurov O.A.",
+      title: "Xirurgiya (Og'riqsiz va asoratsiz tish olish) — Stomatolog Orifjon",
       caption: "Orablok va Supercain Forte anesteziyasi ostida atravmatik tish olish",
     },
   },
@@ -116,7 +116,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/treatment_braces.webp",
-      title: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash) — Dr. Mansurov O.A.",
+      title: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash) — Stomatolog Orifjon",
       caption: "Metall, keramika va sapfir breketlar bilan tishlarni tekislash",
     },
   },
@@ -129,7 +129,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_implant.webp",
-      title: "Dental Implantatsiya — Dr. Mansurov O.A.",
+      title: "Dental Implantatsiya — Stomatolog Orifjon",
       caption: "Biotitan implantlar bilan yo'qotilgan tishlarni og'riqsiz tiklash",
     },
   },
@@ -139,7 +139,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_braces.webp",
-      title: "Breket Tizimlari (Metall, Keramika, Sapfir) — Dr. Mansurov O.A.",
+      title: "Breket Tizimlari (Metall, Keramika, Sapfir) — Stomatolog Orifjon",
       caption: "Tish qatorini to'g'irlash va ideal tishlash tizimi",
     },
   },
@@ -149,7 +149,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_crowns.webp",
-      title: "Sirkon va Keramika Karonkalar — Dr. Mansurov O.A.",
+      title: "Sirkon va Keramika Karonkalar — Stomatolog Orifjon",
       caption: "Tabiiy va mustahkam sirkoniy qoplamalar",
     },
   },
@@ -159,7 +159,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_veneers.webp",
-      title: "Keramik Vinirlar va Tabassum Dizayni — Dr. Mansurov O.A.",
+      title: "Keramik Vinirlar va Tabassum Dizayni — Stomatolog Orifjon",
       caption: "Tishlarning shakli va rangini mukammallashtirish",
     },
   },
@@ -169,7 +169,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_dentures.webp",
-      title: "Zamonaviy Tish Pratezlari — Dr. Mansurov O.A.",
+      title: "Zamonaviy Tish Pratezlari — Stomatolog Orifjon",
       caption: "Qulay va chidamli protezlar",
     },
   },
@@ -179,7 +179,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_aligners.webp",
-      title: "Shaffof Elaynerlar (Ko'rinmas Kapalar) — Dr. Mansurov O.A.",
+      title: "Shaffof Elaynerlar (Ko'rinmas Kapalar) — Stomatolog Orifjon",
       caption: "Breketsiz tishlarni to'g'irlashning zamonaviy usuli",
     },
   },
@@ -189,7 +189,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_whitening.webp",
-      title: "Professional Tish Oqartirish — Dr. Mansurov O.A.",
+      title: "Professional Tish Oqartirish — Stomatolog Orifjon",
       caption: "Emalga zarar yetkazmasdan tishlarni xavfsiz oqartirish",
     },
   },
@@ -199,7 +199,7 @@ export const ROUTES = [
     priority: "0.8",
     image: {
       src: "src/assets/treatment_therapy.webp",
-      title: "Og'riqsiz Tish Davolash va Plombalash — Dr. Mansurov O.A.",
+      title: "Og'riqsiz Tish Davolash va Plombalash — Stomatolog Orifjon",
       caption: "Karies va asab kanallarini 100% og'riqsiz davolash",
     },
   },
@@ -209,7 +209,7 @@ export const ROUTES = [
     priority: "0.75",
     image: {
       src: "src/assets/treatment_surgery.webp",
-      title: "Og'riqsiz Tish Olish va Jarrohlik — Dr. Mansurov O.A.",
+      title: "Og'riqsiz Tish Olish va Jarrohlik — Stomatolog Orifjon",
       caption: "Atravmatik tish olish va aql tishlarini og'riqsiz bartaraf etish",
     },
   },

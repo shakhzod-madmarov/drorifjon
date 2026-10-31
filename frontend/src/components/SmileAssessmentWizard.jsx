@@ -193,10 +193,10 @@ const SmileAssessmentWizard = () => {
           </h2>
           <p className="text-sm text-slate-600">
             {lang === "uz"
-              ? "Holatingizni tanlang va shifokorimizning individual davolash rejasi bilan darhol tanishing."
+              ? "Holatingizni tanlang va Stomatolog Orifjonning individual davolash rejasi bilan darhol tanishing."
               : lang === "ru"
-              ? "Выберите вашу ситуацию и получите персональный план лечения от Д-ра Мансурова О.А."
-              : "Select your primary symptom to preview Dr. Mansurov's customized clinical approach."}
+              ? "Выберите вашу ситуацию и получите персональный план лечения от Стоматолога Орифжона."
+              : "Select your primary symptom to preview Dentist Orifjon's customized clinical approach."}
           </p>
         </div>
 
@@ -336,7 +336,7 @@ const SmileAssessmentWizard = () => {
             >
               <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
               <span className="relative z-10 flex items-center justify-center gap-2">
-                <span>{lang === "uz" ? "Dr. Mansurov Qabuliga Yozilish" : lang === "ru" ? "Записаться к Д-ру Мансурову" : "Book with Dr. Mansurov"}</span>
+                <span>{lang === "uz" ? "Stomatolog Orifjon Qabuliga Yozilish" : lang === "ru" ? "Записаться к Стоматологу Орифжону" : "Book with Dentist Orifjon"}</span>
                 <span>→</span>
               </span>
             </button>

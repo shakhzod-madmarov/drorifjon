@@ -1,22 +1,24 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { getDoctorBrandName } from "../constants/doctor";
 
 const Logo = ({ className = "h-8 sm:h-9", inverted = false }) => {
   const { lang } = useLanguage();
+  const brandTitle = getDoctorBrandName(lang);
 
   const subtitle =
     lang === "ru"
-      ? "Врач-Стоматолог"
+      ? "Современная Стоматология"
       : lang === "en"
-      ? "Dental Surgeon"
-      : "Vrach Stomatolog";
+      ? "Modern Dentistry"
+      : "Zamonaviy Stomatologiya";
 
   const altText =
     lang === "ru"
-      ? "Д-р Мансуров О.А. — Врач-Стоматолог"
+      ? "Стоматолог Орифжон — Врач-Стоматолог"
       : lang === "en"
-      ? "Dr. Mansurov O.A. — Dental Surgeon"
-      : "Dr. Mansurov O.A. — Vrach Stomatolog";
+      ? "Dentist Orifjon — Dental Surgeon"
+      : "Stomatolog Orifjon — Vrach Stomatolog";
 
   return (
     <div className="inline-flex items-center gap-2 sm:gap-2.5 select-none">
@@ -34,7 +36,7 @@ const Logo = ({ className = "h-8 sm:h-9", inverted = false }) => {
             inverted ? "text-white" : "text-[#141E28]"
           }`}
         >
-          Dr. Mansurov O.A.
+          {brandTitle}
         </span>
         <span
           className={`text-[8.5px] sm:text-[9px] font-bold uppercase tracking-[0.14em] truncate mt-0.5 ${

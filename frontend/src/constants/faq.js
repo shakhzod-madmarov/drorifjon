@@ -17,14 +17,14 @@ export const FAQ_ITEMS = [
   },
   {
     q: {
-      uz: "Dr. Mansurov Orifjon Alimbekovich qanday tajriba va ta'limga ega?",
-      ru: "Какая квалификация и образование у Д-ра Мансурова Орифжона Алимбековича?",
-      en: "What are Dr. Mansurov Orifjon Alimbekovich's medical qualifications and education?",
+      uz: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qanday tajriba va ta'limga ega?",
+      ru: "Какая квалификация и образование у Стоматолога Орифжона (Мансурова О.А.)?",
+      en: "What are Dentist Orifjon (Mansurov Orifjon Alimbekovich)'s medical qualifications and education?",
     },
     a: {
-      uz: "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatologdir. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot ta'limini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan.",
-      ru: "Д-р Мансуров Орифжон Алимбекович имеет более 20 лет практического опыта в сфере здравоохранения. Он получил фундаментальное медицинское образование в Андижанском медицинском колледже (2001–2004) и высшее профильное образование в Ошском Государственном Университете (2017–2022).",
-      en: "Dr. Mansurov Orifjon Alimbekovich holds over 20+ years of healthcare experience. He completed his foundational medical training at Andijan Medical College (2001–2004) followed by dental university degree at Osh State University (2017–2022).",
+      uz: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) 20 yildan ortiq tibbiyot sohasidagi chuqur amaliy tajribaga ega vrach stomatologdir. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot ta'limini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan.",
+      ru: "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) имеет более 20 лет практического опыта в сфере здравоохранения. Он получил фундаментальное медицинское образование в Андижанском медицинском колледже (2001–2004) и высшее профильное образование в Ошском Государственном Университете (2017–2022).",
+      en: "Dentist Orifjon (Mansurov Orifjon Alimbekovich) holds over 20+ years of healthcare experience. He completed his foundational medical training at Andijan Medical College (2001–2004) followed by dental university degree at Osh State University (2017–2022).",
     },
   },
   {
@@ -65,9 +65,9 @@ export const FAQ_ITEMS = [
   },
   {
     q: {
-      uz: "Dr. Mansurov O.A. qabuliga qanday yozilish mumkin?",
-      ru: "Как записаться на приём к Д-ру Мансурову О.А.?",
-      en: "How can I book an appointment with Dr. Mansurov O.A.?",
+      uz: "Stomatolog Orifjon qabuliga qanday yozilish mumkin?",
+      ru: "Как записаться на приём к Стоматологу Орифжону?",
+      en: "How can I book an appointment with Dentist Orifjon?",
     },
     a: {
       uz: "Saytimizdagi «Qabulga Yozilish» tugmasi orqali qulay vaqtni tanlab, +998 90 548 10 90 raqamiga qo'ng'iroq qilib yoki Telegram (@dr_orifjon_1) va Instagram (@dr_orifjon) orqali to'g'ridan-to'g'ri bog'lanishingiz mumkin.",
@@ -82,9 +82,9 @@ export const FAQ_ITEMS = [
       en: "What should I do if I have severe toothache or a broken filling in Andijan?",
     },
     a: {
-      uz: "O'tkir tish og'rig'i (pulpit, periodontit) yoki plomba tushib ketganda zudlik bilan +998 90 548 10 90 raqamiga qo'ng'iroq qiling yoki saytimizda eng yaqin bo'sh vaqtga yoziling. Dr. Mansurov Orifjon Alimbekovich 2 bosqichli og'riqsiz mikro-anesteziya qo'llab, og'riqni birinchi daqiqalardanoq to'liq bartaraf etadi.",
-      ru: "При острой зубной боли (пульпит, периодонтит) или выпадении пломбы сразу звоните по номеру +998 90 548 10 90 или бронируйте ближайшее свободное время на сайте. Д-р Мансуров Орифжон Алимбекович проводит бережную анестезию и полностью устраняет боль в первые минуты приёма.",
-      en: "For acute dental pain or a lost filling, call +998 90 548 10 90 immediately or book online. Dr. Mansurov provides two-stage gentle anesthesia to immediately relieve toothache and treat the tooth safely.",
+      uz: "O'tkir tish og'rig'i (pulpit, periodontit) yoki plomba tushib ketganda zudlik bilan +998 90 548 10 90 raqamiga qo'ng'iroq qiling yoki saytimizda eng yaqin bo'sh vaqtga yoziling. Stomatolog Orifjon 2 bosqichli og'riqsiz mikro-anesteziya qo'llab, og'riqni birinchi daqiqalardanoq to'liq bartaraf etadi.",
+      ru: "При острой зубной боли (пульпит, периодонтит) или выпадении пломбы сразу звоните по номеру +998 90 548 10 90 или бронируйте ближайшее свободное время на сайте. Стоматолог Орифжон проводит бережную анестезию и полностью устраняет боль в первые минуты приёма.",
+      en: "For acute dental pain or a lost filling, call +998 90 548 10 90 immediately or book online. Dentist Orifjon provides two-stage gentle anesthesia to immediately relieve toothache and treat the tooth safely.",
     },
   },
   {
@@ -106,9 +106,9 @@ export const FAQ_ITEMS = [
       en: "Which materials are used for fillings and local anesthesia?",
     },
     a: {
-      uz: "Dr. Mansurov O.A. faqat original xalqaro sertifikatlangan materiallardan foydalanadi: plombalash uchun Germaniyaning Charisma (mikro-shisha xameleon) va Janubiy Koreyaning DenFil (300+ MPa yuqori zichlikdagi mikro-gibrid) kompozitlari; anesteziya uchun esa Yevropaning steril blisterli Orablok, Supercain Forte va Artikain vositalari qo'llaniladi. Bemorlar muolaja davomida mutlaqo og'riq sezmaydi.",
-      ru: "Д-р Мансуров О.А. использует исключительно оригинальные бренды: для реставрации — немецкий микростекольный нанокомпозит Charisma с эффектом хамелеона и корейский сверхпрочный DenFil (более 300 МПа); для обезболивания — итальянский Ораблок в индивидуальных стерильных блистерах, Суперкаин Форте и Артикаин. Лечение проходит на 100% без боли.",
-      en: "Dr. Mansurov exclusively applies certified materials: for dental fillings — genuine German Charisma (microglass chameleon composite) and South Korean DenFil (300+ MPa high-density hybrid); for anesthesia — sterile European Orabloc blistered carpules, Supercain Forte, and pure Articaine, guaranteeing 100% painless care.",
+      uz: "Stomatolog Orifjon faqat original xalqaro sertifikatlangan materiallardan foydalanadi: plombalash uchun Germaniyaning Charisma (mikro-shisha xameleon) va Janubiy Koreyaning DenFil (300+ MPa yuqori zichlikdagi mikro-gibrid) kompozitlari; anesteziya uchun esa Yevropaning steril blisterli Orablok, Supercain Forte va Artikain vositalari qo'llaniladi. Bemorlar muolaja davomida mutlaqo og'riq sezmaydi.",
+      ru: "Стоматолог Орифжон использует исключительно оригинальные бренды: для реставрации — немецкий микростекольный нанокомпозит Charisma с эффектом хамелеона и корейский сверхпрочный DenFil (более 300 МПа); для обезболивания — итальянский Ораблок в индивидуальных стерильных блистерах, Суперкаин Форте и Артикаин. Лечение проходит на 100% без боли.",
+      en: "Dentist Orifjon exclusively applies certified materials: for dental fillings — genuine German Charisma (microglass chameleon composite) and South Korean DenFil (300+ MPa high-density hybrid); for anesthesia — sterile European Orabloc blistered carpules, Supercain Forte, and pure Articaine, guaranteeing 100% painless care.",
     },
   },
   {

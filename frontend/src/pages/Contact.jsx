@@ -69,10 +69,10 @@ const Contact = () => {
         </h1>
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
           {lang === "uz"
-            ? "Dr. Mansurov Orifjon Alimbekovich qabuliga telefon, Telegram, Instagram yoki onlayn jadval orqali yozilishingiz mumkin."
+            ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuliga telefon, Telegram, Instagram yoki onlayn jadval orqali yozilishingiz mumkin."
             : lang === "ru"
-            ? "Свяжитесь с нами по телефону, через Telegram, Instagram или запишитесь через онлайн-расписание к Д-ру Мансурову О.А."
-            : "Connect with Dr. Mansurov Orifjon Alimbekovich via phone, Telegram, Instagram, or our online appointment scheduler."}
+            ? "Свяжитесь с нами по телефону, через Telegram, Instagram или запишитесь через онлайн-расписание к Стоматологу Орифжону."
+            : "Connect with Dentist Orifjon (Mansurov Orifjon Alimbekovich) via phone, Telegram, Instagram, or our online appointment scheduler."}
         </p>
         <div className="pt-2">
           <Link

@@ -252,7 +252,7 @@ export const buildAboutPageSchema = (lang = "uz", breadcrumbs = []) => {
     "@type": "AboutPage",
     "@id": `${pageUrl}#about`,
     "url": pageUrl,
-    "name": lang === "ru" ? "О враче" : lang === "en" ? "About Doctor" : "Dr. Mansurov haqida",
+    "name": lang === "ru" ? "О Стоматологе Орифжоне" : lang === "en" ? "About Dentist Orifjon" : "Stomatolog Orifjon haqida",
     "mainEntity": {
       "@type": "Physician",
       "@id": `${SITE_ORIGIN}/#doctor`,
@@ -370,7 +370,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@id": `${SITE_ORIGIN}/#website`,
     "url": `${SITE_ORIGIN}/`,
     "name": DOCTOR_INFO.name,
-    "description": "Dr. Mansurov Orifjon Alimbekovich — 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi.",
+    "description": "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi.",
     "inLanguage": ["uz", "ru", "en"],
   };
 
@@ -378,7 +378,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": "DentalClinic",
     "@id": `${SITE_ORIGIN}/#clinic`,
     "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-    "alternateName": ["Dr. Mansurov Stomatologiya", "Mansurov Orifjon Alimbekovich", "Стоматология Мансуров"],
+    "alternateName": ["Stomatolog Orifjon", "Orifjon Mansurov", "Mansurov Orifjon Alimbekovich", "Стоматолог Орифжон", "Dentist Orifjon"],
     "telephone": DOCTOR_INFO.phoneRaw,
     "address": {
       "@type": "PostalAddress",
@@ -421,7 +421,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": ["Dentist", "MedicalBusiness"],
     "@id": `${SITE_ORIGIN}/#dentist`,
     "name": `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
-    "alternateName": [`${DOCTOR_INFO.name} Stomatolog`, "Mansurov Orifjon Alimbekovich", "Стоматолог Орифжон Мансуров"],
+    "alternateName": ["Stomatolog Orifjon", "Orifjon", "Mansurov Orifjon Alimbekovich", "Стоматолог Орифжон Мансуров", "Dentist Orifjon"],
     "url": `${SITE_ORIGIN}/`,
     "logo": `${SITE_ORIGIN}/logo_icon.png`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,

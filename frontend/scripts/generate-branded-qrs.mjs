@@ -7,11 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, '..', 'public');
 
-// Review links for Dr. Mansurov O.A.
+// Review links for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)
 const GOOGLE_URL = 'https://maps.google.com/?q=Andijan,+Uzbekistan';
 const YANDEX_URL = 'https://yandex.uz/maps/?text=Andijon';
 
-const BRAND_COLOR = '#FF9D50'; // Dr. Mansurov's signature coral orange
+const BRAND_COLOR = '#FF9D50'; // Stomatolog Orifjon's signature coral orange
 
 async function generateBrandedQr(url, filenamePrefix, isGoogle = true) {
   // Generate base SVG with Level H error correction (tolerates up to 30% center overlay)

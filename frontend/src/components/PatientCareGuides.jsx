@@ -110,17 +110,17 @@ const guides = [
     dos: {
       uz: [
         "Yumshoq cho'tka va abraziv bo'lmagan tish pastasi bilan kuniga 2 mahal yuving",
-        "Har 6 oyda Dr. Mansurov ko'rigidan va gigiyenadan o'ting",
+        "Har 6 oyda Stomatolog Orifjon ko'rigidan va gigiyenadan o'ting",
         "Tishlar orasidagi tozalikni irrigator bilan ta'minlang",
       ],
       ru: [
         "Чистите зубы 2 раза в день мягкой щеткой и неабразивной пастой",
-        "Посещайте профилактический осмотр каждые 6 месяцев",
+        "Посещайте Стоматолога Орифжона для планового осмотра каждые 6 месяцев",
         "Используйте ирригатор для здоровья десневого края",
       ],
       en: [
         "Brush twice daily with a soft toothbrush and low-abrasive paste",
-        "Visit Dr. Mansurov for routine checkups and polishing every 6 months",
+        "Visit Dentist Orifjon for routine checkups and polishing every 6 months",
         "Use a water flosser to maintain clean, healthy gum lines",
       ],
     },
@@ -243,10 +243,10 @@ const PatientCareGuides = () => {
           </h2>
           <p className="text-sm text-slate-600">
             {lang === "uz"
-              ? "Davolash natijasi uzoq yillar mustahkam saqlanishi uchun Dr. Mansurovning klinik tavsiyalari."
+              ? "Davolash natijasi uzoq yillar mustahkam saqlanishi uchun Stomatolog Orifjonning klinik tavsiyalari."
               : lang === "ru"
-              ? "Клинические советы Д-ра Мансурова О.А. для сохранения идеального результата на долгие годы."
-              : "Doctor recommendations to ensure optimal healing and long-lasting treatment success."}
+              ? "Клинические советы Стоматолога Орифжона для сохранения идеального результата на долгие годы."
+              : "Clinical recommendations by Dentist Orifjon to ensure optimal healing and long-lasting success."}
           </p>
         </div>
 

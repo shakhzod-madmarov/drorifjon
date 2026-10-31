@@ -2,7 +2,7 @@
  * MedInson Stomatolog Relay Server Client
  * 100% compliant with MedInson Public Booking API Specification v1
  *
- * Doctor: Dr. Mansurov Orifjon Alimbekovich (Andijon)
+ * Doctor: Stomatolog Orifjon (Mansurov Orifjon Alimbekovich, Andijon)
  * License / Site ID: pk54wckfbg
  * Relay Server: https://dentist-medinson-license.uz
  */
@@ -509,7 +509,7 @@ export async function submitDentistBooking({
 
 function buildFallbackBookingResult({ date, time, name, phone, dob, note, bookingId, linkToken, botUsername }) {
   const telegramMessage = encodeURIComponent(
-    `Assalomu alaykum, Dr. Mansurov O.A.! 🦷\n\nSayt orqali qabulga yozilish:\n👤 Bemor: ${name}\n📞 Tel: ${phone}${dob ? `\n🎂 Tug'ilgan sana: ${dob}` : ""}\n📅 Sana: ${date}\n⏰ Vaqt: ${time}${note ? `\n📋 Xizmat/Izoh: ${note}` : ""}\n🆔 Buyurtma: #${bookingId}`
+    `Assalomu alaykum, Stomatolog Orifjon! 🦷\n\nSayt orqali qabulga yozilish:\n👤 Bemor: ${name}\n📞 Tel: ${phone}${dob ? `\n🎂 Tug'ilgan sana: ${dob}` : ""}\n📅 Sana: ${date}\n⏰ Vaqt: ${time}${note ? `\n📋 Xizmat/Izoh: ${note}` : ""}\n🆔 Buyurtma: #${bookingId}`
   );
   const telegramUrl = botUsername && linkToken
     ? `https://t.me/${botUsername}?start=${encodeURIComponent(linkToken)}`

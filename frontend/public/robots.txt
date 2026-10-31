@@ -1,4 +1,4 @@
-# Robots.txt for drorifjon.uz — Dr. Mansurov Orifjon Alimbekovich (Andijon)
+# Robots.txt for drorifjon.uz — Stomatolog Orifjon (Mansurov Orifjon Alimbekovich, Andijon)
 User-agent: *
 Allow: /
 Disallow: /api/

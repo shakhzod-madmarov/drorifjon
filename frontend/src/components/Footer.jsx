@@ -25,7 +25,7 @@ const Footer = () => {
   const quickLinks = [
     { path: "/", label: { uz: "Bosh Sahifa", ru: "Главная", en: "Home" } },
     { path: "/services", label: { uz: "Stomatologik Xizmatlar", ru: "Стоматологические Услуги", en: "Dental Services" } },
-    { path: "/about", label: { uz: "Dr. Mansurov Haqida", ru: "О Докторе Мансурове", en: "About Dr. Mansurov" } },
+    { path: "/about", label: { uz: "Stomatolog Orifjon Haqida", ru: "О Стоматологе Орифжоне", en: "About Dentist Orifjon" } },
     { path: "/booking", label: { uz: "Onlayn Qabulga Yozilish", ru: "Онлайн Запись на Приём", en: "Book Appointment" } },
     { path: "/contact", label: { uz: "Aloqa va Manzil", ru: "Контакты и Адрес", en: "Contact & Location" } },
   ];
@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="lg:col-span-5 space-y-5">
             <Link
               to={to("/")}
-              aria-label="Dr. Mansurov O.A. - Bosh sahifa"
+              aria-label="Stomatolog Orifjon - Bosh sahifa"
               className="inline-block cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
             >
               <Logo className="h-12" inverted={true} />
@@ -55,10 +55,10 @@ const Footer = () => {
 
             <p className="text-sm text-slate-300/90 leading-relaxed max-w-md">
               {lang === "uz"
-                ? `Mansurov Orifjon Alimbekovich — Andijon Tibbiyot kolleji (2001–2004) va O'sh Davlat Universiteti (2017–2022) bitiruvchisi, ${getExperienceText("uz").toLowerCase()}. Dental implantatsiya, breketlar, tsirkoniy karonkalar, vinirlar va 100% og'riqsiz davolash.`
+                ? `Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji (2001–2004) va O'sh Davlat Universiteti (2017–2022) bitiruvchisi, ${getExperienceText("uz").toLowerCase()}. Dental implantatsiya, breketlar, tsirkoniy karonkalar, vinirlar va 100% og'riqsiz davolash.`
                 : lang === "ru"
-                ? `Д-р Мансуров Орифжон Алимбекович — выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022), ${getExperienceText("ru").toLowerCase()}. Имплантация, брекеты, циркониевые коронки, виниры и безболезненное лечение.`
-                : `Dr. Mansurov Orifjon Alimbekovich — Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022), ${getExperienceText("en")}. Dental implants, braces, zirconia crowns, veneers, and 100% painless dental care.`}
+                ? `Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа (2001–2004) и Ошского Государственного Университета (2017–2022), ${getExperienceText("ru").toLowerCase()}. Имплантация, брекеты, циркониевые коронки, виниры и безболезненное лечение.`
+                : `Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022), ${getExperienceText("en")}. Dental implants, braces, zirconia crowns, veneers, and 100% painless dental care.`}
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1">
