@@ -136,13 +136,13 @@ const Doctor3DCard = ({
             />
           </picture>
 
-          {/* Top In-Image Holographic Status Strip */}
+          {/* Top In-Image Frosted Glass Status Strip */}
           <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-20 pointer-events-none">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-[10px] font-bold tracking-wide text-white border border-white/20 shadow-md">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-black tracking-wide text-slate-900 border border-white/80 shadow-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
               <span>{lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}</span>
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/95 backdrop-blur-md text-slate-950 text-[10px] font-black tracking-wide shadow-md">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] font-black tracking-wide shadow-md border border-amber-300/40">
               <span>🇩🇪 & 🇰🇷 Standart</span>
             </span>
           </div>

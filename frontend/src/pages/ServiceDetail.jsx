@@ -291,14 +291,15 @@ const ServiceDetail = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
 
-                {/* Clean Top Chips */}
+                {/* Clean Top Frosted Glass Badges */}
                 <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[11px] font-bold tracking-wide text-white border border-white/20 shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-amber-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-black tracking-wide text-slate-900 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <span>{service.badge?.[lang] || service.category[lang]}</span>
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wide shadow-md">
-                    {service.warranty[lang]}
+                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
+                    <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
+                    <span>{service.warranty[lang]}</span>
                   </span>
                 </div>
               </div>

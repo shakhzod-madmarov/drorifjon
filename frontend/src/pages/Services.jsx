@@ -148,27 +148,30 @@ const Services = ({ onOpenBooking }) => {
             >
               <div>
                 {/* Photo Banner with Zoom Depth & Bespoke Clinical Stickers */}
-                <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-950 [transform-style:preserve-3d]">
-                  <img
-                    src={service.image}
-                    alt={service.title[lang]}
-                    width={900}
-                    height={600}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  />
+                <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-100 [transform-style:preserve-3d]">
+                  <picture>
+                    <source srcSet={service.image} type="image/webp" />
+                    <img
+                      src={service.image.replace(/\.webp$/, ".jpg")}
+                      alt={service.title[lang]}
+                      width={900}
+                      height={600}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                    />
+                  </picture>
                   {/* Visual Depth Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/35 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-black/15 pointer-events-none" />
 
-                  {/* Top Bespoke Stickers */}
+                  {/* Top Bespoke Frosted Glass Stickers */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[11px] font-bold tracking-wide text-white border border-white/25 shadow-md">
-                      <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-black tracking-wide text-slate-900 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                       <span>{service.badge?.[lang] || service.category[lang]}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[11px] font-bold tracking-wide text-emerald-300 border border-emerald-400/40 shadow-md">
-                      <IconShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
+                      <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
                       <span>{service.warranty[lang]}</span>
                     </span>
                   </div>

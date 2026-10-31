@@ -235,14 +235,14 @@ export default function ClinicEquipmentShowcase() {
                 {/* Visual Depth Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 pointer-events-none" />
 
-                {/* Clean, Refined Top Stickers: Category & Verification */}
+                {/* Clean, Refined Top Frosted Glass Badges */}
                 <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-[10px] font-semibold tracking-wide text-white/95 border border-white/20 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-black tracking-wide text-slate-900 border border-white/80 shadow-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                     <span>{item.category}</span>
                   </span>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-[10px] font-semibold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-xs">
-                    <IconShieldCheck className="w-3 h-3 text-emerald-400 shrink-0" />
+                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-xs text-[10.5px] font-black border border-emerald-300/40">
+                    <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
                     <span>{item.warrantyBadge}</span>
                   </span>
                 </div>

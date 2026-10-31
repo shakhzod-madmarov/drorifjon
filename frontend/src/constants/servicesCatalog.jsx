@@ -42,9 +42,9 @@ export const SERVICES_CATALOG = [
       en: "Therapeutic Dentistry",
     },
     title: {
-      uz: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya)",
-      ru: "Терапия (Безболезненное лечение и реставрация зубов)",
-      en: "Therapy (Painless Tooth Treatment & Aesthetic Restoration)",
+      uz: "Terapiya va Badiiy Restavratsiya",
+      ru: "Терапия и Художественная Реставрация",
+      en: "Therapy & Aesthetic Restoration",
     },
     shortDesc: {
       uz: "Tish kariesi, chuqur karies, pulpit va periodontitni Supercain Forte va Orablok mikro-anesteziyasi ostida 100% og'riqsiz davolash hamda original Charisma (Germaniya) va DenFil (Janubiy Koreya) nano-kompozitlari yordamida tishning tabiiy anatomik shakli va rangini badiiy restavratsiya qilish.",
@@ -157,9 +157,9 @@ export const SERVICES_CATALOG = [
       en: "Prosthetic Dentistry",
     },
     title: {
-      uz: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash)",
-      ru: "Ортопедия (Высококачественное протезирование и установка зубов)",
-      en: "Orthopedics (High-Quality Tooth Placement & Prosthetics)",
+      uz: "Ortopediya va Sirkon Protezlash",
+      ru: "Ортопедия и Циркониевое Протезирование",
+      en: "Orthopedics & Zirconia Prosthetics",
     },
     shortDesc: {
       uz: "Yo'qotilgan yoki shikastlangan tishlarni yuqori aniqlikdagi sirkoniy (Zirconia) va presslangan keramika (IPS E.max) karonkalar, estetik vinirlar hamda zamonaviy qulay olinadigan va olinmaydigan protezlar yordamida tiklash.",
@@ -257,9 +257,9 @@ export const SERVICES_CATALOG = [
       en: "Dental Implantology",
     },
     title: {
-      uz: "Implantatsiya (Germaniya va Koreya mahsulotlari)",
-      ru: "Имплантация (Премиальные импланты из Германии и Кореи)",
-      en: "Implantation (German & Korean Premium Systems)",
+      uz: "Germaniya va Koreya Implantatsiyasi",
+      ru: "Дентальная Имплантация (Германия/Корея)",
+      en: "German & Korean Dental Implantation",
     },
     shortDesc: {
       uz: "Yo'qotilgan tishlarni qo'shni sog'lom tishlarni charxlamasdan, Janubiy Koreyaning Mega'Gen hamda Germaniyaning AnyRidge (AnyRidch) va DXL original premium biotitan implantlari yordamida 15-20 daqiqada og'riqsiz va umrbod kafolat bilan tiklash.",
@@ -369,9 +369,9 @@ export const SERVICES_CATALOG = [
       en: "Surgical Dentistry",
     },
     title: {
-      uz: "Xirurgiya (Og'riqsiz va asoratsiz tish olish)",
-      ru: "Хирургия (Безболезненное и атравматичное удаление зубов без осложнений)",
-      en: "Surgery (Painless & Complication-Free Tooth Extraction)",
+      uz: "Atravmatik Xirurgiya va Tish Olish",
+      ru: "Атравматичная Хирургия и Удаление Зубов",
+      en: "Gentle Oral Surgery & Extractions",
     },
     shortDesc: {
       uz: "Qutqarib bo'lmaydigan yoki noto'g'ri o'sgan tishlarni, shu jumladan murakkab aql tishlarini individual steril Orablok, Supercain Forte va Artikain anesteziyasi ostida 100% og'riqsiz, atravmatik texnika bilan asoratsiz olib tashlash.",
@@ -481,9 +481,9 @@ export const SERVICES_CATALOG = [
       en: "Orthodontics",
     },
     title: {
-      uz: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
-      ru: "Ортодонтия (Исправление прикуса и выравнивание кривых зубов брекетами)",
-      en: "Orthodontics (Bite Correction & Alignment of Crooked Teeth with Braces)",
+      uz: "Ortodontiya va Breket Tizimlari",
+      ru: "Ортодонтия и Брекет-Системы",
+      en: "Orthodontics & Modern Braces",
     },
     shortDesc: {
       uz: "Qiyshiq, notekis, zich yoki orasi ochiq tish qatorlarini zamonaviy metall, keramika va estetik sapfir breket tizimlari yordamida to'g'rilash hamda ideal tishlash (prikus) tizimini barpo etish.",

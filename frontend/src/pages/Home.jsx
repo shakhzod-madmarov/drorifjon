@@ -288,43 +288,59 @@ const HeroSection = ({ onOpenBooking }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════════
-   2. 9 CORE SPECIALITIES SHOWCASE
+   2. 5 CORE SPECIALITIES SHOWCASE
    ═══════════════════════════════════════════════════════════════════ */
 const SpecialitiesSection = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
   const to = useLocalizedPath();
 
-  const specialtyBadges = {
+  const specialtyMeta = {
     terapiya: {
-      sticker: "🌿 100% OG'RIQSIZ RESTAVRATSIYA",
-      materials: "🇩🇪 Charisma & 🇰🇷 DenFil",
+      kicker: { uz: "✦ ESTETIK RESTAVRATSIYA", ru: "✦ ЭСТЕТИЧЕСКАЯ РЕСТАВРАЦИЯ", en: "✦ AESTHETIC RESTORATION" },
+      materialBadge: "🇩🇪 Charisma & 🇰🇷 DenFil",
+      guaranteePill: { uz: "100% Og'riqsiz", ru: "100% Без Боли", en: "100% Pain-Free" },
+      durationText: { uz: "30–45 daqiqa", ru: "30–45 минут", en: "30–45 mins" },
+      techSummary: { uz: "Nemis nano-kompoziti", ru: "Немецкий нанокомпозит", en: "German nanocomposite" },
     },
     ortopediya: {
-      sticker: "👑 YUQORI SIFATLI TISH QO'YISH",
-      materials: "💎 CAD/CAM Sirkon & IPS E.max",
+      kicker: { uz: "✦ CAD/CAM SIRKONIY", ru: "✦ CAD/CAM ЦИРКОНИЙ", en: "✦ CAD/CAM ZIRCONIA" },
+      materialBadge: "💎 Monolit Sirkon & Vinirlar",
+      guaranteePill: { uz: "10–15 Yil Kafolat", ru: "Гарантия 10–15 Лет", en: "10–15 Yrs Warranty" },
+      durationText: { uz: "3–5 kun (2 qabul)", ru: "3–5 дней (2 визита)", en: "3–5 days (2 visits)" },
+      techSummary: { uz: "Monolit sirkoniy & E.max", ru: "Монолитный цирконий & E.max", en: "Monolithic Zirconia & E.max" },
     },
     implantatsiya: {
-      sticker: "🔩 GERMANIYA & KOREYA BIOTITAN",
-      materials: "🇰🇷 Mega'Gen · 🇩🇪 AnyRidge · 🇩🇪 DXL",
+      kicker: { uz: "✦ PREMIUM BIOTITAN", ru: "✦ ПРЕМИУМ БИОТИТАН", en: "✦ PREMIUM BIO-TITANIUM" },
+      materialBadge: "🔩 Mega'Gen & AnyRidge",
+      guaranteePill: { uz: "Umrbod Kafolat", ru: "Пожизненная Гарантия", en: "Lifetime Warranty" },
+      durationText: { uz: "15–20 daqiqa", ru: "15–20 минут", en: "15–20 mins" },
+      techSummary: { uz: "Germaniya & Koreya tizimi", ru: "Системы Германии и Кореи", en: "German & Korean systems" },
     },
     xirurgiya: {
-      sticker: "🛡️ ATRAVMATIK XIRURGIYA",
-      materials: "💉 Steril Orablok & Supercain",
+      kicker: { uz: "✦ ATRAVMATIK JARROHLIK", ru: "✦ АТРАВМАТИЧНАЯ ХИРУРГИЯ", en: "✦ ATRAUMATIC SURGERY" },
+      materialBadge: "🛡️ Steril Orablok & Supercain",
+      guaranteePill: { uz: "Asoratsiz Tiklanish", ru: "Без Осложнений", en: "Zero Complications" },
+      durationText: { uz: "10–25 daqiqa", ru: "10–25 минут", en: "10–25 mins" },
+      techSummary: { uz: "Yevropa steril anesteziyasi", ru: "Европейская анестезия", en: "European sterile anesthesia" },
     },
     ortodontiya: {
-      sticker: "✨ MUKAMMAL TABASSUM & TISHLASH",
-      materials: "💎 Metall, Keramika & Elaynerlar",
+      kicker: { uz: "✦ MUKAMMAL TISHLASH", ru: "✦ ИДЕАЛЬНЫЙ ПРИКУС", en: "✦ BITE CORRECTION" },
+      materialBadge: "✨ Metall, Keramika & Sapfir",
+      guaranteePill: { uz: "Barqaror Natija", ru: "Стабильный Результат", en: "Lifelong Retention" },
+      durationText: { uz: "12–18 oy", ru: "12–18 месяцев", en: "12–18 months" },
+      techSummary: { uz: "Zamonaviy breket tizimlari", ru: "Брекеты и элайнеры", en: "Modern braces & aligners" },
     },
   };
 
   return (
-    <section className="py-8 sm:py-12 space-y-8">
-      <div className="text-center max-w-3xl mx-auto space-y-2.5">
-        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-amber-300 text-slate-800 shadow-2xs">
+    <section className="py-8 sm:py-14 space-y-8">
+      {/* Section Header */}
+      <div className="text-center max-w-3xl mx-auto space-y-3">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-50/90 border border-amber-300/80 text-primary shadow-xs">
           <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
-          <span>{lang === "uz" ? "5 Ta Asosiy Stomatologik Yo'nalish" : lang === "ru" ? "5 Основных Клинических Направлений" : "5 Core Clinical Specialties"}</span>
+          <span>{lang === "uz" ? "5 Ta Asosiy Klinik Yo'nalish" : lang === "ru" ? "5 Основных Клинических Направлений" : "5 Core Clinical Specialties"}</span>
         </span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-serif-classic tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 font-serif-classic tracking-tight">
           {lang === "uz"
             ? "Stomatolog Orifjon Xizmatlari"
             : lang === "ru"
@@ -335,100 +351,102 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
           {lang === "uz"
             ? "20+ yillik tibbiyot tajribasi, Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bilimlari hamda sertifikatlangan Germaniya va Koreya materiallari."
             : lang === "ru"
-            ? "Более 20 лет врачебной практики, классическое медицинское образование и сертифицированные материалы из Германии и Кореи."
-            : "Over 20+ years of healthcare practice combining university dental degrees with genuine certified materials from Germany and Korea."}
+            ? "Более 20 лет врачебной практики, фундаментальное образование и оригинальные сертифицированные материалы из Германии и Южной Кореи."
+            : "Over 20+ years of healthcare practice combining university dental degrees with genuine certified materials from Germany and South Korea."}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [perspective:1200px]">
+      {/* Grid of 5 Specialties */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 [perspective:1200px]">
         {SERVICES_CATALOG.map((s) => {
-          const badgeMeta = specialtyBadges[s.id] || {
-            sticker: s.badge?.[lang] || "100% KAFOLAT",
-            materials: s.techTag?.[lang] || "Sertifikatlangan",
+          const meta = specialtyMeta[s.id] || {
+            kicker: { uz: "✦ MAXSUS XIZMAT", ru: "✦ СПЕЦИАЛЬНАЯ УСЛУГА", en: "✦ SPECIALTY SERVICE" },
+            materialBadge: s.techTag?.[lang] || "Sertifikatlangan",
+            guaranteePill: { uz: s.warranty?.[lang] || "Rasmiy Kafolat", ru: "Гарантия", en: "Warranty" },
+            durationText: { uz: s.duration?.[lang] || "Qisqa muddat", ru: "Короткий срок", en: "Short visit" },
+            techSummary: { uz: "Sifatli muolaja", ru: "Качественное лечение", en: "Quality treatment" },
           };
 
           return (
             <article
               key={s.id}
-              className={`group bg-white rounded-3xl border-2 border-amber-200/90 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:border-primary/70 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d] ${s.badgeTheme?.accentGlow || ""}`}
+              className="group bg-white/95 rounded-[2rem] border border-amber-200/80 shadow-[0_10px_35px_-8px_rgba(20,30,40,0.06)] hover:shadow-[0_22px_55px_-10px_rgba(255,157,80,0.22)] hover:border-primary/60 transition-all duration-500 hover:-translate-y-2.5 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d]"
             >
               <div>
-                {/* Photo Banner with Zoom Depth & Bespoke Clinical Stickers */}
-                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-950 [transform-style:preserve-3d]">
-                  <img
-                    src={s.image}
-                    alt={s.title[lang]}
-                    width={600}
-                    height={350}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  />
-                  {/* Visual Depth Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-black/30 pointer-events-none" />
+                {/* Visual Banner with Crisp Studio Photography & Frosted Glass Badges */}
+                <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-100 [transform-style:preserve-3d]">
+                  <picture>
+                    <source srcSet={s.image} type="image/webp" />
+                    <img
+                      src={s.image.replace(/\.webp$/, ".jpg")}
+                      alt={s.title[lang]}
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                    />
+                  </picture>
 
-                  {/* Top Bespoke Holographic Stickers */}
+                  {/* Soft Luxury Vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-black/15 pointer-events-none" />
+
+                  {/* Top Frosted Glass Badges (NO HEAVY BLACK BOXES) */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-950/80 backdrop-blur-md text-[10.5px] font-black tracking-wide text-amber-200 border border-amber-300/40 shadow-md">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                      <span>{badgeMeta.sticker}</span>
+                    {/* Material Spec Glass Pill */}
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] text-[11px] font-black text-slate-900">
+                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      <span>{meta.materialBadge}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-950/80 backdrop-blur-md text-[10px] font-bold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-md">
-                      <IconShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                      <span>{s.warranty[lang]}</span>
+
+                    {/* Emerald / Gold Foil Guarantee Pill */}
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
+                      <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
+                      <span>{meta.guaranteePill[lang]}</span>
                     </span>
                   </div>
 
-                  {/* In-Photo Bottom Materials Ribbon */}
-                  <div className="absolute bottom-3 inset-x-3 z-10 pointer-events-none">
-                    <span className="inline-block px-2.5 py-0.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[10px] font-bold border border-white/20">
-                      {badgeMeta.materials}
+                  {/* Bottom Duration & Pain-Free Indicator over Photo */}
+                  <div className="absolute bottom-3 right-3 z-10 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-white text-[10px] font-bold border border-white/20 shadow-xs">
+                      <IconClock className="w-3 h-3 text-amber-300" />
+                      <span>{meta.durationText[lang]}</span>
                     </span>
                   </div>
                 </div>
 
-                {/* Floating Medical Icon Disc on Image Border & Refined Clinical Pill */}
-                <div className="px-5 -mt-6 relative z-20 flex justify-between items-end">
-                  <span className="w-13 h-13 rounded-2xl bg-white shadow-xl border-2 border-amber-300 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                {/* Floating 3D Medical Icon Disc on Photo Boundary */}
+                <div className="px-5 -mt-7 relative z-20 flex justify-between items-end">
+                  <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_8px_25px_rgba(255,157,80,0.22)] border-2 border-amber-300 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     {s.icon}
-                  </span>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary bg-amber-50 border border-amber-300/80 px-3 py-1 rounded-full shadow-2xs mb-1">
-                    {s.featurePill?.[lang] || (lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle")}
+                  </div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary bg-amber-50/90 border border-amber-200 px-3 py-1 rounded-full shadow-2xs mb-1">
+                    {meta.techSummary[lang]}
                   </span>
                 </div>
 
                 {/* Content Body */}
-                <div className="p-5 pt-3 space-y-3.5">
+                <div className="p-5 pt-3.5 space-y-3.5 text-left">
                   <div>
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">
-                      {s.category[lang]}
+                    <div className="text-[10px] sm:text-[10.5px] font-black uppercase tracking-[0.16em] text-primary mb-1">
+                      {meta.kicker[lang]}
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
+                    <h3 className="text-lg sm:text-[19px] font-black text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
                       {s.title[lang]}
                     </h3>
-                    {/* Clean treatment meta row: duration & origin */}
-                    <div className="flex items-center gap-2.5 text-[11px] text-slate-500 font-medium pt-1.5">
-                      <span className="inline-flex items-center gap-1 text-slate-700">
-                        <IconClock className="w-3.5 h-3.5 text-primary shrink-0" />
-                        <span>{s.duration[lang]}</span>
-                      </span>
-                      <span className="text-slate-300">•</span>
-                      <span className="inline-flex items-center gap-1 text-slate-700 truncate">
-                        <IconSparkleStar className="w-3.5 h-3.5 text-primary shrink-0" />
-                        <span>{s.techTag?.[lang] || s.category[lang]}</span>
-                      </span>
-                    </div>
                     <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed line-clamp-2">
                       {s.shortDesc[lang]}
                     </p>
                   </div>
 
-                  {/* 2 Key Clinical Highlights */}
-                  <div className="space-y-1.5 pt-2 border-t border-amber-100 text-xs">
+                  {/* 2 Key Clinical Highlights with Emerald Check */}
+                  <div className="space-y-1.5 pt-2.5 border-t border-amber-100 text-xs">
                     {s.highlights[lang].slice(0, 2).map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-slate-700">
-                        <span className="text-emerald-600 font-bold shrink-0">✓</span>
-                        <span className="text-[11.5px] leading-snug line-clamp-1">{item}</span>
+                        <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-[10px] shrink-0 mt-0.5">
+                          ✓
+                        </span>
+                        <span className="text-[11.5px] leading-snug line-clamp-1 font-medium">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -436,19 +454,19 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
               </div>
 
               {/* Footer Buttons with Shimmer & 3D Hover */}
-              <div className="p-5 pt-0 border-t border-amber-100/80 flex items-center justify-between gap-3 mt-3">
+              <div className="p-5 pt-0 border-t border-amber-100/70 flex items-center justify-between gap-3 mt-3">
                 <Link
                   to={to(`/services/${s.id}`)}
-                  className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
+                  className="text-xs font-extrabold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
                 >
                   <span>{lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}</span>
                   <span className="group-hover/btn:translate-x-1.5 transition-transform duration-200">→</span>
                 </Link>
                 <button
                   onClick={() => onOpenBooking(s.id)}
-                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-orange hover:-translate-y-0.5 active:translate-y-0 cursor-pointer transition-all duration-200"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-xs font-black uppercase tracking-wider shadow-sm hover:shadow-[0_6px_20px_rgba(255,157,80,0.4)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer transition-all duration-200"
                 >
-                  {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book"}
+                  {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book Visit"}
                 </button>
               </div>
             </article>
