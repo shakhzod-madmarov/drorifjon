@@ -21,7 +21,7 @@ const concerns = [
     image: assets.treatment_therapy,
     icon: <DentalToothMolar className="w-5 h-5 text-rose-500" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
-    tag: { uz: "1. Terapiya", ru: "1. Терапия", en: "1. Therapy" },
+    tag: { uz: "Terapiya", ru: "Терапия", en: "Therapy" },
     title: {
       uz: "Tish og'rig'i, karies yoki plomba tushishi",
       ru: "Острая боль, кариес или выпала пломба",
@@ -51,7 +51,7 @@ const concerns = [
     image: assets.treatment_implant,
     icon: <DentalImplantFixture className="w-5 h-5 text-primary" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
-    tag: { uz: "3. Implantatsiya", ru: "3. Имплантация", en: "3. Implantation" },
+    tag: { uz: "Implantatsiya", ru: "Имплантация", en: "Implantation" },
     title: {
       uz: "Bir yoki bir nechta tish yo'qolgan (tish qo'yish)",
       ru: "Отсутствует один или несколько зубов",
@@ -81,7 +81,7 @@ const concerns = [
     image: assets.treatment_braces,
     icon: <DentalBracesIcon className="w-5 h-5 text-brandOrange" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
-    tag: { uz: "5. Ortodontiya", ru: "5. Ортодонтия", en: "5. Orthodontics" },
+    tag: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
     title: {
       uz: "Qiyshiq tishlar yoki noto'g'ri tishlash (prikus)",
       ru: "Неровные зубы или неправильный прикус",
@@ -111,7 +111,7 @@ const concerns = [
     image: assets.treatment_crowns,
     icon: <DentalVeneerCrown className="w-5 h-5 text-brandCyan" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
-    tag: { uz: "2. Ortopediya", ru: "2. Ортопедия", en: "2. Orthopedics" },
+    tag: { uz: "Ortopediya", ru: "Ортопедия", en: "Orthopedics" },
     title: {
       uz: "Tish qo'yish, singan tishlar, sirkon karonka va protezlar",
       ru: "Протезирование, сколы зубов, коронки и мосты",
@@ -141,7 +141,7 @@ const concerns = [
     image: assets.treatment_surgery,
     icon: <DentalSurgeryExtraction className="w-5 h-5 text-rose-600" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
-    tag: { uz: "4. Xirurgiya", ru: "4. Хирургия", en: "4. Surgery" },
+    tag: { uz: "Xirurgiya", ru: "Хирургия", en: "Surgery" },
     title: {
       uz: "Muammoli aql tishi yoki tish oldirish zarurati",
       ru: "Сложный зуб мудрости или удаление зуба",

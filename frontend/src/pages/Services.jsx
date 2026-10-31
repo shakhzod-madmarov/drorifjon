@@ -198,7 +198,7 @@ const Services = ({ onOpenBooking }) => {
                     )}
                     {service.id === "ortopediya" && (
                       <DigitalCyanTag
-                        tag="CAD/CAM Tsirkoniy"
+                        tag="CAD/CAM Sirkoniy"
                         subtag={lang === "ru" ? "Премиум Эстетика" : lang === "en" ? "Premium Aesthetics" : "Yuqori Aniqlik"}
                       />
                     )}

@@ -24,22 +24,23 @@ const treatments = [
     image: assets.treatment_therapy,
     unitLabel: { uz: "tish dona", ru: "зуб(а)", en: "tooth / teeth" },
     maxUnits: 6,
-    shortTitle: { uz: "1. Terapiya", ru: "1. Терапия", en: "1. Therapy" },
+    shortTitle: { uz: "Terapiya", ru: "Терапия", en: "Therapy" },
+    tagBadge: "🇩🇪 Charisma & 🇰🇷 DenFil",
     icon: <DentalToothMolar className="w-5 h-5" />,
     badgeTitle: {
-      uz: "100% OG'RIQSIZ DAVOLASH & BADIIY RESTAVRATSIYA",
-      ru: "100% БЕЗБОЛЕЗНЕННОЕ ЛЕЧЕНИЕ И РЕСТАВРАЦИЯ",
-      en: "100% PAINLESS TREATMENT & RESTORATION",
+      uz: "✦ 100% OG'RIQSIZ BADIIY RESTAVRATSIYA",
+      ru: "✦ 100% БЕЗБОЛЕЗНЕННОЕ ЛЕЧЕНИЕ И РЕСТАВРАЦИЯ",
+      en: "✦ 100% PAINLESS AESTHETIC RESTORATION",
     },
     title: {
-      uz: "Terapiya (Tishlarni og'riqsiz davolash va restavratsiya)",
-      ru: "Терапия (Безболезненное лечение и реставрация зубов)",
-      en: "Therapy (Painless Tooth Treatment & Aesthetic Restoration)",
+      uz: "Terapiya va Badiiy Restavratsiya",
+      ru: "Терапия и Художественная Реставрация",
+      en: "Therapy & Aesthetic Restoration",
     },
     desc: {
-      uz: "Karies, chuqur karies, pulpit va nerv yallig'lanishini Orablok va Supercain Forte anesteziyasi ostida davolash. Charisma (Germaniya) va DenFil (Koreya) kompozitlari bilan badiiy tiklash.",
-      ru: "Лечение кариеса любой сложности и каналов под анестезией Ораблок и Суперкаин Форте. Реставрация зубов нанокомпозитами Charisma (Германия) и DenFil (Корея).",
-      en: "Gentle treatment of cavities and root canals under Orabloc & Supercain Forte micro-anesthesia, with artistic restoration using Charisma (Germany) and DenFil (Korea) composites.",
+      uz: "Karies, chuqur karies, pulpit va nerv yallig'lanishini Orablok hamda Supercain Forte anesteziyasi ostida 100% og'riqsiz davolash. Charisma (Germaniya) va DenFil (Janubiy Koreya) kompozitlari bilan tishning tabiiy shaklini badiiy tiklash.",
+      ru: "Лечение кариеса любой сложности, пульпита и корневых каналов под анестезией Ораблок и Суперкаин Форте на 100% без боли. Художественное восстановление зубов нанокомпозитами Charisma (Германия) и DenFil (Корея).",
+      en: "100% painless treatment of cavities and root canals under Orabloc & Supercain Forte micro-anesthesia, with artistic restoration using genuine Charisma (Germany) and DenFil (Korea) composites.",
     },
     options: [
       { name: "Charisma (Germaniya) Nano-Restavratsiya", desc: { uz: "Mikro-shisha zarrachali 'xameleon' kompozit", ru: "Немецкий микростекольный нанокомпозит", en: "German microglass chameleon composite" } },
@@ -47,7 +48,7 @@ const treatments = [
       { name: "Pulpit & Kanal Davolash (Endodontiya)", desc: { uz: "Orablok anesteziyasi ostida 3D germetik steril plombalash", ru: "3D-обтурация под анестезией Ораблок", en: "3D hermetic root canal sealing under Orabloc" } },
     ],
     durationPerUnit: 35,
-    warranty: { uz: "Rasmiy sifat kafolati", ru: "Официальная гарантия", en: "Official quality warranty" },
+    warranty: { uz: "Rasmiy sifat kafolati", ru: "Официальная гарантия качества", en: "Official quality warranty" },
     features: [
       { uz: "2 bosqichli og'riqsizlantirish", ru: "Двухэтапная анестезия", en: "Two-stage gentle numbing" },
       { uz: "Tabiiy rang va nur o'tkazuvchanlik", ru: "Идеальный подбор цвета", en: "Exact shade & translucency" },
@@ -60,17 +61,18 @@ const treatments = [
     image: assets.treatment_crowns,
     unitLabel: { uz: "birlik dona", ru: "единица(ы)", en: "unit(s)" },
     maxUnits: 14,
-    shortTitle: { uz: "2. Ortopediya", ru: "2. Ортопедия", en: "2. Orthopedics" },
+    shortTitle: { uz: "Ortopediya", ru: "Ортопедия", en: "Orthopedics" },
+    tagBadge: "💎 Sirkon & Vinirlar",
     icon: <DentalVeneerCrown className="w-5 h-5" />,
     badgeTitle: {
-      uz: "YUQORI SIFATLI TISH QO'YISH & PROTEZLASH",
-      ru: "ВЫСОКОТОЧНОЕ ПРОТЕЗИРОВАНИЕ И УСТАНОВКА ЗУБОВ",
-      en: "PRECISION TOOTH REPLACEMENT & PROSTHETICS",
+      uz: "✦ CAD/CAM MONOLIT SIRKONIY VA PROTEZLAR",
+      ru: "✦ ВЫСОКОТОЧНОЕ ЦИРКОНИЕВОЕ ПРОТЕЗИРОВАНИЕ",
+      en: "✦ PRECISION CAD/CAM ZIRCONIA & PROSTHETICS",
     },
     title: {
-      uz: "Ortopediya (Yuqori sifatli tish qo'yish, protezlash)",
-      ru: "Ортопедия (Высококачественное протезирование и установка зубов)",
-      en: "Orthopedics (High-Quality Tooth Placement & Prosthetics)",
+      uz: "Ortopediya va Sirkon Protezlash",
+      ru: "Ортопедия и Циркониевое Протезирование",
+      en: "Orthopedics & Zirconia Prosthetics",
     },
     desc: {
       uz: "Yo'qotilgan va yemirilgan tishlarni metall-siz monolit sirkoniy, IPS E.max keramik karonkalar, vinirlar hamda qulay zamonaviy protezlar bilan tiklash.",
@@ -96,20 +98,21 @@ const treatments = [
     image: assets.treatment_implant,
     unitLabel: { uz: "implant dona", ru: "имплант(ов)", en: "implant unit(s)" },
     maxUnits: 10,
-    shortTitle: { uz: "3. Implantatsiya", ru: "3. Имплантация", en: "3. Implantation" },
+    shortTitle: { uz: "Implantatsiya", ru: "Имплантация", en: "Implantation" },
+    tagBadge: "🔩 Mega'Gen & AnyRidge",
     icon: <DentalImplantFixture className="w-5 h-5" />,
     badgeTitle: {
-      uz: "GERMANIYA VA JANUBIY KOREYA BIOTITAN TIZIMLARI",
-      ru: "ПРЕМИАЛЬНЫЕ СИСТЕМЫ ИЗ ГЕРМАНИИ И ЮЖНОЙ КОРЕИ",
-      en: "PREMIUM GERMAN & SOUTH KOREAN IMPLANT SYSTEMS",
+      uz: "✦ GERMANIYA VA JANUBIY KOREYA BIOTITAN TIZIMLARI",
+      ru: "✦ ПРЕМИАЛЬНЫЙ БИОТИТАН ИЗ ГЕРМАНИИ И КОРЕИ",
+      en: "✦ PREMIUM GERMAN & SOUTH KOREAN BIO-TITANIUM",
     },
     title: {
-      uz: "Implantatsiya (Germaniya va Koreya mahsulotlari)",
-      ru: "Имплантация (Премиальные импланты из Германии и Кореи)",
-      en: "Implantation (German & Korean Premium Systems)",
+      uz: "Germaniya va Koreya Implantatsiyasi",
+      ru: "Дентальная Имплантация (Германия и Корея)",
+      en: "German & South Korean Dental Implants",
     },
     desc: {
-      uz: "Yo'qotilgan tishlarni Janubiy Koreyaning Mega'Gen hamda Germaniyaning AnyRidge (AnyRidch) va DXL original biotitan implantlari bilan 15-20 daqiqada og'riqsiz o'rnatish.",
+      uz: "Yo'qotilgan tishlarni Janubiy Koreyaning Mega'Gen hamda Germaniyaning AnyRidge va DXL original biotitan implantlari bilan 15-20 daqiqada 100% og'riqsiz o'rnatish.",
       ru: "Восстановление зубов без обточки соседних оригинальными титановыми имплантами Mega'Gen (Корея), AnyRidge (Германия) и DXL (Германия) за 15-20 минут без боли.",
       en: "Gentle 15-20 minute tooth replacement using genuine biocompatible titanium implants: Mega'Gen (Korea), AnyRidge (Germany), and DXL (Germany) with lifetime warranty.",
     },
@@ -119,7 +122,7 @@ const treatments = [
       { name: "DXL (Germaniya)", desc: { uz: "Sof tibbiy biotitan Grade 4/5 va mikron konus birikma", ru: "Чистый биотитан Grade 4/5 с конусным соединением", en: "Medical Grade 4/5 pure bio-titanium cone" } },
     ],
     durationPerUnit: 20,
-    warranty: { uz: "Umrbod rasmiy kafolat", ru: "Пожизненная гарантия", en: "Lifetime warranty" },
+    warranty: { uz: "Umrbod rasmiy kafolat", ru: "Пожизненная официальная гарантия", en: "Lifetime official warranty" },
     features: [
       { uz: "Qo'shni tishlar charxlanmaydi", ru: "Без обточки соседних зубов", en: "Adjacent teeth preserved" },
       { uz: "Orablok & Supercain anesteziyasi", ru: "Анестезия Ораблок и Суперкаин", en: "Orabloc & Supercain anesthesia" },
@@ -132,17 +135,18 @@ const treatments = [
     image: assets.treatment_surgery,
     unitLabel: { uz: "tish dona", ru: "зуб(а)", en: "tooth / teeth" },
     maxUnits: 4,
-    shortTitle: { uz: "4. Xirurgiya", ru: "4. Хирургия", en: "4. Surgery" },
+    shortTitle: { uz: "Xirurgiya", ru: "Хирургия", en: "Oral Surgery" },
+    tagBadge: "🛡️ Orablok & Supercain",
     icon: <DentalSurgeryExtraction className="w-5 h-5" />,
     badgeTitle: {
-      uz: "OG'RIQSIZ & ASORATSIZ ATRAVMATIK XIRURGIYA",
-      ru: "БЕЗБОЛЕЗНЕННОЕ УДАЛЕНИЕ ЗУБОВ БЕЗ ОСЛОЖНЕНИЙ",
-      en: "PAINLESS & COMPLICATION-FREE ATRAUMATIC SURGERY",
+      uz: "✦ ATRAVMATIK VA 100% OG'RIQSIZ XIRURGIYA",
+      ru: "✦ АТРАВМАТИЧНАЯ ХИРУРГИЯ И УДАЛЕНИЕ БЕЗ БОЛИ",
+      en: "✦ ATRAUMATIC & 100% PAIN-FREE SURGERY",
     },
     title: {
-      uz: "Xirurgiya (Og'riqsiz va asoratsiz tish olish)",
-      ru: "Хирургия (Безболезненное и атравматичное удаление зубов без осложнений)",
-      en: "Surgery (Painless & Complication-Free Tooth Extraction)",
+      uz: "Atravmatik Jarrohlik va Tish Olish",
+      ru: "Атравматичная Хирургия и Удаление Зубов",
+      en: "Atraumatic Oral Surgery & Extraction",
     },
     desc: {
       uz: "Murakkab aql tishlari va singan ildizlarni Orablok, Supercain Forte va Artikain anesteziyasi ostida jag' suyagini asrab, 100% og'riqsiz va asoratsiz sug'urish.",
@@ -167,17 +171,18 @@ const treatments = [
     image: assets.treatment_braces,
     unitLabel: { uz: "jag' (yuqori/pastki)", ru: "челюсть (верх/низ)", en: "dental arch" },
     maxUnits: 2,
-    shortTitle: { uz: "5. Ortodontiya", ru: "5. Ортодонтия", en: "5. Orthodontics" },
+    shortTitle: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
+    tagBadge: "✨ Zamonaviy Breketlar",
     icon: <DentalBracesIcon className="w-5 h-5" />,
     badgeTitle: {
-      uz: "NOTEKIS TISHLARNI BREKETLAR BILAN TO'G'RILASH",
-      ru: "ВЫРАВНИВАНИЕ ЗУБОВ И ПРИКУСА БРЕКЕТАМИ",
-      en: "ALIGNMENT OF CROOKED TEETH WITH BRACES",
+      uz: "✦ ZAMONAVIY ESTETIK BREKETLAR BILAN TEKISLASH",
+      ru: "✦ ВЫРАВНИВАНИЕ ЗУБОВ И ПРИКУСА БРЕКЕТАМИ",
+      en: "✦ MODERN BITE CORRECTION WITH BRACES",
     },
     title: {
-      uz: "Ortodontiya (Qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
-      ru: "Ортодонтия (Исправление прикуса и выравнивание кривых зубов брекетами)",
-      en: "Orthodontics (Bite Correction & Alignment of Crooked Teeth with Braces)",
+      uz: "Ortodontiya va Breket Tizimlari",
+      ru: "Ортодонтия и Современные Брекеты",
+      en: "Orthodontics & Modern Braces",
     },
     desc: {
       uz: "Tishlarning qiyshiqligi, orasi ochiqligi (diastema) va murakkab tishlash (prikus) nuqsonlarini zamonaviy metall va keramik breket tizimlari yordamida tekislash.",
@@ -273,24 +278,33 @@ const Interactive3DCostCalculator = () => {
           </p>
         </div>
 
-        {/* 9 Specialty 3D Tabs */}
-        <div className="flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2 pb-2 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
+        {/* 5 Specialty 3D Elevated Tabs */}
+        <div className="flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2.5 pb-2 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
           {treatments.map((t) => {
             const isSelected = selectedId === t.id;
             return (
               <button
                 key={t.id}
                 onClick={() => handleTreatmentChange(t.id)}
-                className={`flex shrink-0 whitespace-nowrap items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl text-xs font-bold transition-all duration-300 cursor-pointer ${
+                className={`flex shrink-0 whitespace-nowrap items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs font-bold transition-all duration-300 cursor-pointer ${
                   isSelected
-                    ? "bg-primary text-white shadow-luxury scale-105 ring-2 ring-primary/20"
-                    : "bg-amber-50/70 hover:bg-amber-100/70 text-slate-700 border border-amber-200/50 hover:scale-[1.02]"
+                    ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white shadow-[0_8px_25px_rgba(255,157,80,0.35)] scale-105 ring-2 ring-primary/30"
+                    : "bg-white/95 hover:bg-amber-50/80 text-slate-700 border border-amber-200/80 shadow-2xs hover:scale-[1.02]"
                 }`}
               >
-                <span className={`transition-transform duration-300 ${isSelected ? "scale-110" : ""}`}>
+                <span className={`transition-transform duration-300 ${isSelected ? "scale-115 text-white" : "text-primary"}`}>
                   {t.icon}
                 </span>
-                <span>{t.shortTitle[lang]}</span>
+                <span className="tracking-tight">{t.shortTitle[lang]}</span>
+                <span
+                  className={`text-[9.5px] px-2 py-0.5 rounded-full font-extrabold ${
+                    isSelected
+                      ? "bg-white/20 text-white"
+                      : "bg-amber-100/70 text-slate-600"
+                  }`}
+                >
+                  {t.tagBadge.split(" ")[0]} {t.tagBadge.split(" ")[1]}
+                </span>
               </button>
             );
           })}
@@ -321,14 +335,14 @@ const Interactive3DCostCalculator = () => {
             {/* Left Info Column (8 cols) */}
             <div className="lg:col-span-8 space-y-6 [transform-style:preserve-3d]">
               {/* Luxury Gradient Sticker */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-red-500/15 via-amber-500/15 to-transparent text-primary text-[11px] font-black uppercase tracking-wider border border-primary/25 translate-z-20 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-red-500/15 via-amber-500/15 to-transparent text-primary text-[11px] font-black uppercase tracking-wider border border-primary/25 translate-z-20 shadow-xs">
                 <IconSparkleStar className="w-3.5 h-3.5 text-brandOrange" />
                 <span>{activeTreatment.badgeTitle[lang]}</span>
               </div>
 
               {/* Title & Description */}
               <div className="space-y-2 translate-z-20">
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-serif-classic leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-serif-classic leading-tight">
                   {activeTreatment.title[lang]}
                 </h3>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -415,75 +429,89 @@ const Interactive3DCostCalculator = () => {
                 <div className="flex items-center gap-2 text-slate-700">
                   <IconClock className="w-4 h-4 text-brandOrange" />
                   <span className="font-semibold">{lang === "uz" ? "Klinik Vaqt:" : lang === "ru" ? "Время приёма:" : "Estimated Time:"}</span>
-                  <span className="font-bold text-slate-900 bg-amber-50 px-2 py-0.5 rounded-lg border border-amber-200/50">
+                  <span className="font-bold text-slate-900 bg-amber-50 px-2.5 py-0.5 rounded-lg border border-amber-200/50">
                     {formattedDuration}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <IconShieldCheck className="w-4 h-4 text-emerald-500" />
                   <span className="font-semibold">{lang === "uz" ? "Rasmiy Kafolat:" : lang === "ru" ? "Клиническая Гарантия:" : "Warranty:"}</span>
-                  <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-200/50">
+                  <span className="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-lg border border-emerald-200/50">
                     {activeTreatment.warranty[lang]}
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Right Action 3D Box (4 cols) with Clinical Photo & Stickers */}
+            {/* Right Action 3D Box (4 cols) with Bespoke Clinical Photo & Frosted Glass Badges */}
             <div className="lg:col-span-4 p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-luxury flex flex-col justify-between space-y-5 text-center translate-z-30 hover:scale-[1.02] transition-transform duration-300">
-              <div className="space-y-3.5">
-                {/* Clinical Photo Preview with Frosted Glass Badges */}
-                <div className="relative h-44 w-full rounded-2xl overflow-hidden border border-amber-200/90 shadow-md group">
+              <div className="space-y-4">
+                {/* Clinical Photo Preview with Frosted Glass Badges (NO HEAVY BLACK BOXES) */}
+                <div className="relative h-48 w-full rounded-2xl overflow-hidden border border-amber-200/90 shadow-md group">
                   <img
                     src={activeTreatment.image}
                     alt={activeTreatment.title[lang]}
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                  <div className="absolute top-2.5 left-2.5 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-900 border border-white/80 text-[10.5px] font-black tracking-wide shadow-xs">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  {/* Soft Luxury Vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-black/10 pointer-events-none" />
+
+                  {/* Top Frosted Glass Badges */}
+                  <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-2 z-10 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-slate-900 border border-white/80 text-[11px] font-black tracking-wide shadow-md">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                       <span>{activeTreatment.shortTitle[lang]}</span>
                     </span>
-                  </div>
-                  <div className="absolute bottom-2.5 left-3 right-3 text-left z-10 flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] font-bold text-amber-200 uppercase tracking-wider">
-                        {lang === "uz" ? "Stomatolog Orifjon" : lang === "ru" ? "Стоматолог Орифжон" : "Dentist Orifjon"}
-                      </p>
-                      <p className="text-xs font-bold text-white truncate">
-                        {units} {activeTreatment.unitLabel[lang]} · {formattedDuration}
-                      </p>
-                    </div>
-                    <span className="w-8 h-8 rounded-xl bg-white/90 backdrop-blur-md text-primary flex items-center justify-center shrink-0 shadow-sm">
-                      {activeTreatment.icon}
+
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] font-black tracking-wide shadow-md border border-amber-300/40">
+                      <span>{activeTreatment.tagBadge}</span>
                     </span>
+                  </div>
+
+                  {/* Bottom Floating Frosted Glass Control Bar */}
+                  <div className="absolute bottom-2.5 inset-x-2.5 z-10 pointer-events-none">
+                    <div className="p-2.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/90 shadow-md flex items-center justify-between gap-2 text-left">
+                      <div className="min-w-0">
+                        <p className="text-[9.5px] font-black uppercase tracking-wider text-primary flex items-center gap-1">
+                          <IconSparkleStar className="w-3 h-3 text-brandOrange" />
+                          <span>{lang === "uz" ? "Stomatolog Orifjon" : lang === "ru" ? "Стоматолог Орифжон" : "Dentist Orifjon"}</span>
+                        </p>
+                        <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
+                          {units} {activeTreatment.unitLabel[lang]} · {formattedDuration}
+                        </p>
+                      </div>
+                      <span className="w-8 h-8 rounded-lg bg-amber-50 text-primary flex items-center justify-center shrink-0 shadow-2xs border border-amber-200">
+                        {activeTreatment.icon}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-amber-50/70 border border-amber-200/60 text-left space-y-1">
-                  <p className="text-[11px] font-bold text-slate-800 flex items-center gap-1.5">
-                    <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                {/* Emerald & Ivory Reassurance Guarantee Card */}
+                <div className="p-3.5 rounded-2xl bg-gradient-to-br from-emerald-50/80 via-white to-amber-50/60 border border-emerald-300/80 text-left space-y-1 shadow-2xs">
+                  <p className="text-xs font-extrabold text-emerald-800 flex items-center gap-1.5">
+                    <IconShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>{activeTreatment.warranty[lang]}</span>
                   </p>
-                  <p className="text-[10px] text-slate-500 leading-snug">
+                  <p className="text-[11px] text-slate-600 leading-snug">
                     {lang === "uz"
-                      ? "Navbatsiz bepul dastlabki ko'rik va to'liq 3D muolaja rejasi."
+                      ? "Navbatsiz bepul dastlabki ko'rik, 100% og'riqsizlantirish kafolati va to'liq 3D muolaja rejasi."
                       : lang === "ru"
-                      ? "Бесплатная первичная консультация и наглядный расчет."
-                      : "Zero queue consultation and transparent clinical roadmap."}
+                      ? "Бесплатная консультация, 100% обезболивание и прозрачный клинический план."
+                      : "Zero queue consultation, 100% painless care guarantee and transparent plan."}
                   </p>
                 </div>
               </div>
 
+              {/* Magnetic Brand Shimmer Booking Button */}
               <button
                 onClick={() => openBooking(activeTreatment.serviceId)}
-                className="relative overflow-hidden w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-bold text-xs uppercase tracking-wider shadow-luxury transition-all cursor-pointer hover:shadow-luxury-lg hover:-translate-y-0.5 active:translate-y-0 group"
+                className="relative overflow-hidden w-full py-4 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer group"
               >
                 <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  <span>{lang === "uz" ? "Shu Xizmatga Yozilish" : lang === "ru" ? "Записаться на Услугу" : "Book This Service"}</span>
-                  <span>→</span>
+                  <span>{lang === "uz" ? "Shu Xizmatga Yozilish" : lang === "ru" ? "Записаться на Эту Услугу" : "Book This Service"}</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </button>
             </div>

@@ -117,7 +117,7 @@ const Doctor3DCard = ({
 
         {/* 3D Depth Layer 1: High-Definition Doctor Presentation */}
         <div
-          className="relative w-full aspect-[4/4.5] overflow-hidden bg-gradient-to-b from-slate-50/50 via-amber-50/30 to-amber-100/40"
+          className="relative w-full aspect-[3/3.8] overflow-hidden bg-gradient-to-b from-slate-50/50 via-amber-50/30 to-amber-100/40"
           style={{
             transform: isHovered ? "translateZ(20px)" : "translateZ(0px)",
             transition: "transform 0.4s ease-out",
@@ -128,31 +128,34 @@ const Doctor3DCard = ({
             <img
               src={imageJpg}
               alt="Stomatolog Orifjon — Mansurov Orifjon Alimbekovich"
-              width={600}
-              height={675}
+              width={896}
+              height={1200}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-[center_top] filter transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              className="w-full h-full object-cover object-top filter transition-transform duration-700 ease-out group-hover:scale-[1.04]"
             />
           </picture>
 
+          {/* Soft Bottom Gradient to blend into footer */}
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
+
           {/* Top In-Image Frosted Glass Status Strip */}
           <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-20 pointer-events-none">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-black tracking-wide text-slate-900 border border-white/80 shadow-md">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-black tracking-wide text-slate-900 border border-white/80 shadow-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>{lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}</span>
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] font-black tracking-wide shadow-md border border-amber-300/40">
+            <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10.5px] font-black tracking-wide shadow-md border border-amber-300/40">
               <span>🇩🇪 & 🇰🇷 Standart</span>
             </span>
           </div>
 
           {/* Bottom Floating Interactive Educational Chips */}
           <div className="absolute bottom-3 inset-x-3 flex flex-wrap items-center justify-center gap-1.5 z-20 pointer-events-none">
-            <span className="px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 border border-amber-200/60 shadow-xs">
+            <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-extrabold text-slate-900 border border-white/80 shadow-sm">
               🎓 Andijon Tib. Kolleji (2001–2004)
             </span>
-            <span className="px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 border border-amber-200/60 shadow-xs">
+            <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-extrabold text-slate-900 border border-white/80 shadow-sm">
               🎓 O'shDU (2017–2022)
             </span>
           </div>

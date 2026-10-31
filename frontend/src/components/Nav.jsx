@@ -322,7 +322,13 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                               onClick={() => setServicesDropdown(false)}
                               className="text-[11px] font-bold text-primary hover:underline flex items-center gap-1"
                             >
-                              <span>Barcha 9 xizmatni ko'rish</span>
+                              <span>
+                                {lang === "uz"
+                                  ? "Barcha 5 asosiy xizmatni ko'rish"
+                                  : lang === "ru"
+                                  ? "Смотреть все 5 основных услуг"
+                                  : "Explore all 5 core specialties"}
+                              </span>
                               <span>→</span>
                             </NavLink>
                           </div>

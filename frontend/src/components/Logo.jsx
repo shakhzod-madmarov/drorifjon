@@ -22,22 +22,18 @@ const Logo = ({ className = "h-9 sm:h-10", inverted = false }) => {
 
   return (
     <div className="inline-flex items-center gap-2.5 sm:gap-3 select-none group">
-      {/* 3D Embellished Logo Emblem Container */}
-      <div className={`relative p-1 sm:p-1.5 rounded-2xl transition-all duration-300 group-hover:scale-105 shrink-0 ${
-        inverted
-          ? "bg-white/10 border border-white/20 shadow-inner"
-          : "bg-gradient-to-br from-white via-amber-50/60 to-cyan-50/40 border border-amber-200/80 shadow-[0_4px_16px_rgba(255,157,80,0.14)] group-hover:border-primary/60 group-hover:shadow-[0_6px_22px_rgba(255,157,80,0.25)]"
-      }`}>
+      {/* Pristine Logo Emblem with 0 Background */}
+      <div className="relative shrink-0 transition-transform duration-300 group-hover:scale-105">
         <img
           src="/logo_icon.png"
           alt={altText}
-          width={40}
-          height={40}
+          width={42}
+          height={42}
           decoding="async"
-          className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-3`}
+          className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-3 drop-shadow-sm`}
         />
-        {/* Subtle holographic corner sparkle */}
-        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#55E07E] opacity-90 animate-pulse" />
+        {/* Subtle glowing active pulse indicator */}
+        <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#55E07E] opacity-90 animate-pulse" />
       </div>
 
       {/* Brand Name & Subtitle Typography */}
