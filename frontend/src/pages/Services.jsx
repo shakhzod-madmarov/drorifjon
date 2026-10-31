@@ -35,11 +35,11 @@ const Services = ({ onOpenBooking }) => {
 
   const categories = [
     { id: "all", label: { uz: "Barcha Yo'nalishlar", ru: "Все Направления", en: "All Specialties" } },
-    { id: "terapiya", label: { uz: "1. Terapiya", ru: "1. Терапия", en: "1. Therapy" } },
-    { id: "ortopediya", label: { uz: "2. Ortopediya", ru: "2. Ортопедия", en: "2. Orthopedics" } },
-    { id: "implantatsiya", label: { uz: "3. Implantatsiya", ru: "3. Имплантация", en: "3. Implantation" } },
-    { id: "xirurgiya", label: { uz: "4. Xirurgiya", ru: "4. Хирургия", en: "4. Surgery" } },
-    { id: "ortodontiya", label: { uz: "5. Ortodontiya", ru: "5. Ортодонтия", en: "5. Orthodontics" } },
+    { id: "terapiya", label: { uz: "🦷 Terapiya", ru: "🦷 Терапия", en: "🦷 Therapy" } },
+    { id: "ortopediya", label: { uz: "👑 Ortopediya", ru: "👑 Ортопедия", en: "👑 Orthopedics" } },
+    { id: "implantatsiya", label: { uz: "🔩 Implantatsiya", ru: "🔩 Имплантация", en: "🔩 Implantation" } },
+    { id: "xirurgiya", label: { uz: "🛡️ Xirurgiya", ru: "🛡️ Хирургия", en: "🛡️ Surgery" } },
+    { id: "ortodontiya", label: { uz: "✨ Ortodontiya", ru: "✨ Ортодонтия", en: "✨ Orthodontics" } },
   ];
 
   const filteredServices = SERVICES_CATALOG.filter((s) => {
@@ -162,7 +162,7 @@ const Services = ({ onOpenBooking }) => {
                     />
                   </picture>
                   {/* Visual Depth Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-black/15 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
 
                   {/* Top Bespoke Frosted Glass Stickers */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">

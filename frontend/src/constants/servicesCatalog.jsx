@@ -17,9 +17,9 @@ export const SERVICES_CATALOG = [
     icon: <DentalToothMolar className="w-7 h-7 text-primary" />,
     image: assets.treatment_therapy,
     badge: {
-      uz: "100% OG'RIQSIZ DAVOLASH",
-      ru: "100% БЕЗБОЛЕЗНЕННОЕ ЛЕЧЕНИЕ",
-      en: "100% PAINLESS THERAPY",
+      uz: "100% Og'riqsiz Terapiya",
+      ru: "100% Без Боли",
+      en: "100% Pain-Free Therapy",
     },
     techTag: {
       uz: "Charisma (Germaniya) & DenFil (Koreya)",
@@ -32,9 +32,9 @@ export const SERVICES_CATALOG = [
       en: "Natural Enamel Anatomy",
     },
     badgeTheme: {
-      badgeBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      warrantyBg: "bg-teal-950/85 text-teal-300 border-teal-400/50",
-      accentGlow: "hover:shadow-emerald-500/10",
+      badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
+      warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
+      accentGlow: "hover:shadow-emerald-500/15",
     },
     category: {
       uz: "Terapevtik Stomatologiya",
@@ -132,9 +132,9 @@ export const SERVICES_CATALOG = [
     icon: <DentalVeneerCrown className="w-7 h-7 text-primary" />,
     image: assets.treatment_crowns,
     badge: {
-      uz: "YUQORI SIFATLI TISH QO'YISH",
-      ru: "ВЫСОКОТОЧНОЕ ПРОТЕЗИРОВАНИЕ",
-      en: "PRECISION PROSTHETICS",
+      uz: "Yuqori Aniq Protezlash",
+      ru: "Точное Протезирование",
+      en: "Precision Prosthetics",
     },
     techTag: {
       uz: "Sirkon & Keramika & Protezlar",
@@ -147,9 +147,9 @@ export const SERVICES_CATALOG = [
       en: "100% Chewing & Aesthetics",
     },
     badgeTheme: {
-      badgeBg: "bg-amber-950/85 text-amber-300 border-amber-400/50",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-amber-500/10",
+      badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
+      warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
+      accentGlow: "hover:shadow-amber-500/15",
     },
     category: {
       uz: "Ortopedik Stomatologiya",
@@ -232,9 +232,9 @@ export const SERVICES_CATALOG = [
     icon: <DentalImplantFixture className="w-7 h-7 text-primary" />,
     image: assets.treatment_implant,
     badge: {
-      uz: "GERMANIYA VA KOREYA MAHSULOTLARI",
-      ru: "СИСТЕМЫ ИЗ ГЕРМАНИИ И КОРЕИ",
-      en: "GERMAN & KOREAN SYSTEMS",
+      uz: "Premium Biotitan Implant",
+      ru: "Премиум Биотитан",
+      en: "Bio-Titanium Implants",
     },
     techTag: {
       uz: "Mega'Gen · AnyRidge · DXL",
@@ -247,9 +247,9 @@ export const SERVICES_CATALOG = [
       en: "99.5% Integration",
     },
     badgeTheme: {
-      badgeBg: "bg-sky-950/85 text-sky-300 border-sky-400/50",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-sky-500/10",
+      badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
+      warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
+      accentGlow: "hover:shadow-sky-500/15",
     },
     category: {
       uz: "Dental Implantologiya",
@@ -258,7 +258,7 @@ export const SERVICES_CATALOG = [
     },
     title: {
       uz: "Germaniya va Koreya Implantatsiyasi",
-      ru: "Дентальная Имплантация (Германия/Корея)",
+      ru: "Дентальная Имплантация",
       en: "German & Korean Dental Implantation",
     },
     shortDesc: {
@@ -344,9 +344,9 @@ export const SERVICES_CATALOG = [
     icon: <DentalSurgeryExtraction className="w-7 h-7 text-primary" />,
     image: assets.treatment_surgery,
     badge: {
-      uz: "ATRAVMATIK VA XAVFSIZ",
-      ru: "АТРАВМАТИЧНО И БЕЗОПАСНО",
-      en: "ATRAUMATIC & SAFE",
+      uz: "Atravmatik Jarrohlik",
+      ru: "Атравматичное Удаление",
+      en: "Atraumatic Surgery",
     },
     techTag: {
       uz: "Supercain Forte · Artikain · Orablok",
@@ -359,9 +359,9 @@ export const SERVICES_CATALOG = [
       en: "Bone Preservation",
     },
     badgeTheme: {
-      badgeBg: "bg-rose-950/85 text-rose-300 border-rose-400/50",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-rose-500/10",
+      badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
+      warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
+      accentGlow: "hover:shadow-rose-500/15",
     },
     category: {
       uz: "Jarrohlik Stomatologiyasi",
@@ -456,9 +456,9 @@ export const SERVICES_CATALOG = [
     icon: <DentalBracesIcon className="w-7 h-7 text-primary" />,
     image: assets.treatment_braces,
     badge: {
-      uz: "MUKAMMAL TISHLASH & TABASSUM",
-      ru: "ИДЕАЛЬНЫЙ ПРИКУС И УЛЫБКА",
-      en: "PERFECT BITE & SMILE",
+      uz: "Mukammal Tabassum",
+      ru: "Идеальный Прикус",
+      en: "Perfect Straight Smile",
     },
     techTag: {
       uz: "Zamonaviy Breket Tizimlari",
@@ -471,9 +471,9 @@ export const SERVICES_CATALOG = [
       en: "Metal · Ceramic · Sapphire",
     },
     badgeTheme: {
-      badgeBg: "bg-indigo-950/85 text-indigo-300 border-indigo-400/50",
-      warrantyBg: "bg-emerald-950/85 text-emerald-300 border-emerald-400/50",
-      accentGlow: "hover:shadow-indigo-500/10",
+      badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
+      warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
+      accentGlow: "hover:shadow-indigo-500/15",
     },
     category: {
       uz: "Ortodontiya",

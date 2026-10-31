@@ -389,7 +389,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                   </picture>
 
                   {/* Soft Luxury Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-black/15 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
 
                   {/* Top Frosted Glass Badges (NO HEAVY BLACK BOXES) */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
@@ -408,8 +408,8 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
 
                   {/* Bottom Duration & Pain-Free Indicator over Photo */}
                   <div className="absolute bottom-3 right-3 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-white text-[10px] font-bold border border-white/20 shadow-xs">
-                      <IconClock className="w-3 h-3 text-amber-300" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-800 text-[10.5px] font-bold border border-white/90 shadow-md">
+                      <IconClock className="w-3.5 h-3.5 text-amber-500" />
                       <span>{meta.durationText[lang]}</span>
                     </span>
                   </div>
