@@ -18,6 +18,15 @@ import { SERVICES_CATALOG } from "../constants/servicesCatalog";
 import CertificatesShowcase from "../components/CertificatesShowcase";
 import ClinicEquipmentShowcase from "../components/ClinicEquipmentShowcase";
 import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
+import ClinicalTickerMarquee from "../components/ClinicalTickerMarquee";
+import Floating3DShapes from "../components/Floating3DShapes";
+import {
+  HoloGoldStamp,
+  DigitalCyanTag,
+  ZeroPainShield,
+  BioTitaniumBadge,
+  OriginPill,
+} from "../components/Bespoke3DStickers";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
@@ -100,59 +109,84 @@ const HeroSection = ({ onOpenBooking }) => {
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-white border border-amber-200/90 shadow-luxury mt-3">
-      {/* Brand Accent Top Strip */}
-      <div className="h-2 w-full bg-gradient-to-r from-primary via-brandCyan to-brandGreen" />
+    <section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#FFFDF8] via-[#FFF9D8]/50 to-[#E3FBFC]/30 border-2 border-amber-300/80 shadow-2xl mt-2 p-5 sm:p-10 lg:p-12 [transform-style:preserve-3d]">
+      {/* Ambient Floating 3D Shapes & Lighting */}
+      <Floating3DShapes />
 
-      <div className="p-5 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* Top Metallic Brand Sheen Accent Strip */}
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-brandCyan to-brandGreen animate-holo-shine" />
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-6 text-left">
-          {/* Status Badge */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 text-primary border border-orange-200/60 text-[11px] font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              {t.badge}
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50/80 text-amber-900 border border-amber-200/60 text-[11px] font-semibold">
-              <IconGraduationCap className="w-3.5 h-3.5 text-brandOrange shrink-0" />
-              <span>
-                {lang === "ru"
-                  ? "Андижанский мед. колледж (2001-2004) & ОшГУ (2017-2022)"
-                  : lang === "en"
-                  ? "Andijan Medical College (2001-2004) & Osh State Univ (2017-2022)"
-                  : "Andijon Tibbiyot kolleji (2001-2004) & O'shDU (2017-2022)"}
+          {/* Status & Bespoke 3D Stickers Row */}
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-white/95 border border-amber-300 text-slate-800 text-xs font-bold shadow-xs">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
               </span>
+              <span>{t.badge}</span>
             </span>
+
+            <HoloGoldStamp
+              text="20+ Yillik Tajriba"
+              subtext={
+                lang === "ru"
+                  ? "Андижанский мед. колледж & ОшГУ"
+                  : lang === "en"
+                  ? "Andijan Med. & Osh State"
+                  : "Andijon Tib. Kolleji & O'shDU"
+              }
+            />
+
+            <ZeroPainShield
+              label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Pain-Free" : "100% Og'riqsiz"}
+              sublabel="Orablok & Supercain"
+            />
           </div>
 
-          {/* Title & Headline */}
+          {/* Dynamic Headline with Multi-Color 3D Gradient */}
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brandOrange">
-              {t.specialtyTitle}
+            <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-primary flex items-center gap-1.5">
+              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+              <span>{t.specialtyTitle}</span>
             </p>
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1A202C] leading-[1.14] break-words">
-              {t.headline}
+            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.14] break-words">
+              {lang === "uz" ? "Tabiiy va Sog'lom Tabassum Uchun " : lang === "ru" ? "Для Вашей Безупречной Улыбки " : "For Your Naturally Radiant Smile "}
+              <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
+                {lang === "uz" ? "100% Og'riqsiz Zamonaviy Stomatologiya" : lang === "ru" ? "Стоматология 100% Без Боли" : "100% Gentle Modern Dentistry"}
+              </span>
             </h1>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl font-normal">
             {t.subtitle}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3 pt-1">
+          {/* Certified Clinical Materials Badges Row */}
+          <div className="flex flex-wrap items-center gap-2 pt-1">
+            <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
+            <OriginPill flag="🇰🇷" material="DenFil" country="Janubiy Koreya" />
+            <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
+            <OriginPill flag="🔩" material="Mega'Gen & AnyRidge & DXL" country="Germaniya/Koreya" />
+          </div>
+
+          {/* High-Tech CTA Buttons */}
+          <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-3 pt-2">
             <button
               onClick={() => onOpenBooking()}
-              className="relative overflow-hidden inline-flex justify-center items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
+              className="relative overflow-hidden inline-flex justify-center items-center gap-2.5 px-6 sm:px-7 py-4 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-1 active:translate-y-0 transition-all duration-300 cursor-pointer group select-none"
             >
               <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
               <IconClock className="w-4 h-4 text-white relative z-10" />
               <span className="relative z-10">{t.ctaBook}</span>
+              <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
             </button>
 
             <Link
               to={to("/services")}
-              className="inline-flex justify-center items-center gap-2 px-5 py-3.5 rounded-xl bg-amber-50/80 hover:bg-amber-100/70 border border-amber-200/70 text-slate-800 font-semibold text-xs sm:text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xs"
+              className="inline-flex justify-center items-center gap-2 px-6 py-4 rounded-2xl bg-white/95 hover:bg-white border-2 border-amber-300/80 hover:border-primary text-slate-800 font-bold text-xs sm:text-sm shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               <span>{t.ctaServices}</span>
               <span>→</span>
@@ -160,30 +194,30 @@ const HeroSection = ({ onOpenBooking }) => {
 
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center gap-2 px-3.5 py-3 rounded-xl text-primary hover:bg-primary/5 font-semibold text-xs sm:text-sm transition-colors hover:scale-105 duration-200"
+              className="inline-flex justify-center items-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300/80 text-emerald-900 font-bold text-xs sm:text-sm transition-all hover:scale-105 duration-200 shadow-2xs"
             >
-              <IconPhone className="w-4 h-4 text-primary" />
+              <IconPhone className="w-4 h-4 text-emerald-600 animate-bounce" />
               <span>{DOCTOR_INFO.phoneDisplay}</span>
             </a>
           </div>
 
-          {/* 4 Stats Grid with Interactive 3D Depth Motion */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-5 border-t border-amber-100 [perspective:800px]">
-            <div className="p-3 rounded-2xl bg-gradient-to-b from-amber-50/40 to-white border border-amber-200/50 shadow-2xs hover:-translate-y-1.5 hover:scale-[1.03] hover:border-amber-300 hover:shadow-lg transition-all duration-300 cursor-default">
-              <p className="font-serif-classic text-xl sm:text-2xl font-bold text-primary">{t.stat1Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat1Label}</p>
+          {/* 4 Interactive 3D Stats Glass Tiles */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-amber-200/80 [perspective:800px]">
+            <div className="p-3.5 rounded-2xl bg-white/90 border border-amber-300/80 shadow-luxury hover:-translate-y-1.5 hover:scale-[1.03] hover:border-primary transition-all duration-300 cursor-default">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-primary">{t.stat1Num}</p>
+              <p className="text-[11px] font-bold text-slate-700 mt-0.5">{t.stat1Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-gradient-to-b from-amber-50/40 to-white border border-amber-200/50 shadow-2xs hover:-translate-y-1.5 hover:scale-[1.03] hover:border-amber-300 hover:shadow-lg transition-all duration-300 cursor-default">
-              <p className="font-serif-classic text-xl sm:text-2xl font-bold text-brandOrange">{t.stat2Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat2Label}</p>
+            <div className="p-3.5 rounded-2xl bg-white/90 border border-amber-300/80 shadow-luxury hover:-translate-y-1.5 hover:scale-[1.03] hover:border-brandOrange transition-all duration-300 cursor-default">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-brandOrange">{t.stat2Num}</p>
+              <p className="text-[11px] font-bold text-slate-700 mt-0.5">{t.stat2Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-gradient-to-b from-amber-50/40 to-white border border-amber-200/50 shadow-2xs hover:-translate-y-1.5 hover:scale-[1.03] hover:border-amber-300 hover:shadow-lg transition-all duration-300 cursor-default">
-              <p className="font-serif-classic text-xl sm:text-2xl font-bold text-emerald-600">{t.stat3Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat3Label}</p>
+            <div className="p-3.5 rounded-2xl bg-white/90 border border-emerald-300/80 shadow-green hover:-translate-y-1.5 hover:scale-[1.03] hover:border-emerald-500 transition-all duration-300 cursor-default">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-emerald-600">{t.stat3Num}</p>
+              <p className="text-[11px] font-bold text-slate-700 mt-0.5">{t.stat3Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-gradient-to-b from-amber-50/40 to-white border border-amber-200/50 shadow-2xs hover:-translate-y-1.5 hover:scale-[1.03] hover:border-amber-300 hover:shadow-lg transition-all duration-300 cursor-default">
-              <p className="font-serif-classic text-xl sm:text-2xl font-bold text-brandCyan">{t.stat4Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat4Label}</p>
+            <div className="p-3.5 rounded-2xl bg-white/90 border border-cyan-300/80 shadow-cyan hover:-translate-y-1.5 hover:scale-[1.03] hover:border-brandCyan transition-all duration-300 cursor-default">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-brandCyan">{t.stat4Num}</p>
+              <p className="text-[11px] font-bold text-slate-700 mt-0.5">{t.stat4Label}</p>
             </div>
           </div>
         </div>
@@ -204,129 +238,166 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
   const to = useLocalizedPath();
 
+  const specialtyBadges = {
+    terapiya: {
+      sticker: "🌿 100% OG'RIQSIZ RESTAVRATSIYA",
+      materials: "🇩🇪 Charisma & 🇰🇷 DenFil",
+    },
+    ortopediya: {
+      sticker: "👑 YUQORI SIFATLI TISH QO'YISH",
+      materials: "💎 CAD/CAM Sirkon & IPS E.max",
+    },
+    implantatsiya: {
+      sticker: "🔩 GERMANIYA & KOREYA BIOTITAN",
+      materials: "🇰🇷 Mega'Gen · 🇩🇪 AnyRidge · 🇩🇪 DXL",
+    },
+    xirurgiya: {
+      sticker: "🛡️ ATRAVMATIK XIRURGIYA",
+      materials: "💉 Steril Orablok & Supercain",
+    },
+    ortodontiya: {
+      sticker: "✨ MUKAMMAL TABASSUM & TISHLASH",
+      materials: "💎 Metall, Keramika & Elaynerlar",
+    },
+  };
+
   return (
-    <section className="py-12 sm:py-16 space-y-8">
-      <div className="text-center max-w-3xl mx-auto space-y-2">
-        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-medium uppercase tracking-wider bg-primary/5 text-primary border border-primary/20 shadow-2xs">
-          <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
-          <span>{lang === "uz" ? "5 Ta Asosiy Stomatologik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Dental Specialties"}</span>
+    <section className="py-8 sm:py-12 space-y-8">
+      <div className="text-center max-w-3xl mx-auto space-y-2.5">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-amber-300 text-slate-800 shadow-2xs">
+          <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+          <span>{lang === "uz" ? "5 Ta Asosiy Stomatologik Yo'nalish" : lang === "ru" ? "5 Основных Клинических Направлений" : "5 Core Clinical Specialties"}</span>
         </span>
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-serif-classic tracking-tight">
           {lang === "uz"
-            ? "Dr. Mansurov O.A. Stomatologik Yo'nalishlari"
+            ? "Dr. Mansurov O.A. Stomatologik Xizmatlari"
             : lang === "ru"
-            ? "Клинические Направления Д-ра Мансурова О.А."
-            : "Clinical Specialties & Care Directions"}
+            ? "Клинические Услуги Д-ра Мансурова О.А."
+            : "Clinical Specialties & Treatment Directions"}
         </h2>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
           {lang === "uz"
-            ? "20+ yillik tibbiyot tajribasi, Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bilimlari hamda yuqori sifatli zamonaviy materiallar."
+            ? "20+ yillik tibbiyot tajribasi, Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bilimlari hamda sertifikatlangan Germaniya va Koreya materiallari."
             : lang === "ru"
-            ? "Более 20 лет практического опыта, фундаментальные медицинские знания и передовые стоматологические материалы."
-            : "Over 20+ years of healthcare background combining university dentistry training with genuine high-grade materials."}
+            ? "Более 20 лет врачебной практики, классическое медицинское образование и сертифицированные материалы из Германии и Кореи."
+            : "Over 20+ years of healthcare practice combining university dental degrees with genuine certified materials from Germany and Korea."}
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [perspective:1200px]">
-        {SERVICES_CATALOG.map((s) => (
-          <article
-            key={s.id}
-            className={`group bg-white rounded-3xl border border-amber-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2.5 hover:border-primary/50 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d] ${s.badgeTheme?.accentGlow || ""}`}
-          >
-            <div>
-              {/* Photo Banner with Zoom Depth & Authentic Clinical Stickers */}
-              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 [transform-style:preserve-3d]">
-                <img
-                  src={s.image}
-                  alt={s.title[lang]}
-                  width={600}
-                  height={350}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
-                {/* Visual Depth Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/35 pointer-events-none" />
+        {SERVICES_CATALOG.map((s) => {
+          const badgeMeta = specialtyBadges[s.id] || {
+            sticker: s.badge?.[lang] || "100% KAFOLAT",
+            materials: s.techTag?.[lang] || "Sertifikatlangan",
+          };
 
-                {/* Clean, Refined Top Stickers: Hallmark & Warranty */}
-                <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-[10px] font-semibold tracking-wide text-white/95 border border-white/20 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                    <span>{s.badge?.[lang] || s.category[lang]}</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-[10px] font-semibold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-xs">
-                    <IconShieldCheck className="w-3 h-3 text-emerald-400 shrink-0" />
-                    <span>{s.warranty[lang]}</span>
-                  </span>
-                </div>
-              </div>
+          return (
+            <article
+              key={s.id}
+              className={`group bg-white rounded-3xl border-2 border-amber-200/90 shadow-luxury hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:border-primary/70 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d] ${s.badgeTheme?.accentGlow || ""}`}
+            >
+              <div>
+                {/* Photo Banner with Zoom Depth & Bespoke Clinical Stickers */}
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-950 [transform-style:preserve-3d]">
+                  <img
+                    src={s.image}
+                    alt={s.title[lang]}
+                    width={600}
+                    height={350}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
+                  {/* Visual Depth Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-black/30 pointer-events-none" />
 
-              {/* Floating Medical Icon Disc on Image Border & Refined Clinical Pill */}
-              <div className="px-5 -mt-6 relative z-20 flex justify-between items-end">
-                <span className="w-12 h-12 rounded-2xl bg-white shadow-xl border-2 border-amber-200/90 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                  {s.icon}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/5 border border-primary/20 px-2.5 py-1 rounded-full shadow-2xs mb-1">
-                  {s.featurePill?.[lang] || (lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle")}
-                </span>
-              </div>
-
-              {/* Content Body */}
-              <div className="p-5 pt-3 space-y-3">
-                <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">
-                    {s.category[lang]}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
-                    {s.title[lang]}
-                  </h3>
-                  {/* Clean treatment meta row: duration & origin */}
-                  <div className="flex items-center gap-2.5 text-[11px] text-slate-500 font-medium pt-1.5">
-                    <span className="inline-flex items-center gap-1 text-slate-600">
-                      <IconClock className="w-3 h-3 text-amber-500 shrink-0" />
-                      <span>{s.duration[lang]}</span>
+                  {/* Top Bespoke Holographic Stickers */}
+                  <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-950/80 backdrop-blur-md text-[10.5px] font-black tracking-wide text-amber-200 border border-amber-300/40 shadow-md">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                      <span>{badgeMeta.sticker}</span>
                     </span>
-                    <span className="text-slate-300">•</span>
-                    <span className="inline-flex items-center gap-1 text-slate-600 truncate">
-                      <IconSparkleStar className="w-3 h-3 text-amber-500 shrink-0" />
-                      <span>{s.techTag?.[lang] || s.category[lang]}</span>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-950/80 backdrop-blur-md text-[10px] font-bold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-md">
+                      <IconShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <span>{s.warranty[lang]}</span>
                     </span>
                   </div>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed line-clamp-2">
-                    {s.shortDesc[lang]}
-                  </p>
+
+                  {/* In-Photo Bottom Materials Ribbon */}
+                  <div className="absolute bottom-3 inset-x-3 z-10 pointer-events-none">
+                    <span className="inline-block px-2.5 py-0.5 rounded-lg bg-black/60 backdrop-blur-md text-white text-[10px] font-bold border border-white/20">
+                      {badgeMeta.materials}
+                    </span>
+                  </div>
                 </div>
 
-                {/* 2 Key Clinical Highlights */}
-                <div className="space-y-1.5 pt-2 border-t border-amber-100 text-xs">
-                  {s.highlights[lang].slice(0, 2).map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-slate-700">
-                      <span className="text-primary font-bold">✓</span>
-                      <span className="text-[11px] leading-snug line-clamp-1">{item}</span>
+                {/* Floating Medical Icon Disc on Image Border & Refined Clinical Pill */}
+                <div className="px-5 -mt-6 relative z-20 flex justify-between items-end">
+                  <span className="w-13 h-13 rounded-2xl bg-white shadow-xl border-2 border-amber-300 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                    {s.icon}
+                  </span>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary bg-amber-50 border border-amber-300/80 px-3 py-1 rounded-full shadow-2xs mb-1">
+                    {s.featurePill?.[lang] || (lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle")}
+                  </span>
+                </div>
+
+                {/* Content Body */}
+                <div className="p-5 pt-3 space-y-3.5">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">
+                      {s.category[lang]}
                     </div>
-                  ))}
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
+                      {s.title[lang]}
+                    </h3>
+                    {/* Clean treatment meta row: duration & origin */}
+                    <div className="flex items-center gap-2.5 text-[11px] text-slate-500 font-medium pt-1.5">
+                      <span className="inline-flex items-center gap-1 text-slate-700">
+                        <IconClock className="w-3.5 h-3.5 text-primary shrink-0" />
+                        <span>{s.duration[lang]}</span>
+                      </span>
+                      <span className="text-slate-300">•</span>
+                      <span className="inline-flex items-center gap-1 text-slate-700 truncate">
+                        <IconSparkleStar className="w-3.5 h-3.5 text-primary shrink-0" />
+                        <span>{s.techTag?.[lang] || s.category[lang]}</span>
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed line-clamp-2">
+                      {s.shortDesc[lang]}
+                    </p>
+                  </div>
+
+                  {/* 2 Key Clinical Highlights */}
+                  <div className="space-y-1.5 pt-2 border-t border-amber-100 text-xs">
+                    {s.highlights[lang].slice(0, 2).map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-slate-700">
+                        <span className="text-emerald-600 font-bold shrink-0">✓</span>
+                        <span className="text-[11.5px] leading-snug line-clamp-1">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Footer Buttons */}
-            <div className="p-5 pt-0 border-t border-amber-100/60 flex items-center justify-between gap-3 mt-2">
-              <Link
-                to={to(`/services/${s.id}`)}
-                className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
-              >
-                <span>{lang === "uz" ? "Batafsil" : lang === "ru" ? "Подробнее" : "Details"}</span>
-                <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-              </Link>
-              <button
-                onClick={() => onOpenBooking(s.id)}
-                className="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold shadow-xs cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all"
-              >
-                {lang === "uz" ? "Yozilish" : lang === "ru" ? "Запись" : "Book"}
-              </button>
-            </div>
-          </article>
-        ))}
+              {/* Footer Buttons with Shimmer & 3D Hover */}
+              <div className="p-5 pt-0 border-t border-amber-100/80 flex items-center justify-between gap-3 mt-3">
+                <Link
+                  to={to(`/services/${s.id}`)}
+                  className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
+                >
+                  <span>{lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}</span>
+                  <span className="group-hover/btn:translate-x-1.5 transition-transform duration-200">→</span>
+                </Link>
+                <button
+                  onClick={() => onOpenBooking(s.id)}
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-orange hover:-translate-y-0.5 active:translate-y-0 cursor-pointer transition-all duration-200"
+                >
+                  {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book"}
+                </button>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
@@ -441,7 +512,10 @@ const Home = ({ onOpenBooking }) => {
       {/* 1. Hero */}
       <HeroSection onOpenBooking={onOpenBooking} />
 
-      {/* 2. 9 Specialties */}
+      {/* 3D Clinical Ticker Marquee */}
+      <ClinicalTickerMarquee />
+
+      {/* 2. 5 Specialties */}
       <SpecialitiesSection onOpenBooking={onOpenBooking} />
 
       {/* 3. Interactive Treatment & Cost Calculator */}

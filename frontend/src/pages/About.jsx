@@ -20,6 +20,8 @@ import {
   IconGraduationCap,
 } from "../components/MedicalIcons";
 import Doctor3DCard from "../components/Doctor3DCard";
+import Floating3DShapes from "../components/Floating3DShapes";
+import { OriginPill, ZeroPainShield } from "../components/Bespoke3DStickers";
 
 const About = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
@@ -130,7 +132,7 @@ const About = ({ onOpenBooking }) => {
   const aboutSchema = buildAboutPageSchema(lang, breadcrumbs);
 
   return (
-    <div className="py-4 sm:py-8 space-y-12">
+    <div className="relative py-4 sm:py-8 space-y-12">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -139,8 +141,11 @@ const About = ({ onOpenBooking }) => {
         schemaJson={aboutSchema}
       />
 
+      {/* Dynamic 3D Floating Geometry Background */}
+      <Floating3DShapes />
+
       {/* Semantic Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2">
+      <nav aria-label="Breadcrumb" className="relative z-10 text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2">
         <Link to={to("/")} className="hover:text-primary transition-colors">
           {lang === "ru" ? "Главная" : lang === "en" ? "Home" : "Bosh sahifa"}
         </Link>
@@ -151,7 +156,7 @@ const About = ({ onOpenBooking }) => {
       </nav>
 
       {/* Doctor Bio Editorial Header */}
-      <div className="relative overflow-hidden bg-white rounded-3xl border border-amber-200/90 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-5 sm:p-10 lg:p-12">
+      <div className="relative z-10 overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl border border-amber-300/80 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-5 sm:p-10 lg:p-12">
         {/* Brand Accent Top Strip */}
         <div className="h-2 w-full bg-gradient-to-r from-primary via-brandCyan to-brandGreen absolute top-0 left-0 right-0" />
 
@@ -167,24 +172,37 @@ const About = ({ onOpenBooking }) => {
                 ? "Andijan Medical College (2001-2004) & Osh State Univ (2017-2022)"
                 : "Andijon Tibbiyot kolleji (2001-2004) & O'shDU (2017-2022)"}
             </span>
+            <ZeroPainShield
+              label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Gentle" : "100% Og'riqsiz"}
+              sublabel="Orablok & Supercain"
+            />
           </div>
 
           <div className="space-y-2">
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight break-words">
+            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight break-words">
               {DOCTOR_INFO.fullName}
             </h1>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brandOrange">
-              Dr. Mansurov O.A. · Vrach Stomatolog · Implantolog · Ortoped
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary flex items-center gap-2">
+              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+              <span>Dr. Mansurov O.A. · Vrach Stomatolog · Implantolog · Ortoped</span>
             </p>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
             {lang === "uz"
               ? "Dr. Mansurov Orifjon Alimbekovich 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. U 5 ta asosiy yo'nalish bo'yicha yuqori malakali mutaxassisdir: Terapiya (tishlarni og'riqsiz davolash va restavratsiya), Ortopediya (yuqori sifatli tish qo'yish, protezlash), Implantatsiya (Germaniya va Koreya mahsulotlari), Xirurgiya (og'riqsiz va asoratsiz tish olish) hamda Ortodontiya (breketlar yordamida tishlarni to'g'rilash)."
               : lang === "ru"
               ? "Д-р Мансуров Орифжон Алимбекович работает в сфере здравоохранения более 20 лет. Начальное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Практикует 5 ключевых направлений: терапия (лечение и реставрация зубов без боли), ортопедия (высококачественное протезирование), имплантация (немецкие и корейские системы), хирургия (удаление зубов без осложнений) и ортодонтия (выравнивание зубов брекетами)."
               : "Dr. Mansurov Orifjon Alimbekovich has been practicing healthcare for over 20+ years. He graduated from Andijan Medical College (2001–2004) and completed university dental studies at Osh State University (2017–2022). He provides 5 core clinical specialties: Therapy (painless treatment and restoration), Orthopedics (precision prosthetics), Implantation (German & Korean systems), Surgery (painless extraction without complications), and Orthodontics (bite correction with braces)."}
           </p>
+
+          {/* Certified Materials Row */}
+          <div className="flex flex-wrap items-center gap-2 pt-1">
+            <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
+            <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
+            <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
+            <OriginPill flag="🔩" material="Mega'Gen & AnyRidge & DXL" country="Germaniya/Koreya" />
+          </div>
 
           <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3 pt-1">
             <button
@@ -211,22 +229,22 @@ const About = ({ onOpenBooking }) => {
       </div>
 
       {/* Career Timeline Section */}
-      <section className="bg-white rounded-3xl border border-amber-200/90 shadow-sm p-6 sm:p-10 space-y-8">
+      <section className="relative z-10 bg-white/95 backdrop-blur-sm rounded-3xl border border-amber-300/80 shadow-luxury p-6 sm:p-10 space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium tracking-wide bg-primary/10 text-primary border border-primary/20">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide bg-primary/10 text-primary border border-primary/25 shadow-xs">
             <IconGraduationCap className="w-3.5 h-3.5 text-primary" />
             <span>{lang === "uz" ? "Ta'lim va Amaliy Yo'l" : lang === "ru" ? "Образование и Путь" : "Career & Milestones"}</span>
           </span>
-          <h2 className="font-serif-classic text-2xl sm:text-3xl font-bold text-slate-900">
+          <h2 className="font-serif-classic text-2xl sm:text-3xl font-extrabold text-slate-900">
             {lang === "uz" ? "Dr. Mansurovning Kasbiy Yo'li" : lang === "ru" ? "Профессиональный Путь Д-ра Мансурова" : "Dr. Mansurov's Professional Journey"}
           </h2>
         </div>
 
-        <div className="relative border-l-2 border-primary/30 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-8">
+        <div className="relative border-l-2 border-primary/40 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-8">
           {timeline.map((item, idx) => (
             <div key={idx} className="relative group">
               <span className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform" />
-              <div className="space-y-1.5 bg-amber-50/40 p-5 rounded-2xl border border-amber-200/60 hover:bg-amber-50/80 transition-colors">
+              <div className="space-y-1.5 bg-amber-50/50 p-5 rounded-2xl border border-amber-200 hover:bg-white hover:shadow-md hover:border-amber-300 transition-all">
                 <span className="text-xs font-bold text-primary tracking-wider uppercase">
                   {item.year[lang]}
                 </span>
@@ -243,7 +261,7 @@ const About = ({ onOpenBooking }) => {
       </section>
 
       {/* Core Clinical Values */}
-      <section className="space-y-6">
+      <section className="relative z-10 space-y-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <h2 className="font-serif-classic text-2xl sm:text-3xl font-bold text-slate-900">
             {lang === "uz" ? "Bemorlar Uchun 3 Asosiy Qoida" : lang === "ru" ? "3 Главных Принципа Лечения" : "3 Core Treatment Principles"}
@@ -278,16 +296,24 @@ const About = ({ onOpenBooking }) => {
       </section>
 
       {/* Equipment Showcase */}
-      <ClinicEquipmentShowcase />
+      <div className="relative z-10">
+        <ClinicEquipmentShowcase />
+      </div>
 
       {/* Certified Clinical Materials: Germany & South Korea */}
-      <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
+      <div className="relative z-10">
+        <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
+      </div>
 
       {/* Certificates & Qualifications Showcase */}
-      <CertificatesShowcase />
+      <div className="relative z-10">
+        <CertificatesShowcase />
+      </div>
 
       {/* Location Map */}
-      <ClinicLocationMap />
+      <div className="relative z-10">
+        <ClinicLocationMap />
+      </div>
     </div>
   );
 };

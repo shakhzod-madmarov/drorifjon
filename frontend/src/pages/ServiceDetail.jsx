@@ -2,8 +2,8 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { SERVICES_CATALOG, resolveServiceId } from "../constants/servicesCatalog";
-import { DOCTOR_INFO, getExperienceBadge } from "../constants/doctor";
-import { PAGE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
+import { DOCTOR_INFO } from "../constants/doctor";
+import { PAGE_KEYWORDS } from "../constants/seo";
 import Seo from "../components/Seo";
 import { buildMedicalProcedureSchema } from "../utils/structuredData";
 import {
@@ -11,12 +11,19 @@ import {
   IconClock,
   IconShieldCheck,
   IconPhone,
-  IconTelegram,
-  IconAward,
   IconSparkleStar,
 } from "../components/MedicalIcons";
 import { useBooking } from "../context/BookingContext";
 import FaqAccordion from "../components/FaqAccordion";
+import Floating3DShapes from "../components/Floating3DShapes";
+import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
+import {
+  HoloGoldStamp,
+  DigitalCyanTag,
+  BioTitaniumBadge,
+  ZeroPainShield,
+  OriginPill,
+} from "../components/Bespoke3DStickers";
 
 const ServiceDetail = () => {
   const { serviceId, slug } = useParams();
@@ -122,7 +129,7 @@ const ServiceDetail = () => {
   ].filter(Boolean).join(", ");
 
   return (
-    <div className="py-6 sm:py-10 space-y-10">
+    <div className="relative py-6 sm:py-10 space-y-12">
       <Seo
         title={`${service.title[lang]} — ${seoSuffix}`}
         description={`${service.shortDesc[lang]} Dr. Mansurov Orifjon Alimbekovich, 20+ yillik tajriba. Tel: ${DOCTOR_INFO.phoneDisplay}.`}
@@ -130,8 +137,11 @@ const ServiceDetail = () => {
         schemaJson={procedureSchema}
       />
 
+      {/* Dynamic 3D Floating Geometry Background */}
+      <Floating3DShapes />
+
       {/* Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2 flex-wrap">
+      <nav aria-label="Breadcrumb" className="relative z-10 text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2 flex-wrap">
         <Link to={to("/")} className="hover:text-primary transition-colors">
           {lang === "ru" ? "Главная" : lang === "en" ? "Home" : "Bosh sahifa"}
         </Link>
@@ -145,26 +155,26 @@ const ServiceDetail = () => {
         </span>
       </nav>
 
-      {/* Hero Service Showcase — Editorial Split with Full Clinical Photo Visibility */}
-      <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 lg:p-10 text-white shadow-luxury border border-amber-500/20">
+      {/* Hero Service Showcase — Editorial Split with 3D Depth and Bespoke Badges */}
+      <div className="relative z-10 rounded-3xl overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 lg:p-10 text-white shadow-luxury border border-amber-400/30 [transform-style:preserve-3d]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left: Clinical Information & CTA */}
           <div className="lg:col-span-7 space-y-5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 text-amber-300 text-[11px] font-bold uppercase tracking-wider border border-amber-400/25 shadow-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 text-amber-300 text-[11px] font-bold uppercase tracking-wider border border-amber-400/30 shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
                 <span>{service.badge?.[lang] || service.category[lang]}</span>
               </span>
               <span className="px-3 py-1 rounded-full bg-white/10 text-slate-200 text-[11px] font-medium uppercase tracking-wider border border-white/15">
                 {service.category[lang]}
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-[11px] font-medium tracking-wide border border-emerald-400/25">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 text-[11px] font-semibold tracking-wide border border-emerald-400/30">
                 <IconShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span>{service.warranty[lang]}</span>
               </span>
             </div>
 
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15]">
+            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
               {service.title[lang]}
             </h1>
 
@@ -172,9 +182,55 @@ const ServiceDetail = () => {
               {service.shortDesc[lang]}
             </p>
 
-            {/* Quick Metrics Badges */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-1">
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
+            {/* Bespoke Sticker for Service Category */}
+            <div className="pt-1">
+              {service.id === "implantatsiya" && (
+                <BioTitaniumBadge
+                  system="Mega'Gen & AnyRidge & DXL"
+                  origin={lang === "ru" ? "Германия & Корея" : lang === "en" ? "Germany & Korea" : "Germaniya & Koreya"}
+                />
+              )}
+              {service.id === "terapiya" && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
+                  <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
+                  <ZeroPainShield
+                    label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Gentle" : "100% Og'riqsiz"}
+                    sublabel="Orablok / Artikain"
+                  />
+                </div>
+              )}
+              {service.id === "xirurgiya" && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <ZeroPainShield
+                    label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Painless" : "100% Og'riqsiz"}
+                    sublabel="Orablok & Supercain"
+                  />
+                  <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
+                </div>
+              )}
+              {service.id === "ortopediya" && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <DigitalCyanTag
+                    tag="CAD/CAM Tsirkoniy"
+                    subtag={lang === "ru" ? "Премиум Эстетика" : lang === "en" ? "Premium Aesthetics" : "Germaniya & Koreya"}
+                  />
+                  <OriginPill flag="👑" material="Zirconia & E.max" country="15 Yil Kafolat" />
+                </div>
+              )}
+              {service.id === "ortodontiya" && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <HoloGoldStamp
+                    text={lang === "ru" ? "Ровные Зубы" : lang === "en" ? "Perfect Smile" : "Tekis Tishlar"}
+                    subtext={lang === "ru" ? "Брекет-Системы" : lang === "en" ? "Braces Systems" : "Breket Tizimlari"}
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Quick Metrics Badges with 3D Depth */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-400/40 text-center transition-colors">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Tizim" : lang === "ru" ? "Система" : "System"}
                 </span>
@@ -182,7 +238,7 @@ const ServiceDetail = () => {
                   {service.techTag?.[lang] || "Klinik"}
                 </span>
               </div>
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-400/40 text-center transition-colors">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Время" : "Duration"}
                 </span>
@@ -190,7 +246,7 @@ const ServiceDetail = () => {
                   {service.duration[lang]}
                 </span>
               </div>
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-400/40 text-center transition-colors">
                 <span className="text-[10px] text-slate-400 font-semibold uppercase block">
                   {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}
                 </span>
@@ -203,13 +259,16 @@ const ServiceDetail = () => {
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <button
                 onClick={() => openBooking(service.id)}
-                className="px-7 py-3.5 rounded-2xl bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-luxury cursor-pointer hover:shadow-2xl hover:-translate-y-0.5 transition-all"
+                className="relative overflow-hidden px-7 py-3.5 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer group/cta select-none"
               >
-                {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Procedure"}
+                <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover/cta:animate-shimmer-sweep pointer-events-none" />
+                <span className="relative z-10">
+                  {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Procedure"}
+                </span>
               </button>
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-xs border border-white/10 hover:-translate-y-0.5 transition-all"
+                className="px-5 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-xs border border-white/15 hover:-translate-y-0.5 transition-all"
               >
                 <IconPhone className="w-4 h-4 text-primary" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -219,7 +278,7 @@ const ServiceDetail = () => {
 
           {/* Right: Dedicated High-Res Clinical Photography Showcase */}
           <div className="lg:col-span-5">
-            <div className="group relative rounded-2xl overflow-hidden bg-slate-900 border-2 border-amber-300/30 shadow-2xl [transform-style:preserve-3d]">
+            <div className="group relative rounded-3xl overflow-hidden bg-slate-900 border-2 border-amber-300/40 shadow-2xl [transform-style:preserve-3d]">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={service.image}
@@ -230,15 +289,15 @@ const ServiceDetail = () => {
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
 
                 {/* Clean Top Chips */}
                 <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-[10.5px] font-semibold tracking-wide text-white/95 border border-white/20 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[11px] font-bold tracking-wide text-white border border-white/20 shadow-md">
+                    <span className="w-2 h-2 rounded-full bg-amber-400" />
                     <span>{service.badge?.[lang] || service.category[lang]}</span>
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-emerald-400/30 text-[10.5px] font-semibold tracking-wide shadow-xs">
+                  <span className="px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-emerald-300 border border-emerald-400/30 text-[11px] font-bold tracking-wide shadow-md">
                     {service.warranty[lang]}
                   </span>
                 </div>
@@ -249,8 +308,8 @@ const ServiceDetail = () => {
       </div>
 
       {/* Highlights & Features */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white/95 backdrop-blur-sm border border-amber-300/80 shadow-luxury space-y-4">
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz" ? "Muolajaning Asosiy Afzalliklari" : lang === "ru" ? "Преимущества Методики" : "Clinical Highlights"}
           </h2>
@@ -386,6 +445,11 @@ const ServiceDetail = () => {
           ))}
         </div>
       </section>
+
+      {/* Certified Clinical Materials Showcase */}
+      <div className="relative z-10">
+        <ClinicalMaterialsShowcase onOpenBooking={openBooking} />
+      </div>
 
       {/* Service-Specific FAQ Section */}
       {service.faq && service.faq.length > 0 && (

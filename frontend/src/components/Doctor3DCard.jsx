@@ -1,13 +1,14 @@
 import React, { useRef, useState, useCallback } from "react";
 import { DOCTOR_INFO } from "../constants/doctor";
-import { IconTelegram, IconInstagram } from "./MedicalIcons";
+import { IconTelegram, IconInstagram, IconShieldCheck, IconSparkleStar } from "./MedicalIcons";
+import { HoloGoldStamp, ZeroPainShield } from "./Bespoke3DStickers";
 
 /**
  * Doctor3DCard — Ultra-Luxury Interactive 3D Perspective Card
  * Features:
  *  - Hardware-accelerated CSS 3D perspective tilt tracking cursor coordinates
  *  - Dynamic specular light glare reflection layer following the light source
- *  - Multi-plane parallax depth
+ *  - Multi-plane parallax depth with floating orbital badges
  *  - Smooth spring-like physics reset on cursor leave
  */
 const Doctor3DCard = ({
@@ -60,10 +61,32 @@ const Doctor3DCard = ({
     <div className={`relative flex justify-center [perspective:1200px] ${className}`}>
       {/* 3D Ambient Breathing Glow Ring behind Card with Brand Colors */}
       <div
-        className={`absolute -inset-3 sm:-inset-5 bg-gradient-to-tr from-amber-400/35 via-orange-300/25 to-cyan-400/25 rounded-[3.5rem] blur-2xl -z-10 transition-opacity duration-700 pointer-events-none ${
-          isHovered ? "opacity-100 scale-105" : "opacity-70 animate-pulse-glow"
+        className={`absolute -inset-3 sm:-inset-6 bg-gradient-to-tr from-amber-400/40 via-cyan-400/30 to-emerald-400/30 rounded-[3.5rem] blur-2xl -z-10 transition-opacity duration-700 pointer-events-none ${
+          isHovered ? "opacity-100 scale-105" : "opacity-75 animate-pulse-glow"
         }`}
       />
+
+      {/* Floating 3D Orbital Badge 1 (Top-Right) */}
+      <div
+        className="absolute -top-4 -right-4 sm:-right-6 z-40 hidden xs:block pointer-events-none animate-float-3d"
+        style={{ animationDuration: "6s" }}
+      >
+        <HoloGoldStamp
+          text={lang === "ru" ? "20+ Лет Опыта" : lang === "en" ? "20+ Yrs Practice" : "20+ Yillik Tajriba"}
+          subtext="O'shDU & MegaGen"
+        />
+      </div>
+
+      {/* Floating 3D Orbital Badge 2 (Bottom-Left) */}
+      <div
+        className="absolute -bottom-4 -left-4 sm:-left-6 z-40 hidden xs:block pointer-events-none animate-float-reverse"
+        style={{ animationDuration: "7s" }}
+      >
+        <ZeroPainShield
+          label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Pain-Free" : "100% Og'riqsiz"}
+          sublabel="Orablok & Supercain"
+        />
+      </div>
 
       {/* Main 3D Tilted Card Container */}
       <div
@@ -80,14 +103,14 @@ const Doctor3DCard = ({
             : "transform 0.65s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.65s ease",
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-[21rem] xs:max-w-sm sm:max-w-md rounded-3xl xs:rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#FFFDF8] via-[#FFF8EC] to-[#FFF9D8]/70 border-2 border-amber-200/90 shadow-luxury-lg hover:shadow-2xl hover:border-amber-300 cursor-pointer select-none group"
+        className="relative w-full max-w-[21rem] xs:max-w-sm sm:max-w-md rounded-3xl xs:rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-white via-[#FFFDF8] to-[#FFF9D8]/80 border-2 border-amber-300/80 shadow-luxury-lg hover:shadow-2xl hover:border-primary/60 cursor-pointer select-none group"
       >
         {/* Dynamic Specular Reflection / Glare Holographic Layer */}
         <div
           className="absolute inset-0 z-30 pointer-events-none rounded-3xl xs:rounded-[2.5rem] transition-opacity duration-300"
           style={{
             opacity: glare.opacity,
-            background: `radial-gradient(circle 380px at ${glare.x}% ${glare.y}%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 80%)`,
+            background: `radial-gradient(circle 380px at ${glare.x}% ${glare.y}%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.12) 40%, transparent 80%)`,
           }}
         />
 
@@ -111,6 +134,17 @@ const Doctor3DCard = ({
               className="w-full h-full object-cover object-[center_top] filter transition-transform duration-700 ease-out group-hover:scale-[1.04]"
             />
           </picture>
+
+          {/* Top In-Image Holographic Chip */}
+          <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-20 pointer-events-none">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md text-[10px] font-bold tracking-wide text-white border border-white/25 shadow-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+              <span>{lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}</span>
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-slate-950 text-[10px] font-black tracking-wide shadow-md">
+              <span>🇩🇪 & 🇰🇷 Standart</span>
+            </span>
+          </div>
         </div>
 
         {/* 3D Depth Layer 2: Elevated Minimalist Frosted Glass Footer */}

@@ -8,6 +8,8 @@ import { PAGE_SEO, PAGE_KEYWORDS } from "../constants/seo";
 import Seo from "../components/Seo";
 import { buildContactPageSchema } from "../utils/structuredData";
 import ClinicLocationMap from "../components/ClinicLocationMap";
+import Floating3DShapes from "../components/Floating3DShapes";
+import { ZeroPainShield, HoloGoldStamp } from "../components/Bespoke3DStickers";
 import {
   IconPhone,
   IconTelegram,
@@ -29,7 +31,7 @@ const Contact = () => {
   const contactSchema = buildContactPageSchema(lang, breadcrumbs);
 
   return (
-    <div className="py-6 sm:py-10 space-y-12">
+    <div className="relative py-6 sm:py-10 space-y-12">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -37,8 +39,11 @@ const Contact = () => {
         schemaJson={contactSchema}
       />
 
+      {/* Dynamic 3D Floating Geometry Background */}
+      <Floating3DShapes />
+
       {/* Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2">
+      <nav aria-label="Breadcrumb" className="relative z-10 text-xs sm:text-sm font-semibold text-slate-500 flex items-center gap-2">
         <Link to={to("/")} className="hover:text-primary transition-colors">
           {lang === "ru" ? "Главная" : lang === "en" ? "Home" : "Bosh sahifa"}
         </Link>
@@ -49,18 +54,20 @@ const Contact = () => {
       </nav>
 
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto space-y-3">
-        <p className="text-xs font-bold uppercase tracking-widest text-primary">
-          {lang === "uz" ? "BEVOSITA ALOQA" : lang === "ru" ? "ПРЯМАЯ СВЯЗЬ" : "DIRECT CONTACT"}
-        </p>
-        <h1 className="font-serif-classic text-3xl sm:text-5xl font-bold text-slate-900">
-          {lang === "uz"
-            ? "Aloqa va Qabulga Yozilish"
-            : lang === "ru"
-            ? "Контакты и Запись на Приём"
-            : "Contact & Appointment Booking"}
+      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-4">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <ZeroPainShield
+            label={lang === "ru" ? "Прямая Связь" : lang === "en" ? "Direct Line" : "Bevosita Aloqa"}
+            sublabel="24/7 Telegram & Tel"
+          />
+        </div>
+        <h1 className="font-serif-classic text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+          {lang === "uz" ? "Aloqa va " : lang === "ru" ? "Контакты и " : "Contact & "}
+          <span className="bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
+            {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Запись на Приём" : "Appointment Booking"}
+          </span>
         </h1>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
           {lang === "uz"
             ? "Dr. Mansurov Orifjon Alimbekovich qabuliga telefon, Telegram, Instagram yoki onlayn jadval orqali yozilishingiz mumkin."
             : lang === "ru"
@@ -70,16 +77,17 @@ const Contact = () => {
         <div className="pt-2">
           <Link
             to={to("/booking")}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-primary hover:bg-primary-hover text-white text-xs font-bold uppercase tracking-wider shadow-luxury hover:-translate-y-0.5 transition-all"
+            className="relative overflow-hidden inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-0.5 transition-all group select-none"
           >
-            <span>{lang === "uz" ? "Onlayn Jadvaldan Vaqt Tanlash" : lang === "ru" ? "Онлайн Расписание и Запись" : "Book Online via Schedule"}</span>
-            <span>→</span>
+            <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
+            <span className="relative z-10">{lang === "uz" ? "Onlayn Jadvaldan Vaqt Tanlash" : lang === "ru" ? "Онлайн Расписание и Запись" : "Book Online via Schedule"}</span>
+            <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
       </div>
 
       {/* 5 Contact & Location Cards */}
-      <section aria-labelledby="contact-channels-heading" className="space-y-4">
+      <section aria-labelledby="contact-channels-heading" className="relative z-10 space-y-4">
         <h2 id="contact-channels-heading" className="sr-only">
           {lang === "uz" ? "Bog'lanish Kanallari va Manzil" : lang === "ru" ? "Способы Связи и Адрес" : "Contact Methods & Address"}
         </h2>

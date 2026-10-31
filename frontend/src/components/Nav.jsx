@@ -53,12 +53,15 @@ const Nav = ({ topOffset = 0 }) => {
     <>
       <header
         style={{ top: `${topOffset}px` }}
-        className={`fixed left-0 right-0 z-50 transition-all duration-200 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-amber-100/80 py-2"
-            : "bg-[#FFFDF9]/95 backdrop-blur-md border-b border-amber-100/60 py-2 sm:py-2.5"
+            ? "bg-white/95 backdrop-blur-xl shadow-luxury border-b border-amber-200/90 py-2"
+            : "bg-[#FFFDF8]/95 backdrop-blur-lg border-b border-amber-200/70 py-2.5 sm:py-3"
         }`}
       >
+        {/* Top Metallic Brand Sheen Line */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-brandCyan to-brandGreen animate-holo-shine" />
+
         <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2.5 sm:gap-3">
           {/* Brand Logo */}
           <NavLink
