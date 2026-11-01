@@ -416,14 +416,11 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {/* Live Acceptance Status Card */}
             <div className="p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-transparent border border-emerald-300/60 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                <div>
-                  <p className="text-xs font-black text-slate-900">
-                    {lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}
-                  </p>
-                  <p className="text-[10px] text-slate-600 font-medium">08:30 – 18:00 (Dushanba–Shanba)</p>
-                </div>
+              <div>
+                <p className="text-xs font-black text-slate-900">
+                  {lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}
+                </p>
+                <p className="text-[10px] text-slate-600 font-medium">08:30 – 18:00 (Dushanba–Shanba)</p>
               </div>
               <span className="text-xs font-black text-emerald-700 bg-white px-2 py-0.5 rounded-md border border-emerald-200">
                 100% Og'riqsiz

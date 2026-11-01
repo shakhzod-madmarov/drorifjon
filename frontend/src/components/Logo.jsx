@@ -32,8 +32,6 @@ const Logo = ({ className = "h-9 sm:h-10", inverted = false }) => {
           decoding="async"
           className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-3 drop-shadow-sm`}
         />
-        {/* Subtle glowing active pulse indicator */}
-        <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#55E07E] opacity-90 animate-pulse" />
       </div>
 
       {/* Brand Name & Subtitle Typography */}
@@ -47,12 +45,11 @@ const Logo = ({ className = "h-9 sm:h-10", inverted = false }) => {
           <span className="text-primary font-black">{brandTitle.split(" ").slice(1).join(" ")}</span>
         </span>
         <span
-          className={`text-[8.5px] sm:text-[9.5px] font-extrabold uppercase tracking-[0.16em] truncate mt-1 flex items-center gap-1 ${
+          className={`text-[8.5px] sm:text-[9.5px] font-extrabold uppercase tracking-[0.16em] truncate mt-1 ${
             inverted ? "text-brandCream" : "text-slate-500"
           }`}
         >
-          <span>{subtitle}</span>
-          <span className="inline-block w-1 h-1 rounded-full bg-emerald-500" />
+          {subtitle}
         </span>
       </div>
     </div>

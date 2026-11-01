@@ -40,10 +40,6 @@ export function DigitalCyanTag({ label, value, tag, subtag, className = "" }) {
     <div
       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-white/95 backdrop-blur-md border border-cyan-300 text-cyan-950 text-xs font-bold shadow-[0_4px_16px_rgba(29,206,216,0.18)] select-none hover:shadow-cyan transition-all duration-300 ${className}`}
     >
-      <span className="relative flex h-2 w-2 shrink-0">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
-      </span>
       <span className="text-[10.5px] uppercase tracking-wider text-cyan-800 font-extrabold">
         {displayLabel}
       </span>

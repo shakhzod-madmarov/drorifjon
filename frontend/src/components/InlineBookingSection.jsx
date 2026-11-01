@@ -744,8 +744,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 {t.timeGroupLabel}
               </label>
               {selectedDate && selectedTime && activeDay && activeDay.times?.includes(selectedTime) && (
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/80 shadow-2xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="inline-flex items-center text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/80 shadow-2xs">
                   <span>{t.selectedSlotLabel} {formatDmy(selectedDate)} — {selectedTime}</span>
                 </span>
               )}

@@ -104,8 +104,7 @@ const HeroSection = ({ onOpenBooking }) => {
         {/* Left Editorial Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-4 text-left">
           {/* Eyebrow / Location Pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-[11.5px] font-bold shadow-2xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-[11.5px] font-bold shadow-2xs">
             <span>{t.badgeLocation}</span>
           </div>
 

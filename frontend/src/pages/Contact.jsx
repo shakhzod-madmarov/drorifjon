@@ -54,8 +54,7 @@ const Contact = () => {
 
       {/* Header: Classic Medical Presentation */}
       <div className="relative z-10 text-center max-w-2xl mx-auto space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
           <span>{lang === "uz" ? "Bevosita Aloqa · Andijon" : lang === "ru" ? "Прямая Связь · Андижан" : "Direct Clinic Contact"}</span>
         </div>
         <h1 className="font-serif-classic text-2xl sm:text-4xl font-bold text-slate-900 leading-tight">

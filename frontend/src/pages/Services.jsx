@@ -70,8 +70,7 @@ const Services = ({ onOpenBooking }) => {
 
       {/* Header Stage: Simple Classic Luxury */}
       <div className="relative z-10 text-center max-w-3xl mx-auto space-y-3">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-stone-50 border border-stone-200 text-slate-800 shadow-2xs">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+        <div className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-stone-50 border border-stone-200 text-slate-800 shadow-2xs">
           <span>{lang === "uz" ? "Stomatolog Orifjon · 20+ Yillik Tajriba" : lang === "ru" ? "Стоматолог Орифжон · 20+ Лет Опыта" : "Dentist Orifjon · 20+ Yrs Practice"}</span>
         </div>
 

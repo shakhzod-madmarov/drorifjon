@@ -393,9 +393,8 @@ const Interactive3DCostCalculator = () => {
                 {activeTreatment.features.map((feat, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/90 border border-amber-200/60 text-[11px] font-semibold text-slate-700 shadow-2xs"
+                    className="inline-flex items-center px-3 py-1 rounded-xl bg-white/90 border border-amber-200/60 text-[11px] font-semibold text-slate-700 shadow-2xs"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     <span>{feat[lang]}</span>
                   </span>
                 ))}

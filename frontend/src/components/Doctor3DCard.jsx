@@ -90,8 +90,7 @@ const Doctor3DCard = ({
 
           {/* Single Discreet Availability Indicator */}
           <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-bold text-slate-800 border border-white/90 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-bold text-slate-800 border border-white/90 shadow-2xs">
               <span>{lang === "uz" ? "Andijon sh." : lang === "ru" ? "г. Андижан" : "Andijan"}</span>
             </span>
           </div>

@@ -125,8 +125,7 @@ const ClinicLocationMap = ({ compact = false }) => {
         <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl overflow-hidden bg-amber-50/50 border border-amber-200 p-4 sm:p-6 space-y-4">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 text-[11px] font-medium tracking-wide shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 text-[11px] font-medium tracking-wide shadow-2xs">
                 <span>{lang === "uz" ? "Qabul vaqti: Dushanba – Shanba" : lang === "ru" ? "Время приёма: Пн – Сб" : "Hours: Monday – Saturday"}</span>
               </span>
               <span className="text-xs font-medium text-slate-500">
