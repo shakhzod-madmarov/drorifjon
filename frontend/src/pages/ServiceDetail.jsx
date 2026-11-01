@@ -17,13 +17,6 @@ import { useBooking } from "../context/BookingContext";
 import FaqAccordion from "../components/FaqAccordion";
 import Floating3DShapes from "../components/Floating3DShapes";
 import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
-import {
-  HoloGoldStamp,
-  DigitalCyanTag,
-  BioTitaniumBadge,
-  ZeroPainShield,
-  OriginPill,
-} from "../components/Bespoke3DStickers";
 
 const ServiceDetail = () => {
   const { serviceId, slug } = useParams();

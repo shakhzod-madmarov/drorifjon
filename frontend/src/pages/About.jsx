@@ -21,7 +21,6 @@ import {
 } from "../components/MedicalIcons";
 import Doctor3DCard from "../components/Doctor3DCard";
 import Floating3DShapes from "../components/Floating3DShapes";
-import { OriginPill, ZeroPainShield } from "../components/Bespoke3DStickers";
 
 const About = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
@@ -162,20 +161,16 @@ const About = ({ onOpenBooking }) => {
 
         <div className="lg:col-span-7 space-y-6 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-orange-50 text-primary border border-orange-200/60 text-[11px] font-semibold">
+            <span className="px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
               {getExperienceBadge(lang)}
             </span>
-            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200/60 text-[11px] font-semibold">
+            <span className="px-3.5 py-1.5 rounded-full bg-stone-50 text-slate-700 border border-stone-200 text-xs font-medium">
               {lang === "ru"
-                ? "Андижанский мед. колледж (2001-2004) & ОшГУ (2017-2022)"
+                ? "Андижанский мед. колледж (2001–2004) & ОшГУ (2017–2022)"
                 : lang === "en"
-                ? "Andijan Medical College (2001-2004) & Osh State Univ (2017-2022)"
-                : "Andijon Tibbiyot kolleji (2001-2004) & O'shDU (2017-2022)"}
+                ? "Andijan Medical College (2001–2004) & Osh State Univ (2017–2022)"
+                : "Andijon Tibbiyot kolleji (2001–2004) & O'shDU (2017–2022)"}
             </span>
-            <ZeroPainShield
-              label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Gentle" : "100% Og'riqsiz"}
-              sublabel="Orablok & Supercain"
-            />
           </div>
 
           <div className="space-y-2">
@@ -188,21 +183,13 @@ const About = ({ onOpenBooking }) => {
             </p>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {lang === "uz"
               ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. U 5 ta asosiy yo'nalish bo'yicha yuqori malakali mutaxassisdir: Terapiya (tishlarni og'riqsiz davolash va restavratsiya), Ortopediya (yuqori sifatli tish qo'yish, protezlash), Implantatsiya (Germaniya va Koreya mahsulotlari), Xirurgiya (og'riqsiz va asoratsiz tish olish) hamda Ortodontiya (breketlar yordamida tishlarni to'g'rilash)."
               : lang === "ru"
               ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) работает в сфере здравоохранения более 20 лет. Начальное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Практикует 5 ключевых направлений: терапия (лечение и реставрация зубов без боли), ортопедия (высококачественное протезирование), имплантация (немецкие и корейские системы), хирургия (удаление зубов без осложнений) и ортодонтия (выравнивание зубов брекетами)."
               : "Dentist Orifjon (Mansurov Orifjon Alimbekovich) has been practicing healthcare for over 20+ years. He graduated from Andijan Medical College (2001–2004) and completed university dental studies at Osh State University (2017–2022). He provides 5 core clinical specialties: Therapy (painless treatment and restoration), Orthopedics (precision prosthetics), Implantation (German & Korean systems), Surgery (painless extraction without complications), and Orthodontics (bite correction with braces)."}
           </p>
-
-          {/* Certified Materials Row */}
-          <div className="flex flex-wrap items-center gap-2 pt-1">
-            <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
-            <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
-            <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
-            <OriginPill flag="🔩" material="Mega'Gen & AnyRidge & DXL" country="Germaniya/Koreya" />
-          </div>
 
           <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3 pt-1">
             <button

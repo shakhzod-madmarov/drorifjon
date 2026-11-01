@@ -4,7 +4,6 @@ import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import Seo from "../components/Seo";
 import InlineBookingSection from "../components/InlineBookingSection";
 import Floating3DShapes from "../components/Floating3DShapes";
-import { ZeroPainShield, OriginPill } from "../components/Bespoke3DStickers";
 import { DOCTOR_INFO, getYearsOfExperience } from "../constants/doctor";
 import { useClinicHours } from "../lib/medinsonBooking";
 import { buildBookingPageSchema } from "../utils/structuredData";
@@ -50,20 +49,16 @@ const Booking = () => {
         </span>
       </nav>
 
-      {/* Doctor Summary Banner */}
-      <div className="relative z-10 p-6 sm:p-8 rounded-3xl bg-white/95 backdrop-blur-md border border-amber-300/80 shadow-luxury flex flex-col md:flex-row items-center justify-between gap-6">
+      {/* Doctor Summary Banner — Simple Classic Elegance */}
+      <div className="relative z-10 p-6 sm:p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-black uppercase tracking-wide border border-primary/25 shadow-2xs">
+            <span className="px-3.5 py-1 rounded-full bg-stone-100 text-slate-800 text-xs font-bold border border-stone-200">
               {DOCTOR_INFO.name}
             </span>
-            <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-200">
+            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-bold border border-amber-200">
               {years} {lang === "uz" ? "Yillik Tajriba" : lang === "ru" ? "Лет Опыта" : "Years Experience"}
             </span>
-            <ZeroPainShield
-              label={lang === "ru" ? "100% Без Боли" : lang === "en" ? "100% Gentle" : "100% Og'riqsiz"}
-              sublabel="Orablok & Supercain"
-            />
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic leading-snug">
@@ -74,7 +69,7 @@ const Booking = () => {
               : "Online Appointment with Dentist Orifjon"}
           </h1>
 
-          <p className="text-xs sm:text-sm text-slate-700 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed font-normal">
             {lang === "uz"
               ? "Andijon Tibbiyot kolleji (2001–2004) va O'sh Davlat Universiteti (2017–2022) bitiruvchisi. Dental implantlar, breketlar, sirkon karonkalar, vinirlar va 100% og'riqsiz davolash."
               : lang === "ru"
@@ -82,15 +77,7 @@ const Booking = () => {
               : "Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Book your appointment online without waiting in line."}
           </p>
 
-          {/* Certified Materials Quick Row */}
-          <div className="flex flex-wrap items-center gap-2 pt-1">
-            <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
-            <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
-            <OriginPill flag="💉" material="Orablok" country="Yevropa Blister" />
-            <OriginPill flag="🔩" material="Mega'Gen & AnyRidge & DXL" country="Germaniya/Koreya" />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-700 pt-1">
+          <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-600 pt-1">
             <span className="flex items-center gap-1.5">
               <IconGraduationCap className="w-4 h-4 text-primary" />
               <span>
@@ -101,14 +88,15 @@ const Booking = () => {
                   : "Andijon Tibbiyot kolleji (2001-2004) & O'shDU (2017-2022)"}
               </span>
             </span>
-            <span className="flex items-center gap-1.5">
-              <IconShieldCheck className="w-4 h-4 text-emerald-500" />
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-1.5 text-emerald-700 font-semibold">
+              <IconShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>
                 {lang === "uz"
-                  ? "100% Sterillik & Kafolat"
+                  ? "100% Og'riqsiz muolajalar"
                   : lang === "ru"
-                  ? "100% Стерильность и Гарантия"
-                  : "100% Sterile & Guaranteed"}
+                  ? "100% Без боли"
+                  : "100% Pain-free care"}
               </span>
             </span>
           </div>

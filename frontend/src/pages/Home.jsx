@@ -20,13 +20,6 @@ import ClinicEquipmentShowcase from "../components/ClinicEquipmentShowcase";
 import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import ClinicalTickerMarquee from "../components/ClinicalTickerMarquee";
 import Floating3DShapes from "../components/Floating3DShapes";
-import {
-  HoloGoldStamp,
-  DigitalCyanTag,
-  ZeroPainShield,
-  BioTitaniumBadge,
-  OriginPill,
-} from "../components/Bespoke3DStickers";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
@@ -52,75 +45,66 @@ const HeroSection = ({ onOpenBooking }) => {
 
   const T = {
     uz: {
-      badgeLocation: "Andijon sh., Shifoxona ko'chasi · 20+ yillik tibbiyot amaliyoti",
-      kicker: "PRESIZIYA STOMATOLOGIYASI · GERMANIYA & KOREYA MATERIAL STANDARTLARI",
-      headlinePart1: "Tabiiy Tabassum va ",
-      headlineHighlight: "100% Og'riqsiz",
-      headlinePart2: " Zamonaviy Stomatologiya",
+      badgeLocation: "Andijon sh., Shifoxona ko'chasi · 20+ yillik tajriba",
+      kicker: "STOMATOLOG ORIFJON · ANDIJON",
+      headlinePart1: "Tabiiy go'zallik va ",
+      headlineHighlight: "100% og'riqsiz",
+      headlinePart2: " zamonaviy stomatologiya",
       subtitle:
-        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. 20 yildan ortiq tibbiy amaliyot, Germaniya (Charisma, AnyRidge, DXL) hamda Janubiy Koreya (Mega'Gen, DenFil) original materiallari va Yevropa anesteziyasi (Orablok, Supercain) bilan tabassumingizni mutlaq og'riqsiz va yuqori estetikada davolaydi.",
+        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. 20 yildan ortiq tajriba, Yevropa va Koreyaning sertifikatlangan texnologiyalari hamda to'liq og'riqsiz muolajalar.",
       ctaBook: "Qabulga Yozilish",
-      ctaServices: "Xizmatlar Ro'yxati",
+      ctaServices: "Xizmatlar bilan tanishish",
       stat1Num: "20+ Yil",
-      stat1Label: "Tibbiyot Tajribasi",
+      stat1Label: "Tibbiy amaliyot",
       stat2Num: "5,000+",
-      stat2Label: "Davolangan Bemorlar",
+      stat2Label: "Sog'lom tabassumlar",
       stat3Num: "100%",
-      stat3Label: "Steril va Og'riqsiz",
-      stat4Num: "🇩🇪 & 🇰🇷",
-      stat4Label: "Original Materiallar",
+      stat3Label: "Og'riqsiz kafolat",
     },
     ru: {
       badgeLocation: "г. Андижан, ул. Больничная · 20+ лет практики",
-      kicker: "ПРЕЦИЗИОННАЯ СТОМАТОЛОГИЯ · СТАНДАРТЫ ГЕРМАНИИ И КОРЕИ",
-      headlinePart1: "Естественная Улыбка и ",
-      headlineHighlight: "100% Без Боли",
-      headlinePart2: " Современная Стоматология",
+      kicker: "СТОМАТОЛОГ ОРИФЖОН · АНДИЖАН",
+      headlinePart1: "Естественная красота и ",
+      headlineHighlight: "100% без боли",
+      headlinePart2: " современная стоматология",
       subtitle:
-        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета. Более 20 лет врачебной практики, оригинальные немецкие (Charisma, AnyRidge, DXL) и корейские (Mega'Gen, DenFil) материалы, а также европейская анестезия (Orablok, Supercain) для бережного лечения зубов.",
+        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета. Более 20 лет практики, сертифицированные материалы Германии и Кореи, европейская анестезия.",
       ctaBook: "Записаться на Приём",
-      ctaServices: "Каталог Услуг",
+      ctaServices: "Каталог услуг",
       stat1Num: "20+ Лет",
-      stat1Label: "Опыта в Медицине",
+      stat1Label: "Опыта в медицине",
       stat2Num: "5,000+",
-      stat2Label: "Довольных Пациентов",
+      stat2Label: "Довольных пациентов",
       stat3Num: "100%",
-      stat3Label: "Без Боли и Чисто",
-      stat4Num: "🇩🇪 & 🇰🇷",
-      stat4Label: "Стандарты Качества",
+      stat3Label: "Безболезненно",
     },
     en: {
-      badgeLocation: "Andijan, Hospital St. · 20+ Years Healthcare Practice",
-      kicker: "PRECISION DENTISTRY · GERMAN & SOUTH KOREAN STANDARDS",
-      headlinePart1: "Natural Smile & ",
-      headlineHighlight: "100% Pain-Free",
-      headlinePart2: " Modern Dentistry",
+      badgeLocation: "Andijan, Hospital St. · 20+ Years Practice",
+      kicker: "DENTIST ORIFJON · ANDIJAN",
+      headlinePart1: "Natural smile and ",
+      headlineHighlight: "100% gentle",
+      headlinePart2: " modern dentistry",
       subtitle:
-        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University. Over 20+ years of healthcare practice, combining genuine German (Charisma, AnyRidge, DXL) and South Korean (Mega'Gen, DenFil) certified materials with European anesthesia (Orablok, Supercain) for gentle, confident dental care.",
+        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University. Over 20+ years of healthcare practice combining certified German and South Korean technology with gentle care.",
       ctaBook: "Book Appointment",
       ctaServices: "Explore Services",
       stat1Num: "20+ Yrs",
-      stat1Label: "Healthcare Practice",
+      stat1Label: "Healthcare practice",
       stat2Num: "5,000+",
-      stat2Label: "Treated Patients",
+      stat2Label: "Healthy smiles",
       stat3Num: "100%",
-      stat3Label: "Painless & Sterile",
-      stat4Num: "🇩🇪 & 🇰🇷",
-      stat4Label: "Certified Materials",
+      stat3Label: "Painless guarantee",
     },
   };
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-white border border-amber-200/90 shadow-[0_12px_45px_rgba(20,30,40,0.06)] mt-3 sm:mt-5 p-6 sm:p-10 lg:p-12">
-      {/* Subtle Warm Amber Gradient Accent */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-100/40 via-orange-50/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-
+    <section className="relative overflow-hidden rounded-3xl bg-white border border-stone-200/90 shadow-[0_10px_35px_rgba(20,30,40,0.05)] mt-3 sm:mt-5 p-6 sm:p-10 lg:p-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left Editorial Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-6 text-left">
           {/* Eyebrow / Location Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/90 border border-amber-200 text-slate-800 text-xs font-bold shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>{t.badgeLocation}</span>
           </div>
@@ -141,23 +125,15 @@ const HeroSection = ({ onOpenBooking }) => {
             </h1>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-xl">
             {t.subtitle}
           </p>
 
-          {/* Certified Clinical Materials Bar */}
-          <div className="flex flex-wrap items-center gap-2 pt-1">
-            <OriginPill flag="🇩🇪" material="Charisma" country="Germaniya" />
-            <OriginPill flag="🇰🇷" material="DenFil" country="Koreya" />
-            <OriginPill flag="💉" material="Orablok" country="Yevropa" />
-            <OriginPill flag="🔩" material="Mega'Gen & AnyRidge" country="Germaniya/Koreya" />
-          </div>
-
-          {/* Action CTAs */}
+          {/* Action CTAs (Just 2 clean buttons) */}
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-2">
             <button
               onClick={() => onOpenBooking()}
-              className="px-7 py-4 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-orange hover:-translate-y-0.5 transition-all cursor-pointer select-none flex items-center justify-center gap-2"
+              className="px-7 py-3.5 rounded-2xl bg-primary hover:bg-orange-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer select-none flex items-center justify-center gap-2"
             >
               <span>{t.ctaBook}</span>
               <span>→</span>
@@ -165,38 +141,26 @@ const HeroSection = ({ onOpenBooking }) => {
 
             <Link
               to={to("/services")}
-              className="px-6 py-4 rounded-2xl bg-white hover:bg-amber-50/80 border border-amber-300/80 hover:border-primary text-slate-800 font-bold text-xs sm:text-sm shadow-2xs hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3.5 rounded-2xl bg-white hover:bg-stone-50 border border-stone-300 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all flex items-center justify-center gap-2"
             >
               <span>{t.ctaServices}</span>
               <span>→</span>
             </Link>
-
-            <a
-              href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-950 font-bold text-xs sm:text-sm transition-all shadow-2xs"
-            >
-              <IconPhone className="w-4 h-4 text-emerald-600" />
-              <span>{DOCTOR_INFO.phoneDisplay}</span>
-            </a>
           </div>
 
-          {/* 4 Classic Minimalist Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-amber-100">
-            <div className="p-3 rounded-2xl bg-slate-50/80 border border-slate-200/80">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-primary">{t.stat1Num}</p>
-              <p className="text-[11px] font-bold text-slate-600 mt-0.5">{t.stat1Label}</p>
+          {/* 3 Classic Minimalist Editorial Stats */}
+          <div className="grid grid-cols-3 gap-3 pt-5 border-t border-stone-100 max-w-lg">
+            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-slate-900">{t.stat1Num}</p>
+              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat1Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-slate-50/80 border border-slate-200/80">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-amber-600">{t.stat2Num}</p>
-              <p className="text-[11px] font-bold text-slate-600 mt-0.5">{t.stat2Label}</p>
+            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-xl sm:text-2xl font-black text-slate-900">{t.stat2Num}</p>
+              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat2Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
               <p className="font-serif-classic text-xl sm:text-2xl font-black text-emerald-600">{t.stat3Num}</p>
-              <p className="text-[11px] font-bold text-slate-600 mt-0.5">{t.stat3Label}</p>
-            </div>
-            <div className="p-3 rounded-2xl bg-slate-50/80 border border-slate-200/80">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-slate-800">{t.stat4Num}</p>
-              <p className="text-[11px] font-bold text-slate-600 mt-0.5">{t.stat4Label}</p>
+              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat3Label}</p>
             </div>
           </div>
         </div>
@@ -219,49 +183,39 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
 
   const specialtyMeta = {
     terapiya: {
-      kicker: { uz: "✦ ESTETIK RESTAVRATSIYA", ru: "✦ ЭСТЕТИЧЕСКАЯ РЕСТАВРАЦИЯ", en: "✦ AESTHETIC RESTORATION" },
+      kicker: { uz: "Terapevtik Stomatologiya", ru: "Терапевтическая Стоматология", en: "Therapeutic Dentistry" },
       materialBadge: "🇩🇪 Charisma & 🇰🇷 DenFil",
-      guaranteePill: { uz: "100% Og'riqsiz", ru: "100% Без Боли", en: "100% Pain-Free" },
       durationText: { uz: "30–45 daqiqa", ru: "30–45 минут", en: "30–45 mins" },
-      techSummary: { uz: "Nemis nano-kompoziti", ru: "Немецкий нанокомпозит", en: "German nanocomposite" },
     },
     ortopediya: {
-      kicker: { uz: "✦ CAD/CAM SIRKONIY", ru: "✦ CAD/CAM ЦИРКОНИЙ", en: "✦ CAD/CAM ZIRCONIA" },
-      materialBadge: "💎 Monolit Sirkon & Vinirlar",
-      guaranteePill: { uz: "10–15 Yil Kafolat", ru: "Гарантия 10–15 Лет", en: "10–15 Yrs Warranty" },
+      kicker: { uz: "Ortopedik Stomatologiya", ru: "Ортопедическая Стоматология", en: "Prosthodontics" },
+      materialBadge: "💎 Sirkoniy & Vinirlar",
       durationText: { uz: "3–5 kun (2 qabul)", ru: "3–5 дней (2 визита)", en: "3–5 days (2 visits)" },
-      techSummary: { uz: "Monolit sirkoniy & E.max", ru: "Монолитный цирконий & E.max", en: "Monolithic Zirconia & E.max" },
     },
     implantatsiya: {
-      kicker: { uz: "✦ PREMIUM BIOTITAN", ru: "✦ ПРЕМИУМ БИОТИТАН", en: "✦ PREMIUM BIO-TITANIUM" },
+      kicker: { uz: "Dental Implantologiya", ru: "Дентальная Имплантология", en: "Dental Implantology" },
       materialBadge: "🔩 Mega'Gen & AnyRidge",
-      guaranteePill: { uz: "Umrbod Kafolat", ru: "Пожизненная Гарантия", en: "Lifetime Warranty" },
       durationText: { uz: "15–20 daqiqa", ru: "15–20 минут", en: "15–20 mins" },
-      techSummary: { uz: "Germaniya & Koreya tizimi", ru: "Системы Германии и Кореи", en: "German & Korean systems" },
     },
     xirurgiya: {
-      kicker: { uz: "✦ ATRAVMATIK JARROHLIK", ru: "✦ АТРАВМАТИЧНАЯ ХИРУРГИЯ", en: "✦ ATRAUMATIC SURGERY" },
-      materialBadge: "🛡️ Steril Orablok & Supercain",
-      guaranteePill: { uz: "Asoratsiz Tiklanish", ru: "Без Осложнений", en: "Zero Complications" },
+      kicker: { uz: "Jarrohlik Stomatologiyasi", ru: "Хирургическая Стоматология", en: "Oral Surgery" },
+      materialBadge: "🛡️ Orablok & Supercain",
       durationText: { uz: "10–25 daqiqa", ru: "10–25 минут", en: "10–25 mins" },
-      techSummary: { uz: "Yevropa steril anesteziyasi", ru: "Европейская анестезия", en: "European sterile anesthesia" },
     },
     ortodontiya: {
-      kicker: { uz: "✦ MUKAMMAL TISHLASH", ru: "✦ ИДЕАЛЬНЫЙ ПРИКУС", en: "✦ BITE CORRECTION" },
-      materialBadge: "✨ Metall, Keramika & Sapfir",
-      guaranteePill: { uz: "Barqaror Natija", ru: "Стабильный Результат", en: "Lifelong Retention" },
+      kicker: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
+      materialBadge: "✨ Breket Tizimlari",
       durationText: { uz: "12–18 oy", ru: "12–18 месяцев", en: "12–18 months" },
-      techSummary: { uz: "Zamonaviy breket tizimlari", ru: "Брекеты и элайнеры", en: "Modern braces & aligners" },
     },
   };
 
   return (
     <section className="py-8 sm:py-14 space-y-8">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-50/90 border border-amber-300/80 text-primary shadow-xs">
+      <div className="text-center max-w-3xl mx-auto space-y-2.5">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
           <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
-          <span>{lang === "uz" ? "5 Ta Asosiy Klinik Yo'nalish" : lang === "ru" ? "5 Основных Клинических Направлений" : "5 Core Clinical Specialties"}</span>
+          <span>{lang === "uz" ? "Asosiy 5 Klinik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}</span>
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 font-serif-classic tracking-tight">
           {lang === "uz"
@@ -280,24 +234,22 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
       </div>
 
       {/* Grid of 5 Specialties */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 [perspective:1200px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {SERVICES_CATALOG.map((s) => {
           const meta = specialtyMeta[s.id] || {
-            kicker: { uz: "✦ MAXSUS XIZMAT", ru: "✦ СПЕЦИАЛЬНАЯ УСЛУГА", en: "✦ SPECIALTY SERVICE" },
+            kicker: { uz: s.category?.[lang] || "Xizmat", ru: s.category?.[lang] || "Услуга", en: "Service" },
             materialBadge: s.techTag?.[lang] || "Sertifikatlangan",
-            guaranteePill: { uz: s.warranty?.[lang] || "Rasmiy Kafolat", ru: "Гарантия", en: "Warranty" },
             durationText: { uz: s.duration?.[lang] || "Qisqa muddat", ru: "Короткий срок", en: "Short visit" },
-            techSummary: { uz: "Sifatli muolaja", ru: "Качественное лечение", en: "Quality treatment" },
           };
 
           return (
             <article
               key={s.id}
-              className="group bg-white/95 rounded-[2rem] border border-amber-200/80 shadow-[0_10px_35px_-8px_rgba(20,30,40,0.06)] hover:shadow-[0_22px_55px_-10px_rgba(255,157,80,0.22)] hover:border-primary/60 transition-all duration-500 hover:-translate-y-2.5 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d]"
+              className="group bg-white rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
             >
               <div>
-                {/* Visual Banner with Crisp Studio Photography & Frosted Glass Badges */}
-                <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-100 [transform-style:preserve-3d]">
+                {/* Pure Crisp Studio Photography with Zero Stickers on Photo */}
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-stone-100">
                   <picture>
                     <source srcSet={s.image} type="image/webp" />
                     <img
@@ -307,87 +259,51 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                       height={400}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500 ease-out"
                     />
                   </picture>
+                </div>
 
-                  {/* Soft Luxury Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
-
-                  {/* Top Frosted Glass Badges (NO HEAVY BLACK BOXES) */}
-                  <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                    {/* Material Spec Glass Pill */}
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] text-[11px] font-black text-slate-900">
-                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                      <span>{meta.materialBadge}</span>
+                {/* Content Body */}
+                <div className="p-5 sm:p-6 space-y-3 text-left">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[10.5px] font-bold uppercase tracking-wider text-primary">
+                      {meta.kicker[lang]}
                     </span>
-
-                    {/* Emerald / Gold Foil Guarantee Pill */}
-                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.35)] text-[10.5px] font-black tracking-wide border border-emerald-300/40">
-                      <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
-                      <span>{meta.guaranteePill[lang]}</span>
-                    </span>
-                  </div>
-
-                  {/* Bottom Duration & Pain-Free Indicator over Photo */}
-                  <div className="absolute bottom-3 right-3 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-800 text-[10.5px] font-bold border border-white/90 shadow-md">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
                       <IconClock className="w-3.5 h-3.5 text-amber-500" />
                       <span>{meta.durationText[lang]}</span>
                     </span>
                   </div>
-                </div>
 
-                {/* Floating 3D Medical Icon Disc on Photo Boundary */}
-                <div className="px-5 -mt-7 relative z-20 flex justify-between items-end">
-                  <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_8px_25px_rgba(255,157,80,0.22)] border-2 border-amber-300 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                    {s.icon}
-                  </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary bg-amber-50/90 border border-amber-200 px-3 py-1 rounded-full shadow-2xs mb-1">
-                    {meta.techSummary[lang]}
-                  </span>
-                </div>
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
+                    {s.title[lang]}
+                  </h3>
 
-                {/* Content Body */}
-                <div className="p-5 pt-3.5 space-y-3.5 text-left">
-                  <div>
-                    <div className="text-[10px] sm:text-[10.5px] font-black uppercase tracking-[0.16em] text-primary mb-1">
-                      {meta.kicker[lang]}
-                    </div>
-                    <h3 className="text-lg sm:text-[19px] font-black text-slate-900 group-hover:text-primary transition-colors leading-snug font-serif-classic">
-                      {s.title[lang]}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed line-clamp-2">
-                      {s.shortDesc[lang]}
-                    </p>
-                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2 font-normal">
+                    {s.shortDesc[lang]}
+                  </p>
 
-                  {/* 2 Key Clinical Highlights with Emerald Check */}
-                  <div className="space-y-1.5 pt-2.5 border-t border-amber-100 text-xs">
-                    {s.highlights[lang].slice(0, 2).map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-slate-700">
-                        <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-[10px] shrink-0 mt-0.5">
-                          ✓
-                        </span>
-                        <span className="text-[11.5px] leading-snug line-clamp-1 font-medium">{item}</span>
-                      </div>
-                    ))}
+                  <div className="pt-2 border-t border-stone-100 text-xs text-slate-700">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 text-[11px] font-medium text-slate-700">
+                      <span>{meta.materialBadge}</span>
+                    </span>
                   </div>
                 </div>
               </div>
 
-              {/* Footer Buttons with Shimmer & 3D Hover */}
-              <div className="p-5 pt-0 border-t border-amber-100/70 flex items-center justify-between gap-3 mt-3">
+              {/* Footer Actions */}
+              <div className="p-5 sm:p-6 pt-0 border-t border-stone-100/80 flex items-center justify-between gap-3 mt-2">
                 <Link
                   to={to(`/services/${s.id}`)}
-                  className="text-xs font-extrabold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
+                  className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
                 >
                   <span>{lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}</span>
-                  <span className="group-hover/btn:translate-x-1.5 transition-transform duration-200">→</span>
+                  <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
                 </Link>
                 <button
                   onClick={() => onOpenBooking(s.id)}
-                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-xs font-black uppercase tracking-wider shadow-sm hover:shadow-[0_6px_20px_rgba(255,157,80,0.4)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer transition-all duration-200"
+                  className="px-4 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-wider shadow-2xs transition-colors cursor-pointer select-none"
                 >
                   {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book Visit"}
                 </button>

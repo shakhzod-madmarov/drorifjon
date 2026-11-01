@@ -2,72 +2,68 @@ import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 /**
- * ClinicalTickerMarquee:
- * High-tech infinite 3D ticker displaying certified materials,
- * credentials, and clinic guarantees.
+ * ClinicalTrustBar (formerly ClinicalTickerMarquee):
+ * Calm, classic, elegant luxury brand trust bar.
+ * Replaces chaotic infinite moving marquees with dignified, static clinical standards.
  */
 export default function ClinicalTickerMarquee() {
   const { lang } = useLanguage();
 
-  const items = {
-    uz: [
-      { text: "Stomatolog Orifjon", sub: "Mansurov Orifjon Alimbekovich", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
-      { text: "Charisma (Germaniya)", sub: "Mikro-shisha Nano-kompozit", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
-      { text: "DenFil (Janubiy Koreya)", sub: "300+ MPa Mustahkam Plomba", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
-      { text: "Orablok & Supercain", sub: "100% Og'riqsiz Anesteziya", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },
-      { text: "Mega'Gen (Koreya)", sub: "Xpeed & KnifeThread Tizimi", flag: "🇰🇷", color: "text-indigo-900 bg-indigo-50 border-indigo-200" },
-      { text: "AnyRidge (AnyRidch Germaniya)", sub: "Suyakni Saqlovchi Biotitan", flag: "🇩🇪", color: "text-orange-900 bg-orange-50 border-orange-200" },
-      { text: "DXL (Germaniya)", sub: "Nemis Sof Biotitani · Umrbod", flag: "🇩🇪", color: "text-slate-900 bg-slate-100 border-slate-300" },
-      { text: "20+ Yillik Tajriba", sub: "Andijon Tib. Kolleji & O'shDU", flag: "🎓", color: "text-amber-900 bg-amber-100/80 border-amber-300" },
-      { text: "100% Steril Muhit", sub: "Anti-SPID & Anti-Gepatit", flag: "🛡️", color: "text-teal-900 bg-teal-50 border-teal-200" },
-    ],
-    ru: [
-      { text: "Стоматолог Орифжон", sub: "Мансуров Орифжон Алимбекович", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
-      { text: "Charisma (Германия)", sub: "Микростекольный композит Kulzer", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
-      { text: "DenFil (Южная Корея)", sub: "Сверхпрочный наногибрид 300+ МПа", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
-      { text: "Ораблок & Суперкаин", sub: "100% Безболезненная анестезия", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },
-      { text: "Mega'Gen (Корея)", sub: "Технология Xpeed & KnifeThread", flag: "🇰🇷", color: "text-indigo-900 bg-indigo-50 border-indigo-200" },
-      { text: "AnyRidge (AnyRidch Германия)", sub: "Костесохраняющий биотитан", flag: "🇩🇪", color: "text-orange-900 bg-orange-50 border-orange-200" },
-      { text: "DXL (Германия)", sub: "Немецкий биотитан · Пожизненно", flag: "🇩🇪", color: "text-slate-900 bg-slate-100 border-slate-300" },
-      { text: "20+ Лет в Медицине", sub: "Андижанский мед. колледж & ОшГУ", flag: "🎓", color: "text-amber-900 bg-amber-100/80 border-amber-300" },
-      { text: "100% Стерильность", sub: "Протокол Анти-СПИД / Гепатит", flag: "🛡️", color: "text-teal-900 bg-teal-50 border-teal-200" },
-    ],
-    en: [
-      { text: "Dentist Orifjon", sub: "Mansurov Orifjon Alimbekovich", flag: "⭐", color: "text-primary bg-orange-50 border-orange-200" },
-      { text: "Charisma (Germany)", sub: "Microglass Submicron Composite", flag: "🇩🇪", color: "text-amber-900 bg-amber-50 border-amber-200" },
-      { text: "DenFil (South Korea)", sub: "300+ MPa High-Strength Resin", flag: "🇰🇷", color: "text-sky-900 bg-sky-50 border-sky-200" },
-      { text: "Orabloc & Supercain", sub: "100% Painless Micro-Anesthesia", flag: "💉", color: "text-emerald-900 bg-emerald-50 border-emerald-200" },
-      { text: "Mega'Gen (Korea)", sub: "Xpeed & KnifeThread Technology", flag: "🇰🇷", color: "text-indigo-900 bg-indigo-50 border-indigo-200" },
-      { text: "AnyRidge (AnyRidch Germany)", sub: "Bone-Preserving Architecture", flag: "🇩🇪", color: "text-orange-900 bg-orange-50 border-orange-200" },
-      { text: "DXL (Germany)", sub: "German Pure Bio-Titanium · Lifetime", flag: "🇩🇪", color: "text-slate-900 bg-slate-100 border-slate-300" },
-      { text: "20+ Years Practice", sub: "Andijan Med. College & Osh State", flag: "🎓", color: "text-amber-900 bg-amber-100/80 border-amber-300" },
-      { text: "100% Sterile Environment", sub: "European Safety Standards", flag: "🛡️", color: "text-teal-900 bg-teal-50 border-teal-200" },
-    ],
+  const title = {
+    uz: "Sertifikatlangan Xalqaro Materiallar va Standartlar",
+    ru: "Сертифицированные Международные Материалы и Стандарты",
+    en: "Certified International Clinical Standards & Materials",
   };
 
-  const list = items[lang] || items.uz;
-  // Double the list for seamless continuous infinite scroll
-  const fullList = [...list, ...list];
+  const partners = [
+    {
+      flag: "🇩🇪",
+      name: "Charisma Kulzer",
+      desc: { uz: "Germaniya nano-kompoziti", ru: "Немецкий нанокомпозит", en: "German nanocomposite" },
+    },
+    {
+      flag: "🇰🇷",
+      name: "Mega'Gen AnyRidge",
+      desc: { uz: "Koreya & Germaniya biotitani", ru: "Биотитан Кореи и Германии", en: "Bio-titanium systems" },
+    },
+    {
+      flag: "🇩🇪",
+      name: "DXL Titanium",
+      desc: { uz: "Nemis premium implantlari", ru: "Немецкие премиум-импланты", en: "German premium implants" },
+    },
+    {
+      flag: "🇰🇷",
+      name: "DenFil Vericom",
+      desc: { uz: "Yuqori mustahkam plomba", ru: "Высокопрочные пломбы", en: "High-strength micro-hybrid" },
+    },
+    {
+      flag: "🛡️",
+      name: "Orablok & Supercain",
+      desc: { uz: "100% og'riqsiz anesteziya", ru: "100% анестезия без боли", en: "100% painless anesthesia" },
+    },
+  ];
 
   return (
-    <div className="relative w-full overflow-hidden py-3 bg-gradient-to-r from-amber-50/70 via-white to-sky-50/70 border-y border-amber-200/80 select-none shadow-2xs">
-      {/* Left/Right Gradient Fades */}
-      <div className="absolute left-0 inset-y-0 w-16 bg-gradient-to-r from-[#FFFDF8] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 inset-y-0 w-16 bg-gradient-to-l from-[#FFFDF8] to-transparent z-10 pointer-events-none" />
+    <div className="w-full py-5 bg-white/80 rounded-2xl border border-stone-200/80 shadow-2xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <p className="text-center text-[10.5px] font-extrabold uppercase tracking-widest text-slate-500 mb-3.5">
+          {title[lang] || title.uz}
+        </p>
 
-      <div className="animate-marquee-left flex items-center gap-4 sm:gap-6">
-        {fullList.map((item, idx) => (
-          <div
-            key={idx}
-            className={`flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl border shadow-2xs shrink-0 cursor-default hover:scale-105 transition-transform duration-200 ${item.color}`}
-          >
-            <span className="text-base sm:text-lg">{item.flag}</span>
-            <div className="flex flex-col leading-none text-left">
-              <span className="text-xs sm:text-sm font-black tracking-tight">{item.text}</span>
-              <span className="text-[9px] sm:text-[10px] font-semibold opacity-80 mt-0.5">{item.sub}</span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {partners.map((p, idx) => (
+            <div
+              key={idx}
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-stone-50/70 border border-stone-200/70 text-left transition-colors hover:bg-amber-50/50 hover:border-amber-200/80"
+            >
+              <span className="text-lg shrink-0">{p.flag}</span>
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-slate-900 truncate tracking-tight">{p.name}</p>
+                <p className="text-[10px] text-slate-600 truncate">{p.desc[lang] || p.desc.uz}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import Seo from "../components/Seo";
 import { buildContactPageSchema } from "../utils/structuredData";
 import ClinicLocationMap from "../components/ClinicLocationMap";
 import Floating3DShapes from "../components/Floating3DShapes";
-import { ZeroPainShield, HoloGoldStamp } from "../components/Bespoke3DStickers";
 import {
   IconPhone,
   IconTelegram,

@@ -341,83 +341,47 @@ const PatientCareGuides = () => {
           </p>
         </div>
 
-        {/* 5 Specialty 3D Pill Tabs */}
-        <div className="flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2.5 pb-2 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
+        {/* 5 Specialty Clean Tabs */}
+        <div className="flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2 pb-2 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
           {guides.map((g) => {
             const isSelected = activeTab.id === g.id;
             return (
               <button
                 key={g.id}
                 onClick={() => setActiveTab(g)}
-                className={`flex shrink-0 whitespace-nowrap items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs font-bold transition-all duration-300 cursor-pointer ${
+                className={`flex shrink-0 whitespace-nowrap items-center gap-2 px-4 sm:px-5 py-2.5 rounded-2xl text-xs font-bold transition-all duration-200 cursor-pointer ${
                   isSelected
-                    ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white shadow-[0_8px_25px_rgba(255,157,80,0.35)] scale-105 ring-2 ring-primary/30"
-                    : "bg-white/95 hover:bg-amber-50 text-slate-700 border border-amber-200/80 shadow-2xs hover:scale-[1.02]"
+                    ? "bg-primary text-white shadow-sm"
+                    : "bg-stone-50 hover:bg-stone-100 text-slate-700 border border-stone-200/80"
                 }`}
               >
-                <span className={`transition-transform duration-300 ${isSelected ? "scale-115 text-white" : "text-primary"}`}>
+                <span className={isSelected ? "text-white" : "text-primary"}>
                   {g.icon}
                 </span>
                 <span className="tracking-tight">{g.tab[lang]}</span>
-                <span
-                  className={`text-[9.5px] px-2 py-0.5 rounded-full font-extrabold ${
-                    isSelected
-                      ? "bg-white/20 text-white"
-                      : "bg-amber-100/70 text-slate-600"
-                  }`}
-                >
-                  {g.tabBadge}
-                </span>
               </button>
             );
           })}
         </div>
 
         {/* Dynamic Interactive Stage (Split-View) */}
-        <div className="p-5 sm:p-8 lg:p-10 rounded-[2.5rem] bg-gradient-to-br from-[#FFFDF9] via-amber-50/40 to-white border border-amber-200/90 shadow-luxury-lg space-y-8">
+        <div className="p-5 sm:p-8 lg:p-10 rounded-[2.5rem] bg-white border border-stone-200/90 shadow-sm space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left Column (5 cols): Visual Presentation & Doctor Note */}
-            <div className="lg:col-span-5 space-y-5">
-              {/* Clinical Photo with Frosted Badges */}
-              <div className="relative h-60 sm:h-72 w-full rounded-3xl overflow-hidden border border-amber-200/90 shadow-xl group">
+            {/* Left Column (5 cols): Pure Visual & Doctor Note */}
+            <div className="lg:col-span-5 space-y-4">
+              {/* Pure Clinical Photo */}
+              <div className="relative h-60 sm:h-72 w-full rounded-2xl overflow-hidden bg-stone-100 border border-stone-200/70">
                 <img
                   src={activeTab.image}
                   alt={activeTab.title[lang]}
-                  className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover"
                 />
-                {/* Soft Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-black/10 pointer-events-none" />
+              </div>
 
-                {/* Top Frosted Glass Badges */}
-                <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-slate-900 border border-white/80 text-[11px] font-black tracking-wide shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>{activeTab.recoveryTime[lang]}</span>
-                  </span>
-
-                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[10.5px] font-black tracking-wide shadow-md border border-emerald-300/40">
-                    <IconShieldCheck className="w-3.5 h-3.5 text-white" />
-                    <span>{activeTab.tagPill[lang]}</span>
-                  </span>
-                </div>
-
-                {/* Bottom Over-Image Floating Control Bar */}
-                <div className="absolute bottom-3 inset-x-3 z-10 pointer-events-none">
-                  <div className="p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-white/90 shadow-md flex items-center justify-between gap-2 text-left">
-                    <div className="min-w-0">
-                      <p className="text-[9.5px] font-black uppercase tracking-wider text-primary flex items-center gap-1">
-                        <IconSparkleStar className="w-3 h-3 text-brandOrange" />
-                        <span>{lang === "uz" ? "Stomatolog Orifjon Tavsiyasi" : lang === "ru" ? "Совет Стоматолога Орифжона" : "Dentist Orifjon Advice"}</span>
-                      </p>
-                      <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
-                        {activeTab.badge[lang]}
-                      </p>
-                    </div>
-                    <span className="w-9 h-9 rounded-xl bg-amber-50 text-primary flex items-center justify-center shrink-0 shadow-2xs border border-amber-200">
-                      {activeTab.icon}
-                    </span>
-                  </div>
-                </div>
+              {/* Recovery Period Pill */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-stone-50 text-slate-700 text-xs font-bold border border-stone-200">
+                <IconClock className="w-4 h-4 text-primary" />
+                <span>{activeTab.recoveryTime[lang]}</span>
               </div>
 
               {/* Shifokor Kengashi (Doctor's Note Box) */}
