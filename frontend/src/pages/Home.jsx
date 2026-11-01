@@ -45,7 +45,7 @@ const HeroSection = ({ onOpenBooking }) => {
 
   const T = {
     uz: {
-      badgeLocation: "Andijon sh., Shifoxona ko'chasi · 20+ yillik tajriba",
+      badgeLocation: "Andijon sh., Muqimiy ko'chasi · 20+ yillik tajriba",
       kicker: "STOMATOLOG ORIFJON · ANDIJON",
       headlinePart1: "Tabiiy go'zallik va ",
       headlineHighlight: "100% og'riqsiz",
@@ -62,7 +62,7 @@ const HeroSection = ({ onOpenBooking }) => {
       stat3Label: "Og'riqsiz kafolat",
     },
     ru: {
-      badgeLocation: "г. Андижан, ул. Больничная · 20+ лет практики",
+      badgeLocation: "г. Андижан, ул. Мукими · 20+ лет практики",
       kicker: "СТОМАТОЛОГ ОРИФЖОН · АНДИЖАН",
       headlinePart1: "Естественная красота и ",
       headlineHighlight: "100% без боли",
@@ -79,7 +79,7 @@ const HeroSection = ({ onOpenBooking }) => {
       stat3Label: "Безболезненно",
     },
     en: {
-      badgeLocation: "Andijan, Hospital St. · 20+ Years Practice",
+      badgeLocation: "Andijan, Muqimiy St. · 20+ Years Practice",
       kicker: "DENTIST ORIFJON · ANDIJAN",
       headlinePart1: "Natural smile and ",
       headlineHighlight: "100% gentle",

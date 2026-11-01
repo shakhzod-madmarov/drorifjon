@@ -76,8 +76,6 @@ export const DOCTOR_INFO = {
   telegramHandle: "@dr_orifjon_1",
   instagramUrl: "https://www.instagram.com/dr_orifjon/",
   instagramHandle: "@dr_orifjon",
-  email: "info@drorifjon.uz",
-  emailHref: "mailto:info@drorifjon.uz",
   technologies: {
     uz: "Charisma (Germaniya) va DenFil (Koreya) plombalari, Orablok va Supercain Forte anesteziyasi, Mega'Gen (Koreya), AnyRidge va DXL (Germaniya) implantlari, 3D optik skanerlash",
     ru: "Пломбы Charisma (Германия) и DenFil (Корея), анестетики Ораблок и Суперкаин Форте, импланты Mega'Gen (Корея), AnyRidge и DXL (Германия), 3D-сканирование",

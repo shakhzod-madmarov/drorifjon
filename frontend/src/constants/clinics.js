@@ -22,14 +22,14 @@ export const CLINICS = [
       en: "Andijan",
     },
     address: {
-      uz: "Andijon shahri, O'zbekiston",
-      ru: "г. Андижан, Узбекистан",
-      en: "Andijan city, Uzbekistan",
+      uz: "Andijon shahri, Muqimiy ko'chasi",
+      ru: "г. Андижан, ул. Мукими",
+      en: "Muqimiy St., Andijan, Uzbekistan",
     },
     shortAddress: {
-      uz: "Andijon sh.",
-      ru: "г. Андижан",
-      en: "Andijan",
+      uz: "Andijon sh., Muqimiy ko'chasi",
+      ru: "г. Андижан, ул. Мукими",
+      en: "Muqimiy St., Andijan",
     },
     landmark: {
       uz: "Andijon shahri markaziy hududi",
@@ -53,7 +53,6 @@ export const CLINICS = [
     telegramHandle: "@dr_orifjon_1",
     instagram: "https://www.instagram.com/dr_orifjon/",
     instagramHandle: "@dr_orifjon",
-    doctorEmail: "info@drorifjon.uz",
     coordinates: {
       lat: 40.782064,
       lng: 72.344247,

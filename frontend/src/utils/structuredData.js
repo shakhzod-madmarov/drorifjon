@@ -299,7 +299,7 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
       "telephone": DOCTOR_INFO.phoneRaw,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1-kichik daha (1-mikrorayon), 8A-bino",
+        "streetAddress": "Muqimiy ko'chasi",
         "addressLocality": "Andijon",
         "addressRegion": "Andijon viloyati",
         "postalCode": "170100",
