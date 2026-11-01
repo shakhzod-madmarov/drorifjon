@@ -263,7 +263,6 @@ export const buildAboutPageSchema = (lang = "uz", breadcrumbs = []) => {
         "name": DOCTOR_INFO.education[lang] || DOCTOR_INFO.education.uz,
       },
       "telephone": DOCTOR_INFO.phoneRaw,
-      "email": DOCTOR_INFO.email,
       "sameAs": [
         DOCTOR_INFO.telegramUrl,
         DOCTOR_INFO.instagramUrl,
@@ -298,7 +297,6 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
       "@id": `${SITE_ORIGIN}/#dentist`,
       "name": `${DOCTOR_INFO.name} — Vrach Stomatolog`,
       "telephone": DOCTOR_INFO.phoneRaw,
-      "email": DOCTOR_INFO.email,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1-kichik daha (1-mikrorayon), 8A-bino",
@@ -406,7 +404,6 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": DOCTOR_INFO.phoneRaw,
-      "email": DOCTOR_INFO.email,
       "contactType": "emergency dental service",
       "availableLanguage": ["Uzbek", "Russian", "English"],
       "areaServed": "UZ",
@@ -426,7 +423,6 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "logo": `${SITE_ORIGIN}/logo_icon.png`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
     "telephone": DOCTOR_INFO.phoneRaw,
-    "email": DOCTOR_INFO.email,
     "priceRange": "$$",
     "currenciesAccepted": "UZS",
     "paymentAccepted": "Cash, Payme, Click, Uzum",
@@ -493,7 +489,6 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "jobTitle": DOCTOR_INFO.title,
     "description": `${DOCTOR_INFO.name} — 20+ yillik tajribaga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Andijon.`,
     "telephone": DOCTOR_INFO.phoneRaw,
-    "email": DOCTOR_INFO.email,
     "url": `${SITE_ORIGIN}/`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
     "worksFor": {

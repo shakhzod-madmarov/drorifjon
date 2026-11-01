@@ -12,7 +12,6 @@ import {
   IconInstagram,
   IconGraduationCap,
   IconClock,
-  IconMail,
 } from "./MedicalIcons";
 
 const Footer = () => {
@@ -155,15 +154,6 @@ const Footer = () => {
               >
                 <IconInstagram className="w-4 h-4 text-pink-400 shrink-0" />
                 <span>{DOCTOR_INFO.instagramHandle}</span>
-              </a>
-
-              <a
-                href={DOCTOR_INFO.emailHref}
-                className="flex items-center gap-2 text-emerald-300 hover:text-emerald-200 transition-colors truncate"
-                title={DOCTOR_INFO.email}
-              >
-                <IconMail className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="truncate">{DOCTOR_INFO.email}</span>
               </a>
 
               <div className="flex items-start gap-2 text-slate-400 pt-1 text-[11px] leading-relaxed">

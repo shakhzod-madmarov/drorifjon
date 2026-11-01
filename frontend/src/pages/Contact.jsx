@@ -14,7 +14,6 @@ import {
   IconTelegram,
   IconInstagram,
   IconLocationPin,
-  IconMail,
 } from "../components/MedicalIcons";
 
 const Contact = () => {
@@ -78,12 +77,12 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* 5 Contact & Location Cards */}
+      {/* 4 Contact & Location Cards (No Email) */}
       <section aria-labelledby="contact-channels-heading" className="relative z-10 space-y-4">
         <h2 id="contact-channels-heading" className="sr-only">
           {lang === "uz" ? "Bog'lanish Kanallari va Manzil" : lang === "ru" ? "Способы Связи и Адрес" : "Contact Methods & Address"}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* Phone */}
         <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
@@ -162,30 +161,6 @@ const Contact = () => {
             className="inline-block text-sm sm:text-base font-bold text-pink-600 hover:underline"
           >
             {DOCTOR_INFO.instagramHandle} ↗
-          </a>
-        </div>
-
-        {/* Official Email */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-              <IconMail className="w-6 h-6 text-emerald-600" />
-            </div>
-            <div>
-              <h3 className="text-base font-bold text-slate-900">
-                {lang === "uz" ? "Rasmiy Email" : lang === "ru" ? "Эл. Почта" : "Official Email"}
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                {lang === "uz" ? "Xatlar va murojaatlar uchun:" : lang === "ru" ? "Для официальных запросов:" : "For official inquiries:"}
-              </p>
-            </div>
-          </div>
-          <a
-            href={DOCTOR_INFO.emailHref}
-            className="inline-block text-xs sm:text-sm font-bold text-emerald-700 hover:underline truncate"
-            title={DOCTOR_INFO.email}
-          >
-            {DOCTOR_INFO.email}
           </a>
         </div>
 
