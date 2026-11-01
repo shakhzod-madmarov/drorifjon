@@ -33,7 +33,7 @@ import {
   checkRateLimit,
   isBotSubmission,
 } from "../utils/security";
-import { CLASSIC_SERVICES, resolveCanonicalServiceId } from "../constants/bookingServices";
+import { CANONICAL_SPECIALTIES, resolveCanonicalServiceId } from "../constants/bookingServices";
 
 const pad2 = (n) => String(n).padStart(2, "0");
 
@@ -337,7 +337,7 @@ const InlineBookingSection = ({ initialService = null }) => {
     [days, selectedDate, firstDayWithSlots],
   );
 
-  const serviceObj = CLASSIC_SERVICES.find((s) => s.id === service) || CLASSIC_SERVICES[0];
+  const serviceObj = CANONICAL_SPECIALTIES.find((s) => s.id === service) || CANONICAL_SPECIALTIES[0];
   const serviceLabel = serviceObj[lang] || serviceObj.uz;
 
   const handlePhoneChange = (e) => {
@@ -611,7 +611,7 @@ const InlineBookingSection = ({ initialService = null }) => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
-              {CLASSIC_SERVICES.map((s) => {
+              {CANONICAL_SPECIALTIES.map((s) => {
                 const isSelected = service === s.id;
                 return (
                   <button

@@ -126,16 +126,3 @@ export const resolveCanonicalServiceId = (serviceId) => {
   if (sid.includes("terapiy") || sid.includes("davolash") || sid.includes("plomba") || sid.includes("karies") || sid.includes("oqartirish")) return "terapiya";
   return CANONICAL_SPECIALTIES.some((s) => s.id === sid) ? sid : "implantatsiya";
 };
-
-/* Backwards-compatibility CLASSIC_SERVICES export */
-export const CLASSIC_SERVICES = CANONICAL_SPECIALTIES.map((s) => ({
-  id: s.id,
-  uz: s.uz,
-  ru: s.ru,
-  en: s.en,
-  icon: s.icon,
-  kicker: s.kicker,
-  materials: s.materials,
-  desc: s.desc,
-  subOptions: s.subOptions,
-}));

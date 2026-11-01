@@ -245,20 +245,17 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
               className="group bg-white rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
             >
               <div>
-                {/* Pure Crisp Studio Photography with Zero Stickers on Photo */}
+                {/* Pure Crisp Studio Photography */}
                 <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-stone-100">
-                  <picture>
-                    <source srcSet={s.image} type="image/webp" />
-                    <img
-                      src={s.image.replace(/\.webp$/, ".jpg")}
-                      alt={s.title[lang]}
-                      width={600}
-                      height={400}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500 ease-out"
-                    />
-                  </picture>
+                  <img
+                    src={s.image}
+                    alt={s.title[lang]}
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500 ease-out"
+                  />
                 </div>
 
                 {/* Content Body */}

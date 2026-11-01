@@ -20,13 +20,6 @@ export const IconSparkleStar = ({ className = "w-4 h-4 text-amber-400" }) => (
   </svg>
 );
 
-export const IconToothCrown = ({ className = "w-4 h-4 text-amber-500" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M2 17l1.5-10 4.5 5 4-8 4 8 4.5-5L22 17H2z"/>
-    <path d="M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"/>
-  </svg>
-);
-
 export const IconClock = ({ className = "w-4 h-4 text-amber-500" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"/>
@@ -72,13 +65,6 @@ export const IconGraduationCap = ({ className = "w-4 h-4 text-primary" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
     <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-  </svg>
-);
-
-export const IconMail = ({ className = "w-4 h-4 text-primary" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="20" height="16" x="2" y="4" rx="2" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
 
@@ -222,13 +208,3 @@ export const DentalDenturesIcon = ({ className = "w-5 h-5" }) => (
     <path d="M7 11h10M6 15h12M12 8v10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
   </svg>
 );
-
-export const IconTherapeuticTooth = DentalToothMolar;
-export const IconVeneerTooth = DentalVeneerCrown;
-export const IconDentalImplant = DentalImplantFixture;
-export const IconCosmeticSmile = DentalWhiteningZoom;
-export const IconLaserWhitening = DentalWhiteningZoom;
-export const IconAtraumaticSurgery = DentalSurgeryExtraction;
-export const IconBraces = DentalBracesIcon;
-export const IconAligners = DentalAlignersIcon;
-export const IconDentures = DentalDenturesIcon;

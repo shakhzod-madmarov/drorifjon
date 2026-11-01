@@ -120,20 +120,17 @@ const Services = ({ onOpenBooking }) => {
               className="group relative rounded-3xl bg-white border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
               <div>
-                {/* Pure Photography Banner (Zero Stickers on Photo) */}
+                {/* Pure Photography Banner */}
                 <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-stone-100 border-b border-stone-100">
-                  <picture>
-                    <source srcSet={service.image} type="image/webp" />
-                    <img
-                      src={service.image.replace(/\.webp$/, ".jpg")}
-                      alt={service.title[lang]}
-                      width={900}
-                      height={600}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500 ease-out"
-                    />
-                  </picture>
+                  <img
+                    src={service.image}
+                    alt={service.title[lang]}
+                    width={900}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500 ease-out"
+                  />
                 </div>
 
                 {/* Body */}
