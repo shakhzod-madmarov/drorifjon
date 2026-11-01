@@ -46,7 +46,7 @@ const Services = ({ onOpenBooking }) => {
   const catalogSchema = buildServicesCatalogSchema(SERVICES_CATALOG, lang, breadcrumbs);
 
   return (
-    <div className="relative py-6 sm:py-10 space-y-12">
+    <div className="relative py-4 sm:py-6 space-y-6 sm:space-y-8">
       <Seo
         title={seo.title}
         description={seo.description}

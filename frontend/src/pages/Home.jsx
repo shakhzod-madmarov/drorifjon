@@ -99,23 +99,23 @@ const HeroSection = ({ onOpenBooking }) => {
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-white border border-stone-200/90 shadow-[0_10px_35px_rgba(20,30,40,0.05)] mt-3 sm:mt-5 p-6 sm:p-10 lg:p-12">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+    <section className="relative overflow-hidden rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-2 sm:mt-4 p-5 sm:p-7 lg:p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
         {/* Left Editorial Copy (7 cols) */}
-        <div className="lg:col-span-7 space-y-6 text-left">
+        <div className="lg:col-span-7 space-y-4 text-left">
           {/* Eyebrow / Location Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-[11.5px] font-bold shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>{t.badgeLocation}</span>
           </div>
 
           {/* Classic Headline */}
-          <div className="space-y-2">
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-primary flex items-center gap-1.5">
-              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+          <div className="space-y-1.5">
+            <p className="text-[10.5px] font-black uppercase tracking-[0.16em] text-primary flex items-center gap-1.5">
+              <IconSparkleStar className="w-3 h-3 text-primary" />
               <span>{t.kicker}</span>
             </p>
-            <h1 className="font-serif-classic text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight text-slate-900 leading-[1.18]">
+            <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-[38px] font-black tracking-tight text-slate-900 leading-[1.18]">
               {t.headlinePart1}
               <span className="text-primary italic font-serif">
                 {t.headlineHighlight}
@@ -125,15 +125,15 @@ const HeroSection = ({ onOpenBooking }) => {
             </h1>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-xl">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xl">
             {t.subtitle}
           </p>
 
           {/* Action CTAs (Just 2 clean buttons) */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 pt-1">
             <button
               onClick={() => onOpenBooking()}
-              className="px-7 py-3.5 rounded-2xl bg-primary hover:bg-orange-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer select-none flex items-center justify-center gap-2"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-orange-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xs transition-all cursor-pointer select-none flex items-center justify-center gap-2"
             >
               <span>{t.ctaBook}</span>
               <span>→</span>
@@ -141,7 +141,7 @@ const HeroSection = ({ onOpenBooking }) => {
 
             <Link
               to={to("/services")}
-              className="px-6 py-3.5 rounded-2xl bg-white hover:bg-stone-50 border border-stone-300 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all flex items-center justify-center gap-2"
+              className="px-5 py-3 rounded-xl bg-white hover:bg-stone-50 border border-stone-300 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all flex items-center justify-center gap-2"
             >
               <span>{t.ctaServices}</span>
               <span>→</span>
@@ -149,18 +149,18 @@ const HeroSection = ({ onOpenBooking }) => {
           </div>
 
           {/* 3 Classic Minimalist Editorial Stats */}
-          <div className="grid grid-cols-3 gap-3 pt-5 border-t border-stone-100 max-w-lg">
-            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-slate-900">{t.stat1Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat1Label}</p>
+          <div className="grid grid-cols-3 gap-2.5 pt-3.5 border-t border-stone-100 max-w-lg">
+            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-lg sm:text-xl font-black text-slate-900">{t.stat1Num}</p>
+              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat1Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-slate-900">{t.stat2Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat2Label}</p>
+            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-lg sm:text-xl font-black text-slate-900">{t.stat2Num}</p>
+              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat2Label}</p>
             </div>
-            <div className="p-3 rounded-2xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-xl sm:text-2xl font-black text-emerald-600">{t.stat3Num}</p>
-              <p className="text-[11px] font-medium text-slate-600 mt-0.5">{t.stat3Label}</p>
+            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-lg sm:text-xl font-black text-emerald-600">{t.stat3Num}</p>
+              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat3Label}</p>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
   };
 
   return (
-    <section className="py-8 sm:py-14 space-y-8">
+    <section className="py-6 sm:py-10 space-y-6">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2.5">
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
@@ -414,7 +414,7 @@ const Home = ({ onOpenBooking }) => {
   const homeSchema = buildHomeSchema(lang, FAQ_ITEMS);
 
   return (
-    <div className="space-y-12 sm:space-y-16 pb-12">
+    <div className="space-y-8 sm:space-y-10 pb-8">
       <Seo
         title={seo.title}
         description={seo.description}

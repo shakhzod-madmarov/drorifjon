@@ -131,7 +131,7 @@ const About = ({ onOpenBooking }) => {
   const aboutSchema = buildAboutPageSchema(lang, breadcrumbs);
 
   return (
-    <div className="relative py-4 sm:py-8 space-y-12">
+    <div className="relative py-4 sm:py-6 space-y-6 sm:space-y-8">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -154,17 +154,14 @@ const About = ({ onOpenBooking }) => {
         </span>
       </nav>
 
-      {/* Doctor Bio Editorial Header */}
-      <div className="relative z-10 overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl border border-amber-300/80 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-5 sm:p-10 lg:p-12">
-        {/* Brand Accent Top Strip */}
-        <div className="h-2 w-full bg-gradient-to-r from-primary via-brandCyan to-brandGreen absolute top-0 left-0 right-0" />
-
-        <div className="lg:col-span-7 space-y-6 pt-2">
+      {/* Doctor Bio Editorial Header — Tight & Balanced */}
+      <div className="relative z-10 overflow-hidden bg-white rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-5 sm:p-7 lg:p-8">
+        <div className="lg:col-span-7 space-y-4 text-left">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
+            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
               {getExperienceBadge(lang)}
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-stone-50 text-slate-700 border border-stone-200 text-xs font-medium">
+            <span className="px-3 py-1 rounded-full bg-stone-50 text-slate-700 border border-stone-200 text-xs font-medium">
               {lang === "ru"
                 ? "Андижанский мед. колледж (2001–2004) & ОшГУ (2017–2022)"
                 : lang === "en"
@@ -173,45 +170,58 @@ const About = ({ onOpenBooking }) => {
             </span>
           </div>
 
-          <div className="space-y-2">
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight break-words">
+          <div className="space-y-1">
+            <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
               {DOCTOR_INFO.fullName}
             </h1>
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary flex items-center gap-2">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary flex items-center gap-1.5">
               <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
-              <span>Stomatolog Orifjon · Mansurov Orifjon Alimbekovich · Vrach Stomatolog</span>
+              <span>Stomatolog Orifjon · Vrach Stomatolog</span>
             </p>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
             {lang === "uz"
-              ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. U 5 ta asosiy yo'nalish bo'yicha yuqori malakali mutaxassisdir: Terapiya (tishlarni og'riqsiz davolash va restavratsiya), Ortopediya (yuqori sifatli tish qo'yish, protezlash), Implantatsiya (Germaniya va Koreya mahsulotlari), Xirurgiya (og'riqsiz va asoratsiz tish olish) hamda Ortodontiya (breketlar yordamida tishlarni to'g'rilash)."
+              ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) 20 yildan ortiq tibbiyot sohasida amaliy faoliyat yuritib kelmoqda. Dastlab Andijon Tibbiyot kollejida (2001–2004) fundamental tibbiyot saboqlarini olgan, so'ngra O'sh Davlat Universitetida (2017–2022) oliy stomatologik ta'limni muvaffaqiyatli tamomlagan. 5 ta asosiy yo'nalish bo'yicha yuqori malakali mutaxassis: Terapiya, Ortopediya, Implantatsiya, Xirurgiya hamda Ortodontiya."
               : lang === "ru"
-              ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) работает в сфере здравоохранения более 20 лет. Начальное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Практикует 5 ключевых направлений: терапия (лечение и реставрация зубов без боли), ортопедия (высококачественное протезирование), имплантация (немецкие и корейские системы), хирургия (удаление зубов без осложнений) и ортодонтия (выравнивание зубов брекетами)."
-              : "Dentist Orifjon (Mansurov Orifjon Alimbekovich) has been practicing healthcare for over 20+ years. He graduated from Andijan Medical College (2001–2004) and completed university dental studies at Osh State University (2017–2022). He provides 5 core clinical specialties: Therapy (painless treatment and restoration), Orthopedics (precision prosthetics), Implantation (German & Korean systems), Surgery (painless extraction without complications), and Orthodontics (bite correction with braces)."}
+              ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) работает в сфере здравоохранения более 20 лет. Начальное образование получил в Андижанском медицинском колледже (2001–2004), затем окончил стоматологический факультет Ошского Государственного Университета (2017–2022). Практикует 5 ключевых направлений: терапия, ортопедия, имплантация, хирургия и ортодонтия."
+              : "Dentist Orifjon (Mansurov Orifjon Alimbekovich) has been practicing healthcare for over 20+ years. Graduate of Andijan Medical College (2001–2004) and Osh State University (2017–2022). Specialized in 5 core dental areas: Therapy, Orthopedics, Implantation, Oral Surgery, and Orthodontics."}
           </p>
 
-          <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3 pt-1">
+          {/* Action buttons & phone */}
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 pt-1">
             <button
               onClick={() => onOpenBooking()}
-              className="relative overflow-hidden inline-flex justify-center items-center px-5 sm:px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-semibold uppercase tracking-wider shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none"
             >
-              <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
-              <span className="relative z-10">{lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Visit"}</span>
+              {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Visit"}
             </button>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center px-4 py-3.5 rounded-xl bg-amber-50 hover:bg-amber-100/70 border border-amber-200/70 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xs"
+              className="inline-flex justify-center items-center px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-colors"
             >
               <IconPhone className="w-4 h-4 text-primary" />
               <span>{DOCTOR_INFO.phoneDisplay}</span>
             </a>
           </div>
+
+          {/* 3 Clinical Guarantee Badges */}
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-xs text-slate-600">
+            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              🛡️ {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Pain-free"}
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              🧪 {lang === "uz" ? "Steril asboblar" : lang === "ru" ? "Стерильно" : "Sterile instruments"}
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              💎 {lang === "uz" ? "Nemis & Koreya materiallari" : lang === "ru" ? "Материалы Германии и Кореи" : "German & Korean materials"}
+            </span>
+          </div>
         </div>
 
         {/* Right 3D Perspective Card */}
         <div className="lg:col-span-5 flex justify-center">
-          <Doctor3DCard lang={lang} />
+          <Doctor3DCard lang={lang} onOpenBooking={onOpenBooking} />
         </div>
       </div>
 

@@ -30,7 +30,7 @@ const Contact = () => {
   const contactSchema = buildContactPageSchema(lang, breadcrumbs);
 
   return (
-    <div className="relative py-6 sm:py-10 space-y-12">
+    <div className="relative py-4 sm:py-6 space-y-6 sm:space-y-8">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -53,29 +53,28 @@ const Contact = () => {
       </nav>
 
       {/* Header: Classic Medical Presentation */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-3">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-slate-800 text-xs font-bold shadow-2xs">
+      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-2">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>{lang === "uz" ? "Bevosita Aloqa · Andijon" : lang === "ru" ? "Прямая Связь · Андижан" : "Direct Clinic Contact"}</span>
         </div>
-        <h1 className="font-serif-classic text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+        <h1 className="font-serif-classic text-2xl sm:text-4xl font-bold text-slate-900 leading-tight">
           {lang === "uz" ? "Aloqa va Qabulga Yozilish" : lang === "ru" ? "Контакты и Запись на Приём" : "Contact & Appointment"}
         </h1>
-        <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
           {lang === "uz"
             ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuliga telefon, Telegram, Instagram yoki onlayn jadval orqali yozilishingiz mumkin."
             : lang === "ru"
             ? "Свяжитесь с нами по телефону, через Telegram, Instagram или запишитесь через онлайн-расписание к Стоматологу Орифжону."
             : "Connect with Dentist Orifjon (Mansurov Orifjon Alimbekovich) via phone, Telegram, Instagram, or our online appointment scheduler."}
         </p>
-        <div className="pt-2">
+        <div className="pt-1">
           <Link
             to={to("/booking")}
-            className="relative overflow-hidden inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-orange hover:-translate-y-0.5 transition-all group select-none"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-wider shadow-2xs transition-colors group select-none"
           >
-            <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
-            <span className="relative z-10">{lang === "uz" ? "Onlayn Jadvaldan Vaqt Tanlash" : lang === "ru" ? "Онлайн Расписание и Запись" : "Book Online via Schedule"}</span>
-            <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
+            <span>{lang === "uz" ? "Onlayn Jadvaldan Vaqt Tanlash" : lang === "ru" ? "Онлайн Расписание и Запись" : "Book Online via Schedule"}</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
       </div>

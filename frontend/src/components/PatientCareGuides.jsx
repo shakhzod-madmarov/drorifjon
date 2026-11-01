@@ -308,11 +308,11 @@ const PatientCareGuides = () => {
   const [activeTab, setActiveTab] = useState(guides[0]);
 
   return (
-    <section className="py-10 sm:py-16 bg-white rounded-[2.5rem] border border-amber-200/90 p-4 sm:p-8 lg:p-10 shadow-luxury relative overflow-hidden">
+    <section className="py-6 sm:py-8 bg-white rounded-3xl border border-stone-200/90 shadow-sm p-4 sm:p-6 lg:p-8 relative overflow-hidden">
       {/* Ambient background glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-amber-200/25 via-primary/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-stone-100/30 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto space-y-8 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-5 sm:space-y-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-amber-50 text-primary border border-amber-300/80 shadow-2xs">
