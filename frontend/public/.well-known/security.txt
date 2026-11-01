@@ -1,0 +1,9 @@
+# Security Policy for drorifjon.uz
+# Conforms to RFC 9116
+Contact: tel:+998905481090
+Contact: https://t.me/dr_orifjon_1
+Expires: 2028-12-31T23:59:59.000Z
+Preferred-Languages: uz, ru, en
+Canonical: https://drorifjon.uz/.well-known/security.txt
+Policy: https://drorifjon.uz/
+Acknowledgments: https://drorifjon.uz/about

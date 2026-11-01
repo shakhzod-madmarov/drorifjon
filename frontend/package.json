@@ -8,6 +8,7 @@
     "build": "vite build && node scripts/generate-sitemap.mjs && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "build:client": "vite build && node scripts/generate-sitemap.mjs",
     "lint": "eslint .",
+    "security:check": "node scripts/security-audit.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { useBooking } from "../context/BookingContext";
@@ -32,6 +32,7 @@ import {
   sanitizeNote,
   checkRateLimit,
   isBotSubmission,
+  isHumanSubmissionVelocity,
 } from "../utils/security";
 import { CANONICAL_SPECIALTIES, resolveCanonicalServiceId } from "../constants/bookingServices";
 
@@ -280,6 +281,7 @@ const InlineBookingSection = ({ initialService = null }) => {
 
   const [isRelayEnabled, setIsRelayEnabled] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const submittingLockRef = useRef(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [bookingResult, setBookingResult] = useState(null);
   const [botQr, setBotQr] = useState("");
@@ -351,6 +353,9 @@ const InlineBookingSection = ({ initialService = null }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // 0. Synchronous re-entrancy lock to prevent parallel double-submissions
+    if (submittingLockRef.current || isSubmitting) return;
+
     // 1. Anti-Bot Honeypot Protection
     if (isBotSubmission(honeypot)) {
       // Fake success to trap automated bot scrapers without calling backend relay
@@ -358,8 +363,8 @@ const InlineBookingSection = ({ initialService = null }) => {
       return;
     }
 
-    // 2. Velocity check: human patient takes at least 1.2s to fill the form
-    if (Date.now() - formMountTime < 1200) {
+    // 2. Velocity trap: human patient takes at least 1.5s to read & submit form
+    if (!isHumanSubmissionVelocity(formMountTime, 1500)) {
       toast.warn(
         lang === "uz"
           ? "Iltimos, ma'lumotlarni tekshirib qayta bosing."
@@ -370,7 +375,7 @@ const InlineBookingSection = ({ initialService = null }) => {
       return;
     }
 
-    // 3. Client session rate-limiting (10-second cooldown)
+    // 3. Client session rate-limiting (backed by sessionStorage)
     const rateStatus = checkRateLimit("booking_submission", 10);
     if (!rateStatus.allowed) {
       toast.warn(rateStatus.message);
@@ -394,6 +399,7 @@ const InlineBookingSection = ({ initialService = null }) => {
       return;
     }
 
+    submittingLockRef.current = true;
     setIsSubmitting(true);
     try {
       const cleanNote = sanitizeNote(note, 300);
@@ -440,6 +446,7 @@ const InlineBookingSection = ({ initialService = null }) => {
       }
       toast.error(err?.message || t.failed);
     } finally {
+      submittingLockRef.current = false;
       setIsSubmitting(false);
     }
   };
