@@ -62,7 +62,7 @@ const ClinicLocationMap = ({ compact = false }) => {
                 {c.address[lang]}
               </p>
               <p className="text-[11px] text-slate-400">
-                Mo'ljal: {c.landmark[lang]}
+                {lang === "ru" ? "Ориентир:" : lang === "en" ? "Landmark:" : "Mo'ljal:"} {c.landmark[lang]}
               </p>
             </div>
 

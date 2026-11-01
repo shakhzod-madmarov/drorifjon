@@ -172,10 +172,18 @@ const About = ({ onOpenBooking }) => {
 
           <div className="space-y-1">
             <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-              {DOCTOR_INFO.fullName}
+              {lang === "ru"
+                ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович)"
+                : lang === "en"
+                ? "Dentist Orifjon (Mansurov Orifjon Alimbekovich)"
+                : "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)"}
             </h1>
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
-              Stomatolog Orifjon · Vrach Stomatolog
+              {lang === "ru"
+                ? "Стоматолог Орифжон · Врач-Стоматолог"
+                : lang === "en"
+                ? "Dentist Orifjon · Dental Surgeon"
+                : "Stomatolog Orifjon · Vrach Stomatolog"}
             </p>
           </div>
 

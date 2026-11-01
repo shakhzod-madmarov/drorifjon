@@ -142,11 +142,16 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
     "provider": {
       "@type": ["Dentist", "MedicalBusiness"],
       "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
+      "name":
+        lang === "ru"
+          ? `${DOCTOR_INFO.names.ru} — Стоматологический Центр`
+          : lang === "en"
+          ? `${DOCTOR_INFO.names.en} — Dental Practice`
+          : `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
       "telephone": DOCTOR_INFO.phoneRaw,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Andijon shahri",
+        "streetAddress": "Muqimiy ko'chasi",
         "addressLocality": "Andijon",
         "addressRegion": "Andijon viloyati",
         "postalCode": "170100",
@@ -157,8 +162,13 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
     "performer": {
       "@type": "Physician",
       "@id": `${SITE_ORIGIN}/#doctor`,
-      "name": DOCTOR_INFO.name,
-      "jobTitle": DOCTOR_INFO.title,
+      "name": DOCTOR_INFO.names[lang] || DOCTOR_INFO.name,
+      "jobTitle":
+        lang === "ru"
+          ? "Врач-Стоматолог"
+          : lang === "en"
+          ? "Dental Surgeon"
+          : "Vrach Stomatolog",
       "telephone": DOCTOR_INFO.phoneRaw,
       "url": `${SITE_ORIGIN}/`,
       "alumniOf": {
@@ -485,9 +495,19 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
   const doctorEntity = {
     "@type": "Physician",
     "@id": `${SITE_ORIGIN}/#doctor`,
-    "name": DOCTOR_INFO.name,
-    "jobTitle": DOCTOR_INFO.title,
-    "description": `${DOCTOR_INFO.name} — 20+ yillik tajribaga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Andijon.`,
+    "name": DOCTOR_INFO.names[lang] || DOCTOR_INFO.name,
+    "jobTitle":
+      lang === "ru"
+        ? "Врач-Стоматолог"
+        : lang === "en"
+        ? "Dental Surgeon"
+        : "Vrach Stomatolog",
+    "description":
+      lang === "ru"
+        ? `Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — более 20 лет практики в сфере здравоохранения. Ошский Государственный Университет и Андижанский медицинский колледж. г. Андижан.`
+        : lang === "en"
+        ? `Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Over 20+ years of healthcare experience. Osh State University and Andijan Medical College. Andijan, Uzbekistan.`
+        : `Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Andijon.`,
     "telephone": DOCTOR_INFO.phoneRaw,
     "url": `${SITE_ORIGIN}/`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
@@ -571,7 +591,12 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
     "@type": "MedicalWebPage",
     "@id": `${pageUrl}#booking`,
     "url": pageUrl,
-    "name": lang === "ru" ? "Онлайн запись к Д-ру Мансурову" : lang === "en" ? "Online Appointment Booking" : "Onlayn qabulga yozilish",
+    "name":
+      lang === "ru"
+        ? "Онлайн запись к Стоматологу Орифжону"
+        : lang === "en"
+        ? "Online Appointment with Dentist Orifjon"
+        : "Stomatolog Orifjon qabuliga onlayn yozilish",
     "about": {
       "@type": "Dentist",
       "@id": `${SITE_ORIGIN}/#dentist`,

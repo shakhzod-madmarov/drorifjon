@@ -25,7 +25,7 @@ export const ROUTES = [
     priority: "1.0",
     image: {
       src: "public/dr_orifjon_og.jpg",
-      title: "Stomatolog Orifjon — Mansurov Orifjon Alimbekovich (Vrach Stomatolog)",
+      title: "Stomatolog Orifjon — Vrach Stomatolog (Andijon)",
       caption:
         "Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20+ yillik tibbiyot tajribasiga ega vrach stomatolog Stomatolog Orifjon",
     },
@@ -47,7 +47,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/hero_smile.webp",
-      title: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) Haqida — 20+ Yillik Tibbiyot Tajribasi",
+      title: "Stomatolog Orifjon Haqida — 20+ Yillik Tibbiyot Tajribasi",
       caption:
         "Andijon Tibbiyot kolleji (2001-2004) va O'sh Davlat Universiteti (2017-2022) bitiruvchisi",
     },

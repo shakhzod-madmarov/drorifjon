@@ -125,7 +125,13 @@ const ServiceDetail = () => {
     <div className="relative py-6 sm:py-10 space-y-12">
       <Seo
         title={`${service.title[lang]} — ${seoSuffix}`}
-        description={`${service.shortDesc[lang]} Stomatolog Orifjon, 20+ yillik tajriba. Tel: ${DOCTOR_INFO.phoneDisplay}.`}
+        description={
+          lang === "ru"
+            ? `${service.shortDesc[lang]} Стоматолог Орифжон, более 20 лет практики в Андижане. Тел: ${DOCTOR_INFO.phoneDisplay}.`
+            : lang === "en"
+            ? `${service.shortDesc[lang]} Dentist Orifjon, 20+ years clinical dental experience in Andijan. Tel: ${DOCTOR_INFO.phoneDisplay}.`
+            : `${service.shortDesc[lang]} Stomatolog Orifjon, 20+ yillik tibbiyot tajribasi. Tel: ${DOCTOR_INFO.phoneDisplay}.`
+        }
         keywords={serviceKeywords}
         schemaJson={procedureSchema}
       />

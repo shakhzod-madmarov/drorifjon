@@ -79,9 +79,24 @@ const Seo = ({
     }
 
     if (resolvedKeywords) {
+      const kwContent = Array.isArray(resolvedKeywords) ? resolvedKeywords.join(", ") : resolvedKeywords;
       const kwMeta = document.querySelector('meta[name="keywords"]');
-      if (kwMeta) kwMeta.setAttribute("content", resolvedKeywords);
+      if (kwMeta) kwMeta.setAttribute("content", kwContent);
     }
+
+    // Dynamic OpenGraph locale and site name
+    const targetLocale = lang === "ru" ? "ru_RU" : lang === "en" ? "en_US" : "uz_UZ";
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) ogLocale.setAttribute("content", targetLocale);
+
+    const siteName =
+      lang === "ru"
+        ? "Стоматолог Орифжон — Стоматологический Центр"
+        : lang === "en"
+        ? "Dentist Orifjon — Dental Practice"
+        : "Stomatolog Orifjon — Vrach Stomatolog";
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]');
+    if (ogSiteName) ogSiteName.setAttribute("content", siteName);
 
     if (resolvedCanonical) {
       const canonicalLink = document.querySelector('link[rel="canonical"]');

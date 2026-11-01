@@ -144,7 +144,18 @@ for (const route of routes) {
       : route.startsWith("/en/") || route === "/en"
       ? "en"
       : "uz";
-  page = setHtmlLang(page, seo?.lang || routeLang || DEFAULT_LANG);
+  const effectiveLang = seo?.lang || routeLang || DEFAULT_LANG;
+  const targetLocale = effectiveLang === "ru" ? "ru_RU" : effectiveLang === "en" ? "en_US" : "uz_UZ";
+  const siteName =
+    effectiveLang === "ru"
+      ? "Стоматолог Орифжон — Стоматологический Центр"
+      : effectiveLang === "en"
+      ? "Dentist Orifjon — Dental Practice"
+      : "Stomatolog Orifjon — Vrach Stomatolog";
+
+  page = setMetaProperty(page, "og:locale", targetLocale);
+  page = setMetaProperty(page, "og:site_name", siteName);
+  page = setHtmlLang(page, effectiveLang);
   page = injectAlternates(page, seo?.alternates);
   page = injectSchema(page, seo?.schemaJson);
 
