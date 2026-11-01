@@ -226,10 +226,10 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                       {/* Mega Dropdown Card for 5 Specialties */}
                       {servicesDropdown && (
                         <div
-                          className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-white/95 backdrop-blur-2xl border border-stone-200/90 shadow-[0_16px_40px_rgba(20,30,40,0.12)] p-2.5 space-y-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                          className="absolute top-full left-0 mt-2 w-96 sm:w-[410px] rounded-2xl bg-white/98 backdrop-blur-2xl border border-stone-200/90 shadow-[0_20px_50px_rgba(20,30,40,0.14)] p-3 space-y-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                         >
-                          <div className="px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 flex items-center justify-between">
-                            <span>{lang === "uz" ? "5 Asosiy Yo'nalish" : lang === "ru" ? "5 Направлений" : "5 Specialties"}</span>
+                          <div className="px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 flex items-center justify-between">
+                            <span>{lang === "uz" ? "Klinik Yo'nalishlar" : lang === "ru" ? "5 Направлений" : "5 Specialties"}</span>
                             <span className="text-primary font-bold">{lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle"}</span>
                           </div>
 
@@ -238,20 +238,20 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                               key={spec.id}
                               to={to(spec.path)}
                               onClick={() => setServicesDropdown(false)}
-                              className="group flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors"
+                              className="group flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-stone-50 transition-colors"
                             >
-                              <span className="w-8 h-8 rounded-lg bg-stone-50 border border-stone-200/80 group-hover:bg-primary/10 group-hover:border-primary/30 flex items-center justify-center shrink-0 transition-colors">
+                              <span className="w-9 h-9 rounded-xl bg-amber-50/70 border border-amber-200/80 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all shadow-2xs">
                                 {spec.icon}
                               </span>
                               <div className="min-w-0 flex-1">
                                 <p className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors">
                                   {spec.title[lang]}
                                 </p>
-                                <p className="text-[10.5px] text-slate-500 leading-tight truncate mt-0.5 font-normal">
+                                <p className="text-[11.5px] text-slate-500 leading-snug mt-0.5 font-normal">
                                   {spec.desc[lang]}
                                 </p>
                               </div>
-                              <span className="text-xs text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all">
+                              <span className="text-xs text-stone-300 group-hover:text-primary group-hover:translate-x-1 transition-all">
                                 →
                               </span>
                             </NavLink>
@@ -325,12 +325,12 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               {/* Direct Phone Dial (Desktop) */}
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="hidden xl:inline-flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-amber-50/70 hover:bg-amber-100/70 border border-amber-200/60 transition-all duration-200 shadow-2xs group"
+                className="hidden xl:inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-amber-50/80 hover:bg-amber-100 border border-amber-200/80 transition-all duration-200 shadow-2xs whitespace-nowrap group"
               >
-                <span className="w-5 h-5 rounded-md bg-emerald-500 text-white flex items-center justify-center group-hover:animate-bounce shadow-xs">
+                <span className="w-5 h-5 rounded-md bg-primary text-white flex items-center justify-center shadow-xs">
                   <IconPhone className="w-3 h-3 text-white" />
                 </span>
-                <span>{DOCTOR_INFO.phoneDisplay}</span>
+                <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
               </a>
 
               {/* Magnetic Glowing Primary Book CTA */}
@@ -484,9 +484,9 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             <div className="pt-2 border-t border-amber-200/70 space-y-2">
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="flex items-center gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-950 font-bold text-xs"
+                className="flex items-center gap-3 p-3 rounded-xl bg-amber-50 border border-amber-200/90 text-slate-900 font-bold text-xs hover:bg-amber-100 transition-colors"
               >
-                <span className="w-7 h-7 rounded-lg bg-emerald-500 text-white flex items-center justify-center">
+                <span className="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center">
                   <IconPhone className="w-4 h-4 text-white" />
                 </span>
                 <span>{DOCTOR_INFO.phoneDisplay} (To'g'ridan-to'g'ri qo'ng'iroq)</span>

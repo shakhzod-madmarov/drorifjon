@@ -101,7 +101,7 @@ const Contact = () => {
           </div>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="inline-block text-sm sm:text-base font-bold text-primary hover:underline"
+            className="inline-block text-sm sm:text-base font-bold text-primary hover:underline whitespace-nowrap"
           >
             {DOCTOR_INFO.phoneDisplay}
           </a>

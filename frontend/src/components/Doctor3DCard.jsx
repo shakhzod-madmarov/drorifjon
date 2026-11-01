@@ -1,6 +1,6 @@
 import React, { useRef, useState, useCallback } from "react";
 import { DOCTOR_INFO } from "../constants/doctor";
-import { IconTelegram, IconInstagram, IconPhone, IconSparkleStar } from "./MedicalIcons";
+import { IconTelegram, IconInstagram, IconPhone } from "./MedicalIcons";
 
 /**
  * Doctor3DCard — Compact Classic Medical Portrait Card
@@ -87,21 +87,13 @@ const Doctor3DCard = ({
               className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
           </picture>
-
-          {/* Single Discreet Availability Indicator */}
-          <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
-            <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-bold text-slate-800 border border-white/90 shadow-2xs">
-              <span>{lang === "uz" ? "Andijon sh." : lang === "ru" ? "г. Андижан" : "Andijan"}</span>
-            </span>
-          </div>
         </div>
 
         {/* Clean Editorial Bio (Underneath Photo) */}
         <div className="p-4 sm:p-5 bg-white text-left space-y-2.5">
           <div>
-            <p className="text-[9.5px] font-black uppercase tracking-[0.16em] text-primary flex items-center gap-1">
-              <IconSparkleStar className="w-3 h-3 text-primary" />
-              <span>{specialtyText}</span>
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
+              {specialtyText}
             </p>
             <h3 className="font-serif-classic text-xl font-bold tracking-tight text-slate-900 mt-0.5">
               Stomatolog Orifjon
@@ -111,42 +103,44 @@ const Doctor3DCard = ({
             </p>
           </div>
 
-          {/* Contact Channels & Direct Booking CTA */}
-          <div className="pt-2 flex items-center justify-between gap-2 border-t border-stone-100">
-            <div className="flex items-center gap-1.5">
-              <a
-                href={DOCTOR_INFO.phoneHref}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-slate-900 border border-amber-200/80 text-xs font-bold transition-colors"
-                title={`Tel: ${DOCTOR_INFO.phoneDisplay}`}
-              >
-                <IconPhone className="w-3 h-3 text-primary" />
-                <span>{DOCTOR_INFO.phoneDisplay}</span>
-              </a>
-              <a
-                href={DOCTOR_INFO.telegramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                className="w-8 h-8 rounded-lg bg-sky-50 hover:bg-sky-100 text-sky-600 border border-sky-200/80 flex items-center justify-center transition-colors"
-                title="Telegram: @dr_orifjon_1"
-              >
-                <IconTelegram className="w-3.5 h-3.5 text-sky-500" />
-              </a>
-              <a
-                href={DOCTOR_INFO.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-lg bg-pink-50 hover:bg-pink-100 text-pink-600 border border-pink-200/80 flex items-center justify-center transition-colors"
-                title="Instagram: @dr_orifjon"
-              >
-                <IconInstagram className="w-3.5 h-3.5 text-pink-500" />
-              </a>
-            </div>
+          {/* Direct Phone Call Button (Never Wraps) */}
+          <div className="pt-2 border-t border-stone-100">
+            <a
+              href={DOCTOR_INFO.phoneHref}
+              className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-slate-900 border border-amber-200/90 text-xs font-bold whitespace-nowrap transition-colors shadow-2xs group/phone"
+              title={`Tel: ${DOCTOR_INFO.phoneDisplay}`}
+            >
+              <IconPhone className="w-3.5 h-3.5 text-primary shrink-0 group-hover/phone:scale-110 transition-transform" />
+              <span className="tracking-tight">{DOCTOR_INFO.phoneDisplay}</span>
+            </a>
+          </div>
 
+          {/* Social Channels & Online Booking Button */}
+          <div className="flex items-center gap-2">
+            <a
+              href={DOCTOR_INFO.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200/80 text-xs font-bold transition-colors"
+              title="Telegram: @dr_orifjon_1"
+            >
+              <IconTelegram className="w-3.5 h-3.5 text-sky-500 shrink-0" />
+              <span className="text-[11px]">Telegram</span>
+            </a>
+            <a
+              href={DOCTOR_INFO.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-8 h-8 rounded-xl bg-pink-50 hover:bg-pink-100 text-pink-600 border border-pink-200/80 flex items-center justify-center transition-colors shrink-0"
+              title="Instagram: @dr_orifjon"
+            >
+              <IconInstagram className="w-3.5 h-3.5 text-pink-500" />
+            </a>
             <button
               onClick={onOpenBooking}
-              className="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-orange-600 text-white text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none"
+              className="flex-1 py-1.5 px-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none text-center"
             >
               {lang === "uz" ? "Qabul" : lang === "ru" ? "Запись" : "Book"}
             </button>

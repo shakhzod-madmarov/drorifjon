@@ -110,9 +110,8 @@ const HeroSection = ({ onOpenBooking }) => {
 
           {/* Classic Headline */}
           <div className="space-y-1.5">
-            <p className="text-[10.5px] font-black uppercase tracking-[0.16em] text-primary flex items-center gap-1.5">
-              <IconSparkleStar className="w-3 h-3 text-primary" />
-              <span>{t.kicker}</span>
+            <p className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-primary">
+              {t.kicker}
             </p>
             <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-[38px] font-black tracking-tight text-slate-900 leading-[1.18]">
               {t.headlinePart1}
@@ -212,8 +211,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
     <section className="py-6 sm:py-10 space-y-6">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2.5">
-        <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
-          <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
           <span>{lang === "uz" ? "Asosiy 5 Klinik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}</span>
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 font-serif-classic tracking-tight">
@@ -324,8 +322,7 @@ const BeforeAfterSection = () => {
   return (
     <section className="py-12 sm:py-16 space-y-8">
       <div className="text-center max-w-2xl mx-auto space-y-2">
-        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-medium uppercase tracking-wider bg-amber-50 text-amber-800 border border-amber-200/80 shadow-2xs">
-          <IconSparkleStar className="w-3.5 h-3.5 text-amber-600" />
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-50 text-slate-800 border border-amber-200/80 shadow-2xs">
           <span>{lang === "uz" ? "NATIJALAR VA TAQQOSLASH" : lang === "ru" ? "РЕЗУЛЬТАТЫ ДО И ПОСЛЕ" : "BEFORE & AFTER GALLERY"}</span>
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-serif-classic">

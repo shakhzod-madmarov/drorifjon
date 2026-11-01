@@ -233,19 +233,7 @@ export default function ClinicEquipmentShowcase() {
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                 />
                 {/* Visual Depth Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 pointer-events-none" />
-
-                {/* Clean, Refined Top Frosted Glass Badges */}
-                <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[10.5px] font-black tracking-wide text-slate-900 border border-white/80 shadow-xs">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                    <span>{item.category}</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-xs text-[10.5px] font-black border border-emerald-300/40">
-                    <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
-                    <span>{item.warrantyBadge}</span>
-                  </span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating Medical Icon Disc & Clean Clinical Pill */}

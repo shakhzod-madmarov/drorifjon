@@ -131,7 +131,7 @@ const Footer = () => {
             <div className="space-y-3 text-xs">
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="flex items-center gap-2 text-white font-bold hover:text-brandOrange transition-colors"
+                className="flex items-center gap-2 text-white font-bold hover:text-brandOrange transition-colors whitespace-nowrap"
               >
                 <IconPhone className="w-4 h-4 text-primary shrink-0" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>

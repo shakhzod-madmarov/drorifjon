@@ -212,7 +212,7 @@ const ServiceDetail = () => {
               </button>
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-amber-200 transition-colors"
+                className="px-5 py-3.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-amber-200 transition-colors whitespace-nowrap"
               >
                 <IconPhone className="w-4 h-4 text-primary" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -233,19 +233,6 @@ const ServiceDetail = () => {
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
-
-                {/* Clean Top Frosted Glass Badges */}
-                <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-bold text-slate-900 border border-white/80 shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    <span>{service.badge?.[lang] || service.category[lang]}</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md text-[10.5px] font-bold border border-emerald-300/40">
-                    <IconShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
-                    <span>{service.warranty[lang]}</span>
-                  </span>
-                </div>
               </div>
             </div>
           </div>

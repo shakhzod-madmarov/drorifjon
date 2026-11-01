@@ -315,8 +315,7 @@ const PatientCareGuides = () => {
       <div className="max-w-7xl mx-auto space-y-5 sm:space-y-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-amber-50 text-primary border border-amber-300/80 shadow-2xs">
-            <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+          <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-stone-50 text-slate-800 border border-stone-200 shadow-2xs">
             <span>
               {lang === "uz"
                 ? "Bemorlar Uchun Klinik Eslatma"
@@ -386,8 +385,7 @@ const PatientCareGuides = () => {
 
               {/* Shifokor Kengashi (Doctor's Note Box) */}
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border-l-4 border-l-primary border-y border-r border-amber-200/80 shadow-2xs space-y-2 text-left">
-                <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
-                  <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
                   <span>{lang === "uz" ? "Muhim Klinik Maslahat:" : lang === "ru" ? "Важный Совет Врача:" : "Crucial Doctor's Tip:"}</span>
                 </div>
                 <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed italic">
@@ -396,9 +394,9 @@ const PatientCareGuides = () => {
               </div>
 
               {/* Emergency Doctor Hotline Strip */}
-              <div className="p-3.5 rounded-2xl bg-emerald-50/90 border border-emerald-300/80 flex items-center justify-between gap-2 shadow-2xs">
+              <div className="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 flex items-center justify-between gap-2 shadow-2xs">
                 <div className="text-left min-w-0">
-                  <p className="text-[10px] font-extrabold uppercase text-emerald-800">
+                  <p className="text-[10px] font-bold uppercase text-slate-500">
                     {lang === "uz" ? "Savollaringiz Bormi?" : lang === "ru" ? "Есть Вопросы?" : "Need Assistance?"}
                   </p>
                   <p className="text-xs font-bold text-slate-800 truncate">
@@ -407,10 +405,10 @@ const PatientCareGuides = () => {
                 </div>
                 <a
                   href={DOCTOR_INFO.phoneHref}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs transition-colors shadow-xs shrink-0"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white font-bold text-xs transition-colors shadow-xs shrink-0 whitespace-nowrap"
                 >
-                  <IconPhone className="w-3.5 h-3.5 text-white animate-bounce" />
-                  <span>{DOCTOR_INFO.phoneDisplay}</span>
+                  <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
+                  <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
                 </a>
               </div>
             </div>
@@ -419,8 +417,8 @@ const PatientCareGuides = () => {
             <div className="lg:col-span-7 space-y-6">
               {/* Title Strip */}
               <div className="space-y-1.5 text-left">
-                <span className="text-[10.5px] font-black uppercase tracking-widest text-primary">
-                  {lang === "uz" ? "✦ Bemor Protokoli" : lang === "ru" ? "✦ Клинический Протокол" : "✦ Clinical Protocol"}
+                <span className="text-[10.5px] font-bold uppercase tracking-wider text-primary">
+                  {lang === "uz" ? "Bemor Protokoli" : lang === "ru" ? "Клинический Протокол" : "Clinical Protocol"}
                 </span>
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 font-serif-classic leading-snug">
                   {activeTab.title[lang]}
@@ -429,33 +427,28 @@ const PatientCareGuides = () => {
 
               <div className="grid grid-cols-1 gap-5">
                 {/* 1. TAVSIYALAR (DO'S) */}
-                <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/40 border-2 border-emerald-300/80 shadow-[0_8px_25px_rgba(16,185,129,0.08)] space-y-4 text-left">
-                  <div className="flex items-center justify-between gap-2 border-b border-emerald-200/80 pb-3">
-                    <div className="flex items-center gap-2.5">
-                      <span className="w-7 h-7 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-black text-xs shadow-xs">
-                        ✓
-                      </span>
-                      <h4 className="text-xs sm:text-sm font-black uppercase tracking-wider text-emerald-950">
-                        {lang === "uz"
-                          ? "NIMALARNI QILISH KERAK (TAVSIYALAR):"
-                          : lang === "ru"
-                          ? "ЧТО НУЖНО ДЕЛАТЬ (РЕКОМЕНДАЦИИ):"
-                          : "WHAT TO DO (RECOMMENDED):"}
-                      </h4>
-                    </div>
-                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
-                      {lang === "uz" ? "Foydali" : lang === "ru" ? "Полезно" : "Best Steps"}
+                <div className="p-5 sm:p-6 rounded-3xl bg-white border border-stone-200 shadow-sm space-y-4 text-left">
+                  <div className="flex items-center gap-2.5 border-b border-stone-100 pb-3">
+                    <span className="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold text-xs shrink-0">
+                      ✓
                     </span>
+                    <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900">
+                      {lang === "uz"
+                        ? "Nimalarni qilish kerak (Tavsiyalar)"
+                        : lang === "ru"
+                        ? "Что нужно делать (Рекомендации)"
+                        : "Recommended actions"}
+                    </h4>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {activeTab.dos[lang].map((item, idx) => (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-2xl bg-white border border-emerald-200/70 shadow-2xs space-y-1 hover:border-emerald-400 hover:-translate-y-0.5 transition-all duration-200"
+                        className="p-3.5 rounded-2xl bg-stone-50/60 border border-stone-200/70 shadow-2xs space-y-1 hover:border-emerald-300 transition-colors"
                       >
-                        <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-700">
-                          <IconCheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-800">
+                          <IconCheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                           <span>{item.title}</span>
                         </div>
                         <p className="text-[11.5px] text-slate-600 leading-snug">
@@ -467,23 +460,18 @@ const PatientCareGuides = () => {
                 </div>
 
                 {/* 2. CHEKLOVLAR (DON'TS) */}
-                <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-rose-50/90 via-white to-amber-50/30 border-2 border-rose-300/80 shadow-[0_8px_25px_rgba(244,63,94,0.08)] space-y-4 text-left">
-                  <div className="flex items-center justify-between gap-2 border-b border-rose-200/80 pb-3">
-                    <div className="flex items-center gap-2.5">
-                      <span className="w-7 h-7 rounded-xl bg-rose-500 text-white flex items-center justify-center font-black text-xs shadow-xs">
-                        ✕
-                      </span>
-                      <h4 className="text-xs sm:text-sm font-black uppercase tracking-wider text-rose-950">
-                        {lang === "uz"
-                          ? "NIMALARNI QILISH MUMKIN EMAS (CHEKLOVLAR):"
-                          : lang === "ru"
-                          ? "ЧЕГО ДЕЛАТЬ НЕЛЬЗЯ (ОГРАНИЧЕНИЯ):"
-                          : "WHAT TO AVOID (RESTRICTIONS):"}
-                      </h4>
-                    </div>
-                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-300">
-                      {lang === "uz" ? "Taqiqlanadi" : lang === "ru" ? "Запрещено" : "Strictly Avoid"}
+                <div className="p-5 sm:p-6 rounded-3xl bg-white border border-stone-200 shadow-sm space-y-4 text-left">
+                  <div className="flex items-center gap-2.5 border-b border-stone-100 pb-3">
+                    <span className="w-6 h-6 rounded-lg bg-rose-50 text-rose-700 border border-rose-200 flex items-center justify-center font-bold text-xs shrink-0">
+                      ✕
                     </span>
+                    <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900">
+                      {lang === "uz"
+                        ? "Nimalarni qilish mumkin emas (Cheklovlar)"
+                        : lang === "ru"
+                        ? "Чего делать нельзя (Ограничения)"
+                        : "Restrictions & precautions"}
+                    </h4>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

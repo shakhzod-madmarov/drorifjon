@@ -85,7 +85,7 @@ const FloatingActionHub = () => {
         {/* Desktop Quick Phone Pill */}
         <a
           href={DOCTOR_INFO.phoneHref}
-          className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-amber-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5"
+          className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-amber-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5 whitespace-nowrap"
         >
           <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
             <IconPhone className="w-3.5 h-3.5 text-primary" />

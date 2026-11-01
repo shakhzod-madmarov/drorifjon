@@ -107,7 +107,7 @@ const Booking = () => {
           <p className="text-slate-500">{hours.sunday}</p>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="inline-flex items-center gap-2 font-bold text-primary hover:underline pt-1 text-sm"
+            className="inline-flex items-center gap-2 font-bold text-primary hover:underline pt-1 text-sm whitespace-nowrap"
           >
             <IconPhone className="w-4 h-4 text-primary" />
             <span>{DOCTOR_INFO.phoneDisplay}</span>

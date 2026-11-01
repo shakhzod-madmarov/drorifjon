@@ -519,10 +519,10 @@ const InlineBookingSection = ({ initialService = null }) => {
 
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2"
+                className="px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <IconPhone className="w-4 h-4 text-primary" />
-                <span>{DOCTOR_INFO.phoneDisplay}</span>
+                <IconPhone className="w-4 h-4 text-primary shrink-0" />
+                <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
               </a>
             </div>
           </div>
@@ -571,10 +571,10 @@ const InlineBookingSection = ({ initialService = null }) => {
             </div>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-primary to-orange-500 text-white font-black text-xs hover:brightness-110 shadow-xs transition-all whitespace-nowrap flex items-center gap-1.5"
+              className="px-4 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
             >
-              <IconPhone className="w-3.5 h-3.5 text-white animate-bounce" />
-              <span>{DOCTOR_INFO.phoneDisplay}</span>
+              <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
+              <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
             </a>
           </div>
         )}

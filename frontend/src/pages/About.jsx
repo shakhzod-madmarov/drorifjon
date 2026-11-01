@@ -13,7 +13,7 @@ import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import {
   IconAward,
   IconShieldCheck,
-  IconSparkleStar,
+  IconCheckCircle,
   IconPhone,
   IconTelegram,
   IconInstagram,
@@ -97,7 +97,7 @@ const About = ({ onOpenBooking }) => {
       },
     },
     {
-      icon: <IconSparkleStar className="w-6 h-6 text-brandOrange" />,
+      icon: <IconCheckCircle className="w-6 h-6 text-brandOrange" />,
       title: {
         uz: "Ikki Bosqichli Og'riqsiz Anesteziya (Orablok & Supercain)",
         ru: "Двухэтапная Анестезия Без Боли (Ораблок & Суперкаин)",
@@ -174,9 +174,8 @@ const About = ({ onOpenBooking }) => {
             <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
               {DOCTOR_INFO.fullName}
             </h1>
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary flex items-center gap-1.5">
-              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
-              <span>Stomatolog Orifjon · Vrach Stomatolog</span>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
+              Stomatolog Orifjon · Vrach Stomatolog
             </p>
           </div>
 
@@ -198,7 +197,7 @@ const About = ({ onOpenBooking }) => {
             </button>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-colors"
+              className="inline-flex justify-center items-center px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-colors whitespace-nowrap"
             >
               <IconPhone className="w-4 h-4 text-primary" />
               <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -216,7 +215,7 @@ const About = ({ onOpenBooking }) => {
               <span>{lang === "uz" ? "Steril asboblar" : lang === "ru" ? "Стерильно" : "Sterile instruments"}</span>
             </span>
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
-              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+              <IconCheckCircle className="w-3.5 h-3.5 text-primary" />
               <span>{lang === "uz" ? "Germaniya & Koreya materiallari" : lang === "ru" ? "Материалы Германии и Кореи" : "German & Korean materials"}</span>
             </span>
           </div>
