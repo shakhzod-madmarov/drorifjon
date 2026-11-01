@@ -213,8 +213,8 @@ const CertificatesShowcase = () => {
   const modalRef = useModalA11y(Boolean(activeCert), closeCert);
 
   return (
-    <section className="py-12 sm:py-16 bg-[#FFFDF9] border-t border-amber-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 border-t border-amber-100">
+      <div className="w-full">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200/60 shadow-2xs">

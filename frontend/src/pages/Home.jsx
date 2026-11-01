@@ -147,18 +147,18 @@ const HeroSection = ({ onOpenBooking }) => {
           </div>
 
           {/* 3 Classic Minimalist Editorial Stats */}
-          <div className="grid grid-cols-3 gap-2.5 pt-3.5 border-t border-stone-100 max-w-lg">
-            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-lg sm:text-xl font-black text-slate-900">{t.stat1Num}</p>
-              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat1Label}</p>
+          <div className="grid grid-cols-3 gap-1.5 2xs:gap-2.5 pt-3.5 border-t border-stone-100 max-w-lg">
+            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-slate-900">{t.stat1Num}</p>
+              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat1Label}</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-lg sm:text-xl font-black text-slate-900">{t.stat2Num}</p>
-              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat2Label}</p>
+            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-slate-900">{t.stat2Num}</p>
+              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat2Label}</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-lg sm:text-xl font-black text-emerald-600">{t.stat3Num}</p>
-              <p className="text-[10.5px] font-medium text-slate-600 mt-0.5">{t.stat3Label}</p>
+            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
+              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-emerald-600">{t.stat3Num}</p>
+              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat3Label}</p>
             </div>
           </div>
         </div>

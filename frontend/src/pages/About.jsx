@@ -155,7 +155,7 @@ const About = ({ onOpenBooking }) => {
       </nav>
 
       {/* Doctor Bio Editorial Header — Tight & Balanced */}
-      <div className="relative z-10 overflow-hidden bg-white rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-5 sm:p-7 lg:p-8">
+      <div className="relative z-10 overflow-hidden bg-white rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-4 2xs:p-5 sm:p-7 lg:p-8">
         <div className="lg:col-span-7 space-y-4 text-left">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">

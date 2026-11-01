@@ -780,7 +780,7 @@ const InlineBookingSection = ({ initialService = null }) => {
             </div>
 
             {activeDay && activeDay.times?.length > 0 ? (
-              <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-11 gap-2 pt-1">
+              <div className="grid grid-cols-3 2xs:grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-11 gap-1.5 2xs:gap-2 pt-1">
                 {activeDay.times.map((slot) => (
                   <button
                     type="button"

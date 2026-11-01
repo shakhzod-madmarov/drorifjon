@@ -90,13 +90,13 @@ const Doctor3DCard = ({
         </div>
 
         {/* Clean Editorial Bio (Underneath Photo) */}
-        <div className="p-4 sm:p-5 bg-white text-left space-y-2.5">
+        <div className="p-3.5 2xs:p-4 sm:p-5 bg-white text-left space-y-2.5">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
               {specialtyText}
             </p>
-            <h3 className="font-serif-classic text-xl font-bold tracking-tight text-slate-900 mt-0.5">
-              Stomatolog Orifjon
+            <h3 className="font-serif-classic text-lg 2xs:text-xl font-bold tracking-tight text-slate-900 mt-0.5">
+              {DOCTOR_INFO.names[lang] || DOCTOR_INFO.name}
             </h3>
             <p className="text-xs text-slate-500 font-medium">
               Mansurov Orifjon Alimbekovich
@@ -116,17 +116,18 @@ const Doctor3DCard = ({
           </div>
 
           {/* Social Channels & Online Booking Button */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 2xs:gap-2">
             <a
               href={DOCTOR_INFO.telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Telegram"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200/80 text-xs font-bold transition-colors"
+              className="flex-1 inline-flex items-center justify-center gap-1 py-1.5 px-1.5 2xs:px-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200/80 text-[11px] font-bold transition-colors"
               title="Telegram: @dr_orifjon_1"
             >
               <IconTelegram className="w-3.5 h-3.5 text-sky-500 shrink-0" />
-              <span className="text-[11px]">Telegram</span>
+              <span className="hidden 2xs:inline text-[11px]">Telegram</span>
+              <span className="2xs:hidden text-[11px]">TG</span>
             </a>
             <a
               href={DOCTOR_INFO.instagramUrl}
@@ -140,7 +141,7 @@ const Doctor3DCard = ({
             </a>
             <button
               onClick={onOpenBooking}
-              className="flex-1 py-1.5 px-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none text-center"
+              className="flex-1 py-1.5 px-2 2xs:px-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-[11px] 2xs:text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none text-center"
             >
               {lang === "uz" ? "Qabul" : lang === "ru" ? "Запись" : "Book"}
             </button>

@@ -336,7 +336,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               {/* Magnetic Glowing Primary Book CTA */}
               <button
                 onClick={handleBookClick}
-                className={`relative overflow-hidden inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-300 cursor-pointer shadow-md group select-none ${
+                className={`relative overflow-hidden inline-flex items-center gap-1.5 sm:gap-2 px-2.5 2xs:px-3 xs:px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-300 cursor-pointer shadow-md group select-none ${
                   isBookingActive
                     ? "bg-slate-900 text-white ring-2 ring-primary"
                     : "bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white shadow-[0_4px_16px_rgba(255,157,80,0.35)] hover:shadow-[0_8px_24px_rgba(255,157,80,0.5)] hover:-translate-y-0.5 active:translate-y-0"
@@ -345,13 +345,20 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 {/* Sweep Shimmer Effect */}
                 <span className="absolute inset-0 w-1/2 h-full bg-white/20 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
                 
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                <span>
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse shrink-0" />
+                <span className="hidden xs:inline">
                   {lang === "uz"
                     ? "Qabulga Yozilish"
                     : lang === "ru"
                     ? "Запись на Приём"
                     : "Book Visit"}
+                </span>
+                <span className="xs:hidden">
+                  {lang === "uz"
+                    ? "Qabul"
+                    : lang === "ru"
+                    ? "Запись"
+                    : "Book"}
                 </span>
                 <span className="group-hover:translate-x-0.5 transition-transform text-white/90">
                   →

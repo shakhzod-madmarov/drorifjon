@@ -33,7 +33,7 @@ const FloatingActionHub = () => {
       ref={hubRef}
       role="region"
       aria-label={a11y.quickActions}
-      className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2.5 no-print [perspective:1000px]"
+      className="fixed bottom-[max(0.875rem,env(safe-area-inset-bottom,0px))] right-[max(0.875rem,env(safe-area-inset-right,0px))] sm:bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] sm:right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2.5 no-print [perspective:1000px]"
     >
       {/* 3D Staggered Cascade Menu */}
       {expanded && (

@@ -116,7 +116,7 @@ const BeforeAfterSlider = ({
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
-        className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden select-none cursor-ew-resize touch-pan-y bg-slate-900 group"
+        className="relative w-full h-56 2xs:h-64 sm:h-72 rounded-2xl overflow-hidden select-none cursor-ew-resize touch-pan-y bg-slate-900 group"
       >
         {/* AFTER Image (Full Background) */}
         <img
@@ -182,7 +182,7 @@ const BeforeAfterSlider = ({
           style={{ left: `${sliderPos}%` }}
         >
           {/* Circular 3D Grab Button */}
-          <div className="w-9 h-9 rounded-full bg-white shadow-2xl flex items-center justify-center text-primary text-xs font-black border-2 border-primary/20 hover:scale-110 active:scale-95 transition-transform">
+          <div className="w-10 h-10 2xs:w-11 2xs:h-11 rounded-full bg-white shadow-2xl flex items-center justify-center text-primary text-xs font-black border-2 border-primary/20 hover:scale-110 active:scale-95 transition-transform touch-manipulation">
             <span className="text-[13px] tracking-tight">⇄</span>
           </div>
         </div>
