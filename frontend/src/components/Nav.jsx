@@ -3,7 +3,7 @@ import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { stripLangPrefix } from "../utils/language";
-import { IconPhone, IconClock, IconSparkleStar } from "./MedicalIcons";
+import { IconPhone } from "./MedicalIcons";
 import { useModalA11y } from "../hooks/useModalA11y";
 import { getA11yLabels } from "../constants/a11yLabels";
 import { DOCTOR_INFO } from "../constants/doctor";
@@ -152,75 +152,14 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
         className="fixed left-0 right-0 z-50 transition-all duration-300 pointer-events-none"
       >
         {/* ═══════════════════════════════════════════════════════════
-            LAYER 1: TOP CLINIC STATUS & UTILITY STRIP (DESKTOP)
+            CLEAN FLOATING CLASSIC NAVBAR
             ═══════════════════════════════════════════════════════════ */}
-        <div
-          className={`pointer-events-auto transition-all duration-300 bg-gradient-to-r from-[#141E28] via-[#1A2634] to-[#141E28] text-white border-b border-amber-500/25 ${
-            scrolled ? "hidden -translate-y-full opacity-0" : "block translate-y-0 opacity-100"
-          }`}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between text-[11px] font-medium tracking-wide">
-            {/* Live Acceptance Status */}
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span className="text-emerald-400 font-bold">
-                {lang === "uz" ? "Qabul Ochiq" : lang === "ru" ? "Приём Открыт" : "Open for Visits"}
-              </span>
-              <span className="text-white/40 hidden sm:inline">|</span>
-              <span className="text-slate-300 hidden sm:inline">
-                {lang === "uz" ? "Andijon sh., Shifoxona ko'chasi" : lang === "ru" ? "г. Андижан, ул. Больничная" : "Andijan, Hospital Street"}
-              </span>
-              <span className="text-white/40 hidden md:inline">|</span>
-              <span className="text-slate-400 hidden md:inline flex items-center gap-1">
-                <IconClock className="w-3 h-3 text-amber-400 inline" />
-                <span>08:30 – 18:00</span>
-              </span>
-            </div>
-
-            {/* Guaranteed Certified Materials Marquee Note */}
-            <div className="hidden lg:flex items-center gap-1.5 text-slate-300 text-[10.5px]">
-              <span className="text-amber-400 font-bold">🇩🇪 Charisma & AnyRidge</span>
-              <span className="text-white/30">•</span>
-              <span className="text-cyan-400 font-bold">🇰🇷 Mega'Gen & DenFil</span>
-              <span className="text-white/30">•</span>
-              <span className="text-emerald-400 font-bold">100% Og'riqsiz (Orablok)</span>
-            </div>
-
-            {/* Direct VIP Hotline & Telegram */}
-            <div className="flex items-center gap-3">
-              <a
-                href={DOCTOR_INFO.telegramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-300 hover:text-white transition-colors flex items-center gap-1 font-semibold"
-                title="Telegram: @dr_orifjon_1"
-              >
-                <span>✈ Telegram</span>
-              </a>
-              <span className="text-white/30">|</span>
-              <a
-                href={DOCTOR_INFO.phoneHref}
-                className="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 transition-colors"
-              >
-                <IconPhone className="w-3 h-3 text-amber-400" />
-                <span>+998 90 548 10 90</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* ═══════════════════════════════════════════════════════════
-            LAYER 2: FLOATING GLASSMORPHIC MAIN NAVBAR
-            ═══════════════════════════════════════════════════════════ */}
-        <div className="pointer-events-auto max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 mt-1.5 sm:mt-2">
+        <div className="pointer-events-auto max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 mt-2 sm:mt-3">
           <div
-            className={`relative rounded-2xl sm:rounded-3xl transition-all duration-300 flex items-center justify-between gap-3 px-3.5 sm:px-5 ${
+            className={`relative rounded-2xl sm:rounded-3xl transition-all duration-300 flex items-center justify-between gap-3 px-4 sm:px-6 ${
               scrolled
-                ? "py-2 bg-white/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(20,30,40,0.12)] border border-amber-200/90"
-                : "py-2.5 sm:py-3 bg-white/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(255,157,80,0.12)] border border-white/80 hover:border-amber-200/80"
+                ? "py-2.5 bg-white/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(20,30,40,0.08)] border border-amber-200/90"
+                : "py-3 sm:py-3.5 bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgba(20,30,40,0.06)] border border-white/90 hover:border-amber-200/80"
             }`}
           >
             {/* Top Metallic Holo-Shine Accent Border */}
