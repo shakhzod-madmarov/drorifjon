@@ -21,7 +21,7 @@ const guides = [
     image: assets.treatment_implant,
     icon: <DentalImplantFixture className="w-5 h-5" />,
     tab: { uz: "Implantdan Keyin", ru: "После Имплантации", en: "Post-Implant" },
-    tabBadge: "🔩 Biotitan",
+    tabBadge: "Biotitan",
     recoveryTime: { uz: "Dastlabki 3–5 kunlik rejim", ru: "Режим на 3–5 дней", en: "First 3–5 days protocol" },
     tagPill: { uz: "100% Asoratsiz Bitish", ru: "Без Осложнений", en: "Zero Complications" },
     badge: { uz: "Mega'Gen & AnyRidge Biotitan", ru: "Биотитан Mega'Gen & AnyRidge", en: "Mega'Gen & AnyRidge Biotitanium" },
@@ -78,7 +78,7 @@ const guides = [
     image: assets.treatment_braces,
     icon: <DentalBracesIcon className="w-5 h-5" />,
     tab: { uz: "Breket & Elayner", ru: "Брекеты и Капы", en: "Braces & Aligners" },
-    tabBadge: "✨ Breketlar",
+    tabBadge: "Breketlar",
     recoveryTime: { uz: "Muntazam kundalik gigiyena", ru: "Ежедневная гигиена", en: "Daily active hygiene" },
     tagPill: { uz: "Mukammal Tishlash", ru: "Ровный Прикус", en: "Straight Smile" },
     badge: { uz: "Keramika, Sapfir & Metall Breketlar", ru: "Сапфировые и Керамические Брекеты", en: "Ceramic & Sapphire Braces" },
@@ -135,7 +135,7 @@ const guides = [
     image: assets.treatment_crowns,
     icon: <DentalVeneerCrown className="w-5 h-5" />,
     tab: { uz: "Karonka & Vinirlar", ru: "Коронки и Виниры", en: "Crowns & Veneers" },
-    tabBadge: "💎 Sirkon",
+    tabBadge: "Sirkon",
     recoveryTime: { uz: "10–15 yillik kafolatli parvarish", ru: "Уход на 10–15 лет", en: "10-15 year long-term care" },
     tagPill: { uz: "Tabiiy Jilo & Kuch", ru: "Прочность и Блеск", en: "Strength & Shine" },
     badge: { uz: "Monolit Sirkoniy & IPS E.max Vinirlar", ru: "Монолитный Цирконий и Керамика", en: "Monolithic Zirconia & E.max" },
@@ -192,7 +192,7 @@ const guides = [
     image: assets.treatment_surgery,
     icon: <DentalSurgeryExtraction className="w-5 h-5" />,
     tab: { uz: "Tish Olinganda", ru: "После Удаления", en: "Extraction Care" },
-    tabBadge: "🛡️ 24 Soat",
+    tabBadge: "24 Soat",
     recoveryTime: { uz: "Dastlabki 24–48 soatlik qat'iy rejim", ru: "Критичные 24–48 часов", en: "First 24-48 hours strict care" },
     tagPill: { uz: "Qon Quyqasini Asrash", ru: "Защита Сгустка", en: "Clot Protection" },
     badge: { uz: "Atravmatik Xirurgiya & Orablok", ru: "Атравматичное Удаление Зубов", en: "Atraumatic Surgery & Orabloc" },
@@ -249,7 +249,7 @@ const guides = [
     image: assets.treatment_whitening,
     icon: <DentalWhiteningZoom className="w-5 h-5" />,
     tab: { uz: "Oqartirishdan So'ng", ru: "После Отбеливания", en: "After Whitening" },
-    tabBadge: "⚡ Oq Parhez",
+    tabBadge: "Oq Parhez",
     recoveryTime: { uz: "Dastlabki 48 soatlik «Oq Parhez»", ru: "48 часов «Белая Диета»", en: "First 48-hour White Diet" },
     tagPill: { uz: "Maksimal Oqlik", ru: "Белоснежная Эмаль", en: "Maximum Whiteness" },
     badge: { uz: "Philips Zoom & Estetik Gigiyena", ru: "Отбеливание Philips Zoom", en: "Philips Zoom Aesthetics" },
@@ -387,7 +387,7 @@ const PatientCareGuides = () => {
               {/* Shifokor Kengashi (Doctor's Note Box) */}
               <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border-l-4 border-l-primary border-y border-r border-amber-200/80 shadow-2xs space-y-2 text-left">
                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
-                  <span>💡</span>
+                  <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
                   <span>{lang === "uz" ? "Muhim Klinik Maslahat:" : lang === "ru" ? "Важный Совет Врача:" : "Crucial Doctor's Tip:"}</span>
                 </div>
                 <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed italic">

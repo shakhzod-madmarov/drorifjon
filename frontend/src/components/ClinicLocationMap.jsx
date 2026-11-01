@@ -59,7 +59,7 @@ const ClinicLocationMap = ({ compact = false }) => {
                 {c.dentistOffice[lang]}
               </p>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
-                📍 {c.address[lang]}
+                {c.address[lang]}
               </p>
               <p className="text-[11px] text-slate-400">
                 Mo'ljal: {c.landmark[lang]}

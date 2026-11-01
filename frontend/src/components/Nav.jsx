@@ -3,7 +3,16 @@ import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { stripLangPrefix } from "../utils/language";
-import { IconPhone } from "./MedicalIcons";
+import {
+  IconPhone,
+  IconTelegram,
+  IconInstagram,
+  DentalToothMolar,
+  DentalVeneerCrown,
+  DentalImplantFixture,
+  DentalSurgeryExtraction,
+  DentalBracesIcon,
+} from "./MedicalIcons";
 import { useModalA11y } from "../hooks/useModalA11y";
 import { getA11yLabels } from "../constants/a11yLabels";
 import { DOCTOR_INFO } from "../constants/doctor";
@@ -65,48 +74,44 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
       path: "/services/terapiya",
       title: { uz: "Terapiya", ru: "Терапия", en: "Therapy" },
       desc: {
-        uz: "Og'riqsiz davolash va nano-restavratsiya: Charisma, DenFil",
-        ru: "Лечение без боли и нанореставрация: Charisma, DenFil",
-        en: "Painless treatment and aesthetic nano-restoration",
+        uz: "Og'riqsiz davolash va restavratsiya (Charisma, DenFil)",
+        ru: "Лечение без боли и реставрация (Charisma, DenFil)",
+        en: "Painless treatment and aesthetic restoration",
       },
-      icon: "🦷",
-      badge: "🇩🇪 🇰🇷",
+      icon: <DentalToothMolar className="w-4 h-4 text-primary" />,
     },
     {
       id: "ortopediya",
       path: "/services/ortopediya",
       title: { uz: "Ortopediya", ru: "Ортопедия", en: "Orthopedics" },
       desc: {
-        uz: "Sirkon karonkalar, estetik vinirlar va sifatli protezlar",
-        ru: "Циркониевые коронки, эстетические виниры и протезы",
-        en: "Zirconia crowns, aesthetic veneers, and precision dentures",
+        uz: "Sirkon karonkalar, vinirlar va sifatli protezlar",
+        ru: "Циркониевые коронки, виниры и протезы",
+        en: "Zirconia crowns, veneers, and dentures",
       },
-      icon: "👑",
-      badge: "CAD/CAM",
+      icon: <DentalVeneerCrown className="w-4 h-4 text-primary" />,
     },
     {
       id: "implantatsiya",
       path: "/services/implantatsiya",
       title: { uz: "Implantatsiya", ru: "Имплантация", en: "Implantation" },
       desc: {
-        uz: "Original biotitan implantlar: Mega'Gen, AnyRidge, DXL",
-        ru: "Оригинальные биотитановые системы: Mega'Gen, AnyRidge, DXL",
-        en: "Genuine bio-titanium systems: Mega'Gen, AnyRidge, DXL",
+        uz: "Mega'Gen, AnyRidge va DXL biotitan implantlari",
+        ru: "Оригинальные системы Mega'Gen, AnyRidge, DXL",
+        en: "Genuine Mega'Gen, AnyRidge, DXL titanium systems",
       },
-      icon: "🔩",
-      badge: "🇩🇪 🇰🇷",
+      icon: <DentalImplantFixture className="w-4 h-4 text-primary" />,
     },
     {
       id: "xirurgiya",
       path: "/services/xirurgiya",
       title: { uz: "Xirurgiya", ru: "Хирургия", en: "Oral Surgery" },
       desc: {
-        uz: "Atravmatik va og'riqsiz tish olish: Orablok anesteziyasi",
-        ru: "Атравматичное удаление без боли под анестезией Ораблок",
-        en: "Gentle, painless atraumatic extractions under Orabloc",
+        uz: "Atravmatik va og'riqsiz tish olish (Orablok)",
+        ru: "Атравматичное удаление без боли (Ораблок)",
+        en: "Gentle atraumatic extractions under Orabloc",
       },
-      icon: "🛡️",
-      badge: "100%",
+      icon: <DentalSurgeryExtraction className="w-4 h-4 text-primary" />,
     },
     {
       id: "ortodontiya",
@@ -114,11 +119,10 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
       title: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
       desc: {
         uz: "Metall, keramika va sapfir breketlar bilan tekislash",
-        ru: "Исправление прикуса металлическими и сапфировыми брекетами",
-        en: "Bite correction with metal, ceramic, and sapphire braces",
+        ru: "Исправление прикуса брекетами и элайнерами",
+        en: "Bite correction with modern braces & aligners",
       },
-      icon: "✨",
-      badge: "PRO",
+      icon: <DentalBracesIcon className="w-4 h-4 text-primary" />,
     },
   ];
 
@@ -222,11 +226,11 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                       {/* Mega Dropdown Card for 5 Specialties */}
                       {servicesDropdown && (
                         <div
-                          className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-white/95 backdrop-blur-2xl border border-amber-200/90 shadow-[0_20px_50px_rgba(20,30,40,0.16)] p-3 space-y-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                          className="absolute top-full left-0 mt-1 w-80 rounded-2xl bg-white/95 backdrop-blur-2xl border border-stone-200/90 shadow-[0_16px_40px_rgba(20,30,40,0.12)] p-2.5 space-y-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                         >
-                          <div className="px-2 py-1 text-[10px] font-extrabold uppercase tracking-widest text-slate-400 border-b border-amber-100 flex items-center justify-between">
-                            <span>5 Asosiy Yo'nalish</span>
-                            <span className="text-primary font-bold">100% Og'riqsiz</span>
+                          <div className="px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 flex items-center justify-between">
+                            <span>{lang === "uz" ? "5 Asosiy Yo'nalish" : lang === "ru" ? "5 Направлений" : "5 Specialties"}</span>
+                            <span className="text-primary font-bold">{lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle"}</span>
                           </div>
 
                           {specialties.map((spec) => (
@@ -234,24 +238,22 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                               key={spec.id}
                               to={to(spec.path)}
                               onClick={() => setServicesDropdown(false)}
-                              className="group flex items-start gap-3 p-2 rounded-xl hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50/40 transition-colors"
+                              className="group flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors"
                             >
-                              <span className="w-8 h-8 rounded-lg bg-amber-50 group-hover:bg-primary text-slate-800 group-hover:text-white flex items-center justify-center text-sm shrink-0 transition-colors shadow-2xs">
+                              <span className="w-8 h-8 rounded-lg bg-stone-50 border border-stone-200/80 group-hover:bg-primary/10 group-hover:border-primary/30 flex items-center justify-center shrink-0 transition-colors">
                                 {spec.icon}
                               </span>
                               <div className="min-w-0 flex-1">
-                                <div className="flex items-center justify-between gap-1">
-                                  <p className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors">
-                                    {spec.title[lang]}
-                                  </p>
-                                  <span className="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-amber-100/70 text-primary">
-                                    {spec.badge}
-                                  </span>
-                                </div>
-                                <p className="text-[10.5px] text-slate-500 leading-tight truncate mt-0.5">
+                                <p className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                  {spec.title[lang]}
+                                </p>
+                                <p className="text-[10.5px] text-slate-500 leading-tight truncate mt-0.5 font-normal">
                                   {spec.desc[lang]}
                                 </p>
                               </div>
+                              <span className="text-xs text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all">
+                                →
+                              </span>
                             </NavLink>
                           ))}
 
@@ -460,14 +462,18 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                     key={spec.id}
                     to={to(spec.path)}
                     onClick={closeDrawer}
-                    className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-amber-200/70 hover:border-primary text-slate-800 text-xs font-semibold shadow-2xs"
+                    className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-stone-200 hover:border-primary text-slate-800 text-xs font-semibold shadow-2xs group"
                   >
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-base">{spec.icon}</span>
-                      <span>{spec.title[lang]}</span>
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span className="w-7 h-7 rounded-lg bg-stone-50 border border-stone-200 flex items-center justify-center shrink-0">
+                        {spec.icon}
+                      </span>
+                      <span className="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                        {spec.title[lang]}
+                      </span>
                     </div>
-                    <span className="text-[10px] font-black text-primary bg-amber-50 px-2 py-0.5 rounded">
-                      {spec.badge}
+                    <span className="text-xs text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all">
+                      →
                     </span>
                   </NavLink>
                 ))}
@@ -492,8 +498,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-xl bg-sky-50 border border-sky-300 text-sky-950 font-bold text-xs"
               >
-                <span className="w-7 h-7 rounded-lg bg-sky-500 text-white flex items-center justify-center text-sm">
-                  ✈
+                <span className="w-7 h-7 rounded-lg bg-sky-500 text-white flex items-center justify-center">
+                  <IconTelegram className="w-4 h-4 text-white" />
                 </span>
                 <span>Telegram: @dr_orifjon_1</span>
               </a>
@@ -504,8 +510,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-xl bg-pink-50 border border-pink-300 text-pink-950 font-bold text-xs"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center text-sm">
-                  📸
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center">
+                  <IconInstagram className="w-4 h-4 text-white" />
                 </span>
                 <span>Instagram: @dr_orifjon</span>
               </a>

@@ -183,27 +183,27 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
   const specialtyMeta = {
     terapiya: {
       kicker: { uz: "Terapevtik Stomatologiya", ru: "Терапевтическая Стоматология", en: "Therapeutic Dentistry" },
-      materialBadge: "🇩🇪 Charisma & 🇰🇷 DenFil",
+      materialBadge: "Charisma & DenFil",
       durationText: { uz: "30–45 daqiqa", ru: "30–45 минут", en: "30–45 mins" },
     },
     ortopediya: {
       kicker: { uz: "Ortopedik Stomatologiya", ru: "Ортопедическая Стоматология", en: "Prosthodontics" },
-      materialBadge: "💎 Sirkoniy & Vinirlar",
+      materialBadge: "Sirkoniy & Vinirlar",
       durationText: { uz: "3–5 kun (2 qabul)", ru: "3–5 дней (2 визита)", en: "3–5 days (2 visits)" },
     },
     implantatsiya: {
       kicker: { uz: "Dental Implantologiya", ru: "Дентальная Имплантология", en: "Dental Implantology" },
-      materialBadge: "🔩 Mega'Gen & AnyRidge",
+      materialBadge: "Mega'Gen & AnyRidge",
       durationText: { uz: "15–20 daqiqa", ru: "15–20 минут", en: "15–20 mins" },
     },
     xirurgiya: {
       kicker: { uz: "Jarrohlik Stomatologiyasi", ru: "Хирургическая Стоматология", en: "Oral Surgery" },
-      materialBadge: "🛡️ Orablok & Supercain",
+      materialBadge: "Orablok & Supercain",
       durationText: { uz: "10–25 daqiqa", ru: "10–25 минут", en: "10–25 mins" },
     },
     ortodontiya: {
       kicker: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
-      materialBadge: "✨ Breket Tizimlari",
+      materialBadge: "Breket Tizimlari",
       durationText: { uz: "12–18 oy", ru: "12–18 месяцев", en: "12–18 months" },
     },
   };

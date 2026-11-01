@@ -27,11 +27,11 @@ const Services = ({ onOpenBooking }) => {
 
   const categories = [
     { id: "all", label: { uz: "Barcha Yo'nalishlar", ru: "Все Направления", en: "All Specialties" } },
-    { id: "terapiya", label: { uz: "🦷 Terapiya", ru: "🦷 Терапия", en: "🦷 Therapy" } },
-    { id: "ortopediya", label: { uz: "👑 Ortopediya", ru: "👑 Ортопедия", en: "👑 Orthopedics" } },
-    { id: "implantatsiya", label: { uz: "🔩 Implantatsiya", ru: "🔩 Имплантация", en: "🔩 Implantation" } },
-    { id: "xirurgiya", label: { uz: "🛡️ Xirurgiya", ru: "🛡️ Хирургия", en: "🛡️ Surgery" } },
-    { id: "ortodontiya", label: { uz: "✨ Ortodontiya", ru: "✨ Ортодонтия", en: "✨ Orthodontics" } },
+    { id: "terapiya", label: { uz: "Terapiya", ru: "Терапия", en: "Therapy" } },
+    { id: "ortopediya", label: { uz: "Ortopediya", ru: "Ортопедия", en: "Orthopedics" } },
+    { id: "implantatsiya", label: { uz: "Implantatsiya", ru: "Имплантация", en: "Implantation" } },
+    { id: "xirurgiya", label: { uz: "Xirurgiya", ru: "Хирургия", en: "Surgery" } },
+    { id: "ortodontiya", label: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" } },
   ];
 
   const filteredServices = SERVICES_CATALOG.filter((s) => {

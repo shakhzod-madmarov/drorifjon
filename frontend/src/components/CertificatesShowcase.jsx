@@ -172,8 +172,11 @@ const Certificate3DCard = ({ cert, lang, onSelect }) => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors" />
-          <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-bold border border-amber-300/30 flex items-center gap-1 shadow-md">
-            <span>🔍</span>
+          <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-bold border border-amber-300/30 flex items-center gap-1.5 shadow-md">
+            <svg className="w-3 h-3 text-amber-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
             <span>{lang === "uz" ? "Kattalashtirish" : lang === "ru" ? "Открыть 3D" : "Inspect"}</span>
           </span>
         </div>

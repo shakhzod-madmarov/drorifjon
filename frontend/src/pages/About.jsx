@@ -207,14 +207,17 @@ const About = ({ onOpenBooking }) => {
 
           {/* 3 Clinical Guarantee Badges */}
           <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-xs text-slate-600">
-            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
-              🛡️ {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Pain-free"}
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
+              <span>{lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Pain-free"}</span>
             </span>
-            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
-              🧪 {lang === "uz" ? "Steril asboblar" : lang === "ru" ? "Стерильно" : "Sterile instruments"}
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              <IconAward className="w-3.5 h-3.5 text-primary" />
+              <span>{lang === "uz" ? "Steril asboblar" : lang === "ru" ? "Стерильно" : "Sterile instruments"}</span>
             </span>
-            <span className="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
-              💎 {lang === "uz" ? "Nemis & Koreya materiallari" : lang === "ru" ? "Материалы Германии и Кореи" : "German & Korean materials"}
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 font-medium">
+              <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
+              <span>{lang === "uz" ? "Germaniya & Koreya materiallari" : lang === "ru" ? "Материалы Германии и Кореи" : "German & Korean materials"}</span>
             </span>
           </div>
         </div>

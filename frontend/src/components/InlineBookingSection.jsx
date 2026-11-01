@@ -8,6 +8,11 @@ import {
   IconPhone,
   IconTelegram,
   IconSparkleStar,
+  DentalToothMolar,
+  DentalVeneerCrown,
+  DentalImplantFixture,
+  DentalSurgeryExtraction,
+  DentalBracesIcon,
 } from "./MedicalIcons";
 import { DOCTOR_INFO } from "../constants/doctor";
 import {
@@ -93,7 +98,7 @@ const TEXT = {
     summaryDob: "Tug'ilgan sana",
     summaryService: "Xizmat",
     summaryWhen: "Qabul vaqti",
-    telegramCardTitle: "📲 Telegram eslatmani yoqing",
+    telegramCardTitle: "Telegram eslatmani yoqing",
     telegramCardDesc: "Qabul vaqti yaqinlashganda Telegram orqali avtomatik eslatma olish uchun quyidagi tugmani bosing va botda START tugmasini bosing.",
     telegramCardBtn: "Telegram botga ulanish ↗",
     callBtn: "Klinikaga qo'ng'iroq qilish",
@@ -142,7 +147,7 @@ const TEXT = {
     summaryDob: "Дата рождения",
     summaryService: "Услуга",
     summaryWhen: "Дата и время",
-    telegramCardTitle: "📲 Включите напоминание в Telegram",
+    telegramCardTitle: "Включите напоминание в Telegram",
     telegramCardDesc: "Чтобы получить напоминание о визите, нажмите кнопку ниже и запустите Telegram-бота (START).",
     telegramCardBtn: "Подключить Telegram-бота ↗",
     callBtn: "Позвонить в клинику",
@@ -191,7 +196,7 @@ const TEXT = {
     summaryDob: "Date of Birth",
     summaryService: "Service",
     summaryWhen: "Date & Time",
-    telegramCardTitle: "📲 Enable Telegram Reminders",
+    telegramCardTitle: "Enable Telegram Reminders",
     telegramCardDesc: "To receive an automated reminder as your appointment approaches, tap below and press START in our Telegram bot.",
     telegramCardBtn: "Connect Telegram Bot ↗",
     callBtn: "Call Clinic Directly",
@@ -205,6 +210,24 @@ const TEXT = {
     noSlotsTodayMessage: "All online slots for today are booked or closed under the 2-hour queue buffer policy. Please select an upcoming date:",
     nextAvailableDayBtn: "Jump to next available date →",
   },
+};
+
+const renderSpecialtyIcon = (id, isSelected) => {
+  const iconProps = { className: `w-5 h-5 ${isSelected ? "text-white" : "text-primary"}` };
+  switch (id) {
+    case "terapiya":
+      return <DentalToothMolar {...iconProps} />;
+    case "ortopediya":
+      return <DentalVeneerCrown {...iconProps} />;
+    case "implantatsiya":
+      return <DentalImplantFixture {...iconProps} />;
+    case "xirurgiya":
+      return <DentalSurgeryExtraction {...iconProps} />;
+    case "ortodontiya":
+      return <DentalBracesIcon {...iconProps} />;
+    default:
+      return <DentalToothMolar {...iconProps} />;
+  }
 };
 
 const InlineBookingSection = ({ initialService = null }) => {
@@ -538,7 +561,9 @@ const InlineBookingSection = ({ initialService = null }) => {
         {!isRelayEnabled && (
           <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-50 via-white to-amber-50 border border-amber-300/80 text-xs text-amber-950 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
             <div className="flex items-center gap-2.5 text-left">
-              <span className="w-8 h-8 rounded-xl bg-amber-100 text-primary flex items-center justify-center text-sm font-black shrink-0">📞</span>
+              <span className="w-8 h-8 rounded-xl bg-amber-100 text-primary flex items-center justify-center shrink-0">
+                <IconPhone className="w-4 h-4 text-primary" />
+              </span>
               <div>
                 <p className="font-extrabold text-slate-900">{lang === "uz" ? "Tezkor Telefon Orqali Yozilish:" : lang === "ru" ? "Быстрая запись по телефону:" : "Direct Phone Reservation:"}</p>
                 <p className="text-slate-600 text-[11.5px]">{t.pausedNotice}</p>
@@ -593,54 +618,51 @@ const InlineBookingSection = ({ initialService = null }) => {
                     type="button"
                     key={s.id}
                     onClick={() => setService(s.id)}
-                    className={`p-4 rounded-2xl text-left transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-3 border relative overflow-hidden group select-none ${
+                    className={`p-4 rounded-2xl text-left transition-all duration-200 cursor-pointer flex flex-col justify-between space-y-3 border relative overflow-hidden group select-none ${
                       isSelected
-                        ? "bg-gradient-to-br from-primary via-orange-500 to-primary text-white border-primary shadow-[0_8px_25px_rgba(255,157,80,0.35)] scale-[1.02] ring-2 ring-primary/30"
-                        : "bg-white/95 hover:bg-amber-50/80 text-slate-800 border-amber-200/90 shadow-2xs hover:border-primary/50 hover:scale-[1.02]"
+                        ? "bg-slate-900 text-white border-slate-900 shadow-md ring-2 ring-primary/40"
+                        : "bg-white hover:bg-stone-50 text-slate-800 border-stone-200/90 shadow-2xs hover:border-stone-300"
                     }`}
                   >
-                    {/* Top Kicker & Selection Indicator */}
-                    <div className="flex items-center justify-between gap-1 w-full">
-                      <span
-                        className={`text-[9.5px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                    {/* Header: Medical Icon + Selection Radio */}
+                    <div className="flex items-center justify-between w-full">
+                      <div
+                        className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
                           isSelected
-                            ? "bg-white/20 text-white"
-                            : "bg-amber-100/70 text-primary"
+                            ? "bg-white/10 text-white"
+                            : "bg-stone-50 border border-stone-200/80 text-primary group-hover:border-primary/40"
                         }`}
                       >
-                        {s.kicker?.[lang] || "✦ PREMIUS"}
-                      </span>
+                        {renderSpecialtyIcon(s.id, isSelected)}
+                      </div>
                       <span
-                        className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-black transition-all ${
+                        className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                           isSelected
-                            ? "bg-white text-primary shadow-xs scale-110"
-                            : "border border-slate-300 text-transparent"
+                            ? "bg-primary text-white shadow-2xs"
+                            : "border border-stone-300 text-transparent"
                         }`}
                       >
                         ✓
                       </span>
                     </div>
 
-                    {/* Title with 3D Icon */}
+                    {/* Title & Description */}
                     <div className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xl">{s.icon}</span>
-                        <h4 className={`text-xs sm:text-[13px] font-black leading-snug ${isSelected ? "text-white" : "text-slate-900"}`}>
-                          {s[lang] || s.uz}
-                        </h4>
-                      </div>
-                      <p className={`text-[10.5px] leading-tight line-clamp-2 ${isSelected ? "text-white/85" : "text-slate-500"}`}>
+                      <h4 className={`text-xs sm:text-[13px] font-bold leading-snug ${isSelected ? "text-white" : "text-slate-900"}`}>
+                        {s[lang] || s.uz}
+                      </h4>
+                      <p className={`text-[10.5px] leading-relaxed line-clamp-2 ${isSelected ? "text-slate-300" : "text-slate-500"}`}>
                         {s.desc?.[lang]}
                       </p>
                     </div>
 
-                    {/* Material Tag Pill */}
-                    <div className="pt-1">
+                    {/* Understated Clinical Material Label */}
+                    <div className="pt-2 border-t border-stone-100/10">
                       <span
-                        className={`inline-block text-[9.5px] font-extrabold px-2 py-0.5 rounded-lg truncate max-w-full ${
+                        className={`inline-block text-[10px] font-medium px-2 py-0.5 rounded-md truncate max-w-full ${
                           isSelected
-                            ? "bg-black/20 text-white"
-                            : "bg-slate-100 text-slate-700 border border-slate-200/80"
+                            ? "bg-white/10 text-slate-200"
+                            : "bg-stone-50 text-slate-600 border border-stone-200/70"
                         }`}
                       >
                         {s.materials}
@@ -653,25 +675,32 @@ const InlineBookingSection = ({ initialService = null }) => {
 
             {/* Sub-Procedure Specific Chips (Dynamic based on selected specialty) */}
             {serviceObj?.subOptions && (
-              <div className="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200/70 flex flex-wrap items-center gap-2 text-left animate-in fade-in duration-200">
+              <div className="p-3.5 rounded-2xl bg-stone-50/80 border border-stone-200 flex flex-wrap items-center gap-2 text-left">
                 <span className="text-[11px] font-bold text-slate-600 flex items-center gap-1.5 shrink-0">
                   <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
                   <span>{lang === "uz" ? "Aniqroq xizmat turi (ixtiyoriy):" : lang === "ru" ? "Уточните услугу (по желанию):" : "Specific treatment (optional):"}</span>
                 </span>
                 <div className="flex flex-wrap items-center gap-1.5">
-                  {serviceObj.subOptions.map((opt) => (
-                    <button
-                      type="button"
-                      key={opt.id}
-                      onClick={() => {
-                        const optText = opt[lang] || opt.uz;
-                        setNote((cur) => (cur.includes(optText) ? cur : cur ? `${cur}, ${optText}` : optText));
-                      }}
-                      className="px-3 py-1 rounded-xl bg-white hover:bg-amber-100/70 border border-amber-300/80 text-slate-800 text-xs font-semibold shadow-2xs hover:scale-105 transition-all cursor-pointer"
-                    >
-                      + {opt[lang] || opt.uz}
-                    </button>
-                  ))}
+                  {serviceObj.subOptions.map((opt) => {
+                    const optText = opt[lang] || opt.uz;
+                    const isActive = note.includes(optText);
+                    return (
+                      <button
+                        type="button"
+                        key={opt.id}
+                        onClick={() => {
+                          setNote((cur) => (cur.includes(optText) ? cur : cur ? `${cur}, ${optText}` : optText));
+                        }}
+                        className={`px-3 py-1 rounded-xl text-xs font-semibold transition-all cursor-pointer border ${
+                          isActive
+                            ? "bg-primary text-white border-primary shadow-2xs"
+                            : "bg-white hover:bg-stone-100 border-stone-200 text-slate-700 shadow-2xs"
+                        }`}
+                      >
+                        {optText}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
