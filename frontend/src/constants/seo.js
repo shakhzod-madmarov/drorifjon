@@ -55,19 +55,19 @@ export const PAGE_SEO = {
   },
   contact: {
     uz: {
-      title: "Aloqa va Manzil — Eco Denta | Stomatolog Orifjon (Andijon, Muqimiy ko'chasi)",
+      title: "Aloqa va Manzil — Stomatolog Orifjon (Andijon, Muqimiy 35, Rayon Stoyanka)",
       description:
-        "Eco Denta — Stomatolog Orifjon qabuli (Andijon shahri, Muqimiy ko'chasi). Telefon: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Dushanba-Shanba 08:30–18:30.",
+        "Stomatolog Orifjon qabuli (Andijon shahri, Muqimiy 35, Rayon Stoyanka). Telefon: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Dushanba-Shanba 08:30–18:30.",
     },
     ru: {
-      title: "Контакты и Адрес — Эко Дента | Стоматолог Орифжон (Андижан, ул. Мукими)",
+      title: "Контакты и Адрес — Стоматолог Орифжон (Андижан, ул. Мукими 35, Районная стоянка)",
       description:
-        "Eco Denta — Приём Стоматолога Орифжона (г. Андижан, ул. Мукими). Телефон: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Понедельник–Суббота 08:30–18:30.",
+        "Приём Стоматолога Орифжона (г. Андижан, ул. Мукими 35, Rayon Stoyanka). Телефон: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Понедельник–Суббота 08:30–18:30.",
     },
     en: {
-      title: "Contact & Location — Eco Denta | Dentist Orifjon (Andijan, Muqimiy St.)",
+      title: "Contact & Location — Dentist Orifjon (Andijan, 35 Muqimiy St., Rayon Stoyanka)",
       description:
-        "Eco Denta — Dentist Orifjon Practice (Andijan, Muqimiy St.). Tel: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Monday–Saturday 08:30–18:30.",
+        "Dentist Orifjon Practice (Andijan, 35 Muqimiy St., Rayon Stoyanka). Tel: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Monday–Saturday 08:30–18:30.",
     },
   },
   booking: {
