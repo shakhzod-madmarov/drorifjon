@@ -19,66 +19,71 @@ import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import PatientCareGuides from "../components/PatientCareGuides";
 import { IconClock } from "../components/MedicalIcons";
-import Doctor3DCard from "../components/Doctor3DCard";
 
 /* ═══════════════════════════════════════════════════════════════════
-   1. EDITORIAL HERO — STOMATOLOG ORIFJON
+   1. CLINICAL ELEGANCE HERO — STOMATOLOG ORIFJON
    ═══════════════════════════════════════════════════════════════════ */
 const HeroSection = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
   const to = useLocalizedPath();
+  const [counted, setCounted] = React.useState(false);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setCounted(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   const T = {
     uz: {
-      badgeLocation: "Andijon sh., Muqimiy ko'chasi · 20+ yillik tajriba",
-      kicker: "STOMATOLOG ORIFJON · ANDIJON",
-      headlinePart1: "Tabiiy go'zallik va ",
-      headlineHighlight: "100% og'riqsiz",
-      headlinePart2: " zamonaviy stomatologiya",
+      eyebrow: "ANDIJON · ECO DENTA · 100% OG'RIQSIZ",
+      h1a: "Tabassumingiz —",
+      h1b: "bizning g'ururimiz",
       subtitle:
-        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. 20 yildan ortiq tajriba, Yevropa va Koreyaning sertifikatlangan texnologiyalari hamda to'liq og'riqsiz muolajalar.",
-      ctaBook: "Qabulga Yozilish",
-      ctaServices: "Xizmatlar bilan tanishish",
-      stat1Num: "20+ Yil",
-      stat1Label: "Tibbiy amaliyot",
-      stat2Num: "5,000+",
-      stat2Label: "Sog'lom tabassumlar",
-      stat3Num: "100%",
-      stat3Label: "Og'riqsiz kafolat",
+        "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. 20 yildan ortiq tajriba, MegaGen sertifikatlangan implantatsiya va to'liq og'riqsiz muolajalar.",
+      cta1: "Qabulga Yozilish",
+      cta2: "Xizmatlar",
+      s1n: "20+",
+      s1l: "Yillik tajriba",
+      s2n: "5000+",
+      s2l: "Baxtli bemor",
+      s3n: "100%",
+      s3l: "Og'riqsiz kafolat",
+      open: "Dushanba – Shanba · 08:30–16:30",
+      tag: "MegaGen Sertifikat · 2025",
     },
     ru: {
-      badgeLocation: "г. Андижан, ул. Мукими · 20+ лет практики",
-      kicker: "СТОМАТОЛОГ ОРИФЖОН · АНДИЖАН",
-      headlinePart1: "Естественная красота и ",
-      headlineHighlight: "100% без боли",
-      headlinePart2: " современная стоматология",
+      eyebrow: "АНДИЖАН · ECO DENTA · 100% БЕЗ БОЛИ",
+      h1a: "Ваша улыбка —",
+      h1b: "наша гордость",
       subtitle:
-        "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета. Более 20 лет практики, сертифицированные материалы Германии и Кореи, европейская анестезия.",
-      ctaBook: "Записаться на Приём",
-      ctaServices: "Каталог услуг",
-      stat1Num: "20+ Лет",
-      stat1Label: "Опыта в медицине",
-      stat2Num: "5,000+",
-      stat2Label: "Довольных пациентов",
-      stat3Num: "100%",
-      stat3Label: "Безболезненно",
+        "Стоматолог Орифжон (Мансуров Орифбек Алимбекович) — выпускник Андижанского мед. колледжа и Ошского государственного университета. Более 20 лет опыта и сертифицированная имплантация MegaGen.",
+      cta1: "Записаться",
+      cta2: "Услуги",
+      s1n: "20+",
+      s1l: "Лет практики",
+      s2n: "5000+",
+      s2l: "Довольных пациентов",
+      s3n: "100%",
+      s3l: "Без боли",
+      open: "Пн–Сб · 08:30–16:30",
+      tag: "Сертификат MegaGen · 2025",
     },
     en: {
-      badgeLocation: "Andijan, Muqimiy St. · 20+ Years Practice",
-      kicker: "DENTIST ORIFJON · ANDIJAN",
-      headlinePart1: "Natural smile and ",
-      headlineHighlight: "100% gentle",
-      headlinePart2: " modern dentistry",
+      eyebrow: "ANDIJAN · ECO DENTA · 100% PAINLESS",
+      h1a: "Your smile is",
+      h1b: "our pride",
       subtitle:
-        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University. Over 20+ years of healthcare practice combining certified German and South Korean technology with gentle care.",
-      ctaBook: "Book Appointment",
-      ctaServices: "Explore Services",
-      stat1Num: "20+ Yrs",
-      stat1Label: "Healthcare practice",
-      stat2Num: "5,000+",
-      stat2Label: "Healthy smiles",
-      stat3Num: "100%",
-      stat3Label: "Painless guarantee",
+        "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University. 20+ years of experience with MegaGen certified implantation and 100% painless procedures.",
+      cta1: "Book Appointment",
+      cta2: "Our Services",
+      s1n: "20+",
+      s1l: "Years of Practice",
+      s2n: "5,000+",
+      s2l: "Happy Patients",
+      s3n: "100%",
+      s3l: "Pain-Free Guarantee",
+      open: "Mon–Sat · 08:30–16:30",
+      tag: "MegaGen Certificate · 2025",
     },
   };
   const t = T[lang] || T.uz;
@@ -86,85 +91,252 @@ const HeroSection = ({ onOpenBooking }) => {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-1.5 2xs:mt-2 sm:mt-4 p-3.5 2xs:p-5 sm:p-7 lg:p-8"
+      className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden rounded-3xl lg:rounded-[2.5rem] bg-gradient-to-b from-[#F8FAFB] via-white to-[#F8FAFB] border border-teal-100/70 shadow-[0_16px_50px_-12px_rgba(12,110,90,0.08)] mt-2 sm:mt-4"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
-        {/* Left Editorial Copy (7 cols) */}
-        <div className="lg:col-span-7 space-y-4 text-left">
-          {/* Eyebrow / Location Pill */}
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-[11.5px] font-bold shadow-2xs">
-            <span>{t.badgeLocation}</span>
-          </div>
+      {/* ── Animated Blob Backgrounds ── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-teal-200/35 blur-3xl animate-blob" />
+        <div className="absolute top-16 right-0 w-[420px] h-[420px] rounded-full bg-indigo-200/25 blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute bottom-4 left-1/3 w-[380px] h-[380px] rounded-full bg-emerald-200/25 blur-3xl animate-blob animation-delay-4000" />
 
-          {/* Classic Headline */}
-          <div className="space-y-1.5">
-            <p className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-primary">
-              {t.kicker}
-            </p>
-            <h1
-              id="hero-heading"
-              className="font-serif-classic text-2xl sm:text-3xl lg:text-[38px] font-black tracking-tight text-slate-900 leading-[1.18]"
-            >
-              {t.headlinePart1}
-              <span className="text-primary italic font-serif">
-                {t.headlineHighlight}
+        {/* Geometric decorative rings */}
+        <div className="absolute top-16 left-12 w-36 h-36 rounded-full border border-teal-200/60 animate-spin-slow" />
+        <div
+          className="absolute top-20 left-16 w-28 h-28 rounded-full border border-teal-300/40 animate-spin-slow animation-delay-2000"
+          style={{ animationDirection: "reverse" }}
+        />
+
+        {/* Subtle dot matrix grid */}
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: "radial-gradient(circle, #0C6E5A18 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-12 lg:py-20 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* ── LEFT: Editorial Text (7 cols) ── */}
+          <div className="lg:col-span-7 space-y-5 lg:space-y-7 text-left">
+            {/* Eyebrow badge with pulsing ring */}
+            <div className="animate-fadeInUp">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50/90 border border-teal-200/90 text-[11px] font-black uppercase tracking-widest text-primary shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse-ring inline-block" />
+                <span>{t.eyebrow}</span>
               </span>
-              <br className="hidden sm:inline" />
-              {t.headlinePart2}
-            </h1>
+            </div>
+
+            {/* H1 Headline */}
+            <div className="animate-fadeInUp animation-delay-100">
+              <h1
+                id="hero-heading"
+                className="text-3xl 2xs:text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-slate-900 font-serif-classic"
+              >
+                <span className="block">{t.h1a}</span>
+                <span className="block text-gradient-teal mt-1">{t.h1b}</span>
+              </h1>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl animate-fadeInUp animation-delay-200">
+              {t.subtitle}
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 animate-fadeInUp animation-delay-300">
+              <button
+                onClick={() => {
+                  if (onOpenBooking) onOpenBooking();
+                }}
+                className="relative overflow-hidden inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-primary text-white font-extrabold text-sm shadow-[0_8px_30px_-6px_rgba(12,110,90,0.5)] hover:shadow-[0_12px_40px_-6px_rgba(12,110,90,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group select-none"
+              >
+                <span className="relative z-10">{t.cta1}</span>
+                <svg
+                  className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
+              </button>
+
+              <Link
+                to={to("/services")}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl border-2 border-slate-200 hover:border-primary bg-white/80 hover:bg-white text-slate-700 hover:text-primary font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 group shadow-2xs"
+              >
+                <span>{t.cta2}</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-400 group-hover:text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Stats Row */}
+            <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-3 border-t border-slate-100 animate-fadeInUp animation-delay-400">
+              {[
+                { n: t.s1n, l: t.s1l, color: "text-primary" },
+                { n: t.s2n, l: t.s2l, color: "text-indigo-600" },
+                { n: t.s3n, l: t.s3l, color: "text-emerald-600" },
+              ].map((s, i) => (
+                <div key={i} className="flex flex-col group cursor-default">
+                  <span
+                    className={`text-2xl sm:text-3xl font-black font-serif-classic ${s.color} leading-none transition-transform duration-300 group-hover:scale-105 ${
+                      counted ? "animate-fadeInScale" : "opacity-0"
+                    }`}
+                    style={{ animationDelay: `${i * 0.1}s` }}
+                  >
+                    {s.n}
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-semibold mt-1 tracking-tight">
+                    {s.l}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Open hours pill */}
+            <div className="flex items-center gap-2 pt-1 animate-fadeInUp animation-delay-500">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-xs text-slate-500 font-semibold">{t.open}</span>
+            </div>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xl">
-            {t.subtitle}
-          </p>
+          {/* ── RIGHT: Doctor Photo + Floating Badges (5 cols) ── */}
+          <div className="lg:col-span-5 relative flex items-center justify-center animate-fadeInScale animation-delay-200">
+            {/* Pulsing ring background */}
+            <div
+              className="absolute inset-4 sm:inset-6 rounded-[2.5rem] bg-gradient-to-br from-teal-100 via-emerald-50 to-indigo-100 animate-pulse"
+              style={{ animationDuration: "3.5s" }}
+            />
 
-          {/* Action CTAs (Just 2 clean buttons) */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 pt-1">
-            <button
-              onClick={() => onOpenBooking()}
-              className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xs transition-all cursor-pointer select-none flex items-center justify-center gap-2"
-            >
-              <span>{t.ctaBook}</span>
-              <span>→</span>
-            </button>
+            {/* Doctor Photo Card */}
+            <div className="relative w-full max-w-sm">
+              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[3/4] shadow-[0_32px_80px_-12px_rgba(12,110,90,0.25)] border-4 border-white bg-slate-100 group">
+                <picture>
+                  <source srcSet="/dr_orifjon_portrait_pro.webp" type="image/webp" />
+                  <img
+                    src="/doctor_orifjon.jpg"
+                    alt="Stomatolog Orifjon — Eco Denta Andijon"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    width={480}
+                    height={640}
+                    loading="eager"
+                    onError={(e) => {
+                      e.target.src = "/logo_icon.png";
+                      e.target.className = "w-full h-full object-contain p-8 bg-teal-50";
+                    }}
+                  />
+                </picture>
 
-            <Link
-              to={to("/services")}
-              className="px-5 py-3 rounded-xl bg-white hover:bg-stone-50 border border-stone-300 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all flex items-center justify-center gap-2"
-            >
-              <span>{t.ctaServices}</span>
-              <span>→</span>
-            </Link>
-          </div>
+                {/* Gradient overlay at bottom */}
+                <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#0A1628]/80 via-[#0A1628]/40 to-transparent" />
 
-          {/* 3 Classic Minimalist Editorial Stats */}
-          <div className="grid grid-cols-3 gap-1.5 2xs:gap-2.5 pt-3.5 border-t border-stone-100 max-w-lg">
-            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-slate-900">{t.stat1Num}</p>
-              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat1Label}</p>
+                {/* Name tag on photo */}
+                <div className="absolute bottom-4 left-4 right-4 text-left">
+                  <p className="text-white font-black text-lg font-serif-classic leading-tight">
+                    Mansurov Orifjon
+                  </p>
+                  <p className="text-teal-300 text-xs font-semibold mt-0.5">
+                    Eco Denta · Stomatolog-Implantolog · Andijon
+                  </p>
+                </div>
+              </div>
+
+              {/* Floating cert badge */}
+              <div className="absolute -top-3 -right-3 sm:-right-4 bg-white rounded-2xl shadow-xl border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 animate-float z-20">
+                <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center shrink-0 shadow-xs">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </span>
+                <div className="text-left">
+                  <p className="text-[10px] font-black text-slate-900 leading-tight">{t.tag}</p>
+                  <p className="text-[9px] text-slate-500">MegaGen Implant Co.</p>
+                </div>
+              </div>
+
+              {/* Floating sterile badge */}
+              <div className="absolute -bottom-3 -left-3 sm:-left-4 bg-white rounded-2xl shadow-xl border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 animate-float animation-delay-200 z-20">
+                <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shrink-0 shadow-xs">
+                  <svg
+                    className="w-4 h-4 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </span>
+                <div className="text-left">
+                  <p className="text-[10px] font-black text-slate-900 leading-tight">
+                    100% {lang === "uz" ? "Steril" : lang === "ru" ? "Стерильно" : "Sterile"}
+                  </p>
+                  <p className="text-[9px] text-slate-500">
+                    {lang === "uz"
+                      ? "Anti-SPID/Gepatit"
+                      : lang === "ru"
+                      ? "Анти-ВИЧ/Гепатит"
+                      : "Anti-HIV/Hepatitis"}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-slate-900">{t.stat2Num}</p>
-              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat2Label}</p>
-            </div>
-            <div className="p-2 2xs:p-2.5 rounded-xl bg-stone-50 border border-stone-200/70">
-              <p className="font-serif-classic text-base 2xs:text-lg sm:text-xl font-black text-emerald-600">{t.stat3Num}</p>
-              <p className="text-[9.5px] 2xs:text-[10.5px] font-medium text-slate-600 mt-0.5 leading-tight">{t.stat3Label}</p>
+
+            {/* Decorative concentric arcs */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none">
+              <svg viewBox="0 0 400 400" className="w-full h-full opacity-15" fill="none">
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="180"
+                  stroke="#0C6E5A"
+                  strokeWidth="1.2"
+                  strokeDasharray="8 6"
+                />
+                <circle cx="200" cy="200" r="145" stroke="#10B981" strokeWidth="0.8" />
+              </svg>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Right Classic Portrait Card (5 cols) */}
-        <div className="lg:col-span-5 relative flex justify-center">
-          <Doctor3DCard lang={lang} onOpenBooking={onOpenBooking} />
-        </div>
+      {/* ── SVG Wave Divider at Bottom of Hero ── */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
+        <svg
+          viewBox="0 0 1440 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          className="w-full h-10 sm:h-14"
+        >
+          <path
+            d="M0,25 C320,60 640,0 960,35 C1200,60 1360,15 1440,30 L1440,60 L0,60 Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   );
 };
 
 /* ═══════════════════════════════════════════════════════════════════
-   2. 5 CORE SPECIALITIES SHOWCASE
+   2. 5 CORE SPECIALITIES SHOWCASE — CLINICAL ELEGANCE CARDS
    ═══════════════════════════════════════════════════════════════════ */
 const SpecialitiesSection = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
@@ -172,38 +344,70 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
 
   const specialtyMeta = {
     terapiya: {
-      kicker: { uz: "Terapevtik Stomatologiya", ru: "Терапевтическая Стоматология", en: "Therapeutic Dentistry" },
+      kicker: {
+        uz: "Terapevtik Stomatologiya",
+        ru: "Терапевтическая Стоматология",
+        en: "Therapeutic Dentistry",
+      },
       materialBadge: "Charisma & DenFil",
       durationText: { uz: "30–45 daqiqa", ru: "30–45 минут", en: "30–45 mins" },
+      accentGradient: "from-teal-500 to-emerald-500",
     },
     ortopediya: {
-      kicker: { uz: "Ortopedik Stomatologiya", ru: "Ортопедическая Стоматология", en: "Prosthodontics" },
+      kicker: {
+        uz: "Ortopedik Stomatologiya",
+        ru: "Ортопедическая Стоматология",
+        en: "Prosthodontics",
+      },
       materialBadge: "Sirkoniy & Vinirlar",
       durationText: { uz: "3–5 kun (2 qabul)", ru: "3–5 дней (2 визита)", en: "3–5 days (2 visits)" },
+      accentGradient: "from-blue-500 to-indigo-500",
     },
     implantatsiya: {
-      kicker: { uz: "Dental Implantologiya", ru: "Дентальная Имплантология", en: "Dental Implantology" },
-      materialBadge: "Mega'Gen & AnyRidge",
+      kicker: {
+        uz: "Dental Implantologiya · Flagship",
+        ru: "Дентальная Имплантология · Флагман",
+        en: "Dental Implantology · Flagship",
+      },
+      materialBadge: "MegaGen & AnyRidge",
       durationText: { uz: "15–20 daqiqa", ru: "15–20 минут", en: "15–20 mins" },
+      accentGradient: "from-teal-600 via-emerald-500 to-indigo-600",
+      isFlagship: true,
     },
     xirurgiya: {
-      kicker: { uz: "Jarrohlik Stomatologiyasi", ru: "Хирургическая Стоматология", en: "Oral Surgery" },
+      kicker: {
+        uz: "Jarrohlik Stomatologiyasi",
+        ru: "Хирургическая Стоматология",
+        en: "Oral Surgery",
+      },
       materialBadge: "Orablok & Supercain",
       durationText: { uz: "10–25 daqiqa", ru: "10–25 минут", en: "10–25 mins" },
+      accentGradient: "from-rose-500 to-pink-500",
     },
     ortodontiya: {
       kicker: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
       materialBadge: "Breket Tizimlari",
       durationText: { uz: "12–18 oy", ru: "12–18 месяцев", en: "12–18 months" },
+      accentGradient: "from-orange-500 to-amber-500",
     },
   };
 
   return (
-    <section aria-labelledby="specialities-heading" className="py-6 sm:py-10 space-y-6">
+    <section aria-labelledby="specialities-heading" className="py-8 sm:py-12 space-y-8 relative">
+      {/* Ambient background blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
+
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-2.5">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 border border-teal-200 text-primary">
-          <span>{lang === "uz" ? "Asosiy 5 Klinik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}</span>
+      <div className="text-center max-w-3xl mx-auto space-y-3">
+        <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-teal-50 border border-teal-200 text-primary shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <span>
+            {lang === "uz"
+              ? "Asosiy 5 Klinik Yo'nalish"
+              : lang === "ru"
+              ? "5 Основных Направлений"
+              : "5 Core Specialties"}
+          </span>
         </span>
         <h2
           id="specialities-heading"
@@ -225,22 +429,38 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
       </div>
 
       {/* Grid of 5 Specialties */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {SERVICES_CATALOG.map((s) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {SERVICES_CATALOG.map((s, index) => {
           const meta = specialtyMeta[s.id] || {
-            kicker: { uz: s.category?.[lang] || "Xizmat", ru: s.category?.[lang] || "Услуга", en: "Service" },
+            kicker: {
+              uz: s.category?.[lang] || "Xizmat",
+              ru: s.category?.[lang] || "Услуга",
+              en: "Service",
+            },
             materialBadge: s.techTag?.[lang] || "Sertifikatlangan",
-            durationText: { uz: s.duration?.[lang] || "Qisqa muddat", ru: "Короткий срок", en: "Short visit" },
+            durationText: {
+              uz: s.duration?.[lang] || "Qisqa muddat",
+              ru: "Короткий срок",
+              en: "Short visit",
+            },
+            accentGradient: "from-teal-500 to-emerald-500",
           };
+
+          const isFlagship = meta.isFlagship;
 
           return (
             <article
               key={s.id}
-              className="group bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-teal-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              className={`group bg-white rounded-3xl border transition-all duration-300 overflow-hidden flex flex-col justify-between hover-lift-glow ${
+                isFlagship
+                  ? "border-teal-300 ring-2 ring-primary/20 shadow-[0_12px_40px_-8px_rgba(12,110,90,0.18)]"
+                  : "border-slate-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.05)] hover:border-teal-300 hover:shadow-[0_16px_40px_rgba(12,110,90,0.12)]"
+              }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div>
-                {/* Pure Crisp Studio Photography */}
-                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-stone-100">
+                {/* Visual Header / Image Container */}
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100">
                   <img
                     src={s.image}
                     alt={s.title[lang]}
@@ -248,18 +468,37 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                     height={400}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
+                  {/* Subtle top gradient accent bar */}
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${meta.accentGradient}`}
+                  />
+
+                  {/* Flagship ribbon badge */}
+                  {isFlagship && (
+                    <div className="absolute top-3 right-3">
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary text-white text-[10px] font-black uppercase tracking-wider shadow-md">
+                        <svg className="w-3 h-3 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>Flagship</span>
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Bottom gradient on image */}
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Content Body */}
-                <div className="p-4 2xs:p-5 sm:p-6 space-y-3 text-left">
+                <div className="p-5 sm:p-6 space-y-3.5 text-left">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[10.5px] font-bold uppercase tracking-wider text-primary">
+                    <span className="text-[11px] font-black uppercase tracking-wider text-primary">
                       {meta.kicker[lang]}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
-                      <IconClock className="w-3.5 h-3.5 text-teal-500" />
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/60">
+                      <IconClock className="w-3 h-3 text-primary" />
                       <span>{meta.durationText[lang]}</span>
                     </span>
                   </div>
@@ -272,8 +511,9 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                     {s.shortDesc[lang]}
                   </p>
 
-                  <div className="pt-2 border-t border-stone-100 text-xs text-slate-700">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200/70 text-[11px] font-medium text-slate-700">
+                  <div className="pt-2 border-t border-slate-100 text-xs">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-teal-50/70 border border-teal-200/60 text-[11px] font-bold text-slate-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                       <span>{meta.materialBadge}</span>
                     </span>
                   </div>
@@ -281,17 +521,19 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
               </div>
 
               {/* Footer Actions */}
-              <div className="p-5 sm:p-6 pt-0 border-t border-stone-100/80 flex items-center justify-between gap-3 mt-2">
+              <div className="p-5 sm:p-6 pt-0 border-t border-slate-100 flex items-center justify-between gap-3 mt-3">
                 <Link
                   to={to(`/services/${s.id}`)}
                   className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
                 >
-                  <span>{lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}</span>
+                  <span>
+                    {lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}
+                  </span>
                   <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
                 </Link>
                 <button
                   onClick={() => onOpenBooking(s.id)}
-                  className="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold uppercase tracking-wider shadow-2xs transition-colors cursor-pointer select-none"
+                  className="px-4 py-2 rounded-xl bg-primary hover:bg-[#095446] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer select-none"
                 >
                   {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book Visit"}
                 </button>
@@ -305,95 +547,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════════
-   3. BEFORE & AFTER GALLERY SHOWCASE
-   ═══════════════════════════════════════════════════════════════════ */
-const BeforeAfterSection = () => {
-  const { lang } = useLanguage();
-
-  return (
-    <section className="py-12 sm:py-16 space-y-8">
-      <div className="text-center max-w-2xl mx-auto space-y-2">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-slate-800 border border-teal-200/80 shadow-2xs">
-          <span>{lang === "uz" ? "NATIJALAR VA TAQQOSLASH" : lang === "ru" ? "РЕЗУЛЬТАТЫ ДО И ПОСЛЕ" : "BEFORE & AFTER GALLERY"}</span>
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
-          {lang === "uz"
-            ? "Muvaffaqiyatli Tabassum Restavratsiyalari"
-            : lang === "ru"
-            ? "Примеры Преображения Улыбки"
-            : "Smile Transformation Results"}
-        </h2>
-        <p className="text-sm text-slate-600">
-          {lang === "uz"
-            ? "Slayderni o'ngga va chapga surib, davolashdan oldingi va keyingi natijalarni taqqoslang."
-            : lang === "ru"
-            ? "Перемещайте ползунок, чтобы сравнить состояние зубов до и после лечения."
-            : "Drag the slider handle to inspect authentic clinical smile improvements."}
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <BeforeAfterSlider
-          beforeImg={assets.treatment_implant}
-          afterImg={assets.hero_smile}
-          title={
-            lang === "uz"
-              ? "Dental Implantatsiya & Tsirkoniy"
-              : lang === "ru"
-              ? "Имплантация и Цирконий"
-              : "Dental Implants & Zirconia"
-          }
-          subtitle={
-            lang === "uz"
-              ? "MegaGen implant va CAD/CAM karonka"
-              : lang === "ru"
-              ? "MegaGen и коронка CAD/CAM"
-              : "MegaGen implant & CAD/CAM crown"
-          }
-        />
-        <BeforeAfterSlider
-          beforeImg={assets.treatment_crowns}
-          afterImg={assets.treatment_veneers}
-          title={
-            lang === "uz"
-              ? "E-max Estetik Vinirlar"
-              : lang === "ru"
-              ? "Виниры E-max"
-              : "E-max Aesthetic Veneers"
-          }
-          subtitle={
-            lang === "uz"
-              ? "Gollivud tabassumi dizayni"
-              : lang === "ru"
-              ? "Дизайн Голливудской улыбки"
-              : "Hollywood smile makeover"
-          }
-        />
-        <BeforeAfterSlider
-          beforeImg={assets.treatment_therapy}
-          afterImg={assets.treatment_whitening}
-          title={
-            lang === "uz"
-              ? "Tish Oqartirish & Restavratsiya"
-              : lang === "ru"
-              ? "Отбеливание и Реставрация"
-              : "Teeth Whitening & Restoration"
-          }
-          subtitle={
-            lang === "uz"
-              ? "AirFlow va fotopolimer restavratsiya"
-              : lang === "ru"
-              ? "AirFlow и нано-композиты"
-              : "AirFlow & composite restoration"
-          }
-        />
-      </div>
-    </section>
-  );
-};
-
-/* ═══════════════════════════════════════════════════════════════════
-   MAIN HOME PAGE
+   MAIN HOME PAGE WITH CLINICAL ELEGANCE REDESIGN
    ═══════════════════════════════════════════════════════════════════ */
 const Home = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
@@ -401,7 +555,7 @@ const Home = ({ onOpenBooking }) => {
   const homeSchema = buildHomeSchema(lang, FAQ_ITEMS);
 
   return (
-    <div className="space-y-8 sm:space-y-10 pb-8">
+    <div className="space-y-10 sm:space-y-14 pb-12">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -409,44 +563,76 @@ const Home = ({ onOpenBooking }) => {
         schemaJson={homeSchema}
       />
 
-      {/* 1. Hero */}
+      {/* 1. Hero with Animated Blobs & Medical Geometry */}
       <HeroSection onOpenBooking={onOpenBooking} />
 
-      {/* 3D Clinical Ticker Marquee */}
-      <ClinicalTickerMarquee />
+      {/* 2. Clinical Ticker Marquee with clean white card */}
+      <div className="relative rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_rgba(20,30,40,0.03)] py-1 overflow-hidden">
+        <ClinicalTickerMarquee />
+      </div>
 
-      {/* 2. 5 Specialties */}
+      {/* 3. 5 Core Specialties with Glass & Hover Lift */}
       <SpecialitiesSection onOpenBooking={onOpenBooking} />
 
-      {/* 3. Interactive Treatment & Cost Calculator */}
-      <Interactive3DCostCalculator />
+      {/* Wave Transition Divider */}
+      <div className="relative -my-4 sm:-my-6 pointer-events-none" aria-hidden="true">
+        <svg
+          viewBox="0 0 1440 40"
+          fill="none"
+          preserveAspectRatio="none"
+          className="w-full h-8 sm:h-10 opacity-70"
+        >
+          <path
+            d="M0,20 C360,0 720,40 1080,10 C1260,-5 1380,25 1440,20 L1440,40 L0,40 Z"
+            fill="#F1F5F9"
+          />
+        </svg>
+      </div>
 
-      {/* 4. Verified Diplomas & MegaGen Certificates */}
-      <CertificatesShowcase />
+      {/* 4. Interactive Treatment & Cost Calculator */}
+      <div className="relative">
+        <Interactive3DCostCalculator />
+      </div>
 
-      {/* 5. Authentic Equipment & Clinical Operatory Tour */}
-      <ClinicEquipmentShowcase />
+      {/* 5. Verified Diplomas & MegaGen Certificates */}
+      <div className="relative">
+        <CertificatesShowcase />
+      </div>
 
-      {/* 6. Certified Clinical Materials: Germany & South Korea */}
-      <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
+      {/* 6. Authentic Equipment & Clinical Operatory Tour */}
+      <div className="relative">
+        <ClinicEquipmentShowcase />
+      </div>
 
-      {/* Before & After (Hidden by user request) */}
-      {/* <BeforeAfterSection /> */}
+      {/* 7. Certified Clinical Materials: Germany & South Korea */}
+      <div className="relative">
+        <ClinicalMaterialsShowcase onOpenBooking={onOpenBooking} />
+      </div>
 
-      {/* 6. Online Smile Assessment Wizard */}
-      <SmileAssessmentWizard />
+      {/* 8. Online Smile Assessment Wizard */}
+      <div className="relative">
+        <SmileAssessmentWizard />
+      </div>
 
-      {/* 7. Patient Aftercare Guides */}
-      <PatientCareGuides />
+      {/* 9. Patient Aftercare Guides */}
+      <div className="relative">
+        <PatientCareGuides />
+      </div>
 
-      {/* 8. Inline Booking Section */}
-      <InlineBookingSection />
+      {/* 10. Inline Booking Section */}
+      <div className="relative">
+        <InlineBookingSection />
+      </div>
 
-      {/* 9. FAQ Accordion */}
-      <FaqAccordion />
+      {/* 11. FAQ Accordion */}
+      <div className="relative">
+        <FaqAccordion />
+      </div>
 
-      {/* 10. Clinic Contact & Location */}
-      <ClinicLocationMap />
+      {/* 12. Clinic Contact & Location */}
+      <div className="relative">
+        <ClinicLocationMap />
+      </div>
     </div>
   );
 };
