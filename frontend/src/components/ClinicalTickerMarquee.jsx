@@ -50,11 +50,11 @@ export default function ClinicalTickerMarquee() {
           {title[lang] || title.uz}
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 2xs:gap-3">
           {partners.map((p, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-stone-50/70 border border-stone-200/70 text-left transition-colors hover:bg-stone-100/70"
+              className="flex items-center gap-2 2xs:gap-2.5 px-2.5 2xs:px-3 py-2 rounded-xl bg-stone-50/70 border border-stone-200/70 text-left transition-colors hover:bg-stone-100/70"
             >
               <span className="w-7 h-7 rounded-lg bg-white border border-stone-200 text-slate-700 text-[10px] font-bold flex items-center justify-center shrink-0">
                 {p.code}

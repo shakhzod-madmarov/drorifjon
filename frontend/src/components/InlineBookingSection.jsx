@@ -549,7 +549,7 @@ const InlineBookingSection = ({ initialService = null }) => {
   }
 
   return (
-    <section id="booking" className="py-6 sm:py-8 bg-white rounded-3xl border border-stone-200/90 shadow-sm p-4 sm:p-6 lg:p-8 scroll-mt-20">
+    <section id="booking" className="py-6 sm:py-8 bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm p-3.5 2xs:p-4 sm:p-6 lg:p-8 scroll-mt-20">
       <div className="max-w-7xl mx-auto space-y-5 sm:space-y-6">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">

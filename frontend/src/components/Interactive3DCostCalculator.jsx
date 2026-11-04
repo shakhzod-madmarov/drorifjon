@@ -251,7 +251,7 @@ const Interactive3DCostCalculator = () => {
         }`;
 
   return (
-    <section className="py-6 sm:py-8 bg-white rounded-3xl border border-stone-200/90 shadow-sm p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+    <section className="py-6 sm:py-8 bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm p-3.5 2xs:p-4 sm:p-6 lg:p-8 relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-stone-100/30 rounded-full blur-3xl pointer-events-none" />
 
@@ -306,7 +306,7 @@ const Interactive3DCostCalculator = () => {
           ref={cardRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-stone-200/90 shadow-sm overflow-hidden"
+          className="relative bg-white rounded-2xl sm:rounded-3xl p-3.5 2xs:p-5 sm:p-8 lg:p-10 border border-stone-200/90 shadow-sm overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Info Column (8 cols) */}

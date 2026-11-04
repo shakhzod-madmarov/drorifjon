@@ -38,18 +38,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#141E28] text-slate-300 pt-16 pb-12 border-t border-amber-900/30 mt-20">
-      <div className="max-w-7xl mx-auto px-3.5 xs:px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#141E28] text-slate-300 pt-12 sm:pt-16 pb-12 border-t border-amber-900/30 mt-14 sm:mt-20">
+      <div className="max-w-7xl mx-auto px-3 2xs:px-4 sm:px-6 lg:px-8">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/10">
           {/* Column 1: Brand & Doctor Credentials (5 cols) */}
-          <div className="lg:col-span-5 space-y-5">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-5">
             <Link
               to={to("/")}
               aria-label="Stomatolog Orifjon - Bosh sahifa"
               className="inline-block cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
             >
-              <Logo className="h-12" inverted={true} />
+              <Logo className="h-9 sm:h-11" inverted={true} />
             </Link>
 
             <p className="text-sm text-slate-300/90 leading-relaxed max-w-md">

@@ -28,7 +28,7 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
   }[lang];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#FFFDF9] rounded-3xl border border-amber-200 p-5 sm:p-8 lg:p-10">
+    <section className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200 p-3.5 2xs:p-5 sm:p-8 lg:p-10">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-2">
           <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-100 text-amber-900 border border-amber-300">

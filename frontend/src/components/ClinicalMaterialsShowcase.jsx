@@ -142,7 +142,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
         {filteredMaterials.map((mat) => (
           <article
             key={mat.id}
-            className="group relative bg-white rounded-3xl border border-amber-200/90 p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden [transform-style:preserve-3d]"
+            className="group relative bg-white rounded-2xl sm:rounded-3xl border border-amber-200/90 p-4 2xs:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden [transform-style:preserve-3d]"
           >
             {/* Top Brand Ambient Accent Border */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-brandCyan to-brandGreen" />

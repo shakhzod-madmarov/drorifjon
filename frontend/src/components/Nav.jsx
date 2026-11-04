@@ -156,14 +156,14 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
         className="fixed left-0 right-0 z-50 transition-all duration-300 pointer-events-none"
       >
         {/* ═══════════════════════════════════════════════════════════
-            CLEAN FLOATING CLASSIC NAVBAR
+            CLEAN FLOATING CLASSIC NAVBAR (RESPONSIVE ALL SCREENS)
             ═══════════════════════════════════════════════════════════ */}
-        <div className="pointer-events-auto max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 mt-2 sm:mt-3">
+        <div className="pointer-events-auto max-w-7xl mx-auto px-2 2xs:px-3 sm:px-6 lg:px-8 mt-1.5 2xs:mt-2 sm:mt-3">
           <div
-            className={`relative rounded-2xl sm:rounded-3xl transition-all duration-300 flex items-center justify-between gap-3 px-4 sm:px-6 ${
+            className={`relative rounded-2xl sm:rounded-3xl transition-all duration-300 flex items-center justify-between gap-1.5 2xs:gap-2 sm:gap-3 px-2.5 2xs:px-3.5 sm:px-6 ${
               scrolled
-                ? "py-2.5 bg-white/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(20,30,40,0.08)] border border-amber-200/90"
-                : "py-3 sm:py-3.5 bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgba(20,30,40,0.06)] border border-white/90 hover:border-amber-200/80"
+                ? "py-2 sm:py-2.5 bg-white/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(20,30,40,0.08)] border border-amber-200/90"
+                : "py-2.5 sm:py-3.5 bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgba(20,30,40,0.06)] border border-white/90 hover:border-amber-200/80"
             }`}
           >
             {/* Top Metallic Holo-Shine Accent Border */}
@@ -179,9 +179,9 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                   ? "Dentist Orifjon — Go to homepage"
                   : "Stomatolog Orifjon — Bosh sahifaga o'tish"
               }
-              className="flex items-center shrink-0 group focus:outline-none"
+              className="flex items-center shrink-0 group focus:outline-none min-w-0"
             >
-              <Logo className="h-8 sm:h-9" />
+              <Logo className="h-7.5 2xs:h-8 sm:h-9" />
             </NavLink>
 
             {/* Desktop Navigation Links */}
@@ -299,19 +299,19 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             </nav>
 
             {/* Right Side Actions: Language + Phone + Book CTA */}
-            <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-              {/* Segmented Glass Language Switcher */}
+            <div className="flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 shrink-0">
+              {/* Segmented Glass Language Switcher (Desktop & Tablets >= 640px) */}
               <div
                 role="group"
                 aria-label={a11y.languageSwitcher}
-                className="flex items-center bg-amber-100/60 p-0.5 rounded-xl border border-amber-300/60 shadow-inner"
+                className="hidden sm:flex items-center bg-amber-100/60 p-0.5 rounded-xl border border-amber-300/60 shadow-inner"
               >
                 {["uz", "ru", "en"].map((l) => (
                   <button
                     key={l}
                     onClick={() => changeLanguage(l)}
                     aria-pressed={lang === l}
-                    className={`min-h-[32px] sm:min-h-[28px] px-2.5 sm:px-2 py-0.5 rounded-lg text-[11px] font-extrabold uppercase transition-all duration-200 touch-manipulation cursor-pointer ${
+                    className={`min-h-[28px] px-2.5 sm:px-2 py-0.5 rounded-lg text-[11px] font-extrabold uppercase transition-all duration-200 touch-manipulation cursor-pointer ${
                       lang === l
                         ? "bg-white text-primary shadow-xs scale-102"
                         : "text-slate-600 hover:text-slate-900"
@@ -321,6 +321,32 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                   </button>
                 ))}
               </div>
+
+              {/* Mobile Quick Cycle Language Button (Compact, Elegant, Instant Feedback) */}
+              <button
+                onClick={() => {
+                  const next = lang === "uz" ? "ru" : lang === "ru" ? "en" : "uz";
+                  changeLanguage(next);
+                }}
+                aria-label={
+                  lang === "uz"
+                    ? "Tilni almashtirish (Ruscha)"
+                    : lang === "ru"
+                    ? "Сменить язык (English)"
+                    : "Switch language (O'zbek)"
+                }
+                title={
+                  lang === "uz"
+                    ? "Hozir: O'zbekcha (O'zgartirish uchun bosing)"
+                    : lang === "ru"
+                    ? "Сейчас: Русский (Нажмите для смены)"
+                    : "Active: English (Tap to switch)"
+                }
+                className="sm:hidden inline-flex items-center justify-center gap-1 min-h-[32px] px-2 py-1 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200/90 text-slate-800 text-[11px] font-black uppercase transition-all duration-200 touch-manipulation cursor-pointer active:scale-95 shadow-2xs"
+              >
+                <span className="text-[11px] leading-none">🌐</span>
+                <span className="font-black text-primary leading-none">{lang.toUpperCase()}</span>
+              </button>
 
               {/* Direct Phone Dial (Desktop) */}
               <a
@@ -336,7 +362,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               {/* Magnetic Glowing Primary Book CTA */}
               <button
                 onClick={handleBookClick}
-                className={`relative overflow-hidden inline-flex items-center gap-1.5 sm:gap-2 px-2.5 2xs:px-3 xs:px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-300 cursor-pointer shadow-md group select-none ${
+                className={`relative overflow-hidden inline-flex items-center gap-1 sm:gap-2 px-2 2xs:px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl text-[11px] 2xs:text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-300 cursor-pointer shadow-md group select-none whitespace-nowrap ${
                   isBookingActive
                     ? "bg-slate-900 text-white ring-2 ring-primary"
                     : "bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white shadow-[0_4px_16px_rgba(255,157,80,0.35)] hover:shadow-[0_8px_24px_rgba(255,157,80,0.5)] hover:-translate-y-0.5 active:translate-y-0"
@@ -345,22 +371,22 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 {/* Sweep Shimmer Effect */}
                 <span className="absolute inset-0 w-1/2 h-full bg-white/20 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
                 
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse shrink-0" />
-                <span className="hidden xs:inline">
+                <span className="w-1.5 h-1.5 2xs:w-2 2xs:h-2 rounded-full bg-white animate-pulse shrink-0" />
+                <span className="hidden sm:inline">
                   {lang === "uz"
                     ? "Qabulga Yozilish"
                     : lang === "ru"
                     ? "Запись на Приём"
                     : "Book Visit"}
                 </span>
-                <span className="xs:hidden">
+                <span className="sm:hidden">
                   {lang === "uz"
                     ? "Qabul"
                     : lang === "ru"
                     ? "Запись"
                     : "Book"}
                 </span>
-                <span className="group-hover:translate-x-0.5 transition-transform text-white/90">
+                <span className="hidden 2xs:inline group-hover:translate-x-0.5 transition-transform text-white/90">
                   →
                 </span>
               </button>
@@ -371,10 +397,10 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 aria-label={a11y.openMenu}
                 aria-expanded={showMenu}
                 aria-controls="mobile-navigation-drawer"
-                className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-amber-50/80 border border-amber-200/70 text-slate-800 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation"
+                className="lg:hidden w-8.5 h-8.5 2xs:w-9 2xs:h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-amber-50/80 border border-amber-200/70 text-slate-800 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation active:scale-95 shrink-0"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4.5 h-4.5 2xs:w-5 2xs:h-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -402,12 +428,12 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           className="fixed inset-0 h-screen h-[100dvh] z-50 lg:hidden flex flex-col bg-[#FFFDF9] outline-none animate-in fade-in duration-200"
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between p-4 border-b border-amber-200/80 bg-white">
-            <Logo className="h-8" />
+          <div className="flex items-center justify-between p-3.5 2xs:p-4 border-b border-amber-200/80 bg-white">
+            <Logo className="h-7.5 2xs:h-8" />
             <button
               onClick={closeDrawer}
               aria-label={a11y.closeMenu}
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-amber-50 text-slate-600 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation"
+              className="w-9 h-9 2xs:w-10 2xs:h-10 flex items-center justify-center rounded-xl bg-amber-50 text-slate-700 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation active:scale-95"
             >
               <svg
                 className="w-5 h-5"
@@ -422,16 +448,48 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           </div>
 
           {/* Drawer Body */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className="flex-1 overflow-y-auto p-3.5 2xs:p-4 space-y-3.5">
+            {/* Prominent 3-Language Selector Card */}
+            <div className="p-3 rounded-2xl bg-white border border-amber-200/80 shadow-2xs space-y-1.5">
+              <div className="flex items-center justify-between px-1">
+                <span className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+                  {lang === "uz" ? "Tilni tanlang" : lang === "ru" ? "Выберите язык" : "Select language"}
+                </span>
+                <span className="text-[10px] font-bold text-primary">
+                  🌐 3 Tilda / На 3 языках
+                </span>
+              </div>
+              <div className="grid grid-cols-3 gap-1.5 bg-amber-50/70 p-1 rounded-xl border border-amber-200/60">
+                {[
+                  { code: "uz", name: "O'zbekcha", flag: "🇺🇿" },
+                  { code: "ru", name: "Русский", flag: "🇷🇺" },
+                  { code: "en", name: "English", flag: "🇬🇧" },
+                ].map((item) => (
+                  <button
+                    key={item.code}
+                    onClick={() => changeLanguage(item.code)}
+                    className={`py-2 px-1 text-center rounded-lg text-xs font-bold transition-all touch-manipulation flex flex-col items-center justify-center gap-0.5 cursor-pointer ${
+                      lang === item.code
+                        ? "bg-white text-primary shadow-xs border border-amber-300 font-black scale-102"
+                        : "text-slate-600 hover:text-slate-900"
+                    }`}
+                  >
+                    <span className="text-sm leading-none">{item.flag}</span>
+                    <span className="text-[11px] leading-tight">{item.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Live Acceptance Status Card */}
-            <div className="p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-transparent border border-emerald-300/60 flex items-center justify-between">
-              <div>
+            <div className="p-3 2xs:p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-transparent border border-emerald-300/60 flex flex-wrap items-center justify-between gap-2">
+              <div className="min-w-0">
                 <p className="text-xs font-black text-slate-900">
                   {lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}
                 </p>
-                <p className="text-[10px] text-slate-600 font-medium">08:30 – 18:00 (Dushanba–Shanba)</p>
+                <p className="text-[10.5px] text-slate-600 font-medium">08:30 – 18:30 (Dushanba–Shanba)</p>
               </div>
-              <span className="text-xs font-black text-emerald-700 bg-white px-2 py-0.5 rounded-md border border-emerald-200">
+              <span className="text-[10.5px] font-black text-emerald-700 bg-white px-2 py-0.5 rounded-md border border-emerald-200 shrink-0 shadow-2xs">
                 100% Og'riqsiz
               </span>
             </div>
@@ -445,7 +503,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                   end={link.path === "/"}
                   onClick={closeDrawer}
                   className={({ isActive }) =>
-                    `flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
+                    `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-primary text-white shadow-xs"
                         : "text-slate-800 hover:bg-amber-100/60"
@@ -459,8 +517,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             </div>
 
             {/* 5 Specialties Quick Links */}
-            <div className="pt-2">
-              <p className="text-[11px] font-extrabold uppercase tracking-widest text-slate-400 mb-2 px-1">
+            <div className="pt-1">
+              <p className="text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400 mb-2 px-1">
                 {lang === "uz" ? "Asosiy Yo'nalishlar" : lang === "ru" ? "Основные Направления" : "Core Specialties"}
               </p>
               <div className="grid grid-cols-1 gap-1.5">
@@ -475,7 +533,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                       <span className="w-7 h-7 rounded-lg bg-stone-50 border border-stone-200 flex items-center justify-center shrink-0">
                         {spec.icon}
                       </span>
-                      <span className="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                      <span className="font-bold text-slate-900 group-hover:text-primary transition-colors truncate">
                         {spec.title[lang]}
                       </span>
                     </div>
@@ -491,48 +549,48 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             <div className="pt-2 border-t border-amber-200/70 space-y-2">
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="flex items-center gap-3 p-3 rounded-xl bg-amber-50 border border-amber-200/90 text-slate-900 font-bold text-xs hover:bg-amber-100 transition-colors"
+                className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-amber-50 border border-amber-200/90 text-slate-900 font-bold text-xs hover:bg-amber-100 transition-colors"
               >
-                <span className="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center">
-                  <IconPhone className="w-4 h-4 text-white" />
+                <span className="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
+                  <IconPhone className="w-3.5 h-3.5 text-white" />
                 </span>
-                <span>{DOCTOR_INFO.phoneDisplay} (To'g'ridan-to'g'ri qo'ng'iroq)</span>
+                <span className="truncate">{DOCTOR_INFO.phoneDisplay} · To'g'ridan-to'g'ri qo'ng'iroq</span>
               </a>
 
               <a
                 href={DOCTOR_INFO.telegramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-sky-50 border border-sky-300 text-sky-950 font-bold text-xs"
+                className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-sky-50 border border-sky-300 text-sky-950 font-bold text-xs hover:bg-sky-100 transition-colors"
               >
-                <span className="w-7 h-7 rounded-lg bg-sky-500 text-white flex items-center justify-center">
-                  <IconTelegram className="w-4 h-4 text-white" />
+                <span className="w-7 h-7 rounded-lg bg-sky-500 text-white flex items-center justify-center shrink-0">
+                  <IconTelegram className="w-3.5 h-3.5 text-white" />
                 </span>
-                <span>Telegram: @dr_orifjon_1</span>
+                <span className="truncate">Telegram: @dr_orifjon_1</span>
               </a>
 
               <a
                 href={DOCTOR_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-pink-50 border border-pink-300 text-pink-950 font-bold text-xs"
+                className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-pink-50 border border-pink-300 text-pink-950 font-bold text-xs hover:bg-pink-100 transition-colors"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center">
-                  <IconInstagram className="w-4 h-4 text-white" />
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0">
+                  <IconInstagram className="w-3.5 h-3.5 text-white" />
                 </span>
-                <span>Instagram: @dr_orifjon</span>
+                <span className="truncate">Instagram: @dr_orifjon</span>
               </a>
             </div>
           </div>
 
-          {/* Drawer Footer Book Button */}
-          <div className="p-4 border-t border-amber-200/80 bg-white">
+          {/* Drawer Footer Book Button (Sticky Bottom with Safe-Area Inset) */}
+          <div className="p-3 2xs:p-4 border-t border-amber-200/80 bg-white pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
             <button
               onClick={() => {
                 closeDrawer();
                 handleBookClick();
               }}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-center font-extrabold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2"
+              className="w-full py-3 2xs:py-3.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-center font-extrabold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 cursor-pointer touch-manipulation active:scale-98"
             >
               <span>
                 {lang === "uz"

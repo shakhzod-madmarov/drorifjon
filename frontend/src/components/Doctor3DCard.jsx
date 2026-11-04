@@ -71,7 +71,7 @@ const Doctor3DCard = ({
             : "transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease",
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-[19.5rem] sm:max-w-[21rem] rounded-2xl overflow-hidden bg-white border border-stone-200/90 shadow-[0_8px_30px_rgba(20,30,40,0.06)] hover:shadow-[0_16px_40px_rgba(20,30,40,0.1)] hover:border-amber-300/80 transition-all select-none group"
+        className="relative w-full max-w-[17.5rem] 2xs:max-w-[19.5rem] sm:max-w-[21rem] rounded-2xl overflow-hidden bg-white border border-stone-200/90 shadow-[0_8px_30px_rgba(20,30,40,0.06)] hover:shadow-[0_16px_40px_rgba(20,30,40,0.1)] hover:border-amber-300/80 transition-all select-none group"
       >
         {/* Crisp Unblemished Portrait Photo */}
         <div className="relative w-full aspect-square overflow-hidden bg-stone-100 border-b border-stone-100">

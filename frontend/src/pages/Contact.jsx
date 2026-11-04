@@ -84,7 +84,7 @@ const Contact = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* Phone */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
+        <div className="p-4 2xs:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
               <IconPhone className="w-6 h-6 text-primary" />
@@ -107,7 +107,7 @@ const Contact = () => {
         </div>
 
         {/* Telegram */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
+        <div className="p-4 2xs:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center">
               <IconTelegram className="w-6 h-6 text-sky-500" />
@@ -136,7 +136,7 @@ const Contact = () => {
         </div>
 
         {/* Instagram */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
+        <div className="p-4 2xs:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center">
               <IconInstagram className="w-6 h-6 text-pink-500" />
@@ -165,7 +165,7 @@ const Contact = () => {
         </div>
 
         {/* Clinic Location Card */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
+        <div className="p-4 2xs:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-amber-200 shadow-sm space-y-4 flex flex-col justify-between hover:border-amber-300 transition-all">
           <div className="space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center">
               <IconLocationPin className="w-6 h-6 text-primary" />

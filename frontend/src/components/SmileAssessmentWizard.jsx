@@ -173,7 +173,7 @@ const SmileAssessmentWizard = () => {
   const [selectedConcern, setSelectedConcern] = useState(concerns[0]);
 
   return (
-    <section className="py-12 sm:py-16 bg-[#FFFDF9] rounded-3xl border border-amber-200/90 shadow-luxury p-5 sm:p-8 lg:p-10 relative overflow-hidden">
+    <section className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200/90 shadow-luxury p-3.5 2xs:p-5 sm:p-8 lg:p-10 relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-amber-100/30 via-orange-100/20 to-transparent rounded-full blur-3xl pointer-events-none" />
 

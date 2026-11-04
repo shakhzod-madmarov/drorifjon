@@ -33,25 +33,25 @@ const FloatingActionHub = () => {
       ref={hubRef}
       role="region"
       aria-label={a11y.quickActions}
-      className="fixed bottom-[max(0.875rem,env(safe-area-inset-bottom,0px))] right-[max(0.875rem,env(safe-area-inset-right,0px))] sm:bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] sm:right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2.5 no-print [perspective:1000px]"
+      className="fixed bottom-[max(0.75rem,env(safe-area-inset-bottom,0px))] right-[max(0.75rem,env(safe-area-inset-right,0px))] sm:bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] sm:right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2 sm:gap-2.5 no-print [perspective:1000px]"
     >
       {/* 3D Staggered Cascade Menu */}
       {expanded && (
         <div
           id="floating-action-menu"
-          className="flex flex-col items-end gap-2.5 mb-2 transition-all duration-300 [transform-style:preserve-3d] animate-fadeIn"
+          className="flex flex-col items-end gap-2 sm:gap-2.5 mb-2 transition-all duration-300 [transform-style:preserve-3d] animate-fadeIn max-w-[calc(100vw-2rem)]"
         >
           {/* Telegram */}
           <a
             href={DOCTOR_INFO.telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-gradient-to-r from-[#0088cc] to-[#0099e6] hover:brightness-110 text-white px-4 py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25"
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-[#0088cc] to-[#0099e6] hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
           >
-            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center">
+            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconTelegram className="w-4 h-4 text-white" />
             </span>
-            <span>Telegram ({DOCTOR_INFO.telegramHandle})</span>
+            <span className="truncate">Telegram ({DOCTOR_INFO.telegramHandle})</span>
           </a>
 
           {/* Instagram */}
@@ -59,23 +59,23 @@ const FloatingActionHub = () => {
             href={DOCTOR_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:brightness-110 text-white px-4 py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25"
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
           >
-            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center">
+            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconInstagram className="w-4 h-4 text-white" />
             </span>
-            <span>Instagram ({DOCTOR_INFO.instagramHandle})</span>
+            <span className="truncate">Instagram ({DOCTOR_INFO.instagramHandle})</span>
           </a>
 
           {/* Direct Phone */}
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="flex items-center gap-2.5 bg-gradient-to-r from-[#FF9D50] to-[#FF8030] hover:brightness-110 text-white px-4 py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25"
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-[#FF9D50] to-[#FF8030] hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
           >
-            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center">
+            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconPhone className="w-4 h-4 text-white" />
             </span>
-            <span>{DOCTOR_INFO.phoneDisplay}</span>
+            <span className="truncate">{DOCTOR_INFO.phoneDisplay}</span>
           </a>
         </div>
       )}

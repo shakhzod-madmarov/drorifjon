@@ -155,7 +155,7 @@ const ServiceDetail = () => {
       </nav>
 
       {/* Hero Service Showcase — Simple Classic Luxury */}
-      <div className="relative z-10 rounded-3xl overflow-hidden bg-white p-6 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
+      <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden bg-white p-3.5 2xs:p-5 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left: Clinical Information & CTA */}
           <div className="lg:col-span-7 space-y-5">

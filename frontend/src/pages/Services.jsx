@@ -117,7 +117,7 @@ const Services = ({ onOpenBooking }) => {
           {filteredServices.map((service) => (
             <article
               key={service.id}
-              className="group relative rounded-3xl bg-white border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+              className="group relative rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
               <div>
                 {/* Pure Photography Banner */}
@@ -134,7 +134,7 @@ const Services = ({ onOpenBooking }) => {
                 </div>
 
                 {/* Body */}
-                <div className="p-6 space-y-4 text-left">
+                <div className="p-4 2xs:p-5 sm:p-6 space-y-4 text-left">
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-primary">
                       {service.category[lang]}

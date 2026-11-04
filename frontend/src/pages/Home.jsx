@@ -99,7 +99,7 @@ const HeroSection = ({ onOpenBooking }) => {
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-2 sm:mt-4 p-5 sm:p-7 lg:p-8">
+    <section className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-1.5 2xs:mt-2 sm:mt-4 p-3.5 2xs:p-5 sm:p-7 lg:p-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
         {/* Left Editorial Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-4 text-left">
@@ -242,7 +242,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
           return (
             <article
               key={s.id}
-              className="group bg-white rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              className="group bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
             >
               <div>
                 {/* Pure Crisp Studio Photography */}
@@ -259,7 +259,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                 </div>
 
                 {/* Content Body */}
-                <div className="p-5 sm:p-6 space-y-3 text-left">
+                <div className="p-4 2xs:p-5 sm:p-6 space-y-3 text-left">
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-[10.5px] font-bold uppercase tracking-wider text-primary">
                       {meta.kicker[lang]}

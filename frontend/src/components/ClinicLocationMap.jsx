@@ -42,9 +42,9 @@ const ClinicLocationMap = ({ compact = false }) => {
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch bg-white rounded-3xl p-5 sm:p-7 border border-amber-200 shadow-luxury">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch bg-white rounded-2xl sm:rounded-3xl p-3 2xs:p-4 sm:p-7 border border-amber-200 shadow-luxury">
         {/* Left Info Column (5 cols) */}
-        <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#1A202C] text-white space-y-6">
+        <div className="lg:col-span-5 flex flex-col justify-between p-4 2xs:p-5 sm:p-8 rounded-xl sm:rounded-2xl bg-[#1A202C] text-white space-y-5 sm:space-y-6">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white/95 border border-white/15 text-[11px] font-medium tracking-wide shadow-xs">
               <IconLocationPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />

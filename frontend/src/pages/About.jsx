@@ -155,7 +155,7 @@ const About = ({ onOpenBooking }) => {
       </nav>
 
       {/* Doctor Bio Editorial Header — Tight & Balanced */}
-      <div className="relative z-10 overflow-hidden bg-white rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center p-4 2xs:p-5 sm:p-7 lg:p-8">
+      <div className="relative z-10 overflow-hidden bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-center p-3.5 2xs:p-5 sm:p-7 lg:p-8">
         <div className="lg:col-span-7 space-y-4 text-left">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
@@ -236,7 +236,7 @@ const About = ({ onOpenBooking }) => {
       </div>
 
       {/* Career Timeline Section */}
-      <section className="relative z-10 bg-white/95 backdrop-blur-sm rounded-3xl border border-amber-300/80 shadow-luxury p-6 sm:p-10 space-y-8">
+      <section className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-amber-300/80 shadow-luxury p-4 2xs:p-6 sm:p-10 space-y-6 sm:space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide bg-primary/10 text-primary border border-primary/25 shadow-xs">
             <IconGraduationCap className="w-3.5 h-3.5 text-primary" />
@@ -247,10 +247,10 @@ const About = ({ onOpenBooking }) => {
           </h2>
         </div>
 
-        <div className="relative border-l-2 border-primary/40 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-8">
+        <div className="relative border-l-2 border-primary/40 ml-2 2xs:ml-4 sm:ml-8 pl-4 2xs:pl-6 sm:pl-8 space-y-6 sm:space-y-8">
           {timeline.map((item, idx) => (
             <div key={idx} className="relative group">
-              <span className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform" />
+              <span className="absolute -left-[23px] 2xs:-left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform" />
               <div className="space-y-1.5 bg-amber-50/50 p-5 rounded-2xl border border-amber-200 hover:bg-white hover:shadow-md hover:border-amber-300 transition-all">
                 <span className="text-xs font-bold text-primary tracking-wider uppercase">
                   {item.year[lang]}
