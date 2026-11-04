@@ -232,7 +232,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                             ? "Направления — 100% Безболезненно"
                             : "Clinical Specialties — 100% Painless"}
                         </p>
-                        <span className="text-[10px] font-bold text-slate-400">Andijon · Eco Denta</span>
+                        <span className="text-[10px] font-bold text-slate-400">Andijon · Muqimiy 35</span>
                       </div>
                       {/* Grid */}
                       <div className="p-3 grid grid-cols-1 gap-1.5">

@@ -330,17 +330,16 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "name": "Stomatolog Orifjon",
     "alternateName": [
       "Stomatolog Orifjon (Mansurov Orifjon)",
-      "Eco Denta Andijon",
-      "Mansurov Orifjon",
+      "Mansurov Orifjon Alimbekovich",
       "Стоматолог Орифжон",
       "Dentist Orifjon",
     ],
     "description":
       lang === "ru"
-        ? "Eco Denta — Приём Стоматолога Орифжона (Мансуров Орифжон Алимбекович). Более 20 лет практики. г. Андижан, ул. Мукими."
+        ? "Приём Стоматолога Орифжона (Мансуров Орифжон Алимбекович). Более 20 лет практики. г. Андижан, ул. Мукими 35 (Районная стоянка)."
         : lang === "en"
-        ? "Eco Denta — Practice of Dentist Orifjon (Mansurov Orifjon Alimbekovich). Over 20+ years of healthcare practice. Muqimiy St., Andijan."
-        : "Eco Denta — Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli. 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon, Muqimiy ko'chasi.",
+        ? "Practice of Dentist Orifjon (Mansurov Orifjon Alimbekovich). Over 20+ years of healthcare practice. 35 Muqimiy St. (Rayon Stoyanka), Andijan."
+        : "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli. 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon, Muqimiy ko'chasi 35 (Rayon Stoyanka).",
     "inLanguage": ["uz", "ru", "en"],
   };
 
@@ -349,7 +348,6 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@id": `${SITE_ORIGIN}/#clinic`,
     "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
     "alternateName": [
-      "Eco Denta Andijon",
       "Stomatolog Orifjon",
       "Orifjon Mansurov",
       "Mansurov Orifjon Alimbekovich",
@@ -399,7 +397,6 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
     "alternateName": [
       "Stomatolog Orifjon",
-      "Eco Denta Andijon",
       "Orifjon",
       "Mansurov Orifjon Alimbekovich",
       "Mansurov Orifbek Alimbekovich",

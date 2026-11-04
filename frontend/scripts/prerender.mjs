@@ -148,10 +148,10 @@ for (const route of routes) {
   const targetLocale = effectiveLang === "ru" ? "ru_RU" : effectiveLang === "en" ? "en_US" : "uz_UZ";
   const siteName =
     effectiveLang === "ru"
-      ? "Eco Denta — Стоматолог Орифжон (Андижан)"
+      ? "Стоматолог Орифжон (Андижан)"
       : effectiveLang === "en"
-      ? "Eco Denta — Dentist Orifjon (Andijan)"
-      : "Eco Denta — Stomatolog Orifjon (Andijon)";
+      ? "Dentist Orifjon (Andijan)"
+      : "Stomatolog Orifjon (Andijon)";
 
   page = setMetaProperty(page, "og:locale", targetLocale);
   page = setMetaProperty(page, "og:site_name", siteName);

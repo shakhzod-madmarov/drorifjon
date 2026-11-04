@@ -1,10 +1,10 @@
 {
-  "name": "Eco Denta — Stomatolog Orifjon",
-  "short_name": "Eco Denta",
+  "name": "Stomatolog Orifjon — Zamonaviy Stomatologiya",
+  "short_name": "Stomatolog Orifjon",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFDF9",
-  "theme_color": "#FF9D50",
+  "background_color": "#F8FAFB",
+  "theme_color": "#0C6E5A",
   "icons": [
     {
       "src": "/icon-192.png",

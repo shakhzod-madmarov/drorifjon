@@ -25,9 +25,9 @@ export const ROUTES = [
     priority: "1.0",
     image: {
       src: "public/dr_orifjon_og.jpg",
-      title: "Eco Denta — Stomatolog Orifjon (Andijon)",
+      title: "Stomatolog Orifjon (Mansurov Orifjon) — Andijon",
       caption:
-        "Eco Denta — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20+ yillik tibbiyot tajribasiga ega vrach stomatolog Mansurov Orifjon Alimbekovich",
+        "Stomatolog Orifjon — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20+ yillik tibbiyot tajribasiga ega vrach stomatolog Mansurov Orifjon Alimbekovich",
     },
   },
   {
@@ -36,7 +36,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/clinic_room.webp",
-      title: "Eco Denta — Stomatologik Xizmatlar Katalogi",
+      title: "Stomatologik Xizmatlar Katalogi — Stomatolog Orifjon",
       caption:
         "Dental implant, breketlar, sirkon karonkalar, vinirlar, pratezlar, elaynerlar, oqartirish va og'riqsiz davolash",
     },
@@ -47,7 +47,7 @@ export const ROUTES = [
     priority: "0.9",
     image: {
       src: "src/assets/hero_smile.webp",
-      title: "Eco Denta — Stomatolog Orifjon Haqida (20+ Yillik Tajriba)",
+      title: "Stomatolog Orifjon Haqida (20+ Yillik Tajriba)",
       caption:
         "Andijon Tibbiyot kolleji (2001-2004) va O'sh Davlat Universiteti (2017-2022) bitiruvchisi",
     },

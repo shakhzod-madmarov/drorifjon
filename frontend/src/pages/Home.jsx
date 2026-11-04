@@ -49,7 +49,6 @@ const HeroSection = ({ onOpenBooking }) => {
       s3n: "100%",
       s3l: "Og'riqsiz kafolat",
       open: "Dushanba – Shanba · 08:30–16:30",
-      tag: "MegaGen Sertifikat · 2025",
     },
     ru: {
       eyebrow: "СТОМАТОЛОГ ОРИФЖОН · АНДИЖАН · 100% БЕЗ БОЛИ",
@@ -66,7 +65,6 @@ const HeroSection = ({ onOpenBooking }) => {
       s3n: "100%",
       s3l: "Без боли",
       open: "Пн–Сб · 08:30–16:30",
-      tag: "Сертификат MegaGen · 2025",
     },
     en: {
       eyebrow: "DENTIST ORIFJON · ANDIJAN · 100% PAINLESS",
@@ -83,7 +81,6 @@ const HeroSection = ({ onOpenBooking }) => {
       s3n: "100%",
       s3l: "Pain-Free Guarantee",
       open: "Mon–Sat · 08:30–16:30",
-      tag: "MegaGen Certificate · 2025",
     },
   };
   const t = T[lang] || T.uz;
@@ -227,7 +224,7 @@ const HeroSection = ({ onOpenBooking }) => {
                   <source srcSet="/dr_orifjon_portrait_pro.webp" type="image/webp" />
                   <img
                     src="/doctor_orifjon.jpg"
-                    alt="Stomatolog Orifjon — Eco Denta Andijon"
+                    alt="Stomatolog Orifjon (Mansurov Orifjon) — Andijon"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     width={480}
                     height={640}
@@ -249,50 +246,6 @@ const HeroSection = ({ onOpenBooking }) => {
                   </p>
                   <p className="text-teal-300 text-xs font-semibold mt-0.5">
                     Vrach Stomatolog-Implantolog · Andijon
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating cert badge */}
-              <div className="absolute -top-3 -right-3 sm:-right-4 bg-white rounded-2xl shadow-xl border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 animate-float z-20">
-                <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center shrink-0 shadow-xs">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </span>
-                <div className="text-left">
-                  <p className="text-[10px] font-black text-slate-900 leading-tight">{t.tag}</p>
-                  <p className="text-[9px] text-slate-500">MegaGen Implant Co.</p>
-                </div>
-              </div>
-
-              {/* Floating sterile badge */}
-              <div className="absolute -bottom-3 -left-3 sm:-left-4 bg-white rounded-2xl shadow-xl border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 animate-float animation-delay-200 z-20">
-                <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shrink-0 shadow-xs">
-                  <svg
-                    className="w-4 h-4 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </span>
-                <div className="text-left">
-                  <p className="text-[10px] font-black text-slate-900 leading-tight">
-                    100% {lang === "uz" ? "Steril" : lang === "ru" ? "Стерильно" : "Sterile"}
-                  </p>
-                  <p className="text-[9px] text-slate-500">
-                    {lang === "uz"
-                      ? "Anti-SPID/Gepatit"
-                      : lang === "ru"
-                      ? "Анти-ВИЧ/Гепатит"
-                      : "Anti-HIV/Hepatitis"}
                   </p>
                 </div>
               </div>
