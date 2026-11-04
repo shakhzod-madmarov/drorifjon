@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { DOCTOR_INFO } from "../constants/doctor";
 import { PRIMARY_CLINIC } from "../constants/clinics";
@@ -15,6 +15,7 @@ const ClinicLocationMap = ({ compact = false }) => {
   const { lang } = useLanguage();
   const c = PRIMARY_CLINIC;
   const hours = useClinicHours(lang);
+  const [mapProvider, setMapProvider] = useState("yandex"); // "yandex" | "google"
 
   return (
     <section
@@ -127,9 +128,34 @@ const ClinicLocationMap = ({ compact = false }) => {
         <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl overflow-hidden bg-teal-50/50 border border-teal-200 p-4 sm:p-6 space-y-4">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80 text-[11px] font-medium tracking-wide shadow-2xs">
-                <span>{lang === "uz" ? "Qabul vaqti: Dushanba – Shanba" : lang === "ru" ? "Время приёма: Пн – Сб" : "Hours: Monday – Saturday"}</span>
-              </span>
+              {/* Map Provider Switcher Tabs (Yandex / Google) */}
+              <div className="inline-flex items-center bg-slate-200/80 rounded-xl p-1 text-xs font-bold shadow-inner">
+                <button
+                  type="button"
+                  onClick={() => setMapProvider("yandex")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+                    mapProvider === "yandex"
+                      ? "bg-white text-primary shadow-xs"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
+                  <span>Yandex Xarita</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMapProvider("google")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+                    mapProvider === "google"
+                      ? "bg-white text-primary shadow-xs"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
+                  <span>Google Maps</span>
+                </button>
+              </div>
+
               <span className="text-xs font-medium text-slate-500">
                 {c.shortAddress[lang]}
               </span>
@@ -146,45 +172,60 @@ const ClinicLocationMap = ({ compact = false }) => {
 
           {/* Interactive Map Iframe */}
           <div className="w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-teal-200/80 shadow-xs relative bg-slate-100">
-            <iframe
-              src="https://yandex.uz/map-widget/v1/?ll=72.344247%2C40.782064&z=14"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen={true}
-              loading="lazy"
-              title="Stomatolog Orifjon Joylashuvi"
-              className="w-full h-full"
-            />
+            {mapProvider === "yandex" ? (
+              <iframe
+                src={c.maps.yandexEmbed}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen={true}
+                loading="lazy"
+                title="Stomatolog Orifjon Yandex Joylashuvi"
+                className="w-full h-full"
+              />
+            ) : (
+              <iframe
+                src={c.maps.googleEmbed}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen={true}
+                loading="lazy"
+                title="Stomatolog Orifjon Google Maps Joylashuvi"
+                className="w-full h-full"
+              />
+            )}
           </div>
 
           {/* Direct Map Action Buttons (Google + Yandex + Route) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
             <a
-              href={c.maps.googleFull}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all"
-            >
-              <span>Google Maps ↗</span>
-            </a>
-
-            <a
               href={c.maps.yandex}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-semibold shadow-2xs hover:border-primary/50 transition-all"
             >
+              <span className="font-bold text-red-500">Я</span>
               <span>{lang === "uz" ? "Yandex Xarita" : lang === "ru" ? "Яндекс Карты" : "Yandex Maps"} ↗</span>
             </a>
 
             <a
-              href={`https://yandex.uz/maps/?rtext=~${c.coordinates.lat},${c.coordinates.lng}&rtt=auto`}
+              href={c.maps.googleFull}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-semibold shadow-2xs hover:border-primary/50 transition-all"
+            >
+              <span className="font-bold text-blue-500">G</span>
+              <span>Google Maps ↗</span>
+            </a>
+
+            <a
+              href={c.maps.yandexRouteUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold shadow-xs hover:shadow-md transition-all"
             >
-              <span>{lang === "uz" ? "Marshrut Olish" : lang === "ru" ? "Маршрут" : "Directions"} ↗</span>
+              <span>{lang === "uz" ? "Marshrut (Yandex Nav)" : lang === "ru" ? "Маршрут (Навигатор)" : "Directions"} ↗</span>
             </a>
           </div>
         </div>
