@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, '..', 'public');
 
 // Review links for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)
-const GOOGLE_URL = 'https://www.google.com/maps/search/?api=1&query=40.759335,72.358407';
-const YANDEX_URL = 'https://yandex.uz/maps/?whatshere[point]=72.358407,40.759335&whatshere[zoom]=17';
+const GOOGLE_URL = 'https://www.google.com/maps/search/?api=1&query=40.759178,72.354302';
+const YANDEX_URL = 'https://yandex.uz/maps/?whatshere[point]=72.354302,40.759178&whatshere[zoom]=18';
 
 const BRAND_COLOR = '#0C6E5A'; // Stomatolog Orifjon's signature medical teal
 
