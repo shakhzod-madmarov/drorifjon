@@ -9,9 +9,9 @@ import {
 
 /**
  * ClinicEquipmentShowcase:
- * Simple classic medical UI/UX matching the rest of the website.
- * Features Stomatolog Orifjon's authentic operatory,
- * Shining 3D Intraoral Scanner, and Philips Zoom! WhiteSpeed system.
+ * Authentic clinical equipment and sterilization suite at Eco Denta.
+ * Features Dentist Orifjon's genuine operatory, hospital-grade Class-B
+ * autoclave sterilization station, and original MegaGen implant systems.
  */
 export default function ClinicEquipmentShowcase() {
   const { lang } = useLanguage();
@@ -19,172 +19,172 @@ export default function ClinicEquipmentShowcase() {
 
   const T = {
     uz: {
-      badge: "ZAMONAVIY TEXNOLOGIYALAR VA KLINIKA",
-      title: "Raqamli Stomatologiya va Premium Jihozlar",
+      badge: "ZAMONAVIY KLINIKA VA STERILIZATSIYA",
+      title: "Zamonaviy Jihozlar va Mutlaq Steril Muhit",
       subtitle:
-        "Stomatolog Orifjon qabulxonasida qo'llaniladigan yuqori texnologiyali apparatlar — pastasiz 3D skanerlash, dunyo tan olgan Philips Zoom! oqartirishi va mutlaq steril muhit.",
+        "Eco Denta stomatologiya xonasida qo'llaniladigan ergonomik uskunalar, 100% Anti-SPID/Anti-Gepatit avtoklav sterilizatsiyasi va original MegaGen biotitan tizimlari.",
       viewPhoto: "Suratni ko'rish",
       items: [
         {
-          id: "scanner",
-          category: "3D Raqamli Skaner",
-          warrantyBadge: "Mikron Aniq",
-          pill: "Pastasiz · 3D Skan",
-          icon: <IconSparkleStar className="w-6 h-6 text-brandCyan" />,
-          title: "Shining 3D IntraoralScan 3D Skaneri",
-          desc: "Bemorlarda ko'ngil aynishini chaqiruvchi noqulay silikon va gips 'slepok' (pasta) massalarisiz, 2 daqiqada butun jag'ni rangli 3D formatda optik skanerlash.",
-          image: assets.scanner_3d,
-          specs: [
-            "Mikron darajasidagi o'ta yuqori CAD/CAM aniqligi",
-            "Sirkon karonka, E-max vinir va elaynerlar uchun ideal zichlik",
-            "Bemor o'z jag'ining 3D modelini darhol ekranda ko'ra oladi",
-            "Slepok pastasiz — 100% qusish refleksisiz va qulay",
-          ],
-        },
-        {
-          id: "zoom",
-          category: "Philips Zoom! 4",
-          warrantyBadge: "AQSH Texnologiyasi",
-          pill: "6–8 Ton Oqartirish",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
-          title: "Philips Zoom! WhiteSpeed Oqartirish",
-          desc: "Dunyodagi eng nufuzli va xavfsiz fototish oqartirish stansiyasi. 45 daqiqada tishlarni 6–8 tongacha oqartiradi, sovuq LED nuri esa emalga ziyon yetkazmaydi.",
-          image: assets.philips_zoom,
-          specs: [
-            "1 seansda (45 daqiqa) 6–8 tongacha oqarish kafolati",
-            "Emal emirilishiga 0% ziyon (Cold LED sovuq nuri)",
-            "Relief ACP maxsus geli yordamida sezuvchanliksiz natija",
-            "Xalqaro xavfsizlik va uzoq muddatli oqlik sertifikati",
-          ],
-        },
-        {
-          id: "room",
+          id: "operatory",
           category: "Eco Denta Operatsiyasi",
-          warrantyBadge: "Anti-SPID/Gepatit",
-          pill: "100% Steril Muhit",
-          icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Eco Denta — Stomatolog Orifjon Qabulxonasi",
-          desc: "Eco Denta operatsion kabineti: zamonaviy stomatologik qurilma, avtoklav sterilizatsiya stansiyasi, marmar qoplamali devorlar, soat va ko'z o'ngingizda ochiladigan individual steril kraft-paketlar.",
+          warrantyBadge: "Ergonomik & Qulay",
+          pill: "Zamonaviy Kreslo",
+          icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
+          title: "Eco Denta Operatsion Xonasi va Qulay Bemor Kreslosi",
+          desc: "Zamonaviy stomatologik qurilma, mikro-motorli sokin asboblar va sensorli soyasiz LED chiroq. Bemor uchun qulay anatomiya davolash jarayonini xotirjam va charchoqsiz o'tishini ta'minlaydi.",
           image: assets.clinic_room,
           specs: [
-            "Zamonaviy ergonomik stomatologik unit va qulay bemor kreslosi",
-            "100% Anti-SPID / Anti-Gepatit avtoklav sterilizatsiya tizimi",
-            "MegaGen xalqaro sertifikatlangan implantologiya asboblari",
+            "Zamonaviy ergonomik stomatologik kreslo va yumshoq bosh suyanchig'i",
+            "Sensorli soyasiz LED operatsion yoritgich",
+            "Sokin va tebranishsiz zamonaviy mikromotor va turbinalar",
             "Eco Denta yorug'lik belgisi va toza sanitar muhit",
+          ],
+        },
+        {
+          id: "sterilization",
+          category: "Sterilizatsiya Markazi",
+          warrantyBadge: "100% Xavfsizlik",
+          pill: "Anti-SPID & Gepatit",
+          icon: <IconShieldCheck className="w-6 h-6 text-emerald-500" />,
+          title: "B-Sinf Avtoklav va Mutlaq Steril Xavfsizlik Muhiti",
+          desc: "Har bir bemor uchun asboblar ko'z o'ngingizda ochiladigan individual kraft-paketlarda saqlanadi. B-sinf avtoklav bosim ostida bug'lash, ultrabinafsha (UV) kameralar va kimyoviy nazorat orqali 100% mikrob va viruslardan himoyalangan.",
+          image: assets.clinic_sterilization,
+          specs: [
+            "100% Anti-SPID va Anti-Gepatit xalqaro qat'iy standartlari",
+            "Ko'z o'ngingizda ochiladigan muhrlangan steril kraft-paketlar",
+            "Ultrabinafsha (UV) nurli germetik asboblar saqlash kamerasi",
+            "Har bir avtoklav siklida rang o'zgartiruvchi kimyoviy nazorat testi",
+          ],
+        },
+        {
+          id: "materials",
+          category: "Original Materiallar",
+          warrantyBadge: "MegaGen & Kulzer",
+          pill: "Sertifikatlangan",
+          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          title: "MegaGen Biotitan Implantlari va Kulzer Nanokompozitlari",
+          desc: "Janubiy Koreyaning rasmiy MegaGen biotitan implantlari hamda Germaniyaning Kulzer Charisma va DenFil nano-gibrid restavratsiya materiallari. Italiyaning Orablok anesteziyasi orqali 100% og'riqsiz muolaja.",
+          image: assets.treatment_implant,
+          specs: [
+            "MegaGen rasmiy biotitan implantologik xirurgik protokollari",
+            "Kulzer Charisma (Germaniya) nano-gibrid emal rangidagi plombalar",
+            "Orablok (Italiya) yuqori samarali 100% og'riqsiz anesteziya",
+            "Uzoq yillik klinik barqarorlik va estetik kafolat",
           ],
         },
       ],
     },
     ru: {
-      badge: "СОВРЕМЕННЫЕ ТЕХНОЛОГИИ И КЛИНИКА",
-      title: "Цифровая Стоматология и Премиальное Оснащение",
+      badge: "СОВРЕМЕННАЯ КЛИНИКА И СТЕРИЛИЗАЦИЯ",
+      title: "Современное Оснащение и Абсолютная Стерильность",
       subtitle:
-        "Высокотехнологичное оборудование в кабинете Стоматолога Орифжона — 3D-сканирование без слепков, легендарное отбеливание Philips Zoom! и абсолютная стерильность.",
+        "Эргономичное оборудование в кабинете Eco Denta, многоступенчатая стерилизация по стандартам Анти-СПИД / Анти-Гепатит и оригинальные биотитановые системы MegaGen.",
       viewPhoto: "Смотреть фото",
       items: [
         {
-          id: "scanner",
-          category: "3D-Сканирование",
-          warrantyBadge: "Высокая точность",
-          pill: "Без слепков",
-          icon: <IconSparkleStar className="w-6 h-6 text-brandCyan" />,
-          title: "Интраоральный 3D-Сканер Shining 3D",
-          desc: "Забудьте о неприятных слепочных массах и рвотном рефлексе. Оптический 3D-сканер за 2 минуты создаёт сверхточную трёхмерную цифровую модель зубов и челюсти.",
-          image: assets.scanner_3d,
-          specs: [
-            "Микронная точность для моделирования коронок CAD/CAM",
-            "Идеальная посадка циркония, виниров и прозрачных элайнеров",
-            "Мгновенный просмотр 3D-модели на мониторе в присутствии пациента",
-            "100% комфорт без слепочной массы и паст",
-          ],
-        },
-        {
-          id: "zoom",
-          category: "Philips Zoom! 4",
-          warrantyBadge: "Стандарт США",
-          pill: "Осветление 6–8 тонов",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
-          title: "Philips Zoom! WhiteSpeed (Zoom 4)",
-          desc: "Золотой мировой стандарт клинического отбеливания зубов. Осветляет эмаль на 6–8 тонов всего за 45 минут. Холодный LED-свет абсолютно безопасен для эмали и дентина.",
-          image: assets.philips_zoom,
-          specs: [
-            "Осветление на 6–8 тонов за одну процедуру (45 мин)",
-            "Холодный свет LED не нагревает эмаль и пульпу (0% вреда)",
-            "Защитный гель Relief ACP предотвращает чувствительность",
-            "Международная сертификация безопасности и долговечный результат",
-          ],
-        },
-        {
-          id: "room",
+          id: "operatory",
           category: "Кабинет Eco Denta",
-          warrantyBadge: "Анти-СПИД / Гепатит",
-          pill: "100% Стерильность",
-          icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Eco Denta — Кабинет Стоматолога Орифжона",
-          desc: "Кабинет Eco Denta: современная стоматологическая установка, автоклав и станция стерилизации, мраморная отделка и индивидуальные стерильные крафт-пакеты, вскрываемые при вас.",
+          warrantyBadge: "Эргономика и Комфорт",
+          pill: "Современное Кресло",
+          icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
+          title: "Операционный Кабинет Eco Denta и Анатомическое Кресло",
+          desc: "Современная стоматологическая установка, бесшумные микромоторы и бестеневой сенсорный LED-светильник. Анатомическое кресло обеспечивает максимальный комфорт и расслабление во время процедур.",
           image: assets.clinic_room,
           specs: [
-            "Современная стоматологическая установка с комфортным анатомическим креслом",
-            "100% стерилизация инструментов (автоклав, протоколы Анти-СПИД / Гепатит)",
-            "Сертифицированные инструменты имплантологии MegaGen",
-            "Светящееся фирменное панно Eco Denta и безупречная санитария",
+            "Анатомическое кресло с мягким подголовником и плавным ходом",
+            "Сенсорный бестеневой хирургический LED-светильник",
+            "Бесшумные высокоточные микромоторы и турбины без вибраций",
+            "Фирменное световое панно Eco Denta и безупречная санитария",
+          ],
+        },
+        {
+          id: "sterilization",
+          category: "Центр Стерилизации",
+          warrantyBadge: "100% Безопасность",
+          pill: "Анти-СПИД / Гепатит",
+          icon: <IconShieldCheck className="w-6 h-6 text-emerald-500" />,
+          title: "Автоклав B-Класса и Полная Стерилизационная Безопасность",
+          desc: "Индивидуальные крафт-пакеты вскрываются строго при пациенте. Паровой автоклав класса B, ультрафиолетовые камеры хранения и строгие индикаторы контроля обеспечивают 100% защиту от любых инфекций.",
+          image: assets.clinic_sterilization,
+          specs: [
+            "Строгое соблюдение стандартов Анти-СПИД и Анти-Гепатит",
+            "Стерильные запечатанные крафт-пакеты, вскрываемые при пациенте",
+            "Ультрафиолетовые (УФ) бактерицидные камеры хранения инструментов",
+            "Многоступенчатый химический и термодинамический контроль каждого цикла",
+          ],
+        },
+        {
+          id: "materials",
+          category: "Оригинальные Материалы",
+          warrantyBadge: "MegaGen и Kulzer",
+          pill: "Сертифицировано",
+          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          title: "Биотитановые Импланты MegaGen и Нанокомпозиты Kulzer Charisma",
+          desc: "Оригинальные южнокорейские биотитановые импланты MegaGen и немецкие наногибридные реставрационные композиты Kulzer Charisma, DenFil. Итальянский анестетик Ораблок для лечения без боли.",
+          image: assets.treatment_implant,
+          specs: [
+            "Официальные протоколы имплантации MegaGen (Южная Корея)",
+            "Немецкие наногибридные пломбировочные материалы Kulzer Charisma",
+            "Итальянская премиальная анестезия Ораблок (100% без боли)",
+            "Долговечная клиническая стабильность и естественная эстетика",
           ],
         },
       ],
     },
     en: {
-      badge: "ADVANCED TECHNOLOGY & CLINIC TOUR",
-      title: "Digital Dentistry & State-of-the-Art Equipment",
+      badge: "MODERN CLINIC & STERILIZATION",
+      title: "State-of-the-Art Operatory & Absolute Sterility",
       subtitle:
-        "Cutting-edge clinical hardware in Dentist Orifjon's operatory — impression-free optical 3D scanning, world-renowned Philips Zoom! whitening, and hospital-grade sterility.",
+        "Ergonomic clinical equipment in the Eco Denta operatory, hospital-grade Class-B autoclave infection control, and authentic MegaGen biotitanium implant systems.",
       viewPhoto: "Inspect photo",
       items: [
         {
-          id: "scanner",
-          category: "3D Optical Scanner",
-          warrantyBadge: "Micron Precision",
-          pill: "Impression-Free",
-          icon: <IconSparkleStar className="w-6 h-6 text-brandCyan" />,
-          title: "Shining 3D Intraoral Optical Scanner",
-          desc: "Eliminates gagging and messy impression trays. In just 2 minutes, high-speed optical scanning captures your full dental arch in true-color 3D with micron precision.",
-          image: assets.scanner_3d,
-          specs: [
-            "Micron-level CAD/CAM accuracy for digital crown milling",
-            "Flawless fit for monolithic zirconia, E-max veneers & aligners",
-            "Instant 3D arch visualization directly on the digital monitor",
-            "Zero messy silicone paste — effortless, comfortable experience",
-          ],
-        },
-        {
-          id: "zoom",
-          category: "Philips Zoom! 4",
-          warrantyBadge: "US Technology",
-          pill: "6–8 Shades Whiter",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
-          title: "Philips Zoom! WhiteSpeed (Zoom 4)",
-          desc: "The world's most prestigious clinical whitening technology. Brightens teeth by 6–8 shades in a 45-minute appointment with cold LED light that protects enamel and dental pulp.",
-          image: assets.philips_zoom,
-          specs: [
-            "6–8 shades brighter in a single 45-minute treatment",
-            "Cold LED photo-activation prevents thermal enamel stress",
-            "Relief ACP formula protects against post-treatment sensitivity",
-            "Internationally certified for safety and enamel longevity",
-          ],
-        },
-        {
-          id: "room",
+          id: "operatory",
           category: "Eco Denta Operatory",
-          warrantyBadge: "Hospital-Grade",
-          pill: "100% Sterile",
-          icon: <IconShieldCheck className="w-6 h-6 text-primary" />,
-          title: "Eco Denta — Dentist Orifjon's Operatory",
-          desc: "Authentic Eco Denta dental operatory: modern clinical unit, certified autoclave sterilizer, marble interior, and sterile individual kraft-sealed instruments opened directly before your procedure.",
+          warrantyBadge: "Ergonomic & Gentle",
+          pill: "Modern Dental Unit",
+          icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
+          title: "Eco Denta Dental Operatory & Ergonomic Patient Unit",
+          desc: "Advanced dental operatory unit with quiet precision micromotors and shadowless sensor LED illumination. Ergonomic patient contouring guarantees a calm, stress-free clinical experience.",
           image: assets.clinic_room,
           specs: [
-            "Ergonomic modern dental unit and patient contour chair",
-            "100% Anti-HIV / Anti-Hepatitis autoclave instrument sterilization",
-            "MegaGen certified surgical and implant instrumentation",
-            "Eco Denta illuminated signage and clinical hygiene",
+            "Ergonomic contour dental chair with adaptive headrest",
+            "Touchless shadowless surgical LED clinical illumination",
+            "Whisper-quiet vibration-free high-precision turbines",
+            "Illuminated Eco Denta branding & pristine operatory interior",
+          ],
+        },
+        {
+          id: "sterilization",
+          category: "Sterilization Suite",
+          warrantyBadge: "Hospital-Grade",
+          pill: "100% Sterile",
+          icon: <IconShieldCheck className="w-6 h-6 text-emerald-500" />,
+          title: "Class-B Autoclave & 100% Clinical Sterilization Suite",
+          desc: "Individual kraft pouches sealed and opened exclusively in front of each patient. High-pressure Class-B steam autoclaving, UV storage cabinets, and chemical sterility indicators guarantee total infection defense.",
+          image: assets.clinic_sterilization,
+          specs: [
+            "Full compliance with international Anti-HIV & Anti-Hepatitis protocols",
+            "Hermetically sealed individual kraft pouches opened before you",
+            "Ultraviolet (UV) germicidal instrument storage chambers",
+            "Multi-stage chemical and thermodynamic cycle validation indicators",
+          ],
+        },
+        {
+          id: "materials",
+          category: "Certified Materials",
+          warrantyBadge: "MegaGen & Kulzer",
+          pill: "Certified Genuine",
+          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          title: "MegaGen Biotitanium Implants & Kulzer Charisma Nanocomposites",
+          desc: "Genuine South Korean MegaGen biocompatible titanium implants and premium German Kulzer Charisma & DenFil nanohybrid composites. Italian Orabloc anaesthesia for completely painless dental work.",
+          image: assets.treatment_implant,
+          specs: [
+            "Official MegaGen surgical implantation protocols (South Korea)",
+            "German Kulzer Charisma nanohybrid enamel-matching restorations",
+            "Italian Orabloc premium localized anaesthesia (zero pain)",
+            "Decade-long clinical bone stability and natural aesthetic smiles",
           ],
         },
       ],
@@ -197,7 +197,7 @@ export default function ClinicEquipmentShowcase() {
     <section aria-labelledby="equipment-heading" className="py-12 sm:py-16 space-y-8">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2">
-        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-primary/5 text-primary border border-primary/20 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-primary/10 text-primary border border-primary/25 shadow-sm">
           <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
           <span>{t.badge}</span>
         </span>
@@ -229,7 +229,7 @@ export default function ClinicEquipmentShowcase() {
                   height={400}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 {/* Visual Depth Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
@@ -240,7 +240,7 @@ export default function ClinicEquipmentShowcase() {
                 <span className="w-12 h-12 rounded-2xl bg-white shadow-xl border-2 border-amber-200/90 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                   {item.icon}
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/5 border border-primary/20 px-2.5 py-1 rounded-full shadow-2xs mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full shadow-sm mb-1">
                   {item.pill}
                 </span>
               </div>

@@ -250,7 +250,7 @@ const guides = [
     tabBadge: "Oq Parhez",
     recoveryTime: { uz: "Dastlabki 48 soatlik «Oq Parhez»", ru: "48 часов «Белая Диета»", en: "First 48-hour White Diet" },
     tagPill: { uz: "Maksimal Oqlik", ru: "Белоснежная Эмаль", en: "Maximum Whiteness" },
-    badge: { uz: "Philips Zoom & Estetik Gigiyena", ru: "Отбеливание Philips Zoom", en: "Philips Zoom Aesthetics" },
+    badge: { uz: "Estetik Oqartirish & Gigiyena", ru: "Профессиональное Отбеливание", en: "Professional Whitening" },
     title: {
       uz: "Tish Oqartirishdan Keyingi «Oq Parhez» (White Diet)",
       ru: "«Белая диета» После Профессионального Отбеливания",

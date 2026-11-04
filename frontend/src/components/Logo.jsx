@@ -1,59 +1,53 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { getDoctorBrandName } from "../constants/doctor";
 
-const Logo = ({ className = "h-8 sm:h-9", inverted = false }) => {
+const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
   const { lang } = useLanguage();
-  const brandTitle = getDoctorBrandName(lang);
 
-  const subtitle =
+  const doctorLabel =
     lang === "ru"
-      ? "Современная Стоматология"
+      ? "Стоматолог Орифжон"
       : lang === "en"
-      ? "Modern Dental Practice"
-      : "Zamonaviy Stomatologiya";
+      ? "Dentist Orifjon"
+      : "Stomatolog Orifjon";
 
   const altText =
     lang === "ru"
-      ? "Стоматолог Орифжон — Врач-Стоматолог"
+      ? "Eco Denta — Стоматолог Орифжон (Андижан)"
       : lang === "en"
-      ? "Dentist Orifjon — Dental Surgeon"
-      : "Stomatolog Orifjon — Vrach Stomatolog";
-
-  const words = brandTitle.split(" ");
-  const firstWord = words[0];
-  const secondWord = words.slice(1).join(" ");
+      ? "Eco Denta — Dentist Orifjon (Andijan)"
+      : "Eco Denta — Stomatolog Orifjon (Andijon)";
 
   return (
     <div className="inline-flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 select-none group min-w-0">
-      {/* Pristine Logo Emblem with 0 Background */}
+      {/* Pristine Logo Emblem */}
       <div className="relative shrink-0 transition-transform duration-300 group-hover:scale-105">
         <img
           src="/logo_icon.png"
           alt={altText}
-          width={36}
-          height={36}
+          width={40}
+          height={40}
           decoding="async"
-          className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-3 drop-shadow-sm`}
+          className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-2 drop-shadow-xs`}
         />
       </div>
 
-      {/* Brand Name & Subtitle Typography */}
+      {/* Brand Name Typography */}
       <div className="flex flex-col leading-none text-left min-w-0 justify-center">
         <span
-          className={`font-serif-classic text-[13px] 2xs:text-[14.5px] xs:text-[15.5px] sm:text-[17px] font-black tracking-tight truncate flex items-center gap-1 ${
-            inverted ? "text-white" : "text-[#141E28]"
+          className={`font-serif-classic text-[15px] 2xs:text-[17.5px] sm:text-[20px] font-black tracking-tight truncate flex items-center gap-1 ${
+            inverted ? "text-white" : "text-slate-900"
           }`}
         >
-          <span>{firstWord}</span>
-          <span className="text-primary font-black">{secondWord}</span>
+          <span className="font-extrabold tracking-tight">Eco</span>
+          <span className="text-primary font-black">Denta</span>
         </span>
         <span
-          className={`hidden xs:block text-[8px] sm:text-[9px] font-extrabold uppercase tracking-[0.14em] truncate mt-1 ${
-            inverted ? "text-brandCream" : "text-slate-500"
+          className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-0.5 ${
+            inverted ? "text-amber-200" : "text-slate-500"
           }`}
         >
-          {subtitle}
+          {doctorLabel}
         </span>
       </div>
     </div>

@@ -1,12 +1,13 @@
 import React, { useState, useRef, useCallback } from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { IconAward, IconCheckCircle, IconGraduationCap } from "./MedicalIcons";
+import { IconAward, IconCheckCircle, IconGraduationCap, IconShieldCheck } from "./MedicalIcons";
 import { useModalA11y } from "../hooks/useModalA11y";
 import { getA11yLabels } from "../constants/a11yLabels";
 
-const certificates = [
+const credentials = [
   {
     id: "cert-megagen-basic-2025",
+    type: "certificate",
     year: "2025",
     org: "MegaGen Uzbekistan & MegaGen Implant Co., LTD",
     badge: {
@@ -25,95 +26,57 @@ const certificates = [
       en: "Official MegaGen Uzbekistan 'Certificate of Appreciation' presented to Mansurov Orifbek for successful completion of the Basic Course of Implantation (03-08 February 2025, Lecturer Karimkulov N.A.).",
     },
     image: "/certificates/cert_megagen_basic.webp",
+    hasZoom: true,
+    verification: "MegaGen Implant Co., LTD",
   },
   {
-    id: "cert-samarkand",
-    year: "2026",
-    org: "Samarkand State Medical University & MegaGen International",
+    id: "edu-osh-university",
+    type: "degree",
+    year: "2017 – 2022",
+    org: "O'sh Davlat Universiteti (Stomatologiya Fakulteti)",
     badge: {
-      uz: "IMPLANTOLOGY & PROSTHODONTICS",
-      ru: "ИМПЛАНТОЛОГИЯ И ОРТОПЕДИЯ",
-      en: "IMPLANTOLOGY & PROSTHODONTICS",
+      uz: "OLIY AKADEMIK TA'LIM",
+      ru: "ВЫСШЕЕ МЕДИЦИНСКОЕ ОБРАЗОВАНИЕ",
+      en: "HIGHER MEDICAL DEGREE",
     },
     title: {
-      uz: "O'sh Davlat Universiteti & Xalqaro Implantologiya",
-      ru: "Ошский Государственный Университет & Международная Имплантология",
-      en: "Osh State University & Advanced Implantology",
+      uz: "Vrach-Stomatolog Mutaxassisligi Diplomi",
+      ru: "Диплом Врача-Стоматолога Высшей Квалификации",
+      en: "Doctor of Dental Medicine (DMD) Medical Diploma",
     },
     desc: {
-      uz: "O'sh Davlat Universiteti hamda zamonaviy implantologiya protokollari bo'yicha amaliy ta'lim va sertifikatlar.",
-      ru: "Диплом Ошского Государственного Университета и сертификаты по протоколам современной имплантологии.",
-      en: "Certification of dental qualifications and clinical mastery from Osh State University and implantology protocols.",
+      uz: "Stomatologiya sohasida 5 yillik to'liq oliy akademik ta'lim: terapevtik restavratsiya, ortopedik protezlash, jarrohlik protokollari va xalqaro klinik standartlar.",
+      ru: "Полный 5-летний курс профильного высшего образования: терапевтическая реставрация, ортопедия, хирургические протоколы и международные клинические стандарты.",
+      en: "Comprehensive 5-year higher academic medical degree in clinical dentistry: modern restorations, prosthetics, surgical protocols, and standards.",
     },
-    image: "/certificates/cert_samarkand.webp",
+    verification: "O'sh Davlat Universiteti",
   },
   {
-    id: "cert-protocols",
-    year: "2026",
-    org: "MegaGen For Lifetime Smiles",
+    id: "edu-andijan-college",
+    type: "foundation",
+    year: "2001 – 2004",
+    org: "Andijon Tibbiyot Kolleji",
     badge: {
-      uz: "XALQARO PRODVIJIK KURSI",
-      ru: "ПРОДВИНУТЫЙ КУРС MEGAGEN",
-      en: "ADVANCED SURGICAL PROTOCOLS",
+      uz: "FUNDAMENTAL TA'LIM",
+      ru: "БАЗОВОЕ ОБРАЗОВАНИЕ",
+      en: "FOUNDATIONAL TRAINING",
     },
     title: {
-      uz: "MegaGen Xirurgik va Ortopedik Protokollari: A dan Ya gacha",
-      ru: "Хирургические и ортопедические протоколы MegaGen от А до Я",
-      en: "MegaGen Surgical & Prosthetic Protocols from A to Z",
+      uz: "Fundamental Tibbiyot va Gigiyena Maktabi",
+      ru: "Фундаментальная Медицинская Подготовка",
+      en: "Foundational Medical Sciences & Clinic",
     },
     desc: {
-      uz: "Biotitan implantlarni o'rnatish, yuklama berish va yakuniy restavratsiya protokollari bo'yicha xalqaro amaliy kurs sertifikati.",
-      ru: "Международный сертификат продвинутого уровня по имплантологическим и ортопедическим протоколам MegaGen.",
-      en: "Advanced masterclass certificate in complete surgical and prosthetic MegaGen protocols.",
+      uz: "Fundamental tibbiyot, anatomiya, farmakologiya va antiseptika maktabi. 20 yildan ortiq uzluksiz tibbiy amaliyotning mustahkam professional poydevori.",
+      ru: "Фундаментальная медицина, анатомия, фармакология и строгие протоколы асептики. Прочный фундамент более чем 20-летней непрерывной клинической практики.",
+      en: "Medical foundations, anatomy, clinical pharmacology, and rigorous aseptic hygiene. Over two decades of dedicated continuous healthcare practice.",
     },
-    image: "/certificates/cert_protocols.webp",
-  },
-  {
-    id: "cert-navigation",
-    year: "2025",
-    org: "MegaGen International Clinical Network",
-    badge: {
-      uz: "NAVIGATSION JARROHLIK",
-      ru: "НАВИГАЦИОННАЯ ХИРУРГИЯ",
-      en: "GUIDED NAVIGATION SURGERY",
-    },
-    title: {
-      uz: "Navigatsion Jarrohlik va Suyak-Plastik Shablonlar Master-Klassi",
-      ru: "Курс по навигационной хирургии и костно-пластическим шаблонам",
-      en: "Guided Navigation Surgery & Bone Grafting Templates",
-    },
-    desc: {
-      uz: "3D kompyuter shablonlari asosida mikron aniqlikda minimal invaziv implant o'rnatish va suyak plastikasi sertifikati.",
-      ru: "Сертификат по малоинвазивной точной установке имплантатов по 3D хирургическим шаблонам.",
-      en: "Certification in computer-guided 3D navigation surgery and bone grafting template protocols.",
-    },
-    image: "/certificates/cert_navigation.webp",
-  },
-  {
-    id: "cert-seminar",
-    year: "2024",
-    org: "MegaGen Uzbekistan",
-    badge: {
-      uz: "IMPLANTATSIYA SEMINARI",
-      ru: "СЕМИНАР ПО ИМПЛАНТАЦИИ",
-      en: "SEMINAR ON IMPLANTATION",
-    },
-    title: {
-      uz: "Dental Implantologiya va Zamonaviy Xirurgiya Seminari",
-      ru: "Семинар по дентальной имплантации и хирургии",
-      en: "Specialized Seminar on Dental Implantation",
-    },
-    desc: {
-      uz: "MegaGen Uzbekistan o'quv markazida biotitan implantatsiya bo'yicha intensiv seminar diplomi.",
-      ru: "Диплом участника интенсивного семинара по дентальной имплантации MegaGen.",
-      en: "Certificate of appreciation for successful completion of clinical seminar on implantation.",
-    },
-    image: "/certificates/cert_seminar.webp",
+    verification: "20+ yillik tibbiyot staji",
   },
 ];
 
-// Single 3D Certificate Card with Cursor-Following Holographic Gold Sheen
-const Certificate3DCard = ({ cert, lang, onSelect }) => {
+// Single 3D Credential Card with Cursor-Following Holographic Sheen
+const CredentialCard = ({ item, lang, onSelect }) => {
   const cardRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0, glareX: 50, glareY: 50, active: false });
 
@@ -125,8 +88,8 @@ const Certificate3DCard = ({ cert, lang, onSelect }) => {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateY = ((x - centerX) / centerX) * 7;
-    const rotateX = -((y - centerY) / centerY) * 6;
+    const rotateY = ((x - centerX) / centerX) * 6;
+    const rotateX = -((y - centerY) / centerY) * 5;
     const glareX = (x / rect.width) * 100;
     const glareY = (y / rect.height) * 100;
 
@@ -137,26 +100,30 @@ const Certificate3DCard = ({ cert, lang, onSelect }) => {
     setTilt({ x: 0, y: 0, glareX: 50, glareY: 50, active: false });
   }, []);
 
+  const isClickable = Boolean(item.image);
+
   return (
     <div
       ref={cardRef}
-      role="button"
-      tabIndex={0}
-      aria-haspopup="dialog"
-      onClick={() => onSelect(cert)}
+      role={isClickable ? "button" : "article"}
+      tabIndex={isClickable ? 0 : undefined}
+      aria-haspopup={isClickable ? "dialog" : undefined}
+      onClick={() => isClickable && onSelect(item)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
+        if (isClickable && (e.key === "Enter" || e.key === " ")) {
           e.preventDefault();
-          onSelect(cert);
+          onSelect(item);
         }
       }}
       style={{
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: tilt.active ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
       }}
-      className="group relative bg-white rounded-3xl p-5 border border-amber-300/80 shadow-luxury hover:shadow-luxury-lg transition-all duration-300 flex flex-col justify-between cursor-pointer overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary [transform-style:preserve-3d]"
+      className={`group relative bg-white rounded-3xl p-6 border border-amber-300/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary [transform-style:preserve-3d] ${
+        isClickable ? "cursor-pointer" : "cursor-default"
+      }`}
     >
       {/* Golden metallic accent top border */}
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-600" />
@@ -166,67 +133,85 @@ const Certificate3DCard = ({ cert, lang, onSelect }) => {
         <div
           className="absolute inset-0 pointer-events-none rounded-3xl z-20"
           style={{
-            background: `radial-gradient(circle 250px at ${tilt.glareX}% ${tilt.glareY}%, rgba(253, 230, 138, 0.45), transparent 75%)`,
+            background: `radial-gradient(circle 250px at ${tilt.glareX}% ${tilt.glareY}%, rgba(253, 230, 138, 0.35), transparent 75%)`,
           }}
         />
       )}
 
       <div className="[transform-style:preserve-3d]">
-        <div className="flex items-center justify-between gap-2 mb-3 pt-1 translate-z-20">
+        <div className="flex items-center justify-between gap-2 mb-4 pt-1">
           <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/80 truncate">
-            {cert.badge[lang]}
+            {item.badge[lang]}
           </span>
-          <span className="text-[11px] font-black text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded-lg shrink-0 border border-amber-300/60 shadow-2xs">
-            {cert.year}
-          </span>
-        </div>
-
-        {/* Certificate Thumbnail Preview Frame */}
-        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 border border-amber-200/90 mb-4 group-hover:scale-[1.02] transition-transform duration-300 translate-z-30 shadow-md">
-          <img
-            src={cert.image}
-            alt={cert.title[lang]}
-            width={600}
-            height={450}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors" />
-          <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-bold border border-amber-300/30 flex items-center gap-1.5 shadow-md">
-            <svg className="w-3 h-3 text-amber-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-            <span>{lang === "uz" ? "Kattalashtirish" : lang === "ru" ? "Открыть 3D" : "Inspect"}</span>
+          <span className="text-[11px] font-black text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded-lg shrink-0 border border-amber-300/60 shadow-xs">
+            {item.year}
           </span>
         </div>
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-brandOrange mb-1 translate-z-10">
-          {cert.org}
+        {/* Card Visual: Either Real Certificate Image OR Elegant Academic Degree Plaque */}
+        {item.image ? (
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 border border-amber-200/90 mb-4 group-hover:scale-[1.02] transition-transform duration-300 shadow-md">
+            <img
+              src={item.image}
+              alt={item.title[lang]}
+              width={600}
+              height={450}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors" />
+            <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-bold border border-amber-300/30 flex items-center gap-1.5 shadow-md">
+              <svg className="w-3 h-3 text-amber-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>{lang === "uz" ? "Kattalashtirish" : lang === "ru" ? "Открыть 3D" : "Inspect"}</span>
+            </span>
+          </div>
+        ) : (
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50/50 to-amber-100/50 border border-amber-200/90 mb-4 flex flex-col items-center justify-center p-6 text-center shadow-inner group-hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary to-brandOrange text-white flex items-center justify-center mb-3 shadow-md border-2 border-white">
+              {item.type === "degree" ? (
+                <IconGraduationCap className="w-9 h-9 text-white" />
+              ) : (
+                <IconShieldCheck className="w-9 h-9 text-white" />
+              )}
+            </div>
+            <span className="text-xs font-black uppercase tracking-wider text-amber-900">
+              {item.type === "degree" ? "Vrach-Stomatolog" : "Tibbiy Malaka"}
+            </span>
+            <span className="text-[11px] text-slate-500 font-semibold mt-1">
+              {item.org}
+            </span>
+          </div>
+        )}
+
+        <p className="text-[11px] font-bold uppercase tracking-wider text-brandOrange mb-1">
+          {item.org}
         </p>
-        <h4 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-primary transition-colors translate-z-20">
-          {cert.title[lang]}
-        </h4>
-        <p className="text-xs text-slate-500 mt-2 line-clamp-3 leading-relaxed">
-          {cert.desc[lang]}
+        <h3 className="text-base font-bold text-slate-900 leading-snug group-hover:text-primary transition-colors font-serif-classic">
+          {item.title[lang]}
+        </h3>
+        <p className="text-xs text-slate-600 mt-2 line-clamp-3 leading-relaxed">
+          {item.desc[lang]}
         </p>
       </div>
 
-      <div className="mt-4 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-bold text-primary translate-z-20">
+      <div className="mt-5 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-bold text-primary">
         <span className="text-slate-600 text-[11px]">
-          {lang === "uz" ? "Rasmiy akkreditatsiya" : lang === "ru" ? "Официальный диплом" : "Official credential"}
+          {lang === "uz" ? "Rasmiy akkreditatsiya" : lang === "ru" ? "Официальная аккредитация" : "Official credential"}
         </span>
-        <span className="text-emerald-600 flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-200/50">
-          <IconCheckCircle className="w-3.5 h-3.5 text-emerald-500" />
-          <span>MegaGen</span>
+        <span className="text-emerald-700 flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-200/60">
+          <IconCheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+          <span>{item.verification}</span>
         </span>
       </div>
     </div>
   );
 };
 
-const CertificatesShowcase = () => {
+export default function CertificatesShowcase() {
   const { lang } = useLanguage();
   const a11y = getA11yLabels(lang);
   const [activeCert, setActiveCert] = useState(null);
@@ -238,7 +223,7 @@ const CertificatesShowcase = () => {
       <div className="w-full">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200/60 shadow-2xs">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200/60 shadow-xs">
             <IconAward className="w-3.5 h-3.5 text-brandOrange" />
             <span>
               {lang === "uz"
@@ -257,15 +242,15 @@ const CertificatesShowcase = () => {
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             {lang === "uz"
-              ? "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20 yildan ortiq tibbiyot tajribasiga ega mutaxassis."
+              ? "Stomatolog Orifjon (Mansurov Orifbek Alimbekovich) — Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi, 20 yildan ortiq tibbiyot tajribasiga ega mutaxassis."
               : lang === "ru"
-              ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета, более 20 лет опыта в сфере здравоохранения."
-              : "Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Graduate of Andijan Medical College and Osh State University with over 20+ years of healthcare background."}
+              ? "Стоматолог Орифжон (Мансуров Орифбек Алимбекович) — выпускник Андижанского медицинского колледжа и Ошского Государственного Университета, более 20 лет опыта в сфере здравоохранения."
+              : "Dentist Orifjon (Mansurov Orifbek Alimbekovich) — Graduate of Andijan Medical College and Osh State University with over 20+ years of healthcare background."}
           </p>
         </div>
 
-        {/* Education Highlight Banner with 3D Depth */}
-        <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left [transform-style:preserve-3d]">
+        {/* Education Highlight Banner */}
+        <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-brandOrange text-white flex items-center justify-center shrink-0 shadow-lg border border-white/40">
             <IconGraduationCap className="w-8 h-8 text-white" />
           </div>
@@ -290,12 +275,12 @@ const CertificatesShowcase = () => {
           </div>
         </div>
 
-        {/* 4 Interactive 3D Certificate Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 [perspective:1200px]">
-          {certificates.map((cert) => (
-            <Certificate3DCard
-              key={cert.id}
-              cert={cert}
+        {/* 3 Authentic Credential Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [perspective:1200px]">
+          {credentials.map((cred) => (
+            <CredentialCard
+              key={cred.id}
+              item={cred}
               lang={lang}
               onSelect={setActiveCert}
             />
@@ -353,6 +338,4 @@ const CertificatesShowcase = () => {
       )}
     </section>
   );
-};
-
-export default CertificatesShowcase;
+}

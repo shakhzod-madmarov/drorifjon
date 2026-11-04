@@ -151,265 +151,253 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
 
   return (
     <>
+      {/* ═══════════════════════════════════════════════════════════
+          MODERN FULL-WIDTH STICKY HEADER
+          ═══════════════════════════════════════════════════════════ */}
       <header
-        style={{ top: `${topOffset}px` }}
-        className="fixed left-0 right-0 z-50 transition-all duration-300 pointer-events-none"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-[0_4px_20px_rgba(20,30,40,0.06)]"
+            : "bg-white/95 backdrop-blur-md border-b border-stone-200/70 shadow-2xs"
+        }`}
       >
-        {/* ═══════════════════════════════════════════════════════════
-            CLEAN FLOATING CLASSIC NAVBAR (RESPONSIVE ALL SCREENS)
-            ═══════════════════════════════════════════════════════════ */}
-        <div className="pointer-events-auto max-w-7xl mx-auto px-2 2xs:px-3 sm:px-6 lg:px-8 mt-1.5 2xs:mt-2 sm:mt-3">
-          <div
-            className={`relative rounded-2xl sm:rounded-3xl transition-all duration-300 flex items-center justify-between gap-1.5 2xs:gap-2 sm:gap-3 px-2.5 2xs:px-3.5 sm:px-6 ${
-              scrolled
-                ? "py-2 sm:py-2.5 bg-white/95 backdrop-blur-2xl shadow-[0_12px_40px_rgba(20,30,40,0.08)] border border-amber-200/90"
-                : "py-2.5 sm:py-3.5 bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgba(20,30,40,0.06)] border border-white/90 hover:border-amber-200/80"
-            }`}
+        <div className="max-w-7xl mx-auto px-3 2xs:px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+          {/* Brand Logo */}
+          <NavLink
+            to={to("/")}
+            aria-label={
+              lang === "ru"
+                ? "Eco Denta — Стоматолог Орифжон (На главную)"
+                : lang === "en"
+                ? "Eco Denta — Dentist Orifjon (Homepage)"
+                : "Eco Denta — Stomatolog Orifjon (Bosh sahifa)"
+            }
+            className="flex items-center shrink group focus:outline-none min-w-0"
           >
-            {/* Top Metallic Holo-Shine Accent Border */}
-            <div className="absolute -top-[1px] inset-x-8 h-[2px] bg-gradient-to-r from-transparent via-primary via-brandCyan to-transparent rounded-full opacity-80" />
+            <Logo className="h-7.5 2xs:h-8.5 sm:h-10" />
+          </NavLink>
 
-            {/* Brand Logo */}
-            <NavLink
-              to={to("/")}
-              aria-label={
-                lang === "ru"
-                  ? "Стоматолог Орифжон — На главную"
-                  : lang === "en"
-                  ? "Dentist Orifjon — Go to homepage"
-                  : "Stomatolog Orifjon — Bosh sahifaga o'tish"
-              }
-              className="flex items-center shrink-0 group focus:outline-none min-w-0"
-            >
-              <Logo className="h-7.5 2xs:h-8 sm:h-9" />
-            </NavLink>
-
-            {/* Desktop Navigation Links */}
-            <nav
-              aria-label={a11y.mainNavigation}
-              className="hidden lg:flex items-center gap-1 relative"
-            >
-              {navLinks.map((link) => {
-                if (link.hasDropdown) {
-                  return (
-                    <div
-                      key={link.path}
-                      ref={dropdownRef}
-                      className="relative"
-                      onMouseEnter={() => setServicesDropdown(true)}
-                      onMouseLeave={() => setServicesDropdown(false)}
-                    >
-                      <NavLink
-                        to={to(link.path)}
-                        className={({ isActive }) =>
-                          `inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-[13px] font-semibold transition-all duration-200 ${
-                            isActive
-                              ? "text-primary bg-primary/10 shadow-2xs font-bold"
-                              : "text-slate-700 hover:text-primary hover:bg-amber-50/60"
-                          }`
-                        }
-                      >
-                        <span>{link.label[lang]}</span>
-                        <svg
-                          className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
-                            servicesDropdown ? "rotate-180 text-primary" : ""
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </NavLink>
-
-                      {/* Mega Dropdown Card for 5 Specialties */}
-                      {servicesDropdown && (
-                        <div
-                          className="absolute top-full left-0 mt-2 w-96 sm:w-[410px] rounded-2xl bg-white/98 backdrop-blur-2xl border border-stone-200/90 shadow-[0_20px_50px_rgba(20,30,40,0.14)] p-3 space-y-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
-                        >
-                          <div className="px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 flex items-center justify-between">
-                            <span>{lang === "uz" ? "Klinik Yo'nalishlar" : lang === "ru" ? "5 Направлений" : "5 Specialties"}</span>
-                            <span className="text-primary font-bold">{lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle"}</span>
-                          </div>
-
-                          {specialties.map((spec) => (
-                            <NavLink
-                              key={spec.id}
-                              to={to(spec.path)}
-                              onClick={() => setServicesDropdown(false)}
-                              className="group flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-stone-50 transition-colors"
-                            >
-                              <span className="w-9 h-9 rounded-xl bg-amber-50/70 border border-amber-200/80 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all shadow-2xs">
-                                {spec.icon}
-                              </span>
-                              <div className="min-w-0 flex-1">
-                                <p className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors">
-                                  {spec.title[lang]}
-                                </p>
-                                <p className="text-[11.5px] text-slate-500 leading-snug mt-0.5 font-normal">
-                                  {spec.desc[lang]}
-                                </p>
-                              </div>
-                              <span className="text-xs text-stone-300 group-hover:text-primary group-hover:translate-x-1 transition-all">
-                                →
-                              </span>
-                            </NavLink>
-                          ))}
-
-                          <div className="pt-2 border-t border-amber-100 flex items-center justify-between px-2">
-                            <NavLink
-                              to={to("/services")}
-                              onClick={() => setServicesDropdown(false)}
-                              className="text-[11px] font-bold text-primary hover:underline flex items-center gap-1"
-                            >
-                              <span>
-                                {lang === "uz"
-                                  ? "Barcha 5 asosiy xizmatni ko'rish"
-                                  : lang === "ru"
-                                  ? "Смотреть все 5 основных услуг"
-                                  : "Explore all 5 core specialties"}
-                              </span>
-                              <span>→</span>
-                            </NavLink>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-
+          {/* Desktop Navigation Links */}
+          <nav
+            aria-label={a11y.mainNavigation}
+            className="hidden lg:flex items-center gap-1 xl:gap-2 relative"
+          >
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
                 return (
-                  <NavLink
+                  <div
                     key={link.path}
-                    to={to(link.path)}
-                    end={link.path === "/"}
-                    className={({ isActive }) =>
-                      `px-3.5 py-2 rounded-xl text-[13px] font-semibold transition-all duration-200 ${
-                        isActive
-                          ? "text-primary bg-primary/10 shadow-2xs font-bold"
-                          : "text-slate-700 hover:text-primary hover:bg-amber-50/60"
-                      }`
-                    }
+                    ref={dropdownRef}
+                    className="relative"
+                    onMouseEnter={() => setServicesDropdown(true)}
+                    onMouseLeave={() => setServicesDropdown(false)}
                   >
-                    {link.label[lang]}
-                  </NavLink>
+                    <NavLink
+                      to={to(link.path)}
+                      className={({ isActive }) =>
+                        `inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[13.5px] font-semibold transition-colors duration-150 ${
+                          isActive
+                            ? "text-primary font-bold bg-amber-50/80"
+                            : "text-slate-700 hover:text-primary hover:bg-stone-50"
+                        }`
+                      }
+                    >
+                      <span>{link.label[lang]}</span>
+                      <svg
+                        className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
+                          servicesDropdown ? "rotate-180 text-primary" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </NavLink>
+
+                    {/* Mega Dropdown Card for 5 Specialties (100% Solid Opaque White Background) */}
+                    {servicesDropdown && (
+                      <div
+                        className="absolute top-full left-0 mt-2 w-96 sm:w-[420px] rounded-2xl bg-white border border-stone-200 shadow-[0_20px_50px_rgba(20,30,40,0.18)] p-3 space-y-1.5 z-[100] animate-in fade-in slide-in-from-top-1 duration-150"
+                      >
+                        <div className="px-3 py-1.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400 border-b border-stone-100 flex items-center justify-between">
+                          <span>{lang === "uz" ? "Klinik Yo'nalishlar" : lang === "ru" ? "5 Направлений" : "5 Specialties"}</span>
+                          <span className="text-primary font-bold">{lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Gentle"}</span>
+                        </div>
+
+                        {specialties.map((spec) => (
+                          <NavLink
+                            key={spec.id}
+                            to={to(spec.path)}
+                            onClick={() => setServicesDropdown(false)}
+                            className="group flex items-center gap-3 p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors"
+                          >
+                            <span className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200/80 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all shadow-2xs">
+                              {spec.icon}
+                            </span>
+                            <div className="min-w-0 flex-1 text-left">
+                              <p className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                {spec.title[lang]}
+                              </p>
+                              <p className="text-[11.5px] text-slate-500 leading-snug mt-0.5 font-normal">
+                                {spec.desc[lang]}
+                              </p>
+                            </div>
+                            <span className="text-xs text-stone-300 group-hover:text-primary group-hover:translate-x-1 transition-all">
+                              →
+                            </span>
+                          </NavLink>
+                        ))}
+
+                        <div className="pt-2 border-t border-stone-100 flex items-center justify-between px-2">
+                          <NavLink
+                            to={to("/services")}
+                            onClick={() => setServicesDropdown(false)}
+                            className="text-[11.5px] font-bold text-primary hover:underline flex items-center gap-1"
+                          >
+                            <span>
+                              {lang === "uz"
+                                ? "Barcha 5 asosiy xizmatni ko'rish"
+                                : lang === "ru"
+                                ? "Смотреть все 5 основных услуг"
+                                : "Explore all 5 core specialties"}
+                            </span>
+                            <span>→</span>
+                          </NavLink>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
-              })}
-            </nav>
+              }
 
-            {/* Right Side Actions: Language + Phone + Book CTA */}
-            <div className="flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 shrink-0">
-              {/* Segmented Glass Language Switcher (Desktop & Tablets >= 640px) */}
-              <div
-                role="group"
-                aria-label={a11y.languageSwitcher}
-                className="hidden sm:flex items-center bg-amber-100/60 p-0.5 rounded-xl border border-amber-300/60 shadow-inner"
-              >
-                {["uz", "ru", "en"].map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => changeLanguage(l)}
-                    aria-pressed={lang === l}
-                    className={`min-h-[28px] px-2.5 sm:px-2 py-0.5 rounded-lg text-[11px] font-extrabold uppercase transition-all duration-200 touch-manipulation cursor-pointer ${
-                      lang === l
-                        ? "bg-white text-primary shadow-xs scale-102"
-                        : "text-slate-600 hover:text-slate-900"
-                    }`}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-
-              {/* Mobile Quick Cycle Language Button (Compact, Elegant, Instant Feedback) */}
-              <button
-                onClick={() => {
-                  const next = lang === "uz" ? "ru" : lang === "ru" ? "en" : "uz";
-                  changeLanguage(next);
-                }}
-                aria-label={
-                  lang === "uz"
-                    ? "Tilni almashtirish (Ruscha)"
-                    : lang === "ru"
-                    ? "Сменить язык (English)"
-                    : "Switch language (O'zbek)"
-                }
-                title={
-                  lang === "uz"
-                    ? "Hozir: O'zbekcha (O'zgartirish uchun bosing)"
-                    : lang === "ru"
-                    ? "Сейчас: Русский (Нажмите для смены)"
-                    : "Active: English (Tap to switch)"
-                }
-                className="sm:hidden inline-flex items-center justify-center gap-1 min-h-[32px] px-2 py-1 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200/90 text-slate-800 text-[11px] font-black uppercase transition-all duration-200 touch-manipulation cursor-pointer active:scale-95 shadow-2xs"
-              >
-                <span className="text-[11px] leading-none">🌐</span>
-                <span className="font-black text-primary leading-none">{lang.toUpperCase()}</span>
-              </button>
-
-              {/* Direct Phone Dial (Desktop) */}
-              <a
-                href={DOCTOR_INFO.phoneHref}
-                className="hidden xl:inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-amber-50/80 hover:bg-amber-100 border border-amber-200/80 transition-all duration-200 shadow-2xs whitespace-nowrap group"
-              >
-                <span className="w-5 h-5 rounded-md bg-primary text-white flex items-center justify-center shadow-xs">
-                  <IconPhone className="w-3 h-3 text-white" />
-                </span>
-                <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
-              </a>
-
-              {/* Magnetic Glowing Primary Book CTA */}
-              <button
-                onClick={handleBookClick}
-                className={`relative overflow-hidden inline-flex items-center gap-1 sm:gap-2 px-2 2xs:px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl text-[11px] 2xs:text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-300 cursor-pointer shadow-md group select-none whitespace-nowrap ${
-                  isBookingActive
-                    ? "bg-slate-900 text-white ring-2 ring-primary"
-                    : "bg-gradient-to-r from-primary via-orange-500 to-primary hover:brightness-110 text-white shadow-[0_4px_16px_rgba(255,157,80,0.35)] hover:shadow-[0_8px_24px_rgba(255,157,80,0.5)] hover:-translate-y-0.5 active:translate-y-0"
-                }`}
-              >
-                {/* Sweep Shimmer Effect */}
-                <span className="absolute inset-0 w-1/2 h-full bg-white/20 -translate-x-full group-hover:animate-shimmer-sweep pointer-events-none" />
-                
-                <span className="w-1.5 h-1.5 2xs:w-2 2xs:h-2 rounded-full bg-white animate-pulse shrink-0" />
-                <span className="hidden sm:inline">
-                  {lang === "uz"
-                    ? "Qabulga Yozilish"
-                    : lang === "ru"
-                    ? "Запись на Приём"
-                    : "Book Visit"}
-                </span>
-                <span className="sm:hidden">
-                  {lang === "uz"
-                    ? "Qabul"
-                    : lang === "ru"
-                    ? "Запись"
-                    : "Book"}
-                </span>
-                <span className="hidden 2xs:inline group-hover:translate-x-0.5 transition-transform text-white/90">
-                  →
-                </span>
-              </button>
-
-              {/* Mobile Hamburger Menu Toggle */}
-              <button
-                onClick={() => setShowMenu(true)}
-                aria-label={a11y.openMenu}
-                aria-expanded={showMenu}
-                aria-controls="mobile-navigation-drawer"
-                className="lg:hidden w-8.5 h-8.5 2xs:w-9 2xs:h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-amber-50/80 border border-amber-200/70 text-slate-800 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation active:scale-95 shrink-0"
-              >
-                <svg
-                  className="w-4.5 h-4.5 2xs:w-5 2xs:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
+              return (
+                <NavLink
+                  key={link.path}
+                  to={to(link.path)}
+                  end={link.path === "/"}
+                  className={({ isActive }) =>
+                    `px-3.5 py-2 rounded-xl text-[13.5px] font-semibold transition-colors duration-150 ${
+                      isActive
+                        ? "text-primary font-bold bg-amber-50/80"
+                        : "text-slate-700 hover:text-primary hover:bg-stone-50"
+                    }`
+                  }
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+                  {link.label[lang]}
+                </NavLink>
+              );
+            })}
+          </nav>
+
+          {/* Right Side Actions: Language + Phone + Book CTA */}
+          <div className="flex items-center gap-1.5 2xs:gap-2 sm:gap-3 shrink-0">
+            {/* Segmented Minimalist Language Switcher */}
+            <div
+              role="group"
+              aria-label={a11y.languageSwitcher}
+              className="hidden sm:flex items-center bg-stone-100 p-0.5 rounded-xl border border-stone-200"
+            >
+              {["uz", "ru", "en"].map((l) => (
+                <button
+                  key={l}
+                  onClick={() => changeLanguage(l)}
+                  aria-pressed={lang === l}
+                  className={`min-h-[28px] px-2.5 py-0.5 rounded-lg text-[11px] font-bold uppercase transition-all duration-150 cursor-pointer ${
+                    lang === l
+                      ? "bg-white text-primary shadow-2xs font-black"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  {l}
+                </button>
+              ))}
             </div>
+
+            {/* Mobile Quick Cycle Language Button */}
+            <button
+              onClick={() => {
+                const next = lang === "uz" ? "ru" : lang === "ru" ? "en" : "uz";
+                changeLanguage(next);
+              }}
+              aria-label={
+                lang === "uz"
+                  ? "Tilni almashtirish (Ruscha)"
+                  : lang === "ru"
+                  ? "Сменить язык (English)"
+                  : "Switch language (O'zbek)"
+              }
+              title={
+                lang === "uz"
+                  ? "Hozir: O'zbekcha (O'zgartirish uchun bosing)"
+                  : lang === "ru"
+                  ? "Сейчас: Русский (Нажмите для смены)"
+                  : "Active: English (Tap to switch)"
+              }
+              className="sm:hidden inline-flex items-center justify-center gap-1 min-h-[34px] px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-200 text-slate-800 text-[11px] font-black uppercase transition-colors cursor-pointer active:scale-95"
+            >
+              <span className="text-[11px] leading-none">🌐</span>
+              <span className="font-black text-primary leading-none">{lang.toUpperCase()}</span>
+            </button>
+
+            {/* Direct Phone Dial (Desktop) */}
+            <a
+              href={DOCTOR_INFO.phoneHref}
+              className="hidden xl:inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-stone-50 hover:bg-amber-50 border border-stone-200 hover:border-amber-200 transition-colors whitespace-nowrap group"
+            >
+              <span className="w-5 h-5 rounded-md bg-primary text-white flex items-center justify-center shadow-xs">
+                <IconPhone className="w-3 h-3 text-white" />
+              </span>
+              <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
+            </a>
+
+            {/* Primary Appointment Booking CTA */}
+            <button
+              onClick={handleBookClick}
+              className={`inline-flex items-center gap-1.5 px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-200 cursor-pointer shadow-sm group select-none whitespace-nowrap ${
+                isBookingActive
+                  ? "bg-slate-900 text-white ring-2 ring-primary"
+                  : "bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white shadow-[0_4px_14px_rgba(255,157,80,0.3)] hover:shadow-[0_6px_18px_rgba(255,157,80,0.45)] active:scale-98"
+              }`}
+            >
+              <span className="hidden sm:inline">
+                {lang === "uz"
+                  ? "Qabulga Yozilish"
+                  : lang === "ru"
+                  ? "Запись на Приём"
+                  : "Book Visit"}
+              </span>
+              <span className="sm:hidden">
+                {lang === "uz"
+                  ? "Qabul"
+                  : lang === "ru"
+                  ? "Запись"
+                  : "Book"}
+              </span>
+              <span className="group-hover:translate-x-0.5 transition-transform text-white/90">
+                →
+              </span>
+            </button>
+
+            {/* Mobile Hamburger Menu Toggle */}
+            <button
+              onClick={() => setShowMenu(true)}
+              aria-label={a11y.openMenu}
+              aria-expanded={showMenu}
+              aria-controls="mobile-navigation-drawer"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-200 text-slate-800 transition-colors cursor-pointer active:scale-95 shrink-0"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
