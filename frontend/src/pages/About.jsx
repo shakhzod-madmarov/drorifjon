@@ -155,7 +155,10 @@ const About = ({ onOpenBooking }) => {
       </nav>
 
       {/* Doctor Bio Editorial Header — Tight & Balanced */}
-      <div className="relative z-10 overflow-hidden bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-center p-3.5 2xs:p-5 sm:p-7 lg:p-8">
+      <section
+        aria-labelledby="doctor-bio-heading"
+        className="relative z-10 overflow-hidden bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-center p-3.5 2xs:p-5 sm:p-7 lg:p-8"
+      >
         <div className="lg:col-span-7 space-y-4 text-left">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
@@ -171,7 +174,10 @@ const About = ({ onOpenBooking }) => {
           </div>
 
           <div className="space-y-1">
-            <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+            <h1
+              id="doctor-bio-heading"
+              className="font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight"
+            >
               {lang === "ru"
                 ? "Стоматолог Орифжон (Мансуров Орифжон Алимбекович)"
                 : lang === "en"
@@ -233,16 +239,22 @@ const About = ({ onOpenBooking }) => {
         <div className="lg:col-span-5 flex justify-center">
           <Doctor3DCard lang={lang} onOpenBooking={onOpenBooking} />
         </div>
-      </div>
+      </section>
 
       {/* Career Timeline Section */}
-      <section className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-amber-300/80 shadow-luxury p-4 2xs:p-6 sm:p-10 space-y-6 sm:space-y-8">
+      <section
+        aria-labelledby="timeline-heading"
+        className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-amber-300/80 shadow-luxury p-4 2xs:p-6 sm:p-10 space-y-6 sm:space-y-8"
+      >
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide bg-primary/10 text-primary border border-primary/25 shadow-xs">
             <IconGraduationCap className="w-3.5 h-3.5 text-primary" />
             <span>{lang === "uz" ? "Ta'lim va Amaliy Yo'l" : lang === "ru" ? "Образование и Путь" : "Career & Milestones"}</span>
           </span>
-          <h2 className="font-serif-classic text-2xl sm:text-3xl font-extrabold text-slate-900">
+          <h2
+            id="timeline-heading"
+            className="font-serif-classic text-2xl sm:text-3xl font-extrabold text-slate-900"
+          >
             {lang === "uz" ? "Stomatolog Orifjonning Kasbiy Yo'li" : lang === "ru" ? "Профессиональный Путь Стоматолога Орифжона" : "Dentist Orifjon's Professional Journey"}
           </h2>
         </div>
@@ -268,9 +280,12 @@ const About = ({ onOpenBooking }) => {
       </section>
 
       {/* Core Clinical Values */}
-      <section className="relative z-10 space-y-6">
+      <section aria-labelledby="clinical-values-heading" className="relative z-10 space-y-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="font-serif-classic text-2xl sm:text-3xl font-bold text-slate-900">
+          <h2
+            id="clinical-values-heading"
+            className="font-serif-classic text-2xl sm:text-3xl font-bold text-slate-900"
+          >
             {lang === "uz" ? "Bemorlar Uchun 3 Asosiy Qoida" : lang === "ru" ? "3 Главных Принципа Лечения" : "3 Core Treatment Principles"}
           </h2>
           <p className="text-sm text-slate-600">

@@ -50,7 +50,7 @@ const Booking = () => {
       </nav>
 
       {/* Doctor Summary Banner — Simple Classic Elegance */}
-      <div className="relative z-10 p-3.5 2xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+      <header className="relative z-10 p-3.5 2xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-3.5 py-1 rounded-full bg-stone-100 text-slate-800 text-xs font-bold border border-stone-200">
@@ -113,7 +113,7 @@ const Booking = () => {
             <span>{DOCTOR_INFO.phoneDisplay}</span>
           </a>
         </div>
-      </div>
+      </header>
 
       {/* Main Interactive Booking Section */}
       <div className="relative z-10">

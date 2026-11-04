@@ -99,7 +99,10 @@ const HeroSection = ({ onOpenBooking }) => {
   const t = T[lang] || T.uz;
 
   return (
-    <section className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-1.5 2xs:mt-2 sm:mt-4 p-3.5 2xs:p-5 sm:p-7 lg:p-8">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_6px_25px_rgba(20,30,40,0.04)] mt-1.5 2xs:mt-2 sm:mt-4 p-3.5 2xs:p-5 sm:p-7 lg:p-8"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
         {/* Left Editorial Copy (7 cols) */}
         <div className="lg:col-span-7 space-y-4 text-left">
@@ -113,7 +116,10 @@ const HeroSection = ({ onOpenBooking }) => {
             <p className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-primary">
               {t.kicker}
             </p>
-            <h1 className="font-serif-classic text-2xl sm:text-3xl lg:text-[38px] font-black tracking-tight text-slate-900 leading-[1.18]">
+            <h1
+              id="hero-heading"
+              className="font-serif-classic text-2xl sm:text-3xl lg:text-[38px] font-black tracking-tight text-slate-900 leading-[1.18]"
+            >
               {t.headlinePart1}
               <span className="text-primary italic font-serif">
                 {t.headlineHighlight}
@@ -208,13 +214,16 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
   };
 
   return (
-    <section className="py-6 sm:py-10 space-y-6">
+    <section aria-labelledby="specialities-heading" className="py-6 sm:py-10 space-y-6">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2.5">
         <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
           <span>{lang === "uz" ? "Asosiy 5 Klinik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}</span>
         </span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 font-serif-classic tracking-tight">
+        <h2
+          id="specialities-heading"
+          className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 font-serif-classic tracking-tight"
+        >
           {lang === "uz"
             ? "Stomatolog Orifjon Xizmatlari"
             : lang === "ru"

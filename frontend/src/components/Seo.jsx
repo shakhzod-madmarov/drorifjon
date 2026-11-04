@@ -91,10 +91,10 @@ const Seo = ({
 
     const siteName =
       lang === "ru"
-        ? "Стоматолог Орифжон — Стоматологический Центр"
+        ? "Eco Denta — Стоматолог Орифжон (Андижан)"
         : lang === "en"
-        ? "Dentist Orifjon — Dental Practice"
-        : "Stomatolog Orifjon — Vrach Stomatolog";
+        ? "Eco Denta — Dentist Orifjon (Andijan)"
+        : "Eco Denta — Stomatolog Orifjon (Andijon)";
     const ogSiteName = document.querySelector('meta[property="og:site_name"]');
     if (ogSiteName) ogSiteName.setAttribute("content", siteName);
 

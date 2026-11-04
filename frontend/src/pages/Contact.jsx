@@ -52,7 +52,7 @@ const Contact = () => {
       </nav>
 
       {/* Header: Classic Medical Presentation */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto space-y-2">
+      <header className="relative z-10 text-center max-w-2xl mx-auto space-y-2">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-slate-800 text-xs font-bold shadow-2xs">
           <span>{lang === "uz" ? "Bevosita Aloqa · Andijon" : lang === "ru" ? "Прямая Связь · Андижан" : "Direct Clinic Contact"}</span>
         </div>
@@ -75,7 +75,7 @@ const Contact = () => {
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
-      </div>
+      </header>
 
       {/* 4 Contact & Location Cards (No Email) */}
       <section aria-labelledby="contact-channels-heading" className="relative z-10 space-y-4">

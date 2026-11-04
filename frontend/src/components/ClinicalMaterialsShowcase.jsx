@@ -219,9 +219,9 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
           <IconAward className="w-6 h-6 text-white" />
         </div>
         <div className="flex-1 space-y-0.5">
-          <h4 className="text-sm sm:text-base font-bold text-slate-900 font-serif-classic">
+          <h3 className="text-sm sm:text-base font-bold text-slate-900 font-serif-classic">
             {t.trustBanner.title}
-          </h4>
+          </h3>
           <p className="text-xs sm:text-sm text-slate-600">
             {t.trustBanner.desc}
           </p>

@@ -16,10 +16,16 @@ export const DOCTOR_INFO = {
     en: "Dr. Orifjon",
   },
   fullName: "Mansurov Orifjon Alimbekovich",
+  legalName: "Mansurov Orifbek Alimbekovich",
   fullNames: {
     uz: "Mansurov Orifjon Alimbekovich",
     ru: "Мансуров Орифжон Алимбекович",
     en: "Mansurov Orifjon Alimbekovich",
+  },
+  legalNames: {
+    uz: "Mansurov Orifbek Alimbekovich",
+    ru: "Мансуров Орифбек Алимбекович",
+    en: "Mansurov Orifbek Alimbekovich",
   },
   title: "Vrach Stomatolog",
   specialtiesText: "Terapiya · Ortopediya · Implantatsiya · Xirurgiya · Ortodontiya",

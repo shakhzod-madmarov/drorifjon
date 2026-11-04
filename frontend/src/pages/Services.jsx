@@ -69,7 +69,7 @@ const Services = ({ onOpenBooking }) => {
       </nav>
 
       {/* Header Stage: Simple Classic Luxury */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto space-y-3">
+      <header className="relative z-10 text-center max-w-3xl mx-auto space-y-3">
         <div className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-stone-50 border border-stone-200 text-slate-800 shadow-2xs">
           <span>{lang === "uz" ? "Stomatolog Orifjon · 20+ Yillik Tajriba" : lang === "ru" ? "Стоматолог Орифжон · 20+ Лет Опыта" : "Dentist Orifjon · 20+ Yrs Practice"}</span>
         </div>
@@ -89,7 +89,7 @@ const Services = ({ onOpenBooking }) => {
             ? "Все виды современного безболезненного лечения, протезирования, ортодонтии и имплантации у Стоматолога Орифжона с официальной клинической гарантией."
             : "All dental procedures performed by Dentist Orifjon (Mansurov Orifjon Alimbekovich) using genuine German & South Korean certified materials with official warranty."}
         </p>
-      </div>
+      </header>
 
       {/* Filter Tabs */}
       <div className="relative z-10 flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2 pb-1 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">

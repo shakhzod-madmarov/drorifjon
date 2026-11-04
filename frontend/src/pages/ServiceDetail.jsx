@@ -155,7 +155,7 @@ const ServiceDetail = () => {
       </nav>
 
       {/* Hero Service Showcase — Simple Classic Luxury */}
-      <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden bg-white p-3.5 2xs:p-5 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
+      <header className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden bg-white p-3.5 2xs:p-5 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left: Clinical Information & CTA */}
           <div className="lg:col-span-7 space-y-5">
@@ -173,7 +173,7 @@ const ServiceDetail = () => {
               </span>
             </div>
 
-            <h1 className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-[1.18]">
+            <h1 id="service-title" className="font-serif-classic text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-[1.18]">
               {service.title[lang]}
             </h1>
 
@@ -243,12 +243,12 @@ const ServiceDetail = () => {
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Highlights & Features */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section aria-labelledby="service-highlights-heading" className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-6 sm:p-8 rounded-3xl bg-white/95 backdrop-blur-sm border border-amber-300/80 shadow-luxury space-y-4">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
+          <h2 id="service-highlights-heading" className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz" ? "Muolajaning Asosiy Afzalliklari" : lang === "ru" ? "Преимущества Методики" : "Clinical Highlights"}
           </h2>
           <div className="space-y-3 pt-2">
@@ -263,7 +263,7 @@ const ServiceDetail = () => {
 
         <div className="p-6 sm:p-8 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-5 flex flex-col justify-between">
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
+            <h2 id="service-warranty-heading" className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
               {lang === "uz" ? "Klinik Kafolat & Muddat" : lang === "ru" ? "Сроки и Гарантия" : "Timeline & Warranty"}
             </h2>
             <div className="space-y-3 pt-1">
@@ -299,11 +299,11 @@ const ServiceDetail = () => {
               : "Book This Dental Service"}
           </button>
         </div>
-      </div>
+      </section>
 
       {/* Clinical Indications Section */}
       {service.indications?.[lang] && service.indications[lang].length > 0 && (
-        <section className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-[#FFFDF9] border border-amber-200 shadow-2xs space-y-6">
+        <section aria-labelledby="indications-heading" className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-[#FFFDF9] border border-amber-200 shadow-2xs space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-amber-100 text-amber-900 border border-amber-300">
@@ -316,7 +316,7 @@ const ServiceDetail = () => {
                     : "CLINICAL INDICATIONS"}
                 </span>
               </span>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 font-serif-classic">
+              <h2 id="indications-heading" className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 font-serif-classic">
                 {lang === "uz"
                   ? "Qachon Ushbu Muolajaga Murojaat Qilish Zarur?"
                   : lang === "ru"
@@ -358,12 +358,12 @@ const ServiceDetail = () => {
       )}
 
       {/* 4 Steps */}
-      <section className="space-y-6">
+      <section aria-labelledby="steps-heading" className="space-y-6">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             {lang === "uz" ? "MUOLAJA BOSQICHLARI" : lang === "ru" ? "ЭТАПЫ ЛЕЧЕНИЯ" : "PROCEDURE PHASES"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-serif-classic">
+          <h2 id="steps-heading" className="text-2xl sm:text-3xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz" ? "Muolaja Qanday Amalga Oshiriladi?" : lang === "ru" ? "Как Проходит Лечение?" : "How the Treatment Works"}
           </h2>
         </div>
@@ -418,9 +418,9 @@ const ServiceDetail = () => {
       )}
 
       {/* Bottom Urgent CTA Box */}
-      <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section aria-labelledby="urgent-cta-heading" className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center sm:text-left">
-          <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif-classic">
+          <h2 id="urgent-cta-heading" className="text-lg sm:text-xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz"
               ? "Savollaringiz bormi yoki tishingiz bezovta qilyaptimi?"
               : lang === "ru"

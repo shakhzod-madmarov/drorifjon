@@ -18,14 +18,17 @@ const ClinicLocationMap = ({ compact = false }) => {
   const hours = useClinicHours(lang);
 
   return (
-    <section className={compact ? "py-4" : "py-10 sm:py-14"}>
+    <section
+      aria-labelledby="clinic-location-heading"
+      className={compact ? "py-4" : "py-10 sm:py-14"}
+    >
       {!compact && (
         <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium tracking-wide bg-primary/5 text-primary border border-primary/20 shadow-2xs">
             <IconLocationPin className="w-3.5 h-3.5 text-primary" />
             <span>{c.badge[lang]}</span>
           </span>
-          <h2 className="font-serif-classic text-3xl sm:text-4xl font-bold text-slate-900">
+          <h2 id="clinic-location-heading" className="font-serif-classic text-3xl sm:text-4xl font-bold text-slate-900">
             {lang === "uz"
               ? "Eco Denta — Stomatolog Orifjon Qabuli"
               : lang === "ru"

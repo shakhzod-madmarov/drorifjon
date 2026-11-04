@@ -234,7 +234,7 @@ const CertificatesShowcase = () => {
   const modalRef = useModalA11y(Boolean(activeCert), closeCert);
 
   return (
-    <section className="py-10 sm:py-16 border-t border-amber-100">
+    <section aria-labelledby="certificates-heading" className="py-10 sm:py-16 border-t border-amber-100">
       <div className="w-full">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
@@ -248,7 +248,7 @@ const CertificatesShowcase = () => {
                 : "Diplomas & Certifications"}
             </span>
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A202C] tracking-tight font-serif-classic">
+          <h2 id="certificates-heading" className="text-3xl sm:text-4xl font-bold text-[#1A202C] tracking-tight font-serif-classic">
             {lang === "uz"
               ? "Tasdiqlangan Tibbiy Malaka & Xalqaro Diplomlar"
               : lang === "ru"

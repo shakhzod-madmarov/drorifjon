@@ -141,17 +141,12 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
       : {}),
     "provider": {
       "@type": ["Dentist", "MedicalBusiness"],
-      "@id": `${SITE_ORIGIN}/#dentist`,
-      "name":
-        lang === "ru"
-          ? `${DOCTOR_INFO.names.ru} — Стоматологический Центр`
-          : lang === "en"
-          ? `${DOCTOR_INFO.names.en} — Dental Practice`
-          : `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
+      "@id": `${SITE_ORIGIN}/#clinic`,
+      "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": DOCTOR_INFO.phoneRaw,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Muqimiy ko'chasi",
+        "streetAddress": PRIMARY_CLINIC.address[lang] || PRIMARY_CLINIC.address.uz,
         "addressLocality": "Andijon",
         "addressRegion": "Andijon viloyati",
         "postalCode": "170100",
@@ -224,9 +219,9 @@ export const buildServicesCatalogSchema = (services, lang = "uz", breadcrumbs = 
     "url": catalogUrl,
     "name": lang === "ru" ? "Стоматологические услуги" : lang === "en" ? "Dental Services" : "Stomatologik xizmatlar",
     "about": {
-      "@type": "Dentist",
-      "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": DOCTOR_INFO.name,
+      "@type": "DentalClinic",
+      "@id": `${SITE_ORIGIN}/#clinic`,
+      "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": DOCTOR_INFO.phoneRaw,
     },
     "mainEntity": {
@@ -304,12 +299,12 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
     "name": lang === "ru" ? "Контакты" : lang === "en" ? "Contact" : "Aloqa",
     "mainEntity": {
       "@type": ["Dentist", "MedicalBusiness"],
-      "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": `${DOCTOR_INFO.name} — Vrach Stomatolog`,
+      "@id": `${SITE_ORIGIN}/#clinic`,
+      "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": DOCTOR_INFO.phoneRaw,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Muqimiy ko'chasi",
+        "streetAddress": PRIMARY_CLINIC.address[lang] || PRIMARY_CLINIC.address.uz,
         "addressLocality": "Andijon",
         "addressRegion": "Andijon viloyati",
         "postalCode": "170100",
@@ -377,8 +372,20 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": "WebSite",
     "@id": `${SITE_ORIGIN}/#website`,
     "url": `${SITE_ORIGIN}/`,
-    "name": DOCTOR_INFO.name,
-    "description": "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi.",
+    "name": "Eco Denta — Stomatolog Orifjon",
+    "alternateName": [
+      "Stomatolog Orifjon",
+      "Eco Denta Andijon",
+      "Mansurov Orifjon",
+      "Стоматолог Орифжон",
+      "Dentist Orifjon",
+    ],
+    "description":
+      lang === "ru"
+        ? "Eco Denta — Приём Стоматолога Орифжона (Мансуров Орифжон Алимбекович). Более 20 лет практики. г. Андижан, ул. Мукими."
+        : lang === "en"
+        ? "Eco Denta — Practice of Dentist Orifjon (Mansurov Orifjon Alimbekovich). Over 20+ years of healthcare practice. Muqimiy St., Andijan."
+        : "Eco Denta — Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli. 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon, Muqimiy ko'chasi.",
     "inLanguage": ["uz", "ru", "en"],
   };
 
@@ -386,7 +393,14 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": "DentalClinic",
     "@id": `${SITE_ORIGIN}/#clinic`,
     "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-    "alternateName": ["Stomatolog Orifjon", "Orifjon Mansurov", "Mansurov Orifjon Alimbekovich", "Стоматолог Орифжон", "Dentist Orifjon"],
+    "alternateName": [
+      "Eco Denta Andijon",
+      "Stomatolog Orifjon",
+      "Orifjon Mansurov",
+      "Mansurov Orifjon Alimbekovich",
+      "Стоматолог Орифжон",
+      "Dentist Orifjon",
+    ],
     "telephone": DOCTOR_INFO.phoneRaw,
     "address": {
       "@type": "PostalAddress",
@@ -427,8 +441,17 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
   const dentistEntity = {
     "@type": ["Dentist", "MedicalBusiness"],
     "@id": `${SITE_ORIGIN}/#dentist`,
-    "name": `${DOCTOR_INFO.name} — Stomatologiya Markazi`,
-    "alternateName": ["Stomatolog Orifjon", "Orifjon", "Mansurov Orifjon Alimbekovich", "Стоматолог Орифжон Мансуров", "Dentist Orifjon"],
+    "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
+    "alternateName": [
+      "Stomatolog Orifjon",
+      "Eco Denta Andijon",
+      "Orifjon",
+      "Mansurov Orifjon Alimbekovich",
+      "Mansurov Orifbek Alimbekovich",
+      "Стоматолог Орифжон Мансуров",
+      "Стоматолог Орифбек Мансуров",
+      "Dentist Orifjon",
+    ],
     "url": `${SITE_ORIGIN}/`,
     "logo": `${SITE_ORIGIN}/logo_icon.png`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
@@ -496,6 +519,16 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": "Physician",
     "@id": `${SITE_ORIGIN}/#doctor`,
     "name": DOCTOR_INFO.names[lang] || DOCTOR_INFO.name,
+    "alternateName": [
+      "Stomatolog Orifjon",
+      "Dr. Orifjon",
+      "Mansurov Orifjon Alimbekovich",
+      "Mansurov Orifbek Alimbekovich",
+      "Мансуров Орифбек Алимбекович",
+      "Мансуров Орифжон Алимбекович",
+      "Orifbek Mansurov",
+      "Dentist Orifjon",
+    ],
     "jobTitle":
       lang === "ru"
         ? "Врач-Стоматолог"
@@ -598,9 +631,9 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
         ? "Online Appointment with Dentist Orifjon"
         : "Stomatolog Orifjon qabuliga onlayn yozilish",
     "about": {
-      "@type": "Dentist",
-      "@id": `${SITE_ORIGIN}/#dentist`,
-      "name": DOCTOR_INFO.name,
+      "@type": "DentalClinic",
+      "@id": `${SITE_ORIGIN}/#clinic`,
+      "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": DOCTOR_INFO.phoneRaw,
     },
     "potentialAction": {

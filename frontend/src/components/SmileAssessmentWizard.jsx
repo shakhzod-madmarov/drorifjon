@@ -173,7 +173,7 @@ const SmileAssessmentWizard = () => {
   const [selectedConcern, setSelectedConcern] = useState(concerns[0]);
 
   return (
-    <section className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200/90 shadow-luxury p-3.5 2xs:p-5 sm:p-8 lg:p-10 relative overflow-hidden">
+    <section aria-labelledby="wizard-heading" className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200/90 shadow-luxury p-3.5 2xs:p-5 sm:p-8 lg:p-10 relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-amber-100/30 via-orange-100/20 to-transparent rounded-full blur-3xl pointer-events-none" />
 
@@ -184,7 +184,7 @@ const SmileAssessmentWizard = () => {
             <IconSparkleStar className="w-3.5 h-3.5 text-brandOrange" />
             <span>{lang === "uz" ? "Onlayn Tabassum Tahlili" : lang === "ru" ? "Онлайн-Подбор Лечения" : "Online Smile Assessment"}</span>
           </span>
-          <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
+          <h2 id="wizard-heading" className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz"
               ? "Sizni Nima Bezovta Qilmoqda? Mos Yechimni Aniqlang"
               : lang === "ru"

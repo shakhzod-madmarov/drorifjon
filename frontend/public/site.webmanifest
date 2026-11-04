@@ -1,9 +1,9 @@
 {
-  "name": "Stomatolog Orifjon — Vrach Stomatolog",
-  "short_name": "Stomatolog Orifjon",
+  "name": "Eco Denta — Stomatolog Orifjon",
+  "short_name": "Eco Denta",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF9D8",
+  "background_color": "#FFFDF9",
   "theme_color": "#FF9D50",
   "icons": [
     {

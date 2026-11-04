@@ -12,9 +12,11 @@ const Doctor3DCard = ({
   imageWebp = "/dr_orifjon_portrait_pro.webp",
   imageJpg = "/dr_orifjon_portrait_pro.jpg",
   className = "",
+  titleTag = "h2",
   onOpenBooking,
 }) => {
   const cardRef = useRef(null);
+  const TitleTag = titleTag;
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -95,9 +97,9 @@ const Doctor3DCard = ({
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">
               {specialtyText}
             </p>
-            <h3 className="font-serif-classic text-lg 2xs:text-xl font-bold tracking-tight text-slate-900 mt-0.5">
+            <TitleTag className="font-serif-classic text-lg 2xs:text-xl font-bold tracking-tight text-slate-900 mt-0.5">
               {DOCTOR_INFO.names[lang] || DOCTOR_INFO.name}
-            </h3>
+            </TitleTag>
             <p className="text-xs text-slate-500 font-medium">
               Mansurov Orifjon Alimbekovich
             </p>

@@ -251,7 +251,7 @@ const Interactive3DCostCalculator = () => {
         }`;
 
   return (
-    <section className="py-6 sm:py-8 bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm p-3.5 2xs:p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+    <section aria-labelledby="calculator-heading" className="py-6 sm:py-8 bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-sm p-3.5 2xs:p-4 sm:p-6 lg:p-8 relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-stone-100/30 rounded-full blur-3xl pointer-events-none" />
 
@@ -262,7 +262,7 @@ const Interactive3DCostCalculator = () => {
             <IconShieldCheck className="w-3.5 h-3.5 text-primary" />
             <span>{lang === "uz" ? "Interaktiv 3D Muolajalar Rejasi" : lang === "ru" ? "Интерактивный 3D План Лечения" : "3D Interactive Treatment Plan"}</span>
           </span>
-          <h2 className="text-2xl sm:text-4xl font-bold text-[#1A202C] font-serif-classic">
+          <h2 id="calculator-heading" className="text-2xl sm:text-4xl font-bold text-[#1A202C] font-serif-classic">
             {lang === "uz"
               ? "Muolajani Tanlang va 3D Rejani Hisoblang"
               : lang === "ru"
