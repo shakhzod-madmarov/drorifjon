@@ -29,10 +29,10 @@ const ClinicLocationMap = ({ compact = false }) => {
           </span>
           <h2 id="clinic-location-heading" className="font-serif-classic text-3xl sm:text-4xl font-bold text-slate-900">
             {lang === "uz"
-              ? "Eco Denta — Stomatolog Orifjon Qabuli"
+              ? "Stomatolog Orifjon Qabuli (Andijon)"
               : lang === "ru"
-              ? "Eco Denta — Стоматология Доктора Орифжона"
-              : "Eco Denta — Dentist Orifjon Practice"}
+              ? "Приём Стоматолога Орифжона (Андижан)"
+              : "Dentist Orifjon Practice (Andijan)"}
           </h2>
           <p className="text-sm text-slate-600">
             {lang === "uz"

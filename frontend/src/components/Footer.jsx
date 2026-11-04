@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="lg:max-w-sm space-y-5">
             <Link
               to={to("/")}
-              aria-label="Eco Denta bosh sahifa"
+              aria-label="Stomatolog Orifjon bosh sahifa"
               className="inline-block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
             >
               <Logo className="h-10 sm:h-12" inverted={true} />

@@ -2,19 +2,19 @@ export const CLINICS = [
   {
     id: "eco-denta-orifjon",
     name: {
-      uz: "Eco Denta — Stomatolog Orifjon Qabuli",
-      ru: "Eco Denta — Стоматология Доктора Орифжона",
-      en: "Eco Denta — Dentist Orifjon Practice",
+      uz: "Stomatolog Orifjon Qabuli (Eco Denta)",
+      ru: "Стоматолог Орифжон — Приём (Eco Denta)",
+      en: "Dentist Orifjon Practice (Eco Denta)",
     },
     dentistOffice: {
-      uz: "Eco Denta — Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli",
-      ru: "Eco Denta — Приём Стоматолога Орифжона (Мансурова Орифжона Алимбековича)",
-      en: "Eco Denta — Dentist Orifjon (Mansurov Orifjon Alimbekovich) Practice",
+      uz: "Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli",
+      ru: "Приём Стоматолога Орифжона (Мансурова Орифжона Алимбековича)",
+      en: "Dentist Orifjon (Mansurov Orifjon Alimbekovich) Practice",
     },
     badge: {
-      uz: "Eco Denta · Andijon",
-      ru: "Eco Denta · Андижан",
-      en: "Eco Denta · Andijan",
+      uz: "Stomatolog Orifjon · Andijon",
+      ru: "Стоматолог Орифжон · Андижан",
+      en: "Dentist Orifjon · Andijan",
     },
     city: {
       uz: "Andijon",

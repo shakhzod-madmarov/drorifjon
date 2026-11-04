@@ -155,7 +155,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             {/* Logo */}
             <NavLink
               to={to("/")}
-              aria-label="Eco Denta bosh sahifa"
+              aria-label="Stomatolog Orifjon bosh sahifa"
               className="shrink-0 focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
             >
               <Logo className="h-8 sm:h-9" />

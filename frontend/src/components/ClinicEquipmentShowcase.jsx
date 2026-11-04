@@ -19,26 +19,26 @@ export default function ClinicEquipmentShowcase() {
 
   const T = {
     uz: {
-      badge: "ZAMONAVIY KLINIKA VA STERILIZATSIYA",
+      badge: "ZAMONAVIY USKUNALAR VA MUTLAQ STERILIK",
       title: "Zamonaviy Jihozlar va Mutlaq Steril Muhit",
       subtitle:
-        "Eco Denta stomatologiya xonasida qo'llaniladigan ergonomik uskunalar, 100% Anti-SPID/Anti-Gepatit avtoklav sterilizatsiyasi va original MegaGen biotitan tizimlari.",
+        "Stomatolog Orifjon qabulxonasida qo'llaniladigan ergonomik uskunalar, 100% Anti-SPID/Anti-Gepatit B-sinf avtoklav sterilizatsiyasi va original MegaGen biotitan tizimlari.",
       viewPhoto: "Suratni ko'rish",
       items: [
         {
           id: "operatory",
-          category: "Eco Denta Operatsiyasi",
+          category: "Stomatologiya Qabulxonasi",
           warrantyBadge: "Ergonomik & Qulay",
           pill: "Zamonaviy Kreslo",
           icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
-          title: "Eco Denta Operatsion Xonasi va Qulay Bemor Kreslosi",
+          title: "Stomatolog Orifjon Davolash Xonasi va Qulay Bemor Kreslosi",
           desc: "Zamonaviy stomatologik qurilma, mikro-motorli sokin asboblar va sensorli soyasiz LED chiroq. Bemor uchun qulay anatomiya davolash jarayonini xotirjam va charchoqsiz o'tishini ta'minlaydi.",
           image: assets.clinic_room,
           specs: [
             "Zamonaviy ergonomik stomatologik kreslo va yumshoq bosh suyanchig'i",
             "Sensorli soyasiz LED operatsion yoritgich",
             "Sokin va tebranishsiz zamonaviy mikromotor va turbinalar",
-            "Eco Denta yorug'lik belgisi va toza sanitar muhit",
+            "Toza, steril va zamonaviy sanitariya muhiti",
           ],
         },
         {
@@ -76,26 +76,26 @@ export default function ClinicEquipmentShowcase() {
       ],
     },
     ru: {
-      badge: "СОВРЕМЕННАЯ КЛИНИКА И СТЕРИЛИЗАЦИЯ",
+      badge: "СОВРЕМЕННОЕ ОСНАЩЕНИЕ И СТЕРИЛИЗАЦИЯ",
       title: "Современное Оснащение и Абсолютная Стерильность",
       subtitle:
-        "Эргономичное оборудование в кабинете Eco Denta, многоступенчатая стерилизация по стандартам Анти-СПИД / Анти-Гепатит и оригинальные биотитановые системы MegaGen.",
+        "Эргономичное оборудование в кабинете Стоматолога Орифжона, многоступенчатая стерилизация по стандартам Анти-СПИД / Анти-Гепатит и оригинальные биотитановые системы MegaGen.",
       viewPhoto: "Смотреть фото",
       items: [
         {
           id: "operatory",
-          category: "Кабинет Eco Denta",
+          category: "Кабинет Врача",
           warrantyBadge: "Эргономика и Комфорт",
           pill: "Современное Кресло",
           icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
-          title: "Операционный Кабинет Eco Denta и Анатомическое Кресло",
+          title: "Операционный Кабинет Стоматолога Орифжона и Анатомическое Кресло",
           desc: "Современная стоматологическая установка, бесшумные микромоторы и бестеневой сенсорный LED-светильник. Анатомическое кресло обеспечивает максимальный комфорт и расслабление во время процедур.",
           image: assets.clinic_room,
           specs: [
             "Анатомическое кресло с мягким подголовником и плавным ходом",
             "Сенсорный бестеневой хирургический LED-светильник",
             "Бесшумные высокоточные микромоторы и турбины без вибраций",
-            "Фирменное световое панно Eco Denta и безупречная санитария",
+            "Безупречная санитария и комфортная атмосфера",
           ],
         },
         {
@@ -133,26 +133,26 @@ export default function ClinicEquipmentShowcase() {
       ],
     },
     en: {
-      badge: "MODERN CLINIC & STERILIZATION",
+      badge: "MODERN OPERATORY & STERILIZATION",
       title: "State-of-the-Art Operatory & Absolute Sterility",
       subtitle:
-        "Ergonomic clinical equipment in the Eco Denta operatory, hospital-grade Class-B autoclave infection control, and authentic MegaGen biotitanium implant systems.",
+        "Ergonomic clinical equipment in Dentist Orifjon's operatory, hospital-grade Class-B autoclave infection control, and authentic MegaGen biotitanium implant systems.",
       viewPhoto: "Inspect photo",
       items: [
         {
           id: "operatory",
-          category: "Eco Denta Operatory",
+          category: "Dental Operatory",
           warrantyBadge: "Ergonomic & Gentle",
           pill: "Modern Dental Unit",
           icon: <IconSparkleStar className="w-6 h-6 text-primary" />,
-          title: "Eco Denta Dental Operatory & Ergonomic Patient Unit",
+          title: "Dentist Orifjon Operatory & Ergonomic Patient Unit",
           desc: "Advanced dental operatory unit with quiet precision micromotors and shadowless sensor LED illumination. Ergonomic patient contouring guarantees a calm, stress-free clinical experience.",
           image: assets.clinic_room,
           specs: [
             "Ergonomic contour dental chair with adaptive headrest",
             "Touchless shadowless surgical LED clinical illumination",
             "Whisper-quiet vibration-free high-precision turbines",
-            "Illuminated Eco Denta branding & pristine operatory interior",
+            "Pristine operatory interior and tranquil clinical setting",
           ],
         },
         {

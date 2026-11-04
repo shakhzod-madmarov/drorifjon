@@ -4,22 +4,29 @@ import { useLanguage } from "../context/LanguageContext";
 const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
   const { lang } = useLanguage();
 
-  const doctorLabel =
+  const titlePrefix =
     lang === "ru"
-      ? "Стоматолог Орифжон"
+      ? "Стоматолог"
       : lang === "en"
-      ? "Dentist Orifjon"
-      : "Stomatolog Orifjon";
+      ? "Dentist"
+      : "Stomatolog";
 
-  const altText =
+  const doctorName =
     lang === "ru"
-      ? "Eco Denta — Стоматолог Орифжон (Андижан)"
+      ? "Орифжон"
+      : "Orifjon";
+
+  const altText = `${titlePrefix} ${doctorName} — Andijon`;
+
+  const subText =
+    lang === "ru"
+      ? "Современная Стоматология · Андижан"
       : lang === "en"
-      ? "Eco Denta — Dentist Orifjon (Andijan)"
-      : "Eco Denta — Stomatolog Orifjon (Andijon)";
+      ? "Modern Dentistry · Andijan"
+      : "Zamonaviy Stomatologiya · Andijon";
 
   return (
-    <div className="inline-flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 select-none group min-w-0">
+    <div className="inline-flex items-center gap-2 sm:gap-2.5 select-none group min-w-0">
       {/* Pristine Logo Emblem */}
       <div className="relative shrink-0 transition-transform duration-300 group-hover:scale-105">
         <img
@@ -32,22 +39,22 @@ const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
         />
       </div>
 
-      {/* Brand Name Typography */}
+      {/* Brand Name Typography — STOMATOLOG ORIFJON as PRIMARY NAME */}
       <div className="flex flex-col leading-none text-left min-w-0 justify-center">
         <span
-          className={`font-serif-classic text-[15px] 2xs:text-[17.5px] sm:text-[20px] font-black tracking-tight truncate flex items-center gap-1 ${
+          className={`font-serif-classic text-[16px] 2xs:text-[18px] sm:text-[21px] font-black tracking-tight truncate flex items-center gap-1.5 ${
             inverted ? "text-white" : "text-slate-900"
           }`}
         >
-          <span className="font-extrabold tracking-tight">Eco</span>
-          <span className="text-primary font-black">Denta</span>
+          <span>{titlePrefix}</span>
+          <span className="text-primary font-black">{doctorName}</span>
         </span>
         <span
-          className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-0.5 ${
+          className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-1 ${
             inverted ? "text-teal-300" : "text-slate-500"
           }`}
         >
-          {doctorLabel}
+          {subText}
         </span>
       </div>
     </div>

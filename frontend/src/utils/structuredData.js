@@ -327,9 +327,9 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "@type": "WebSite",
     "@id": `${SITE_ORIGIN}/#website`,
     "url": `${SITE_ORIGIN}/`,
-    "name": "Eco Denta — Stomatolog Orifjon",
+    "name": "Stomatolog Orifjon",
     "alternateName": [
-      "Stomatolog Orifjon",
+      "Stomatolog Orifjon (Mansurov Orifjon)",
       "Eco Denta Andijon",
       "Mansurov Orifjon",
       "Стоматолог Орифжон",

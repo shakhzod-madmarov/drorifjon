@@ -35,7 +35,7 @@ const HeroSection = ({ onOpenBooking }) => {
 
   const T = {
     uz: {
-      eyebrow: "ANDIJON · ECO DENTA · 100% OG'RIQSIZ",
+      eyebrow: "STOMATOLOG ORIFJON · ANDIJON · 100% OG'RIQSIZ",
       h1a: "Tabassumingiz —",
       h1b: "bizning g'ururimiz",
       subtitle:
@@ -52,7 +52,7 @@ const HeroSection = ({ onOpenBooking }) => {
       tag: "MegaGen Sertifikat · 2025",
     },
     ru: {
-      eyebrow: "АНДИЖАН · ECO DENTA · 100% БЕЗ БОЛИ",
+      eyebrow: "СТОМАТОЛОГ ОРИФЖОН · АНДИЖАН · 100% БЕЗ БОЛИ",
       h1a: "Ваша улыбка —",
       h1b: "наша гордость",
       subtitle:
@@ -69,7 +69,7 @@ const HeroSection = ({ onOpenBooking }) => {
       tag: "Сертификат MegaGen · 2025",
     },
     en: {
-      eyebrow: "ANDIJAN · ECO DENTA · 100% PAINLESS",
+      eyebrow: "DENTIST ORIFJON · ANDIJAN · 100% PAINLESS",
       h1a: "Your smile is",
       h1b: "our pride",
       subtitle:
@@ -248,7 +248,7 @@ const HeroSection = ({ onOpenBooking }) => {
                     Mansurov Orifjon
                   </p>
                   <p className="text-teal-300 text-xs font-semibold mt-0.5">
-                    Eco Denta · Stomatolog-Implantolog · Andijon
+                    Vrach Stomatolog-Implantolog · Andijon
                   </p>
                 </div>
               </div>
