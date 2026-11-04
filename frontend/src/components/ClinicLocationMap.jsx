@@ -9,7 +9,6 @@ import {
   IconPhone,
   IconTelegram,
   IconInstagram,
-  IconShieldCheck,
 } from "./MedicalIcons";
 
 const ClinicLocationMap = ({ compact = false }) => {

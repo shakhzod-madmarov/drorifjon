@@ -5,7 +5,6 @@ import {
   IconShieldCheck,
   IconSparkleStar,
   IconAward,
-  IconCheckCircle,
 } from "./MedicalIcons";
 
 /**

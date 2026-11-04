@@ -275,30 +275,6 @@ export const DOCTOR_INFO = {
 
 export const getYearsOfExperience = () => 20;
 
-export const OPENING_HOURS = {
-  weekdays: { opens: "08:30", closes: "18:30" },
-  labels: {
-    uz: {
-      days: "Dushanba – Shanba",
-      hours: "08:30 – 18:30",
-      full: "Dushanba – Shanba: 08:30 – 18:30",
-      sunday: "Yakshanba — oldindan yozilish bo'yicha",
-    },
-    ru: {
-      days: "Понедельник – Суббота",
-      hours: "08:30 – 18:30",
-      full: "Понедельник – Суббота: 08:30 – 18:30",
-      sunday: "Воскресенье — по предварительной записи",
-    },
-    en: {
-      days: "Monday – Saturday",
-      hours: "08:30 – 18:30",
-      full: "Monday – Saturday: 08:30 – 18:30",
-      sunday: "Sunday — by prior appointment",
-    },
-  },
-};
-
 export const getExperienceText = (lang = "uz") => {
   const years = getYearsOfExperience();
   if (lang === "ru") return `Более ${years} лет в медицине и стоматологии`;
@@ -331,5 +307,3 @@ export const getDoctorBrandName = (lang = "uz") => {
   if (lang === "en") return "Dentist Orifjon";
   return "Stomatolog Orifjon";
 };
-
-export const getDoctorShortName = () => "Orifjon";

@@ -8,7 +8,6 @@ import Seo from "../components/Seo";
 import { buildMedicalProcedureSchema } from "../utils/structuredData";
 import {
   IconCheckCircle,
-  IconClock,
   IconShieldCheck,
   IconPhone,
   IconSparkleStar,

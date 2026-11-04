@@ -18,20 +18,6 @@ export const buildBreadcrumbSchema = (crumbs, lang = "uz") => ({
   })),
 });
 
-export const buildFaqSchema = (faqItems, lang = "uz") => ({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${urlFor("/", lang)}#faq`,
-  "mainEntity": faqItems.map((item) => ({
-    "@type": "Question",
-    "name": item.q[lang] || item.q.uz,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": item.a[lang] || item.a.uz,
-    },
-  })),
-});
-
 const SERVICE_INDICATIONS = {
   "terapiya": {
     uz: "Tish kariesi, chuqur karies, pulpit va estetik restavratsiya",
@@ -332,37 +318,6 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
   return {
     "@context": "https://schema.org",
     ...contactPage,
-  };
-};
-
-export const buildPageWithBreadcrumbs = (pageType, path, title, lang = "uz", breadcrumbs = []) => {
-  const pageUrl = urlFor(path, lang);
-  const breadcrumbObj = breadcrumbs.length > 0 ? buildBreadcrumbSchema(breadcrumbs, lang) : null;
-
-  const page = {
-    "@type": pageType || "WebPage",
-    "@id": `${pageUrl}#webpage`,
-    "url": pageUrl,
-    "name": title,
-    "inLanguage": lang,
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": `${SITE_ORIGIN}/#website`,
-      "url": SITE_ORIGIN,
-      "name": DOCTOR_INFO.name,
-    },
-  };
-
-  if (breadcrumbObj) {
-    return {
-      "@context": "https://schema.org",
-      "@graph": [breadcrumbObj, page],
-    };
-  }
-
-  return {
-    "@context": "https://schema.org",
-    ...page,
   };
 };
 

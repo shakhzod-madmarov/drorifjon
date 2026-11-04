@@ -6,14 +6,10 @@ import {
   DentalBracesIcon,
   DentalVeneerCrown,
   DentalToothMolar,
-  DentalDenturesIcon,
-  DentalAlignersIcon,
-  DentalWhiteningZoom,
   DentalSurgeryExtraction,
   IconShieldCheck,
   IconClock,
   IconCheckCircle,
-  IconSparkleStar,
 } from "./MedicalIcons";
 import { useBooking } from "../context/BookingContext";
 

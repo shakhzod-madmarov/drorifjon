@@ -8,7 +8,6 @@
  */
 
 import { useState, useEffect } from "react";
-import { DOCTOR_INFO } from "../constants/doctor";
 import { sanitizePatientName, sanitizeNote, isValidIsoDate } from "../utils/security";
 
 export const DEFAULT_API_URL =

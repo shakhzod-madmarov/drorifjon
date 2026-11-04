@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { DOCTOR_INFO, getYearsOfExperience, getExperienceBadge } from "../constants/doctor";
 import { PAGE_SEO, PAGE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
@@ -15,8 +14,6 @@ import {
   IconShieldCheck,
   IconCheckCircle,
   IconPhone,
-  IconTelegram,
-  IconInstagram,
   IconGraduationCap,
 } from "../components/MedicalIcons";
 import Doctor3DCard from "../components/Doctor3DCard";

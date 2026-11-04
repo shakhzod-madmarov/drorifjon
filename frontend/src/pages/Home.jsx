@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
-import {
-  DOCTOR_INFO,
-  getYearsOfExperience,
-  getHeroTag,
-} from "../constants/doctor";
 import { PAGE_SEO, PAGE_KEYWORDS } from "../constants/seo";
 import Seo from "../components/Seo";
 import InlineBookingSection from "../components/InlineBookingSection";
@@ -19,21 +14,11 @@ import CertificatesShowcase from "../components/CertificatesShowcase";
 import ClinicEquipmentShowcase from "../components/ClinicEquipmentShowcase";
 import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import ClinicalTickerMarquee from "../components/ClinicalTickerMarquee";
-import Floating3DShapes from "../components/Floating3DShapes";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import PatientCareGuides from "../components/PatientCareGuides";
-import {
-  IconShieldCheck,
-  IconSparkleStar,
-  IconAward,
-  IconClock,
-  IconPhone,
-  IconCheckCircle,
-  IconGraduationCap,
-  IconTelegram,
-} from "../components/MedicalIcons";
+import { IconClock } from "../components/MedicalIcons";
 import Doctor3DCard from "../components/Doctor3DCard";
 
 /* ═══════════════════════════════════════════════════════════════════

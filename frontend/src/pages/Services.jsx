@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
-import { DOCTOR_INFO, getServicesTag } from "../constants/doctor";
 import { PAGE_SEO, PAGE_KEYWORDS } from "../constants/seo";
 import { SERVICES_CATALOG } from "../constants/servicesCatalog";
 import Seo from "../components/Seo";
@@ -11,12 +10,7 @@ import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import PatientCareGuides from "../components/PatientCareGuides";
 import Floating3DShapes from "../components/Floating3DShapes";
-import {
-  IconCheckCircle,
-  IconClock,
-  IconShieldCheck,
-  IconSparkleStar,
-} from "../components/MedicalIcons";
+import { IconClock } from "../components/MedicalIcons";
 
 const Services = ({ onOpenBooking }) => {
   const { lang } = useLanguage();

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { IconAward, IconCheckCircle, IconGraduationCap, IconSparkleStar } from "./MedicalIcons";
+import { IconAward, IconCheckCircle, IconGraduationCap } from "./MedicalIcons";
 import { useModalA11y } from "../hooks/useModalA11y";
 import { getA11yLabels } from "../constants/a11yLabels";
 

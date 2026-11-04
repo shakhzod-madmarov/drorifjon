@@ -1,6 +1,3 @@
-export const PHONE_PLACEHOLDER = "+998 (__) ___-__-__";
-export const UZ_PHONE_PATTERN = /^\+998\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}$/;
-
 // Official Uzbekistan mobile and regional landline operator prefixes
 export const UZ_OPERATOR_PREFIXES = new Set([
   "20", "33", "50", "55", "71", "72", "73", "74", "75", "76", "77", "79", "88", "90", "91", "93", "94", "95", "97", "98", "99"
@@ -69,23 +66,10 @@ export const formatUzPhone = (value = "", prevValue = "") => {
   return formatted;
 };
 
-export const normalizeUzPhone = (value = "") => {
-  const local = extractUzLocalPhoneDigits(value);
-  if (local.length !== 9) return null;
-  if (!isValidUzOperator(local) || isRepetitiveJunkPhone(local)) return null;
-  return `+998${local}`;
-};
-
 export const isUzPhoneComplete = (value = "") => {
   const local = extractUzLocalPhoneDigits(value);
   if (local.length !== 9) return false;
   if (!isValidUzOperator(local)) return false;
   if (isRepetitiveJunkPhone(local)) return false;
   return true;
-};
-
-export const handleUzPhonePaste = (event, setter) => {
-  event.preventDefault();
-  const paste = (event.clipboardData || window.clipboardData).getData("text");
-  setter(formatUzPhone(paste));
 };

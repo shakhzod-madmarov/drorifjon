@@ -9,8 +9,6 @@ import {
   DentalSurgeryExtraction,
   DentalWhiteningZoom,
   IconCheckCircle,
-  IconShieldCheck,
-  IconSparkleStar,
   IconClock,
   IconPhone,
 } from "./MedicalIcons";
