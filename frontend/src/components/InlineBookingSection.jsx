@@ -436,7 +436,7 @@ const InlineBookingSection = ({ initialService = null }) => {
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ["#FF9D50", "#1DCED8", "#55E07E", "#FFF9D8"],
+        colors: ["#0C6E5A", "#10B981", "#6366F1", "#F0FDFA"],
       });
     } catch (err) {
       if (err?.status === 409) {
@@ -453,7 +453,7 @@ const InlineBookingSection = ({ initialService = null }) => {
 
   if (isSuccess && bookingResult) {
     return (
-      <section id="booking" className="py-12 bg-white rounded-3xl border border-amber-200 shadow-luxury p-6 sm:p-10 text-center max-w-3xl mx-auto space-y-6">
+      <section id="booking" className="py-12 bg-white rounded-3xl border border-teal-200 shadow-luxury p-6 sm:p-10 text-center max-w-3xl mx-auto space-y-6">
         <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl font-black">
           ✓
         </div>
@@ -470,22 +470,22 @@ const InlineBookingSection = ({ initialService = null }) => {
         </div>
 
         {/* Appointment Summary */}
-        <div className="p-5 rounded-2xl bg-[#FFFDF9] border border-amber-200 text-left space-y-2.5 text-xs sm:text-sm">
-          <div className="flex justify-between border-b border-amber-100 pb-2">
+        <div className="p-5 rounded-2xl bg-[#F8FAFB] border border-teal-200 text-left space-y-2.5 text-xs sm:text-sm">
+          <div className="flex justify-between border-b border-slate-100 pb-2">
             <span className="text-slate-500">{t.summaryPatient}:</span>
             <span className="font-bold text-slate-900">{name}</span>
           </div>
-          <div className="flex justify-between border-b border-amber-100 pb-2">
+          <div className="flex justify-between border-b border-slate-100 pb-2">
             <span className="text-slate-500">{t.summaryPhone}:</span>
             <span className="font-bold text-slate-900">{phone}</span>
           </div>
           {dob && (
-            <div className="flex justify-between border-b border-amber-100 pb-2">
+            <div className="flex justify-between border-b border-slate-100 pb-2">
               <span className="text-slate-500">{t.summaryDob}:</span>
               <span className="font-medium text-slate-700">{dob}</span>
             </div>
           )}
-          <div className="flex justify-between border-b border-amber-100 pb-2">
+          <div className="flex justify-between border-b border-slate-100 pb-2">
             <span className="text-slate-500">{t.summaryService}:</span>
             <span className="font-bold text-primary">{serviceLabel}</span>
           </div>
@@ -497,7 +497,7 @@ const InlineBookingSection = ({ initialService = null }) => {
 
         {/* Telegram Action Card */}
         {bookingResult.telegramUrl && (
-          <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 via-sky-50 to-amber-50/50 border border-emerald-200/80 space-y-4 text-left shadow-xs">
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 via-sky-50 to-teal-50/50 border border-emerald-200/80 space-y-4 text-left shadow-xs">
             <div className="space-y-1 text-center sm:text-left">
               <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center justify-center sm:justify-start gap-2">
                 <span>{t.telegramCardTitle}</span>
@@ -570,9 +570,9 @@ const InlineBookingSection = ({ initialService = null }) => {
 
         {/* Fallback polite banner if online booking paused on relay */}
         {!isRelayEnabled && (
-          <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-50 via-white to-amber-50 border border-amber-300/80 text-xs text-amber-950 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
+          <div className="p-4 rounded-2xl bg-gradient-to-r from-teal-50 via-white to-teal-50 border border-teal-300/80 text-xs text-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
             <div className="flex items-center gap-2.5 text-left">
-              <span className="w-8 h-8 rounded-xl bg-amber-100 text-primary flex items-center justify-center shrink-0">
+              <span className="w-8 h-8 rounded-xl bg-teal-100 text-primary flex items-center justify-center shrink-0">
                 <IconPhone className="w-4 h-4 text-primary" />
               </span>
               <div>
@@ -582,7 +582,7 @@ const InlineBookingSection = ({ initialService = null }) => {
             </div>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="px-4 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
+              className="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
             >
               <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
               <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
@@ -616,7 +616,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 <span className="w-2 h-2 rounded-full bg-primary" />
                 <span>{t.serviceLabel}</span>
               </label>
-              <span className="text-[11px] font-bold text-primary bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/60">
+              <span className="text-[11px] font-bold text-primary bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200/60">
                 {lang === "uz" ? "5 Ta Asosiy Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}
               </span>
             </div>
@@ -744,10 +744,10 @@ const InlineBookingSection = ({ initialService = null }) => {
                     }}
                     className={`px-4 py-3 rounded-2xl text-xs font-bold shrink-0 border transition-all cursor-pointer text-left ${
                       isSelected
-                        ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white border-primary shadow-[0_6px_20px_rgba(255,157,80,0.35)] scale-105 ring-2 ring-primary/30"
+                        ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white border-primary shadow-[0_6px_20px_rgba(12, 110, 90, 0.35)] scale-105 ring-2 ring-primary/30"
                         : isFull
                         ? "bg-slate-50/90 text-slate-400 border-slate-200/90 hover:bg-slate-100"
-                        : "bg-white/95 text-slate-700 border-amber-200/80 hover:bg-amber-50/80 shadow-2xs hover:scale-102"
+                        : "bg-white/95 text-slate-700 border-teal-200/80 hover:bg-teal-50/80 shadow-2xs hover:scale-102"
                     }`}
                   >
                     <div className="flex items-center gap-1.5">
@@ -800,7 +800,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                     className={`py-2.5 px-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                       selectedTime === slot
                         ? "bg-gradient-to-r from-primary via-orange-500 to-primary text-white border-primary shadow-xs scale-105 ring-2 ring-primary/30"
-                        : "bg-white text-slate-800 border-amber-200/80 hover:bg-amber-50 hover:scale-102 shadow-2xs"
+                        : "bg-white text-slate-800 border-teal-200/80 hover:bg-teal-50 hover:scale-102 shadow-2xs"
                     }`}
                   >
                     {slot}
@@ -830,7 +830,7 @@ const InlineBookingSection = ({ initialService = null }) => {
           </div>
 
           {/* Step 3: Patient Form Fields */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-amber-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-100">
             {/* Full Name */}
             <div className="space-y-1.5">
               <label htmlFor="patient_full_name" className="block text-xs font-bold text-slate-700">
@@ -847,7 +847,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={t.namePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-teal-200 bg-[#F8FAFB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
 
@@ -866,7 +866,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={phone}
                 onChange={handlePhoneChange}
                 placeholder={t.phonePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-teal-200 bg-[#F8FAFB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
 
@@ -886,7 +886,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 min="1920-01-01"
                 max={todayStr}
                 placeholder={t.dobPlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-teal-200 bg-[#F8FAFB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
               <p className="text-[11px] text-slate-500 leading-tight">
                 {t.dobHint}
@@ -905,7 +905,7 @@ const InlineBookingSection = ({ initialService = null }) => {
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder={t.notePlaceholder}
-                className="w-full px-4 py-3 rounded-xl border border-amber-200 bg-[#FFFDF9] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
+                className="w-full px-4 py-3 rounded-xl border border-teal-200 bg-[#F8FAFB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary text-base sm:text-sm font-medium"
               />
             </div>
           </div>

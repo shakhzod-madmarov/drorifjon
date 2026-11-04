@@ -111,7 +111,7 @@ const Services = ({ onOpenBooking }) => {
           {filteredServices.map((service) => (
             <article
               key={service.id}
-              className="group relative rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+              className="group relative rounded-2xl sm:rounded-3xl bg-white border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-teal-300 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
               <div>
                 {/* Pure Photography Banner */}
@@ -134,7 +134,7 @@ const Services = ({ onOpenBooking }) => {
                       {service.category[lang]}
                     </span>
                     <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
-                      <IconClock className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <IconClock className="w-3.5 h-3.5 text-teal-500 shrink-0" />
                       <span>{service.duration[lang]}</span>
                     </span>
                   </div>
@@ -170,7 +170,7 @@ const Services = ({ onOpenBooking }) => {
               </div>
 
               {/* Footer Buttons with Shimmer Motion */}
-              <div className="p-6 pt-0 flex items-center justify-between gap-3 border-t border-amber-100/70 mt-2">
+              <div className="p-6 pt-0 flex items-center justify-between gap-3 border-t border-slate-100/70 mt-2">
                 <Link
                   to={to(`/services/${service.id}`)}
                   className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"
@@ -180,7 +180,7 @@ const Services = ({ onOpenBooking }) => {
                 </Link>
                 <button
                   onClick={() => onOpenBooking(service.id)}
-                  className="relative overflow-hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-md cursor-pointer hover:shadow-orange hover:-translate-y-0.5 transition-all group/cta select-none"
+                  className="relative overflow-hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-emerald-500 hover:brightness-110 text-white text-xs font-bold uppercase tracking-wider shadow-md cursor-pointer hover:shadow-orange hover:-translate-y-0.5 transition-all group/cta select-none"
                 >
                   <span className="absolute inset-0 w-1/2 h-full bg-white/25 -translate-x-full group-hover/cta:animate-shimmer-sweep pointer-events-none" />
                   <span className="relative z-10">

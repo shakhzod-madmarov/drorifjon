@@ -107,7 +107,7 @@ const BeforeAfterSlider = ({
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: tilt.active ? "transform 0.12s ease-out" : "transform 0.5s ease-out",
       }}
-      className="bg-white rounded-3xl p-3 sm:p-4 border border-amber-200/90 shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300 flex flex-col justify-between [transform-style:preserve-3d]"
+      className="bg-white rounded-3xl p-3 sm:p-4 border border-teal-200/90 shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300 flex flex-col justify-between [transform-style:preserve-3d]"
     >
       <div
         ref={containerRef}
@@ -161,7 +161,7 @@ const BeforeAfterSlider = ({
         {/* Interactive "Drag to compare" prompt (fades after interaction) */}
         {!hasInteracted && (
           <div className="absolute bottom-3 inset-x-0 flex justify-center pointer-events-none z-10 animate-bounce">
-            <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-200 text-[10px] font-bold shadow-md border border-amber-300/30 flex items-center gap-1.5">
+            <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-teal-200 text-[10px] font-bold shadow-md border border-teal-300/30 flex items-center gap-1.5">
               <span>↔</span>
               <span>{lang === "uz" ? "Suring va taqqoslang" : lang === "ru" ? "Потяните ползунок" : "Drag to compare"}</span>
             </span>
@@ -188,14 +188,14 @@ const BeforeAfterSlider = ({
       </div>
 
       {/* Preset Quick Snap Controls */}
-      <div className="flex items-center justify-between gap-1.5 pt-3 px-1 border-t border-amber-100/60 mt-2">
+      <div className="flex items-center justify-between gap-1.5 pt-3 px-1 border-t border-slate-100/60 mt-2">
         <button
           onClick={() => {
             setSliderPos(10);
             setHasInteracted(true);
           }}
           className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos < 25 ? "bg-primary text-white" : "bg-amber-50 text-slate-600 hover:bg-amber-100"
+            sliderPos < 25 ? "bg-primary text-white" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
           }`}
         >
           {defaultBefore}
@@ -206,7 +206,7 @@ const BeforeAfterSlider = ({
             setHasInteracted(true);
           }}
           className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos >= 25 && sliderPos <= 75 ? "bg-amber-200 text-slate-800" : "bg-amber-50 text-slate-600 hover:bg-amber-100"
+            sliderPos >= 25 && sliderPos <= 75 ? "bg-teal-200 text-slate-800" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
           }`}
         >
           50 / 50
@@ -217,7 +217,7 @@ const BeforeAfterSlider = ({
             setHasInteracted(true);
           }}
           className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos > 75 ? "bg-primary text-white" : "bg-amber-50 text-slate-600 hover:bg-amber-100"
+            sliderPos > 75 ? "bg-primary text-white" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
           }`}
         >
           {defaultAfter}

@@ -28,11 +28,11 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
   }[lang];
 
   return (
-    <section aria-labelledby="faq-section-heading" className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200 p-3.5 2xs:p-5 sm:p-8 lg:p-10">
+    <section aria-labelledby="faq-section-heading" className="py-8 sm:py-16 bg-[#F8FAFB] rounded-2xl sm:rounded-3xl border border-teal-200 p-3.5 2xs:p-5 sm:p-8 lg:p-10">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-2">
-          <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-amber-100 text-amber-900 border border-amber-300">
-            <IconSparkleStar className="w-4 h-4 text-brandOrange" />
+          <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-teal-100 text-teal-900 border border-teal-300">
+            <IconSparkleStar className="w-4 h-4 text-primary" />
             <span>{badgeText || defaultBadge}</span>
           </span>
           <h2 id="faq-section-heading" className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
@@ -49,12 +49,12 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-amber-200/90 overflow-hidden shadow-2xs transition-all"
+                className="bg-white rounded-2xl border border-teal-200/90 overflow-hidden shadow-2xs transition-all"
               >
                 <button
                   id={`faq-btn-${idx}`}
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus:bg-amber-50/50"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus:bg-teal-50/50"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${idx}`}
                 >
@@ -62,7 +62,7 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
                     {item.q[lang] || item.q.uz}
                   </span>
                   <span
-                    className={`w-8 h-8 rounded-xl bg-amber-50 flex items-center justify-center text-primary font-bold transition-transform shrink-0 ${
+                    className={`w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center text-primary font-bold transition-transform shrink-0 ${
                       isOpen ? "rotate-180 bg-primary text-white" : ""
                     }`}
                   >
@@ -74,7 +74,7 @@ const FaqAccordion = ({ items, badgeText, title, subtitle }) => {
                     id={`faq-answer-${idx}`}
                     role="region"
                     aria-labelledby={`faq-btn-${idx}`}
-                    className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-amber-100/70 pt-3"
+                    className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100/70 pt-3"
                   >
                     {item.a[lang] || item.a.uz}
                   </div>

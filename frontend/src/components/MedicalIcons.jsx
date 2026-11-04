@@ -14,13 +14,13 @@ export const IconLocationPin = ({ className = "w-4 h-4 text-red-500" }) => (
   </svg>
 );
 
-export const IconSparkleStar = ({ className = "w-4 h-4 text-amber-400" }) => (
+export const IconSparkleStar = ({ className = "w-4 h-4 text-teal-400" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/>
   </svg>
 );
 
-export const IconClock = ({ className = "w-4 h-4 text-amber-500" }) => (
+export const IconClock = ({ className = "w-4 h-4 text-teal-500" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"/>
     <polyline points="12 6 12 12 16 14"/>
@@ -54,7 +54,7 @@ export const IconCheckCircle = ({ className = "w-4 h-4 text-emerald-500" }) => (
   </svg>
 );
 
-export const IconAward = ({ className = "w-4 h-4 text-amber-500" }) => (
+export const IconAward = ({ className = "w-4 h-4 text-teal-500" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="8" r="7"/>
     <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>

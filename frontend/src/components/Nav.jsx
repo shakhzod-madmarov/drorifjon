@@ -197,8 +197,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                       className={({ isActive }) =>
                         `inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[13.5px] font-semibold transition-colors duration-150 ${
                           isActive
-                            ? "text-primary font-bold bg-amber-50/80"
-                            : "text-slate-700 hover:text-primary hover:bg-stone-50"
+                            ? "text-primary font-bold bg-teal-50/80"
+                            : "text-slate-700 hover:text-primary hover:bg-slate-50"
                         }`
                       }
                     >
@@ -231,9 +231,9 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                             key={spec.id}
                             to={to(spec.path)}
                             onClick={() => setServicesDropdown(false)}
-                            className="group flex items-center gap-3 p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors"
+                            className="group flex items-center gap-3 p-2.5 rounded-xl hover:bg-teal-50/60 transition-colors"
                           >
-                            <span className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200/80 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all shadow-2xs">
+                            <span className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-200/80 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all shadow-2xs">
                               {spec.icon}
                             </span>
                             <div className="min-w-0 flex-1 text-left">
@@ -280,8 +280,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                   className={({ isActive }) =>
                     `px-3.5 py-2 rounded-xl text-[13.5px] font-semibold transition-colors duration-150 ${
                       isActive
-                        ? "text-primary font-bold bg-amber-50/80"
-                        : "text-slate-700 hover:text-primary hover:bg-stone-50"
+                        ? "text-primary font-bold bg-teal-50/80"
+                        : "text-slate-700 hover:text-primary hover:bg-slate-50"
                     }`
                   }
                 >
@@ -344,7 +344,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             {/* Direct Phone Dial (Desktop) */}
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="hidden xl:inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-stone-50 hover:bg-amber-50 border border-stone-200 hover:border-amber-200 transition-colors whitespace-nowrap group"
+              className="hidden xl:inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-primary px-3 py-2 rounded-xl bg-stone-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-200 transition-colors whitespace-nowrap group"
             >
               <span className="w-5 h-5 rounded-md bg-primary text-white flex items-center justify-center shadow-xs">
                 <IconPhone className="w-3 h-3 text-white" />
@@ -358,7 +358,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               className={`inline-flex items-center gap-1.5 px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-extrabold tracking-wide uppercase transition-all duration-200 cursor-pointer shadow-sm group select-none whitespace-nowrap ${
                 isBookingActive
                   ? "bg-slate-900 text-white ring-2 ring-primary"
-                  : "bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white shadow-[0_4px_14px_rgba(255,157,80,0.3)] hover:shadow-[0_6px_18px_rgba(255,157,80,0.45)] active:scale-98"
+                  : "bg-gradient-to-r from-primary to-emerald-500 hover:from-primary-hover hover:to-emerald-600 text-white shadow-[0_4px_14px_rgba(12,110,90,0.3)] hover:shadow-[0_6px_18px_rgba(12,110,90,0.45)] active:scale-98"
               }`}
             >
               <span className="hidden sm:inline">
@@ -413,15 +413,15 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           ref={drawerRef}
           id="mobile-navigation-drawer"
           tabIndex={-1}
-          className="fixed inset-0 h-screen h-[100dvh] z-50 lg:hidden flex flex-col bg-[#FFFDF9] outline-none animate-in fade-in duration-200"
+          className="fixed inset-0 h-screen h-[100dvh] z-50 lg:hidden flex flex-col bg-white outline-none animate-in fade-in duration-200"
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between p-3.5 2xs:p-4 border-b border-amber-200/80 bg-white">
+          <div className="flex items-center justify-between p-3.5 2xs:p-4 border-b border-slate-200 bg-white">
             <Logo className="h-7.5 2xs:h-8" />
             <button
               onClick={closeDrawer}
               aria-label={a11y.closeMenu}
-              className="w-9 h-9 2xs:w-10 2xs:h-10 flex items-center justify-center rounded-xl bg-amber-50 text-slate-700 hover:bg-amber-100 transition-colors cursor-pointer touch-manipulation active:scale-95"
+              className="w-9 h-9 2xs:w-10 2xs:h-10 flex items-center justify-center rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors cursor-pointer touch-manipulation active:scale-95"
             >
               <svg
                 className="w-5 h-5"
@@ -438,7 +438,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           {/* Drawer Body */}
           <div className="flex-1 overflow-y-auto p-3.5 2xs:p-4 space-y-3.5">
             {/* Prominent 3-Language Selector Card */}
-            <div className="p-3 rounded-2xl bg-white border border-amber-200/80 shadow-2xs space-y-1.5">
+            <div className="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
               <div className="flex items-center justify-between px-1">
                 <span className="text-[10px] font-black uppercase tracking-wider text-slate-400">
                   {lang === "uz" ? "Tilni tanlang" : lang === "ru" ? "Выберите язык" : "Select language"}
@@ -447,7 +447,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                   🌐 3 Tilda / На 3 языках
                 </span>
               </div>
-              <div className="grid grid-cols-3 gap-1.5 bg-amber-50/70 p-1 rounded-xl border border-amber-200/60">
+              <div className="grid grid-cols-3 gap-1.5 bg-slate-50 p-1 rounded-xl border border-slate-200/60">
                 {[
                   { code: "uz", name: "O'zbekcha", flag: "🇺🇿" },
                   { code: "ru", name: "Русский", flag: "🇷🇺" },
@@ -458,7 +458,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                     onClick={() => changeLanguage(item.code)}
                     className={`py-2 px-1 text-center rounded-lg text-xs font-bold transition-all touch-manipulation flex flex-col items-center justify-center gap-0.5 cursor-pointer ${
                       lang === item.code
-                        ? "bg-white text-primary shadow-xs border border-amber-300 font-black scale-102"
+                        ? "bg-white text-primary shadow-xs border border-teal-300 font-black scale-102"
                         : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
@@ -470,7 +470,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             </div>
 
             {/* Live Acceptance Status Card */}
-            <div className="p-3 2xs:p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-amber-500/10 to-transparent border border-emerald-300/60 flex flex-wrap items-center justify-between gap-2">
+            <div className="p-3 2xs:p-3.5 rounded-2xl bg-gradient-to-r from-teal-500/10 via-emerald-500/10 to-transparent border border-teal-300/60 flex flex-wrap items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="text-xs font-black text-slate-900">
                   {lang === "uz" ? "Qabul Ochiq · Andijon" : lang === "ru" ? "Приём открыт · Андижан" : "Accepting Patients"}
@@ -494,7 +494,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                     `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-primary text-white shadow-xs"
-                        : "text-slate-800 hover:bg-amber-100/60"
+                        : "text-slate-800 hover:bg-teal-50/60"
                     }`
                   }
                 >
@@ -534,10 +534,10 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             </div>
 
             {/* Direct Connect Buttons */}
-            <div className="pt-2 border-t border-amber-200/70 space-y-2">
+            <div className="pt-2 border-t border-slate-200 space-y-2">
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-amber-50 border border-amber-200/90 text-slate-900 font-bold text-xs hover:bg-amber-100 transition-colors"
+                className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-teal-50 border border-teal-200/90 text-slate-900 font-bold text-xs hover:bg-teal-100 transition-colors"
               >
                 <span className="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
                   <IconPhone className="w-3.5 h-3.5 text-white" />
@@ -563,7 +563,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 p-2.5 2xs:p-3 rounded-xl bg-pink-50 border border-pink-300 text-pink-950 font-bold text-xs hover:bg-pink-100 transition-colors"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0">
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-teal-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0">
                   <IconInstagram className="w-3.5 h-3.5 text-white" />
                 </span>
                 <span className="truncate">Instagram: @dr_orifjon</span>
@@ -572,13 +572,13 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
           </div>
 
           {/* Drawer Footer Book Button (Sticky Bottom with Safe-Area Inset) */}
-          <div className="p-3 2xs:p-4 border-t border-amber-200/80 bg-white pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
+          <div className="p-3 2xs:p-4 border-t border-slate-200 bg-white pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
             <button
               onClick={() => {
                 closeDrawer();
                 handleBookClick();
               }}
-              className="w-full py-3 2xs:py-3.5 rounded-xl bg-gradient-to-r from-primary to-orange-500 hover:brightness-110 text-white text-center font-extrabold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 cursor-pointer touch-manipulation active:scale-98"
+              className="w-full py-3 2xs:py-3.5 rounded-xl bg-gradient-to-r from-primary to-emerald-500 hover:brightness-110 text-white text-center font-extrabold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 cursor-pointer touch-manipulation active:scale-98"
             >
               <span>
                 {lang === "uz"

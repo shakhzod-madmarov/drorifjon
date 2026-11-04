@@ -56,7 +56,7 @@ const Booking = () => {
             <span className="px-3.5 py-1 rounded-full bg-stone-100 text-slate-800 text-xs font-bold border border-stone-200">
               {DOCTOR_INFO.name}
             </span>
-            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-bold border border-amber-200">
+            <span className="px-3 py-1 rounded-full bg-teal-50 text-teal-900 text-xs font-bold border border-teal-200">
               {years} {lang === "uz" ? "Yillik Tajriba" : lang === "ru" ? "Лет Опыта" : "Years Experience"}
             </span>
           </div>
@@ -102,7 +102,7 @@ const Booking = () => {
           </div>
         </div>
 
-        <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs space-y-2 shrink-0 text-center sm:text-left">
+        <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 text-xs space-y-2 shrink-0 text-center sm:text-left">
           <p className="font-bold text-slate-900">{hours.full}</p>
           <p className="text-slate-500">{hours.sunday}</p>
           <a

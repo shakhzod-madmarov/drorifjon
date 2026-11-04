@@ -154,12 +154,12 @@ const ServiceDetail = () => {
       </nav>
 
       {/* Hero Service Showcase — Simple Classic Luxury */}
-      <header className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden bg-white p-3.5 2xs:p-5 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-amber-200/90">
+      <header className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden bg-white p-3.5 2xs:p-5 sm:p-8 lg:p-10 shadow-[0_12px_45px_rgba(20,30,40,0.06)] border border-teal-200/90">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left: Clinical Information & CTA */}
           <div className="lg:col-span-7 space-y-5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-slate-800 text-[11px] font-bold uppercase tracking-wider border border-amber-200 shadow-2xs">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-slate-800 text-[11px] font-bold uppercase tracking-wider border border-teal-200 shadow-2xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 <span>{service.badge?.[lang] || service.category[lang]}</span>
               </span>
@@ -217,7 +217,7 @@ const ServiceDetail = () => {
               </button>
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-amber-200 transition-colors whitespace-nowrap"
+                className="px-5 py-3.5 rounded-2xl bg-teal-50 hover:bg-teal-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-teal-200 transition-colors whitespace-nowrap"
               >
                 <IconPhone className="w-4 h-4 text-primary" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -227,7 +227,7 @@ const ServiceDetail = () => {
 
           {/* Right: High-Res Clinical Photography Showcase */}
           <div className="lg:col-span-5">
-            <div className="group relative rounded-3xl overflow-hidden bg-slate-100 border border-amber-200/80 shadow-md">
+            <div className="group relative rounded-3xl overflow-hidden bg-slate-100 border border-teal-200/80 shadow-md">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={service.image}
@@ -246,13 +246,13 @@ const ServiceDetail = () => {
 
       {/* Highlights & Features */}
       <section aria-labelledby="service-highlights-heading" className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-6 sm:p-8 rounded-3xl bg-white/95 backdrop-blur-sm border border-amber-300/80 shadow-luxury space-y-4">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white/95 backdrop-blur-sm border border-teal-300/80 shadow-luxury space-y-4">
           <h2 id="service-highlights-heading" className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz" ? "Muolajaning Asosiy Afzalliklari" : lang === "ru" ? "Преимущества Методики" : "Clinical Highlights"}
           </h2>
           <div className="space-y-3 pt-2">
             {service.highlights[lang].map((hl, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-3 rounded-2xl bg-amber-50/50 border border-amber-200/50">
+              <div key={idx} className="flex items-start gap-3 p-3 rounded-2xl bg-teal-50/50 border border-teal-200/50">
                 <IconCheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed">{hl}</span>
               </div>
@@ -260,25 +260,25 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-amber-200 shadow-sm space-y-5 flex flex-col justify-between">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-teal-200 shadow-sm space-y-5 flex flex-col justify-between">
           <div className="space-y-4">
             <h2 id="service-warranty-heading" className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-classic">
               {lang === "uz" ? "Klinik Kafolat & Muddat" : lang === "ru" ? "Сроки и Гарантия" : "Timeline & Warranty"}
             </h2>
             <div className="space-y-3 pt-1">
-              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
+              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#F8FAFB] border border-teal-200">
                 <span className="text-xs text-slate-600 font-semibold">
                   {lang === "uz" ? "Davomiyligi:" : lang === "ru" ? "Время приёма:" : "Estimated time:"}
                 </span>
                 <span className="text-xs sm:text-sm font-bold text-slate-900">{service.duration[lang]}</span>
               </div>
-              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
+              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#F8FAFB] border border-teal-200">
                 <span className="text-xs text-slate-600 font-semibold">
                   {lang === "uz" ? "Rasmiy Kafolat:" : lang === "ru" ? "Гарантия:" : "Clinical warranty:"}
                 </span>
                 <span className="text-xs sm:text-sm font-bold text-emerald-700">{service.warranty[lang]}</span>
               </div>
-              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFFDF9] border border-amber-200">
+              <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#F8FAFB] border border-teal-200">
                 <span className="text-xs text-slate-600 font-semibold">
                   {lang === "uz" ? "Shifokor:" : lang === "ru" ? "Врач:" : "Dentist:"}
                 </span>
@@ -302,11 +302,11 @@ const ServiceDetail = () => {
 
       {/* Clinical Indications Section */}
       {service.indications?.[lang] && service.indications[lang].length > 0 && (
-        <section aria-labelledby="indications-heading" className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-[#FFFDF9] border border-amber-200 shadow-2xs space-y-6">
+        <section aria-labelledby="indications-heading" className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-[#F8FAFB] border border-teal-200 shadow-2xs space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-amber-100 text-amber-900 border border-amber-300">
-                <IconSparkleStar className="w-3.5 h-3.5 text-brandOrange" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-teal-100 text-teal-900 border border-teal-300">
+                <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
                 <span>
                   {lang === "uz"
                     ? "KLINIK KO'RSATMALAR"
@@ -342,9 +342,9 @@ const ServiceDetail = () => {
             {service.indications[lang].map((ind, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-amber-200/80 shadow-2xs hover:border-amber-300 hover:shadow-xs transition-all"
+                className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-teal-200/80 shadow-2xs hover:border-teal-300 hover:shadow-xs transition-all"
               >
-                <div className="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   0{idx + 1}
                 </div>
                 <span className="text-xs sm:text-sm font-semibold text-slate-900 leading-snug">
@@ -371,7 +371,7 @@ const ServiceDetail = () => {
           {steps.map((st) => (
             <div
               key={st.num}
-              className="p-5 rounded-3xl bg-white border border-amber-200 shadow-2xs space-y-2 hover:-translate-y-1.5 hover:shadow-md hover:border-amber-300 transition-all duration-300 [transform-style:preserve-3d]"
+              className="p-5 rounded-3xl bg-white border border-teal-200 shadow-2xs space-y-2 hover:-translate-y-1.5 hover:shadow-md hover:border-teal-300 transition-all duration-300 [transform-style:preserve-3d]"
             >
               <span className="w-8 h-8 rounded-xl bg-primary text-white text-xs font-bold flex items-center justify-center shadow-xs">
                 {st.num}
@@ -417,7 +417,7 @@ const ServiceDetail = () => {
       )}
 
       {/* Bottom Urgent CTA Box */}
-      <section aria-labelledby="urgent-cta-heading" className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section aria-labelledby="urgent-cta-heading" className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-teal-500/10 via-teal-400/5 to-transparent border border-teal-200 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center sm:text-left">
           <h2 id="urgent-cta-heading" className="text-lg sm:text-xl font-bold text-slate-900 font-serif-classic">
             {lang === "uz"
@@ -443,7 +443,7 @@ const ServiceDetail = () => {
           </button>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="px-4 py-3 rounded-2xl bg-white hover:bg-amber-50 text-slate-800 border border-amber-200 text-xs font-bold flex items-center gap-2 transition-all"
+            className="px-4 py-3 rounded-2xl bg-white hover:bg-teal-50 text-slate-800 border border-teal-200 text-xs font-bold flex items-center gap-2 transition-all"
           >
             <IconPhone className="w-4 h-4 text-primary" />
             <span>{DOCTOR_INFO.phoneDisplay}</span>

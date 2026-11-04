@@ -59,7 +59,7 @@ const FloatingActionHub = () => {
             href={DOCTOR_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-teal-500 via-rose-500 to-purple-600 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
           >
             <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconInstagram className="w-4 h-4 text-white" />
@@ -70,7 +70,7 @@ const FloatingActionHub = () => {
           {/* Direct Phone */}
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-[#FF9D50] to-[#FF8030] hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-primary to-teal-500 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
           >
             <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconPhone className="w-4 h-4 text-white" />
@@ -85,7 +85,7 @@ const FloatingActionHub = () => {
         {/* Desktop Quick Phone Pill */}
         <a
           href={DOCTOR_INFO.phoneHref}
-          className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-amber-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5 whitespace-nowrap"
+          className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-teal-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5 whitespace-nowrap"
         >
           <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
             <IconPhone className="w-3.5 h-3.5 text-primary" />
@@ -105,7 +105,7 @@ const FloatingActionHub = () => {
             aria-label={expanded ? a11y.closeQuickActions : a11y.openQuickActions}
             aria-expanded={expanded}
             aria-controls="floating-action-menu"
-            className="relative w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-[#FF8030] hover:brightness-105 text-white shadow-luxury-lg flex items-center justify-center text-lg font-bold cursor-pointer transition-all duration-300 hover:scale-105 border-2 border-white/40 active:scale-95 shadow-[0_10px_25px_-5px_rgba(255,157,80,0.4)]"
+            className="relative w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-[#FF8030] hover:brightness-105 text-white shadow-luxury-lg flex items-center justify-center text-lg font-bold cursor-pointer transition-all duration-300 hover:scale-105 border-2 border-white/40 active:scale-95 shadow-[0_10px_25px_-5px_rgba(12, 110, 90, 0.4)]"
           >
             {expanded ? (
               <span className="text-xl transition-transform duration-300 rotate-90">✕</span>

@@ -44,7 +44,7 @@ const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
         </span>
         <span
           className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-0.5 ${
-            inverted ? "text-amber-200" : "text-slate-500"
+            inverted ? "text-teal-300" : "text-slate-500"
           }`}
         >
           {doctorLabel}

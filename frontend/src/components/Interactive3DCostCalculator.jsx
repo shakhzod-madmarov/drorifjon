@@ -324,7 +324,7 @@ const Interactive3DCostCalculator = () => {
               </div>
 
               {/* Interactive Unit Stepper Slider */}
-              <div className="p-4 rounded-2xl bg-white/90 border border-amber-200/80 shadow-2xs space-y-3 translate-z-30">
+              <div className="p-4 rounded-2xl bg-white/90 border border-teal-200/80 shadow-2xs space-y-3 translate-z-30">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div className="text-xs font-bold text-slate-800">
                     {lang === "uz" ? "Hisoblash Miqdori:" : lang === "ru" ? "Количество единиц:" : "Procedure Units:"}
@@ -335,7 +335,7 @@ const Interactive3DCostCalculator = () => {
                       aria-label={lang === "uz" ? "Kamaytirish" : lang === "ru" ? "Уменьшить" : "Decrease"}
                       onClick={() => setUnits((u) => Math.max(1, u - 1))}
                       disabled={units <= 1}
-                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
+                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-teal-100/70 hover:bg-teal-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
                     >
                       –
                     </button>
@@ -347,7 +347,7 @@ const Interactive3DCostCalculator = () => {
                       aria-label={lang === "uz" ? "Oshirish" : lang === "ru" ? "Увеличить" : "Increase"}
                       onClick={() => setUnits((u) => Math.min(activeTreatment.maxUnits, u + 1))}
                       disabled={units >= activeTreatment.maxUnits}
-                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-amber-100/70 hover:bg-amber-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
+                      className="w-10 h-10 sm:w-9 sm:h-9 rounded-xl bg-teal-100/70 hover:bg-teal-200 text-slate-800 text-base font-bold flex items-center justify-center transition-all disabled:opacity-30 cursor-pointer touch-manipulation"
                     >
                       +
                     </button>
@@ -358,9 +358,9 @@ const Interactive3DCostCalculator = () => {
                 </div>
 
                 {/* Progress bar */}
-                <div className="w-full bg-amber-100/60 rounded-full h-2 overflow-hidden">
+                <div className="w-full bg-teal-100/60 rounded-full h-2 overflow-hidden">
                   <div
-                    className="bg-gradient-to-r from-primary to-brandOrange h-full rounded-full transition-all duration-300"
+                    className="bg-gradient-to-r from-primary to-teal-500 h-full rounded-full transition-all duration-300"
                     style={{ width: `${(units / activeTreatment.maxUnits) * 100}%` }}
                   />
                 </div>
@@ -371,7 +371,7 @@ const Interactive3DCostCalculator = () => {
                 {activeTreatment.options.map((opt, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-2xl bg-white border border-amber-200/70 shadow-2xs space-y-1 hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200"
+                    className="p-3.5 rounded-2xl bg-white border border-teal-200/70 shadow-2xs space-y-1 hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <div className="flex items-center gap-2 text-xs font-bold text-primary">
                       <IconCheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
@@ -389,7 +389,7 @@ const Interactive3DCostCalculator = () => {
                 {activeTreatment.features.map((feat, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center px-3 py-1 rounded-xl bg-white/90 border border-amber-200/60 text-[11px] font-semibold text-slate-700 shadow-2xs"
+                    className="inline-flex items-center px-3 py-1 rounded-xl bg-white/90 border border-teal-200/60 text-[11px] font-semibold text-slate-700 shadow-2xs"
                   >
                     <span>{feat[lang]}</span>
                   </span>
@@ -397,11 +397,11 @@ const Interactive3DCostCalculator = () => {
               </div>
 
               {/* Metrics (Duration & Warranty) */}
-              <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-amber-200/60 text-xs translate-z-20">
+              <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-teal-200/60 text-xs translate-z-20">
                 <div className="flex items-center gap-2 text-slate-700">
-                  <IconClock className="w-4 h-4 text-brandOrange" />
+                  <IconClock className="w-4 h-4 text-primary" />
                   <span className="font-semibold">{lang === "uz" ? "Klinik Vaqt:" : lang === "ru" ? "Время приёма:" : "Estimated Time:"}</span>
-                  <span className="font-bold text-slate-900 bg-amber-50 px-2.5 py-0.5 rounded-lg border border-amber-200/50">
+                  <span className="font-bold text-slate-900 bg-teal-50 px-2.5 py-0.5 rounded-lg border border-teal-200/50">
                     {formattedDuration}
                   </span>
                 </div>
@@ -458,7 +458,7 @@ const Interactive3DCostCalculator = () => {
               {/* Booking Button */}
               <button
                 onClick={() => openBooking(activeTreatment.serviceId)}
-                className="w-full py-3.5 rounded-xl bg-primary hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer select-none flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer select-none flex items-center justify-center gap-2"
               >
                 <span>{lang === "uz" ? "Ushbu muolajaga yozilish" : lang === "ru" ? "Записаться на приём" : "Book This Service"}</span>
                 <span>→</span>

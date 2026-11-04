@@ -122,7 +122,7 @@ const HeroSection = ({ onOpenBooking }) => {
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 pt-1">
             <button
               onClick={() => onOpenBooking()}
-              className="px-6 py-3 rounded-xl bg-primary hover:bg-orange-600 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xs transition-all cursor-pointer select-none flex items-center justify-center gap-2"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-2xs transition-all cursor-pointer select-none flex items-center justify-center gap-2"
             >
               <span>{t.ctaBook}</span>
               <span>→</span>
@@ -202,7 +202,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
     <section aria-labelledby="specialities-heading" className="py-6 sm:py-10 space-y-6">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2.5">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 border border-amber-200 text-primary">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-50 border border-teal-200 text-primary">
           <span>{lang === "uz" ? "Asosiy 5 Klinik Yo'nalish" : lang === "ru" ? "5 Основных Направлений" : "5 Core Specialties"}</span>
         </span>
         <h2
@@ -236,7 +236,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
           return (
             <article
               key={s.id}
-              className="group bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-amber-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              className="group bg-white rounded-2xl sm:rounded-3xl border border-stone-200/90 shadow-[0_4px_20px_rgba(20,30,40,0.04)] hover:shadow-[0_14px_35px_rgba(20,30,40,0.08)] hover:border-teal-300 transition-all duration-300 overflow-hidden flex flex-col justify-between"
             >
               <div>
                 {/* Pure Crisp Studio Photography */}
@@ -259,7 +259,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                       {meta.kicker[lang]}
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
-                      <IconClock className="w-3.5 h-3.5 text-amber-500" />
+                      <IconClock className="w-3.5 h-3.5 text-teal-500" />
                       <span>{meta.durationText[lang]}</span>
                     </span>
                   </div>
@@ -291,7 +291,7 @@ const SpecialitiesSection = ({ onOpenBooking }) => {
                 </Link>
                 <button
                   onClick={() => onOpenBooking(s.id)}
-                  className="px-4 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs font-bold uppercase tracking-wider shadow-2xs transition-colors cursor-pointer select-none"
+                  className="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold uppercase tracking-wider shadow-2xs transition-colors cursor-pointer select-none"
                 >
                   {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться" : "Book Visit"}
                 </button>
@@ -313,7 +313,7 @@ const BeforeAfterSection = () => {
   return (
     <section className="py-12 sm:py-16 space-y-8">
       <div className="text-center max-w-2xl mx-auto space-y-2">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-50 text-slate-800 border border-amber-200/80 shadow-2xs">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-slate-800 border border-teal-200/80 shadow-2xs">
           <span>{lang === "uz" ? "NATIJALAR VA TAQQOSLASH" : lang === "ru" ? "РЕЗУЛЬТАТЫ ДО И ПОСЛЕ" : "BEFORE & AFTER GALLERY"}</span>
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-serif-classic">

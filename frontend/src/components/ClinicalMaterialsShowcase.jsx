@@ -101,7 +101,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
     <section aria-labelledby="clinical-materials-heading" className="space-y-8">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100/80 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider shadow-2xs">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100/80 border border-teal-300 text-teal-900 text-xs font-bold uppercase tracking-wider shadow-2xs">
           <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
           <span>{t.badge}</span>
         </div>
@@ -127,7 +127,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
               className={`px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer touch-manipulation border ${
                 isActive
                   ? "bg-slate-900 text-white border-slate-900 shadow-md scale-105"
-                  : "bg-white text-slate-700 border-amber-200/90 hover:border-primary/60 hover:bg-amber-50/50"
+                  : "bg-white text-slate-700 border-teal-200/90 hover:border-primary/60 hover:bg-teal-50/50"
               }`}
             >
               {label}
@@ -141,7 +141,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
         {filteredMaterials.map((mat) => (
           <article
             key={mat.id}
-            className="group relative bg-white rounded-2xl sm:rounded-3xl border border-amber-200/90 p-4 2xs:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden [transform-style:preserve-3d]"
+            className="group relative bg-white rounded-2xl sm:rounded-3xl border border-teal-200/90 p-4 2xs:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden [transform-style:preserve-3d]"
           >
             {/* Top Brand Ambient Accent Border */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-brandCyan to-brandGreen" />
@@ -149,7 +149,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
             <div className="space-y-4">
               {/* Category pill & Country Flag badge */}
               <div className="flex items-center justify-between gap-2 pt-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-lg bg-amber-50 border border-amber-200/70 truncate">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-lg bg-teal-50 border border-teal-200/70 truncate">
                   {mat.catLabel}
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-800 border border-slate-200 shrink-0">
@@ -184,7 +184,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
             </div>
 
             {/* Bottom Action */}
-            <div className="pt-5 mt-4 border-t border-amber-100/80 flex items-center justify-between gap-2">
+            <div className="pt-5 mt-4 border-t border-slate-100/80 flex items-center justify-between gap-2">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                 100% Original
               </span>
@@ -202,7 +202,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
                     );
                   }
                 }}
-                className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-orange-700 transition-colors cursor-pointer group-hover:translate-x-1 duration-200"
+                className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-teal-600 transition-colors cursor-pointer group-hover:translate-x-1 duration-200"
               >
                 <span>{lang === "uz" ? "Tanlash" : lang === "ru" ? "Выбрать" : "Select"}</span>
                 <span>→</span>
@@ -213,8 +213,8 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
       </div>
 
       {/* Trust Guarantee Strip */}
-      <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50/60 to-emerald-50/60 border border-amber-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left [transform-style:preserve-3d]">
-        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary to-brandOrange text-white flex items-center justify-center shrink-0 shadow-md">
+      <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-teal-50 via-orange-50/60 to-emerald-50/60 border border-teal-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left [transform-style:preserve-3d]">
+        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary to-teal-500 text-white flex items-center justify-center shrink-0 shadow-md">
           <IconAward className="w-6 h-6 text-white" />
         </div>
         <div className="flex-1 space-y-0.5">
@@ -233,7 +233,7 @@ export default function ClinicalMaterialsShowcase({ onOpenBooking }) {
               onOpenBooking("terapiya");
             }
           }}
-          className="shrink-0 px-5 py-2.5 rounded-2xl bg-primary hover:bg-orange-600 text-white text-xs font-bold transition-all shadow-sm hover:shadow-md cursor-pointer touch-manipulation"
+          className="shrink-0 px-5 py-2.5 rounded-2xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all shadow-sm hover:shadow-md cursor-pointer touch-manipulation"
         >
           {lang === "uz" ? "Konsultatsiyaga Yozilish" : lang === "ru" ? "Консультация Врача" : "Book Consultation"}
         </a>

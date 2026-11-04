@@ -121,12 +121,12 @@ const CredentialCard = ({ item, lang, onSelect }) => {
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: tilt.active ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
       }}
-      className={`group relative bg-white rounded-3xl p-6 border border-amber-300/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary [transform-style:preserve-3d] ${
+      className={`group relative bg-white rounded-3xl p-6 border border-teal-300/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary [transform-style:preserve-3d] ${
         isClickable ? "cursor-pointer" : "cursor-default"
       }`}
     >
       {/* Golden metallic accent top border */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-600" />
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-500 via-teal-300 to-teal-600" />
 
       {/* Holographic Gold Sheen Glare */}
       {tilt.active && (
@@ -140,17 +140,17 @@ const CredentialCard = ({ item, lang, onSelect }) => {
 
       <div className="[transform-style:preserve-3d]">
         <div className="flex items-center justify-between gap-2 mb-4 pt-1">
-          <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/80 truncate">
+          <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-teal-50 text-teal-900 border border-teal-200/80 truncate">
             {item.badge[lang]}
           </span>
-          <span className="text-[11px] font-black text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded-lg shrink-0 border border-amber-300/60 shadow-xs">
+          <span className="text-[11px] font-black text-teal-900 bg-teal-100/80 px-2 py-0.5 rounded-lg shrink-0 border border-teal-300/60 shadow-xs">
             {item.year}
           </span>
         </div>
 
         {/* Card Visual: Either Real Certificate Image OR Elegant Academic Degree Plaque */}
         {item.image ? (
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 border border-amber-200/90 mb-4 group-hover:scale-[1.02] transition-transform duration-300 shadow-md">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 border border-teal-200/90 mb-4 group-hover:scale-[1.02] transition-transform duration-300 shadow-md">
             <img
               src={item.image}
               alt={item.title[lang]}
@@ -161,8 +161,8 @@ const CredentialCard = ({ item, lang, onSelect }) => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors" />
-            <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-bold border border-amber-300/30 flex items-center gap-1.5 shadow-md">
-              <svg className="w-3 h-3 text-amber-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-xl bg-black/75 backdrop-blur-xs text-teal-200 text-[10px] font-bold border border-teal-300/30 flex items-center gap-1.5 shadow-md">
+              <svg className="w-3 h-3 text-teal-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
@@ -170,15 +170,15 @@ const CredentialCard = ({ item, lang, onSelect }) => {
             </span>
           </div>
         ) : (
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50/50 to-amber-100/50 border border-amber-200/90 mb-4 flex flex-col items-center justify-center p-6 text-center shadow-inner group-hover:scale-[1.02] transition-transform duration-300">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary to-brandOrange text-white flex items-center justify-center mb-3 shadow-md border-2 border-white">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-teal-50 via-orange-50/50 to-teal-100/50 border border-teal-200/90 mb-4 flex flex-col items-center justify-center p-6 text-center shadow-inner group-hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary to-teal-500 text-white flex items-center justify-center mb-3 shadow-md border-2 border-white">
               {item.type === "degree" ? (
                 <IconGraduationCap className="w-9 h-9 text-white" />
               ) : (
                 <IconShieldCheck className="w-9 h-9 text-white" />
               )}
             </div>
-            <span className="text-xs font-black uppercase tracking-wider text-amber-900">
+            <span className="text-xs font-black uppercase tracking-wider text-teal-900">
               {item.type === "degree" ? "Vrach-Stomatolog" : "Tibbiy Malaka"}
             </span>
             <span className="text-[11px] text-slate-500 font-semibold mt-1">
@@ -187,7 +187,7 @@ const CredentialCard = ({ item, lang, onSelect }) => {
           </div>
         )}
 
-        <p className="text-[11px] font-bold uppercase tracking-wider text-brandOrange mb-1">
+        <p className="text-[11px] font-bold uppercase tracking-wider text-primary mb-1">
           {item.org}
         </p>
         <h3 className="text-base font-bold text-slate-900 leading-snug group-hover:text-primary transition-colors font-serif-classic">
@@ -198,7 +198,7 @@ const CredentialCard = ({ item, lang, onSelect }) => {
         </p>
       </div>
 
-      <div className="mt-5 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-bold text-primary">
+      <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-primary">
         <span className="text-slate-600 text-[11px]">
           {lang === "uz" ? "Rasmiy akkreditatsiya" : lang === "ru" ? "Официальная аккредитация" : "Official credential"}
         </span>
@@ -219,12 +219,12 @@ export default function CertificatesShowcase() {
   const modalRef = useModalA11y(Boolean(activeCert), closeCert);
 
   return (
-    <section aria-labelledby="certificates-heading" className="py-10 sm:py-16 border-t border-amber-100">
+    <section aria-labelledby="certificates-heading" className="py-10 sm:py-16 border-t border-slate-100">
       <div className="w-full">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200/60 shadow-xs">
-            <IconAward className="w-3.5 h-3.5 text-brandOrange" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-teal-50 text-teal-900 border border-teal-200/60 shadow-xs">
+            <IconAward className="w-3.5 h-3.5 text-primary" />
             <span>
               {lang === "uz"
                 ? "Diplom va Xalqaro Sertifikatlar"
@@ -250,12 +250,12 @@ export default function CertificatesShowcase() {
         </div>
 
         {/* Education Highlight Banner */}
-        <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-brandOrange text-white flex items-center justify-center shrink-0 shadow-lg border border-white/40">
+        <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-teal-50 via-orange-50 to-teal-50 border border-teal-200/90 shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-teal-500 text-white flex items-center justify-center shrink-0 shadow-lg border border-white/40">
             <IconGraduationCap className="w-8 h-8 text-white" />
           </div>
           <div className="flex-1">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-orange-50 border border-orange-200/60 text-[10px] font-semibold uppercase tracking-wider text-primary mb-1">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-teal-500 border border-teal-500/60 text-[10px] font-semibold uppercase tracking-wider text-primary mb-1">
               {lang === "uz" ? "Tibbiy Ta'lim & Malaka" : lang === "ru" ? "Медицинское Образование и Квалификация" : "Medical Education & Credentials"}
             </div>
             <h3 className="text-base sm:text-lg font-bold text-slate-900 font-serif-classic">
@@ -300,10 +300,10 @@ export default function CertificatesShowcase() {
           onClick={closeCert}
         >
           <div
-            className="bg-white rounded-3xl max-w-3xl w-full p-4 sm:p-6 max-h-[90vh] overflow-y-auto space-y-4 shadow-2xl relative border border-amber-200"
+            className="bg-white rounded-3xl max-w-3xl w-full p-4 sm:p-6 max-h-[90vh] overflow-y-auto space-y-4 shadow-2xl relative border border-teal-200"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-amber-100 pb-3">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-primary">
                   {activeCert.org} ({activeCert.year})
@@ -322,7 +322,7 @@ export default function CertificatesShowcase() {
               </button>
             </div>
 
-            <div className="rounded-2xl overflow-hidden bg-slate-950 border border-amber-200/50 flex items-center justify-center p-2 shadow-inner">
+            <div className="rounded-2xl overflow-hidden bg-slate-950 border border-teal-200/50 flex items-center justify-center p-2 shadow-inner">
               <img
                 src={activeCert.image}
                 alt={activeCert.title[lang]}

@@ -53,7 +53,7 @@ const Doctor3DCard = ({
     <div className={`relative flex justify-center [perspective:1200px] ${className}`}>
       {/* Subtle warm glow behind card */}
       <div
-        className={`absolute -inset-3 bg-gradient-to-tr from-amber-200/20 via-orange-100/15 to-transparent rounded-[2rem] blur-xl -z-10 transition-opacity duration-700 pointer-events-none ${
+        className={`absolute -inset-3 bg-gradient-to-tr from-teal-200/20 via-orange-100/15 to-transparent rounded-[2rem] blur-xl -z-10 transition-opacity duration-700 pointer-events-none ${
           isHovered ? "opacity-100" : "opacity-40"
         }`}
       />
@@ -73,7 +73,7 @@ const Doctor3DCard = ({
             : "transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease",
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-[17.5rem] 2xs:max-w-[19.5rem] sm:max-w-[21rem] rounded-2xl overflow-hidden bg-white border border-stone-200/90 shadow-[0_8px_30px_rgba(20,30,40,0.06)] hover:shadow-[0_16px_40px_rgba(20,30,40,0.1)] hover:border-amber-300/80 transition-all select-none group"
+        className="relative w-full max-w-[17.5rem] 2xs:max-w-[19.5rem] sm:max-w-[21rem] rounded-2xl overflow-hidden bg-white border border-stone-200/90 shadow-[0_8px_30px_rgba(20,30,40,0.06)] hover:shadow-[0_16px_40px_rgba(20,30,40,0.1)] hover:border-teal-300/80 transition-all select-none group"
       >
         {/* Crisp Unblemished Portrait Photo */}
         <div className="relative w-full aspect-square overflow-hidden bg-stone-100 border-b border-stone-100">
@@ -109,7 +109,7 @@ const Doctor3DCard = ({
           <div className="pt-2 border-t border-stone-100">
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-slate-900 border border-amber-200/90 text-xs font-bold whitespace-nowrap transition-colors shadow-2xs group/phone"
+              className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-teal-50 hover:bg-teal-100 text-slate-900 border border-teal-200/90 text-xs font-bold whitespace-nowrap transition-colors shadow-2xs group/phone"
               title={`Tel: ${DOCTOR_INFO.phoneDisplay}`}
             >
               <IconPhone className="w-3.5 h-3.5 text-primary shrink-0 group-hover/phone:scale-110 transition-transform" />
@@ -143,7 +143,7 @@ const Doctor3DCard = ({
             </a>
             <button
               onClick={onOpenBooking}
-              className="flex-1 py-1.5 px-2 2xs:px-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-[11px] 2xs:text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none text-center"
+              className="flex-1 py-1.5 px-2 2xs:px-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-[11px] 2xs:text-xs font-extrabold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none text-center"
             >
               {lang === "uz" ? "Qabul" : lang === "ru" ? "Запись" : "Book"}
             </button>

@@ -149,7 +149,7 @@ export const SERVICES_CATALOG = [
     badgeTheme: {
       badgeBg: "bg-white/95 backdrop-blur-md text-slate-900 border-white/80 shadow-md",
       warrantyBg: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-300/40 shadow-md",
-      accentGlow: "hover:shadow-amber-500/15",
+      accentGlow: "hover:shadow-teal-500/15",
     },
     category: {
       uz: "Ortopedik Stomatologiya",

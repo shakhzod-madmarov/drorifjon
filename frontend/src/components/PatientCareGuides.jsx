@@ -382,7 +382,7 @@ const PatientCareGuides = () => {
               </div>
 
               {/* Shifokor Kengashi (Doctor's Note Box) */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border-l-4 border-l-primary border-y border-r border-amber-200/80 shadow-2xs space-y-2 text-left">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border-l-4 border-l-primary border-y border-r border-teal-200/80 shadow-2xs space-y-2 text-left">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
                   <span>{lang === "uz" ? "Muhim Klinik Maslahat:" : lang === "ru" ? "Важный Совет Врача:" : "Crucial Doctor's Tip:"}</span>
                 </div>
@@ -403,7 +403,7 @@ const PatientCareGuides = () => {
                 </div>
                 <a
                   href={DOCTOR_INFO.phoneHref}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary hover:bg-orange-600 text-white font-bold text-xs transition-colors shadow-xs shrink-0 whitespace-nowrap"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs transition-colors shadow-xs shrink-0 whitespace-nowrap"
                 >
                   <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
                   <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>

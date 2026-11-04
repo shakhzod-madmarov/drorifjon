@@ -94,7 +94,7 @@ const About = ({ onOpenBooking }) => {
       },
     },
     {
-      icon: <IconCheckCircle className="w-6 h-6 text-brandOrange" />,
+      icon: <IconCheckCircle className="w-6 h-6 text-primary" />,
       title: {
         uz: "Ikki Bosqichli Og'riqsiz Anesteziya (Orablok & Supercain)",
         ru: "Двухэтапная Анестезия Без Боли (Ораблок & Суперкаин)",
@@ -158,7 +158,7 @@ const About = ({ onOpenBooking }) => {
       >
         <div className="lg:col-span-7 space-y-4 text-left">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold shadow-2xs">
+            <span className="px-3 py-1 rounded-full bg-teal-50 text-teal-900 border border-teal-200 text-xs font-bold shadow-2xs">
               {getExperienceBadge(lang)}
             </span>
             <span className="px-3 py-1 rounded-full bg-stone-50 text-slate-700 border border-stone-200 text-xs font-medium">
@@ -202,7 +202,7 @@ const About = ({ onOpenBooking }) => {
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 pt-1">
             <button
               onClick={() => onOpenBooking()}
-              className="px-6 py-3 rounded-xl bg-primary hover:bg-orange-600 text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors shadow-2xs cursor-pointer select-none"
             >
               {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Visit"}
             </button>
@@ -241,7 +241,7 @@ const About = ({ onOpenBooking }) => {
       {/* Career Timeline Section */}
       <section
         aria-labelledby="timeline-heading"
-        className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-amber-300/80 shadow-luxury p-4 2xs:p-6 sm:p-10 space-y-6 sm:space-y-8"
+        className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-teal-300/80 shadow-luxury p-4 2xs:p-6 sm:p-10 space-y-6 sm:space-y-8"
       >
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide bg-primary/10 text-primary border border-primary/25 shadow-xs">
@@ -260,7 +260,7 @@ const About = ({ onOpenBooking }) => {
           {timeline.map((item, idx) => (
             <div key={idx} className="relative group">
               <span className="absolute -left-[23px] 2xs:-left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary group-hover:scale-125 transition-transform" />
-              <div className="space-y-1.5 bg-amber-50/50 p-5 rounded-2xl border border-amber-200 hover:bg-white hover:shadow-md hover:border-amber-300 transition-all">
+              <div className="space-y-1.5 bg-teal-50/50 p-5 rounded-2xl border border-teal-200 hover:bg-white hover:shadow-md hover:border-teal-300 transition-all">
                 <span className="text-xs font-bold text-primary tracking-wider uppercase">
                   {item.year[lang]}
                 </span>
@@ -298,9 +298,9 @@ const About = ({ onOpenBooking }) => {
           {values.map((v, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-3xl bg-white border border-amber-200/90 shadow-sm hover:shadow-lg transition-all space-y-3"
+              className="p-6 rounded-3xl bg-white border border-teal-200/90 shadow-sm hover:shadow-lg transition-all space-y-3"
             >
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center">
                 {v.icon}
               </div>
               <h3 className="font-serif-classic text-lg font-bold text-slate-900">

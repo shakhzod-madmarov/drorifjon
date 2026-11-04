@@ -62,7 +62,7 @@ export default function ClinicEquipmentShowcase() {
           category: "Original Materiallar",
           warrantyBadge: "MegaGen & Kulzer",
           pill: "Sertifikatlangan",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          icon: <IconAward className="w-6 h-6 text-primary" />,
           title: "MegaGen Biotitan Implantlari va Kulzer Nanokompozitlari",
           desc: "Janubiy Koreyaning rasmiy MegaGen biotitan implantlari hamda Germaniyaning Kulzer Charisma va DenFil nano-gibrid restavratsiya materiallari. Italiyaning Orablok anesteziyasi orqali 100% og'riqsiz muolaja.",
           image: assets.treatment_implant,
@@ -119,7 +119,7 @@ export default function ClinicEquipmentShowcase() {
           category: "Оригинальные Материалы",
           warrantyBadge: "MegaGen и Kulzer",
           pill: "Сертифицировано",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          icon: <IconAward className="w-6 h-6 text-primary" />,
           title: "Биотитановые Импланты MegaGen и Нанокомпозиты Kulzer Charisma",
           desc: "Оригинальные южнокорейские биотитановые импланты MegaGen и немецкие наногибридные реставрационные композиты Kulzer Charisma, DenFil. Итальянский анестетик Ораблок для лечения без боли.",
           image: assets.treatment_implant,
@@ -176,7 +176,7 @@ export default function ClinicEquipmentShowcase() {
           category: "Certified Materials",
           warrantyBadge: "MegaGen & Kulzer",
           pill: "Certified Genuine",
-          icon: <IconAward className="w-6 h-6 text-brandOrange" />,
+          icon: <IconAward className="w-6 h-6 text-primary" />,
           title: "MegaGen Biotitanium Implants & Kulzer Charisma Nanocomposites",
           desc: "Genuine South Korean MegaGen biocompatible titanium implants and premium German Kulzer Charisma & DenFil nanohybrid composites. Italian Orabloc anaesthesia for completely painless dental work.",
           image: assets.treatment_implant,
@@ -214,7 +214,7 @@ export default function ClinicEquipmentShowcase() {
         {t.items.map((item) => (
           <div
             key={item.id}
-            className="group bg-white rounded-3xl border border-amber-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2.5 hover:border-primary/50 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d]"
+            className="group bg-white rounded-3xl border border-teal-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2.5 hover:border-primary/50 overflow-hidden flex flex-col justify-between [transform-style:preserve-3d]"
           >
             <div>
               {/* Photo Banner with Zoom Depth & Simple Classic Clean Stickers */}
@@ -237,7 +237,7 @@ export default function ClinicEquipmentShowcase() {
 
               {/* Floating Medical Icon Disc & Clean Clinical Pill */}
               <div className="px-5 -mt-6 relative z-20 flex justify-between items-end">
-                <span className="w-12 h-12 rounded-2xl bg-white shadow-xl border-2 border-amber-200/90 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                <span className="w-12 h-12 rounded-2xl bg-white shadow-xl border-2 border-teal-200/90 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                   {item.icon}
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full shadow-sm mb-1">
@@ -260,7 +260,7 @@ export default function ClinicEquipmentShowcase() {
                 </div>
 
                 {/* Clinical Specs */}
-                <div className="space-y-1.5 pt-2 border-t border-amber-100 text-xs">
+                <div className="space-y-1.5 pt-2 border-t border-slate-100 text-xs">
                   {item.specs.map((sp, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-slate-700">
                       <span className="text-primary font-bold">✓</span>
@@ -272,7 +272,7 @@ export default function ClinicEquipmentShowcase() {
             </div>
 
             {/* Simple Classic Footer Button */}
-            <div className="p-5 pt-0 border-t border-amber-100/60 mt-2">
+            <div className="p-5 pt-0 border-t border-slate-100/60 mt-2">
               <button
                 onClick={() => setActiveModalItem(item)}
                 className="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-primary/5 hover:text-primary border border-slate-200/80 text-slate-700 text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer group/btn"
@@ -293,7 +293,7 @@ export default function ClinicEquipmentShowcase() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-slate-950 rounded-3xl overflow-hidden border border-amber-400/30 shadow-2xl flex flex-col"
+            className="relative max-w-4xl w-full bg-slate-950 rounded-3xl overflow-hidden border border-teal-400/30 shadow-2xl flex flex-col"
           >
             {/* Close Button */}
             <button
@@ -314,7 +314,7 @@ export default function ClinicEquipmentShowcase() {
 
             {/* Modal Caption */}
             <div className="p-6 bg-slate-900 border-t border-white/10 text-white space-y-1">
-              <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">
+              <span className="text-[11px] font-bold text-teal-300 uppercase tracking-wider">
                 {activeModalItem.category} · {activeModalItem.warrantyBadge}
               </span>
               <h4 className="text-lg font-bold font-serif-classic">

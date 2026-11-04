@@ -45,7 +45,7 @@ const AppShell = () => {
   }[lang] || "Asosiy mazmunga o'tish";
 
   return (
-    <div className="flex flex-col min-h-screen w-full overflow-x-clip min-w-0 bg-[#FFFDF9] text-[#1A202C]">
+    <div className="flex flex-col min-h-screen w-full overflow-x-clip min-w-0 bg-[#F8FAFB] text-[#1A202C]">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-primary focus:text-white focus:rounded-xl focus:shadow-2xl text-sm font-bold"
@@ -59,7 +59,7 @@ const AppShell = () => {
         autoClose={4000}
         hideProgressBar={false}
         theme="dark"
-        toastStyle={{ background: "#141E28", borderLeft: "4px solid #FF9D50" }}
+        toastStyle={{ background: "#0A1628", borderLeft: "4px solid #0C6E5A" }}
       />
 
       <Nav onOpenBooking={() => openBooking()} />

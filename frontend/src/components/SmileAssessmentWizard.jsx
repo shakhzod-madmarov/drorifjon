@@ -79,7 +79,7 @@ const concerns = [
     id: "crooked",
     serviceId: "ortodontiya",
     image: assets.treatment_braces,
-    icon: <DentalBracesIcon className="w-5 h-5 text-brandOrange" />,
+    icon: <DentalBracesIcon className="w-5 h-5 text-primary" />,
     badgeColor: "bg-white/95 text-slate-900 border-white/80 shadow-xs font-black",
     tag: { uz: "Ortodontiya", ru: "Ортодонтия", en: "Orthodontics" },
     title: {
@@ -173,15 +173,15 @@ const SmileAssessmentWizard = () => {
   const [selectedConcern, setSelectedConcern] = useState(concerns[0]);
 
   return (
-    <section aria-labelledby="wizard-heading" className="py-8 sm:py-16 bg-[#FFFDF9] rounded-2xl sm:rounded-3xl border border-amber-200/90 shadow-luxury p-3.5 2xs:p-5 sm:p-8 lg:p-10 relative overflow-hidden">
+    <section aria-labelledby="wizard-heading" className="py-8 sm:py-16 bg-[#F8FAFB] rounded-2xl sm:rounded-3xl border border-teal-200/90 shadow-luxury p-3.5 2xs:p-5 sm:p-8 lg:p-10 relative overflow-hidden">
       {/* Background radial glow */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-amber-100/30 via-orange-100/20 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-teal-100/30 via-orange-100/20 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200/60 shadow-2xs">
-            <IconSparkleStar className="w-3.5 h-3.5 text-brandOrange" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-teal-50 text-teal-900 border border-teal-200/60 shadow-2xs">
+            <IconSparkleStar className="w-3.5 h-3.5 text-primary" />
             <span>{lang === "uz" ? "Onlayn Tabassum Tahlili" : lang === "ru" ? "Онлайн-Подбор Лечения" : "Online Smile Assessment"}</span>
           </span>
           <h2 id="wizard-heading" className="text-2xl sm:text-4xl font-bold text-slate-900 font-serif-classic">
@@ -211,7 +211,7 @@ const SmileAssessmentWizard = () => {
                 className={`p-4 rounded-3xl text-left border transition-all duration-300 cursor-pointer flex flex-col justify-between group overflow-hidden [transform-style:preserve-3d] ${
                   isSelected
                     ? "bg-white border-primary shadow-luxury-lg scale-[1.03] ring-2 ring-primary/30 -translate-y-1"
-                    : "bg-white/90 border-amber-200/80 hover:bg-white hover:border-amber-300 hover:-translate-y-1 hover:shadow-md"
+                    : "bg-white/90 border-teal-200/80 hover:bg-white hover:border-teal-300 hover:-translate-y-1 hover:shadow-md"
                 }`}
               >
                 <div>
@@ -244,7 +244,7 @@ const SmileAssessmentWizard = () => {
                   </h3>
                 </div>
 
-                <div className="flex items-center justify-between pt-3 mt-3 border-t border-amber-100/70">
+                <div className="flex items-center justify-between pt-3 mt-3 border-t border-slate-100/70">
                   <span className="text-xs font-bold text-primary flex items-center gap-1">
                     <span>{lang === "uz" ? "Yechim" : lang === "ru" ? "Решение" : "Solution"}</span>
                     <span>→</span>
@@ -259,7 +259,7 @@ const SmileAssessmentWizard = () => {
         </div>
 
         {/* Selected Recommendation Details with 3D Depth Card & Clinical Photo */}
-        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-amber-200/90 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center [transform-style:preserve-3d]">
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-teal-200/90 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center [transform-style:preserve-3d]">
           <div className="lg:col-span-8 space-y-4">
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs font-black uppercase tracking-wider text-primary bg-red-50 px-3.5 py-1 rounded-full border border-red-200/60 shadow-2xs">
@@ -282,8 +282,8 @@ const SmileAssessmentWizard = () => {
             {/* 3 Step Protocol */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
               {selectedConcern.steps.map((st, idx) => (
-                <div key={idx} className="p-3 rounded-2xl bg-amber-50/50 border border-amber-200/60 space-y-1">
-                  <div className="text-[10px] font-black uppercase tracking-wider text-brandOrange">
+                <div key={idx} className="p-3 rounded-2xl bg-teal-50/50 border border-teal-200/60 space-y-1">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-primary">
                     {lang === "uz" ? `Bosqich 0${idx + 1}` : lang === "ru" ? `Шаг 0${idx + 1}` : `Step 0${idx + 1}`}
                   </div>
                   <p className="text-xs font-bold text-slate-800 leading-snug">
@@ -293,9 +293,9 @@ const SmileAssessmentWizard = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-6 text-xs font-bold text-slate-700 pt-3 border-t border-amber-100">
+            <div className="flex items-center gap-6 text-xs font-bold text-slate-700 pt-3 border-t border-slate-100">
               <span className="flex items-center gap-1.5">
-                <IconClock className="w-4 h-4 text-brandOrange" />
+                <IconClock className="w-4 h-4 text-primary" />
                 <span>{selectedConcern.duration[lang]}</span>
               </span>
               <span className="flex items-center gap-1.5">
@@ -306,9 +306,9 @@ const SmileAssessmentWizard = () => {
           </div>
 
           {/* Right Action Column with Clinical Treatment Photo & Direct Booking */}
-          <div className="lg:col-span-4 flex flex-col justify-between p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-amber-50/60 via-white to-amber-50/30 border border-amber-200/90 shadow-md space-y-4">
+          <div className="lg:col-span-4 flex flex-col justify-between p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-teal-50/60 via-white to-teal-50/30 border border-teal-200/90 shadow-md space-y-4">
             {/* Visual Recommendation Image Preview */}
-            <div className="relative h-40 w-full rounded-2xl overflow-hidden border border-amber-200/80 shadow-md group">
+            <div className="relative h-40 w-full rounded-2xl overflow-hidden border border-teal-200/80 shadow-md group">
               <img
                 src={selectedConcern.image}
                 alt={selectedConcern.recommendation[lang]}
@@ -321,7 +321,7 @@ const SmileAssessmentWizard = () => {
                 </span>
               </div>
               <div className="absolute bottom-2 left-3 right-3 text-left">
-                <p className="text-[10px] font-bold text-amber-200 uppercase tracking-wider">
+                <p className="text-[10px] font-bold text-teal-200 uppercase tracking-wider">
                   {lang === "uz" ? "Klinik Natija" : lang === "ru" ? "Клинический Результат" : "Clinical Result"}
                 </p>
                 <p className="text-xs font-bold text-white truncate">

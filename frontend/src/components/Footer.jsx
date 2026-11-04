@@ -38,7 +38,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#141E28] text-slate-300 pt-12 sm:pt-16 pb-12 border-t border-amber-900/30 mt-14 sm:mt-20">
+    <footer className="bg-[#0A1628] text-slate-300 pt-12 sm:pt-16 pb-12 border-t border-teal-900/40 mt-14 sm:mt-20">
       <div className="max-w-7xl mx-auto px-3 2xs:px-4 sm:px-6 lg:px-8">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/10">
@@ -68,7 +68,7 @@ const Footer = () => {
                 </span>
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-lg bg-primary/30 text-white border border-primary/50">
-                <IconAward className="w-3.5 h-3.5 text-brandOrange" />
+                <IconAward className="w-3.5 h-3.5 text-brandTeal" />
                 <span>{getExperienceBadge(lang)}</span>
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-lg bg-cyan-900/40 text-cyan-200 border border-cyan-500/40">
@@ -86,7 +86,7 @@ const Footer = () => {
 
           {/* Column 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-brandOrange">
+            <p className="text-xs font-bold uppercase tracking-widest text-brandTeal">
               {lang === "uz" ? "Sahifalar" : lang === "ru" ? "Разделы" : "Pages"}
             </p>
             <ul className="space-y-2.5 text-xs font-medium text-slate-300">
@@ -105,7 +105,7 @@ const Footer = () => {
 
           {/* Column 3: Specialties (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-brandCyan">
+            <p className="text-xs font-bold uppercase tracking-widest text-emerald-400">
               {lang === "uz" ? "Xizmat Yo'nalishlari" : lang === "ru" ? "Специализация" : "Specialties"}
             </p>
             <ul className="space-y-2 text-xs font-medium text-slate-300">
@@ -130,7 +130,7 @@ const Footer = () => {
             <div className="space-y-3 text-xs">
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="flex items-center gap-2 text-white font-bold hover:text-brandOrange transition-colors whitespace-nowrap"
+                className="flex items-center gap-2 text-white font-bold hover:text-brandTeal transition-colors whitespace-nowrap"
               >
                 <IconPhone className="w-4 h-4 text-primary shrink-0" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
@@ -157,7 +157,7 @@ const Footer = () => {
               </a>
 
               <div className="flex items-start gap-2 text-slate-400 pt-1 text-[11px] leading-relaxed">
-                <IconClock className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                <IconClock className="w-3.5 h-3.5 text-teal-400 shrink-0 mt-0.5" />
                 <span>{hoursDisplay}</span>
               </div>
             </div>
