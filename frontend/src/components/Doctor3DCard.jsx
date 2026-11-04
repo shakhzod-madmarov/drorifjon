@@ -74,17 +74,17 @@ const Doctor3DCard = ({
         className="relative w-full max-w-[19.5rem] sm:max-w-[21rem] rounded-2xl overflow-hidden bg-white border border-stone-200/90 shadow-[0_8px_30px_rgba(20,30,40,0.06)] hover:shadow-[0_16px_40px_rgba(20,30,40,0.1)] hover:border-amber-300/80 transition-all select-none group"
       >
         {/* Crisp Unblemished Portrait Photo */}
-        <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-stone-100 border-b border-stone-100">
+        <div className="relative w-full aspect-square overflow-hidden bg-stone-100 border-b border-stone-100">
           <picture>
             <source srcSet={imageWebp} type="image/webp" />
             <img
               src={imageJpg}
               alt="Stomatolog Orifjon — Mansurov Orifjon Alimbekovich"
-              width={896}
-              height={1200}
+              width={1024}
+              height={1024}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
           </picture>
         </div>

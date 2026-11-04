@@ -6,6 +6,27 @@ import { getA11yLabels } from "../constants/a11yLabels";
 
 const certificates = [
   {
+    id: "cert-megagen-basic-2025",
+    year: "2025",
+    org: "MegaGen Uzbekistan & MegaGen Implant Co., LTD",
+    badge: {
+      uz: "MEGAG'EN RASMIY SERTIFIKAT",
+      ru: "ОФИЦИАЛЬНЫЙ СЕРТИФИКАТ MEGAGEN",
+      en: "OFFICIAL MEGAGEN CERTIFICATE",
+    },
+    title: {
+      uz: "MegaGen Implantologiya Asosiy Kursi (Mansurov Orifbek)",
+      ru: "Базовый Курс Имплантации MegaGen (Мансуров Орифбек)",
+      en: "Basic Course of Implantation MegaGen (Mansurov Orifbek)",
+    },
+    desc: {
+      uz: "MegaGen Uzbekistan tomonidan 'Basic Course of Implantation' (03–08-fevral 2025-yil, ma'ruzachi: Karimkulov N.A.) bo'yicha berilgan rasmiy tasdiqlangan 'Certificate of Appreciation' sertifikati.",
+      ru: "Официальный 'Certificate of Appreciation' от MegaGen Uzbekistan об успешном окончании курса 'Basic Course of Implantation' (03–08 февраля 2025, лектор: Каримкулов Н.А.).",
+      en: "Official MegaGen Uzbekistan 'Certificate of Appreciation' presented to Mansurov Orifbek for successful completion of the Basic Course of Implantation (03-08 February 2025, Lecturer Karimkulov N.A.).",
+    },
+    image: "/certificates/cert_megagen_basic.webp",
+  },
+  {
     id: "cert-samarkand",
     year: "2026",
     org: "Samarkand State Medical University & MegaGen International",
