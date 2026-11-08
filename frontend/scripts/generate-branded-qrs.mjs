@@ -92,6 +92,31 @@ async function run() {
   await generateBrandedQr(GOOGLE_URL, 'qr-google-branded', 'google');
   await generateBrandedQr(YANDEX_URL, 'qr-yandex-branded', 'yandex');
   await generateBrandedQr(WEBSITE_URL, 'qr-website-branded', 'website');
+
+  // Also generate white QR on transparent background for dark wave
+  const whiteSvg = await QRCode.toString(WEBSITE_URL, {
+    type: 'svg',
+    errorCorrectionLevel: 'M',
+    margin: 1,
+    color: {
+      dark: '#FFFFFF',
+      light: '#00000000',
+    },
+  });
+  fs.writeFileSync(path.join(publicDir, 'qr-website-white.svg'), whiteSvg);
+  console.log('Saved qr-website-white.svg');
+
+  await QRCode.toFile(path.join(publicDir, 'qr-website-white.png'), WEBSITE_URL, {
+    errorCorrectionLevel: 'M',
+    width: 512,
+    margin: 1,
+    color: {
+      dark: '#FFFFFF',
+      light: '#12365A', // Matches the navy wave background
+    },
+  });
+  console.log('Saved qr-website-white.png');
+
   console.log('All branded QR codes generated successfully!');
 }
 
