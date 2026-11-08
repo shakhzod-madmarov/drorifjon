@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stomatolog Orifjon — Rasmiy Vizitka (Business Card 90x50mm)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0B1320;
+      color: #F8FAFC;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+    }
+
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(12, 110, 90, 0.25);
+      border: 1px solid rgba(12, 110, 90, 0.6);
+      color: #34D399;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+    }
+
+    .page-title span {
+      background: linear-gradient(135deg, #FF9D50 0%, #10B981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .page-sub {
+      font-size: 14px;
+      color: #94A3B8;
+      margin-top: 6px;
+    }
+
+    /* DUAL CARDS DISPLAY (Side by Side) */
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38BDF8;
+    }
+
+    /* Standard Business Card Ratio: 90mm x 50mm (1.8 : 1) */
+    /* On Screen: 450px x 250px (Scale 5x) */
+    .biz-card {
+      width: 450px;
+      height: 250px;
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .biz-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 60px -12px rgba(12, 110, 90, 0.4), 0 0 0 1px rgba(52, 211, 153, 0.3);
+    }
+
+    /* ======================================================== */
+    /* FRONT SIDE (Old Tomoni - Luxury Deep Emerald & Dark Navy) */
+    /* ======================================================== */
+    .card-front {
+      background: radial-gradient(circle at 85% 15%, #0C6E5A 0%, #083329 45%, #07151D 100%);
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #FFFFFF;
+    }
+
+    /* Subtle geometric overlay pattern */
+    .card-front::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 157, 80, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-front::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .front-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 2;
+    }
+
+    .front-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .front-logo-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .front-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .front-title-main {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .color-coral {
+      color: #FF9D50;
+    }
+
+    .color-teal {
+      color: #34D399;
+    }
+
+    .front-title-sub {
+      font-size: 8px;
+      font-weight: 700;
+      color: #94A3B8;
+      letter-spacing: 1.5px;
+      margin-top: 2px;
+    }
+
+    .front-qr-box {
+      width: 58px;
+      height: 58px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 3px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .front-qr-box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .front-mid {
+      z-index: 2;
+      margin: 4px 0;
+    }
+
+    .front-doctor-name {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .front-doctor-role {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #34D399;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .front-bottom {
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 8px;
+    }
+
+    .front-contacts-col {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .front-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .front-contact-row svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    .front-phone {
+      font-weight: 800;
+      color: #FFFFFF;
+      font-size: 10.5px;
+    }
+
+    .front-web-badge {
+      text-align: right;
+    }
+
+    .front-web-url {
+      font-size: 11px;
+      font-weight: 900;
+      color: #FF9D50;
+      letter-spacing: 0.5px;
+    }
+
+    .front-address {
+      font-size: 8px;
+      font-weight: 500;
+      color: #94A3B8;
+      margin-top: 1px;
+    }
+
+    /* ======================================================== */
+    /* BACK SIDE (Orqa Tomoni - Clean White/Teal Xizmatlar)     */
+    /* ======================================================== */
+    .card-back {
+      background: #FFFFFF;
+      color: #0F172A;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #E2E8F0;
+    }
+
+    .back-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ECFDF5;
+      padding-bottom: 6px;
+    }
+
+    .back-title {
+      font-size: 12px;
+      font-weight: 900;
+      color: #0C6E5A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .back-slogan {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #EA580C;
+    }
+
+    .back-services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      margin: 6px 0;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 8.8px;
+      font-weight: 700;
+      color: #1E293B;
+      line-height: 1.2;
+    }
+
+    .service-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #0C6E5A;
+      flex-shrink: 0;
+    }
+
+    .back-trust-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 5px 10px;
+      margin: 2px 0;
+    }
+
+    .trust-tag {
+      font-size: 8px;
+      font-weight: 800;
+      color: #0C6E5A;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .back-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4px;
+      border-top: 1px solid #F1F5F9;
+    }
+
+    .back-footer-left {
+      font-size: 8px;
+      font-weight: 600;
+      color: #64748B;
+    }
+
+    .back-footer-left strong {
+      color: #0C6E5A;
+    }
+
+    .back-footer-right {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #FF9D50;
+    }
+
+    /* ACTION BUTTONS */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: #0C6E5A;
+      color: #FFFFFF;
+      box-shadow: 0 10px 25px -5px rgba(12, 110, 90, 0.4);
+    }
+
+    .btn-print:hover {
+      background: #095446;
+      transform: translateY(-2px);
+    }
+
+    .btn-pdf {
+      background: #FF9D50;
+      color: #FFFFFF;
+      box-shadow: 0 10px 25px -5px rgba(255, 157, 80, 0.4);
+    }
+
+    .btn-pdf:hover {
+      background: #EA8435;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #E2E8F0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* ======================================================== */
+    /* PRINT SPECIFICATIONS: 90mm x 50mm Business Cards         */
+    /* ======================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 10mm;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .page-header, .controls, .card-label {
+        display: none !important;
+      }
+
+      .container {
+        max-width: none !important;
+      }
+
+      .cards-row {
+        gap: 15mm !important;
+        justify-content: center !important;
+      }
+
+      .biz-card {
+        width: 90mm !important;
+        height: 50mm !important;
+        border-radius: 3mm !important;
+        box-shadow: none !important;
+        border: 0.5px solid #CBD5E1 !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="page-badge">⭐ Rasmiy Vizitka · 90 × 50 mm (Standard)</div>
+      <h1 class="page-title">Stomatolog <span>Orifjon</span></h1>
+      <p class="page-sub">Mansurov Orifjon Alimbekovich — Vrach-Stomatolog (Andijon)</p>
+    </div>
+
+    <!-- The Dual Cards (Front & Back) -->
+    <div class="cards-row">
+
+      <!-- ============================================== -->
+      <!-- FRONT SIDE -->
+      <!-- ============================================== -->
+      <div class="card-wrapper">
+        <div class="card-label">OLD TOMONI (FRONT)</div>
+        <div class="biz-card card-front">
+
+          <!-- Top: Brand + QR to Website -->
+          <div class="front-top">
+            <div class="front-brand">
+              <div class="front-logo-wrap">
+                <img src="./logo_icon.png" alt="Stomatolog Orifjon Logo">
+              </div>
+              <div>
+                <div class="front-title-main">
+                  <span class="color-coral">STOMATOLOG</span> <span class="color-teal">ORIFJON</span>
+                </div>
+                <div class="front-title-sub">STOMATOLOGIK KLINIKA</div>
+              </div>
+            </div>
+
+            <!-- Scannable Website QR Code -->
+            <div class="front-qr-box" title="Saytga o'tish uchun skaner qiling: https://drorifjon.uz">
+              <img src="./qr-website-branded.svg" alt="Website QR">
+            </div>
+          </div>
+
+          <!-- Middle: Doctor Identity -->
+          <div class="front-mid">
+            <div class="front-doctor-name">MANSUROV ORIFJON ALIMBEKOVICH</div>
+            <div class="front-doctor-role">VRACH-STOMATOLOG · IMPLANTOLOG · ORTOPED</div>
+          </div>
+
+          <!-- Bottom: Contacts & Address -->
+          <div class="front-bottom">
+            <div class="front-contacts-col">
+              <!-- Phone -->
+              <div class="front-contact-row front-phone">
+                <svg viewBox="0 0 24 24" fill="#34D399">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>+998 90 548 10 90</span>
+              </div>
+              <!-- Telegram & Instagram -->
+              <div class="front-contact-row">
+                <svg viewBox="0 0 24 24" fill="#38BDF8">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+                </svg>
+                <span>TG: @dr_orifjon_1</span>
+                <span style="color: #64748B;">·</span>
+                <svg viewBox="0 0 24 24" fill="#F43F5E">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Insta: @dr_orifjon</span>
+              </div>
+            </div>
+
+            <!-- Web & Address -->
+            <div class="front-web-badge">
+              <div class="front-web-url">www.drorifjon.uz</div>
+              <div class="front-address">Andijon, Muqimiy ko'chasi 35/41</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- BACK SIDE -->
+      <!-- ============================================== -->
+      <div class="card-wrapper">
+        <div class="card-label">ORQA TOMONI (BACK · XIZMATLAR)</div>
+        <div class="biz-card card-back">
+
+          <!-- Top: Slogan & Header -->
+          <div class="back-header">
+            <div class="back-title">Asosiy Xizmatlarimiz</div>
+            <div class="back-slogan">✨ 100% Og'riqsiz Davolash</div>
+          </div>
+
+          <!-- Services Grid (2 Columns x 3 Rows) -->
+          <div class="back-services-grid">
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Biotitan Implantatsiya (Mega'Gen)</span>
+            </div>
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Ortodontiya & Breketlar</span>
+            </div>
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Monolit Sirkon Karonkalar</span>
+            </div>
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Atravmatik Tish Olish</span>
+            </div>
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Keramik Vinirlar (IPS E.max)</span>
+            </div>
+            <div class="service-item">
+              <span class="service-dot"></span>
+              <span>Ultratovushli Tozalash</span>
+            </div>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="back-trust-strip">
+            <span class="trust-tag">🛡️ 100% Steril (Anti-SPID/Gepatit)</span>
+            <span class="trust-tag">⚡ 20+ Yillik Tajriba</span>
+            <span class="trust-tag">⭐ Kafolatlangan Natija</span>
+          </div>
+
+          <!-- Footer: Location & Booking -->
+          <div class="back-footer">
+            <div class="back-footer-left">
+              Mo'ljal: <strong>Rayon Stoyanka</strong> (Muqimiy 35/41)
+            </div>
+            <div class="back-footer-right">
+              Onlayn Qabul: drorifjon.uz/booking
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-print" onclick="window.print()">
+        🖨️ Chop Etish (Ctrl + P)
+      </button>
+      <a href="./Stomatolog_Orifjon_Business_Card.pdf" download="Stomatolog_Orifjon_Business_Card.pdf" class="btn btn-pdf">
+        📄 PDF Yuklab Olish (90x50mm)
+      </a>
+      <a href="./qr-website-branded.png" download="DrOrifjon_Website_QR.png" class="btn btn-outline">
+        📥 Sayt QR Kodingi (PNG)
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

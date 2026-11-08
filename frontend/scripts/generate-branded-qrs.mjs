@@ -7,13 +7,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, '..', 'public');
 
-// Review links for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)
+// URLs for Stomatolog Orifjon (Mansurov Orifjon Alimbekovich)
 const GOOGLE_URL = 'https://g.page/r/CcypeG53HHZLEBM/review';
 const YANDEX_URL = 'https://yandex.uz/maps/org/stomatolog_orifjon/133941332039/reviews/';
+const WEBSITE_URL = 'https://drorifjon.uz';
 
 const BRAND_COLOR = '#0C6E5A'; // Stomatolog Orifjon's signature medical teal
 
-async function generateBrandedQr(url, filenamePrefix, isGoogle = true) {
+async function generateBrandedQr(url, filenamePrefix, type = 'google') {
   // Generate base SVG with Level H error correction (tolerates up to 30% center overlay)
   const rawSvg = await QRCode.toString(url, {
     type: 'svg',
@@ -36,7 +37,7 @@ async function generateBrandedQr(url, filenamePrefix, isGoogle = true) {
   const offset = center - iconSize / 2;
 
   let centerIcon = '';
-  if (isGoogle) {
+  if (type === 'google') {
     centerIcon = `
     <g id="center-badge">
       <circle cx="${center}" cy="${center}" r="${radiusOuter}" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.25" />
@@ -48,13 +49,24 @@ async function generateBrandedQr(url, filenamePrefix, isGoogle = true) {
         <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
       </svg>
     </g>`;
-  } else {
+  } else if (type === 'yandex') {
     centerIcon = `
     <g id="center-badge">
       <circle cx="${center}" cy="${center}" r="${radiusOuter}" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.25" />
       <svg x="${offset}" y="${offset}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10.5" fill="#FC3F1D" />
         <path fill="#FFFFFF" d="M13.8 17h-1.8l-2.7-4.9-1.2 1.3v3.6H6.9V6.5h2.2v5.4l3.6-5.4h2.4l-3.8 5.5 3.7 5.5z"/>
+      </svg>
+    </g>`;
+  } else {
+    // type === 'website': Tooth icon in doctor's teal/coral brand colors
+    centerIcon = `
+    <g id="center-badge">
+      <circle cx="${center}" cy="${center}" r="${radiusOuter}" fill="#FFFFFF" stroke="#0C6E5A" stroke-width="0.3" />
+      <svg x="${offset}" y="${offset}" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10.5" fill="#0C6E5A" />
+        <!-- Tooth icon in white -->
+        <path fill="#FFFFFF" d="M12 3.5c-2.4 0-4.2.8-5 2.4-.8 1.6-.7 3.6-.4 5.3.3 1.8.8 3.7.8 5.6 0 1.2.7 2.2 1.9 2.2.9 0 1.7-.6 2-1.5l.7-2.5.7 2.5c.3.9 1.1 1.5 2 1.5 1.2 0 1.9-1 1.9-2.2 0-1.9.5-3.8.8-5.6.3-1.7.4-3.7-.4-5.3-.8-1.6-2.6-2.4-5-2.4z"/>
       </svg>
     </g>`;
   }
@@ -77,8 +89,9 @@ async function generateBrandedQr(url, filenamePrefix, isGoogle = true) {
 }
 
 async function run() {
-  await generateBrandedQr(GOOGLE_URL, 'qr-google-branded', true);
-  await generateBrandedQr(YANDEX_URL, 'qr-yandex-branded', false);
+  await generateBrandedQr(GOOGLE_URL, 'qr-google-branded', 'google');
+  await generateBrandedQr(YANDEX_URL, 'qr-yandex-branded', 'yandex');
+  await generateBrandedQr(WEBSITE_URL, 'qr-website-branded', 'website');
   console.log('All branded QR codes generated successfully!');
 }
 
