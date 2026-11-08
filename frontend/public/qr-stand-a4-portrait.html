@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stomatolog Orifjon — A4 Portrait QR Stend</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F1F5F9;
+      color: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* A4 Portrait: 210mm x 297mm */
+    .sheet-a4 {
+      width: 210mm;
+      height: 297mm;
+      background: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px -10px rgba(12, 110, 90, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.06);
+      padding: 12mm 14mm 10mm 14mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Gradient Accent Bar */
+    .top-accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6mm;
+      background: linear-gradient(90deg, #0C6E5A 0%, #1DCED8 40%, #FF9D50 80%, #55E07E 100%);
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 4mm;
+      padding-bottom: 3mm;
+      border-bottom: 1.5px dashed #E2E8F0;
+    }
+
+    .header-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .header-text {
+      text-align: left;
+    }
+
+    .header-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .brand-coral {
+      color: #FF9D50;
+    }
+
+    .brand-navy {
+      color: #0F172A;
+    }
+
+    .header-doctor {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0C6E5A;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #64748B;
+      letter-spacing: 0.8px;
+      margin-top: 2px;
+    }
+
+    /* HERO CALL TO ACTION */
+    .hero-cta {
+      text-align: center;
+      padding: 4mm 2mm 3mm 2mm;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 157, 80, 0.12);
+      color: #EA580C;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 3mm;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #0F172A;
+      line-height: 1.2;
+      margin-bottom: 2mm;
+    }
+
+    .hero-title span {
+      color: #0C6E5A;
+    }
+
+    .hero-subtitle-uz {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 1.5mm;
+    }
+
+    .hero-subtitle-ru {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #64748B;
+    }
+
+    /* QR GRID: SIDE-BY-SIDE ON A4 */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12mm;
+      padding: 2mm 0 4mm 0;
+    }
+
+    .qr-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 6mm 5mm 5mm 5mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .qr-card-google {
+      border: 2px solid #DBEAFE;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
+      background: linear-gradient(180deg, rgba(239, 246, 255, 0.5) 0%, #FFFFFF 100%);
+    }
+
+    .qr-card-yandex {
+      border: 2px solid #FEE2E2;
+      box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.08);
+      background: linear-gradient(180deg, rgba(254, 242, 242, 0.5) 0%, #FFFFFF 100%);
+    }
+
+    .platform-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 11.5px;
+      font-weight: 800;
+      margin-bottom: 3mm;
+    }
+
+    .pill-google {
+      background: #FFFFFF;
+      color: #1E40AF;
+      border: 1px solid #BFDBFE;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+    }
+
+    .pill-yandex {
+      background: #FFFFFF;
+      color: #991B1B;
+      border: 1px solid #FECACA;
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.1);
+    }
+
+    .platform-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .stars-row {
+      color: #F59E0B;
+      font-size: 18px;
+      letter-spacing: 3px;
+      margin-bottom: 3.5mm;
+      text-shadow: 0 1px 2px rgba(245, 158, 11, 0.25);
+    }
+
+    .qr-frame {
+      width: 52mm;
+      height: 52mm;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 2.5mm;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1.5px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3.5mm;
+    }
+
+    .qr-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .qr-prompt-main {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1mm;
+    }
+
+    .qr-prompt-sub {
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #64748B;
+    }
+
+    .qr-link-badge {
+      font-size: 9px;
+      font-weight: 700;
+      margin-top: 2mm;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: #F1F5F9;
+      color: #475569;
+    }
+
+    /* 3 SIMPLE STEPS */
+    .steps-bar {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 3.5mm 5mm;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2mm 0 3mm 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #0C6E5A;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-text-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+
+    .step-text-sub {
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #64748B;
+    }
+
+    /* CLINIC TRUST BADGES */
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding: 1.5mm 0;
+    }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #0C6E5A;
+      background: rgba(12, 110, 90, 0.08);
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1.5px dashed #E2E8F0;
+      padding-top: 3.5mm;
+      text-align: center;
+    }
+
+    .footer-phone {
+      font-size: 13.5px;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 1.5mm;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-phone span {
+      color: #0C6E5A;
+    }
+
+    .footer-address {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 1mm;
+    }
+
+    .footer-website {
+      font-size: 14px;
+      font-weight: 900;
+      color: #FF9D50;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .footer-note {
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #94A3B8;
+      margin-top: 1.5mm;
+    }
+
+    /* CONTROLS (SCREEN ONLY) */
+    .screen-controls {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: #0C6E5A;
+      color: #FFFFFF;
+      box-shadow: 0 10px 20px -5px rgba(12, 110, 90, 0.4);
+    }
+
+    .btn-print:hover {
+      background: #095446;
+      transform: translateY(-1px);
+    }
+
+    .btn-pdf {
+      background: #FF9D50;
+      color: #FFFFFF;
+      box-shadow: 0 10px 20px -5px rgba(255, 157, 80, 0.4);
+    }
+
+    .btn-pdf:hover {
+      background: #EA8435;
+      transform: translateY(-1px);
+    }
+
+    /* PRINT SPECIFICATIONS: Perfect A4 Portrait */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .screen-controls {
+        display: none !important;
+      }
+
+      .sheet-a4 {
+        width: 210mm !important;
+        height: 297mm !important;
+        max-width: 210mm !important;
+        max-height: 297mm !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 10mm 12mm 8mm 12mm !important;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The A4 Sheet (210mm x 297mm) -->
+  <div class="sheet-a4">
+    
+    <!-- Top Gradient Bar -->
+    <div class="top-accent-bar"></div>
+
+    <!-- Header: Logo + Clinic Identity -->
+    <div class="header">
+      <img src="./logo_icon.png" alt="Stomatolog Orifjon Logo" class="header-logo">
+      <div class="header-text">
+        <h1 class="header-title">
+          <span class="brand-coral">STOMATOLOG</span> <span class="brand-navy">ORIFJON</span>
+        </h1>
+        <p class="header-doctor">MANSUROV ORIFJON ALIMBEKOVICH</p>
+        <p class="header-badge">VRACH-STOMATOLOG · 20+ YILLIK TAJRIBA · ANDIJON</p>
+      </div>
+    </div>
+
+    <!-- Hero CTA -->
+    <div class="hero-cta">
+      <div class="hero-badge">⭐ Bemorlarimiz Fikri Biz Uchun Muhim</div>
+      <h2 class="hero-title">Xizmatimiz <span>yoqdimi?</span></h2>
+      <p class="hero-subtitle-uz">Sizga qulay bo'lgan xaritani tanlang va 1 daqiqada o'z bahoingizni qoldiring</p>
+      <p class="hero-subtitle-ru">Оцените качество лечения и оставьте ваш отзыв в Google Maps или Яндекс Картах</p>
+    </div>
+
+    <!-- The Two Side-by-Side Review Cards -->
+    <div class="qr-grid">
+
+      <!-- GOOGLE MAPS CARD -->
+      <div class="qr-card qr-card-google">
+        <div class="platform-pill pill-google">
+          <svg class="platform-icon" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Google Xaritalar</span>
+        </div>
+
+        <div class="stars-row">★ ★ ★ ★ ★</div>
+
+        <div class="qr-frame">
+          <img src="./qr-google-branded.svg" alt="Google Review QR">
+        </div>
+
+        <p class="qr-prompt-main">Kamerani QR-kodga qarating</p>
+        <p class="qr-prompt-sub">Google Maps'da 5 yulduz qo'ying</p>
+        <span class="qr-link-badge">g.page/r/CcypeG53HHZLEBM</span>
+      </div>
+
+      <!-- YANDEX MAPS CARD -->
+      <div class="qr-card qr-card-yandex">
+        <div class="platform-pill pill-yandex">
+          <svg class="platform-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="11" fill="#FC3F1D"/>
+            <path fill="#FFFFFF" d="M13.5 17h-1.8l-2.7-4.9-1.2 1.3v3.6H6.6V6.5h2.2v5.4l3.6-5.4h2.4l-3.8 5.5 3.7 5.5z"/>
+          </svg>
+          <span>Yandeks Xaritalar</span>
+        </div>
+
+        <div class="stars-row">★ ★ ★ ★ ★</div>
+
+        <div class="qr-frame">
+          <img src="./qr-yandex-branded.svg" alt="Yandex Review QR">
+        </div>
+
+        <p class="qr-prompt-main">Kamerani QR-kodga qarating</p>
+        <p class="qr-prompt-sub">Yandex Xaritalarda baholang</p>
+        <span class="qr-link-badge">yandex.uz/maps/org/133941332039</span>
+      </div>
+
+    </div>
+
+    <!-- 3 SIMPLE STEPS -->
+    <div class="steps-bar">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <p class="step-text-title">Kamerani oching</p>
+          <p class="step-text-sub">Откройте камеру</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <p class="step-text-title">QR-kodga tuting</p>
+          <p class="step-text-sub">Наведите на QR-код</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <p class="step-text-title">5 yulduz qo'ying</p>
+          <p class="step-text-sub">Оставьте оценку</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+      <span class="trust-pill">🛡️ 100% Steril (Anti-SPID / Gepatit)</span>
+      <span class="trust-pill">💎 Mega'Gen Biotitan Implantlar</span>
+      <span class="trust-pill">✨ 100% Og'riqsiz Zamonaviy Davolash</span>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p class="footer-phone">Qabulga yozilish va ma'lumot: <span>+998 90 548 10 90</span> · Telegram: <span>@dr_orifjon_1</span></p>
+      <p class="footer-address">📍 Andijon shahri, Muqimiy ko'chasi, 35/41-uy (Mo'ljal: Rayon Stoyanka)</p>
+      <p class="footer-website">www.drorifjon.uz</p>
+      <p class="footer-note">Stomatolog Orifjon (Mansurov Orifjon Alimbekovich, Andijon) · Barcha huquqlar himoyalangan</p>
+    </div>
+
+  </div>
+
+  <!-- Screen Controls (Hidden on Print) -->
+  <div class="screen-controls">
+    <button class="btn btn-print" onclick="window.print()">
+      🖨️ A4 Chop Etish (Ctrl + P)
+    </button>
+    <a href="./Stomatolog_Orifjon_QR_Stand_A4.pdf" download="Stomatolog_Orifjon_QR_Stand_A4.pdf" class="btn btn-pdf">
+      📄 A4 PDF Yuklab Olish
+    </a>
+  </div>
+
+</body>
+</html>
