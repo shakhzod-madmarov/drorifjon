@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stomatolog Orifjon — Rasmiy Vizitka (Classic Modern 90x50mm)</title>
+  <title>Stomatolog Orifjon — Rasmiy Vizitka (Executive Classic Modern 90x50mm)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
@@ -15,13 +15,13 @@
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #F1F5F9;
-      color: #0F172A;
+      background: #0B131E;
+      color: #F8FAFC;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 36px 16px;
     }
 
     .container {
@@ -30,7 +30,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 32px;
+      gap: 30px;
     }
 
     /* Page Header */
@@ -42,23 +42,22 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      color: #0C6E5A;
+      background: rgba(124, 179, 66, 0.15);
+      border: 1px solid rgba(124, 179, 66, 0.35);
+      color: #9CCC65;
       font-size: 11px;
       font-weight: 700;
       padding: 5px 14px;
       border-radius: 9999px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
     }
 
     .page-title {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 800;
-      color: #0E273C;
+      color: #FFFFFF;
       letter-spacing: -0.3px;
     }
 
@@ -67,8 +66,8 @@
     }
 
     .page-sub {
-      font-size: 13px;
-      color: #64748B;
+      font-size: 13.5px;
+      color: #94A3B8;
       margin-top: 4px;
     }
 
@@ -85,7 +84,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .card-label {
@@ -93,7 +92,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #475569;
+      color: #94A3B8;
     }
 
     /* Business Card Dimensions: 90mm x 50mm */
@@ -101,17 +100,17 @@
     .biz-card {
       width: 504px;
       height: 280px;
-      border-radius: 12px;
+      border-radius: 14px;
       position: relative;
       overflow: hidden;
       background: #FFFFFF;
-      box-shadow: 0 16px 36px -8px rgba(14, 39, 60, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .biz-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 24px 48px -8px rgba(14, 39, 60, 0.3), 0 0 0 1px rgba(124, 179, 66, 0.3);
+      box-shadow: 0 26px 52px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 179, 66, 0.4);
     }
 
     /* SVG Wave Background */
@@ -133,14 +132,14 @@
     }
 
     /* ======================================================== */
-    /* CARD 1: FRONT (Minimalist, Classic, Tidy)                */
+    /* CARD 1: FRONT (Minimalist, Iconic, Executive)            */
     /* ======================================================== */
     .front-content {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100%;
-      padding-left: 36%; /* Percentage-based: 100% immune to print scaling */
+      padding-left: 36%;
       padding-right: 6%;
     }
 
@@ -152,10 +151,10 @@
     }
 
     .front-logo-wrap {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
+      width: 72px;
+      height: 72px;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.45));
     }
 
     .front-logo-wrap img {
@@ -165,16 +164,25 @@
     }
 
     .front-clinic-title {
-      font-size: 16.5px;
-      font-weight: 800;
+      font-size: 19px;
+      font-weight: 900;
       color: #FFFFFF;
-      letter-spacing: 2px;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     .front-clinic-title span {
       color: #FF9D50;
+    }
+
+    .front-doctor-sub {
+      font-size: 9px;
+      font-weight: 700;
+      color: #CBD5E1;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 5px;
     }
 
     .front-slogan {
@@ -182,8 +190,8 @@
       font-weight: 700;
       color: #9CCC65;
       text-transform: uppercase;
-      letter-spacing: 2.2px;
-      margin-top: 5px;
+      letter-spacing: 2.5px;
+      margin-top: 7px;
     }
 
     /* ======================================================== */
@@ -195,7 +203,7 @@
       width: 100%;
     }
 
-    /* Left Navy Area for QR: Exactly 32% width so it NEVER crosses the 37% wave */
+    /* Left Navy Area for QR */
     .back-left-area {
       width: 32%;
       height: 100%;
@@ -207,109 +215,122 @@
       z-index: 3;
     }
 
-    .back-qr-frame {
-      width: 74px;
-      height: 74px;
-      max-width: 85%;
+    /* White rounded badge for QR code ensures 100% universal camera scan */
+    .back-qr-card {
+      width: 78px;
+      height: 78px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      padding: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     }
 
-    .back-qr-frame img {
+    .back-qr-card img {
       width: 100%;
       height: 100%;
       display: block;
     }
 
     .back-qr-caption {
-      font-size: 6.5px;
-      font-weight: 700;
+      font-size: 7px;
+      font-weight: 800;
       color: #9CCC65;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-top: 6px;
+      letter-spacing: 1.5px;
+      margin-top: 7px;
       text-align: center;
       white-space: nowrap;
     }
 
-    /* Right White Area: 68% width, perfectly spaced & uncluttered */
+    /* Right White Area: perfectly spaced & uncluttered */
     .back-right-area {
       width: 68%;
       height: 100%;
-      padding: 24px 20px 22px 34px;
+      padding: 24px 22px 22px 34px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 15px;
       z-index: 3;
+      background: transparent;
     }
 
     /* Doctor Header */
     .back-doctor-header {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 3.5px;
+      border-bottom: 1.5px solid #F1F5F9;
+      padding-bottom: 9px;
     }
 
     .back-doctor-name {
-      font-size: 15px;
-      font-weight: 800;
+      font-size: 16px;
+      font-weight: 900;
       color: #0E273C;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
       line-height: 1.2;
       white-space: nowrap;
     }
 
     .back-doctor-title {
-      font-size: 8.5px;
+      font-size: 9px;
       font-weight: 700;
-      color: #65A30D;
-      letter-spacing: 1px;
+      color: #558B2F;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
+    }
+
+    .back-doctor-exp {
+      font-size: 7.8px;
+      font-weight: 600;
+      color: #64748B;
+      letter-spacing: 0.5px;
     }
 
     /* Contact Details: Clean, Single-column, Beautifully Spaced */
     .back-contacts-list {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 6px;
+      gap: 10.5px;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 9px;
-      font-size: 8.5px;
+      gap: 11px;
+      font-size: 9.5px;
       font-weight: 600;
       color: #334155;
     }
 
     .contact-icon-circle {
-      width: 19px;
-      height: 19px;
+      width: 23px;
+      height: 23px;
       border-radius: 50%;
       background: #7CB342;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 1.5px 3px rgba(124, 179, 66, 0.35);
+      box-shadow: 0 2px 6px rgba(124, 179, 66, 0.4);
     }
 
     .contact-icon-circle svg {
-      width: 10.5px;
-      height: 10.5px;
+      width: 12px;
+      height: 12px;
       fill: #FFFFFF;
     }
 
     .contact-text-phone {
-      font-weight: 800;
-      font-size: 9.5px;
+      font-weight: 900;
+      font-size: 11px;
       color: #0E273C;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
     }
 
     .contact-text-link {
@@ -323,7 +344,7 @@
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 4px;
+      margin-top: 8px;
     }
 
     .btn {
@@ -341,35 +362,35 @@
     }
 
     .btn-print {
-      background: #0E273C;
-      color: #FFFFFF;
-      box-shadow: 0 8px 20px -4px rgba(14, 39, 60, 0.35);
+      background: #FFFFFF;
+      color: #0E273C;
+      box-shadow: 0 8px 20px -4px rgba(255, 255, 255, 0.2);
     }
 
     .btn-print:hover {
-      background: #091927;
+      background: #F1F5F9;
       transform: translateY(-1px);
     }
 
     .btn-pdf {
-      background: #65A30D;
+      background: #7CB342;
       color: #FFFFFF;
-      box-shadow: 0 8px 20px -4px rgba(101, 163, 13, 0.35);
+      box-shadow: 0 8px 20px -4px rgba(124, 179, 66, 0.35);
     }
 
     .btn-pdf:hover {
-      background: #4D7C0F;
+      background: #558B2F;
       transform: translateY(-1px);
     }
 
     .btn-outline {
-      background: #FFFFFF;
-      color: #0E273C;
-      border: 1px solid #CBD5E1;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .btn-outline:hover {
-      background: #F8FAFC;
+      background: rgba(255, 255, 255, 0.15);
     }
 
     /* ======================================================== */
@@ -457,6 +478,7 @@
               <h2 class="front-clinic-title">
                 STOMATOLOG <span>ORIFJON</span>
               </h2>
+              <p class="front-doctor-sub">Mansurov Orifjon · 20+ Yillik Tajriba</p>
               <p class="front-slogan">Sog'lom va chiroyli tabassum</p>
             </div>
           </div>
@@ -472,7 +494,7 @@
         <div class="biz-card">
 
           <!-- Smooth Organic S-Wave Background: Back -->
-          <!-- The Navy section spans x=0 to x=185+, leaving QR 100% inside Navy -->
+          <!-- The Navy section spans x=0 to x=180, leaving QR 100% inside Navy -->
           <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
             <!-- Right Pure White Canvas -->
             <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
@@ -490,10 +512,10 @@
           <!-- Card Content: Back -->
           <div class="card-content back-content">
             
-            <!-- Left Navy QR Section (QR sits 100% within the solid navy zone) -->
+            <!-- Left Navy QR Section (QR sits inside white card 100% within the solid navy zone) -->
             <div class="back-left-area">
-              <div class="back-qr-frame" title="Saytga o'tish uchun skaner qiling: https://drorifjon.uz">
-                <img src="./qr-website-white.svg" alt="Website QR Code">
+              <div class="back-qr-card" title="Saytga o'tish uchun skaner qiling: https://drorifjon.uz">
+                <img src="./qr-website-branded.svg" alt="Website QR Code">
               </div>
               <p class="back-qr-caption">Saytga o'tish</p>
             </div>
@@ -505,6 +527,7 @@
               <div class="back-doctor-header">
                 <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
                 <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+                <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
               </div>
 
               <!-- Contacts List (4 Clean, Uncrowded Rows) -->
@@ -520,14 +543,14 @@
                   <span class="contact-text-phone">+998 90 548 10 90</span>
                 </div>
 
-                <!-- 2. Telegram -->
+                <!-- 2. Telegram & Instagram -->
                 <div class="contact-item">
                   <div class="contact-icon-circle">
                     <svg viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
                     </svg>
                   </div>
-                  <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+                  <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
                 </div>
 
                 <!-- 3. Website -->
@@ -566,11 +589,11 @@
       <button class="btn btn-print" onclick="window.print()">
         🖨️ Chop Etish (Ctrl + P)
       </button>
-      <a href="./Stomatolog_Orifjon_Business_Card.pdf" download="Stomatolog_Orifjon_Business_Card.pdf" class="btn btn-pdf">
-        📄 A4 PDF Yuklab Olish (90x50mm)
+      <a href="./01_Vizitka_90x50mm_Old_va_Orqa.pdf" download="Vizitka_90x50mm_Old_va_Orqa.pdf" class="btn btn-pdf">
+        📄 90×50mm PDF (Old & Orqa)
       </a>
-      <a href="./qr-website-white.png" download="DrOrifjon_Website_QR.png" class="btn btn-outline">
-        📥 Oq QR Kod (PNG)
+      <a href="./02_Vizitka_A4_10talik_Chop_Varaqi.pdf" download="Vizitka_A4_10talik_Chop_Varaqi.pdf" class="btn btn-outline">
+        📑 A4 Chop Varaqi (10 dona)
       </a>
     </div>
 
