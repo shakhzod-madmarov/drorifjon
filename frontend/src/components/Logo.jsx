@@ -1,7 +1,11 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 
-const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
+const Logo = ({
+  className = "h-8 sm:h-10",
+  inverted = false,
+  hideSubtitleOnMobile = false,
+}) => {
   const { lang } = useLanguage();
 
   const titlePrefix =
@@ -35,14 +39,15 @@ const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
           width={40}
           height={40}
           decoding="async"
-          className={`${className} w-auto object-contain transition-transform duration-300 group-hover:rotate-2 drop-shadow-xs`}
+          className={`${className} max-h-8 sm:max-h-10 w-auto object-contain transition-transform duration-300 group-hover:rotate-2 drop-shadow-xs`}
+          style={{ maxHeight: "2.5rem" }}
         />
       </div>
 
       {/* Brand Name Typography — STOMATOLOG ORIFJON as PRIMARY NAME */}
       <div className="flex flex-col leading-none text-left min-w-0 justify-center">
         <span
-          className={`font-serif-classic text-[16px] 2xs:text-[18px] sm:text-[21px] font-black tracking-tight truncate flex items-center gap-1.5 ${
+          className={`font-serif-classic text-[15px] xs:text-[17px] sm:text-[21px] font-black tracking-tight truncate flex items-center gap-1 ${
             inverted ? "text-white" : "text-slate-900"
           }`}
         >
@@ -51,6 +56,8 @@ const Logo = ({ className = "h-7.5 2xs:h-8.5 sm:h-10", inverted = false }) => {
         </span>
         <span
           className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-1 ${
+            hideSubtitleOnMobile ? "hidden sm:block" : ""
+          } ${
             inverted ? "text-teal-300" : "text-slate-500"
           }`}
         >

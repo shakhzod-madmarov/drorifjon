@@ -119,9 +119,9 @@ const HeroSection = ({ onOpenBooking }) => {
           <div className="lg:col-span-7 space-y-5 lg:space-y-7 text-left">
             {/* Eyebrow badge with pulsing ring */}
             <div className="animate-fadeInUp">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50/90 border border-teal-200/90 text-[11px] font-black uppercase tracking-widest text-primary shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse-ring inline-block" />
-                <span>{t.eyebrow}</span>
+              <span className="inline-flex items-center gap-1.5 2xs:gap-2 px-3 2xs:px-3.5 py-1.5 rounded-full bg-teal-50/90 border border-teal-200/90 text-[9.5px] 2xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider sm:tracking-widest text-primary shadow-2xs max-w-full">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse-ring inline-block shrink-0" />
+                <span className="truncate">{t.eyebrow}</span>
               </span>
             </div>
 
@@ -180,7 +180,7 @@ const HeroSection = ({ onOpenBooking }) => {
             </div>
 
             {/* Stats Row */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-3 border-t border-slate-100 animate-fadeInUp animation-delay-400">
+            <div className="grid grid-cols-3 gap-3 2xs:gap-4 sm:gap-8 pt-3 border-t border-slate-100 animate-fadeInUp animation-delay-400">
               {[
                 { n: t.s1n, l: t.s1l, color: "text-primary" },
                 { n: t.s2n, l: t.s2l, color: "text-indigo-600" },

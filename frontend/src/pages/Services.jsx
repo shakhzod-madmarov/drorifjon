@@ -86,7 +86,7 @@ const Services = ({ onOpenBooking }) => {
       </header>
 
       {/* Filter Tabs */}
-      <div className="relative z-10 flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-2 pb-1 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
+      <div className="relative z-10 flex overflow-x-auto sm:flex-wrap items-center justify-start sm:justify-center gap-1.5 2xs:gap-2 pb-2 px-0.5 no-scrollbar scroll-touch w-full">
         {categories.map((c) => (
           <button
             key={c.id}
@@ -170,7 +170,7 @@ const Services = ({ onOpenBooking }) => {
               </div>
 
               {/* Footer Buttons with Shimmer Motion */}
-              <div className="p-6 pt-0 flex items-center justify-between gap-3 border-t border-slate-100/70 mt-2">
+              <div className="p-4 2xs:p-5 sm:p-6 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100/70 mt-2">
                 <Link
                   to={to(`/services/${service.id}`)}
                   className="text-xs font-bold text-slate-700 hover:text-primary transition-colors flex items-center gap-1 group/btn"

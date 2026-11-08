@@ -725,7 +725,7 @@ const InlineBookingSection = ({ initialService = null }) => {
               </label>
               <span className="text-[11px] text-slate-500 font-medium">{clinicHours.days} ({clinicHours.hours})</span>
             </div>
-            <div className="flex items-center gap-2.5 overflow-x-auto pb-2 px-1 -mx-2 sm:mx-0 no-scrollbar scroll-touch">
+            <div className="flex items-center gap-2 2xs:gap-2.5 overflow-x-auto pb-2 px-0.5 no-scrollbar scroll-touch w-full">
               {days.map((d) => {
                 const isToday = d.date === todayStr;
                 const isSelected = selectedDate === d.date;
