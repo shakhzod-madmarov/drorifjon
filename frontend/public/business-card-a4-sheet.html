@@ -38,10 +38,6 @@
       page-break-inside: avoid;
     }
 
-    .sheet-page:last-child {
-      page-break-after: avoid;
-    }
-
     .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 90mm);
@@ -56,6 +52,52 @@
       position: relative;
       overflow: hidden;
       outline: 0.15mm dashed #CBD5E1;
+    }
+
+    .guide-label {
+      position: absolute;
+      top: 8mm;
+      left: 15mm;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #64748B;
+      letter-spacing: 0.3mm;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: 90mm 50mm;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #FFFFFF;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .card-page {
+      width: 90mm;
+      height: 50mm;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    .card-page:last-child {
+      page-break-after: avoid;
     }
 
     .wave-bg {
@@ -75,7 +117,49 @@
       z-index: 2;
     }
 
-    /* BACK CONTENT (The Contact Side with QR) */
+    /* FRONT PAGE */
+    .front-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding-left: 35%;
+      padding-right: 5%;
+    }
+
+    .front-brand-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .front-logo-wrap {
+      width: 17mm;
+      height: 17mm;
+      margin-bottom: 3mm;
+    }
+
+    .front-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .front-clinic-title {
+      font-size: 13.5pt;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: 0.8mm;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .front-clinic-title span {
+      color: #FF9D50;
+    }
+
+    /* BACK PAGE */
     .back-content {
       display: flex;
       height: 100%;
@@ -94,8 +178,8 @@
     }
 
     .back-qr-card {
-      width: 18mm;
-      height: 18mm;
+      width: 18.5mm;
+      height: 18.5mm;
       background: #FFFFFF;
       border-radius: 1.8mm;
       padding: 1mm;
@@ -125,11 +209,11 @@
     .back-right-area {
       width: 59mm;
       height: 50mm;
-      padding: 4.5mm 4mm 4mm 6.2mm;
+      padding: 4.2mm 4mm 3.8mm 6.2mm;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 2.8mm;
+      gap: 2.2mm;
       z-index: 3;
       background: transparent;
     }
@@ -137,13 +221,13 @@
     .back-doctor-header {
       display: flex;
       flex-direction: column;
-      gap: 0.6mm;
+      gap: 0.5mm;
       border-bottom: 0.25mm solid #F1F5F9;
-      padding-bottom: 1.6mm;
+      padding-bottom: 1.4mm;
     }
 
     .back-doctor-name {
-      font-size: 9.8pt;
+      font-size: 9.6pt;
       font-weight: 900;
       color: #0E273C;
       letter-spacing: 0.2mm;
@@ -153,7 +237,7 @@
     }
 
     .back-doctor-title {
-      font-size: 5.6pt;
+      font-size: 5.4pt;
       font-weight: 700;
       color: #558B2F;
       letter-spacing: 0.25mm;
@@ -161,7 +245,7 @@
     }
 
     .back-doctor-exp {
-      font-size: 5pt;
+      font-size: 4.8pt;
       font-weight: 600;
       color: #64748B;
       letter-spacing: 0.1mm;
@@ -170,21 +254,21 @@
     .back-contacts-list {
       display: flex;
       flex-direction: column;
-      gap: 2.2mm;
+      gap: 1.5mm;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 2.4mm;
-      font-size: 5.8pt;
+      gap: 2mm;
+      font-size: 5.4pt;
       font-weight: 600;
       color: #334155;
     }
 
     .contact-icon-circle {
-      width: 4.8mm;
-      height: 4.8mm;
+      width: 4.2mm;
+      height: 4.2mm;
       border-radius: 50%;
       background: #7CB342;
       display: flex;
@@ -194,14 +278,14 @@
     }
 
     .contact-icon-circle svg {
-      width: 2.6mm;
-      height: 2.6mm;
+      width: 2.3mm;
+      height: 2.3mm;
       fill: #FFFFFF;
     }
 
     .contact-text-phone {
       font-weight: 900;
-      font-size: 7.2pt;
+      font-size: 6.8pt;
       color: #0E273C;
       letter-spacing: 0.15mm;
     }
@@ -210,104 +294,784 @@
       color: #0E273C;
       font-weight: 700;
     }
-
-    /* FRONT CONTENT */
-    .front-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding-left: 35%;
-      padding-right: 5%;
-    }
-
-    .front-brand-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .front-logo-wrap {
-      width: 13.5mm;
-      height: 13.5mm;
-      margin-bottom: 2mm;
-    }
-
-    .front-logo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .front-clinic-title {
-      font-size: 11pt;
-      font-weight: 900;
-      color: #FFFFFF;
-      letter-spacing: 0.6mm;
-      text-transform: uppercase;
-      line-height: 1.15;
-    }
-
-    .front-clinic-title span {
-      color: #FF9D50;
-    }
-
-    .front-doctor-sub {
-      font-size: 5.5pt;
-      font-weight: 700;
-      color: #CBD5E1;
-      letter-spacing: 0.4mm;
-      text-transform: uppercase;
-      margin-top: 1mm;
-    }
-
-    .front-slogan {
-      font-size: 5pt;
-      font-weight: 700;
-      color: #9CCC65;
-      text-transform: uppercase;
-      letter-spacing: 0.6mm;
-      margin-top: 1.2mm;
-    }
-
-    .guide-label {
-      position: absolute;
-      top: 8mm;
-      left: 15mm;
-      font-size: 8pt;
-      font-weight: 700;
-      color: #64748B;
-      letter-spacing: 0.3mm;
-    }
+  
   </style>
 </head>
 <body>
 
-  <!-- SHEET 1: 10 BACK CARDS (Most used for everyday hand-out) -->
   <div class="sheet-page">
-    <div class="guide-label">STOMATOLOG ORIFJON — 10 DONA VIZITKA (ORQA TOMONI) · A4 FORMAT</div>
+    <div class="guide-label">STOMATOLOG ORIFJON — 10 DONA VIZITKA (90x50mm) · A4 CHOP VARAQI</div>
     <div class="grid-container">
-      <!-- 10 Repeated Back Cards -->
-      <script>
-        // Generated statically below
-      </script>
-      <!-- Repeat 10 cells -->
-      <!-- Card 1 -->
       <div class="card-cell">
-        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg>
-        <div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
       </div>
-      <!-- Cards 2 to 10 -->
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
-      <div class="card-cell"><svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none"><rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/><path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/><path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/><path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/></svg><div class="card-content back-content"><div class="back-left-area"><div class="back-qr-card"><img src="./qr-website-branded.svg" alt="Website QR"></div><p class="back-qr-caption">Saytga o'tish</p></div><div class="back-right-area"><div class="back-doctor-header"><h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3><p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p><p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p></div><div class="back-contacts-list"><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><span class="contact-text-phone">+998 90 548 10 90</span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg></div><span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span> · Instagram: <span class="contact-text-link">@dr_orifjon</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span></div><div class="contact-item"><div class="contact-icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span></div></div></div></div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-cell">
+        <svg class="wave-bg" viewBox="0 0 504 280" preserveAspectRatio="none">
+      <rect x="0" y="0" width="504" height="280" fill="#FFFFFF"/>
+      <path d="M 0,0 L 180,0 C 150,80 195,160 170,280 L 0,280 Z" fill="#0E273C"/>
+      <path d="M 179,0 C 149,80 194,160 169,280 L 187,280 C 212,160 167,80 197,0 Z" fill="#7CB342"/>
+      <path d="M 197,0 C 167,80 212,160 187,280 L 195,280 C 220,160 175,80 205,0 Z" fill="#F0FDF4"/>
+    </svg>
+
+    <div class="card-content back-content">
+      <div class="back-left-area">
+        <div class="back-qr-card">
+          <img src="./qr-website-branded.svg" alt="Website QR Code">
+        </div>
+        <p class="back-qr-caption">Saytga o'tish</p>
+      </div>
+
+      <div class="back-right-area">
+        <div class="back-doctor-header">
+          <h3 class="back-doctor-name">Dr. Mansurov Orifjon</h3>
+          <p class="back-doctor-title">Vrach-Stomatolog · Implantolog</p>
+          <p class="back-doctor-exp">20+ yillik tajriba · Oliy toifali shifokor</p>
+        </div>
+
+        <div class="back-contacts-list">
+          <!-- 1. Phone -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <span class="contact-text-phone">+998 90 548 10 90</span>
+          </div>
+
+          <!-- 2. Telegram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+              </svg>
+            </div>
+            <span>Telegram: <span class="contact-text-link">@dr_orifjon_1</span></span>
+          </div>
+
+          <!-- 3. Instagram -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <span>Instagram: <span class="contact-text-link">@dr_orifjon</span></span>
+          </div>
+
+          <!-- 4. Website -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <span>Veb-sayt: <span class="contact-text-link">www.drorifjon.uz</span></span>
+          </div>
+
+          <!-- 5. Location -->
+          <div class="contact-item">
+            <div class="contact-icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <span>Andijon sh., Muqimiy ko'chasi (Rayon Stoyanka)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
     </div>
   </div>
 
