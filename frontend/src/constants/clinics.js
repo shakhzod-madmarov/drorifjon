@@ -71,7 +71,7 @@ export const CLINICS = [
       yandexBusinessAddUrl: "https://business.yandex.ru/sprav/add",
       googlePlaceId: "",
       googleCid: "",
-      googleReviewUrl: "https://www.google.com/maps/search/?api=1&query=40.759178,72.354302",
+      googleReviewUrl: "https://g.page/r/CcypeG53HHZLEBM/review",
     },
   },
 ];

@@ -321,6 +321,17 @@
       transform: translateY(-1px);
     }
 
+    .btn-pdf {
+      background: #FF9D50;
+      color: #FFFFFF;
+      box-shadow: 0 10px 20px -5px rgba(255, 157, 80, 0.4);
+    }
+
+    .btn-pdf:hover {
+      background: #EA8435;
+      transform: translateY(-1px);
+    }
+
     .btn-qr {
       background: #FFFFFF;
       color: #0F172A;
@@ -384,7 +395,7 @@
 
       <!-- Header: Logo + Stomatolog Orifjon -->
       <div class="header-branding">
-        <img src="/logo_icon.png" alt="Stomatolog Orifjon" class="header-logo">
+        <img src="./logo_icon.png" alt="Stomatolog Orifjon" class="header-logo">
         <div class="header-text">
           <h1 class="clinic-title-main">
             <span class="brand-coral">STOMATOLOG</span> <span class="brand-navy">ORIFJON</span>
@@ -423,12 +434,12 @@
 
           <!-- Branded Coral QR Code with Google "G" in Center -->
           <div class="qr-code-box">
-            <img src="/qr-google-branded.svg" alt="Google Review QR Code">
+            <img src="./qr-google-branded.svg" alt="Google Review QR Code">
           </div>
 
           <!-- Prompt Text -->
           <p class="card-footer-prompt">Kamerani QR-kodga qarating</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=40.759178,72.354302" target="_blank" rel="noopener noreferrer" class="card-footer-link link-google">Google Xaritalarda baholash</a>
+          <a href="https://g.page/r/CcypeG53HHZLEBM/review" target="_blank" rel="noopener noreferrer" class="card-footer-link link-google">Google Xaritalarda baholash</a>
 
         </div>
 
@@ -449,7 +460,7 @@
 
           <!-- Branded Coral QR Code with Yandex "Я" in Center -->
           <div class="qr-code-box">
-            <img src="/qr-yandex-branded.svg" alt="Yandex Review QR Code">
+            <img src="./qr-yandex-branded.svg" alt="Yandex Review QR Code">
           </div>
 
           <!-- Prompt Text -->
@@ -474,10 +485,13 @@
       <button class="btn btn-print" onclick="window.print()">
         🖨️ Stendni Chop Etish (Ctrl + P)
       </button>
-      <a href="/qr-google-branded.png" download="Google_Review_QR.png" class="btn btn-qr">
+      <a href="./stomatolog-orifjon-qr-stand.pdf" download="Stomatolog_Orifjon_QR_Stand.pdf" class="btn btn-pdf">
+        📄 PDF Yuklab Olish
+      </a>
+      <a href="./qr-google-branded.png" download="Google_Review_QR.png" class="btn btn-qr">
         📥 Google QR (PNG)
       </a>
-      <a href="/qr-yandex-branded.png" download="Yandex_Review_QR.png" class="btn btn-qr">
+      <a href="./qr-yandex-branded.png" download="Yandex_Review_QR.png" class="btn btn-qr">
         📥 Yandex QR (PNG)
       </a>
     </div>
