@@ -153,8 +153,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
         {/* Subtle top accent gradient */}
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
 
-        <div className="max-w-7xl mx-auto px-2.5 2xs:px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20 gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20 gap-3 xl:gap-6">
             {/* Logo — compact & responsive */}
             <NavLink
               to={to("/")}
@@ -165,7 +165,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
             </NavLink>
 
             {/* Desktop Navigation Links */}
-            <nav aria-label={a11y.mainNav} className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0">
+            <nav aria-label={a11y.mainNav} className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
               {/* Home */}
               <NavLink
                 to={to("/")}
@@ -328,15 +328,15 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               </NavLink>
             </nav>
 
-            {/* Desktop Right Side: Lang + Phone + CTA */}
-            <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
+            {/* Desktop Right Side: Lang + CTA */}
+            <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
               {/* Language Switcher - 3 pill */}
               <div className="flex items-center bg-slate-100/90 rounded-xl p-0.5 text-[11px] font-bold border border-slate-200/60 shrink-0">
                 {["uz", "ru", "en"].map((l) => (
                   <button
                     key={l}
                     onClick={() => changeLanguage(l)}
-                    className={`px-2 xl:px-2.5 py-1.5 rounded-lg uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                    className={`px-2.5 py-1.5 rounded-lg uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                       lang === l
                         ? "bg-white text-primary shadow-xs font-black"
                         : "text-slate-500 hover:text-slate-800"
@@ -347,30 +347,10 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 ))}
               </div>
 
-              {/* Phone Pill: sleek icon on xl, full pill on 2xl */}
-              <a
-                href={DOCTOR_INFO.phoneHref}
-                title={`Tel: ${DOCTOR_INFO.phoneDisplay}`}
-                aria-label={a11y.callClinic}
-                className="hidden xl:flex 2xl:hidden w-9 h-9 rounded-xl border border-slate-200 text-slate-700 hover:border-primary hover:text-primary hover:bg-teal-50/50 items-center justify-center transition-all shrink-0"
-              >
-                <IconPhone className="w-4 h-4 text-primary" />
-              </a>
-              <a
-                href={DOCTOR_INFO.phoneHref}
-                title={`Asosiy: ${DOCTOR_INFO.phoneDisplay} | Qo'shimcha: ${DOCTOR_INFO.secondaryPhoneDisplay}`}
-                className="hidden 2xl:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 text-slate-700 text-xs font-bold hover:border-primary hover:text-primary hover:bg-teal-50/50 transition-all duration-200 whitespace-nowrap shrink-0"
-              >
-                <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <IconPhone className="w-3 h-3 text-primary" />
-                </span>
-                <span className="whitespace-nowrap tracking-tight">{DOCTOR_INFO.phoneDisplay}</span>
-              </a>
-
               {/* CTA Book Button */}
               <button
                 onClick={handleBookClick}
-                className="relative overflow-hidden px-3.5 xl:px-4 py-2.5 rounded-xl bg-primary text-white text-xs font-extrabold uppercase tracking-wider shadow-[0_4px_16px_-4px_rgba(12,110,90,0.5)] hover:shadow-[0_6px_24px_-4px_rgba(12,110,90,0.6)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group whitespace-nowrap shrink-0"
+                className="relative overflow-hidden px-4 xl:px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-extrabold uppercase tracking-wider shadow-[0_4px_16px_-4px_rgba(12,110,90,0.5)] hover:shadow-[0_6px_24px_-4px_rgba(12,110,90,0.6)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group whitespace-nowrap shrink-0"
               >
                 <span className="relative z-10 flex items-center gap-1.5 whitespace-nowrap">
                   <span>

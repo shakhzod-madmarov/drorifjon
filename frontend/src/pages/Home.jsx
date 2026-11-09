@@ -223,21 +223,6 @@ const HeroSection = ({ onOpenBooking }) => {
                       loading="eager"
                     />
                   </picture>
-
-                  {/* Floating Top-Left Badge: 20+ Yillik Tajriba */}
-                  <div className="absolute top-3.5 left-3.5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-teal-200/80 text-[11px] font-bold text-slate-800 shadow-sm">
-                      <span className="text-amber-500">⭐</span>
-                      <span>20+ Yillik Tajriba</span>
-                    </span>
-                  </div>
-
-                  {/* Floating Top-Right Badge: Oliy Toifa */}
-                  <div className="absolute top-3.5 right-3.5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-teal-900/90 backdrop-blur-md border border-white/20 text-[11px] font-bold text-white shadow-sm">
-                      <span>🛡️ Oliy Toifa</span>
-                    </span>
-                  </div>
                 </div>
 
                 {/* Bottom Profile Bar */}
