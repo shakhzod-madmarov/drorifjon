@@ -24,10 +24,10 @@ const Logo = ({
 
   const subText =
     lang === "ru"
-      ? "Современная Стоматология · Андижан"
+      ? "Современная Стоматология"
       : lang === "en"
-      ? "Modern Dentistry · Andijan"
-      : "Zamonaviy Stomatologiya · Andijon";
+      ? "Modern Dentistry"
+      : "Zamonaviy Stomatologiya";
 
   return (
     <div className="inline-flex items-center gap-2 sm:gap-2.5 select-none group min-w-0">
@@ -55,7 +55,7 @@ const Logo = ({
           <span className="text-primary font-black">{doctorName}</span>
         </span>
         <span
-          className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.14em] truncate mt-1 ${
+          className={`text-[8.5px] 2xs:text-[9.5px] font-bold uppercase tracking-[0.12em] whitespace-nowrap mt-1 ${
             hideSubtitleOnMobile ? "hidden sm:block" : ""
           } ${
             inverted ? "text-teal-300" : "text-slate-500"

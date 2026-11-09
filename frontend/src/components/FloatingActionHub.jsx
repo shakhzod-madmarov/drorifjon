@@ -95,18 +95,6 @@ const FloatingActionHub = () => {
 
       {/* Main Floating Trigger Bar */}
       <div className="flex items-center gap-2 [transform-style:preserve-3d]">
-        {/* Desktop Quick Phone Pill */}
-        <a
-          href={DOCTOR_INFO.phoneHref}
-          title={`Asosiy: ${DOCTOR_INFO.phoneDisplay} | Qo'shimcha: ${DOCTOR_INFO.secondaryPhoneDisplay}`}
-          className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-teal-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5 whitespace-nowrap"
-        >
-          <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-            <IconPhone className="w-3.5 h-3.5 text-primary" />
-          </span>
-          <span>{DOCTOR_INFO.phoneDisplay}</span>
-        </a>
-
         {/* 3D Floating Hub Button */}
         <div className="relative">
           {/* Subtle pulse aura ring when closed */}
