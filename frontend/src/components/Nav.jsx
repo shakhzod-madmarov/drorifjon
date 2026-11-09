@@ -146,8 +146,8 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-[0_4px_24px_-4px_rgba(12,110,90,0.12)] border-b border-teal-100/80"
-            : "bg-white/90 backdrop-blur-md border-b border-slate-100/90 shadow-2xs"
+            ? "bg-white/98 backdrop-blur-xl shadow-[0_4px_24px_-4px_rgba(12,110,90,0.12)] border-b border-teal-100/90"
+            : "bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)]"
         }`}
       >
         {/* Subtle top accent gradient */}
