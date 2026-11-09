@@ -105,13 +105,25 @@ const Booking = () => {
         <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200 text-xs space-y-2 shrink-0 text-center sm:text-left">
           <p className="font-bold text-slate-900">{hours.full}</p>
           <p className="text-slate-500">{hours.sunday}</p>
-          <a
-            href={DOCTOR_INFO.phoneHref}
-            className="inline-flex items-center gap-2 font-bold text-primary hover:underline pt-1 text-sm whitespace-nowrap"
-          >
-            <IconPhone className="w-4 h-4 text-primary" />
-            <span>{DOCTOR_INFO.phoneDisplay}</span>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-3 pt-1">
+            <a
+              href={DOCTOR_INFO.phoneHref}
+              className="inline-flex items-center gap-1.5 font-bold text-primary hover:underline text-xs sm:text-sm whitespace-nowrap"
+              title="Asosiy raqam"
+            >
+              <IconPhone className="w-3.5 h-3.5 text-primary" />
+              <span>{DOCTOR_INFO.phoneDisplay}</span>
+            </a>
+            <span className="hidden sm:inline text-teal-300">·</span>
+            <a
+              href={DOCTOR_INFO.secondaryPhoneHref}
+              className="inline-flex items-center gap-1.5 font-semibold text-teal-800 hover:underline text-xs sm:text-sm whitespace-nowrap"
+              title="Qo'shimcha raqam"
+            >
+              <IconPhone className="w-3.5 h-3.5 text-teal-600" />
+              <span>{DOCTOR_INFO.secondaryPhoneDisplay}</span>
+            </a>
+          </div>
         </div>
       </header>
 

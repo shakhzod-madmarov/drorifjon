@@ -11,32 +11,32 @@ export const PAGE_SEO = {
   home: {
     uz: {
       title: "Stomatolog Orifjon (Mansurov Orifjon) — Zamonaviy Stomatologiya | Andijon",
-      description: `Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli. ${years}+ yillik tibbiyot tajribasi. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Terapiya (Charisma, DenFil), ortopediya (sirkon karonkalar, vinirlar), Germaniya va Koreya implantatsiyasi, xirurgiya hamda ortodontiya (breketlar). Muqimiy ko'chasi, 35-uy (Rayon Stoyanka), Andijon. Tel: +998 90 548 10 90.`,
+      description: `Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) qabuli. ${years}+ yillik tibbiyot tajribasi. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Terapiya (Charisma, DenFil), ortopediya (sirkon karonkalar, vinirlar), Germaniya va Koreya implantatsiyasi, xirurgiya hamda ortodontiya (breketlar). Muqimiy ko'chasi, 35-uy (Rayon Stoyanka), Andijon. Tel: +998 90 548 10 90 / +998 99 905 30 90.`,
     },
     ru: {
       title: "Стоматолог Орифжон — Стоматология в Андижане | Врач-Стоматолог Мансуров Орифжон",
-      description: `Приём Стоматолога Орифжона (Мансуров Орифжон Алимбекович). Более ${years} лет практики. Андижанский медицинский колледж и Ошский Государственный Университет. Терапия, циркониевые коронки, виниры, имплантация (Германия, Корея), бережная хирургия и брекеты. Андижан, ул. Мукими 35 (Районная стоянка). Тел: +998 90 548 10 90.`,
+      description: `Приём Стоматолога Орифжона (Мансуров Орифжон Алимбекович). Более ${years} лет практики. Андижанский медицинский колледж и Ошский Государственный Университет. Терапия, циркониевые коронки, виниры, имплантация (Германия, Корея), бережная хирургия и брекеты. Андижан, ул. Мукими 35 (Районная стоянка). Тел: +998 90 548 10 90 / +998 99 905 30 90.`,
     },
     en: {
       title: "Dentist Orifjon (Mansurov Orifjon) — Modern Painless Dentistry | Andijan",
-      description: `Practice of Dentist Orifjon (Mansurov Orifjon Alimbekovich) in Andijan. Over ${years}+ years healthcare experience. Andijan Medical College and Osh State University graduate. Therapy & restoration (Charisma, DenFil), orthopedics, German & Korean implants, gentle surgery, and braces. 35 Muqimiy St., Rayon Stoyanka, Andijan. Tel: +998 90 548 10 90.`,
+      description: `Practice of Dentist Orifjon (Mansurov Orifjon Alimbekovich) in Andijan. Over ${years}+ years healthcare experience. Andijan Medical College and Osh State University graduate. Therapy & restoration (Charisma, DenFil), orthopedics, German & Korean implants, gentle surgery, and braces. 35 Muqimiy St., Rayon Stoyanka, Andijan. Tel: +998 90 548 10 90 / +998 99 905 30 90.`,
     },
   },
   services: {
     uz: {
       title: "Stomatologik Xizmatlar — Stomatolog Orifjon (Andijon)",
       description:
-        "Stomatolog Orifjondan 5 ta asosiy klinik yo'nalish: Terapiya (Charisma va DenFil bilan og'riqsiz tish davolash va restavratsiya), Ortopediya (sirkon karonkalar, vinirlar va protezlar), Implantatsiya (Germaniya va Koreya biotitan tizimlari), Xirurgiya hamda Ortodontiya (breketlar). Rasmiy kafolat. Tel: +998 90 548 10 90.",
+        "Stomatolog Orifjondan 5 ta asosiy klinik yo'nalish: Terapiya (Charisma va DenFil bilan og'riqsiz tish davolash va restavratsiya), Ortopediya (sirkon karonkalar, vinirlar va protezlar), Implantatsiya (Germaniya va Koreya biotitan tizimlari), Xirurgiya hamda Ortodontiya (breketlar). Rasmiy kafolat. Tel: +998 90 548 10 90 / +998 99 905 30 90.",
     },
     ru: {
       title: "Стоматологические Услуги — Стоматолог Орифжон (Андижан)",
       description:
-        "5 ключевых направлений у Стоматолога Орифжона: Терапия (пломбы Charisma и DenFil без боли), Ортопедия (циркониевые коронки, керамика, виниры), Имплантация (Германия, Корея), Хирургия (атравматичное удаление) и Ортодонтия (исправление прикуса брекетами). Тел: +998 90 548 10 90.",
+        "5 ключевых направлений у Стоматолога Орифжона: Терапия (пломбы Charisma и DenFil без боли), Ортопедия (циркониевые коронки, керамика, виниры), Имплантация (Германия, Корея), Хирургия (атравматичное удаление) и Ортодонтия (исправление прикуса брекетами). Тел: +998 90 548 10 90 / +998 99 905 30 90.",
     },
     en: {
       title: "Dental Services & Clinical Specialties — Dentist Orifjon (Andijan)",
       description:
-        "5 core specialties by Dentist Orifjon in Andijan: Therapy (Charisma & DenFil painless restorations), Orthopedics (zirconia crowns, veneers), Implantation (German & Korean titanium implants), Gentle Surgery, and Orthodontics (braces). Tel: +998 90 548 10 90.",
+        "5 core specialties by Dentist Orifjon in Andijan: Therapy (Charisma & DenFil painless restorations), Orthopedics (zirconia crowns, veneers), Implantation (German & Korean titanium implants), Gentle Surgery, and Orthodontics (braces). Tel: +998 90 548 10 90 / +998 99 905 30 90.",
     },
   },
   about: {
@@ -57,34 +57,34 @@ export const PAGE_SEO = {
     uz: {
       title: "Aloqa va Manzil — Stomatolog Orifjon (Andijon, Muqimiy 35, Rayon Stoyanka)",
       description:
-        "Stomatolog Orifjon qabuli (Andijon shahri, Muqimiy 35, Rayon Stoyanka). Telefon: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Dushanba-Shanba 08:30–18:30.",
+        "Stomatolog Orifjon qabuli (Andijon shahri, Muqimiy 35, Rayon Stoyanka). Telefon: +998 90 548 10 90 / +998 99 905 30 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Dushanba-Shanba 08:30–18:30.",
     },
     ru: {
       title: "Контакты и Адрес — Стоматолог Орифжон (Андижан, ул. Мукими 35, Районная стоянка)",
       description:
-        "Приём Стоматолога Орифжона (г. Андижан, ул. Мукими 35, Rayon Stoyanka). Телефон: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Понедельник–Суббота 08:30–18:30.",
+        "Приём Стоматолога Орифжона (г. Андижан, ул. Мукими 35, Rayon Stoyanka). Телефон: +998 90 548 10 90 / +998 99 905 30 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Понедельник–Суббота 08:30–18:30.",
     },
     en: {
       title: "Contact & Location — Dentist Orifjon (Andijan, 35 Muqimiy St., Rayon Stoyanka)",
       description:
-        "Dentist Orifjon Practice (Andijan, 35 Muqimiy St., Rayon Stoyanka). Tel: +998 90 548 10 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Monday–Saturday 08:30–18:30.",
+        "Dentist Orifjon Practice (Andijan, 35 Muqimiy St., Rayon Stoyanka). Tel: +998 90 548 10 90 / +998 99 905 30 90, Telegram: @dr_orifjon_1, Instagram: @dr_orifjon. Monday–Saturday 08:30–18:30.",
     },
   },
   booking: {
     uz: {
       title: "Qabulga Yozilish — Stomatolog Orifjon | Onlayn Qabul",
       description:
-        "Stomatolog Orifjon qabuliga onlayn yozilish. Bo'sh kun va soatni tanlang, navbatsiz va qulay ro'yxatdan o'ting. Telefon: +998 90 548 10 90.",
+        "Stomatolog Orifjon qabuliga onlayn yozilish. Bo'sh kun va soatni tanlang, navbatsiz va qulay ro'yxatdan o'ting. Telefon: +998 90 548 10 90 / +998 99 905 30 90.",
     },
     ru: {
       title: "Онлайн Запись на Приём — Стоматолог Орифжон (Андижан)",
       description:
-        "Онлайн запись к Стоматологу Орифжону: выберите удобный день и время приёма без очередей. Андижан, ул. Мукими 35 (Районная стоянка). Телефон: +998 90 548 10 90.",
+        "Онлайн запись к Стоматологу Орифжону: выберите удобный день и время приёма без очередей. Андижан, ул. Мукими 35 (Районная стоянка). Телефон: +998 90 548 10 90 / +998 99 905 30 90.",
     },
     en: {
       title: "Book Dental Appointment — Dentist Orifjon (Andijan)",
       description:
-        "Book your dental appointment online with Dentist Orifjon in Andijan. Select preferred date and time slot with zero wait. Tel: +998 90 548 10 90.",
+        "Book your dental appointment online with Dentist Orifjon in Andijan. Select preferred date and time slot with zero wait. Tel: +998 90 548 10 90 / +998 99 905 30 90.",
     },
   },
   notFound: {

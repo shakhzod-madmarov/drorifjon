@@ -91,19 +91,37 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-900">
-                {lang === "uz" ? "Shifokor Telefoni" : lang === "ru" ? "Телефон Врача" : "Doctor's Phone"}
+                {lang === "uz" ? "Shifokor Telefonlari" : lang === "ru" ? "Телефоны Врача" : "Doctor's Phone Numbers"}
               </h3>
               <p className="text-xs text-slate-500 mt-1">
                 {hours.full}
               </p>
             </div>
           </div>
-          <a
-            href={DOCTOR_INFO.phoneHref}
-            className="inline-block text-sm sm:text-base font-bold text-primary hover:underline whitespace-nowrap"
-          >
-            {DOCTOR_INFO.phoneDisplay}
-          </a>
+          <div className="space-y-2 pt-2 border-t border-slate-100">
+            <div>
+              <span className="block text-[10.5px] font-semibold text-slate-400">
+                {lang === "uz" ? "Asosiy raqam:" : lang === "ru" ? "Основной номер:" : "Primary:"}
+              </span>
+              <a
+                href={DOCTOR_INFO.phoneHref}
+                className="inline-block text-sm sm:text-base font-bold text-primary hover:underline whitespace-nowrap"
+              >
+                {DOCTOR_INFO.phoneDisplay}
+              </a>
+            </div>
+            <div>
+              <span className="block text-[10.5px] font-semibold text-slate-400">
+                {lang === "uz" ? "Qo'shimcha raqam:" : lang === "ru" ? "Дополнительный номер:" : "Secondary:"}
+              </span>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="inline-block text-sm sm:text-base font-bold text-teal-800 hover:underline whitespace-nowrap"
+              >
+                {DOCTOR_INFO.secondaryPhoneDisplay}
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Telegram */}

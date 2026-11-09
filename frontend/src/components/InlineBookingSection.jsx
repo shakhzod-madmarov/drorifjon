@@ -526,10 +526,19 @@ const InlineBookingSection = ({ initialService = null }) => {
 
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                className="px-4 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                title="Asosiy raqam"
               >
                 <IconPhone className="w-4 h-4 text-primary shrink-0" />
                 <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="px-4 py-3.5 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-200 text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                title="Qo'shimcha raqam"
+              >
+                <IconPhone className="w-4 h-4 text-teal-700 shrink-0" />
+                <span className="whitespace-nowrap">{DOCTOR_INFO.secondaryPhoneDisplay}</span>
               </a>
             </div>
           </div>
@@ -580,13 +589,24 @@ const InlineBookingSection = ({ initialService = null }) => {
                 <p className="text-slate-600 text-[11.5px]">{t.pausedNotice}</p>
               </div>
             </div>
-            <a
-              href={DOCTOR_INFO.phoneHref}
-              className="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
-            >
-              <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
-              <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
-            </a>
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href={DOCTOR_INFO.phoneHref}
+                className="px-3.5 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
+                title="Asosiy raqam"
+              >
+                <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
+                <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="px-3.5 py-2 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-xs transition-colors whitespace-nowrap flex items-center gap-1.5"
+                title="Qo'shimcha raqam"
+              >
+                <IconPhone className="w-3.5 h-3.5 text-teal-200 shrink-0" />
+                <span className="whitespace-nowrap">{DOCTOR_INFO.secondaryPhoneDisplay}</span>
+              </a>
+            </div>
           </div>
         )}
 

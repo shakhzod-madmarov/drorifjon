@@ -206,13 +206,24 @@ const About = ({ onOpenBooking }) => {
             >
               {lang === "uz" ? "Qabulga Yozilish" : lang === "ru" ? "Записаться на Приём" : "Book Visit"}
             </button>
-            <a
-              href={DOCTOR_INFO.phoneHref}
-              className="inline-flex justify-center items-center px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-colors whitespace-nowrap"
-            >
-              <IconPhone className="w-4 h-4 text-primary" />
-              <span>{DOCTOR_INFO.phoneDisplay}</span>
-            </a>
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href={DOCTOR_INFO.phoneHref}
+                className="inline-flex justify-center items-center px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-slate-800 text-xs sm:text-sm font-semibold gap-2 transition-colors whitespace-nowrap"
+                title="Asosiy raqam"
+              >
+                <IconPhone className="w-4 h-4 text-primary" />
+                <span>{DOCTOR_INFO.phoneDisplay}</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="inline-flex justify-center items-center px-3.5 py-3 rounded-xl bg-teal-50/60 hover:bg-teal-100/60 border border-teal-200/70 text-slate-800 text-xs sm:text-sm font-medium gap-2 transition-colors whitespace-nowrap"
+                title="Qo'shimcha raqam"
+              >
+                <IconPhone className="w-4 h-4 text-teal-600" />
+                <span>{DOCTOR_INFO.secondaryPhoneDisplay}</span>
+              </a>
+            </div>
           </div>
 
           {/* 3 Clinical Guarantee Badges */}

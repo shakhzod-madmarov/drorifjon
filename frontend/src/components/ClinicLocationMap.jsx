@@ -79,18 +79,29 @@ const ClinicLocationMap = ({ compact = false }) => {
               </div>
 
               {/* Doctor direct phone */}
-              <div className="flex items-center gap-3">
-                <IconPhone className="w-4 h-4 text-primary shrink-0" />
-                <div>
+              <div className="flex items-start gap-3">
+                <IconPhone className="w-4 h-4 text-primary shrink-0 mt-1" />
+                <div className="space-y-1">
                   <span className="text-[11px] text-slate-400 block">
-                    {lang === "uz" ? "Shifokor telefoni:" : lang === "ru" ? "Телефон врача:" : "Doctor's phone:"}
+                    {lang === "uz" ? "Shifokor telefonlari:" : lang === "ru" ? "Телефоны врача:" : "Doctor's phones:"}
                   </span>
-                  <a
-                    href={DOCTOR_INFO.phoneHref}
-                    className="font-bold text-base text-white hover:text-primary transition-colors"
-                  >
-                    {DOCTOR_INFO.phoneDisplay}
-                  </a>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                    <a
+                      href={DOCTOR_INFO.phoneHref}
+                      className="font-bold text-sm sm:text-base text-white hover:text-primary transition-colors whitespace-nowrap"
+                      title={lang === "uz" ? "Asosiy raqam" : "Primary"}
+                    >
+                      {DOCTOR_INFO.phoneDisplay}
+                    </a>
+                    <span className="hidden sm:inline text-slate-600">·</span>
+                    <a
+                      href={DOCTOR_INFO.secondaryPhoneHref}
+                      className="font-semibold text-xs sm:text-sm text-teal-300 hover:text-white transition-colors whitespace-nowrap"
+                      title={lang === "uz" ? "Qo'shimcha raqam" : "Secondary"}
+                    >
+                      {DOCTOR_INFO.secondaryPhoneDisplay}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

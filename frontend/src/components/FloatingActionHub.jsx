@@ -67,15 +67,28 @@ const FloatingActionHub = () => {
             <span className="truncate">Instagram ({DOCTOR_INFO.instagramHandle})</span>
           </a>
 
-          {/* Direct Phone */}
+          {/* Primary Phone */}
           <a
             href={DOCTOR_INFO.phoneHref}
             className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-primary to-teal-500 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
+            title="Asosiy raqam"
           >
             <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
               <IconPhone className="w-4 h-4 text-white" />
             </span>
-            <span className="truncate">{DOCTOR_INFO.phoneDisplay}</span>
+            <span className="truncate">{DOCTOR_INFO.phoneDisplay} (Asosiy)</span>
+          </a>
+
+          {/* Secondary Phone */}
+          <a
+            href={DOCTOR_INFO.secondaryPhoneHref}
+            className="flex items-center gap-2 2xs:gap-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white px-3.5 2xs:px-4 py-2 2xs:py-2.5 rounded-2xl shadow-luxury-lg text-xs font-bold transition-all duration-300 hover:scale-105 hover:-translate-x-1 border border-white/25 truncate"
+            title="Qo'shimcha raqam"
+          >
+            <span className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
+              <IconPhone className="w-4 h-4 text-white" />
+            </span>
+            <span className="truncate">{DOCTOR_INFO.secondaryPhoneDisplay} (Qo'shimcha)</span>
           </a>
         </div>
       )}
@@ -85,6 +98,7 @@ const FloatingActionHub = () => {
         {/* Desktop Quick Phone Pill */}
         <a
           href={DOCTOR_INFO.phoneHref}
+          title={`Asosiy: ${DOCTOR_INFO.phoneDisplay} | Qo'shimcha: ${DOCTOR_INFO.secondaryPhoneDisplay}`}
           className="hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-slate-800 hover:text-primary px-4 py-3 rounded-2xl shadow-luxury border border-teal-200/80 text-xs font-bold transition-all hover:shadow-luxury-lg hover:-translate-y-0.5 whitespace-nowrap"
         >
           <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary">

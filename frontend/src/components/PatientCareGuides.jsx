@@ -401,13 +401,24 @@ const PatientCareGuides = () => {
                     {lang === "uz" ? "Doimiy shifokor nazorati" : lang === "ru" ? "Прямая связь с врачом" : "Direct Doctor Support"}
                   </p>
                 </div>
-                <a
-                  href={DOCTOR_INFO.phoneHref}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs transition-colors shadow-xs shrink-0 whitespace-nowrap"
-                >
-                  <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
-                  <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-1.5 shrink-0">
+                  <a
+                    href={DOCTOR_INFO.phoneHref}
+                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs transition-colors shadow-xs whitespace-nowrap"
+                    title="Asosiy raqam"
+                  >
+                    <IconPhone className="w-3.5 h-3.5 text-white shrink-0" />
+                    <span className="whitespace-nowrap">{DOCTOR_INFO.phoneDisplay}</span>
+                  </a>
+                  <a
+                    href={DOCTOR_INFO.secondaryPhoneHref}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-white hover:bg-teal-50 text-slate-800 border border-teal-200 font-semibold text-xs transition-colors shadow-xs whitespace-nowrap"
+                    title="Qo'shimcha raqam"
+                  >
+                    <IconPhone className="w-3.5 h-3.5 text-teal-600 shrink-0" />
+                    <span className="whitespace-nowrap">{DOCTOR_INFO.secondaryPhoneDisplay}</span>
+                  </a>
+                </div>
               </div>
             </div>
 

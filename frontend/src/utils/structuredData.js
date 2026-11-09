@@ -129,7 +129,7 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
       "@type": ["Dentist", "MedicalBusiness"],
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": PRIMARY_CLINIC.address[lang] || PRIMARY_CLINIC.address.uz,
@@ -150,7 +150,7 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
           : lang === "en"
           ? "Dental Surgeon"
           : "Vrach Stomatolog",
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
       "url": `${SITE_ORIGIN}/`,
       "alumniOf": {
         "@type": "EducationalOrganization",
@@ -208,7 +208,7 @@ export const buildServicesCatalogSchema = (services, lang = "uz", breadcrumbs = 
       "@type": "DentalClinic",
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
     },
     "mainEntity": {
       "@type": "OfferCatalog",
@@ -253,7 +253,7 @@ export const buildAboutPageSchema = (lang = "uz", breadcrumbs = []) => {
         "@type": "EducationalOrganization",
         "name": DOCTOR_INFO.education[lang] || DOCTOR_INFO.education.uz,
       },
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
       "sameAs": [
         DOCTOR_INFO.telegramUrl,
         DOCTOR_INFO.instagramUrl,
@@ -288,7 +288,7 @@ export const buildContactPageSchema = (lang = "uz", breadcrumbs = []) => {
       "@type": ["Dentist", "MedicalBusiness"],
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": PRIMARY_CLINIC.address[lang] || PRIMARY_CLINIC.address.uz,
@@ -355,7 +355,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
       "Стоматолог Орифжон",
       "Dentist Orifjon",
     ],
-    "telephone": DOCTOR_INFO.phoneRaw,
+    "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": PRIMARY_CLINIC.address[lang] || PRIMARY_CLINIC.address.uz,
@@ -381,7 +381,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
       "contactType": "emergency dental service",
       "availableLanguage": ["Uzbek", "Russian", "English"],
       "areaServed": "UZ",
@@ -409,7 +409,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "url": `${SITE_ORIGIN}/`,
     "logo": `${SITE_ORIGIN}/logo_icon.png`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
-    "telephone": DOCTOR_INFO.phoneRaw,
+    "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
     "priceRange": "$$",
     "currenciesAccepted": "UZS",
     "paymentAccepted": "Cash, Payme, Click, Uzum",
@@ -495,7 +495,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         : lang === "en"
         ? `Dentist Orifjon (Mansurov Orifjon Alimbekovich) — Over 20+ years of healthcare experience. Osh State University and Andijan Medical College. Andijan, Uzbekistan.`
         : `Stomatolog Orifjon (Mansurov Orifjon Alimbekovich) — 20+ yillik tibbiyot tajribasiga ega vrach stomatolog. Andijon Tibbiyot kolleji va O'sh Davlat Universiteti bitiruvchisi. Andijon.`,
-    "telephone": DOCTOR_INFO.phoneRaw,
+    "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
     "url": `${SITE_ORIGIN}/`,
     "image": `${SITE_ORIGIN}/dr_orifjon_og.jpg`,
     "worksFor": {
@@ -588,7 +588,7 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
       "@type": "DentalClinic",
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
-      "telephone": DOCTOR_INFO.phoneRaw,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
     },
     "potentialAction": {
       "@type": "ReserveAction",

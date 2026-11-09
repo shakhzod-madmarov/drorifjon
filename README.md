@@ -26,7 +26,8 @@ Rasmiy veb-platforma: [https://drorifjon.uz](https://drorifjon.uz)
 - **Ta'limi**:
   - **Andijon Tibbiyot kolleji** (2001–2004) — fundamental tibbiy tayyorgarlik
   - **O'sh Davlat Universiteti** (2017–2022) — stomatologiya fakulteti oliy ta'limi
-- **Telefon**: [+998 90 548 10 90](tel:+998905481090)
+- **Telefon (Asosiy)**: [+998 90 548 10 90](tel:+998905481090)
+- **Telefon (Qo'shimcha)**: [+998 99 905 30 90](tel:+998999053090)
 - **Telegram**: [@dr_orifjon_1](https://t.me/dr_orifjon_1)
 - **Instagram**: [@dr_orifjon](https://www.instagram.com/dr_orifjon/)
 - **Manzil**: Andijon shahri, O'zbekiston

@@ -126,10 +126,10 @@ const ServiceDetail = () => {
         title={`${service.title[lang]} — ${seoSuffix}`}
         description={
           lang === "ru"
-            ? `${service.shortDesc[lang]} Стоматолог Орифжон, более 20 лет практики в Андижане. Тел: ${DOCTOR_INFO.phoneDisplay}.`
+            ? `${service.shortDesc[lang]} Стоматолог Орифжон, более 20 лет практики в Андижане. Тел: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}.`
             : lang === "en"
-            ? `${service.shortDesc[lang]} Dentist Orifjon, 20+ years clinical dental experience in Andijan. Tel: ${DOCTOR_INFO.phoneDisplay}.`
-            : `${service.shortDesc[lang]} Stomatolog Orifjon, 20+ yillik tibbiyot tajribasi. Tel: ${DOCTOR_INFO.phoneDisplay}.`
+            ? `${service.shortDesc[lang]} Dentist Orifjon, 20+ years clinical dental experience in Andijan. Tel: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}.`
+            : `${service.shortDesc[lang]} Stomatolog Orifjon, 20+ yillik tibbiyot tajribasi. Tel: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}.`
         }
         keywords={serviceKeywords}
         schemaJson={procedureSchema}
@@ -217,10 +217,19 @@ const ServiceDetail = () => {
               </button>
               <a
                 href={DOCTOR_INFO.phoneHref}
-                className="px-5 py-3.5 rounded-2xl bg-teal-50 hover:bg-teal-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-teal-200 transition-colors whitespace-nowrap"
+                className="px-4 py-3.5 rounded-2xl bg-teal-50 hover:bg-teal-100 text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 border border-teal-200 transition-colors whitespace-nowrap"
+                title="Asosiy raqam"
               >
                 <IconPhone className="w-4 h-4 text-primary" />
                 <span>{DOCTOR_INFO.phoneDisplay}</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="px-3.5 py-3.5 rounded-2xl bg-white hover:bg-teal-50 text-slate-700 text-xs sm:text-sm font-semibold flex items-center gap-1.5 border border-slate-200 transition-colors whitespace-nowrap"
+                title="Qo'shimcha raqam"
+              >
+                <IconPhone className="w-3.5 h-3.5 text-teal-600" />
+                <span>{DOCTOR_INFO.secondaryPhoneDisplay}</span>
               </a>
             </div>
           </div>
@@ -428,13 +437,13 @@ const ServiceDetail = () => {
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
             {lang === "uz"
-              ? `Stomatolog Orifjon qabuliga yoziling yoki to'g'ridan-to'g'ri qo'ng'iroq qiling: ${DOCTOR_INFO.phoneDisplay}`
+              ? `Stomatolog Orifjon qabuliga yoziling yoki to'g'ridan-to'g'ri qo'ng'iroq qiling: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}`
               : lang === "ru"
-              ? `Запишитесь на приём к Стоматологу Орифжону или звоните напрямую: ${DOCTOR_INFO.phoneDisplay}`
-              : `Book an appointment with Dentist Orifjon or call directly: ${DOCTOR_INFO.phoneDisplay}`}
+              ? `Запишитесь на приём к Стоматологу Орифжону или звоните напрямую: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}`
+              : `Book an appointment with Dentist Orifjon or call directly: ${DOCTOR_INFO.phoneDisplay} / ${DOCTOR_INFO.secondaryPhoneDisplay}`}
           </p>
         </div>
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
           <button
             onClick={() => openBooking(service.id)}
             className="px-6 py-3 rounded-2xl bg-primary hover:bg-primary-hover text-white text-xs font-bold uppercase tracking-wider shadow-luxury cursor-pointer transition-all"
@@ -443,10 +452,19 @@ const ServiceDetail = () => {
           </button>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="px-4 py-3 rounded-2xl bg-white hover:bg-teal-50 text-slate-800 border border-teal-200 text-xs font-bold flex items-center gap-2 transition-all"
+            className="px-3.5 py-3 rounded-2xl bg-white hover:bg-teal-50 text-slate-800 border border-teal-200 text-xs font-bold flex items-center gap-1.5 transition-all whitespace-nowrap"
+            title="Asosiy raqam"
           >
-            <IconPhone className="w-4 h-4 text-primary" />
+            <IconPhone className="w-3.5 h-3.5 text-primary" />
             <span>{DOCTOR_INFO.phoneDisplay}</span>
+          </a>
+          <a
+            href={DOCTOR_INFO.secondaryPhoneHref}
+            className="px-3 py-3 rounded-2xl bg-teal-50/70 hover:bg-teal-100 text-slate-700 border border-teal-200 text-xs font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap"
+            title="Qo'shimcha raqam"
+          >
+            <IconPhone className="w-3.5 h-3.5 text-teal-600" />
+            <span>{DOCTOR_INFO.secondaryPhoneDisplay}</span>
           </a>
         </div>
       </section>

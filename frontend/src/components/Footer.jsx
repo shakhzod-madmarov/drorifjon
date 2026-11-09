@@ -122,11 +122,22 @@ const Footer = () => {
               <a
                 href={DOCTOR_INFO.phoneHref}
                 className="flex items-center gap-2.5 text-white font-bold text-sm hover:text-primary transition-colors group"
+                title={lang === "uz" ? "Asosiy raqam" : lang === "ru" ? "Основной номер" : "Primary phone"}
               >
                 <span className="w-7 h-7 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <IconPhone className="w-3.5 h-3.5 text-primary" />
                 </span>
-                {DOCTOR_INFO.phoneDisplay}
+                <span>{DOCTOR_INFO.phoneDisplay}</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.secondaryPhoneHref}
+                className="flex items-center gap-2.5 text-slate-200 font-semibold text-sm hover:text-primary transition-colors group"
+                title={lang === "uz" ? "Qo'shimcha raqam" : lang === "ru" ? "Дополнительный номер" : "Secondary phone"}
+              >
+                <span className="w-7 h-7 rounded-lg bg-teal-500/20 border border-teal-500/30 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <IconPhone className="w-3.5 h-3.5 text-teal-300" />
+                </span>
+                <span>{DOCTOR_INFO.secondaryPhoneDisplay}</span>
               </a>
               <a
                 href={DOCTOR_INFO.telegramUrl}
@@ -227,6 +238,10 @@ const Footer = () => {
             <span className="text-slate-700">·</span>
             <a href={DOCTOR_INFO.phoneHref} className="hover:text-white transition-colors">
               Tel: {DOCTOR_INFO.phoneDisplay}
+            </a>
+            <span className="text-slate-700">·</span>
+            <a href={DOCTOR_INFO.secondaryPhoneHref} className="hover:text-white transition-colors">
+              {DOCTOR_INFO.secondaryPhoneDisplay}
             </a>
           </div>
         </div>

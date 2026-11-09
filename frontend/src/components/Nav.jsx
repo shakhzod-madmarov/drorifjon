@@ -350,6 +350,7 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
               {/* Phone Pill */}
               <a
                 href={DOCTOR_INFO.phoneHref}
+                title={`Asosiy: ${DOCTOR_INFO.phoneDisplay} | Qo'shimcha: ${DOCTOR_INFO.secondaryPhoneDisplay}`}
                 className="hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 text-slate-700 text-xs font-bold hover:border-primary hover:text-primary hover:bg-teal-50/50 transition-all duration-200"
               >
                 <span className="w-5 h-5 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -664,6 +665,15 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 <p className="font-extrabold text-slate-900">Stomatolog Orifjon (Mansurov O.)</p>
                 <p className="leading-snug">Andijon sh., Muqimiy ko'chasi 35/41-uy (Rayon Stoyanka)</p>
                 <p className="text-primary font-bold pt-0.5">Du – Sha: 08:30 – 16:30</p>
+                <div className="pt-1.5 border-t border-stone-200/60 flex flex-wrap items-center gap-x-2 text-[10.5px]">
+                  <a href={DOCTOR_INFO.phoneHref} className="text-primary font-bold hover:underline">
+                    {DOCTOR_INFO.phoneDisplay}
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a href={DOCTOR_INFO.secondaryPhoneHref} className="text-slate-700 font-semibold hover:underline">
+                    {DOCTOR_INFO.secondaryPhoneDisplay}
+                  </a>
+                </div>
               </div>
             </div>
 

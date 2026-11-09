@@ -70,9 +70,9 @@ export const FAQ_ITEMS = [
       en: "How can I book an appointment with Dentist Orifjon?",
     },
     a: {
-      uz: "Saytimizdagi «Qabulga Yozilish» tugmasi orqali qulay vaqtni tanlab, +998 90 548 10 90 raqamiga qo'ng'iroq qilib yoki Telegram (@dr_orifjon_1) va Instagram (@dr_orifjon) orqali to'g'ridan-to'g'ri bog'lanishingiz mumkin.",
-      ru: "Нажмите «Записаться на Приём» на сайте, позвоните по номеру +998 90 548 10 90 или напишите напрямую в Telegram (@dr_orifjon_1) и Instagram (@dr_orifjon).",
-      en: "Click 'Book Appointment' on the website, call +998 90 548 10 90, or message directly via Telegram (@dr_orifjon_1) or Instagram (@dr_orifjon).",
+      uz: "Saytimizdagi «Qabulga Yozilish» tugmasi orqali qulay vaqtni tanlab, +998 90 548 10 90 yoki +998 99 905 30 90 raqamlariga qo'ng'iroq qilib, yoxud Telegram (@dr_orifjon_1) va Instagram (@dr_orifjon) orqali to'g'ridan-to'g'ri bog'lanishingiz mumkin.",
+      ru: "Нажмите «Записаться на Приём» на сайте, позвоните по номерам +998 90 548 10 90 или +998 99 905 30 90, либо напишите напрямую в Telegram (@dr_orifjon_1) и Instagram (@dr_orifjon).",
+      en: "Click 'Book Appointment' on the website, call +998 90 548 10 90 or +998 99 905 30 90, or message directly via Telegram (@dr_orifjon_1) or Instagram (@dr_orifjon).",
     },
   },
   {
@@ -82,9 +82,9 @@ export const FAQ_ITEMS = [
       en: "What should I do if I have severe toothache or a broken filling in Andijan?",
     },
     a: {
-      uz: "O'tkir tish og'rig'i (pulpit, periodontit) yoki plomba tushib ketganda zudlik bilan +998 90 548 10 90 raqamiga qo'ng'iroq qiling yoki saytimizda eng yaqin bo'sh vaqtga yoziling. Stomatolog Orifjon 2 bosqichli og'riqsiz mikro-anesteziya qo'llab, og'riqni birinchi daqiqalardanoq to'liq bartaraf etadi.",
-      ru: "При острой зубной боли (пульпит, периодонтит) или выпадении пломбы сразу звоните по номеру +998 90 548 10 90 или бронируйте ближайшее свободное время на сайте. Стоматолог Орифжон проводит бережную анестезию и полностью устраняет боль в первые минуты приёма.",
-      en: "For acute dental pain or a lost filling, call +998 90 548 10 90 immediately or book online. Dentist Orifjon provides two-stage gentle anesthesia to immediately relieve toothache and treat the tooth safely.",
+      uz: "O'tkir tish og'rig'i (pulpit, periodontit) yoki plomba tushib ketganda zudlik bilan +998 90 548 10 90 yoki +998 99 905 30 90 raqamiga qo'ng'iroq qiling yoki saytimizda eng yaqin bo'sh vaqtga yoziling. Stomatolog Orifjon 2 bosqichli og'riqsiz mikro-anesteziya qo'llab, og'riqni birinchi daqiqalardanoq to'liq bartaraf etadi.",
+      ru: "При острой зубной боли (пульпит, периодонтит) или выпадении пломбы сразу звоните по номерам +998 90 548 10 90 или +998 99 905 30 90, либо бронируйте ближайшее свободное время на сайте. Стоматолог Орифжон проводит бережную анестезию и полностью устраняет боль в первые минуты приёма.",
+      en: "For acute dental pain or a lost filling, call +998 90 548 10 90 or +998 99 905 30 90 immediately or book online. Dentist Orifjon provides two-stage gentle anesthesia to immediately relieve toothache and treat the tooth safely.",
     },
   },
   {
@@ -94,9 +94,9 @@ export const FAQ_ITEMS = [
       en: "Where does the consultation take place?",
     },
     a: {
-      uz: "Qabul Andijon shahrida zamonaviy steril stomatologiya xonasida o'tkaziladi. Batafsil ma'lumot va mo'ljal uchun: +998 90 548 10 90.",
-      ru: "Приём проводится в г. Андижан в современном стерильном кабинете. Подробная информация и запись по телефону: +998 90 548 10 90.",
-      en: "Consultations and treatments are held in a modern sterile clinic in Andijan, Uzbekistan. For directions call +998 90 548 10 90.",
+      uz: "Qabul Andijon shahrida zamonaviy steril stomatologiya xonasida o'tkaziladi. Batafsil ma'lumot va mo'ljal uchun: +998 90 548 10 90 yoki +998 99 905 30 90.",
+      ru: "Приём проводится в г. Андижан в современном стерильном кабинете. Подробная информация и запись по телефонам: +998 90 548 10 90 или +998 99 905 30 90.",
+      en: "Consultations and treatments are held in a modern sterile clinic in Andijan, Uzbekistan. For directions call +998 90 548 10 90 or +998 99 905 30 90.",
     },
   },
   {
