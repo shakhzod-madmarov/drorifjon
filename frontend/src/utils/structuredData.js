@@ -18,6 +18,45 @@ export const buildBreadcrumbSchema = (crumbs, lang = "uz") => ({
   })),
 });
 
+const CLINICAL_KNOWS_ABOUT = {
+  uz: [
+    "Terapiya (karies, chuqur karies, pulpit va periodontitni 100% og'riqsiz davolash)",
+    "Badiiy restavratsiya (Charisma mikro-shisha va DenFil nanogibrid)",
+    "Ortopediya (yuqori aniqlikdagi monolit sirkoniy va IPS E.max vinirlar)",
+    "Zamonaviy olinadigan protezlar, byugel protez, elastik neylon protez va ko'priklar",
+    "Dental implantatsiya (MegaGen AnyRidge Janubiy Koreya va DXL Germaniya biotitan tizimlari)",
+    "Atravmatik xirurgiya (og'riqsiz tish olish, murakkab yotgan aql tishlarini asoratsiz olish)",
+    "Ortodontiya (zamonaviy metall, keramika va sapfir breket tizimlari, shaffof elaynerlar)",
+    "2 bosqichli og'riqsiz anesteziya (muzlatuvchi gel, steril Orablok va Supercain Forte)",
+    "Andijonda stomatologiya xizmatlari va narxlari",
+    "Stomatologiya Andijon (Muqimiy ko'chasi 35, Rayon Stoyanka)",
+  ],
+  ru: [
+    "Терапия (100% безболезненное лечение кариеса любой сложности, пульпита и периодонтита)",
+    "Художественная реставрация зубов нанокомпозитами Charisma (Германия) и DenFil (Корея)",
+    "Ортопедия (циркониевые коронки, оксид циркония, прессованная керамика IPS E.max, виниры)",
+    "Съемное и несъемное протезирование (бюгельные, нейлоновые и мостовидные протезы)",
+    "Дентальная имплантация (биотитановые системы MegaGen AnyRidge Корея и DXL Германия)",
+    "Атравматичная хирургия (удаление зубов без боли, удаление сложных ретинированных зубов мудрости)",
+    "Ортодонтия (исправление прикуса, выравнивание зубов металлическими, керамическими и сапфировыми брекетами)",
+    "Двухэтапная анестезия (обезболивающий гель, итальянский Ораблок и Суперкаин Форте)",
+    "Стоматология в Андижане (ул. Мукими 35, Районная стоянка)",
+    "Цены на лечение зубов, имплантацию и протезирование в Андижане",
+  ],
+  en: [
+    "Therapy (100% painless treatment of caries, pulpitis, root canal therapy, and periodontitis)",
+    "Artistic composite restorations using German Charisma and Korean DenFil nanocomposites",
+    "Orthopedics (High-strength monolithic zirconia crowns, IPS E.max veneers, and cosmetic crowns)",
+    "Prosthetics (Precision clasp partial dentures, flexible nylon dentures, and dental bridges)",
+    "Dental implantology (Genuine South Korean MegaGen AnyRidge and German DXL bio-titanium implants)",
+    "Atraumatic oral surgery (Painless extractions, impacted 8th wisdom tooth microsurgery)",
+    "Orthodontics (Bite correction, teeth straightening, metal, ceramic, and sapphire braces, clear aligners)",
+    "Two-stage gentle local anesthesia (topical numbing gel, Orabloc blister carpules, Supercain Forte)",
+    "Dentistry in Andijan (35 Muqimiy St., Rayon Stoyanka)",
+    "Affordable transparent dental prices for implants, braces, and crowns in Andijan",
+  ],
+};
+
 const SERVICE_INDICATIONS = {
   "terapiya": {
     uz: "Tish kariesi, chuqur karies, pulpit va estetik restavratsiya",
@@ -373,18 +412,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
       PRIMARY_CLINIC.maps.yandex,
     ],
     "isAcceptingNewPatients": true,
-    "knowsAbout": [
-      "Stomatologiya Andijon",
-      "Andijonda tish davolash",
-      "Dental implantatsiya",
-      "Breketlar va ortodontiya",
-      "Sirkoniy karonkalar",
-      "Keramik vinirlar",
-      "Og'riqsiz tish olish",
-      "Tish oqartirish",
-      "Стоматология в Андижане",
-      "Dentistry in Andijan",
-    ],
+    "knowsAbout": CLINICAL_KNOWS_ABOUT[lang] || CLINICAL_KNOWS_ABOUT.uz,
     "areaServed": [
       { "@type": "City", "name": "Andijon" },
       { "@type": "City", "name": "Asaka" },
@@ -450,18 +478,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
       PRIMARY_CLINIC.maps.yandex,
     ],
     "isAcceptingNewPatients": true,
-    "knowsAbout": [
-      "Stomatologiya Andijon",
-      "Andijonda tish davolash",
-      "Dental implantatsiya",
-      "Breketlar va ortodontiya",
-      "Sirkoniy karonkalar",
-      "Keramik vinirlar",
-      "Og'riqsiz tish olish",
-      "Tish oqartirish",
-      "Стоматология в Андижане",
-      "Dentistry in Andijan",
-    ],
+    "knowsAbout": CLINICAL_KNOWS_ABOUT[lang] || CLINICAL_KNOWS_ABOUT.uz,
     "areaServed": [
       { "@type": "City", "name": "Andijon" },
       { "@type": "City", "name": "Asaka" },
@@ -480,6 +497,107 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "medicalSpecialty": [
       "https://schema.org/Dentistry",
     ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name":
+        lang === "ru"
+          ? "Стоматологические услуги в Андижане"
+          : lang === "en"
+          ? "Dental Services in Andijan"
+          : "Andijonda stomatologiya xizmatlari",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name":
+              lang === "ru"
+                ? "Терапия и художественная реставрация (Charisma, DenFil)"
+                : lang === "en"
+                ? "Therapy & aesthetic restoration (Charisma, DenFil)"
+                : "Terapiya va badiiy restavratsiya (Charisma, DenFil)",
+            "description":
+              lang === "ru"
+                ? "100% безболезненное лечение кариеса и каналов под анестезией Ораблок и Суперкаин Форте"
+                : lang === "en"
+                ? "100% painless treatment of caries and root canals under Orabloc & Supercain Forte anesthesia"
+                : "Orablok va Supercain Forte anesteziyasi ostida karies va ildiz kanallarini 100% og'riqsiz davolash",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name":
+              lang === "ru"
+                ? "Ортопедия и циркониевые коронки (Zirconia, IPS E.max)"
+                : lang === "en"
+                ? "Orthopedics & zirconia crowns (Zirconia, IPS E.max)"
+                : "Ortopediya va sirkoniy karonkalar (Zirconia, IPS E.max)",
+            "description":
+              lang === "ru"
+                ? "Высокоточное протезирование безметалловыми коронками, винирами и современными протезами"
+                : lang === "en"
+                ? "Precision dental prosthetics with metal-free crowns, veneers, and modern dentures"
+                : "Metall-siz sirkon karonka, estetik vinirlar va zamonaviy protezlar bilan tish qo'yish",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name":
+              lang === "ru"
+                ? "Дентальная имплантация (MegaGen AnyRidge Корея, DXL Германия)"
+                : lang === "en"
+                ? "Dental implantation (MegaGen AnyRidge Korea, DXL Germany)"
+                : "Dental implantatsiya (MegaGen AnyRidge Koreya, DXL Germaniya)",
+            "description":
+              lang === "ru"
+                ? "Установка премиальных биотитановых имплантатов за 15-20 минут с пожизненной гарантией"
+                : lang === "en"
+                ? "Premium bio-titanium implant placement in 15-20 minutes with lifetime warranty"
+                : "15-20 daqiqada premium biotitan implant o'rnatish va umrbod kafolat",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name":
+              lang === "ru"
+                ? "Атравматичная хирургия и удаление зубов без боли"
+                : lang === "en"
+                ? "Atraumatic oral surgery and painless tooth extraction"
+                : "Atravmatik xirurgiya va og'riqsiz tish olish",
+            "description":
+              lang === "ru"
+                ? "Безопасное удаление зубов любой сложности и ретинированных зубов мудрости"
+                : lang === "en"
+                ? "Gentle extraction of compromised teeth and complex wisdom teeth"
+                : "Murakkab tishlar va 8-aql tishlarini asoratsiz va 100% og'riqsiz olib tashlash",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name":
+              lang === "ru"
+                ? "Ортодонтия и исправление прикуса брекетами"
+                : lang === "en"
+                ? "Orthodontics and bite correction with modern braces"
+                : "Ortodontiya va breketlar yordamida tishlarni to'g'rilash",
+            "description":
+              lang === "ru"
+                ? "Выравнивание неровных зубных рядов металлическими, керамическими и сапфировыми брекетами"
+                : lang === "en"
+                ? "Straightening crooked teeth with metal, ceramic, and sapphire braces systems"
+                : "Metall, keramika va sapfir breketlar bilan qiyshiq tishlarni tekislash",
+          },
+        },
+      ],
+    },
     "founder": {
       "@id": `${SITE_ORIGIN}/#doctor`,
     },
@@ -536,39 +654,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     },
     "medicalSpecialty": "https://schema.org/Dentistry",
     "knowsLanguage": ["uz", "ru", "en"],
-    "knowsAbout":
-      lang === "ru"
-        ? [
-            "Терапия (безболезненное лечение и реставрация зубов)",
-            "Ортопедия (высококачественное протезирование и установка зубов)",
-            "Имплантация (премиальные импланты из Германии и Кореи)",
-            "Хирургия (безболезненное и атравматичное удаление зубов без осложнений)",
-            "Ортодонтия (выравнивание неровных зубных рядов и исправление прикуса брекетами)",
-            "Интраоральное цифровое 3D-сканирование (без слепков)",
-            "Циркониевые и керамические коронки E.max (CAD/CAM)",
-            "Бюгельное и эластичное съемное протезирование",
-          ]
-        : lang === "en"
-        ? [
-            "Therapy (Painless tooth treatment and aesthetic restoration)",
-            "Orthopedics (High-quality tooth placement and prosthetics)",
-            "Implantation (German and Korean premium implant systems)",
-            "Surgery (Painless and complication-free tooth extraction)",
-            "Orthodontics (Alignment of crooked teeth using braces)",
-            "Intraoral digital 3D optical scanning (impression-free)",
-            "Monolithic zirconia and IPS E.max ceramic crowns",
-            "Modern precision clasp and flexible partial dentures",
-          ]
-        : [
-            "Terapiya (tishlarni og'riqsiz davolash va restavratsiya)",
-            "Ortopediya (yuqori sifatli tish qo'yish, protezlash)",
-            "Implantatsiya (Germaniya va Koreya mahsulotlari)",
-            "Xirurgiya (og'riqsiz va asoratsiz tish olish)",
-            "Ortodontiya (qiyshiq va notekis tish qatorlarini breketlar yordamida to'g'rilash)",
-            "Raqamli optik 3D skanerlash (qolip pastasiz)",
-            "Sirkon va keramika karonkalar (CAD/CAM)",
-            "Zamonaviy olinadigan va olinmaydigan protezlar",
-          ],
+    "knowsAbout": CLINICAL_KNOWS_ABOUT[lang] || CLINICAL_KNOWS_ABOUT.uz,
     "sameAs": [
       DOCTOR_INFO.telegramUrl,
       DOCTOR_INFO.instagramUrl,
