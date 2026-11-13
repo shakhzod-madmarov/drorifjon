@@ -390,6 +390,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
       DOCTOR_INFO.instagramUrl,
       DOCTOR_INFO.telegramUrl,
       PRIMARY_CLINIC.maps.yandex,
+      PRIMARY_CLINIC.maps.google,
     ],
   };
 
@@ -466,6 +467,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
     "sameAs": [
       DOCTOR_INFO.telegramUrl,
       DOCTOR_INFO.instagramUrl,
+      PRIMARY_CLINIC.maps.yandex,
+      PRIMARY_CLINIC.maps.google,
     ],
   };
 
