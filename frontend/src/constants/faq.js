@@ -89,14 +89,38 @@ export const FAQ_ITEMS = [
   },
   {
     q: {
-      uz: "Qabul qayerda o'tkaziladi?",
-      ru: "Где проводится приём?",
-      en: "Where does the consultation take place?",
+      uz: "Stomatolog Orifjon qabuli qayerda joylashgan va mo'ljal qanday?",
+      ru: "Где находится приём Стоматолога Орифжона и какой ориентир в Андижане?",
+      en: "Where is Dentist Orifjon located and what is the landmark in Andijan?",
     },
     a: {
-      uz: "Qabul Andijon shahrida zamonaviy steril stomatologiya xonasida o'tkaziladi. Batafsil ma'lumot va mo'ljal uchun: +998 90 548 10 90 yoki +998 99 905 30 90.",
-      ru: "Приём проводится в г. Андижан в современном стерильном кабинете. Подробная информация и запись по телефонам: +998 90 548 10 90 или +998 99 905 30 90.",
-      en: "Consultations and treatments are held in a modern sterile clinic in Andijan, Uzbekistan. For directions call +998 90 548 10 90 or +998 99 905 30 90.",
+      uz: "Manzil: Andijon shahri, Muqimiy ko'chasi, 35-uy (Xaritada: Muqimiy 41). Asosiy mo'ljal: «Rayon Stoyanka». Yandex Xaritalar va Google Xaritalarda «Stomatolog Orifjon» deb qidirib to'g'ridan-to'g'ri marshrut olishingiz mumkin. Telefonlar: +998 90 548 10 90 / +998 99 905 30 90.",
+      ru: "Адрес: г. Андижан, ул. Мукими, 35 (на карте: Мукими 41). Главный ориентир: «Районная стоянка» (Rayon Stoyanka). В Яндекс Картах и Google Maps можно найти по запросу «Стоматолог Орифжон» и проложить точный маршрут. Телефоны: +998 90 548 10 90 / +998 99 905 30 90.",
+      en: "Address: 35 Muqimiy St. (On map: 41 Muqimiy St.), Rayon Stoyanka landmark, Andijan, Uzbekistan. Search 'Dentist Orifjon' on Google Maps or Yandex Maps for direct GPS driving navigation. Phone: +998 90 548 10 90 / +998 99 905 30 90.",
+    },
+  },
+  {
+    q: {
+      uz: "Andijonda stomatologiya xizmatlari qanday yo'nalishlarda ko'rsatiladi?",
+      ru: "По каким направлениям оказываются стоматологические услуги в Андижане?",
+      en: "What dental specialties and treatments are offered in Andijan?",
+    },
+    a: {
+      uz: "Stomatolog Orifjon qabulida 5 ta asosiy klinik yo'nalish mavjud: 1) Terapiya (karies va ildiz kanallarini og'riqsiz davolash, Charisma va DenFil nanokompozit restavratsiyasi); 2) Ortopediya (sirkoniy karonkalar, E.max vinirlar, protezlar); 3) Implantatsiya (Germaniya va Koreya biotitan implantlari); 4) Xirurgiya (og'riqsiz atravmatik tish olish); 5) Ortodontiya (metall va estetik breketlar).",
+      ru: "В приёме Стоматолога Орифжона представлены 5 ключевых направлений: 1) Терапия (лечение кариеса и каналов, нанокомпозитная реставрация Charisma, DenFil); 2) Ортопедия (циркониевые коронки, керамические виниры E.max, протезирование); 3) Имплантация (немецкие и корейские биотитановые системы); 4) Атравматичная хирургия; 5) Ортодонтия (брекеты).",
+      en: "Dentist Orifjon provides 5 comprehensive dental specialties in Andijan: 1) Therapy (painless caries and root canal therapy, German Charisma & Korean DenFil restorations); 2) Orthopedics (zirconia crowns, E.max veneers, dentures); 3) Implantation (German and Korean biocompatible titanium systems); 4) Atraumatic surgical extractions; 5) Orthodontics (modern braces).",
+    },
+  },
+  {
+    q: {
+      uz: "Shanba va dam olish kunlari stomatologiya ishlaydimi?",
+      ru: "Работает ли стоматология по субботам и выходным дням?",
+      en: "Is the dental clinic open on Saturdays and weekends in Andijan?",
+    },
+    a: {
+      uz: "Ha, qabul dushanbadan shanbagacha har kuni soat 08:30 dan 18:30 gacha uzluksiz ishlaydi. Yakshanba kunlari esa shoshilinch tish og'rig'i bo'lgan bemorlar va oldindan yozilganlar uchun qabul mavjud. Telefon: +998 90 548 10 90 / +998 99 905 30 90.",
+      ru: "Да, приём открыт с понедельника по субботу с 08:30 до 18:30. По воскресеньям ведётся приём по предварительной записи и при острой зубной боли. Телефоны: +998 90 548 10 90 / +998 99 905 30 90.",
+      en: "Yes, the practice is open Monday through Saturday from 08:30 to 18:30. Sundays are available by prior appointment and for urgent dental pain. Tel: +998 90 548 10 90 / +998 99 905 30 90.",
     },
   },
   {
