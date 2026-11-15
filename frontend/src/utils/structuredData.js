@@ -180,7 +180,7 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
       "url": `${SITE_ORIGIN}/`,
     },
     "performer": {
-      "@type": "Physician",
+      "@type": "Person",
       "@id": `${SITE_ORIGIN}/#doctor`,
       "name": DOCTOR_INFO.names[lang] || DOCTOR_INFO.name,
       "jobTitle":
@@ -244,7 +244,7 @@ export const buildServicesCatalogSchema = (services, lang = "uz", breadcrumbs = 
     "url": catalogUrl,
     "name": lang === "ru" ? "Стоматологические услуги" : lang === "en" ? "Dental Services" : "Stomatologik xizmatlar",
     "about": {
-      "@type": "DentalClinic",
+      "@type": "Dentist",
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
@@ -284,7 +284,7 @@ export const buildAboutPageSchema = (lang = "uz", breadcrumbs = []) => {
     "url": pageUrl,
     "name": lang === "ru" ? "О Стоматологе Орифжоне" : lang === "en" ? "About Dentist Orifjon" : "Stomatolog Orifjon haqida",
     "mainEntity": {
-      "@type": "Physician",
+      "@type": "Person",
       "@id": `${SITE_ORIGIN}/#doctor`,
       "name": DOCTOR_INFO.name,
       "jobTitle": DOCTOR_INFO.title,
@@ -384,7 +384,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
   };
 
   const clinicEntity = {
-    "@type": "DentalClinic",
+    "@type": "Dentist",
     "@id": `${SITE_ORIGIN}/#clinic`,
     "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
     "alternateName": [
@@ -509,7 +509,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
+            "serviceType": "MedicalProcedure",
             "name":
               lang === "ru"
                 ? "Терапия и художественная реставрация (Charisma, DenFil)"
@@ -527,7 +528,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
+            "serviceType": "MedicalProcedure",
             "name":
               lang === "ru"
                 ? "Ортопедия и циркониевые коронки (Zirconia, IPS E.max)"
@@ -545,7 +547,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
+            "serviceType": "MedicalProcedure",
             "name":
               lang === "ru"
                 ? "Дентальная имплантация (MegaGen AnyRidge Корея, DXL Германия)"
@@ -563,7 +566,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
+            "serviceType": "MedicalProcedure",
             "name":
               lang === "ru"
                 ? "Атравматичная хирургия и удаление зубов без боли"
@@ -581,7 +585,8 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
+            "serviceType": "MedicalProcedure",
             "name":
               lang === "ru"
                 ? "Ортодонтия и исправление прикуса брекетами"
@@ -617,7 +622,7 @@ export const buildHomeSchema = (lang = "uz", faqItems = []) => {
   };
 
   const doctorEntity = {
-    "@type": "Physician",
+    "@type": "Person",
     "@id": `${SITE_ORIGIN}/#doctor`,
     "name": DOCTOR_INFO.names[lang] || DOCTOR_INFO.name,
     "alternateName": [
@@ -700,7 +705,7 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
         ? "Online Appointment with Dentist Orifjon"
         : "Stomatolog Orifjon qabuliga onlayn yozilish",
     "about": {
-      "@type": "DentalClinic",
+      "@type": "Dentist",
       "@id": `${SITE_ORIGIN}/#clinic`,
       "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
       "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
