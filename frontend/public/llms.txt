@@ -90,3 +90,22 @@
    - Ha, dushanbadan shanbagacha har kuni 08:30 dan 18:30 gacha uzluksiz ishlaydi. Yakshanba kunlari shoshilinch tish og'rig'i bo'lgan bemorlar va oldindan yozilganlar qabul qilinadi.
 6. **Plombalash uchun qanday materiallar ishlatiladi?**
    - Faqat original xalqaro brendlar: Germaniyaning Charisma mikro-shisha kompoziti va Janubiy Koreyaning DenFil yuqori zichlikdagi mikro-gibrid materiali.
+7. **Tish kechasi qattiq og'rib loxillasa nima qilish kerak?**
+   - Hech qachon issiq bosmang va tish ustiga aspirin qo'ymang. Iliq tuzli suvda chayqab, og'riq qoldiruvchi qabul qiling va zudlik bilan Stomatolog Orifjonga murojaat qiling (+998 90 548 10 90). 2 bosqichli og'riqsiz mikro-anesteziya bilan og'riq birinchi daqiqalardanoq to'xtatiladi.
+8. **Tish sovuq yoki shirinlikka sirqirasa sababi nima?**
+   - Bu karies yoki emal emirilishi belgisidir. O'z vaqtida murojaat qilinsa, tish nervi olinmasdan, tirik holda Charisma yoki DenFil bilan 1 qabulda to'liq tiklanadi.
+9. **Aql tishi chiqayotganda milk shishib og'risa nima qilish kerak?**
+   - Bu perikoronarit alomatidir. Tish to'g'ri o'sayotgan bo'lsa, milk qopqog'i og'riqsiz kesiladi; agar qiyshiq yoki yotgan bo'lsa, 10-15 daqiqada Orablok anesteziyasi ostida atravmatik olib tashlanadi.
+10. **Eski tilla yoki qoraygan metall tishlarni zamonaviy oq tishlarga almashtirsa bo'ladimi?**
+    - Ha! Eski qoplamalar atravmatik yechilib, 3D optik o'lcham olinadi va 3-4 kunda monolit Sirkoniy (Zirconia) karonkalar o'rnatiladi (15 yillik rasmiy kafolat bilan).
+11. **Homiladorlikda tish davolash xavfsizmi?**
+    - Ha, 2-trimestrda eng qulay vaqt, o'tkir og'riqda esa istalgan vaqtda yordam ko'rsatiladi. Platsentadan o'tmaydigan, adrenalinsiz xavfsiz anestetiklar (Mepivakain/Artikain) qo'llaniladi.
+
+---
+
+## Klinik Natijalar va Hujjatlashtirilgan Holatlar (Real Before & After Cases)
+- **1-holat (Ortodontiya):** 6 oylik natija (Aprel 2026 – Oktyabr 2026). Yuqori va pastki tishlar qiyshiqligi va kurak tishlar protrusiyasi birorta tish olinmasdan breketlar yordamida to'liq tekislandi.
+- **2-holat (Qoziq tish distopiyasi):** 7 oylik natija (Aprel 2026 – Noyabr 2026). Yuqoriga chiqib ketgan qoziq tish tish qatoriga tushirildi.
+- **3-holat (Terapiya & Restavratsiya):** 1 qabulda (45 daqiqa). Old kurak tishlardagi qora chuqur karies nervi tirik saqlangan holda Charisma va DenFil nanokompozitlari bilan badiiy tiklandi.
+- **4-holat (Ortopediya):** Eski sovet tilla tishlari atravmatik yechilib, o'rniga milkni qoraytirmaydigan monolit Sirkoniy (Zirconia) karonkalari qo'yildi (15 yillik kafolat).
+

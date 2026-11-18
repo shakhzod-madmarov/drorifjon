@@ -17,6 +17,7 @@ import ClinicalTickerMarquee from "../components/ClinicalTickerMarquee";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
 import { HomeResultsTeaser } from "../components/HomeResultsTeaser";
+import SymptomQuickHelper from "../components/SymptomQuickHelper";
 import PatientCareGuides from "../components/PatientCareGuides";
 import { IconClock, IconPhone, IconTelegram, IconShieldCheck } from "../components/MedicalIcons";
 import { DOCTOR_INFO } from "../constants/doctor";
@@ -549,7 +550,12 @@ const Home = ({ onOpenBooking }) => {
         <HomeResultsTeaser onOpenBooking={onOpenBooking} />
       </div>
 
-      {/* 6. Verified Diplomas & MegaGen Certificates */}
+      {/* 6. Quick Symptom Guide & Layman Help */}
+      <div className="relative">
+        <SymptomQuickHelper onOpenBooking={onOpenBooking} />
+      </div>
+
+      {/* 7. Verified Diplomas & MegaGen Certificates */}
       <div className="relative">
         <CertificatesShowcase />
       </div>
