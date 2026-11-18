@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
+import Results from "./pages/Results";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
@@ -74,7 +75,9 @@ const AppShell = () => {
               <Route key={`${code}-about`} path={at("/about")} element={<About onOpenBooking={openBooking} />} />,
               <Route key={`${code}-services`} path={at("/services")} element={<Services onOpenBooking={openBooking} />} />,
               <Route key={`${code}-detail`} path={at("/services/:serviceId")} element={<ServiceDetail />} />,
-              <Route key={`${code}-gallery`} path={at("/gallery")} element={<Navigate to={at("/about")} replace />} />,
+              <Route key={`${code}-results`} path={at("/results")} element={<Results onOpenBooking={openBooking} />} />,
+              <Route key={`${code}-gallery`} path={at("/gallery")} element={<Navigate to={at("/results")} replace />} />,
+              <Route key={`${code}-natijalar`} path={at("/natijalar")} element={<Navigate to={at("/results")} replace />} />,
               <Route key={`${code}-booking`} path={at("/booking")} element={<Booking />} />,
               <Route key={`${code}-qabul`} path={at("/qabul")} element={<Booking />} />,
               <Route key={`${code}-contact`} path={at("/contact")} element={<Contact />} />,

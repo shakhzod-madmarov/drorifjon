@@ -53,6 +53,17 @@ export const ROUTES = [
     },
   },
   {
+    path: "/results",
+    changefreq: "weekly",
+    priority: "0.95",
+    image: {
+      src: "public/cases/case1_after.webp",
+      title: "Stomatolog Orifjon — Bemorlarimiz Real Klinik Natijalari (Oldin va Keyin)",
+      caption:
+        "Breketlar bilan tishlarni tekislash, karies restavratsiyasi va monolit sirkoniy karonkalar natijalari",
+    },
+  },
+  {
     path: "/contact",
     changefreq: "monthly",
     priority: "0.85",

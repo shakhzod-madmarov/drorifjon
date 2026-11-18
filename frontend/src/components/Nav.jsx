@@ -281,6 +281,34 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                 )}
               </div>
 
+              {/* Results / Before-After */}
+              <NavLink
+                to={to("/results")}
+                className={({ isActive }) =>
+                  `relative px-3.5 py-2 text-sm font-semibold rounded-xl transition-all duration-200 group flex items-center gap-1.5 ${
+                    isActive
+                      ? "text-primary font-bold bg-teal-50/70"
+                      : "text-slate-600 hover:text-primary hover:bg-teal-50/60"
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span>
+                      {lang === "uz" ? "Natijalar" : lang === "ru" ? "Результаты" : "Results"}
+                    </span>
+                    <span className="px-1.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200/80">
+                      {lang === "uz" ? "Oldin/Keyin" : lang === "ru" ? "До/После" : "B&A"}
+                    </span>
+                    <span
+                      className={`absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-primary rounded-full transition-transform duration-300 origin-left ${
+                        isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
+                  </>
+                )}
+              </NavLink>
+
               {/* About */}
               <NavLink
                 to={to("/about")}
@@ -576,6 +604,29 @@ const Nav = ({ topOffset = 0, onOpenBooking }) => {
                     </div>
                   )}
                 </div>
+
+                {/* Results (Before & After) */}
+                <NavLink
+                  to={to("/results")}
+                  onClick={closeDrawer}
+                  className={({ isActive }) =>
+                    `flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all ${
+                      isActive
+                        ? "bg-primary text-white shadow-xs"
+                        : "text-slate-800 hover:bg-teal-50 hover:text-primary"
+                    }`
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <span>{lang === "uz" ? "Klinik Natijalar" : lang === "ru" ? "Результаты Лечения" : "Clinical Results"}</span>
+                    <span className="px-1.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200/80">
+                      {lang === "uz" ? "Oldin/Keyin" : lang === "ru" ? "До/После" : "B&A"}
+                    </span>
+                  </div>
+                  <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
 
                 {/* About */}
                 <NavLink

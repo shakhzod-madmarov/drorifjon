@@ -16,7 +16,7 @@ import ClinicalMaterialsShowcase from "../components/ClinicalMaterialsShowcase";
 import ClinicalTickerMarquee from "../components/ClinicalTickerMarquee";
 import Interactive3DCostCalculator from "../components/Interactive3DCostCalculator";
 import SmileAssessmentWizard from "../components/SmileAssessmentWizard";
-import BeforeAfterSlider from "../components/BeforeAfterSlider";
+import { HomeResultsTeaser } from "../components/HomeResultsTeaser";
 import PatientCareGuides from "../components/PatientCareGuides";
 import { IconClock, IconPhone, IconTelegram, IconShieldCheck } from "../components/MedicalIcons";
 import { DOCTOR_INFO } from "../constants/doctor";
@@ -544,7 +544,12 @@ const Home = ({ onOpenBooking }) => {
         <Interactive3DCostCalculator />
       </div>
 
-      {/* 5. Verified Diplomas & MegaGen Certificates */}
+      {/* 5. Authentic Patient Transformations & Before/After Results */}
+      <div className="relative">
+        <HomeResultsTeaser onOpenBooking={onOpenBooking} />
+      </div>
+
+      {/* 6. Verified Diplomas & MegaGen Certificates */}
       <div className="relative">
         <CertificatesShowcase />
       </div>

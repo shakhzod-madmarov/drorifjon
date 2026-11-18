@@ -23,6 +23,7 @@ const Footer = () => {
 
   const quickLinks = [
     { path: "/", label: { uz: "Bosh Sahifa", ru: "Главная", en: "Home" } },
+    { path: "/results", label: { uz: "Klinik Natijalar (Oldin / Keyin)", ru: "Результаты (До / После)", en: "Clinical Results (Before / After)" } },
     { path: "/services", label: { uz: "Stomatologik Xizmatlar", ru: "Стоматологические Услуги", en: "Dental Services" } },
     { path: "/about", label: { uz: "Shifokor Haqida", ru: "О враче", en: "About Doctor" } },
     { path: "/booking", label: { uz: "Onlayn Qabulga Yozilish", ru: "Онлайн Запись на Приём", en: "Book Appointment" } },

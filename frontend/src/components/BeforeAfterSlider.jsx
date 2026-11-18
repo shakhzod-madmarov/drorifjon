@@ -1,237 +1,129 @@
 import React, { useState, useRef, useCallback } from "react";
-import { useLanguage } from "../context/LanguageContext";
-import { getA11yLabels } from "../constants/a11yLabels";
 
-const clamp = (n) => Math.max(0, Math.min(100, n));
-
-const BeforeAfterSlider = ({
-  beforeImg,
-  afterImg,
-  beforeLabel,
-  afterLabel,
-  title,
-  subtitle,
+export const BeforeAfterSlider = ({
+  beforeSrc,
+  afterSrc,
+  beforeAlt = "Muolajadan oldin",
+  afterAlt = "Muolajadan keyin",
+  beforeLabel = "Oldin",
+  afterLabel = "Keyin",
+  className = "",
+  onZoom,
 }) => {
-  const { lang } = useLanguage();
-  const a11y = getA11yLabels(lang);
   const [sliderPos, setSliderPos] = useState(50);
-  const [hasInteracted, setHasInteracted] = useState(false);
-  const [tilt, setTilt] = useState({ x: 0, y: 0, active: false });
+  const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
-  const cardRef = useRef(null);
-  const isDragging = useRef(false);
 
-  const defaultBefore =
-    beforeLabel ||
-    (lang === "uz" ? "Oldin" : lang === "ru" ? "До лечения" : "Before");
-  const defaultAfter =
-    afterLabel ||
-    (lang === "uz" ? "Keyin" : lang === "ru" ? "После лечения" : "After");
-
-  const updatePosition = useCallback((clientX) => {
+  const handleMove = useCallback((clientX) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-    const percent = (x / rect.width) * 100;
+    if (!rect.width) return;
+    const x = clientX - rect.left;
+    let percent = (x / rect.width) * 100;
+    if (percent < 3) percent = 3;
+    if (percent > 97) percent = 97;
     setSliderPos(percent);
-    setHasInteracted(true);
   }, []);
 
   const handlePointerDown = (e) => {
-    isDragging.current = true;
+    setIsDragging(true);
     try {
-      e.currentTarget.setPointerCapture?.(e.pointerId);
-    } catch {
-      // ignore if unsupported
-    }
-    updatePosition(e.clientX);
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch (_) {}
+    handleMove(e.clientX);
   };
 
   const handlePointerMove = (e) => {
-    if (!isDragging.current) return;
-    updatePosition(e.clientX);
+    if (!isDragging) return;
+    handleMove(e.clientX);
   };
 
   const handlePointerUp = (e) => {
-    isDragging.current = false;
+    setIsDragging(false);
     try {
-      if (e?.currentTarget?.hasPointerCapture?.(e.pointerId)) {
-        e.currentTarget.releasePointerCapture(e.pointerId);
-      }
-    } catch {
-      // ignore if unsupported
-    }
-  };
-
-  // Subtle 3D card tilt on hover
-  const handleCardMouseMove = (e) => {
-    if (isDragging.current || !cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateY = ((x - centerX) / centerX) * 4;
-    const rotateX = -((y - centerY) / centerY) * 3;
-    setTilt({ x: rotateX, y: rotateY, active: true });
-  };
-
-  const handleCardMouseLeave = () => {
-    setTilt({ x: 0, y: 0, active: false });
-  };
-
-  const handleKeyDown = (e) => {
-    setHasInteracted(true);
-    const step = e.shiftKey ? 10 : 5;
-    if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
-      e.preventDefault();
-      setSliderPos((p) => clamp(p - step));
-    } else if (e.key === "ArrowRight" || e.key === "ArrowUp") {
-      e.preventDefault();
-      setSliderPos((p) => clamp(p + step));
-    } else if (e.key === "Home") {
-      e.preventDefault();
-      setSliderPos(0);
-    } else if (e.key === "End") {
-      e.preventDefault();
-      setSliderPos(100);
-    }
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch (_) {}
   };
 
   return (
     <div
-      ref={cardRef}
-      onMouseMove={handleCardMouseMove}
-      onMouseLeave={handleCardMouseLeave}
-      style={{
-        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-        transition: tilt.active ? "transform 0.12s ease-out" : "transform 0.5s ease-out",
-      }}
-      className="bg-white rounded-3xl p-3 sm:p-4 border border-teal-200/90 shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300 flex flex-col justify-between [transform-style:preserve-3d]"
+      ref={containerRef}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+      className={`relative select-none overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 aspect-[4/3] sm:aspect-[16/11] cursor-ew-resize group shadow-lg touch-none ${className}`}
+      aria-label="Taqqoslash slayderi"
+      role="region"
     >
+      {/* After Image (Full background) */}
+      <img
+        src={afterSrc}
+        alt={afterAlt}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+      />
+
+      {/* Before Image (Clipped with CSS clipPath from 0 to sliderPos%) */}
+      <img
+        src={beforeSrc}
+        alt={beforeAlt}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+        style={{
+          clipPath: `inset(0 ${100 - sliderPos}% 0 0)`,
+          WebkitClipPath: `inset(0 ${100 - sliderPos}% 0 0)`,
+        }}
+      />
+
+      {/* Subtle overlay labels */}
+      <div className="absolute top-3 left-3 z-10 pointer-events-none">
+        <span className="px-2.5 py-1 rounded-lg text-[11px] font-black uppercase tracking-wider bg-black/75 backdrop-blur-md text-amber-300 border border-amber-400/30 shadow-md">
+          {beforeLabel}
+        </span>
+      </div>
+      <div className="absolute top-3 right-3 z-10 pointer-events-none">
+        <span className="px-2.5 py-1 rounded-lg text-[11px] font-black uppercase tracking-wider bg-emerald-950/85 backdrop-blur-md text-emerald-300 border border-emerald-400/40 shadow-md">
+          {afterLabel}
+        </span>
+      </div>
+
+      {/* Divider Bar & Handle */}
       <div
-        ref={containerRef}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerLeave={handlePointerUp}
-        className="relative w-full h-56 2xs:h-64 sm:h-72 rounded-2xl overflow-hidden select-none cursor-ew-resize touch-pan-y bg-slate-900 group"
+        className="absolute top-0 bottom-0 z-20 w-0.5 sm:w-1 bg-white shadow-[0_0_12px_rgba(0,0,0,0.7)] pointer-events-none"
+        style={{ left: `${sliderPos}%` }}
       >
-        {/* AFTER Image (Full Background) */}
-        <img
-          src={afterImg}
-          alt={title ? `${title} — ${defaultAfter}` : defaultAfter}
-          width={900}
-          height={600}
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          draggable={false}
-        />
-
-        {/* BEFORE Image (Clipped) */}
-        <div
-          className="absolute inset-0 overflow-hidden pointer-events-none"
-          style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
-        >
-          <img
-            src={beforeImg}
-            alt={title ? `${title} — ${defaultBefore}` : defaultBefore}
-            width={900}
-            height={600}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            draggable={false}
-          />
-        </div>
-
-        {/* Badges */}
-        <div className="absolute top-3 left-3 pointer-events-none z-10">
-          <span className="px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-xs text-white text-[11px] font-bold border border-white/20 shadow-sm">
-            {defaultBefore}
-          </span>
-        </div>
-        <div className="absolute top-3 right-3 pointer-events-none z-10">
-          <span className="px-2.5 py-1 rounded-lg bg-primary/90 backdrop-blur-xs text-white text-[11px] font-bold border border-white/20 shadow-sm">
-            {defaultAfter}
-          </span>
-        </div>
-
-        {/* Interactive "Drag to compare" prompt (fades after interaction) */}
-        {!hasInteracted && (
-          <div className="absolute bottom-3 inset-x-0 flex justify-center pointer-events-none z-10 animate-bounce">
-            <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-teal-200 text-[10px] font-bold shadow-md border border-teal-300/30 flex items-center gap-1.5">
-              <span>↔</span>
-              <span>{lang === "uz" ? "Suring va taqqoslang" : lang === "ru" ? "Потяните ползунок" : "Drag to compare"}</span>
-            </span>
-          </div>
-        )}
-
-        {/* Vertical Divider Handle with 3D Specular Glow */}
-        <div
-          tabIndex={0}
-          role="slider"
-          aria-label={a11y.beforeAfterSlider}
-          aria-valuenow={Math.round(sliderPos)}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          onKeyDown={handleKeyDown}
-          className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_15px_rgba(255,255,255,0.9)] cursor-ew-resize flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary z-20"
-          style={{ left: `${sliderPos}%` }}
-        >
-          {/* Circular 3D Grab Button */}
-          <div className="w-10 h-10 2xs:w-11 2xs:h-11 rounded-full bg-white shadow-2xl flex items-center justify-center text-primary text-xs font-black border-2 border-primary/20 hover:scale-110 active:scale-95 transition-transform touch-manipulation">
-            <span className="text-[13px] tracking-tight">⇄</span>
-          </div>
+        {/* Glowing Center Handle */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 text-primary shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex items-center justify-center border-2 border-primary group-hover:scale-110 active:scale-95 transition-transform pointer-events-auto cursor-ew-resize">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3" />
+          </svg>
         </div>
       </div>
 
-      {/* Preset Quick Snap Controls */}
-      <div className="flex items-center justify-between gap-1.5 pt-3 px-1 border-t border-slate-100/60 mt-2">
+      {/* Zoom / Fullscreen Button on bottom right */}
+      {onZoom && (
         <button
-          onClick={() => {
-            setSliderPos(10);
-            setHasInteracted(true);
+          onClick={(e) => {
+            e.stopPropagation();
+            onZoom();
           }}
-          className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos < 25 ? "bg-primary text-white" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
-          }`}
+          type="button"
+          aria-label="Rasmni kattalashtirish"
+          className="absolute bottom-3 right-3 z-30 w-8 h-8 rounded-xl bg-black/70 backdrop-blur-md text-white hover:bg-primary flex items-center justify-center transition-all cursor-pointer opacity-80 group-hover:opacity-100 shadow-md pointer-events-auto"
         >
-          {defaultBefore}
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+          </svg>
         </button>
-        <button
-          onClick={() => {
-            setSliderPos(50);
-            setHasInteracted(true);
-          }}
-          className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos >= 25 && sliderPos <= 75 ? "bg-teal-200 text-slate-800" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
-          }`}
-        >
-          50 / 50
-        </button>
-        <button
-          onClick={() => {
-            setSliderPos(90);
-            setHasInteracted(true);
-          }}
-          className={`text-[10px] font-bold px-2 py-1 rounded-lg transition-colors cursor-pointer ${
-            sliderPos > 75 ? "bg-primary text-white" : "bg-teal-50 text-slate-600 hover:bg-teal-100"
-          }`}
-        >
-          {defaultAfter}
-        </button>
-      </div>
-
-      {(title || subtitle) && (
-        <div className="pt-2 px-1">
-          {title && <h4 className="text-sm font-bold text-slate-900 leading-snug">{title}</h4>}
-          {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
-        </div>
       )}
+
+      {/* Drag Helper Tip (disappears after first interaction) */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 pointer-events-none opacity-80 group-hover:opacity-0 transition-opacity">
+        <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur-md shadow-sm">
+          ↔ Slayderni suring
+        </span>
+      </div>
     </div>
   );
 };
-
-export default BeforeAfterSlider;

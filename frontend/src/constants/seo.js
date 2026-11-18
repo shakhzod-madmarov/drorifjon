@@ -87,6 +87,23 @@ export const PAGE_SEO = {
         "Book your dental appointment online with Dentist Orifjon in Andijan. Select preferred date and time slot with zero wait. Tel: +998 90 548 10 90 / +998 99 905 30 90.",
     },
   },
+  results: {
+    uz: {
+      title: "Klinik Natijalar (Oldin va Keyin) — Stomatolog Orifjon (Andijon)",
+      description:
+        "Stomatolog Orifjon bemorlarining real klinik natijalari: Breketlar bilan tishlarni tekislash (6-7 oylik natijalar), chuqur karies badiiy restavratsiyasi (Charisma, DenFil), va eski tilla tishlarni zamonaviy monolit sirkoniy (Zirconia) karonkalarga almashtirish. Rasmli taqqoslash. Andijon, Muqimiy 35 (Rayon Stoyanka). Tel: +998 90 548 10 90.",
+    },
+    ru: {
+      title: "Клинические Результаты (До и После) — Стоматолог Орифжон (Андижан)",
+      description:
+        "Реальные фото результатов лечения у Стоматолога Орифжона: Исправление кривизны и дистопии клыка брекетами (за 6-7 месяцев), художественная реставрация зубов за 1 визит, замена старых золотых коронок на монолитный цирконий. Андижан, ул. Мукими 35. Тел: +998 90 548 10 90.",
+    },
+    en: {
+      title: "Before & After Clinical Results — Dentist Orifjon (Andijan)",
+      description:
+        "Real before and after smile transformations by Dentist Orifjon in Andijan: 6 to 7-month braces alignment, direct aesthetic composite restorations, and replacement of outdated gold crowns with monolithic Zirconia crowns. 35 Muqimiy St., Andijan. Tel: +998 90 548 10 90.",
+    },
+  },
   notFound: {
     uz: {
       title: "Sahifa topilmadi (404) — Stomatolog Orifjon",
@@ -500,5 +517,28 @@ export const PAGE_KEYWORDS = {
     "saturday open dentist andijan",
     "dentist phone number andijan",
     "book dental appointment online",
+  ],
+  results: [
+    "stomatolog orifjon natijalari",
+    "klinik natijalar stomatologiya andijon",
+    "tish oldin va keyin",
+    "breket natijalari andijon",
+    "breket oldin keyin",
+    "qoziq tish distopiyasi breket",
+    "tishlarni tekislash andijon",
+    "badiiy restavratsiya oldin keyin",
+    "chuqur karies restavratsiya rasmlari",
+    "tilla tishni sirkonga almashtirish",
+    "sirkon karonka oldin keyin",
+    "zirconia smile makeover andijan",
+    "до и после стоматология андижан",
+    "результаты лечения зубов андижан",
+    "брекеты до и после андижан",
+    "реставрация зубов до и после",
+    "замена золотых коронок на цирконий",
+    "before and after dental andijan",
+    "braces results andijan",
+    "aesthetic restoration before after",
+    "zirconia crowns before after",
   ],
 };

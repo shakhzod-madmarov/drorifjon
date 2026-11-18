@@ -745,3 +745,48 @@ export const buildBookingPageSchema = (lang = "uz", breadcrumbs = []) => {
   };
 };
 
+export const buildResultsPageSchema = (lang = "uz", breadcrumbs = [], cases = []) => {
+  const pageUrl = urlFor("/results", lang);
+  const breadcrumbObj = breadcrumbs.length > 0 ? buildBreadcrumbSchema(breadcrumbs, lang) : null;
+
+  const resultsPage = {
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#results`,
+    "url": pageUrl,
+    "name":
+      lang === "ru"
+        ? "Результаты лечения зубов (До и После) — Стоматолог Орифжон"
+        : lang === "en"
+        ? "Before & After Clinical Results — Dentist Orifjon"
+        : "Klinik Natijalar (Oldin va Keyin) — Stomatolog Orifjon",
+    "description":
+      lang === "ru"
+        ? "Реальные фото результатов лечения у Стоматолога Орифжона: брекеты, художественная реставрация зубов и циркониевые коронки."
+        : lang === "en"
+        ? "Real before and after clinical cases by Dentist Orifjon: braces orthodontic treatment, direct composite restorations, and monolithic zirconia smile makeovers."
+        : "Stomatolog Orifjon bemorlarining real klinik natijalari: breketlar bilan tishlarni tekislash, karies restavratsiyasi va monolit sirkoniy karonkalar.",
+    "about": {
+      "@type": "Dentist",
+      "@id": `${SITE_ORIGIN}/#clinic`,
+      "name": PRIMARY_CLINIC.name[lang] || PRIMARY_CLINIC.name.uz,
+      "telephone": [DOCTOR_INFO.phoneRaw, DOCTOR_INFO.secondaryPhoneRaw],
+    },
+    "mainEntity": cases.map((c) => ({
+      "@type": "Service",
+      "name": c.title[lang] || c.title.uz,
+      "description": c.summary[lang] || c.summary.uz,
+      "image": `${SITE_ORIGIN}${c.images.after}`,
+    })),
+  };
+
+  const graph = [];
+  if (breadcrumbObj) graph.push(breadcrumbObj);
+  graph.push(resultsPage);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
+};
+
+
