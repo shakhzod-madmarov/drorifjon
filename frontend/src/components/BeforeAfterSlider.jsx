@@ -29,7 +29,9 @@ export const BeforeAfterSlider = ({
     setIsDragging(true);
     try {
       e.currentTarget.setPointerCapture(e.pointerId);
-    } catch (_) {}
+    } catch {
+      // pointer capture not supported on element
+    }
     handleMove(e.clientX);
   };
 
@@ -42,7 +44,9 @@ export const BeforeAfterSlider = ({
     setIsDragging(false);
     try {
       e.currentTarget.releasePointerCapture(e.pointerId);
-    } catch (_) {}
+    } catch {
+      // pointer release not supported on element
+    }
   };
 
   return (
